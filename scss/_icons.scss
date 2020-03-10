@@ -1,0 +1,5 @@
+@each $color, $value in $theme-colors {
+	.icon-#{$color} {
+		@include icon-variant($value);
+	}
+}

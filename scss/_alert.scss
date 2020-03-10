@@ -1,0 +1,20 @@
+.alert {
+  box-shadow: $alert-box-shadow;
+}
+
+.alert-light {
+  color: $gray-800;;
+  .alert-link {
+    color: $gray-800;;
+  }
+}
+
+/* Set the width for Ember Notify notification element */
+.ember-notify-default {
+  .ember-notify.alert {
+      width: 460px;
+      margin: $alert-notify-maring;
+      border-width: $alert-border-width;
+      padding: $alert-padding-y $alert-padding-x;
+  }
+}

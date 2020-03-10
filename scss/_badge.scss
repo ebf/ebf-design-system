@@ -1,0 +1,22 @@
+.badge {
+  text-transform: $badge-text-transfom;
+
+  a {
+      color: #FFF;
+  }
+}
+
+.badge-light {
+  color: $gray-800;
+}
+
+.btn {
+  .badge {
+      &:not(:first-child) {
+          margin-left: .5rem;
+      }
+      &:not(:last-child) {
+          margin-right: .5rem;
+      }
+  }
+}

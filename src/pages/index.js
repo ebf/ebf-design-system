@@ -1,21 +1,23 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Container, Row, Col } from "react-bootstrap";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import withLayout from '../with-layout';
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  <Container>
+    <Row>
+      <Col xs={12}>
+        <h1>EBF Design System</h1>
+        <p>Usage:</p>
+        <pre>
+          <code>npm i @ebf/design-system</code>
+        </pre>
+      </Col>
+      <Col xs={12}>
+        <button className="btn btn-primary">Docs</button>
+      </Col>
+    </Row>
+  </Container>
 )
 
-export default IndexPage
+export default withLayout(IndexPage, { title: 'Home' });

@@ -1,0 +1,17 @@
+.form-group label {
+  font-size: $input-label-font-size;
+  font-weight: $input-label-font-weight;
+  margin-bottom: 0.25rem;
+}
+
+fieldset {
+  margin-top: $spacer / 2;
+  margin-bottom: $spacer / 2;
+
+  legend {
+    margin-top: $spacer * 1.5;
+    margin-bottom: $spacer / 2;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+}

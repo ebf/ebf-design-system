@@ -1,0 +1,18 @@
+/* Scrollable Nav Component styles */
+.scrollable-nav {
+  .list-group-item {
+    @include hover-focus {  
+      background-color: $scrollable-nav-link-hover-bg;
+    }
+  }
+
+  .list-group-item.active {
+      background-color: $scrollable-nav-link-active-bg;
+      border-color: $list-group-border-color;
+      color: $scrollable-nav-link-active-color;
+
+      @include hover-focus {  
+          background-color: $scrollable-nav-link-hover-bg;
+      }
+  }
+}

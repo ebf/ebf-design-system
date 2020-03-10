@@ -1,0 +1,17 @@
+/* Make sure that the modal element is vertically centered */
+.modal-open .modal {
+  display: flex !important;
+  align-items: center;
+}
+
+.modal-dialog {
+  flex: 1 1 auto;
+  margin: auto;
+  padding: 1.5rem 0;
+
+}
+
+/* Add a nice drop shadow to the Sweet Alert modal dialogs */
+.swal2-modal {
+  box-shadow: $model-drop-shadow;
+}
