@@ -1,3 +1,5 @@
+// override the location for the fonts directory
+$ebf-font-location: "../../scss/fonts";
 @import "../scss/styles";
 
 .header {
