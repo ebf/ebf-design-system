@@ -13,6 +13,9 @@ $enable-print-styles:       true !default;
 // Color system
 
 $white:    #fff !default;
+
+// Grays 
+
 $gray-100: #f8f9fb !default;
 $gray-200: #f2f3f7 !default;
 $gray-300: #e3e6ed !default;
@@ -37,14 +40,92 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
-$blue:    #5e72e4 !default;
+// Blues
+
+$blue:    #2494c5 !default;
+
+$blue-100: #e5f2f8!default;
+$blue-200: #cae5f1!default;
+$blue-300: #abd6e8!default;
+$blue-400: #87c5df!default;
+$blue-500: #5cb0d3!default;
+$blue-600: #187bab!default;   
+$blue-700: #1c759b!default;   
+$blue-800: #176180!default;
+$blue-900: #10455b!default;
+
+// Reds
+
+$red:    #ed5454 !default;
+
+$red-100: #fdecec!default;
+$red-200: #fad8d8!default;
+$red-300: #f8c1c1!default;
+$red-400: #f5a7a7!default;
+$red-500: #f28585!default;
+$red-600: #d64b4b!default;   
+$red-700: #bb4242!default;   
+$red-800: #9b3636!default;
+$red-900: #6e2727!default;
+
+// Oranges
+
+$orange:    #c55424 !default;
+
+$orange-100: #f8ece7!default;
+$orange-200: #f1d8cd!default;
+$orange-300: #eac1b0!default;
+$orange-400: #e1a68e!default;
+$orange-500: #d58562!default;
+$orange-600: #b14b20!default;   
+$orange-700: #9b421c!default;   
+$orange-800: #7f3617!default;
+$orange-900: #5a2610!default;
+
+// Yellows
+
+$yellow:    #ffbd08 !default;
+
+$yellow-100: #fff6df!default;
+$yellow-200: #ffedbd!default;
+$yellow-300: #ffe398!default;
+$yellow-400: #ffd86e!default;
+$yellow-500: #ffcb3f!default;
+$yellow-600: #e6ab07!default;   
+$yellow-700: #ca9606!default;   
+$yellow-800: #a87c05!default;
+$yellow-900: #7a5a03!default;
+
+// Greens
+
+$green:    #24c554 !default;
+
+$green-100: #e5f8eb!default;
+$green-200: #caf0d5!default;
+$green-300: #aae8bd!default;
+$green-400: #96de84!default;
+$green-500: #5bd37f!default;
+$green-600: #20b24b!default;   
+$green-700: #1c9c42!default;   
+$green-800: #178137!default;
+$green-900: #115d27!default;
+
+// Purples
+
+$purple:    #2444c5 !default;
+
+$purple-100: #e9ecf9!default;
+$purple-200: #d1d8f3!default;
+$purple-300: #b6c1eb!default;
+$purple-400: #95a5e3!default;
+$purple-500: #6b80d7!default;
+$purple-600: #203db0!default;   
+$purple-700: #1c3599!default;   
+$purple-800: #162b7d!default;
+$purple-900: #0f1d56!default;
+
 $indigo:  #5603ad !default;
-$purple:  #8965e0 !default;
 $pink:    #f28585 !default;
-$red:     #f5365c !default;
-$orange:  #fb6340 !default;
-$yellow:  #ffd600 !default;
-$green:   #2dce89 !default;
 $teal:    #11cdef !default;
 $cyan:    #2bffc6 !default;
 
@@ -61,21 +142,21 @@ $colors: map-merge((
   "teal":       $teal,
   "cyan":       $cyan,
   "gray":       $gray-600,
-  // "light":      $gray-400,
-  // "lighter":    $gray-200,
+  "light":      $gray-400,
+  "lighter":    $gray-200,
   "gray-dark":  $gray-800,
   "white":      $white
 ), $colors);
 
 $default:       #172b4d !default;
-$primary:       #2494c5 !default;
-$secondary:     #7f90a4 !default;
+$primary:       $blue-200 !default;
+$secondary:     $gray-200 !default;
 $success:       $green !default;
-$info:          $teal !default;
-$warning:       $orange !default;
+$info:          $blue !default;
+$warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-200 !default;
-$dark:          $gray-900 !default;
+$light:         $gray-100 !default;
+$dark:          $blue-900 !default;
 $darker:        darken($gray-900, 15%) !default;
 
 $facebook:      #3b5999 !default;
@@ -197,8 +278,8 @@ $love-color: $red !default;
 
 // Body
 
-$body-bg: #f2f3f7 !default;
-$body-color: #2B3E51 !default;
+$body-bg: $gray-100 !default;
+$body-color: $blue-900 !default;
 
 
 // Sections
@@ -214,9 +295,9 @@ $section-colors: map-merge((
 
 // Links
 
-$link-color:                $primary !default;
+$link-color:                $blue !default;
 $link-decoration:           none !default;
-$link-hover-color:          darken($link-color, 15%);
+$link-hover-color:          $blue-900;
 $link-hover-decoration:     none !default;
 
 // Grid breakpoints

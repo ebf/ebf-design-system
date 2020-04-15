@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { Link } from "gatsby"
 import classNames from 'classnames';
-import { Nav, Collapse } from 'react-bootstrap';
+import { Nav, Collapse, NavDropdown } from 'react-bootstrap';
 
 function NavSection({ heading, location: { pathname }, items, path }) {
   let active = pathname.startsWith(path);
@@ -64,7 +64,9 @@ export default class SideNav extends React.Component {
             heading="Colors"
             path="/colors"
             location={location}
+           
           />
+           
           <NavSection
             heading="Layout"
             path="/layout"
@@ -80,7 +82,7 @@ export default class SideNav extends React.Component {
         </nav>
 
         <footer>
-          <p>© {new Date().getFullYear()}, Built with {` `} <a href="https://www.gatsbyjs.org">Gatsby</a></p>
+          <p>© {new Date().getFullYear()} <a href="https://www.ebf.com">EBF</a></p>
         </footer>
       </div>
     );

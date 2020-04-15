@@ -6,7 +6,9 @@
 @import "bootstrap/scss/variables";
 
 @import "bootstrap/scss/mixins";
+@import "bootstrap/scss/mixins/background-variant";
 @import "mixins.scss";
+
 
 // Bootstrap components
 
@@ -61,8 +63,12 @@
 @import "modal.scss";
 @import "navs.scss";
 @import "navbar.scss";
+@import "navs.scss";
 @import "popover.scss";
+@import "select.scss";
 @import "utilities.scss";
+@import "variables.scss";
+@import "ebf-colors.scss";
 
 // Ember
 @import "select";
