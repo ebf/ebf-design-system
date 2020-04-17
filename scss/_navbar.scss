@@ -1,3 +1,5 @@
 .navbar-light {
-  box-shadow: $navbar-light-box-shadow;
+  border-width: $border-width;
+  border-color: $border-color;
+  border-bottom-style: solid;
 }

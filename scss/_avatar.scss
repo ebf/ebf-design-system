@@ -55,12 +55,12 @@
 //
 // Generate contextual modifier classes for colorizing the avatar.
 
-@each $color, $value in $theme-colors {
-  .avatar-#{$color} {
-    @include avatar-variant(
-      theme-color-level($color, $avatar-bg-level),
-      theme-color-level($color, $avatar-border-level),
-      theme-color-level($color, $avatar-color-level)
-    );
-  }
-}
+// @each $color, $value in $theme-colors {
+//   .avatar-#{$color} {
+//     @include avatar-variant(
+//       theme-color-level($color, $avatar-bg-level),
+//       theme-color-level($color, $avatar-border-level),
+//       theme-color-level($color, $avatar-color-level)
+//     );
+//   }
+// }

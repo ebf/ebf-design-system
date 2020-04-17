@@ -15,7 +15,7 @@ const TYPES = [
   'dark',
 ];
 
-export default withLayout(function Alerts() {
+export default withLayout(function Badges() {
   return (
     <>
       <h1>Badges</h1>
@@ -23,31 +23,32 @@ export default withLayout(function Alerts() {
 
       <div>
         <h1>
-          Example heading <Badge variant="secondary">New</Badge>
+          Example heading <Badge variant="primary">New</Badge>
         </h1>
         <h2>
-          Example heading <Badge variant="secondary">New</Badge>
+          Example heading <Badge variant="primary">New</Badge>
         </h2>
         <h3>
-          Example heading <Badge variant="secondary">New</Badge>
+          Example heading <Badge variant="primary">New</Badge>
         </h3>
         <h4>
-          Example heading <Badge variant="secondary">New</Badge>
+          Example heading <Badge variant="primary">New</Badge>
         </h4>
         <h5>
-          Example heading <Badge variant="secondary">New</Badge>
+          Example heading <Badge variant="primary">New</Badge>
         </h5>
         <h6>
-          Example heading <Badge variant="secondary">New</Badge>
+          Example heading <Badge variant="primary">New</Badge>
         </h6>
-      </div>;
+      </div>
 
       <p>Badges can be used as part of links or buttons to provide a counter.</p>
 
       <Button variant="primary">
-        Profile <Badge variant="light">9</Badge>
+        Profile <Badge className="badge-round-element"  variant="white">99+</Badge>
         <span className="sr-only">unread messages</span>
       </Button>
+
 
       <p>
         Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies.

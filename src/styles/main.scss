@@ -39,6 +39,8 @@ $ebf-font-location: "../../scss/fonts";
   }
 }
 
+// Color Swatches 
+
 .color-swatch {
    
   margin: 1rem 0;
@@ -56,8 +58,6 @@ $ebf-font-location: "../../scss/fonts";
   }
 
   .prop-item-wrap .label {
-    text-transform: uppercase;
-    font-size: .8rem;
     display: none;
   }
   .prop-item-wrap .value {

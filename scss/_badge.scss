@@ -1,22 +1,35 @@
 .badge {
-  text-transform: $badge-text-transfom;
+  color: white;
+  text-transform: uppercase;
 
   a {
       color: #FFF;
   }
+
+  &:not(:last-child) {
+    margin-right: .5rem;
+  }
 }
 
-.badge-light {
-  color: $gray-800;
+.badge-round-element {
+  padding: .5rem .625rem;
+  border-radius: 1rem;
+  color: $gray-900;
+  font-size: .75rem;
+  box-shadow: $input-btn-focus-box-shadow;
+  background-color: $black;
 }
+
 
 .btn {
   .badge {
-      &:not(:first-child) {
-          margin-left: .5rem;
-      }
-      &:not(:last-child) {
-          margin-right: .5rem;
-      }
+    margin-left: .5rem;
+    margin-right: 0;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    background-color: $value;
   }
 }

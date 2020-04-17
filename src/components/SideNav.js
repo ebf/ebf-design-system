@@ -40,6 +40,7 @@ const componentItems = [
   'buttons',
   'forms',
   'modals',
+  'navbar',
 ];
 
 export default class SideNav extends React.Component {
@@ -63,8 +64,7 @@ export default class SideNav extends React.Component {
           <NavSection
             heading="Colors"
             path="/colors"
-            location={location}
-           
+            location={location}           
           />
            
           <NavSection
@@ -79,6 +79,7 @@ export default class SideNav extends React.Component {
             location={location}
             items={componentItems}
           />
+
         </nav>
 
         <footer>

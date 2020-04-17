@@ -2,6 +2,8 @@ import React from "react"
 import classNames from 'classnames';
 import { Row, Col } from 'react-bootstrap';
 
+
+import LinkedHeading from '../components/LinkedHeading';
 import withLayout from "../with-layout"
 
 const GRAYS = [
@@ -120,14 +122,14 @@ export default withLayout(function LinksPage() {
   return (
     <>
       <h1>Colors</h1>
-      
-      <h2>Primary colors</h2>
+            
+      <LinkedHeading h="2" id="primary-colors">Primary colors</LinkedHeading>
       <p className="lead">
         Our primary palette is comprised of neutrals, white, and blue.
         These colors are present across most touch points from marketing to product.
       </p>
-
-      <h3>Grays</h3>
+      
+      <LinkedHeading h="3" id="gray-colors">Grays</LinkedHeading>
       <Row className="swatch-container">
         {GRAYS.map(color => (
           <Col xs={4} md={3} lg={2}>
@@ -136,7 +138,7 @@ export default withLayout(function LinksPage() {
         ))}
       </Row>
 
-      <h3>Blues</h3>
+      <LinkedHeading h="3" id="blue-colors">Blues</LinkedHeading>
       <Row className="swatch-container">
         {BLUES.map(color => (
           <Col xs={4} md={3} lg={2}>
@@ -145,14 +147,14 @@ export default withLayout(function LinksPage() {
         ))}
       </Row>
 
-      <h2 id="secondaryColors">Secondary colors</h2>
+      <LinkedHeading h="2" id="secondary-colors">Secondary colors</LinkedHeading>
       <p className="lead">
         Our secondary palette is comprised of orange, red, green, blue and yellow.
         These colors are present across most touch points in products.
       </p>
 
 
-      <h3>Reds</h3>
+      <LinkedHeading h="3" id="red-colors">Reds</LinkedHeading>
       <Row className="swatch-container">
         {REDS.map(color => (
           <Col xs={4} md={3} lg={2}>
@@ -161,7 +163,7 @@ export default withLayout(function LinksPage() {
         ))}
       </Row>
 
-      <h3>Oranges</h3>
+      <LinkedHeading h="3" id="orange-colors">Oranges</LinkedHeading>
       <Row className="swatch-container">
         {ORANGES.map(color => (
           <Col xs={4} md={3} lg={2}>
@@ -170,7 +172,7 @@ export default withLayout(function LinksPage() {
         ))}
       </Row>      
 
-      <h3>Yellows</h3>
+      <LinkedHeading h="3" id="yellow-colors">Yellows</LinkedHeading>
       <Row className="swatch-container">
         {YELLOWS.map(color => (
           <Col xs={4} md={3} lg={2}>
@@ -179,7 +181,7 @@ export default withLayout(function LinksPage() {
         ))}
       </Row>
 
-      <h3>Greens</h3>
+      <LinkedHeading h="3" id="green-colors">Greens</LinkedHeading>
       <Row className="swatch-container">
         {GREENS.map(color => (
           <Col xs={4} md={3} lg={2}>
@@ -188,7 +190,7 @@ export default withLayout(function LinksPage() {
         ))}
       </Row>
 
-      <h3>Purples</h3>
+      <LinkedHeading h="3" id="purple-colors">Purples</LinkedHeading>
       <Row className="swatch-container">
         {PURPLES.map(color => (
           <Col xs={4} md={3} lg={2}>

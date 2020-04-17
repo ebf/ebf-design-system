@@ -29,6 +29,8 @@ export default withLayout(function Alerts() {
       
       {TYPES.map((variant, idx) => (
         <Alert key={idx} variant={variant}>
+          {/* TODO */}
+          <i className="alert-icon ebf ebf-alert-01-fill"></i>
           This is a {variant} alert—check it out!
         </Alert>
       ))}
@@ -38,6 +40,8 @@ export default withLayout(function Alerts() {
 
       {TYPES.map((variant, idx) => (
         <Alert key={idx} variant={variant}>
+          {/* TODO */}
+          <i className="alert-icon ebf ebf-alert-01-fill"></i>
           This is a {variant} alert with{' '} <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.
         </Alert>
       ))}
