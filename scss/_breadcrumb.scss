@@ -1,0 +1,31 @@
+
+.border-bottom {
+    .breadcrumb {
+        background-color: transparent;
+    }
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+
+    .breadcrumb-item {
+        font-weight: $font-weight-bold;
+
+        + .breadcrumb-item { 
+            &:before {
+                @extend %ebf;
+                content: '\ea3c';
+                color: $blue-900;
+                font-size: $font-size-sm;
+            }
+        }
+
+        &.active {
+            font-weight: $font-weight-normal;
+        }
+
+        a {
+            color: $blue-900;            
+        }
+    }
+}

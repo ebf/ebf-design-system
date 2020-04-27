@@ -37,6 +37,7 @@ const layoutItems = [
 const componentItems = [
   'alerts',
   'badges',
+  'breadcrumbs',
   'buttons',
   'forms',
   'modals',
