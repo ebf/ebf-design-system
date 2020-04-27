@@ -3,7 +3,7 @@
   transition: $transition-base;
   will-change: transform;
   letter-spacing: $btn-letter-spacing;
-  margin-bottom: $spacer;
+
   
   &:not(.btn-link) {  
     &:hover {
@@ -22,9 +22,17 @@
 
 .btn-warning {
   color: $yellow-900;
+
+  &:hover {
+    color: $yellow-900;
+  }
 }
 .btn-info {
   color: $blue-600;
+
+  &:hover {
+    color: $blue-800;
+  }
 }
 
 
@@ -61,5 +69,6 @@
   &.disabled,
   &:disabled {
     opacity: .4;
+    pointer-events: none;
   }
 }

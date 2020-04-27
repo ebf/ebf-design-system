@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { Link } from "gatsby"
 import classNames from 'classnames';
-import { Nav, Collapse, NavDropdown } from 'react-bootstrap';
+import { Nav, Collapse, NavDropdown, Button } from 'react-bootstrap';
 
 function NavSection({ heading, location: { pathname }, items, path }) {
   let active = pathname.startsWith(path);
@@ -50,12 +50,36 @@ export default class SideNav extends React.Component {
     this.setState(s => ({ collapsed: !s.collapsed }));
   };
 
+  componentDidMount() {
+    window.addEventListener('resize', this.onResize.bind(this)); 
+    this.onResize({
+      target:window
+    })
+  }
+
+  onResize(event) {
+    const target = event.target;
+    if (target.innerWidth > 992) {
+      this.setState ({ collapsed:false });
+    } else {
+      this.setState ({collapsed:true});
+    } 
+  }
+  
   render() {
     const { location, className, ...props } = this.props;
 
+    const { collapsed } = this.state;
+
     return (
-      <div className={classNames(className, 'side-nav')} {...props}>
-        <nav className="flex-column nav mt-4" role="complementary">
+      
+      <div className={classNames(className, 'side-nav', collapsed ? 'closed-sidebar' : 'open-sidebar')} {...props}>
+
+        <div size="sm" className="sidebar-toggler" onClick={() => this.handleCollapse()}>
+          {collapsed ? <i className="btn ebf ebf-arr-right"></i> : <i className="btn ebf ebf-arr-left"></i>}
+        </div>
+
+        <nav className="flex-column nav mt-4 aside" role="complementary">
           <NavSection
             heading="Getting started"
             path="/"

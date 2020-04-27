@@ -37,7 +37,8 @@ $grays: map-merge((
   "600": $gray-600,
   "700": $gray-700,
   "800": $gray-800,
-  "900": $gray-900
+  "900": $gray-900,
+  "black": $black
 ), $grays);
 
 // Blues
@@ -517,7 +518,7 @@ $table-dark-color:            $body-bg !default;
 
 // Buttons + Forms
 
-$input-btn-padding-y:         1rem !default;
+$input-btn-padding-y:         .5rem !default;
 $input-btn-padding-x:         1.75rem !default;
 $input-btn-line-height:       $shape-height-base !default;
 
@@ -531,14 +532,14 @@ $input-btn-padding-x-sm:      1rem !default;
 $input-btn-line-height-sm:    $shape-height-sm !default;
 
 $input-btn-padding-y-lg:      $input-btn-padding-y + .25!default;
-$input-btn-padding-x-lg:      $input-btn-padding-x + .5 !default;
+$input-btn-padding-x-lg:      $input-btn-padding-x + .75 !default;
 $input-btn-line-height-lg:    $shape-height-lg !default;
 
 $input-btn-border-width:      1px !default;
 
 $input-btn-font-size-sm:      .75rem !default;
 $input-btn-font-size:         .875rem !default;
-$input-btn-font-size-lg:      1rem !default;
+$input-btn-font-size-lg:      .875rem !default;
 
 // Buttons
 
@@ -555,6 +556,8 @@ $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
 $btn-line-height-lg:          $input-btn-line-height-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
+
+
 
 $btn-font-weight:             400 !default;
 $btn-text-transform:          uppercase !default;
@@ -606,8 +609,8 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     0 !default;
 $input-focus-box-shadow:                0px 3px 6px #2494C529 !default; //0 1px 3px 0  !default;
 
-$input-placeholder-color:               $gray-300 !default;
-$input-focus-placeholder-color:         $gray-300 !default;
+$input-placeholder-color:               $gray-600 !default;
+$input-focus-placeholder-color:         $gray-900 !default;
 
 $input-height-border:                   $input-border-width * 2 !default;
 
@@ -725,8 +728,9 @@ $dropdown-item-padding-x:           1.5rem !default;
 
 $nav-link-padding-y:                .25rem !default;
 $nav-link-padding-x:                .75rem !default;
-$nav-link-color:                    $gray-800 !default;
-$nav-link-disabled-color:           $gray-600 !default;
+$nav-link-color:                    $gray-700 !default;
+$nav-link-active-color:             $blue-900 !default;
+$nav-link-disabled-color:           $gray-400 !default;
 
 $nav-pills-padding-y:               .75rem !default;
 $nav-pills-padding-x:               1rem !default;
@@ -762,8 +766,8 @@ $navbar-nav-link-padding-x:         1rem !default;
 $navbar-nav-link-padding-y:         1rem !default;
 
 $navbar-nav-link-font-family:       $font-family-alt !default;
-$navbar-nav-link-font-size:         .875rem !default;
-$navbar-nav-link-font-weight:       400 !default;
+$navbar-nav-link-font-size:         $font-size-sm !default;
+$navbar-nav-link-font-weight:       $font-weight-normal !default;
 $navbar-nav-link-text-transform:    normal !default;
 $navbar-nav-link-letter-spacing:    0 !default;
 $navbar-nav-link-border-radius:     $border-radius !default;
@@ -771,29 +775,32 @@ $navbar-nav-link-border-radius:     $border-radius !default;
 $navbar-dark-bg:                    transparent !default;
 $navbar-dark-hover-bg:              rgba(255, 255, 255, .1);
 $navbar-dark-active-bg:             rgba(255, 255, 255, .1);
-$navbar-dark-color:                 rgba($white, .95);
-$navbar-dark-hover-color:           rgba($white, .65);
-$navbar-dark-active-color:          rgba($white, .65);
+$navbar-dark-color:                 $gray-400;
+$navbar-dark-hover-color:           $blue-300;
+$navbar-dark-active-color:          $white;
 $navbar-dark-disabled-color:        rgba($white, .25);
 $navbar-dark-toggler-border-color:  transparent !default;
+
 
 $navbar-light-bg:                   transparent !default;
 $navbar-light-hover-bg:             rgba(0, 0, 0, .1);
 $navbar-light-active-bg:            rgba(0, 0, 0, .1);
 $navbar-light-color:                $gray-700;
-$navbar-light-hover-color:          $gray-800;
-$navbar-light-brand-color:          $blue;
-$navbar-light-brand-hover-color:    $blue-600;
-$navbar-light-active-color:         $navbar-light-hover-color;
+$navbar-light-hover-color:          $gray-900;
+$navbar-light-brand-color:          $blue-900;
+$navbar-light-brand-hover-color:    $blue-900;
+$navbar-light-active-color:         $blue-900;
 $navbar-light-disabled-color:       $gray-300;
-$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml !default;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+//$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml !default;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+
 $navbar-light-toggler-border-color: transparent !default;
 $navbar-light-box-shadow:           0 2px 6px 0 rgba($black, .03) !default;
 
 
 // Alerts
 
-$alert-notify-maring:               1.5rem !default;
+$alert-notify-margin:               1.5rem !default;
 $alert-padding-y:                   1.33rem !default;
 $alert-padding-x:                   1.33rem !default;
 $alert-border-width:                0 !default;

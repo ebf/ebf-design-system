@@ -15,11 +15,12 @@ const TYPES = [
   'dark',
 ];
 
+
 export default withLayout(function Alerts() {
   return (
     <>
       <h1>Alerts</h1>
-      <p class="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+      <p className="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
 
       <LinkedHeading h="2" id="examples">Examples</LinkedHeading>
       <p>

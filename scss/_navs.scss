@@ -16,3 +16,40 @@
       }
   }
 }
+
+
+.aside {
+  a {
+    color: $gray-700;
+  }
+}
+
+.side-nav {
+  left: 0!important;
+
+  .sidebar-toggler {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999;   
+
+    .btn {
+      padding: .25rem;
+      background-color: $blue;
+      color: white;
+    }
+  }
+
+  
+  &.closed-sidebar {
+    position: fixed!important;
+    left: -100%!important;    
+
+    .sidebar-toggler {
+      position: fixed;
+      left: 0rem;
+      top: 4.5rem;
+    }
+  }
+ 
+}

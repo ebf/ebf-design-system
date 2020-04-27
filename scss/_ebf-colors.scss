@@ -19,6 +19,7 @@ $grays: (
 "gray-700": $gray-700,
 "gray-800": $gray-800,
 "gray-900": $gray-900,
+"black": $black,
 );
 
 @each $color, $value in $grays {

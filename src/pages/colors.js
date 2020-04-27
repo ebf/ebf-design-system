@@ -7,7 +7,7 @@ import LinkedHeading from '../components/LinkedHeading';
 import withLayout from "../with-layout"
 
 const GRAYS = [
-  {color: 'white', hex: '#ffffff' },
+  
   {color: 'gray-100', hex: '#f8f9fb' },
   {color: 'gray-200', hex: '#f2f3f7'},
   {color: 'gray-300', hex: '#e3e6ed'},
@@ -17,6 +17,7 @@ const GRAYS = [
   {color: 'gray-700', hex: '#afb8c7'},
   {color: 'gray-800', hex: '#97a2b4'},
   {color: 'gray-900', hex: '#55677b'}, 
+  {color: 'black', hex: '#2b3d51' },
 ];
 
 const BLUES = [
