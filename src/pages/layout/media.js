@@ -1,5 +1,6 @@
 import React from 'react';
-import {Media} from 'react-bootstrap';
+
+import {Media, Holder} from 'react-bootstrap';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
 
@@ -7,13 +8,15 @@ export default withLayout(function GridSection({ data }) {
   return (
     <>
       <LinkedHeading h="1" id="media-object">Media Object</LinkedHeading>
+      <br/>
+      <br/>
 
       <Media>
         <img
             width={64}
             height={64}
             className="mr-3"
-            src="http://upload.wikimedia.org/wikipedia/sr/0/0c/Firefox-logo.png"
+            src="https://via.placeholder.com/64/2494c5/fff"
             data-src="holder.js/64x64"
             alt="Placeholder"
         />
@@ -28,16 +31,20 @@ export default withLayout(function GridSection({ data }) {
           </Media.Body>
         </Media>
 
-        <br/>
+ 
 
         <LinkedHeading h="2" id="alignment">Alignment</LinkedHeading>
+
+        <br/>
+        <br/>
 
         <Media>
         <img
             width={64}
             height={64}
             className="mr-3"
-            src="holder.js/64x64"
+            src="https://via.placeholder.com/64/2494c5/fff"
+            data-src="holder.js/64x64"
             alt="Placeholder"
         />
           <Media.Body>
@@ -59,7 +66,8 @@ export default withLayout(function GridSection({ data }) {
             width={64}
             height={64}
             className="align-self-center mr-3"
-            src="holder.js/64x64"
+            src="https://via.placeholder.com/64/2494c5/fff"
+            data-src="holder.js/64x64"
             alt="Placeholder"
         />
           <Media.Body>
@@ -81,7 +89,8 @@ export default withLayout(function GridSection({ data }) {
             width={64}
             height={64}
             className="align-self-end mr-3"
-            src="holder.js/64x64"
+            src="https://via.placeholder.com/64/2494c5/fff"
+            data-src="holder.js/64x64"
             alt="Placeholder"
         />
           <Media.Body>
@@ -95,8 +104,13 @@ export default withLayout(function GridSection({ data }) {
           </Media.Body>
         </Media>
 
+        <br/>
+        <br/>
 
         <LinkedHeading h="2" id="order">Order</LinkedHeading>
+
+        <br/>
+        <br/>
 
         <Media>
        
@@ -114,14 +128,19 @@ export default withLayout(function GridSection({ data }) {
             width={64}
             height={64}
             className="mr-3"
-            src="holder.js/64x64"
+            src="https://via.placeholder.com/64/2494c5/fff"
+            data-src="holder.js/64x64"
             alt="Placeholder"
           />
         </Media>
 
         <br/>
+        <br/>
 
         <LinkedHeading h="2" id="media-list">Media List</LinkedHeading>
+
+        <br/>
+        <br/>
 
         <ul className="list-unstyled">
           <Media as="li">
@@ -129,7 +148,8 @@ export default withLayout(function GridSection({ data }) {
               width={64}
               height={64}
               className="mr-3"
-              src="holder.js/64x64"
+              src="https://via.placeholder.com/64/2494c5/fff"
+              data-src="holder.js/64x64"
               alt="Placeholder"
             />
             <Media.Body>
@@ -148,7 +168,8 @@ export default withLayout(function GridSection({ data }) {
               width={64}
               height={64}
               className="mr-3"
-              src="holder.js/64x64"
+              src="https://via.placeholder.com/64/2494c5/fff"
+              data-src="holder.js/64x64"
               alt="Placeholder"
             />
             <Media.Body>
@@ -167,7 +188,8 @@ export default withLayout(function GridSection({ data }) {
               width={64}
               height={64}
               className="mr-3"
-              src="holder.js/64x64"
+              src="https://via.placeholder.com/64/2494c5/fff"
+              data-src="holder.js/64x64"
               alt="Placeholder"
             />
             <Media.Body>

@@ -68,3 +68,11 @@ $ebf-font-location: "../../scss/fonts";
     
   }
 }
+
+// Media image border radius
+
+.media {
+  img {
+    border-radius: $border-radius;
+  }
+}
