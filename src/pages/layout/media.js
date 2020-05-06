@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Media, Holder} from 'react-bootstrap';
+import {Media} from 'react-bootstrap';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
 
