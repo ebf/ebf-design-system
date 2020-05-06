@@ -38,7 +38,7 @@ export default withLayout(function Modals() {
   return (
     <>
       <h1>Modals</h1>
-      <p class="lead">Add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+      <p className="lead">Add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
 
       <LinkedHeading h="2" id="demo">Live demo</LinkedHeading>
       <p>Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page.</p>

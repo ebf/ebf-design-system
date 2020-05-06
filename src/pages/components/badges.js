@@ -19,7 +19,7 @@ export default withLayout(function Badges() {
   return (
     <>
       <h1>Badges</h1>
-      <p class="lead">Badges scale to match the size of the immediate parent element by using relative font sizing and em units.</p>
+      <p className="lead">Badges scale to match the size of the immediate parent element by using relative font sizing and em units.</p>
 
       <div>
         <h1>
