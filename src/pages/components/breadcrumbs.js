@@ -1,12 +1,11 @@
 import React from 'react';
 
 import {Breadcrumb, BreadcrumbItem} from 'react-bootstrap';
-import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
 
 
 
-export default withLayout(function NavbarBrand() {
+export default withLayout(function Breadcrumbs() {
   return (
     <>
     <h1>Breadcrumbs</h1>

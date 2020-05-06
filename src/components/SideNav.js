@@ -32,6 +32,7 @@ function NavSection({ heading, location: { pathname }, items, path }) {
 
 const layoutItems = [
   'grid',
+  'media',
 ];
 
 const componentItems = [
