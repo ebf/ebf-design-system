@@ -21,6 +21,13 @@ export default withLayout(function LinksPage() {
         <h5>EBF Heading 5</h5>
         <h6>EBF Heading 6</h6>
 
+        <LinkedHeading h="2" id="display-heading">Display Heading</LinkedHeading> 
+
+        <h1 className="display-1">Display 1</h1>
+        <h1 className="display-2">Display 2</h1>
+        <h1 className="display-3">Display 3</h1>
+        <h1 className="display-4">Display 4</h1>
+
         <LinkedHeading h="2" id="lead">Lead</LinkedHeading> 
 
         <p className="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p> 
