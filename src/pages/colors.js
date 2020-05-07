@@ -122,7 +122,8 @@ const Swatch = ({ color, hex }) => (
 export default withLayout(function LinksPage() {
   return (
     <>
-      <h1>Colors</h1>
+      
+      <LinkedHeading h="1" id="colors">Colors</LinkedHeading>            
             
       <LinkedHeading h="2" id="primary-colors">Primary colors</LinkedHeading>
       <p className="lead">

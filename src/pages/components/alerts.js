@@ -19,7 +19,7 @@ const TYPES = [
 export default withLayout(function Alerts() {
   return (
     <>
-      <h1>Alerts</h1>
+      <LinkedHeading h="1" id="alerts">Alerts</LinkedHeading>   
       <p className="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
 
 

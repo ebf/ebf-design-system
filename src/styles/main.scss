@@ -53,7 +53,6 @@ $ebf-font-location: "../../scss/fonts";
     position: relative;
     height: 0;
     padding-bottom: 100%;
-    border-bottom: 1px solid $border-color;
     border-radius: $border-radius;
   }
 
@@ -79,6 +78,8 @@ $ebf-font-location: "../../scss/fonts";
 
 // Grid Page 
 .ebf-grid-example {
+  padding: 0;
+  
   .row {
     div {
       span {
@@ -95,3 +96,10 @@ $ebf-font-location: "../../scss/fonts";
 }
 
 
+pre {
+  margin-bottom: 0;
+}
+
+blockquote {
+  font-size: $font-size-lg;
+}

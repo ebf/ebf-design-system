@@ -18,7 +18,8 @@ const TYPES = [
 export default withLayout(function Badges() {
   return (
     <>
-      <h1>Badges</h1>
+      
+      <LinkedHeading h="1" id="badges">Badges</LinkedHeading>   
       <p className="lead">Badges scale to match the size of the immediate parent element by using relative font sizing and em units.</p>
 
       <div>

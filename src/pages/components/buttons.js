@@ -9,7 +9,7 @@ import withLayout from "../../with-layout"
 export default withLayout(function Buttons() {
   return (
     <>
-      <h1>Buttons</h1>
+      <LinkedHeading h="1" id="buttons">Buttons</LinkedHeading>  
       <p className="lead">Custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
 
       <LinkedHeading h="2" id="types">Button types</LinkedHeading>

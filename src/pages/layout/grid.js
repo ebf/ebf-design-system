@@ -11,7 +11,7 @@ export default withLayout(function GridSection({ data }) {
       <br/>
       <br/>
 
-      <Container fluid className=" container-sm ebf-grid-example">
+      <Container fluid className="ebf-grid-example">
         <Row className="mt-4 mb-4">
           <Col>
             <span>12 Col</span>

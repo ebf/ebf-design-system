@@ -52,7 +52,7 @@ function FieldGroup({ id, label, help, ...props }) {
 export default withLayout(function FormsPage() {
   return (
     <>
-      <h1>Forms</h1>
+      <LinkedHeading h="1" id="forms">Forms</LinkedHeading> 
       <p className="lead">
         Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
       </p>

@@ -9,7 +9,7 @@ import logo from '../../images/logo.svg'
 export default withLayout(function NavbarBrand() {
   return (
     <>
-    <h1>Navbar</h1>
+    <LinkedHeading h="1" id="navbar">Navbar</LinkedHeading> 
       <Navbar collapseOnSelect expand="lg" bg="white" className="border-bottom">
         <Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />

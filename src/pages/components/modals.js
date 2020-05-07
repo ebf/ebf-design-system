@@ -37,7 +37,7 @@ function Example() {
 export default withLayout(function Modals() {
   return (
     <>
-      <h1>Modals</h1>
+      <LinkedHeading h="1" id="modals">Modals</LinkedHeading> 
       <p className="lead">Add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
 
       <LinkedHeading h="2" id="demo">Live demo</LinkedHeading>

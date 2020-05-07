@@ -1,6 +1,7 @@
 import React from 'react';
 
-import {Breadcrumb, BreadcrumbItem} from 'react-bootstrap';
+import {Breadcrumb} from 'react-bootstrap';
+import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
 
 
@@ -8,7 +9,7 @@ import withLayout from "../../with-layout"
 export default withLayout(function Breadcrumbs() {
   return (
     <>
-    <h1>Breadcrumbs</h1>
+    <LinkedHeading h="1" id="breadcrumbs">Breadcrumbs</LinkedHeading>  
 
 	<Breadcrumb>
 		<Breadcrumb.Item active>Home</Breadcrumb.Item>
