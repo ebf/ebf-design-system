@@ -43,9 +43,9 @@ export default withLayout(function Badges() {
         </h6>
       </div>
 
-      <p>Badges can be used as part of links or buttons to provide a counter.</p>
+      <p className="lead">Badges can be used as part of links or buttons to provide a counter.</p>
 
-      <Button variant="primary">
+      <Button variant="primary" className="mb-4">
         Profile <Badge className="badge-round-element"  variant="white">99+</Badge>
         <span className="sr-only">unread messages</span>
       </Button>
