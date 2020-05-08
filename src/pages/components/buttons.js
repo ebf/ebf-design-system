@@ -63,6 +63,7 @@ export default withLayout(function Buttons() {
       </div>
 
       <p>Create block level buttons—those that span the full width of a parent—by adding <code>block</code></p>
+      
       <Button variant="primary" size="lg" block>
         Block level button
       </Button>

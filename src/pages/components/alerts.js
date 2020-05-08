@@ -1,6 +1,5 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
-
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
 

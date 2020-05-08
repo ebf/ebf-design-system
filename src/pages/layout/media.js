@@ -4,7 +4,7 @@ import {Media} from 'react-bootstrap';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
 
-export default withLayout(function GridSection({ data }) {
+export default withLayout(function Layout({ data }) {
   return (
     <>
       <LinkedHeading h="1" id="media-object">Media Object</LinkedHeading>

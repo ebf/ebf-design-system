@@ -13,7 +13,7 @@ export default withLayout(function LinksPage() {
       
       <LinkedHeading h="2" id="heading">Heading</LinkedHeading>      
 
-      <Container fluid>
+      
         <h1>EBF Heading 1</h1>
         <h2>EBF Heading 2</h2>
         <h3>EBF Heading 3</h3>
@@ -52,7 +52,7 @@ export default withLayout(function LinksPage() {
         <p><strong>This line rendered as bold text.</strong></p>
         <p><em>This line rendered as italicized text.</em></p>
 
-      </Container>
+      
     </>
   );
 });
