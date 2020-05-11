@@ -203,18 +203,18 @@ export default withLayout(function Buttons() {
         <Col xl={10} md={12}>
         <code className="code-snippet">
           
-          {'<button type="button" class="mb-4 btn btn-primary">Primary button</button>'}
+          {'<button type="button" class="btn btn-primary">Primary button</button>'}
           <br/>
           <br/>
-          {'<button type="button" class="mb-4 btn btn-secondary">Secondary button</button>'} 
+          {'<button type="button" class="btn btn-secondary">Secondary button</button>'} 
           <br/>
           <br/>
           <br/>
           <br/>
-          {'<button disabled type="button" class="mb-4 btn btn-primary">Primary button</button>'}         
+          {'<button disabled type="button" class="btn btn-primary">Primary button</button>'}         
           <br/>
           <br/>
-          {'<button disabled type="button" class="mb-4 btn btn-secondary">Secondary button</button>'}         
+          {'<button disabled type="button" class="btn btn-secondary">Secondary button</button>'}         
         </code>
         </Col>
       </Row>
