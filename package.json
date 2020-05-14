@@ -5,8 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "bootstrap": "^4.4.1",
-    "react-code-blocks": "0.0.7"
+    "bootstrap": "^4.4.1"
   },
   "peerDependencies": {
     "jquery": "1.9.1 - 3",
