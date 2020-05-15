@@ -1,5 +1,6 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
 
@@ -15,12 +16,12 @@ const TYPES = [
 ];
 
 
-export default withLayout(function Alerts() {
+export default withLayout(function Alerts () {
   return (
     <>
       <LinkedHeading h="1" id="alerts">Alerts</LinkedHeading>   
-      <p className="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
-
+      <p className="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>   
+     
 
       <LinkedHeading h="2" id="examples">Examples</LinkedHeading>
       <p>
@@ -36,6 +37,35 @@ export default withLayout(function Alerts() {
         </Alert>
       ))}
 
+      <Row fluid="md" >
+        <Col xl={10} md={12}>
+        <code className="code-snippet">
+          {'<div role="alert" class="fade alert alert-primary show"><i class="alert-icon ebf ebf-bell-fill"></i> This is a primary alert — check it out!</div>'}
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-secondary show"><i class="alert-icon ebf ebf-bell-fill"></i>This is a secondary alert — check it out!</div>'}       
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-success show"><i class="alert-icon ebf ebf-check-mark-circle"></i>This is a success alert — check it out!</div>'}       
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-danger show"><i class="alert-icon ebf ebf-alert-wide-fill"></i>This is a danger alert — check it out!</div>'}       
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-warning show"><i class="alert-icon ebf ebf-alert-wide-fill"></i>This is a warning alert — check it out!</div>'}       
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-info show"><i class="alert-icon ebf ebf-info-fill"></i>This is a info alert — check it out!</div>'}       
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-light show"><i class="alert-icon ebf ebf-bell-fill"></i>This is a light alert — check it out!</div>'}       
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-dark show"><i class="alert-icon ebf ebf-bell-fill"></i>This is a dark alert — check it out!</div>'}       
+        </code>
+        </Col>
+      </Row>
+
       <LinkedHeading h="2" id="links">Links</LinkedHeading>
       <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
 
@@ -46,6 +76,36 @@ export default withLayout(function Alerts() {
           This is a {value.type} alert with{' '} <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.
         </Alert>
       ))}
+
+<Row fluid="md" >
+        <Col xl={10} md={12}>
+        <code className="code-snippet">
+          {'<div role="alert" class="fade alert alert-primary show"><i class="alert-icon ebf ebf-bell-fill"></i>This is a primary alert with  <a class="alert-link" href="#" role="button">an example link</a>. Give it a click if you like.</div>'}
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-secondary show"><i class="alert-icon ebf ebf-bell-fill"></i>This is a secondary alert with  <a class="alert-link" href="#" role="button">an example link</a>. Give it a click if you like.</div>'}       
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-success show"><i class="alert-icon ebf ebf-check-mark-circle"></i>This is a success alert with  <a class="alert-link" href="#" role="button">an example link</a>. Give it a click if you like.</div>'}       
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-danger show"><i class="alert-icon ebf ebf-alert-wide-fill"></i>This is a danger alert with  <a class="alert-link" href="#" role="button">an example link</a>. Give it a click if you like.</div>'}       
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-warning show"><i class="alert-icon ebf ebf-alert-wide-fill"></i>This is a warning alert with  <a class="alert-link" href="#" role="button">an example link</a>. Give it a click if you like.</div>'}       
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-info show"><i class="alert-icon ebf ebf-info-fill"></i>This is a info alert with  <a class="alert-link" href="#" role="button">an example link</a>. Give it a click if you like.</div>'}       
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-light show"><i class="alert-icon ebf ebf-bell-fill"></i>This is a light alert with  <a class="alert-link" href="#" role="button">an example link</a>. Give it a click if you like.</div>'}       
+          <br/>
+          <br/>
+          {'<div role="alert" class="fade alert alert-dark show"><i class="alert-icon ebf ebf-bell-fill"></i>This is a dark alert with  <a class="alert-link" href="#" role="button">an example link</a>. Give it a click if you like.</div>'}       
+        </code>
+        </Col>
+      </Row>
+      
     </>
   )
 });

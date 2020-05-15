@@ -495,7 +495,7 @@ $loader-border-width:         2px !default;
 
 // Tables
 
-$table-cell-padding:          1rem !default;
+$table-cell-padding:          .875rem !default;
 $table-cell-padding-sm:       .3rem !default;
 
 $table-bg:                    transparent !default;
@@ -504,7 +504,7 @@ $table-hover-bg:              rgba($black, .075);
 $table-active-bg:             $table-hover-bg !default;
 
 $table-border-width:          $border-width !default;
-$table-border-color:          $gray-300 !default;
+$table-border-color:          $border-color !default;
 
 $table-head-bg:               $gray-200 !default;
 $table-head-color:            $gray-700 !default;

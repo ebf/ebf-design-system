@@ -43,6 +43,7 @@ const componentItems = [
   'forms',
   'modals',
   'navbar',
+  'tables',
 ];
 
 export default class SideNav extends React.Component {

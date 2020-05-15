@@ -79,7 +79,7 @@ $ebf-font-location: "../../scss/fonts";
 // Grid Page 
 .ebf-grid-example {
   padding: 0;
-  
+
   .row {
     div {
       span {
@@ -103,3 +103,34 @@ pre {
 blockquote {
   font-size: $font-size-lg;
 }
+
+
+// Tables styles
+
+.ebf-table {
+  font-size: $input-btn-font-size;
+  border: $border-width solid $border-color;
+
+  thead {
+    tr {
+      th {
+        background-color: $gray-200;
+        border-bottom: none;
+        color: $black;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+
+        color: $gray-900;
+        &:nth-of-type(2) {
+          color: $black;
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+  }
+} 
