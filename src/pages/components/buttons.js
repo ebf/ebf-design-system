@@ -1,10 +1,36 @@
 import React from 'react';
-import classNames from 'classnames';
 import { Button } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
+import { CopyBlock, github } from 'react-code-blocks'
 
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
+
+const BUTTON_TYPES = [{
+  type: 'primary',
+  label: 'Primary',
+}, {
+  type: 'secondary',
+  label: 'Secondary',
+}, {
+  type: 'success',
+  label: 'Success',
+}, {
+  type: 'danger',
+  label: 'Danger',
+}, {
+  type: 'info',
+  label: 'Info',
+}, {
+  type: 'warning',
+  label: 'Warning',
+}, {
+  type: 'dark',
+  label: 'Dark',
+}, {
+  type: 'link',
+  label: 'Link',
+}];
 
 export default withLayout(function Buttons() {
   return (
@@ -13,93 +39,68 @@ export default withLayout(function Buttons() {
       <p className="lead">Custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
 
       <LinkedHeading h="2" id="button-types">Button types</LinkedHeading>
-      <Button className="mb-4" variant="primary">Primary</Button>
-      <Button className="mb-4" variant="secondary">Secondary</Button>
-      <Button className="mb-4" variant="success">Success</Button>
-      <Button className="mb-4" variant="danger">Danger</Button>
-      <Button className="mb-4" variant="info">Info</Button>
-      <Button className="mb-4" variant="warning">Warning</Button>
-      <Button className="mb-4" variant="light">Light</Button>
-      <Button className="mb-4" variant="dark">Dark</Button>
-      <Button className="mb-4" variant="link">Link</Button>
+
+      {BUTTON_TYPES.map(({ type, label }) => (
+        <Button className="mb-4" variant={type}>{label}</Button>
+      ))}
 
       <LinkedHeading h="3" id="button-types-markup">Button types markup</LinkedHeading>
      
       <Row fluid="md" >
         <Col xl={10} md={12}>
-          <code className="code-snippet">
-            {'<button type="button" class="btn btn-primary">Primary</button>'}
-            <br/>
-            <br/>
-            {'<button type="button" class="btn btn-secondary">Secondary</button>'}
-            <br/>
-            <br/>
-            {'<button type="button" class="btn btn-success">Success</button>'}
-            <br/>
-            <br/>
-            {'<button type="button" class="btn btn-danger">Danger</button>'}
-            <br/>
-            <br/>
-            {'<button type="button" class="btn btn-info">Info</button>'}
-            <br/>
-            <br/>
-            {'<button type="button" class="btn btn-warning">Warning</button>'}
-            <br/>
-            <br/>
-            {'<button type="button" class="btn btn-light">Light</button>'}
-            <br/>
-            <br/>
-            {'<button type="button" class="btn btn-dark">Dark</button>'}
-            <br/>
-            <br/>
-            {'<button type="button" class="btn btn-link">Link</button>'}
-          </code>
+          {BUTTON_TYPES.map(({ type, label }) => (
+            <div className="mb-3">
+              <CopyBlock
+                theme={github}
+                text={`<button type="button" class="btn btn-${type}">\n\t${label}\n</button>`}
+                language="jsx"
+                showLineNumbers
+                wrapLines
+                codeBlock
+              />
+            </div>
+          ))}
         </Col>
       </Row>
 
       <LinkedHeading h="2" id="outline-types">Outline buttons</LinkedHeading>
       <p>For a lighter touch, Buttons also come in outline-* variants with no background color.</p>
 
-      <Button className="mb-4" variant="outline-primary">Primary</Button>
-      <Button className="mb-4" variant="outline-secondary">Secondary</Button>
-      <Button className="mb-4" variant="outline-success">Success</Button>
-      <Button className="mb-4" variant="outline-danger">Danger</Button>
-      <Button className="mb-4" variant="outline-info">Info</Button>
-      <Button className="mb-4" variant="outline-warning">Warning</Button>
-      <Button className="mb-4" variant="outline-light">Light</Button>
-      <Button className="mb-4" variant="outline-dark">Dark</Button>
+      {BUTTON_TYPES.map(({ type, label }) => {
+        const variant = `outline-${type}`;
+
+        return (
+          <div className="mb-3">
+            <Button className="mb-4" variant={variant}>{label}</Button>
+            <p>Markup</p>
+            <CopyBlock
+              theme={github}
+              text={`<button type="button" class="btn btn-outline-${type}">\n\t${label}\n</button>`}
+              language="jsx"
+              showLineNumbers
+              wrapLines
+              codeBlock
+            />
+          </div>
+        )
+      })}
 
       <LinkedHeading h="3" id="outline-button-types-markup">Outline button types markup</LinkedHeading>
 
       <Row fluid="md" >
         <Col xl={10} md={12}>
-        <code className="code-snippet">
-          {'<button type="button" class="btn btn-outline-primary">Primary</button>'}
-          <br/>
-          <br/>
-          {'<button type="button" class="btn btn-outline-secondary">Secondary</button>'}
-          <br/>
-          <br/>
-          {'<button type="button" class="btn btn-outline-success">Success</button>'}
-          <br/>
-          <br/>
-          {'<button type="button" class="btn btn-outline-danger">Danger</button>'}
-          <br/>
-          <br/>
-          {'<button type="button" class="btn btn-outline-primary">Info</button>'}
-          <br/>
-          <br/>
-          {'<button type="button" class="btn btn-outline-warning">Warning</button>'}
-          <br/>
-          <br/>
-          {'<button type="button" class="btn btn-outline-light">Light</button>'}
-          <br/>
-          <br/>
-          {'<button type="button" class="btn btn-outline-dark">Dark</button>'}
-          <br/>
-          <br/>
-          {'<button type="button" class="btn btn-outline-link">Link</button>'}
-        </code>
+          {BUTTON_TYPES.map(({ type, label }) => (
+            <div className="mb-3">
+              <CopyBlock
+                theme={github}
+                text={`<button type="button" class="btn btn-outline-${type}">\n\t${label}\n</button>`}
+                language="jsx"
+                showLineNumbers
+                wrapLines
+                codeBlock
+              />
+            </div>
+          ))}
         </Col>
       </Row>
 
