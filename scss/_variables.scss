@@ -41,6 +41,8 @@ $grays: map-merge((
   "black": $black
 ), $grays);
 
+$gray-gradient: linear-gradient(0deg, rgba(242,243,247,1) 0%, rgba(255,255,255,1) 100%);
+
 // Blues
 
 $blue:    #2494c5 !default;

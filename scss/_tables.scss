@@ -8,7 +8,10 @@
     thead {
       tr {
         th {
-          background-color: $gray-200;
+          &.header-container {
+            background: $gray-gradient;
+          }
+          background: $gray-200;
           border-bottom: none;
           color: $black;
 
