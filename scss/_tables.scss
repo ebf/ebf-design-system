@@ -2,36 +2,31 @@
 // Tables styles
 
 .ebf-table {
-    font-size: $input-btn-font-size;
-    border: $border-width solid $border-color;
-  
-    thead {
-      tr {
-        th {
-          &.header-container {
-            background: $gray-gradient;
-          }
-          background: $gray-200;
-          border-bottom: none;
-          color: $black;
-
-          h5 {
-            line-height: 3;
-          }
-        }
-      }
+    .ebf-table-header {
+      background: $gray-gradient;
+      border-bottom: none;
+      color: $black;
+      border: 1px 1px 0 1px solid $border-color;
     }
-  
-    tbody {
-      tr {
-        td {
-  
-          color: $gray-900;
-          &:nth-of-type(2) {
-            color: $black;
-            font-weight: $font-weight-bold;
-          }
-        }
+
+    .ebf-table-headline {
+      line-height: 3rem;
+      margin-bottom: 0;
+    }
+
+    .table {
+      font-size: $input-btn-font-size;
+      border: 0 1px 1px 1px solid $border-color;
+
+      th {
+        background: $gray-200;
+        border-bottom: none;
+        color: $black;
+        font-weight: $font-weight-bold;
+      }
+      
+      td {
+        color: $gray-900;
       }
     }
   } 

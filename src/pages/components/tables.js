@@ -14,63 +14,70 @@ export default withLayout(function Tables() {
         <LinkedHeading h="2" id="simple-table">Simple table</LinkedHeading>   
         
 
-        <Table hover responsive className="ebf-table">
-            <thead>
-                <tr>
-                    <th colSpan="5" className="header-container">
-                        <h5 className="mb-0 mt-0">Table Header</h5>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <Form.Group controlId="formBasicCheckbox" className="mb-0">
-                            <Form.Check type="checkbox"/>
-                        </Form.Group>
-                    </th>
-                    <th>Besitzer</th>
-                    <th>eMail</th>
-                    <th>IMEI</th>
-                    <th>EID</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <Form.Group controlId="formBasicCheckbox" className="mb-0">
-                            <Form.Check type="checkbox"/>
-                        </Form.Group>
-                    </td>
-                    <td>Mark</td>
-                    <td>alayaward@ebf.com</td>
-                    <td>54321987</td>
-                    <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
-                </tr>
-                <tr>
-                    <td>
-                        <Form.Group controlId="formBasicCheckbox" className="mb-0">
-                            <Form.Check type="checkbox"/>
-                        </Form.Group>
-                    </td>
-                    <td>Jacob</td>
-                    <td>alayaward@ebf.com</td>
-                    <td>54321987</td>
-                    <td><Badge variant="primary" className="badge-pill">Unbekannt</Badge></td>
-                </tr>
-                <tr>
-                    <td>
-                        <Form.Group controlId="formBasicCheckbox" className="mb-0">
-                            <Form.Check type="checkbox"/>
-                        </Form.Group>
-                    </td>
-                    <td>Larry the Bird</td>
-                    <td>alayaward@ebf.com</td>
-                    <td>54321987</td>
-                    <td>
-                        <Badge variant="success" className="badge-pill">Fertig</Badge>
-                    </td>
-                </tr>
-            </tbody>
-        </Table>
+        <div className="ebf-table">
+            <header className="ebf-table-header">
+                <h5 className="ebf-table-headline">Table Header</h5>
+            </header>
+            <div className="ebf-table-contents">
+                <Table hover responsive>
+                    <thead>
+                        <tr>
+                            <th>
+                                <Form.Group controlId="formBasicCheckbox" className="mb-0">
+                                    <Form.Check type="checkbox"/>
+                                </Form.Group>
+                            </th>
+                            <th>Besitzer</th>
+                            <th>eMail</th>
+                            <th>IMEI</th>
+                            <th>EID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox" className="mb-0">
+                                    <Form.Check type="checkbox"/>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox" className="mb-0">
+                                    <Form.Check type="checkbox"/>
+                                </Form.Group>
+                            </td>
+                            <td>Jacob</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="primary" className="badge-pill">Unbekannt</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox" className="mb-0">
+                                    <Form.Check type="checkbox"/>
+                                </Form.Group>
+                            </td>
+                            <td>Larry the Bird</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td>
+                                <Badge variant="success" className="badge-pill">Fertig</Badge>
+                            </td>
+                        </tr>
+                    </tbody>
+                </Table>
+            </div>
+            <footer className="ebf-table-footer">
+                Copypright 2020
+            </footer>
+        </div>
+
+        
       </>
     )
   });
