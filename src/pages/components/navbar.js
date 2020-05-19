@@ -11,11 +11,11 @@ export default withLayout(function NavbarBrand() {
     <>
     <LinkedHeading h="1" id="navbar">Navbar</LinkedHeading> 
 
-	<Navbar collapseOnSelect expand="lg" bg="white" className="border-bottom">
+	<Navbar collapseOnSelect expand="lg" bg="white" className="border-bottom justify-content-between">
 		<Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 		<Navbar.Collapse id="responsive-navbar-nav">
-			<Nav className="mr-auto">
+			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
 				<NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -36,7 +36,7 @@ export default withLayout(function NavbarBrand() {
         <Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
 		<Navbar.Collapse id="responsive-navbar-nav">			
-			<Nav className="mr-auto">
+			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
 				<NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -69,7 +69,7 @@ export default withLayout(function NavbarBrand() {
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />				
 		<Navbar.Collapse id="responsive-navbar-nav">
 
-			<Nav className="mr-auto">
+			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
 				<NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -103,7 +103,7 @@ export default withLayout(function NavbarBrand() {
 			<Navbar.Brand href="#">EBF GmbH</Navbar.Brand>				
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
 			<Navbar.Collapse id="responsive-navbar-nav">
-				<Nav className="mr-auto">
+				<Nav>
 					<Nav.Link href="#">Home</Nav.Link>
 					<Nav.Link href="#link">Link</Nav.Link>
 					<NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -120,10 +120,12 @@ export default withLayout(function NavbarBrand() {
 		<Navbar bg="white" id="basic-navbar-nav" className="border-top justify-content-between secondary-nav">
 			<span>Span Title Example</span>  
 			<Button><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
-			<Nav>
-				<Nav.Link href="#">Link</Nav.Link>
-				<Nav.Link href="#link">Link</Nav.Link>
-			</Nav>
+			<div>					
+				<Nav>
+					<Nav.Link href="#">Link</Nav.Link>
+					<Nav.Link href="#link">Link</Nav.Link>
+				</Nav>
+			</div>
 		</Navbar>
 	</div>
 
@@ -188,7 +190,7 @@ export default withLayout(function NavbarBrand() {
         <Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
 		<Navbar.Collapse id="responsive-navbar-nav">
-			<Nav className="mr-auto">
+			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
 				<NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -220,7 +222,7 @@ export default withLayout(function NavbarBrand() {
         <Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
 		<Navbar.Collapse id="responsive-navbar-nav">
-			<Nav className="mr-auto">
+			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
 				<NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -252,7 +254,7 @@ export default withLayout(function NavbarBrand() {
         <Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 		<Navbar.Collapse id="responsive-navbar-nav">
-			<Nav className="mr-auto">
+			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
 				<NavDropdown title="Dropdown" id="basic-nav-dropdown">
