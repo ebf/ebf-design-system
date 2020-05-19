@@ -14,7 +14,7 @@ export default withLayout(function NavbarBrand() {
 	<Navbar collapseOnSelect expand="lg" bg="white" className="border-bottom justify-content-between">
 		<Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-		<Navbar.Collapse id="responsive-navbar-nav">
+		<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
 			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
@@ -35,7 +35,18 @@ export default withLayout(function NavbarBrand() {
 	<Navbar collapseOnSelect expand="lg" bg="white" variant="light" className="border-bottom">
         <Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
-		<Navbar.Collapse id="responsive-navbar-nav">			
+		<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">			
+			<InputGroup id="search" className="nav-search">          
+				<FormControl
+					placeholder="Search"
+					aria-label="Search"
+					aria-describedby="basic-addon"
+					type="text"
+				/>
+				<InputGroup.Append>
+					<Button type="submit" id="basic-addon"><i className="ebf ebf-search-l"></i></Button>
+				</InputGroup.Append>
+			</InputGroup>
 			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
@@ -48,17 +59,6 @@ export default withLayout(function NavbarBrand() {
 				</NavDropdown>
 				<Nav.Link href="#disabled" disabled>Disabled</Nav.Link>
 			</Nav>   
-			<InputGroup id="search" className="nav-search">          
-				<FormControl
-					placeholder="Search"
-					aria-label="Search"
-					aria-describedby="basic-addon"
-					type="text"
-				/>
-				<InputGroup.Append>
-					<Button type="submit" id="basic-addon"><i className="ebf ebf-search-l"></i></Button>
-				</InputGroup.Append>
-			</InputGroup>
 		</Navbar.Collapse>
 	</Navbar>
 
@@ -67,7 +67,7 @@ export default withLayout(function NavbarBrand() {
 	<Navbar collapseOnSelect expand="lg" bg="white" variant="light" className="shadow">
         <Navbar.Brand href="#">EBF GmbH</Navbar.Brand>				
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />				
-		<Navbar.Collapse id="responsive-navbar-nav">
+		<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
 
 			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
@@ -102,7 +102,7 @@ export default withLayout(function NavbarBrand() {
 		<Navbar collapseOnSelect expand="lg" bg="white" variant="light">
 			<Navbar.Brand href="#">EBF GmbH</Navbar.Brand>				
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
-			<Navbar.Collapse id="responsive-navbar-nav">
+			<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
 				<Nav>
 					<Nav.Link href="#">Home</Nav.Link>
 					<Nav.Link href="#link">Link</Nav.Link>
@@ -189,7 +189,7 @@ export default withLayout(function NavbarBrand() {
 	<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
         <Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
-		<Navbar.Collapse id="responsive-navbar-nav">
+		<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
 			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
@@ -221,7 +221,7 @@ export default withLayout(function NavbarBrand() {
 	<Navbar collapseOnSelect expand="lg" bg="blue" variant="dark">
         <Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
-		<Navbar.Collapse id="responsive-navbar-nav">
+		<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
 			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
@@ -253,7 +253,7 @@ export default withLayout(function NavbarBrand() {
 	<Navbar collapseOnSelect expand="lg" bg="blue-100" variant="light" >
         <Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-		<Navbar.Collapse id="responsive-navbar-nav">
+		<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
 			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
