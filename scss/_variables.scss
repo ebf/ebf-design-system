@@ -17,7 +17,7 @@ $white:    #fff !default;
 // Grays 
 
 $gray-100: #f8f9fb !default;
-$gray-200: #f2f3f7 !default;
+$gray-200: #f1f3f7 !default;
 $gray-300: #e3e6ed !default;
 $gray-400: #d5d9e2 !default;
 $gray-500: #aeb8c6 !default;
@@ -501,8 +501,8 @@ $table-cell-padding:          .875rem !default;
 $table-cell-padding-sm:       .3rem !default;
 
 $table-bg:                    transparent !default;
-$table-accent-bg:             rgba($black, .05);
-$table-hover-bg:              rgba($black, .075);
+$table-accent-bg:             rgba($gray-100, .05);
+$table-hover-bg:              $gray-100;
 $table-active-bg:             $table-hover-bg !default;
 
 $table-border-width:          $border-width !default;

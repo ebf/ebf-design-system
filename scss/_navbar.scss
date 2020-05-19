@@ -55,19 +55,22 @@
   }
 }
 
-.secondary-nav {
-// Dirty Hack secondary navigation height
-  max-height: 72px;
-  box-shadow: 0 0px 0px rgba(50, 50, 93, 0.1), 0 10px 15px rgba(0, 0, 0, 0.07) !important;
-  * {  
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-}
-
 
 .navbar-dark {
   .navbar-brand {
     color: white;
+  }
+}
+
+.ebf-double-navbar {
+
+  .secondary-nav {
+  // Dirty Hack secondary navigation height
+    max-height: 72px;
+    
+    * {  
+      margin-bottom: 0;
+      margin-top: 0;
+    }
   }
 }

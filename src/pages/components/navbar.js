@@ -98,33 +98,34 @@ export default withLayout(function NavbarBrand() {
 
 	<br/>
 
-	<Navbar collapseOnSelect expand="lg" bg="white" variant="light" className="shadow">
-		<Navbar.Brand href="#">EBF GmbH</Navbar.Brand>				
-		<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
-		<Navbar.Collapse id="responsive-navbar-nav">
-			<Nav className="mr-auto">
-				<Nav.Link href="#">Home</Nav.Link>
+	<div className="ebf-double-navbar shadow">
+		<Navbar collapseOnSelect expand="lg" bg="white" variant="light">
+			<Navbar.Brand href="#">EBF GmbH</Navbar.Brand>				
+			<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
+			<Navbar.Collapse id="responsive-navbar-nav">
+				<Nav className="mr-auto">
+					<Nav.Link href="#">Home</Nav.Link>
+					<Nav.Link href="#link">Link</Nav.Link>
+					<NavDropdown title="Dropdown" id="basic-nav-dropdown">
+						<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+						<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+						<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+						<NavDropdown.Divider />
+						<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+					</NavDropdown>
+					<Nav.Link href="#disabled" disabled>Disabled</Nav.Link>
+				</Nav>        
+			</Navbar.Collapse>  		
+		</Navbar>
+		<Navbar bg="white" id="basic-navbar-nav" className="border-top justify-content-between secondary-nav">
+			<span>Span Title Example</span>  
+			<Button><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
+			<Nav>
+				<Nav.Link href="#">Link</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
-				<NavDropdown title="Dropdown" id="basic-nav-dropdown">
-					<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-					<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-					<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-					<NavDropdown.Divider />
-					<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-				</NavDropdown>
-				<Nav.Link href="#disabled" disabled>Disabled</Nav.Link>
-			</Nav>        
-		</Navbar.Collapse>  		
-	</Navbar>
-
-	<Navbar bg="white" id="basic-navbar-nav" className="border-top justify-content-around secondary-nav">
-		<span>Span Title Example</span>  
-		<Button><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
-		<Nav>
-			<Nav.Link href="#">Link</Nav.Link>
-			<Nav.Link href="#link">Link</Nav.Link>
-		</Nav>
-	</Navbar>
+			</Nav>
+		</Navbar>
+	</div>
 
 	<br/>
 

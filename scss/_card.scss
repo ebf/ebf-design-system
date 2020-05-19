@@ -12,7 +12,7 @@
 }
 
 .card-body {
-  padding: $spacer*4 $spacer;
+  padding: $spacer*3 $spacer;
 }
 
 .ebf-card-select {
@@ -24,6 +24,6 @@
     padding: $spacer;
     background-color: $blue;
     color: white;
-    border-radius: 50%;
+    border-radius: $spacer*2;
   }
 }
