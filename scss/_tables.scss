@@ -13,7 +13,7 @@
     }
 
     .ebf-table-headline {
-      line-height: 3rem;
+      line-height:  $spacer * 3.75;
       margin-bottom: 0;
     }
 
@@ -27,6 +27,7 @@
         border-bottom: none;
         color: $black;
         font-weight: $font-weight-bold;
+        padding: .6rem $table-cell-padding;
       }
       
       td {
