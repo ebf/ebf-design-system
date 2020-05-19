@@ -40,6 +40,7 @@ const componentItems = [
   'badges',
   'breadcrumbs',
   'buttons',
+  'cards',
   'forms',
   'modals',
   'navbar',

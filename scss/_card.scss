@@ -10,3 +10,20 @@
       transform: translateY(-.25rem);
   }
 }
+
+.card-body {
+  padding: $spacer*4 $spacer;
+}
+
+.ebf-card-select {
+  text-align: center;
+
+  .ebf-card-icon {
+    text-align: center;
+    font-size: $font-size-xl;
+    padding: $spacer;
+    background-color: $blue;
+    color: white;
+    border-radius: 50%;
+  }
+}

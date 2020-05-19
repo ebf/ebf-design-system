@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table , Form, Badge} from 'react-bootstrap';
+import { Table , Form, Badge, Button} from 'react-bootstrap';
 
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -17,6 +17,7 @@ export default withLayout(function Tables() {
         <div className="ebf-table">
             <header className="ebf-table-header">
                 <h5 className="ebf-table-headline">Table Header</h5>
+                
             </header>
             <div className="ebf-table-contents">
                 <Table hover responsive>
@@ -27,10 +28,10 @@ export default withLayout(function Tables() {
                                     <Form.Check type="checkbox"/>
                                 </Form.Group>
                             </th>
-                            <th>Besitzer</th>
-                            <th>eMail</th>
-                            <th>IMEI</th>
-                            <th>EID</th>
+                            <th>Besitzer <i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>eMail <i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>IMEI <i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>EID <i className="ebf ebf-arr-up-fill"></i></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -72,9 +73,6 @@ export default withLayout(function Tables() {
                     </tbody>
                 </Table>
             </div>
-            <footer className="ebf-table-footer">
-                Copypright 2020
-            </footer>
         </div>
 
         
