@@ -45,10 +45,10 @@ export default withLayout(function Tables() {
         
 
         <LinkedHeading h="2" id="summary-cards">Summary Cards</LinkedHeading>
-      
 
+   
         <Row className="ebf-card-container">
-            <Col className="col-md-4 col-sm-12">
+            <Col className="col-lg-4 col-md-6 col-sm-12 ">
                 <Card className="ebf-card-summary">
                     <Card.Body>                            
                         <ListGroup variant="flush">
@@ -60,87 +60,8 @@ export default withLayout(function Tables() {
                         </ListGroup>                   
                     </Card.Body>
                 </Card>
-            </Col>
-            <Col className="col-md-4 col-sm-12">
-                <Card className="ebf-card-summary">
-                    <Card.Body>                            
-                        <ListGroup variant="flush">
-                            <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
-                            <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
-                            <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
-                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
-                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
-                        </ListGroup>                   
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col className="col-md-4 col-sm-12">
-                <Card className="ebf-card-summary">
-                    <Card.Body>                            
-                        <ListGroup variant="flush">
-                            <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
-                            <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
-                            <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
-                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
-                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
-                        </ListGroup>                   
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col className="col-md-4 col-sm-12">
-                <Card className="ebf-card-summary">
-                    <Card.Body>                            
-                        <ListGroup variant="flush">
-                            <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
-                            <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
-                            <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
-                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
-                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
-                        </ListGroup>                   
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col className="col-md-4 col-sm-12">
-                <Card className="ebf-card-summary">
-                    <Card.Body>                            
-                        <ListGroup variant="flush">
-                            <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
-                            <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
-                            <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
-                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
-                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
-                        </ListGroup>                   
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col className="col-md-4 col-sm-12">
-                <Card className="ebf-card-summary">
-                    <Card.Body>                            
-                        <ListGroup variant="flush">
-                            <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
-                            <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
-                            <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
-                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
-                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
-                        </ListGroup>                   
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col className="col-md-4 col-sm-12">
-                <Card className="ebf-card-summary">
-                    <Card.Body>                            
-                        <ListGroup variant="flush">
-                            <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
-                            <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
-                            <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
-                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
-                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
-                        </ListGroup>                   
-                    </Card.Body>
-                </Card>
-            </Col>
-        </Row>
-       
+            </Col>            
+        </Row>       
 
       </>
     )
