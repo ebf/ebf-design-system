@@ -45,7 +45,7 @@ $gray-gradient: linear-gradient(0deg, rgba(242,243,247,1) 0%, rgba(255,255,255,1
 
 // Blues
 
-$blue:    #E30075 !default;
+$blue:    #2494c5 !default;
 
 $blue-100: #e5f2f8 !default;
 $blue-200: #cae5f1 !default;
@@ -417,7 +417,7 @@ $h2-font-size:                $font-size-base * 2 !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h6-font-size:                $font-size-base * 1.125 !default;
 
 $headings-margin-bottom:      ($spacer / 2);
 $headings-font-family:        inherit !default;

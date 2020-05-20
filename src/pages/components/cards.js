@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col, Container, Card, CardDeck} from 'react-bootstrap';
+import {Row, Col, ListGroup, Card, CardDeck} from 'react-bootstrap';
 
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -11,7 +11,7 @@ export default withLayout(function Tables() {
         <LinkedHeading h="1" id="cards">Cards</LinkedHeading>
       
         <CardDeck>
-            <Card className="ebf-card-select">
+            <Card className="ebf-card-select card-hover">
                 <Card.Body>
                     <i className="ebf ebf-esim ebf-card-icon mb-2"></i>
                     <Card.Link href="#"><Card.Title className="mb-1">Card Title Example</Card.Title></Card.Link>                
@@ -21,7 +21,7 @@ export default withLayout(function Tables() {
                     </Card.Text> 
                 </Card.Body>
             </Card>
-            <Card className="ebf-card-select">
+            <Card className="ebf-card-select card-hover">
                 <Card.Body>
                     <i className="ebf ebf-device-smartphone ebf-card-icon mb-2"></i>
                     <Card.Link href="#"><Card.Title className="mb-1">Long Card Title Example</Card.Title></Card.Link>               
@@ -31,7 +31,7 @@ export default withLayout(function Tables() {
                     </Card.Text> 
                 </Card.Body>
             </Card>
-            <Card className="ebf-card-select">
+            <Card className="ebf-card-select card-hover">
                 <Card.Body>
                     <i className="ebf ebf-apps ebf-card-icon mb-2"></i>
                     <Card.Link href="#"><Card.Title className="mb-1">Card Title</Card.Title></Card.Link>             
@@ -42,6 +42,63 @@ export default withLayout(function Tables() {
                 </Card.Body>
             </Card>
         </CardDeck>
+
+        <LinkedHeading h="2" id="summary-cards">Summary Cards</LinkedHeading>
+       
+       <CardDeck>
+            <Card className="ebf-card-summary">
+                <Card.Body>                            
+                    <ListGroup variant="flush">
+                        <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
+                        <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
+                        <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
+                        <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
+                        <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
+                    </ListGroup>
+                </Card.Body>
+            </Card>  
+            <Card className="ebf-card-summary">
+                <Card.Body>                            
+                    <ListGroup variant="flush">
+                        <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
+                        <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
+                        <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
+                        <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
+                        <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
+                    </ListGroup>
+                </Card.Body>
+            </Card> 
+            <Card className="ebf-card-summary">
+                <Card.Body>                            
+                    <ListGroup variant="flush">
+                        <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
+                        <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
+                        <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
+                        <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
+                        <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
+                    </ListGroup>
+                </Card.Body>
+            </Card>          
+
+       </CardDeck>
+
+       
+       <LinkedHeading h="2" id="standalone-summary-card">Standalone Summary Card</LinkedHeading>
+       <Row>
+           <Col className="col-md-4 col-sm-12">
+           <Card className="ebf-card-summary">
+                <Card.Body>                            
+                    <ListGroup variant="flush">
+                        <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
+                        <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
+                        <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
+                        <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
+                        <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
+                    </ListGroup>                   
+                </Card.Body>
+            </Card></Col>
+       </Row>
+       
 
       </>
     )
