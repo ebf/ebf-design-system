@@ -11,6 +11,12 @@
   }
 }
 
+.ebf-card-container {
+  .col {
+    padding-bottom: 1.875rem;
+  }
+}
+
 .card-deck {
   margin-bottom: $spacer*2;
 }
@@ -29,7 +35,6 @@
 }
 
 .ebf-card-select {
-  text-align: center;
   
   .ebf-card-icon {
     text-align: center;
