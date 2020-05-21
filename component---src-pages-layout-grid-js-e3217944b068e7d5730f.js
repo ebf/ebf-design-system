@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{"oo/d":function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),r=a.n(n),c=a("+xvc"),d=a("Z/SS");t.default=Object(d.a)((function(e){e.data;return r.a.createElement(r.a.Fragment,null,r.a.createElement(c.a,{h:"1",id:"grid"},"Grid system"))}))}}]);
+//# sourceMappingURL=component---src-pages-layout-grid-js-e3217944b068e7d5730f.js.map
