@@ -16,8 +16,7 @@ export default withLayout(function Tables() {
 
         <div className="ebf-table">
             <header className="ebf-table-header">
-                <h6 className="ebf-table-headline">Table Header</h6>
-                
+                <span className="ebf-table-headline">Table Header</span>
             </header>
             <div className="ebf-table-contents">
                 <Table hover responsive>

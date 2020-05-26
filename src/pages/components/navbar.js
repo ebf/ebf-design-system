@@ -119,7 +119,7 @@ export default withLayout(function NavbarBrand() {
 		</Navbar>
 		<Navbar bg="white" id="basic-navbar-nav" className="border-top justify-content-between secondary-nav">
 			<span class="navbar-subtitle">Span Title Example</span>  
-			<Button><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
+			<Button className="mb-0" size="sm" variant="primary"><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
 			<div>					
 				<Nav>
 					<Nav.Link href="#">Link</Nav.Link>

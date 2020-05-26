@@ -14,6 +14,7 @@
 
     .ebf-table-headline {
       line-height:  $spacer * 3.75;
+      font-size: $h6-font-size;
       margin-bottom: 0;
     }
 
@@ -27,7 +28,7 @@
         border-bottom: none;
         color: $black;
         font-weight: $font-weight-bold;
-        padding: .6rem $table-cell-padding;
+        padding: $table-cell-padding;
       }
       
       td {
