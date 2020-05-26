@@ -45,10 +45,10 @@ export default withLayout(function Tables() {
         
 
         <LinkedHeading h="2" id="summary-cards">Summary Cards</LinkedHeading>
-
+        
    
         <Row className="ebf-card-container">
-            <Col className="col-lg-4 col-md-6 col-sm-12 ">
+            <Col className="col-lg-4 col-md-6 col-sm-12">
                 <Card className="ebf-card-summary">
                     <Card.Body>                            
                         <ListGroup variant="flush">
