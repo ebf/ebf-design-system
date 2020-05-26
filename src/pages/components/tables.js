@@ -16,7 +16,7 @@ export default withLayout(function Tables() {
 
         <div className="ebf-table">
             <header className="ebf-table-header">
-                <h5 className="ebf-table-headline">Table Header</h5>
+                <h6 className="ebf-table-headline">Table Header</h6>
                 
             </header>
             <div className="ebf-table-contents">
@@ -67,7 +67,7 @@ export default withLayout(function Tables() {
                             <td>alayaward@ebf.com</td>
                             <td>54321987</td>
                             <td>
-                                <Badge variant="success" className="badge-pill">Fertig</Badge>
+                                <Button className="mb-0" variant="primary" size="sm" >Primary button</Button>
                             </td>
                         </tr>
                     </tbody>

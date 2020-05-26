@@ -32,6 +32,12 @@
       
       td {
         color: $gray-900;
+        vertical-align: middle;
+        height: $spacer * 3;
+
+        .badge {
+          display: inherit;
+        }
       }
     }
   } 

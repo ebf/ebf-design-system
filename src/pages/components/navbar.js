@@ -118,7 +118,7 @@ export default withLayout(function NavbarBrand() {
 			</Navbar.Collapse>  		
 		</Navbar>
 		<Navbar bg="white" id="basic-navbar-nav" className="border-top justify-content-between secondary-nav">
-			<span>Span Title Example</span>  
+			<span class="navbar-subtitle">Span Title Example</span>  
 			<Button><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
 			<div>					
 				<Nav>

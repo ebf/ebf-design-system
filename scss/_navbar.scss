@@ -59,6 +59,10 @@
   }
 }
 
+.navbar {
+  max-height: $spacer * 4;
+}
+
 
 .navbar-dark {
   .navbar-brand {
@@ -70,7 +74,7 @@
 
   .secondary-nav {
   // Dirty Hack secondary navigation height
-    max-height: 72px;
+    max-height: 64px;
     
     * {  
       margin-bottom: 0;
@@ -87,6 +91,10 @@
       font-size: 1.25rem;
     }
   }
+}
+
+.navbar-subtitle {
+  font-size: 18px;
 }
 
 //TODO - FLEX CENTERING OF INDEPENDENT ELEMENTS 
