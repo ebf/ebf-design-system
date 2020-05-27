@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
-import { CopyBlock, github } from 'react-code-blocks'
+import { CopyBlock, monoBlue } from 'react-code-blocks'
 
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -32,6 +32,33 @@ const BUTTON_TYPES = [{
   label: 'Link',
 }];
 
+const BUTTON_SIZES = [{
+  type: 'primary',
+  size: 'sm',
+  label: 'Small',
+}, {
+  type: 'primary',
+  size: '',
+  label: 'Default',
+}, {
+  type: 'primary',
+  size: 'lg',
+  label: 'Large',
+}];
+
+
+const BUTTON_BLOCK = [{
+  type: 'primary',
+  block: 'block',
+  label: 'Block',
+}];
+
+const BUTTON_DISABLED = [{
+  type: 'primary',
+  state: 'disabled',
+  label: 'Disabled',
+}];
+
 export default withLayout(function Buttons() {
   return (
     <>
@@ -44,37 +71,15 @@ export default withLayout(function Buttons() {
         <Button className="mb-4" variant={type}>{label}</Button>
       ))}
 
-      <LinkedHeading h="3" id="button-types-markup">Button types markup</LinkedHeading>
-     
-      <Row fluid="md" >
-        <Col xl={10} md={12}>
-          {BUTTON_TYPES.map(({ type, label }) => (
-            <div className="mb-3">
-              <CopyBlock
-                theme={github}
-                text={`<button type="button" class="btn btn-${type}">\n\t${label}\n</button>`}
-                language="jsx"
-                showLineNumbers
-                wrapLines
-                codeBlock
-              />
-            </div>
-          ))}
-        </Col>
-      </Row>
-
-      <LinkedHeading h="2" id="outline-types">Outline buttons</LinkedHeading>
-      <p>For a lighter touch, Buttons also come in outline-* variants with no background color.</p>
-
       {BUTTON_TYPES.map(({ type, label }) => {
-        const variant = `outline-${type}`;
+        const variant = `${type}`;
 
         return (
           <div className="mb-3">
+            <LinkedHeading h="3" id={label + "-button"}>{label} Button</LinkedHeading>
             <Button className="mb-4" variant={variant}>{label}</Button>
-            <p>Markup</p>
             <CopyBlock
-              theme={github}
+              theme={monoBlue}
               text={`<button type="button" class="btn btn-outline-${type}">\n\t${label}\n</button>`}
               language="jsx"
               showLineNumbers
@@ -85,95 +90,111 @@ export default withLayout(function Buttons() {
         )
       })}
 
-      <LinkedHeading h="3" id="outline-button-types-markup">Outline button types markup</LinkedHeading>
+      <br/>
+      <br/>
+      <br/>
 
-      <Row fluid="md" >
-        <Col xl={10} md={12}>
-          {BUTTON_TYPES.map(({ type, label }) => (
-            <div className="mb-3">
-              <CopyBlock
-                theme={github}
-                text={`<button type="button" class="btn btn-outline-${type}">\n\t${label}\n</button>`}
-                language="jsx"
-                showLineNumbers
-                wrapLines
-                codeBlock
-              />
-            </div>
-          ))}
-        </Col>
-      </Row>
+      <LinkedHeading h="2" id="outline-buttons">Outline buttons</LinkedHeading>
+      <p>For a lighter touch, Buttons also come in outline-* variants with no background color.</p>
 
-      <LinkedHeading h="2" id="sizes">Sizes</LinkedHeading>
 
-      <p>Fancy larger or smaller buttons? Add <code>size="lg"</code>, <code>size="sm"</code> for additional sizes.</p>
-      <div className="mb-2">
-        <Button className="mb-4" variant="primary" size="sm">
-          Small button
-        </Button>
-        <Button className="mb-4" variant="secondary" size="sm">
-          Small button
-        </Button>
-      </div>
+      {BUTTON_TYPES.map(({ type, label }) => (
+        <Button className="mb-4" variant={'outline-' + type}>{label}</Button>
+      ))}
 
-      <div className="mb-2">
-        <Button className="mb-4" variant="primary">
-          Default button
-        </Button>
-        <Button className="mb-4" variant="secondary">
-          Default button
-        </Button>
-      </div>
+      {BUTTON_TYPES.map(({ type, label }) => {
+        const variant = `outline-${type}`;
+
+        return (
+          <div className="mb-3">
+            <LinkedHeading h="3" id={label + "-outline-button"}>{label} Outline Button</LinkedHeading>
+            <Button className="mb-4" variant={variant}>{label}</Button>            
+            <CopyBlock
+              theme={monoBlue}
+              text={`<button type="button" class="btn btn-outline-${type}">\n\t${label}\n</button>`}
+              language="jsx"
+              showLineNumbers
+              wrapLines
+              codeBlock
+            />
+          </div>
+        )
+      })}
+
+      <br/>
+      <br/>
+      <br/>
+
+      <LinkedHeading h="2" id="button-sizes">Sizes</LinkedHeading>
+
+      <p>Fancy larger or smaller buttons? Add classes <code>"btn-sm"</code>, <code>"btn-lg"</code> for additional sizes.</p>
       
-      <div className="mb-2">
-        <Button className="mb-2" variant="primary" size="lg">
-          Large button
-        </Button>
-        <Button className="mb-2" variant="secondary" size="lg">
-          Large button
-        </Button>
-      </div>
+      {BUTTON_SIZES.map(({ type, size, label }) => (
+        <div className="mb-2">
+          <Button className="mb-4" size={size} variant={type}>{label} Button</Button>
+          <Button className="mb-4" size={size} variant="secondary">{label} Button</Button>
+        </div>
+      ))}
 
-      <LinkedHeading h="3" id="button-sizes-markup">Sizes markup</LinkedHeading>
+      {BUTTON_SIZES.map(({ type, size, label }) => {
+        const variant = `${type}`;
 
-      <Row fluid="md" >
-        <Col xl={10} md={12}>
-        <code className="code-snippet">
-          {'<button type="button" class="btn btn-primary btn-sm">Small button</button>'}
-          <br/>
-          <br/>
-          {'<button type="button" class="btn btn-primary">Default button</button>'}
-          <br/>
-          <br/>
-          {'<button type="button" class="btn btn-primary btn-lg">Large button</button>'}
-        </code>
-        </Col>
-      </Row>
+        return (
+          <div className="mb-3">
+            <LinkedHeading h="3" id={size + "Button"}>{label} Outline Button</LinkedHeading>
+            <Button className="mb-4" size={size} variant={type}>{label}</Button>            
+            <CopyBlock
+              theme={monoBlue}
+              text={`<button type="button" class="btn btn-${type} btn-${size}">\n\t${label}\n</button>`}
+              language="jsx"
+              showLineNumbers
+              wrapLines
+              codeBlock
+            />
+          </div>
+        )
+      })}
+
+      <br/>
+      <br/>
+      <br/>
+     
+
 
       <LinkedHeading h="2" id="block-button">Block Level Button</LinkedHeading>
 
       <p>Create block level buttons—those that span the full width of a parent—by adding <code>block</code></p>
+
+      {BUTTON_BLOCK.map(({ type, block, label }) => (
+        <div className="mb-2">
+          <Button className="mb-4" block={block} variant={type}>{label} Level Button</Button>
+          <Button className="mb-4" block={block} variant="secondary">{label} Level Button</Button>
+        </div>
+      ))}  
+
+      {BUTTON_BLOCK.map(({ type, block, label }) => {
+        const variant = `${type}`;
+
+        return (
+          <div className="mb-3">
+            <LinkedHeading h="3" id={block + "-button-markup"}>{label} Level Button Markup</LinkedHeading>
+            <Button className="mb-4" block={block} variant={type}>{label}</Button>            
+            <CopyBlock
+              theme={monoBlue}
+              text={`<button type="button" class="btn btn-${type} btn-${block}">\n\t${label}\n</button>`}
+              language="jsx"
+              showLineNumbers
+              wrapLines
+              codeBlock
+            />
+          </div>
+        )
+      })}    
       
-      <Button className="mb-4" variant="primary" size="lg" block>
-        Block level button
-      </Button>
-      <Button className="mb-4" variant="secondary" size="lg" block>
-        Block level button
-      </Button>
-
-      <LinkedHeading h="3" id="block-button-markup">Block level button markup</LinkedHeading>
-
-      <Row fluid="md" >
-        <Col xl={10} md={12}>
-        <code className="code-snippet">
-          {'<button type="button" class="mb-4 btn btn-primary btn-block btn-lg">Block level button</button>'}
-          <br/>
-          <br/>
-          {'<button type="button" class="mb-4 btn btn-secondary btn-block btn-lg">Block level button</button>'}         
-        </code>
-        </Col>
-      </Row>
-
+      <br/>
+      <br/>
+      <br/>
+      
       <LinkedHeading h="2" id="button-states">Button states</LinkedHeading>
 
       <Row>
@@ -198,27 +219,28 @@ export default withLayout(function Buttons() {
         </Col>
       </Row>
 
-      <LinkedHeading h="3" id="button-states-markup">Button states markup</LinkedHeading>
+      <LinkedHeading h="3" id="disabled-button-markup">Disabled Button Markup</LinkedHeading>
 
-      <Row fluid="md" >
-        <Col xl={10} md={12}>
-        <code className="code-snippet">
-          
-          {'<button type="button" class="btn btn-primary">Primary button</button>'}
-          <br/>
-          <br/>
-          {'<button type="button" class="btn btn-secondary">Secondary button</button>'} 
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          {'<button disabled type="button" class="btn btn-primary">Primary button</button>'}         
-          <br/>
-          <br/>
-          {'<button disabled type="button" class="btn btn-secondary">Secondary button</button>'}         
-        </code>
-        </Col>
-      </Row>
+      <Button className="mb-4" variant="primary" disabled>
+            Primary button
+          </Button>
+      
+      {BUTTON_DISABLED.map(({ type, state, label }) => {
+        const variant = `${type}`;
+
+        return (
+          <div className="mb-3">          
+            <CopyBlock
+              theme={monoBlue}
+              text={`<button type="button" class="btn btn-${type}" ${state} >\n\t${label}\n</button>`}
+              language="jsx"
+              showLineNumbers
+              wrapLines
+              codeBlock
+            />
+          </div>
+        )
+      })} 
 
     </>
   )

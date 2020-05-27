@@ -41,8 +41,7 @@ $ebf-font-location: "../../scss/fonts";
 
 // Color Swatches 
 
-.color-swatch {
-   
+.color-swatch {   
   margin: 1rem 0;
   padding: $list-inline-padding;
   background-color: $white;
@@ -64,7 +63,6 @@ $ebf-font-location: "../../scss/fonts";
     text-transform: uppercase;
     font-size: $font-size-xs;
     font-weight: $font-weight-bold;
-    
   }
 }
 
@@ -76,7 +74,7 @@ $ebf-font-location: "../../scss/fonts";
   }
 }
 
-// Grid Page 
+// Layout Page 
 .ebf-grid-example {
   padding: 0;
 
@@ -94,7 +92,6 @@ $ebf-font-location: "../../scss/fonts";
     }
   }
 }
-
 
 pre {
   margin-bottom: 0;
