@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
-import { CopyBlock, monoBlue } from 'react-code-blocks'
+import { CopyBlock, monoBlue } from 'react-code-blocks';
 
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -190,7 +190,7 @@ export default withLayout(function Buttons() {
           </div>
         )
       })}    
-      
+
       <br/>
       <br/>
       <br/>

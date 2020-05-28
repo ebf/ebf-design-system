@@ -106,15 +106,15 @@ export default withLayout(function FormsPage() {
         <Checkbox checked readOnly label="checkbox" />
         <Radio checked readOnly label="radio" />
 
-        <Form.Group>
-          <Checkbox inline label="1" />
-          <Checkbox inline label="2" />{' '}
-          <Checkbox inline label="3" />
+        <Form.Group inline>
+          <Checkbox inline id="formBasicCheckbox1" label="1" />
+          <Checkbox inline id="formBasicCheckbox2" label="2" />{' '}
+          <Checkbox inline id="formBasicCheckbox3" label="3" />
         </Form.Group>
         <Form.Group>
-          <Radio name="radioGroup" inline label="1" />{' '}
-          <Radio name="radioGroup" inline label="2" />{' '}
-          <Radio name="radioGroup" inline label="3" />
+          <Radio id="radio1" name="radioGroup" inline label="1" />{' '}
+          <Radio id="radio2" name="radioGroup" inline label="2" />{' '}
+          <Radio id="radio3" name="radioGroup" inline label="3" />
         </Form.Group>
 
         <Form.Group controlId="Form.ControlsSelect">
@@ -203,7 +203,7 @@ export default withLayout(function FormsPage() {
         </Form.Row>
       
         <Form.Group id="formGridCheckbox">
-          <Checkbox label="Check me out" />
+          <Checkbox id="checkOut" label="Check me out" />
         </Form.Group>
       
         <Button variant="primary" type="submit">

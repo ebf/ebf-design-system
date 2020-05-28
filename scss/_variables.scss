@@ -633,9 +633,9 @@ $input-group-addon-focus-bg:                  $input-focus-bg !default;
 $input-group-addon-focus-border-color:        $input-focus-border-color !default;
 
 // Input Labels
-$input-label-font-size-sm:      .5rem !default;
-$input-label-font-size:         .75rem !default;
-$input-label-font-size-lg:      .75rem !default;
+$input-label-font-size-sm:      .813rem !default;
+$input-label-font-size:         .813rem !default;
+$input-label-font-size-lg:      .813rem !default;
 
 $input-label-font-weight:        500 !default;
 
@@ -1049,3 +1049,8 @@ $footer-color: $gray-600 !default;
 
 $footer-link-color: $gray-600 !default;
 $footer-link-hover-color: $gray-700 !default;
+
+
+//
+
+$smooth-scaling-animation: all .2s cubic-bezier(0.600, -0.600, 0.600, 1.600);

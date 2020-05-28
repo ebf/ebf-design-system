@@ -2,9 +2,10 @@ import React from 'react';
 import { Alert } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
 import LinkedHeading from '../../components/LinkedHeading';
+import { CopyBlock, monoBlue } from 'react-code-blocks';
 import withLayout from "../../with-layout"
 
-const TYPES = [
+const ALERT_TYPES = [
   { type: 'primary', icon: 'ebf-bell-fill',},
   { type: 'secondary', icon: 'ebf-bell-fill',},
   { type: 'success', icon: 'ebf-check-mark-circle',},
@@ -29,7 +30,7 @@ export default withLayout(function Alerts () {
         For proper styling, use one of the eight <code>variant</code>s.
       </p>
       
-      {TYPES.map((value, idx) => (
+      {ALERT_TYPES.map((value, idx) => (
         <Alert key={idx} variant={value.type}>
           {/* TODO */}
           <i className={'alert-icon ebf ' + value.icon}></i>
@@ -41,27 +42,7 @@ export default withLayout(function Alerts () {
         <Col xl={10} md={12}>
         <code className="code-snippet">
           {'<div role="alert" class="fade alert alert-primary show"><i class="alert-icon ebf ebf-bell-fill"></i> This is a primary alert — check it out!</div>'}
-          <br/>
-          <br/>
-          {'<div role="alert" class="fade alert alert-secondary show"><i class="alert-icon ebf ebf-bell-fill"></i>This is a secondary alert — check it out!</div>'}       
-          <br/>
-          <br/>
-          {'<div role="alert" class="fade alert alert-success show"><i class="alert-icon ebf ebf-check-mark-circle"></i>This is a success alert — check it out!</div>'}       
-          <br/>
-          <br/>
-          {'<div role="alert" class="fade alert alert-danger show"><i class="alert-icon ebf ebf-alert-wide-fill"></i>This is a danger alert — check it out!</div>'}       
-          <br/>
-          <br/>
-          {'<div role="alert" class="fade alert alert-warning show"><i class="alert-icon ebf ebf-alert-wide-fill"></i>This is a warning alert — check it out!</div>'}       
-          <br/>
-          <br/>
-          {'<div role="alert" class="fade alert alert-info show"><i class="alert-icon ebf ebf-info-fill"></i>This is a info alert — check it out!</div>'}       
-          <br/>
-          <br/>
-          {'<div role="alert" class="fade alert alert-light show"><i class="alert-icon ebf ebf-bell-fill"></i>This is a light alert — check it out!</div>'}       
-          <br/>
-          <br/>
-          {'<div role="alert" class="fade alert alert-dark show"><i class="alert-icon ebf ebf-bell-fill"></i>This is a dark alert — check it out!</div>'}       
+                
         </code>
         </Col>
       </Row>
@@ -69,13 +50,15 @@ export default withLayout(function Alerts () {
       <LinkedHeading h="2" id="links">Links</LinkedHeading>
       <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
 
-      {TYPES.map((value, idx) => (
+      {ALERT_TYPES.map((value, idx) => (
         <Alert key={idx} variant={value.type}>
           {/* TODO */}
           <i className={'alert-icon ebf ' + value.icon}></i>
           This is a {value.type} alert with{' '} <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.
         </Alert>
       ))}
+
+      
 
 <Row fluid="md" >
         <Col xl={10} md={12}>
