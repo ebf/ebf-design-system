@@ -8,7 +8,7 @@ import withLayout from "../../with-layout"
 const ALERT_TYPES = [
   { type: 'primary', icon: 'ebf-bell-fill',},
   { type: 'secondary', icon: 'ebf-bell-fill',},
-  { type: 'success', icon: 'ebf-check-mark-circle',},
+  { type: 'success', icon: 'ebf-check-mark-circle-full-fill',},
   { type: 'danger', icon: 'ebf-alert-wide-fill',},
   { type: 'warning', icon: 'ebf-alert-wide-fill',},
   { type: 'info', icon: 'ebf-info-fill',},

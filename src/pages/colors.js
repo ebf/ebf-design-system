@@ -9,15 +9,15 @@ import withLayout from "../with-layout"
 const GRAYS = [
   
   {color: 'gray-100', hex: '#f8f9fb' },
-  {color: 'gray-200', hex: '#f2f3f7'},
-  {color: 'gray-300', hex: '#e3e6ed'},
-  {color: 'gray-400', hex: '#d5d9e2'},
-  {color: 'gray-500', hex: '#AEB8C6'},
-  {color: 'gray-600', hex: '#c5cbd7'},
+  {color: 'gray-200', hex: '#f1f3f7'},
+  {color: 'gray-300', hex: '#e3e6ec'},
+  {color: 'gray-400', hex: '#d4d9e2'},
+  {color: 'gray-500', hex: '#c6ccd7'},
+  {color: 'gray-600', hex: '#aeb8c6'},
   {color: 'gray-700', hex: '#afb8c7'},
-  {color: 'gray-800', hex: '#97a2b4'},
+  {color: 'gray-800', hex: '#97a3b5'},
   {color: 'gray-900', hex: '#55677b'}, 
-  {color: 'black', hex: '#2b3d51' },
+  {color: 'black', hex: '#2b3e51' },
 ];
 
 const BLUES = [

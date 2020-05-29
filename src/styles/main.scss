@@ -2,6 +2,7 @@
 $ebf-font-location: "../../scss/fonts";
 @import "../scss/styles";
 
+
 .header {
   position: sticky;
   top: 0;
@@ -101,3 +102,4 @@ blockquote {
   font-size: $font-size-lg;
 }
 
+*{-webkit-font-smoothing: antialiased;}

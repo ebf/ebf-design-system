@@ -13,7 +13,7 @@ $ebf-arr-corner-right-up: "\ea0c";
 $ebf-arr-corner-up-left: "\ea0d";
 $ebf-arr-corner-up-right: "\ea0e";
 $ebf-arr-down: "\ea0f";
-$ebf-arr-down-fill: "\ea10";
+$ebf-arr-down-dots: "\ea10";
 $ebf-arr-down-left: "\ea11";
 $ebf-arr-down-right: "\ea12";
 $ebf-arr-left: "\ea13";
@@ -22,7 +22,7 @@ $ebf-arr-minimize: "\ea15";
 $ebf-arr-move: "\ea16";
 $ebf-arr-right: "\ea17";
 $ebf-arr-up: "\ea18";
-$ebf-arr-up-fill: "\ea19";
+$ebf-arr-up-dots: "\ea19";
 $ebf-arr-up-left: "\ea1a";
 $ebf-arr-up-right: "\ea1b";
 $ebf-art: "\ea1c";
@@ -55,93 +55,93 @@ $ebf-chart-line: "\ea36";
 $ebf-chart-pie: "\ea37";
 $ebf-check-mark: "\ea38";
 $ebf-check-mark-circle: "\ea39";
-$ebf-check-ui: "\ea3a";
-$ebf-chevron-down: "\ea3b";
-$ebf-chevron-left: "\ea3c";
-$ebf-chevron-right: "\ea3d";
-$ebf-chevron-up: "\ea3e";
-$ebf-chevrons-down: "\ea3f";
-$ebf-chevrons-left: "\ea40";
-$ebf-chevrons-right: "\ea41";
-$ebf-chevrons-up: "\ea42";
-$ebf-circle: "\ea43";
-$ebf-circle-fill: "\ea44";
-$ebf-clock: "\ea45";
-$ebf-clock-fill: "\ea46";
-$ebf-code: "\ea47";
-$ebf-code-fill: "\ea48";
-$ebf-coffee: "\ea49";
-$ebf-coffee-fill: "\ea4a";
-$ebf-compass: "\ea4b";
-$ebf-compass-fill: "\ea4c";
-$ebf-complain-hammer-fill: "\ea4d";
-$ebf-connection: "\ea4e";
-$ebf-connection-fill: "\ea4f";
-$ebf-copy: "\ea50";
-$ebf-copy-fill: "\ea51";
-$ebf-create: "\ea52";
-$ebf-create-fill: "\ea53";
-$ebf-dashboard: "\ea54";
-$ebf-dashboard-fill: "\ea55";
-$ebf-data-pending: "\ea56";
-$ebf-data-pending-fill: "\ea57";
-$ebf-device-camera: "\ea58";
-$ebf-device-smartphone: "\ea59";
-$ebf-device-smartphone-fill: "\ea5a";
-$ebf-dots: "\ea5b";
-$ebf-download: "\ea5c";
-$ebf-download-circle: "\ea5d";
-$ebf-download-circle-fill: "\ea5e";
-$ebf-download-cloud: "\ea5f";
-$ebf-download-square: "\ea60";
-$ebf-download-square-fill: "\ea61";
-$ebf-edit-left: "\ea62";
-$ebf-edit-left-fill: "\ea63";
-$ebf-edit-right: "\ea64";
-$ebf-edit-right-fill: "\ea65";
-$ebf-esim: "\ea66";
-$ebf-esim-fill: "\ea67";
-$ebf-excel: "\ea68";
-$ebf-excel-fill: "\ea69";
-$ebf-file: "\ea6a";
-$ebf-file-forward: "\ea6b";
-$ebf-file-forward-fill: "\ea6c";
-$ebf-file-sort: "\ea6d";
-$ebf-file-sort-fill: "\ea6e";
-$ebf-fileserver: "\ea6f";
-$ebf-fileserver-fill: "\ea70";
-$ebf-flag: "\ea71";
-$ebf-flag-fill: "\ea72";
-$ebf-folder: "\ea73";
-$ebf-folder-add: "\ea74";
-$ebf-folder-fill: "\ea75";
-$ebf-folder-remove-fill: "\ea76";
-$ebf-folder-add-fill: "\ea77";
-$ebf-folder-remove: "\ea78";
-$ebf-font: "\ea79";
-$ebf-font-fill: "\ea7a";
-$ebf-font-strike: "\ea7b";
-$ebf-font-strike-fill: "\ea7c";
-$ebf-font-underline: "\ea7d";
-$ebf-font-underline-fill: "\ea7e";
-$ebf-graph-01-fill: "\ea7f";
-$ebf-graph-02-fill: "\ea80";
-$ebf-grid: "\ea81";
-$ebf-grid-fill: "\ea82";
-$ebf-grid-gap: "\ea83";
-$ebf-grid-gap-fill: "\ea84";
-$ebf-hammer: "\ea85";
-$ebf-hand-move: "\ea86";
-$ebf-hand-move-fill: "\ea87";
-$ebf-headphones: "\ea88";
-$ebf-headphones-fill: "\ea89";
-$ebf-heart: "\ea8a";
-$ebf-heart-fill: "\ea8b";
-$ebf-help-circle: "\ea8c";
-$ebf-help-circle-fill: "\ea8d";
-$ebf-ibook: "\ea8e";
-$ebf-ibook-01-fill: "\ea8f";
-$ebf-ibook-02-fill: "\ea90";
+$ebf-check-mark-circle-full: "\ea3a";
+$ebf-check-mark-circle-full-fill: "\ea3b";
+$ebf-check-ui: "\ea3c";
+$ebf-chevron-down: "\ea3d";
+$ebf-chevron-left: "\ea3e";
+$ebf-chevron-right: "\ea3f";
+$ebf-chevron-up: "\ea40";
+$ebf-chevrons-down: "\ea41";
+$ebf-chevrons-left: "\ea42";
+$ebf-chevrons-right: "\ea43";
+$ebf-chevrons-up: "\ea44";
+$ebf-circle: "\ea45";
+$ebf-circle-fill: "\ea46";
+$ebf-clock: "\ea47";
+$ebf-clock-fill: "\ea48";
+$ebf-code: "\ea49";
+$ebf-coffee: "\ea4a";
+$ebf-coffee-fill: "\ea4b";
+$ebf-compass: "\ea4c";
+$ebf-compass-fill: "\ea4d";
+$ebf-complain-hammer-fill: "\ea4e";
+$ebf-connection: "\ea4f";
+$ebf-connection-fill: "\ea50";
+$ebf-copy: "\ea51";
+$ebf-copy-fill: "\ea52";
+$ebf-create: "\ea53";
+$ebf-create-fill: "\ea54";
+$ebf-dashboard: "\ea55";
+$ebf-dashboard-fill: "\ea56";
+$ebf-data-pending: "\ea57";
+$ebf-data-pending-fill: "\ea58";
+$ebf-camera: "\ea59";
+$ebf-device-smartphone: "\ea5a";
+$ebf-device-smartphone-fill: "\ea5b";
+$ebf-dots: "\ea5c";
+$ebf-download: "\ea5d";
+$ebf-download-circle: "\ea5e";
+$ebf-download-circle-fill: "\ea5f";
+$ebf-download-cloud: "\ea60";
+$ebf-download-square: "\ea61";
+$ebf-download-square-fill: "\ea62";
+$ebf-edit-left: "\ea63";
+$ebf-edit-left-fill: "\ea64";
+$ebf-edit-right: "\ea65";
+$ebf-edit-right-fill: "\ea66";
+$ebf-esim: "\ea67";
+$ebf-esim-fill: "\ea68";
+$ebf-ms-excel: "\ea69";
+$ebf-ms-excel-fill: "\ea6a";
+$ebf-file: "\ea6b";
+$ebf-file-forward: "\ea6c";
+$ebf-file-forward-fill: "\ea6d";
+$ebf-file-sort: "\ea6e";
+$ebf-file-sort-fill: "\ea6f";
+$ebf-fileserver: "\ea70";
+$ebf-fileserver-fill: "\ea71";
+$ebf-flag: "\ea72";
+$ebf-flag-fill: "\ea73";
+$ebf-folder: "\ea74";
+$ebf-folder-add: "\ea75";
+$ebf-folder-fill: "\ea76";
+$ebf-folder-remove-fill: "\ea77";
+$ebf-folder-add-fill: "\ea78";
+$ebf-folder-remove: "\ea79";
+$ebf-font: "\ea7a";
+$ebf-font-fill: "\ea7b";
+$ebf-font-strike: "\ea7c";
+$ebf-font-strike-fill: "\ea7d";
+$ebf-font-underline: "\ea7e";
+$ebf-font-underline-fill: "\ea7f";
+$ebf-graph-01-fill: "\ea80";
+$ebf-graph-02-fill: "\ea81";
+$ebf-grid: "\ea82";
+$ebf-grid-fill: "\ea83";
+$ebf-grid-gap: "\ea84";
+$ebf-grid-gap-fill: "\ea85";
+$ebf-hammer: "\ea86";
+$ebf-hand-move: "\ea87";
+$ebf-hand-move-fill: "\ea88";
+$ebf-headphones: "\ea89";
+$ebf-headphones-fill: "\ea8a";
+$ebf-heart: "\ea8b";
+$ebf-heart-fill: "\ea8c";
+$ebf-help-circle: "\ea8d";
+$ebf-help-circle-fill: "\ea8e";
+$ebf-ibook: "\ea8f";
+$ebf-ibook-fill: "\ea90";
 $ebf-inbox: "\ea91";
 $ebf-inbox-fill: "\ea92";
 $ebf-info: "\ea93";
@@ -160,7 +160,7 @@ $ebf-loader: "\ea9f";
 $ebf-loader-fill: "\eaa0";
 $ebf-local-files: "\eaa1";
 $ebf-local-files-fill: "\eaa2";
-$ebf-lock-fill: "\eaa3";
+$ebf-locked-fill: "\eaa3";
 $ebf-locked: "\eaa4";
 $ebf-log-in: "\eaa5";
 $ebf-log-out: "\eaa6";
@@ -193,8 +193,8 @@ $ebf-navigation-up-right: "\eac0";
 $ebf-navigation-up-right-fill: "\eac1";
 $ebf-note: "\eac2";
 $ebf-note-fill: "\eac3";
-$ebf-onedrive: "\eac4";
-$ebf-onedrive-fill: "\eac5";
+$ebf-ms-onedrive: "\eac4";
+$ebf-ms-onedrive-fill: "\eac5";
 $ebf-open-new-app: "\eac6";
 $ebf-open-new-app-fill: "\eac7";
 $ebf-organization: "\eac8";
@@ -222,8 +222,8 @@ $ebf-plus-circle: "\eadd";
 $ebf-plus-circle-fill: "\eade";
 $ebf-plus-square: "\eadf";
 $ebf-plus-square-fill: "\eae0";
-$ebf-pow-point-fill: "\eae1";
-$ebf-powerpoint: "\eae2";
+$ebf-ms-powerpoint-fill: "\eae1";
+$ebf-ms-powerpoint: "\eae2";
 $ebf-rectangle: "\eae3";
 $ebf-rectangle-fill: "\eae4";
 $ebf-remove-device: "\eae5";
@@ -244,8 +244,8 @@ $ebf-settings: "\eaf3";
 $ebf-settings-fill: "\eaf4";
 $ebf-share: "\eaf5";
 $ebf-share-fill: "\eaf6";
-$ebf-sharepoint: "\eaf7";
-$ebf-sharepoint-fill: "\eaf8";
+$ebf-ms-sharepoint: "\eaf7";
+$ebf-ms-sharepoint-fill: "\eaf8";
 $ebf-signature: "\eaf9";
 $ebf-sim: "\eafa";
 $ebf-sim-fill: "\eafb";
@@ -262,7 +262,7 @@ $ebf-text: "\eb05";
 $ebf-text-fill: "\eb06";
 $ebf-trash: "\eb07";
 $ebf-trash-fill: "\eb08";
-$ebf-unlock-fill: "\eb09";
+$ebf-unlocked-fill: "\eb09";
 $ebf-unlocked: "\eb0a";
 $ebf-upload: "\eb0b";
 $ebf-upload-circle: "\eb0c";
@@ -283,9 +283,8 @@ $ebf-user-remove: "\eb1a";
 $ebf-user-remove-fill: "\eb1b";
 $ebf-voicemail: "\eb1c";
 $ebf-voicemail-fill: "\eb1d";
-$ebf-word: "\eb1e";
-$ebf-word-fill: "\eb1f";
-
+$ebf-ms-word: "\eb1e";
+$ebf-ms-word-fill: "\eb1f";
 
 $ebf-font-location: "fonts" !default;
 
@@ -365,7 +364,7 @@ $ebf-font-location: "fonts" !default;
 .ebf-arr-down::before {
   content: "\ea0f";
 }
-.ebf-arr-down-fill::before {
+.ebf-arr-down-dots::before {
   content: "\ea10";
 }
 .ebf-arr-down-left::before {
@@ -392,7 +391,7 @@ $ebf-font-location: "fonts" !default;
 .ebf-arr-up::before {
   content: "\ea18";
 }
-.ebf-arr-up-fill::before {
+.ebf-arr-up-dots::before {
   content: "\ea19";
 }
 .ebf-arr-up-left::before {
@@ -491,265 +490,265 @@ $ebf-font-location: "fonts" !default;
 .ebf-check-mark-circle::before {
   content: "\ea39";
 }
-.ebf-check-ui::before {
+.ebf-check-mark-circle-full::before {
   content: "\ea3a";
 }
-.ebf-chevron-down::before {
+.ebf-check-mark-circle-full-fill::before {
   content: "\ea3b";
 }
-.ebf-chevron-left::before {
+.ebf-check-ui::before {
   content: "\ea3c";
 }
-.ebf-chevron-right::before {
+.ebf-chevron-down::before {
   content: "\ea3d";
 }
-.ebf-chevron-up::before {
+.ebf-chevron-left::before {
   content: "\ea3e";
 }
-.ebf-chevrons-down::before {
+.ebf-chevron-right::before {
   content: "\ea3f";
 }
-.ebf-chevrons-left::before {
+.ebf-chevron-up::before {
   content: "\ea40";
 }
-.ebf-chevrons-right::before {
+.ebf-chevrons-down::before {
   content: "\ea41";
 }
-.ebf-chevrons-up::before {
+.ebf-chevrons-left::before {
   content: "\ea42";
 }
-.ebf-circle::before {
+.ebf-chevrons-right::before {
   content: "\ea43";
 }
-.ebf-circle-fill::before {
+.ebf-chevrons-up::before {
   content: "\ea44";
 }
-.ebf-clock::before {
+.ebf-circle::before {
   content: "\ea45";
 }
-.ebf-clock-fill::before {
+.ebf-circle-fill::before {
   content: "\ea46";
 }
-.ebf-code::before {
+.ebf-clock::before {
   content: "\ea47";
 }
-.ebf-code-fill::before {
+.ebf-clock-fill::before {
   content: "\ea48";
 }
-.ebf-coffee::before {
+.ebf-code::before {
   content: "\ea49";
 }
-.ebf-coffee-fill::before {
+.ebf-coffee::before {
   content: "\ea4a";
 }
-.ebf-compass::before {
+.ebf-coffee-fill::before {
   content: "\ea4b";
 }
-.ebf-compass-fill::before {
+.ebf-compass::before {
   content: "\ea4c";
 }
-.ebf-complain-hammer-fill::before {
+.ebf-compass-fill::before {
   content: "\ea4d";
 }
-.ebf-connection::before {
+.ebf-complain-hammer-fill::before {
   content: "\ea4e";
 }
-.ebf-connection-fill::before {
+.ebf-connection::before {
   content: "\ea4f";
 }
-.ebf-copy::before {
+.ebf-connection-fill::before {
   content: "\ea50";
 }
-.ebf-copy-fill::before {
+.ebf-copy::before {
   content: "\ea51";
 }
-.ebf-create::before {
+.ebf-copy-fill::before {
   content: "\ea52";
 }
-.ebf-create-fill::before {
+.ebf-create::before {
   content: "\ea53";
 }
-.ebf-dashboard::before {
+.ebf-create-fill::before {
   content: "\ea54";
 }
-.ebf-dashboard-fill::before {
+.ebf-dashboard::before {
   content: "\ea55";
 }
-.ebf-data-pending::before {
+.ebf-dashboard-fill::before {
   content: "\ea56";
 }
-.ebf-data-pending-fill::before {
+.ebf-data-pending::before {
   content: "\ea57";
 }
-.ebf-device-camera::before {
+.ebf-data-pending-fill::before {
   content: "\ea58";
 }
-.ebf-device-smartphone::before {
+.ebf-camera::before {
   content: "\ea59";
 }
-.ebf-device-smartphone-fill::before {
+.ebf-device-smartphone::before {
   content: "\ea5a";
 }
-.ebf-dots::before {
+.ebf-device-smartphone-fill::before {
   content: "\ea5b";
 }
-.ebf-download::before {
+.ebf-dots::before {
   content: "\ea5c";
 }
-.ebf-download-circle::before {
+.ebf-download::before {
   content: "\ea5d";
 }
-.ebf-download-circle-fill::before {
+.ebf-download-circle::before {
   content: "\ea5e";
 }
-.ebf-download-cloud::before {
+.ebf-download-circle-fill::before {
   content: "\ea5f";
 }
-.ebf-download-square::before {
+.ebf-download-cloud::before {
   content: "\ea60";
 }
-.ebf-download-square-fill::before {
+.ebf-download-square::before {
   content: "\ea61";
 }
-.ebf-edit-left::before {
+.ebf-download-square-fill::before {
   content: "\ea62";
 }
-.ebf-edit-left-fill::before {
+.ebf-edit-left::before {
   content: "\ea63";
 }
-.ebf-edit-right::before {
+.ebf-edit-left-fill::before {
   content: "\ea64";
 }
-.ebf-edit-right-fill::before {
+.ebf-edit-right::before {
   content: "\ea65";
 }
-.ebf-esim::before {
+.ebf-edit-right-fill::before {
   content: "\ea66";
 }
-.ebf-esim-fill::before {
+.ebf-esim::before {
   content: "\ea67";
 }
-.ebf-excel::before {
+.ebf-esim-fill::before {
   content: "\ea68";
 }
-.ebf-excel-fill::before {
+.ebf-ms-excel::before {
   content: "\ea69";
 }
-.ebf-file::before {
+.ebf-ms-excel-fill::before {
   content: "\ea6a";
 }
-.ebf-file-forward::before {
+.ebf-file::before {
   content: "\ea6b";
 }
-.ebf-file-forward-fill::before {
+.ebf-file-forward::before {
   content: "\ea6c";
 }
-.ebf-file-sort::before {
+.ebf-file-forward-fill::before {
   content: "\ea6d";
 }
-.ebf-file-sort-fill::before {
+.ebf-file-sort::before {
   content: "\ea6e";
 }
-.ebf-fileserver::before {
+.ebf-file-sort-fill::before {
   content: "\ea6f";
 }
-.ebf-fileserver-fill::before {
+.ebf-fileserver::before {
   content: "\ea70";
 }
-.ebf-flag::before {
+.ebf-fileserver-fill::before {
   content: "\ea71";
 }
-.ebf-flag-fill::before {
+.ebf-flag::before {
   content: "\ea72";
 }
-.ebf-folder::before {
+.ebf-flag-fill::before {
   content: "\ea73";
 }
-.ebf-folder-add::before {
+.ebf-folder::before {
   content: "\ea74";
 }
-.ebf-folder-fill::before {
+.ebf-folder-add::before {
   content: "\ea75";
 }
-.ebf-folder-remove-fill::before {
+.ebf-folder-fill::before {
   content: "\ea76";
 }
-.ebf-folder-add-fill::before {
+.ebf-folder-remove-fill::before {
   content: "\ea77";
 }
-.ebf-folder-remove::before {
+.ebf-folder-add-fill::before {
   content: "\ea78";
 }
-.ebf-font::before {
+.ebf-folder-remove::before {
   content: "\ea79";
 }
-.ebf-font-fill::before {
+.ebf-font::before {
   content: "\ea7a";
 }
-.ebf-font-strike::before {
+.ebf-font-fill::before {
   content: "\ea7b";
 }
-.ebf-font-strike-fill::before {
+.ebf-font-strike::before {
   content: "\ea7c";
 }
-.ebf-font-underline::before {
+.ebf-font-strike-fill::before {
   content: "\ea7d";
 }
-.ebf-font-underline-fill::before {
+.ebf-font-underline::before {
   content: "\ea7e";
 }
-.ebf-graph-01-fill::before {
+.ebf-font-underline-fill::before {
   content: "\ea7f";
 }
-.ebf-graph-02-fill::before {
+.ebf-graph-01-fill::before {
   content: "\ea80";
 }
-.ebf-grid::before {
+.ebf-graph-02-fill::before {
   content: "\ea81";
 }
-.ebf-grid-fill::before {
+.ebf-grid::before {
   content: "\ea82";
 }
-.ebf-grid-gap::before {
+.ebf-grid-fill::before {
   content: "\ea83";
 }
-.ebf-grid-gap-fill::before {
+.ebf-grid-gap::before {
   content: "\ea84";
 }
-.ebf-hammer::before {
+.ebf-grid-gap-fill::before {
   content: "\ea85";
 }
-.ebf-hand-move::before {
+.ebf-hammer::before {
   content: "\ea86";
 }
-.ebf-hand-move-fill::before {
+.ebf-hand-move::before {
   content: "\ea87";
 }
-.ebf-headphones::before {
+.ebf-hand-move-fill::before {
   content: "\ea88";
 }
-.ebf-headphones-fill::before {
+.ebf-headphones::before {
   content: "\ea89";
 }
-.ebf-heart::before {
+.ebf-headphones-fill::before {
   content: "\ea8a";
 }
-.ebf-heart-fill::before {
+.ebf-heart::before {
   content: "\ea8b";
 }
-.ebf-help-circle::before {
+.ebf-heart-fill::before {
   content: "\ea8c";
 }
-.ebf-help-circle-fill::before {
+.ebf-help-circle::before {
   content: "\ea8d";
 }
-.ebf-ibook::before {
+.ebf-help-circle-fill::before {
   content: "\ea8e";
 }
-.ebf-ibook-01-fill::before {
+.ebf-ibook::before {
   content: "\ea8f";
 }
-.ebf-ibook-02-fill::before {
+.ebf-ibook-fill::before {
   content: "\ea90";
 }
 .ebf-inbox::before {
@@ -806,7 +805,7 @@ $ebf-font-location: "fonts" !default;
 .ebf-local-files-fill::before {
   content: "\eaa2";
 }
-.ebf-lock-fill::before {
+.ebf-locked-fill::before {
   content: "\eaa3";
 }
 .ebf-locked::before {
@@ -905,10 +904,10 @@ $ebf-font-location: "fonts" !default;
 .ebf-note-fill::before {
   content: "\eac3";
 }
-.ebf-onedrive::before {
+.ebf-ms-onedrive::before {
   content: "\eac4";
 }
-.ebf-onedrive-fill::before {
+.ebf-ms-onedrive-fill::before {
   content: "\eac5";
 }
 .ebf-open-new-app::before {
@@ -992,10 +991,10 @@ $ebf-font-location: "fonts" !default;
 .ebf-plus-square-fill::before {
   content: "\eae0";
 }
-.ebf-pow-point-fill::before {
+.ebf-ms-powerpoint-fill::before {
   content: "\eae1";
 }
-.ebf-powerpoint::before {
+.ebf-ms-powerpoint::before {
   content: "\eae2";
 }
 .ebf-rectangle::before {
@@ -1058,10 +1057,10 @@ $ebf-font-location: "fonts" !default;
 .ebf-share-fill::before {
   content: "\eaf6";
 }
-.ebf-sharepoint::before {
+.ebf-ms-sharepoint::before {
   content: "\eaf7";
 }
-.ebf-sharepoint-fill::before {
+.ebf-ms-sharepoint-fill::before {
   content: "\eaf8";
 }
 .ebf-signature::before {
@@ -1112,7 +1111,7 @@ $ebf-font-location: "fonts" !default;
 .ebf-trash-fill::before {
   content: "\eb08";
 }
-.ebf-unlock-fill::before {
+.ebf-unlocked-fill::before {
   content: "\eb09";
 }
 .ebf-unlocked::before {
@@ -1175,9 +1174,9 @@ $ebf-font-location: "fonts" !default;
 .ebf-voicemail-fill::before {
   content: "\eb1d";
 }
-.ebf-word::before {
+.ebf-ms-word::before {
   content: "\eb1e";
 }
-.ebf-word-fill::before {
+.ebf-ms-word-fill::before {
   content: "\eb1f";
 }

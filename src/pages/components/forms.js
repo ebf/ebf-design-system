@@ -80,6 +80,62 @@ export default withLayout(function FormsPage() {
         </Button>
       </Form>
 
+      <LinkedHeading h="2" id="form-sizes">Sizes</LinkedHeading>
+
+      <Form.Group>
+        <Form.Label>Large input field</Form.Label>
+        <Form.Control size="lg" type="text" placeholder="Large text" />
+        <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+        </Form.Text>
+        <br /> 
+        <Form.Label>Normal input field</Form.Label>
+        <Form.Control type="text" placeholder="Normal text" />
+        <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+        </Form.Text>
+        <br />
+        <Form.Label>Small input field</Form.Label>
+        <Form.Control size="sm" type="text" placeholder="Small text"  />
+        <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+
+      
+      <LinkedHeading h="2" id="form-sizes">Select Field Sizes</LinkedHeading>
+
+      <Form>
+        <Form.Group controlId="exampleForm.SelectCustom">
+          <Form.Label>Large custom select</Form.Label>
+          <Form.Control className="ebf-select-arrow" as="select" size="lg" custom>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </Form.Control>
+          <br />
+          <Form.Label>Normal custom select</Form.Label>
+          <Form.Control as="select" custom>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </Form.Control>
+          <br />
+          <Form.Label>Small custom select</Form.Label>
+          <Form.Control as="select" size="sm" custom>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </Form.Control>     
+        </Form.Group>
+      </Form>
+
       <LinkedHeading h="2" id="form-controls">Form controls</LinkedHeading>
       
       <Form>

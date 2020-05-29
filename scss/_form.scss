@@ -17,34 +17,11 @@ fieldset {
 }
 
 //Checkbox 
-.form-group {
-  .form-check-inline {
-    input[type=checkbox] + label {
-      &::before {
-        top: 0;
-      }
-  
-      &::after {
-        top: 3px;
-      }
-    }
 
-    input[type=radio] + label {
-      &::before {
-        top: 0;
-      }
-  
-      &::after {
-        top: 6px;
-      }
-    }
-  }
-}
 
 .form-check {
   
   padding-left: 1.75rem;
-
 
   //Checkbox
 
@@ -72,7 +49,7 @@ fieldset {
     }
 
     &:after {
-      content: '\ea3a';
+      content: '\ea3c';
       font-family: "ebf-iconset";
       font-size: .875rem;
       line-height: .875rem;      
@@ -80,11 +57,11 @@ fieldset {
       display: block;
       position: absolute;
       left: 3px;
-      top: 5px;
+      top: 0px;
       cursor: pointer;
       transition: $smooth-scaling-animation;
       transform-origin: center;
-      transform: scale(0) rotate(-45deg);
+      transform: scale(0);
     }
   }
 
@@ -97,7 +74,8 @@ fieldset {
 
   input[type=checkbox]:checked + label {
     &:after {      
-      transform: scale(1) rotate(0deg);
+      transform: scale(1);
+      top: 5px;
     }    
   }
 
@@ -152,9 +130,38 @@ fieldset {
       transform: scale(1);
     }    
   }
+}
 
+.form-group {
+  .form-check-inline {
+    input[type=checkbox] + label {
+      &::before {
+        top: 0;
+      }
+  
+      &::after {
+        top: 3px;
+      }
+    }
+
+    input[type=radio] + label {
+      &::before {
+        top: 0;
+      }
+  
+      &::after {
+        top: 6px;
+      }
+    }
+  }
 }
 
 .form-control {
   padding: $input-btn-padding-y;
+}
+
+// Select Styling
+
+.ebf-select-arrow {
+  
 }
