@@ -68,23 +68,23 @@ fieldset {
       top: 2px;
       cursor: pointer;
       background: white;
-      transition: all .2s ease;
+      transition: $smooth-color-animation;
     }
 
     &:after {
-      content: '\ea38';
+      content: '\ea3a';
       font-family: "ebf-iconset";
       font-size: .875rem;
       line-height: .875rem;      
       color: white;       
       display: block;
       position: absolute;
-      left: 4px;
+      left: 3px;
       top: 5px;
       cursor: pointer;
       transition: $smooth-scaling-animation;
       transform-origin: center;
-      transform: scale(0);
+      transform: scale(0) rotate(-45deg);
     }
   }
 
@@ -97,7 +97,7 @@ fieldset {
 
   input[type=checkbox]:checked + label {
     &:after {      
-      transform: scale(1);
+      transform: scale(1) rotate(0deg);
     }    
   }
 
@@ -120,7 +120,7 @@ fieldset {
       top: 2px;
       cursor: pointer;
       background: white;
-      transition: all .2s ease;
+      transition: $smooth-color-animation;
     }
 
     &:after {
@@ -136,7 +136,7 @@ fieldset {
       cursor: pointer;
       transition: $smooth-scaling-animation;
       transform-origin: center;
-      transform: scale(2);
+      transform: scale(0);
     }
   }
 

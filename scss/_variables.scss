@@ -1052,5 +1052,5 @@ $footer-link-hover-color: $gray-700 !default;
 
 
 //
-
-$smooth-scaling-animation: all .2s cubic-bezier(0.600, -0.600, 0.600, 1.600);
+$smooth-color-animation: all .2s cubic-bezier(0.600, 0.000, 0.120, 1);
+$smooth-scaling-animation: all .3s cubic-bezier(0.400, -0.200, 0.400, 1.200);
