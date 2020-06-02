@@ -72,3 +72,20 @@
     pointer-events: none;
   }
 }
+
+input[type=file] {
+
+  &::-webkit-file-upload-button {
+    visibility: hidden;
+  } 
+  
+  &:before {
+    content: 'Choose file';
+    @extend .btn;
+    @extend .btn-sm;
+    @extend .btn-primary;
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
+
+}

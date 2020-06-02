@@ -161,17 +161,45 @@ export default withLayout(function FormsPage() {
 
         <Checkbox checked readOnly label="checkbox" />
         <Radio checked readOnly label="radio" />
+        <br/>      
+        
 
-        <Form.Group inline>
-          <Checkbox inline id="formBasicCheckbox1" label="1" />
-          <Checkbox inline id="formBasicCheckbox2" label="2" />{' '}
-          <Checkbox inline id="formBasicCheckbox3" label="3" />
-        </Form.Group>
         <Form.Group>
-          <Radio id="radio1" name="radioGroup" inline label="1" />{' '}
-          <Radio id="radio2" name="radioGroup" inline label="2" />{' '}
-          <Radio id="radio3" name="radioGroup" inline label="3" />
+          <Form>
+            <Checkbox id="formBasicCheckbox4" inline label="1" />
+            <Checkbox id="formBasicCheckbox5" inline label="2" />
+            <Checkbox id="formBasicCheckbox6" inline label="3" />
+          </Form>
+          <Form>
+            <Radio id="radio5" name="radioGroup" inline label="5" />
+            <Radio id="radio6" name="radioGroup" inline label="6" />
+            <Radio id="radio7" name="radioGroup" inline label="7" />
+          </Form>
         </Form.Group>
+        <br/>
+    
+        <Form.Group>
+          <Form>
+          <Form.Check 
+              type="switch"
+              id="custom-switch"
+              label="Check this switch"
+            />
+            <Form.Check 
+              checked
+              type="switch"
+              id="custom-switch-checked"
+              label="Checked switch"
+            />
+            <Form.Check 
+              disabled
+              type="switch"
+              label="Disabled switch"
+              id="disabled-custom-switch"
+            />
+          </Form>
+        </Form.Group>
+
 
         <Form.Group controlId="Form.ControlsSelect">
           <Form.Label>Select</Form.Label>
