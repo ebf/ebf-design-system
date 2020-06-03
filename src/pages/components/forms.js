@@ -159,8 +159,12 @@ export default withLayout(function FormsPage() {
           help="Example block-level help text here."
         />
 
-        <Checkbox checked readOnly label="checkbox" />
-        <Radio checked readOnly label="radio" />
+        <Form.Group>
+          <Form>
+          <Checkbox checked readOnly label="Checkbox" />
+        <Radio checked readOnly label="Radio" />
+          </Form>
+        </Form.Group>
         <br/>      
         
 
