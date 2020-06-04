@@ -16,15 +16,11 @@ export class TocProvider extends React.Component {
   }
 
   handleRegisterNode = (level, title, id) => {
-    console.log(level, title, id);
-
     if (level === 1) return;
 
     this.list.set(id, { level, title, id });
     cancelAnimationFrame(this.frame);
-    this.frame = requestAnimationFrame(() => {
-      console.log(this.list);
-    });
+    this.frame = requestAnimationFrame(() => {});
   };
 
   render() {
@@ -39,6 +35,6 @@ export class TocProvider extends React.Component {
 
 export default function Toc() {
   return (
-    <TocContext.Consumer>{c => console.log(c.tree)}</TocContext.Consumer>
+    <TocContext.Consumer>{c => {c.tree}}</TocContext.Consumer>
   );
 }
