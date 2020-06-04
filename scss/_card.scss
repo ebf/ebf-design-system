@@ -55,20 +55,20 @@
   position: relative;
   overflow: hidden;
   border: none;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-medium;
   box-shadow: $box-shadow;
   font-size: $font-size-base - .125;  
   background: white;
-  
+
   .card-body {
-    padding: $spacer * 2 $spacer * 2 $spacer * 2 $spacer * 2.5;
+    padding: $spacer * 1.5 $spacer * 1.5 $spacer * 1.5 $spacer * 2;
 
     .list-group {
-      .list-group-item {
-        
+      .list-group-item {        
         background-color: transparent;
         color: $black;
         border: none;
+        
         padding: $spacer / 2 0 ;
 
         &.eid-color {
@@ -77,6 +77,7 @@
 
         span {
           color: $gray-800;
+          font-weight: $font-weight-normal;
         }
       }
     }
@@ -92,5 +93,23 @@
     bottom: 0;
     left: 0;
     background-color: $blue;
+  }
+
+  &.ebf-card-summary-horizontal {
+    .card-body {      
+
+      .list-group {
+        flex-direction: row;
+        justify-content: space-around;
+
+        .list-group-item {
+          padding: $spacer / 5.333 $spacer / 2;
+
+          span {
+            display: block;
+          }
+        }
+      }
+    }
   }
 }

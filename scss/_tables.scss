@@ -8,12 +8,13 @@
       background: $gray-gradient;
       border-bottom: none;
       color: $black;
-      //border: 1px 1px 0 1px solid $border-color;
-      padding: $table-cell-padding;
+      height: $spacer * 5.5;
+      line-height:  $spacer * 4.5;
+      padding: $table-cell-padding;      
     }
 
     .ebf-table-headline {
-      line-height:  $spacer * 3.75;
+      
       font-size: $h6-font-size;
       margin-bottom: 0;
     }
@@ -27,6 +28,7 @@
         background: $gray-200;
         border-bottom: none;
         color: $black;
+        font-size: $font-size-13;
         font-weight: $font-weight-bold;
         padding: $table-cell-padding;
       }

@@ -61,7 +61,23 @@ export default withLayout(function Tables() {
                     </Card.Body>
                 </Card>
             </Col>            
-        </Row>       
+        </Row>   
+
+         <Row className="ebf-card-container">
+            <Col className="col-12">
+                <Card className="ebf-card-summary ebf-card-summary-horizontal">
+                    <Card.Body>                            
+                        <ListGroup variant="flush">
+                            <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
+                            <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
+                            <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
+                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
+                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
+                        </ListGroup>                   
+                    </Card.Body>
+                </Card>
+            </Col>            
+        </Row>    
 
       </>
     )
