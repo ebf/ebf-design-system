@@ -27,6 +27,7 @@
             font-style: italic;
             color: $black;
             pointer-events: none; 
+            z-index: 9;
 
             .progress-label {
                 margin-bottom: $spacer * 1.5;
@@ -42,6 +43,8 @@
                 background: $gray-300;
                 border-radius: $spacer;
                 position: absolute;
+                transition: $smooth-scaling-animation;
+                transform-origin: center;
 
                 &:after {
                     content: '';
@@ -52,8 +55,9 @@
                     position: absolute;
                     top: -4px;                    
                     left: -4px;
-                    z-index: -1;
+                    z-index: -1 !important;
                     background: $gray-300;
+                    opacity: .5;
                     transform: scale(0);
                     transform-origin: center;
                     transition: $smooth-scaling-animation;
@@ -63,7 +67,8 @@
             &:hover {                
                 .progress-dot {
                     &:after {
-                        transform: scale(1);
+                        transform: scale(1.5);
+                        z-index: -1 !important;
                     }
                 }
             }
@@ -88,22 +93,19 @@
             }
 
             &.current {
-                pointer-events: all; 
-                font-style: normal;
-
+                
                 .progress-dot {
-                    background: $blue;
-                    width: $spacer/1.3;
-                    height: $spacer/1.3;
-                    bottom: -2px;
+                    transform: scale(1.5);
+                }
 
-                    &:after {
-                        width: $spacer * 1.5;
-                        height: $spacer * 1.5;
-                        top: -6px;                    
-                        left: -6px;
-                    }
-                }    
+                &:hover {
+                    .progress-dot {
+    
+                        &::after {
+                            z-index: -1;
+                        }
+                    }  
+                }
             }
         }
     }    
