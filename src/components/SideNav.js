@@ -44,6 +44,7 @@ const componentItems = [
   'forms',
   'modals',
   'navbar',
+  'progress',
   'tables',
 ];
 

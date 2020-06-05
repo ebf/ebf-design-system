@@ -1,6 +1,6 @@
 import React from 'react';
 import LinkedHeading from '../../components/LinkedHeading';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 import withLayout from "../../with-layout"
 
 export default withLayout(function GridSection({ data }) {
@@ -12,6 +12,7 @@ export default withLayout(function GridSection({ data }) {
       <br/>
 
       <Container fluid className="ebf-grid-example">
+
         <Row className="mt-4 mb-4">
           <Col>
             <span>12 Col</span>

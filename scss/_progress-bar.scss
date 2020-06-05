@@ -1,0 +1,110 @@
+.ebf-progress-bar {
+    position: relative;
+    margin: 0 auto;
+    
+    .progress {
+        height: $spacer / 8;       
+    }
+
+    .progress-bar-item-container {
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .progress-bar-item { 
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 4rem;
+            width: 0;
+            position: relative;
+            top: $spacer/3;
+            font-size: $font-size-sm;
+            text-align: center;
+            font-style: italic;
+            color: $black;
+            pointer-events: none; 
+
+            .progress-label {
+                margin-bottom: $spacer * 1.5;
+                transition: $smooth-color-animation;
+                color: $gray-900;
+            }
+                
+            .progress-dot {
+                align-self: flex-end;
+                width: $spacer/2;
+                height: $spacer/2;
+                display: block;
+                background: $gray-300;
+                border-radius: $spacer;
+                position: absolute;
+
+                &:after {
+                    content: '';
+                    width: $spacer;
+                    height: $spacer;
+                    border-radius: $spacer;
+                    display: block;
+                    position: absolute;
+                    top: -4px;                    
+                    left: -4px;
+                    z-index: -1;
+                    background: $gray-300;
+                    transform: scale(0);
+                    transform-origin: center;
+                    transition: $smooth-scaling-animation;
+                }
+            }   
+            
+            &:hover {                
+                .progress-dot {
+                    &:after {
+                        transform: scale(1);
+                    }
+                }
+            }
+    
+            &.active {   
+                pointer-events: all;             
+                font-style: normal;
+
+                .progress-label {
+                    color: $black;
+                }
+            
+                .progress-dot {
+                    background: $blue;
+                }     
+                
+                &:hover {
+                    .progress-label {
+                        color: $blue;
+                    }
+                }
+            }
+
+            &.current {
+                pointer-events: all; 
+                font-style: normal;
+
+                .progress-dot {
+                    background: $blue;
+                    width: $spacer/1.3;
+                    height: $spacer/1.3;
+                    bottom: -2px;
+
+                    &:after {
+                        width: $spacer * 1.5;
+                        height: $spacer * 1.5;
+                        top: -6px;                    
+                        left: -6px;
+                    }
+                }    
+            }
+        }
+    }    
+}
