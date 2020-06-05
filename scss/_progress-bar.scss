@@ -92,7 +92,12 @@
                 }
             }
 
-            
+            &.current {
+                
+              .progress-label {
+                  font-weight: $font-weight-medium;
+              }
+            }
         }
     }    
 }
