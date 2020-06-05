@@ -33,6 +33,23 @@
                 margin-bottom: $spacer * 1.5;
                 transition: $smooth-color-animation;
                 color: $gray-900;
+
+                &:after {
+                    content: '';
+                    width: $spacer;
+                    height: $spacer;
+                    border-radius: $spacer;
+                    display: block;
+                    position: absolute;
+                    bottom: -4px;                    
+                    left: -8px;
+                    z-index: -1 !important;
+                    background: $gray-300;
+                    opacity: .5;
+                    transform: scale(0);
+                    transform-origin: center;
+                    transition: $smooth-scaling-animation-dots;
+                }
             }
                 
             .progress-dot {
@@ -43,33 +60,20 @@
                 background: $gray-300;
                 border-radius: $spacer;
                 position: absolute;
-                transition: $smooth-scaling-animation;
                 transform-origin: center;
-
-                &:after {
-                    content: '';
-                    width: $spacer;
-                    height: $spacer;
-                    border-radius: $spacer;
-                    display: block;
-                    position: absolute;
-                    top: -4px;                    
-                    left: -4px;
-                    z-index: -1 !important;
-                    background: $gray-300;
-                    opacity: .5;
-                    transform: scale(0);
-                    transform-origin: center;
-                    transition: $smooth-scaling-animation;
-                }
+                transform: scale(1);
+                transition: $smooth-scaling-animation-dots;
+                
             }   
             
-            &:hover {                
-                .progress-dot {
+            &:hover {      
+                .progress-label {
                     &:after {
-                        transform: scale(1.5);
-                        z-index: -1 !important;
+                        transform: scale(1.5);                      
                     }
+                }          
+                .progress-dot {
+                    transform: scale(1.5);                   
                 }
             }
     
@@ -94,9 +98,24 @@
 
             &.current {
                 
-              .progress-label {
-                  font-weight: $font-weight-medium;
-              }
+                .progress-label {
+                    
+                    &:after {
+                        transform: scale(1.25);
+                        animation: pulsate-animation 2.5s ease-in-out infinite both;                        
+                    }
+                }
+
+                &:hover {
+                    
+
+                    .progress-label {
+                        &:after {
+                            transform: scale(1.5)!important;
+                            opacity: .5!important;
+                        }
+                    }
+                }
             }
         }
     }    

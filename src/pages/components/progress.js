@@ -48,24 +48,24 @@ export default withLayout(function Progress() {
                     <span className="progress-dot"></span>
                 </a>
 
-                <a href="" className="progress-bar-item active ">
+                <a href="" className="progress-bar-item active">
                     <span className="progress-label">Source</span>
                     <span className="progress-dot"></span>
                 </a>
 
-                <a href="" className="progress-bar-item active current">
+                <a href="" className="progress-bar-item active">
                     <span className="progress-label">Target</span>
                     <span className="progress-dot"></span>
                 </a>
 
-                <a href="" className="progress-bar-item">
+                <a href="" className="progress-bar-item active current">
                     <span className="progress-label">Devices</span>
                     <span className="progress-dot"></span>
                 </a>
                
             </div>      
             
-            <ProgressBar  variant="primary" now={66} />
+            <ProgressBar  variant="primary" now={100} />
         </div>
 
         <div className="ebf-progress-bar col-4">
