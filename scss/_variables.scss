@@ -1058,7 +1058,7 @@ $smooth-color-animation: all .2s cubic-bezier(0.600, 0.000, 0.120, 1);
 $smooth-scaling-animation: all .2s cubic-bezier(0.730, -0.235, 0.215, 1.280);
 $smooth-position-animation: all .2s cubic-bezier(1.000, 0.000, 0.000, 1.000);
 
-$smooth-scaling-animation-dots: all .33s cubic-bezier(0.730, -0.235, 0.215, 1.280);
+$smooth-scaling-animation-dots: all .2s cubic-bezier(0.440, -0.480, 0.465, 1.515);
 
 
 @keyframes pulsate-animation {
