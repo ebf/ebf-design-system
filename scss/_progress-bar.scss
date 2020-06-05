@@ -92,21 +92,7 @@
                 }
             }
 
-            &.current {
-                
-                .progress-dot {
-                    transform: scale(1.5);
-                }
-
-                &:hover {
-                    .progress-dot {
-    
-                        &::after {
-                            z-index: -1;
-                        }
-                    }  
-                }
-            }
+            
         }
     }    
 }
