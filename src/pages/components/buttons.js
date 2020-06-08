@@ -222,8 +222,8 @@ export default withLayout(function Buttons() {
       <LinkedHeading h="3" id="disabled-button-markup">Disabled Button Markup</LinkedHeading>
 
       <Button className="mb-4" variant="primary" disabled>
-            Primary button
-          </Button>
+        Disabled Primary Button
+      </Button>
       
       {BUTTON_DISABLED.map(({ type, state, label }) => {
         const variant = `${type}`;
@@ -232,7 +232,7 @@ export default withLayout(function Buttons() {
           <div className="mb-3">          
             <CopyBlock
               theme={monoBlue}
-              text={`<button type="button" class="btn btn-${type}" ${state} >\n\t${label}\n</button>`}
+              text={`<button type="button" class="btn btn-${type}" ${state} >\n\t${label} Primary Button\n</button>`}
               language="jsx"
               showLineNumbers
               wrapLines

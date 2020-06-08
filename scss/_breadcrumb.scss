@@ -9,12 +9,12 @@
     margin-bottom: 0;
 
     .breadcrumb-item {
-        font-weight: $font-weight-bold;
+        font-weight: $font-weight-medium;
 
         + .breadcrumb-item { 
             &:before {
                 @extend %ebf;
-                content: '\ea3c';
+                content: '\ea3f';
                 color: $blue-900;
                 font-size: $font-size-sm;
             }

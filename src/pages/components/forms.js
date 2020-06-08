@@ -108,7 +108,7 @@ export default withLayout(function FormsPage() {
       <Form>
         <Form.Group controlId="exampleForm.SelectCustom">
           <Form.Label>Large custom select</Form.Label>
-          <Form.Control className="ebf-select-arrow" as="select" size="lg" custom>
+          <Form.Control className="ebf-select" as="select" size="lg" custom>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -117,7 +117,7 @@ export default withLayout(function FormsPage() {
           </Form.Control>
           <br />
           <Form.Label>Normal custom select</Form.Label>
-          <Form.Control as="select" custom>
+          <Form.Control className="ebf-select" as="select" custom>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -126,7 +126,7 @@ export default withLayout(function FormsPage() {
           </Form.Control>
           <br />
           <Form.Label>Small custom select</Form.Label>
-          <Form.Control as="select" size="sm" custom>
+          <Form.Control className="ebf-select" as="select" size="sm" custom>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -207,7 +207,7 @@ export default withLayout(function FormsPage() {
 
         <Form.Group controlId="Form.ControlsSelect">
           <Form.Label>Select</Form.Label>
-          <Form.Control as="select" placeholder="select">
+          <Form.Control className="ebf-select" as="select" placeholder="select">
             <option value="select">select</option>
             <option value="other">...</option>
           </Form.Control>
@@ -217,12 +217,13 @@ export default withLayout(function FormsPage() {
           <Form.Control as="select" multiple>
             <option value="select">select (multiple)</option>
             <option value="other">...</option>
+            <option value="other">Holding Ctrl/Cmd Selects</option>
           </Form.Control>
         </Form.Group>
 
         <Form.Group controlId="Form.ControlsTextarea">
           <Form.Label>Textarea</Form.Label>
-          <Form.Control as="textarea" placeholder="textarea" />
+          <Form.Control as="textarea" placeholder="Textarea" />
         </Form.Group>
 
         <Form.Group>
