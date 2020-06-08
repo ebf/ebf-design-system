@@ -1071,6 +1071,6 @@ $smooth-scaling-animation-dots: all .2s cubic-bezier(0.440, -0.480, 0.465, 1.515
   }
   100% {
       transform: scale(2.5);
-      opacity: 0;
+      opacity: 0;     
   }
 }

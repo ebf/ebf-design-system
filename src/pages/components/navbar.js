@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, ProgressBar} from 'react-bootstrap';
 import {FormControl, InputGroup, Button} from 'react-bootstrap';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -126,8 +126,138 @@ export default withLayout(function NavbarBrand() {
 					<Nav.Link href="#link">Link</Nav.Link>
 				</Nav>
 			</div>
+		</Navbar>		
+	</div>
+
+	<br/>
+
+	<div className="ebf-double-navbar shadow">
+		<Navbar collapseOnSelect expand="lg" bg="white" variant="light">
+			<Navbar.Brand href="#">EBF GmbH</Navbar.Brand>				
+			<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
+			<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+				<Nav>
+					<Nav.Link href="#">Home</Nav.Link>
+					<Nav.Link href="#link">Link</Nav.Link>
+					<NavDropdown title="Dropdown" id="basic-nav-dropdown">
+						<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+						<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+						<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+						<NavDropdown.Divider />
+						<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+					</NavDropdown>
+					<Nav.Link href="#disabled" disabled>Disabled</Nav.Link>
+				</Nav>        
+			</Navbar.Collapse>  		
+		</Navbar>
+		<Navbar bg="white" id="basic-navbar-nav" className="border-top justify-content-between secondary-nav">
+			<span className="navbar-subtitle">Span Title Example</span>  
+			<Button className="mb-0" size="sm" variant="primary"><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
+			<div>					
+				<Nav>
+					<Nav.Link href="#">Link</Nav.Link>
+					<Nav.Link href="#link">Link</Nav.Link>
+				</Nav>
+			</div>
+		</Navbar>		
+		<Navbar className="nav-ebf-progress-bar">
+		<div className="ebf-progress-bar col-9">
+            <div className="progress-bar-item-container">
+                <a href="" className="progress-bar-item active"> 
+                    <span className="progress-label">Name</span>
+                    <span className="progress-dot"></span>
+                </a>
+
+                <a href="" className="progress-bar-item active current">
+                    <span className="progress-label">Source</span>
+                    <span className="progress-dot"></span>
+                </a>
+
+                <a href="" className="progress-bar-item">
+                    <span className="progress-label">Target</span>
+                    <span className="progress-dot"></span>
+                </a>
+
+                <a href="" className="progress-bar-item">
+                    <span className="progress-label">Devices</span>
+                    <span className="progress-dot"></span>
+                </a>
+
+                <a href="" className="progress-bar-item">
+                    <span className="progress-label">Save</span>
+                    <span className="progress-dot"></span>
+                </a>    
+            </div>      
+            
+            <ProgressBar  variant="primary" now={25} />
+        </div>
 		</Navbar>
 	</div>
+
+	<br/>
+
+<div className="ebf-double-navbar shadow">
+	<Navbar collapseOnSelect expand="lg" bg="white" variant="light">
+		<Navbar.Brand href="#">EBF GmbH</Navbar.Brand>				
+		<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
+		<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+			<Nav>
+				<Nav.Link href="#">Home</Nav.Link>
+				<Nav.Link href="#link">Link</Nav.Link>
+				<NavDropdown title="Dropdown" id="basic-nav-dropdown">
+					<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+					<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+					<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+					<NavDropdown.Divider />
+					<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+				</NavDropdown>
+				<Nav.Link href="#disabled" disabled>Disabled</Nav.Link>
+			</Nav>        
+		</Navbar.Collapse>  		
+	</Navbar>
+	<Navbar bg="white" id="basic-navbar-nav" className="border-top justify-content-between secondary-nav">
+		<span className="navbar-subtitle">Span Title Example</span>  
+		<Button className="mb-0" size="sm" variant="primary"><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
+		<div>					
+			<Nav>
+				<Nav.Link href="#">Link</Nav.Link>
+				<Nav.Link href="#link">Link</Nav.Link>
+			</Nav>
+		</div>
+	</Navbar>		
+	<Navbar className="nav-ebf-progress-bar">
+	<div className="ebf-progress-bar col-9">
+		<div className="progress-bar-item-container">
+			<a href="" className="progress-bar-item active"> 
+				<span className="progress-label">Name</span>
+				<span className="progress-dot"></span>
+			</a>
+
+			<a href="" className="progress-bar-item active current">
+				<span className="progress-label">Source</span>
+				<span className="progress-dot"></span>
+			</a>
+
+			<a href="" className="progress-bar-item">
+				<span className="progress-label">Target</span>
+				<span className="progress-dot"></span>
+			</a>
+
+			<a href="" className="progress-bar-item">
+				<span className="progress-label">Devices</span>
+				<span className="progress-dot"></span>
+			</a>
+
+			<a href="" className="progress-bar-item">
+				<span className="progress-label">Save</span>
+				<span className="progress-dot"></span>
+			</a>    
+		</div>      
+		
+		<ProgressBar  variant="primary" now={25} />
+	</div>
+	</Navbar>
+</div>
 
 	<br/>
 

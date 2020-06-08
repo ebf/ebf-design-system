@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col, ProgressBar, ProgressBarProps} from 'react-bootstrap';
+import {ProgressBar, ProgressBarProps} from 'react-bootstrap';
 
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -41,6 +41,8 @@ export default withLayout(function Progress() {
             <ProgressBar  variant="primary" now={25} />
         </div>
 
+        <br/>
+
         <div className="ebf-progress-bar col-6">
             <div className="progress-bar-item-container">
                 <a href="" className="progress-bar-item active"> 
@@ -67,6 +69,7 @@ export default withLayout(function Progress() {
             
             <ProgressBar  variant="primary" now={100} />
         </div>
+        <br/>
 
         <div className="ebf-progress-bar col-4">
             <div className="progress-bar-item-container">

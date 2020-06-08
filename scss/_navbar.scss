@@ -97,6 +97,14 @@
       font-size: 1.25rem;
     }
   }
+
+  &:nth-last-child() {
+    padding-left: 0;
+  }
+
+  &:nth-last-child() {
+    padding-right: 0;
+  }
 }
 
 .navbar-subtitle {
