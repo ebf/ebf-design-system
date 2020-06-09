@@ -11,11 +11,9 @@ export default withLayout(function Spinners() {
       
       <LinkedHeading h="2" id="demo">Live demo</LinkedHeading>
 
-      <Spinner animation="border" role="status">
+      <Spinner animation="border" role="status" variant="primary">
         <span className="sr-only">Loading...</span>
       </Spinner>
-
-      <Spinner animation="border" />
       
     </>
   )
