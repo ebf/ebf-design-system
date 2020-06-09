@@ -45,6 +45,7 @@ const componentItems = [
   'modals',
   'navbar',
   'progress',
+  'spinners',
   'tables',
 ];
 
