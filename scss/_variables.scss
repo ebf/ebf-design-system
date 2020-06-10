@@ -45,10 +45,10 @@ $gray-gradient: linear-gradient(0deg, rgba(242,243,247,1) 0%, rgba(255,255,255,1
 
 // Blues
 
-$blue:    #2494c5 !default;
+//$blue:    #2494c5 !default;
 
 //Telekom 
-//$blue:    #E30075 !default;
+$blue:    #E30075 !default;
 
 $blue-100: #e5f2f8 !default;
 $blue-200: #cae5f1 !default;
@@ -1067,10 +1067,11 @@ $smooth-scaling-animation-dots: all .2s cubic-bezier(0.440, -0.480, 0.465, 1.515
       opacity: 0;
   }
   50% {      
-      opacity: .3;
+      opacity: .3;      
   }
   100% {
       transform: scale(2.5);
       opacity: 0;     
   }
 }
+

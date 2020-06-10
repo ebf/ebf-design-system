@@ -1,21 +1,18 @@
-// .spinner-border {
-//     position: relative;
-//     animation: spinner-border 1s cubic-bezier(0.600, 0.000, 0.120, 1) infinite;
-// }
+.spinner-border {   
+    border: $spinner-border-width solid currentColor;    
+    border-left-color: transparent;
+    position: relative;
+   
 
-// .spinner-border {
-//     &:after {
-//         content: '';
-//         display: block;
-//         position: absolute;
-//         top: -.25rem;
-//         right: -.25rem;
-//         width: 2rem;
-//         height: 2rem;
-//         border: .25rem solid $blue;
-//         border-radius: 50%;
-//         z-index: -1;
-//         border-left-color: transparent;
-//         animation: spinner-border 2s cubic-bezier(0.600, 0.000, 0.120, 1) infinite;
-//     }
-// }
+   &:after {
+        content: '';
+        position: absolute;
+        @extend .spinner-border;
+        border-top-color: currentColor;
+        border-bottom-color: currentColor;     
+        left: -.25rem;  
+        top: -.25rem;  
+        opacity: .5;
+        animation: spinner-border 1.5s linear infinite;
+   }
+}
