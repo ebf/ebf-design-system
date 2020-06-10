@@ -14,6 +14,11 @@ export default withLayout(function Spinners() {
       <Spinner animation="border" role="status" variant="primary">
         <span className="sr-only">Loading...</span>
       </Spinner>
+
+
+      <Spinner animation="border" role="status" variant="primary" size="sm">
+        <span className="sr-only">Loading...</span>
+      </Spinner>
       
     </>
   )

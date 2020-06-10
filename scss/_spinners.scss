@@ -16,3 +16,18 @@
         animation: spinner-border 1.5s linear infinite;
    }
 }
+
+.spinner-border-sm {
+
+   &:after {
+    content: '';
+        position: absolute;
+        @extend .spinner-border-sm;
+        border-top-color: currentColor;
+        border-bottom-color: currentColor;     
+        left: -.25rem;  
+        top: -.25rem;  
+        opacity: .5;
+        animation: spinner-border 1.5s linear infinite;
+    }
+}
