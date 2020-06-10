@@ -1,9 +1,46 @@
-.nav-ebf-progress-bar {
-    border-top: 0.0625rem solid #d4d9e2 !important;
+.nav-ebf-progress-bar {   
     height: $spacer * 5.5;
     max-height: $spacer * 5.5;
     padding: 1.25rem 0 1.75rem 0;
     background: $gray-100;
+
+    &.navbar-dark {
+        .ebf-progress-bar {
+            .progress {
+                background-color: $gray-900;
+
+                // .bg-primary {
+                //     background-color: $blue!important;
+                // }
+            }
+
+            .progress-bar-item-container {
+                .progress-bar-item {
+                    .progress-dot {
+                        background: $gray-900;
+                    }
+
+                    &.active {
+                        .progress-label {
+                            color: white;
+                        }
+
+                        .progress-dot {
+                            background: $blue;
+                        }
+                    }   
+                    
+                    &.current {
+                        .progress-label {
+                            &:after {
+                                background: $blue!important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .ebf-progress-bar {
@@ -25,8 +62,7 @@
         .progress-bar-item { 
             display: flex;
             justify-content: center;
-            align-items: flex-end;
-            //height: 4rem;
+            align-items: flex-end;            
             width: 0;
             position: relative;
             top: $spacer/3;
@@ -53,8 +89,8 @@
                     bottom: -4px;                    
                     left: -8px;
                     z-index: -1 !important;
-                    background: $blue-200;                    
-                    opacity: .5;
+                    background: $blue;                    
+                    opacity: .2;
                     transform: scale(0);
                     transform-origin: center;
                     transition: $smooth-scaling-animation-dots;

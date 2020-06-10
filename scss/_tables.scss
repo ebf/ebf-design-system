@@ -7,14 +7,29 @@
     background: $gray-gradient;
     border-bottom: none;
     color: $black;
-    height: $spacer * 5.5;
-    line-height:  $spacer * 4.5;
-    padding: $table-cell-padding;      
+    height: $spacer * 5.5;   
+    padding: $table-cell-padding;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;  
+
+    .table-header-group {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      .form-control {
+        margin-left: 1rem!important;
+      }
+      
+    }
   }
 
   .ebf-table-headline {    
     font-size: $h6-font-size;
-    margin-bottom: 0;
+    margin-bottom: 0;   
   }
 
   .table {

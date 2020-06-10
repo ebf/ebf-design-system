@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table , Form, Badge, Button} from 'react-bootstrap';
+import { Table , Form, FormControl, InputGroup, Badge, Button} from 'react-bootstrap';
 
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -25,6 +25,27 @@ export default withLayout(function Tables() {
         <div className="ebf-table">
             <header className="ebf-table-header">
                 <span className="ebf-table-headline">Table Header</span>
+                <div className="table-header-group">
+                    <InputGroup id="search" className="nav-search">          
+                        <FormControl
+                            placeholder="Search"
+                            aria-label="Search"
+                            aria-describedby="basic-addon"
+                            type="text"
+                        />
+                        <InputGroup.Append>
+                            <Button type="submit" id="basic-addon"><i className="ebf ebf-search-l"></i></Button>
+                        </InputGroup.Append>
+                    </InputGroup>   
+                                    
+                    <Form.Control className="ebf-select" as="select" custom>
+                        <option>First option select </option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </Form.Control> 
+                </div>
             </header>
             <div className="ebf-table-contents">
                 <Table hover responsive>

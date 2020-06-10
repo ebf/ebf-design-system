@@ -11,7 +11,7 @@ export default withLayout(function NavbarBrand() {
     <>
     <LinkedHeading h="1" id="navbar">Navbar</LinkedHeading> 
 
-	<Navbar collapseOnSelect expand="lg" bg="white" className="border-bottom justify-content-between">
+	<Navbar collapseOnSelect expand="lg" bg="white" variant="light"  className="border-bottom justify-content-between">
 		<Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 		<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
@@ -35,8 +35,8 @@ export default withLayout(function NavbarBrand() {
 	<Navbar collapseOnSelect expand="lg" bg="white" variant="light" className="border-bottom">
         <Navbar.Brand href="#">EBF GmbH</Navbar.Brand>
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
-		<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">			
-			<InputGroup id="search" className="nav-search">          
+		<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">	
+			<InputGroup id="search" className="nav-search grid-6">          
 				<FormControl
 					placeholder="Search"
 					aria-label="Search"
@@ -46,7 +46,7 @@ export default withLayout(function NavbarBrand() {
 				<InputGroup.Append>
 					<Button type="submit" id="basic-addon"><i className="ebf ebf-search-l"></i></Button>
 				</InputGroup.Append>
-			</InputGroup>
+			</InputGroup>		
 			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
@@ -59,6 +59,7 @@ export default withLayout(function NavbarBrand() {
 				</NavDropdown>
 				<Nav.Link href="#disabled" disabled>Disabled</Nav.Link>
 			</Nav>   
+			
 		</Navbar.Collapse>
 	</Navbar>
 
@@ -69,6 +70,18 @@ export default withLayout(function NavbarBrand() {
 		<Navbar.Toggle aria-controls="responsive-navbar-nav" />				
 		<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
 
+		<InputGroup id="search" className="mr-auto nav-search gray-search">          
+			<FormControl
+				placeholder="Search"
+				aria-label="Search"
+				aria-describedby="basic-addon"
+				type="text"
+			/>
+			<InputGroup.Append>
+				<Button type="submit" id="basic-addon"><i className="ebf ebf-search-l"></i></Button>
+			</InputGroup.Append>
+		</InputGroup>
+
 			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
@@ -82,17 +95,7 @@ export default withLayout(function NavbarBrand() {
 				<Nav.Link href="#disabled" disabled>Disabled</Nav.Link>
 			</Nav>   
 
-			<InputGroup id="search" className="mr-auto nav-search gray-search">          
-				<FormControl
-					placeholder="Search"
-					aria-label="Search"
-					aria-describedby="basic-addon"
-					type="text"
-				/>
-				<InputGroup.Append>
-					<Button type="submit" id="basic-addon"><i className="ebf ebf-search-l"></i></Button>
-				</InputGroup.Append>
-			</InputGroup>
+			
 		</Navbar.Collapse>
 	</Navbar>
 
@@ -160,7 +163,7 @@ export default withLayout(function NavbarBrand() {
 				</Nav>
 			</div>
 		</Navbar>		
-		<Navbar className="nav-ebf-progress-bar">
+		<Navbar className="nav-ebf-progress-bar border-top">
 		<div className="ebf-progress-bar col-9">
             <div className="progress-bar-item-container">
                 <a href="" className="progress-bar-item active"> 
@@ -196,68 +199,68 @@ export default withLayout(function NavbarBrand() {
 
 	<br/>
 
-<div className="ebf-double-navbar shadow">
-	<Navbar collapseOnSelect expand="lg" bg="white" variant="light">
-		<Navbar.Brand href="#">EBF GmbH</Navbar.Brand>				
-		<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
-		<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
-			<Nav>
-				<Nav.Link href="#">Home</Nav.Link>
-				<Nav.Link href="#link">Link</Nav.Link>
-				<NavDropdown title="Dropdown" id="basic-nav-dropdown">
-					<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-					<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-					<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-					<NavDropdown.Divider />
-					<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-				</NavDropdown>
-				<Nav.Link href="#disabled" disabled>Disabled</Nav.Link>
-			</Nav>        
-		</Navbar.Collapse>  		
-	</Navbar>
-	<Navbar bg="white" id="basic-navbar-nav" className="border-top justify-content-between secondary-nav">
-		<span className="navbar-subtitle">Span Title Example</span>  
-		<Button className="mb-0" size="sm" variant="primary"><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
-		<div>					
-			<Nav>
-				<Nav.Link href="#">Link</Nav.Link>
-				<Nav.Link href="#link">Link</Nav.Link>
-			</Nav>
+	<div className="ebf-double-navbar shadow">
+		<Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
+			<Navbar.Brand href="#">EBF GmbH</Navbar.Brand>				
+			<Navbar.Toggle aria-controls="responsive-navbar-nav" />			
+			<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+				<Nav>
+					<Nav.Link href="#">Home</Nav.Link>
+					<Nav.Link href="#link">Link</Nav.Link>
+					<NavDropdown title="Dropdown" id="basic-nav-dropdown">
+						<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+						<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+						<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+						<NavDropdown.Divider />
+						<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+					</NavDropdown>
+					<Nav.Link href="#disabled" disabled>Disabled</Nav.Link>
+				</Nav>        
+			</Navbar.Collapse>  		
+		</Navbar>
+		<Navbar bg="black" variant="dark" id="basic-navbar-nav" className="border-top justify-content-between secondary-nav">
+			<span className="navbar-subtitle">Span Title Example</span>  
+			<Button className="mb-0" size="sm" variant="primary"><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
+			<div>					
+				<Nav>
+					<Nav.Link href="#">Link</Nav.Link>
+					<Nav.Link href="#link">Link</Nav.Link>
+				</Nav>
+			</div>
+		</Navbar>		
+		<Navbar bg="black" variant="dark" className="nav-ebf-progress-bar border-top">
+		<div className="ebf-progress-bar col-9">
+			<div className="progress-bar-item-container">
+				<a href="" className="progress-bar-item active"> 
+					<span className="progress-label">Name</span>
+					<span className="progress-dot"></span>
+				</a>
+
+				<a href="" className="progress-bar-item active current">
+					<span className="progress-label">Source</span>
+					<span className="progress-dot"></span>
+				</a>
+
+				<a href="" className="progress-bar-item">
+					<span className="progress-label">Target</span>
+					<span className="progress-dot"></span>
+				</a>
+
+				<a href="" className="progress-bar-item">
+					<span className="progress-label">Devices</span>
+					<span className="progress-dot"></span>
+				</a>
+
+				<a href="" className="progress-bar-item">
+					<span className="progress-label">Save</span>
+					<span className="progress-dot"></span>
+				</a>    
+			</div>      
+			
+			<ProgressBar  variant="primary" now={25} />
 		</div>
-	</Navbar>		
-	<Navbar className="nav-ebf-progress-bar">
-	<div className="ebf-progress-bar col-9">
-		<div className="progress-bar-item-container">
-			<a href="" className="progress-bar-item active"> 
-				<span className="progress-label">Name</span>
-				<span className="progress-dot"></span>
-			</a>
-
-			<a href="" className="progress-bar-item active current">
-				<span className="progress-label">Source</span>
-				<span className="progress-dot"></span>
-			</a>
-
-			<a href="" className="progress-bar-item">
-				<span className="progress-label">Target</span>
-				<span className="progress-dot"></span>
-			</a>
-
-			<a href="" className="progress-bar-item">
-				<span className="progress-label">Devices</span>
-				<span className="progress-dot"></span>
-			</a>
-
-			<a href="" className="progress-bar-item">
-				<span className="progress-label">Save</span>
-				<span className="progress-dot"></span>
-			</a>    
-		</div>      
-		
-		<ProgressBar  variant="primary" now={25} />
+		</Navbar>
 	</div>
-	</Navbar>
-</div>
 
 	<br/>
 
