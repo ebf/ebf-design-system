@@ -12,9 +12,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
-    align-items: center;  
+    align-items: center;      
 
     .table-header-group {
+      padding: 0!important;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;

@@ -107,7 +107,6 @@
 }
 
 .ebf-double-navbar {
-
   .secondary-nav {
   // Dirty Hack secondary navigation height
 
@@ -116,9 +115,25 @@
     * {  
       margin-bottom: 0;
       margin-top: 0;
-    }
+    }    
   }
 }
+
+.centering-div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:first-child > * {
+    margin-right: auto;
+  }
+
+  &:last-child > * {
+    margin-left: auto;
+  }
+}
+
 
 #responsive-navbar-nav {
   z-index: 999;

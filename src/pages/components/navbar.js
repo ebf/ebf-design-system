@@ -121,9 +121,13 @@ export default withLayout(function NavbarBrand() {
 			</Navbar.Collapse>  		
 		</Navbar>
 		<Navbar bg="white" id="basic-navbar-nav" className="border-top justify-content-between secondary-nav">
-			<span className="navbar-subtitle">Span Title Example</span>  
-			<Button className="mb-0" size="sm" variant="primary"><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
-			<div>					
+			<div className="centering-div">
+				<span className="navbar-subtitle">Span Title Example</span>  
+			</div>
+			<div className="centering-div">
+				<Button className="mb-0" size="sm" variant="primary"><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
+			</div>
+			<div className="centering-div">					
 				<Nav>
 					<Nav.Link href="#">Link</Nav.Link>
 					<Nav.Link href="#link">Link</Nav.Link>
@@ -154,9 +158,13 @@ export default withLayout(function NavbarBrand() {
 			</Navbar.Collapse>  		
 		</Navbar>
 		<Navbar bg="white" id="basic-navbar-nav" className="border-top justify-content-between secondary-nav">
-			<span className="navbar-subtitle">Span Title Example</span>  
-			<Button className="mb-0" size="sm" variant="primary"><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
-			<div>					
+			<div className="centering-div">
+				<span className="navbar-subtitle">Span Title Example</span>  
+			</div>
+			<div className="centering-div">
+				<Button className="mb-0" size="sm" variant="primary"><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
+			</div>
+			<div className="centering-div">					
 				<Nav>
 					<Nav.Link href="#">Link</Nav.Link>
 					<Nav.Link href="#link">Link</Nav.Link>
@@ -219,9 +227,13 @@ export default withLayout(function NavbarBrand() {
 			</Navbar.Collapse>  		
 		</Navbar>
 		<Navbar bg="black" variant="dark" id="basic-navbar-nav" className="border-top justify-content-between secondary-nav">
-			<span className="navbar-subtitle">Span Title Example</span>  
-			<Button className="mb-0" size="sm" variant="primary"><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
-			<div>					
+			<div className="centering-div">
+				<span className="navbar-subtitle">Span Title Example</span>  
+			</div>
+			<div className="centering-div">
+				<Button className="mb-0" size="sm" variant="primary"><i className="ebf ebf-apps-fill"></i> Button Example</Button> 
+			</div>
+			<div className="centering-div">					
 				<Nav>
 					<Nav.Link href="#">Link</Nav.Link>
 					<Nav.Link href="#link">Link</Nav.Link>
