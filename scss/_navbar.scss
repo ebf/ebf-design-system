@@ -119,20 +119,6 @@
   }
 }
 
-.centering-div {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:first-child > * {
-    margin-right: auto;
-  }
-
-  &:last-child > * {
-    margin-left: auto;
-  }
-}
 
 
 #responsive-navbar-nav {

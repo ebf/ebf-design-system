@@ -65,7 +65,51 @@ export default withLayout(function Tables() {
 
          <Row className="ebf-card-container">
             <Col className="col-12">
-                <Card className="ebf-card-summary ebf-card-summary-horizontal">
+                <Card className="ebf-card-summary ebf-card-summary-horizontal mt-3">
+                    <Card.Body>                            
+                        <ListGroup variant="flush">
+                            <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
+                            <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
+                            <ListGroup.Item><span>Kartenprofil:</span> 39728346-2</ListGroup.Item>
+                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
+                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
+                        </ListGroup>                   
+                    </Card.Body>
+                </Card>
+                <Card className="ebf-card-summary ebf-card-summary-horizontal mt-3">
+                    <Card.Body>                            
+                        <ListGroup variant="flush">
+                            <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
+                            <ListGroup.Item><span>eMail:</span> carolerdfasdfssadfsadfosario@ebf.com</ListGroup.Item>
+                            <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
+                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
+                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
+                        </ListGroup>                   
+                    </Card.Body>
+                </Card>
+                <Card className="ebf-card-summary ebf-card-summary-horizontal mt-3">
+                    <Card.Body>                            
+                        <ListGroup variant="flush">
+                            <ListGroup.Item><span>Besitzer:</span> Carole Rosario Carole Carole Rosario Carole Rosario</ListGroup.Item>
+                            <ListGroup.Item><span>eMail:</span> me@google.com</ListGroup.Item>
+                            <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
+                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
+                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
+                        </ListGroup>                   
+                    </Card.Body>
+                </Card>
+                <Card className="ebf-card-summary ebf-card-summary-horizontal mt-3">
+                    <Card.Body>                            
+                        <ListGroup variant="flush">
+                            <ListGroup.Item><span>Besitzer:</span>Surendiran Velauthapillai</ListGroup.Item>
+                            <ListGroup.Item><span>eMail:</span>surendiran.velauthapillai@ebf.com</ListGroup.Item>
+                            <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
+                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
+                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
+                        </ListGroup>                   
+                    </Card.Body>
+                </Card>
+                <Card className="ebf-card-summary ebf-card-summary-horizontal mt-3">
                     <Card.Body>                            
                         <ListGroup variant="flush">
                             <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
@@ -76,6 +120,19 @@ export default withLayout(function Tables() {
                         </ListGroup>                   
                     </Card.Body>
                 </Card>
+                <Card className="ebf-card-summary ebf-card-summary-horizontal mt-3">
+                    <Card.Body>                            
+                        <ListGroup variant="flush">
+                            <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
+                            <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
+                            <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
+                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
+                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
+                        </ListGroup>                   
+                    </Card.Body>
+                </Card>
+
+
             </Col>            
         </Row>    
 
