@@ -150,4 +150,20 @@
   font-size: $h6-font-size;
 }
 
-//TODO - FLEX CENTERING OF INDEPENDENT ELEMENTS 
+//FLEX CENTERING OF INDEPENDENT ELEMENTS 
+
+
+.centering-div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:first-child > * {
+    margin-right: auto;
+  }
+
+  &:last-child > * {
+    margin-left: auto;
+  }
+}
