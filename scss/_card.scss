@@ -26,7 +26,7 @@
 }
 
 .card-hover {
-  transition: all .2s ease;
+  transition: $smooth-color-animation-slow;
 
   &:hover {
     transform: translateY(-4%);
@@ -62,10 +62,10 @@
   &.card-hover-effect {
     transition: $smooth-color-animation-slow;       
 
-    .ebf-card-icon,
+    .ebf-card-icon {transition: $smooth-color-animation-slow;}
     .card-title,
     .card-text {
-      transition: $smooth-color-animation;
+      transition: $smooth-color-animation .1s;
     }
 
     &:hover {
