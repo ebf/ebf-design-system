@@ -12,6 +12,8 @@ function Checkbox({ children, ...props }) {
     );
   }
 
+
+
 export default withLayout(function Tables() {
     return (
       <>
@@ -47,7 +49,7 @@ export default withLayout(function Tables() {
                     </Form.Control> 
                 </div>
             </header>
-            <div className="ebf-table-contents">
+            <div className="ebf-table-content">
                 <Table hover responsive>
                     <thead>
                         <tr>
@@ -331,7 +333,7 @@ export default withLayout(function Tables() {
             <header className="ebf-table-header">
                 <span className="ebf-table-headline">Table Header</span>
             </header>
-            <div className="ebf-table-contents">
+            <div className="ebf-table-content">
                 <Table hover responsive>
                     <thead>
                         <tr>

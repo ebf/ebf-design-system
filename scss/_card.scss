@@ -22,19 +22,22 @@
 }
 
 .card-body {
-  padding: $spacer*3 $spacer;
+  padding: $spacer*3 $spacer;  
 }
 
 .card-hover {
   transition: all .2s ease;
 
   &:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4%);
     box-shadow: $box-shadow;
+    border: 1px solid transparent;
   }
 }
 
 .ebf-card-select {
+
+  cursor: pointer;
   
   .ebf-card-icon {
     text-align: center;
@@ -42,11 +45,48 @@
     padding: $spacer;
     background-color: $blue;
     color: white;
-    border-radius: $spacer*2;
+    border-radius: $spacer*2;    
   }
 
   .card-text {
     color: $gray-800;
+    font-size: $font-size-sm;    
+  }
+  
+  &:hover {
+    .ebf-card-icon {
+      animation: heartbeat .3s ease-in-out both;
+    }
+  }
+
+  &.card-hover-effect {
+    transition: $smooth-color-animation-slow;   
+    
+
+    .ebf-card-icon,
+    .card-title,
+    .card-text {
+      transition: $smooth-color-animation;
+    }
+
+    &:hover {
+      background: $blue;
+      border: 1px solid $blue;
+      box-shadow: $box-shadow-dark;
+  
+      .ebf-card-icon {
+        background-color: white;
+        color: $blue;        
+      }
+  
+      .card-title {
+        color: white;
+      }
+  
+      .card-text {
+        color: white;
+      }
+    }
   }
 }
 

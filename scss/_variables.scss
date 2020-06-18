@@ -45,10 +45,10 @@ $gray-gradient: linear-gradient(0deg, rgba(242,243,247,1) 0%, rgba(255,255,255,1
 
 // Blues
 
-$blue:    #2494c5 !default;
+//$blue:    #2494c5 !default;
 
 //Telekom 
-//$blue:    #E30075 !default;
+$blue:    #E30075 !default;
 
 $blue-100: #e5f2f8 !default;
 $blue-200: #cae5f1 !default;
@@ -285,7 +285,7 @@ $love-color: $red !default;
 // Body
 
 $body-bg: $white !default;
-$body-color: $gray-900 !default;
+$body-color: $black !default;
 
 
 // Sections
@@ -369,15 +369,20 @@ $shape-height-lg:              1.5 !default;
 $shape-height-sm:              1.5 !default;
 
 $border-width:                .0625rem !default;
-$border-color:                $gray-400 !default;
+$border-color:                $gray-300 !default;
 
 $border-radius:               .25rem !default;
 $border-radius-xl:            .35rem !default;
 $border-radius-lg:            .3rem !default;
 $border-radius-sm:            .2rem !default;
 
+$box-shadow-inset-md:        inset 0 7px 15px rgba($black, .1), 0 5px 7px rgba($black, .07);
+
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075);
+$box-shadow-md:               0 4px 16px rgba($black, .1), 0 4px 8px rgba($black, .07);
+$box-shadow-md-primary:       0 2px 10px rgba($blue, .07), 0 -2px 10px rgba($blue, .07);
 $box-shadow:                  0 15px 35px rgba($black, .1), 0 5px 15px rgba($black, .07);
+$box-shadow-dark:                  0 15px 35px rgba($black, .3), 0 5px 15px rgba($black, .2);
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175);
 
 $component-active-color:        $white !default;
@@ -611,7 +616,7 @@ $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      0 0 0 transparent !default; // 0 1px 3px 0 $gray-400 !default;
 
 $input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              lighten($component-active-bg, 25%) !default;
+$input-focus-border-color:              $gray-500!default;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     0 !default;
 $input-focus-box-shadow:                0px 3px 6px #2494C529 !default; //0 1px 3px 0  !default;
@@ -899,7 +904,7 @@ $popover-arrow-outer-color:         transparent !default;
 
 // Badges
 
-$badge-font-size:                   65% !default;
+$badge-font-size:                   .688rem !default;
 $badge-font-weight:                 400 !default;
 $badge-padding-y:                   .25rem !default;
 $badge-padding-x:                   .5rem !default;
@@ -1055,6 +1060,7 @@ $footer-link-hover-color: $gray-700 !default;
 
 //
 $smooth-color-animation: all .2s cubic-bezier(0.600, 0.000, 0.120, 1);
+$smooth-color-animation-slow: all .5s cubic-bezier(0.600, 0.000, 0.120, 1);
 $smooth-scaling-animation: all .2s cubic-bezier(0.730, -0.235, 0.215, 1.280);
 $smooth-position-animation: all .2s cubic-bezier(1.000, 0.000, 0.000, 1.000);
 
@@ -1074,4 +1080,17 @@ $smooth-scaling-animation-dots: all .2s cubic-bezier(0.440, -0.480, 0.465, 1.515
       opacity: 0;     
   }
 }
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 

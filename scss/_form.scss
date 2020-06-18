@@ -17,22 +17,6 @@ fieldset {
   }
 }
 
-// Form Control
-
-
-
-.fc-alt {
-  box-shadow: $box-shadow-sm;
-  border-color: white;
-  transition: $smooth-color-animation;
-
-  &:focus {
-    box-shadow: $box-shadow;
-    border-color: white;
-  }
-}
-
-
 //Checkbox 
 
 
@@ -221,10 +205,35 @@ fieldset {
 
 .form-control {
   padding: $input-btn-padding-y;
+  transition: $smooth-color-animation-slow;
+  
+  &:focus {
+    border: 1px solid $blue;
+    box-shadow: $box-shadow-md-primary;
+  }
+
+  &::placeholder {
+    line-height:normal!important;
+  }
+
+  &::-webkit-input-placeholder {
+    line-height:normal!important;
+  }
 }
 
 .form-control-sm {
   padding: .25rem $input-btn-padding-y;
+}
+
+.fc-alt {
+  box-shadow: $box-shadow-sm;
+  border-color: white;
+  transition: $smooth-color-animation-slow;
+
+  &:focus {
+    box-shadow: $box-shadow-md;
+    border-color: white;
+  }
 }
 
 // Option Select Styling
