@@ -30,7 +30,7 @@
 
   &:hover {
     transform: translateY(-4%);
-    box-shadow: $box-shadow;
+    box-shadow: $box-shadow!important;
     border: 1px solid transparent;
   }
 }
@@ -60,8 +60,7 @@
   }
 
   &.card-hover-effect {
-    transition: $smooth-color-animation-slow;   
-    
+    transition: $smooth-color-animation-slow;       
 
     .ebf-card-icon,
     .card-title,
@@ -72,7 +71,7 @@
     &:hover {
       background: $blue;
       border: 1px solid $blue;
-      box-shadow: $box-shadow-dark;
+      box-shadow: $box-shadow-dark!important;
   
       .ebf-card-icon {
         background-color: white;
