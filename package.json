@@ -1,6 +1,5 @@
 {
   "name": "@ebf/design-system",
-  "private": true,
   "description": "Design System library of EBF GmbH",
   "version": "1.0.1",
   "author": "dev@ebf.com",
