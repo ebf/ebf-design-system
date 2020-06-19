@@ -13,7 +13,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Header from "./Header"
 import SideNav from "./SideNav"
 import Toc, { TocProvider } from './Toc';
-import "../styles/main.scss"
+import "../styles/main.scss";
 
 const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`

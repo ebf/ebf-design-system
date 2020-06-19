@@ -1,12 +1,13 @@
 import PropTypes from "prop-types"
 import React from "react"
+import { Link } from "gatsby"
 import { Nav, Navbar } from "react-bootstrap";
 import logo from '../images/logo.svg'
 
 const Header = ({ siteTitle }) => (
   <header className="header border-bottom">
     <Navbar collapseOnSelect expand="lg" bg="white" expand="lg">
-      <Navbar.Brand href="/">
+      <Link to="/" className="navbar-brand">
         <img
             src={logo}
             width="auto"
@@ -15,13 +16,13 @@ const Header = ({ siteTitle }) => (
             alt="Logo"
           />
         {siteTitle}
-      </Navbar.Brand>
+      </Link>
      
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />      
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/">Home</Nav.Link>  
-          <Nav.Link href="/components/alerts">Components</Nav.Link>
+          <Link className="nav-link" activeClassName="active" to="/">Home</Link>  
+          <Link className="nav-link" activeClassName="active" to="/components/alerts">Components</Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
