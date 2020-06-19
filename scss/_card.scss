@@ -43,7 +43,7 @@
     text-align: center;
     font-size: $font-size-xl;
     padding: $spacer;
-    background-color: $blue;
+    background-color: $primary;
     color: white;
     border-radius: $spacer*2;    
   }
@@ -69,13 +69,13 @@
     }
 
     &:hover {
-      background: $blue;
-      border: 1px solid $blue;
+      background: $primary;
+      border: 1px solid $primary;
       box-shadow: $box-shadow-dark!important;
   
       .ebf-card-icon {
         background-color: white;
-        color: $blue;        
+        color: $primary;        
       }
   
       .card-title {
@@ -111,7 +111,7 @@
         padding: $spacer / 2 0 ;
 
         &.eid-color {
-          color: $blue;
+          color: $primary;
         }
 
         span {
@@ -131,7 +131,7 @@
     right: auto;
     bottom: 0;
     left: 0;
-    background-color: $blue;
+    background-color: $primary;
   }
 
   &.ebf-card-summary-horizontal {

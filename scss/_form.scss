@@ -68,8 +68,8 @@ fieldset {
 
   input[type=checkbox]:checked + label {
     &:before {     
-      background: $blue;
-      border: 1px solid $blue;
+      background: $primary;
+      border: 1px solid $primary;
     }    
   }
 
@@ -122,8 +122,8 @@ fieldset {
 
   input[type=radio]:checked + label {
     &:before {     
-      background: $blue;
-      border: 1px solid $blue;
+      background: $primary;
+      border: 1px solid $primary;
     }    
   }
 
@@ -174,7 +174,7 @@ fieldset {
     }
 
     &::before {
-      border: 1px solid $blue;
+      border: 1px solid $primary;
     }
   }
 }
@@ -208,7 +208,7 @@ fieldset {
   transition: $smooth-color-animation-slow;
   
   &:focus {
-    border: 1px solid $blue;
+    border: 1px solid $primary;
     box-shadow: $box-shadow-md-primary;
   }
 
