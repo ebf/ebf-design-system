@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import classNames from 'classnames';
-import { Nav, Collapse, NavDropdown, Button } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 
 function NavSection({ heading, location: { pathname }, items, path }) {
-  let active = pathname.startsWith(path);
+  let active = pathname.startsWith(withPrefix(path));
   return (
     <>
       <Link
@@ -75,6 +75,7 @@ export default class SideNav extends React.Component {
   
   render() {
     const { location, className, ...props } = this.props;
+    console.log(location, __PATH_PREFIX__);
 
     const { collapsed } = this.state;
 
