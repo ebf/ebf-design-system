@@ -48,7 +48,7 @@
     "build:gatsby": "gatsby build",
     "build:sass": "npm run styles",
     "deploy": "npm run styles && gatsby build --prefix-paths && gh-pages -d public",
-    "styles": "node-sass scss/styles.scss --include-path node_modules -o dist --source-map true --output-style compressed",
+    "styles": "node-sass scss --include-path node_modules -o dist --source-map true --output-style compressed",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
