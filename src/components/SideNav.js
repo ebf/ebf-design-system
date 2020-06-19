@@ -75,7 +75,6 @@ export default class SideNav extends React.Component {
   
   render() {
     const { location, className, ...props } = this.props;
-    console.log(location, __PATH_PREFIX__);
 
     const { collapsed } = this.state;
 
