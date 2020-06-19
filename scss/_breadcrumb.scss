@@ -15,7 +15,7 @@
             &:before {
                 @extend %ebf;
                 content: '\ea3f';
-                color: $blue-900;
+                color: $primary-900;
                 font-size: $font-size-sm;
             }
         }
@@ -25,7 +25,7 @@
         }
 
         a {
-            color: $blue-900;            
+            color: $primary-900;            
         }
     }
 }

@@ -1,14 +1,10 @@
 // // Core
 
-@import "bootstrap/scss/functions";
-
-@import "variables";
-@import "bootstrap/scss/variables";
+//Themes
 
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/mixins/background-variant";
 @import "mixins.scss";
-
 
 // Bootstrap components
 
@@ -78,3 +74,5 @@
 
 // Ember
 @import "select";
+
+

@@ -42,6 +42,7 @@ const componentItems = [
   'buttons',
   'cards',
   'forms',
+  'footer',
   'modals',
   'navbar',
   'progress',
@@ -116,11 +117,7 @@ export default class SideNav extends React.Component {
             items={componentItems}
           />
 
-        </nav>
-
-        <footer>
-          <p>© {new Date().getFullYear()} <a href="https://www.ebf.com">EBF</a></p>
-        </footer>
+        </nav>       
       </div>
     );
 

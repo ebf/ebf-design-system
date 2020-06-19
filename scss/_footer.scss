@@ -1,9 +1,20 @@
+body {
+  margin-bottom: 52px;
+}
+
 .footer {
   background: $footer-bg;
   color: $footer-color;
   font-size: $footer-font-size;
-  padding: $footer-padding-y $footer-padding-x;
-  border-top: $footer-border-width $footer-border-color solid;
+  padding: $footer-padding-y 0;
+  
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 1;
+  height: 52px;
+    
+    
 
   a {
     color: $footer-link-color;
@@ -12,4 +23,16 @@
       color: $footer-link-hover-color;
     }
   }
+
+  .container {
+    position: relative;
+    width: auto;   
+    padding: 0;
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

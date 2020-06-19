@@ -1,0 +1,19 @@
+//EBF Theme
+
+$blue:    #2494c5 !default;
+
+$primary:    $blue !default;
+
+$primary-100: #e5f2f8 !default;
+$primary-200: #cae5f1 !default;
+$primary-300: #abd6e8 !default;
+$primary-400: #87c5df !default;
+$primary-500: #5cb0d3 !default;
+$primary-600: #187bab !default;   
+$primary-700: #1c759b !default;   
+$primary-800: #176180 !default;
+$primary-900: #10455b !default;
+
+@import "bootstrap/scss/functions";
+@import "../variables";
+@import "bootstrap/scss/variables";

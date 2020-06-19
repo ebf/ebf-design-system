@@ -12,10 +12,7 @@ const IndexPage = () => (
         <pre>
           <code>npm i @ebf/design-system</code>
         </pre>
-      </Col>
-      <Col xs={12}>
-        <button className="btn btn-primary">Docs</button>
-      </Col>
+      </Col> 
     </Row>
   </Container>
 )

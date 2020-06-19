@@ -1,12 +1,12 @@
 // override the location for the fonts directory
 $ebf-font-location: "../../scss/fonts";
-@import "../scss/styles";
+@import "../scss/ebf";
 
 
 .header {
   position: sticky;
   top: 0;
-  z-index: 1040;
+  z-index: 1040; 
 }
 
 .side-nav {
