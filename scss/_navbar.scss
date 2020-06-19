@@ -137,13 +137,13 @@
     }
   }
 
-  &:nth-last-child() {
-    padding-left: 0;
-  }
-
-  &:nth-last-child() {
-    padding-right: 0;
-  }
+  // TODO: FIX INVALID SCSS!!!
+  // &:nth-last-child() {
+  //   padding-left: 0;
+  // }
+  // &:nth-last-child() {
+  //   padding-right: 0;
+  // }
 }
 
 .navbar-subtitle {
