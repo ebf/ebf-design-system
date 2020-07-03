@@ -50,3 +50,11 @@
       padding: $alert-padding-y $alert-padding-x;
   }
 }
+
+.capitalize-text {
+  .heading {
+    .anchor {
+      text-transform: capitalize;
+    }
+  }
+}
