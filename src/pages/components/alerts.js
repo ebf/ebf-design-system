@@ -64,6 +64,8 @@ export default withLayout(function Alerts () {
           )
         })}
 
+        <hr></hr>
+
 
       <LinkedHeading h="2" id="links">Links</LinkedHeading>
       <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
