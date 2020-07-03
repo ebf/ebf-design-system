@@ -67,7 +67,7 @@ export default withLayout(function Alerts () {
         <hr></hr>
 
 
-      <LinkedHeading h="2" id="links">Links</LinkedHeading>
+      <LinkedHeading h="2" id="links">Links Alerts</LinkedHeading>
       <p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
 
       {ALERT_TYPES.map((value, idx) => (
@@ -83,7 +83,7 @@ export default withLayout(function Alerts () {
 
         return (
           <div className="mb-3 capitalize-text">
-            <LinkedHeading h="3" id={type + "-alert"} >{type} Alert</LinkedHeading>
+            <LinkedHeading h="3" id={type + "-linked-alert"} >{type} Alert</LinkedHeading>
             
             <Alert  variant={type}>
               <i className={'alert-icon ebf ' + icon}></i>
