@@ -97,12 +97,13 @@ export default withLayout(function Progress() {
         <div className="mb-3 copyblock-container">
             <div>
                 <h3>Code example</h3>
-                <p>To control the width of <code>.ebf-progress-bar</code> just append needed <code>.col-*</code> class </p>
+                <p>To control the width of <code>div.ebf-progress-bar</code> just append needed <code>.col-*</code> class </p>
+                <p><code>div.progress</code> should be controlled so the <code>aria-valuenow="*"</code> and <code>style="width: *%;</code> values are accordingly appended.</p>
             </div>
         
             <CopyBlock
             theme={github}
-            text={`<div class="ebf-progress-bar col-9">\n\t<div class="progress-bar-item-container">\n\t\t<a href="" class="progress-bar-item active">\n\t\t\t<span class="progress-label">Name</span>\n\t\t\t<span class="progress-dot"></span>\n\t\t</a>\n\t\t<a href="" class="progress-bar-item active current">\n\t\t\t<span class="progress-label">Source</span>\n\t\t\t<span class="progress-dot"></span>\n\t\t</a>\n\t\t<a href="" class="progress-bar-item">\n\t\t\t<span class="progress-label">Target</span>\n\t\t\t<span class="progress-dot"></span>\n\t\t</a>\n\t\t<a href="" class="progress-bar-item">\n\t\t\t<span class="progress-label">Devices</span>\n\t\t\t<span class="progress-dot"></span>\n\t\t</a>\n\t\t<a href="" class="progress-bar-item">\n\t\t\t<span class="progress-label">Save</span>\n\t\t\t<span class="progress-dot"></span>\n\t\t</a>\n\t<div>\n\t<div class="progress">\n\t\t<div role="progressbar" class="progress-bar bg-primary" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>\n\t</div>\n</div>`}
+            text={`<div class="ebf-progress-bar col-9">\n\t<div class="progress-bar-item-container">\n\t\t<a href="" class="progress-bar-item active">\n\t\t\t<span class="progress-label">Name</span>\n\t\t\t<span class="progress-dot"></span>\n\t\t</a>\n\t\t<a href="" class="progress-bar-item active current">\n\t\t\t<span class="progress-label">Source</span>\n\t\t\t<span class="progress-dot"></span>\n\t\t</a>\n\t\t<a href="" class="progress-bar-item">\n\t\t\t<span class="progress-label">Target</span>\n\t\t\t<span class="progress-dot"></span>\n\t\t</a>\n\t\t<a href="" class="progress-bar-item">\n\t\t\t<span class="progress-label">Devices</span>\n\t\t\t<span class="progress-dot"></span>\n\t\t</a>\n\t\t<a href="" class="progress-bar-item">\n\t\t\t<span class="progress-label">Save</span>\n\t\t\t<span class="progress-dot"></span>\n\t\t</a>\n\t<div>\n\t<div class="progress">\n\t\t<div\n\t\t\trole="progressbar"\n\t\t\tclass="progress-bar bg-primary"\n\t\t\taria-valuenow="25"\n\t\t\taria-valuemin="0"\n\t\t\taria-valuemax="100"\n\t\t\tstyle="width: 25%;">\n\t\t<div>\n\t</div>\n</div>`}
             language="jsx"
             showLineNumbers
             wrapLines
