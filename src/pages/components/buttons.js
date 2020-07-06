@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { Row, Col } from 'react-bootstrap';
-import { CopyBlock, monoBlue } from 'react-code-blocks';
+import { CopyBlock, github } from 'react-code-blocks';
 
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -75,16 +75,17 @@ export default withLayout(function Buttons() {
         const variant = `${type}`;
 
         return (
-          <div className="mb-3">
+          <div className="mb-3 copyblock-container">
             <LinkedHeading h="3" id={label + "-button"}>{label} Button</LinkedHeading>
             <Button className="mb-4" variant={variant}>{label}</Button>
             <CopyBlock
-              theme={monoBlue}
+              theme={github}
               text={`<button type="button" class="btn btn-outline-${type}">\n\t${label}\n</button>`}
               language="jsx"
               showLineNumbers
               wrapLines
               codeBlock
+              className="copyblock"
             />
           </div>
         )
@@ -106,11 +107,11 @@ export default withLayout(function Buttons() {
         const variant = `outline-${type}`;
 
         return (
-          <div className="mb-3">
+          <div className="mb-3 copyblock-container">
             <LinkedHeading h="3" id={label + "-outline-button"}>{label} Outline Button</LinkedHeading>
             <Button className="mb-4" variant={variant}>{label}</Button>            
             <CopyBlock
-              theme={monoBlue}
+              theme={github}
               text={`<button type="button" class="btn btn-outline-${type}">\n\t${label}\n</button>`}
               language="jsx"
               showLineNumbers
@@ -140,11 +141,11 @@ export default withLayout(function Buttons() {
         const variant = `${type}`;
 
         return (
-          <div className="mb-3">
+          <div className="mb-3 copyblock-container">
             <LinkedHeading h="3" id={size + "Button"}>{label} Outline Button</LinkedHeading>
             <Button className="mb-4" size={size} variant={type}>{label}</Button>            
             <CopyBlock
-              theme={monoBlue}
+              theme={github}
               text={`<button type="button" class="btn btn-${type} btn-${size}">\n\t${label}\n</button>`}
               language="jsx"
               showLineNumbers
@@ -176,11 +177,11 @@ export default withLayout(function Buttons() {
         const variant = `${type}`;
 
         return (
-          <div className="mb-3">
+          <div className="mb-3 copyblock-container">
             <LinkedHeading h="3" id={block + "-button-markup"}>{label} Level Button Markup</LinkedHeading>
             <Button className="mb-4" block={block} variant={type}>{label}</Button>            
             <CopyBlock
-              theme={monoBlue}
+              theme={github}
               text={`<button type="button" class="btn btn-${type} btn-${block}">\n\t${label}\n</button>`}
               language="jsx"
               showLineNumbers
@@ -221,17 +222,18 @@ export default withLayout(function Buttons() {
 
       <LinkedHeading h="3" id="disabled-button-markup">Disabled Button Markup</LinkedHeading>
 
-      <Button className="mb-4" variant="primary" disabled>
-        Disabled Primary Button
-      </Button>
+      
       
       {BUTTON_DISABLED.map(({ type, state, label }) => {
         const variant = `${type}`;
 
         return (
-          <div className="mb-3">          
+          <div className="mb-3 copyblock-container">        
+            <Button className="mb-4" variant="primary" disabled>
+              Disabled Primary Button
+            </Button>  
             <CopyBlock
-              theme={monoBlue}
+              theme={github}
               text={`<button type="button" class="btn btn-${type}" ${state} >\n\t${label} Primary Button\n</button>`}
               language="jsx"
               showLineNumbers

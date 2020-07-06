@@ -50,13 +50,15 @@
 @import "breadcrumb.scss";
 @import "button.scss";
 @import "card.scss";
+@import "copyblock.scss";
+@import "custom-forms.scss";
 @import "display.scss";
 @import "dropdown.scss";
-@import "custom-forms.scss";
+@import "ebf-colors.scss";
+@import "ebf-icons.scss";
 @import "footer.scss";
 @import "form.scss";
 @import "icons.scss";
-@import "ebf-icons.scss";
 @import "loaders.scss";
 @import "modal.scss";
 @import "navs.scss";
@@ -70,7 +72,6 @@
 @import "tables.scss";
 @import "utilities.scss";
 @import "variables.scss";
-@import "ebf-colors.scss";
 
 // Ember
 @import "select";

@@ -2,6 +2,7 @@ import React from 'react';
 import { Badge, Button } from 'react-bootstrap';
 
 import LinkedHeading from '../../components/LinkedHeading';
+import { CopyBlock, github } from 'react-code-blocks';
 import withLayout from "../../with-layout"
 
 const TYPES = [
@@ -43,12 +44,50 @@ export default withLayout(function Badges() {
         </h6>
       </div>
 
+      <br/>
+      <div className="copyblock-container">
+        <div>
+          <h3>Code example</h3>
+        </div>
+       
+        <CopyBlock
+          theme={github}
+          text={`<h1>\n\tExample Heading <span class="badge badge-primary">New</span> \n</h1>`}
+          language="jsx"
+          showLineNumbers
+          wrapLines
+          codeBlock
+        />
+      </div>
+      <br/>
+      <br/>
+      
+      <h2>Badges as counters</h2>
       <p className="lead">Badges can be used as part of links or buttons to provide a counter.</p>
 
       <Button variant="primary" className="mb-4">
         Profile <Badge className="badge-round-element"  variant="white">99+</Badge>
         <span className="sr-only">unread messages</span>
       </Button>
+
+      <br/>
+      <br/>
+      <div className="copyblock-container">
+        <div>
+          <h3>Code example</h3>
+        </div>
+       
+        <CopyBlock
+          theme={github}
+          text={`<button type="button" class="btn btn-primary">\n\tProfile\n\t<span class="badge-round-element badge badge-white">99+</span>\n\t<span class="sr-only">unread messages</span> \n</button>`}
+          language="jsx"
+          showLineNumbers
+          wrapLines
+          codeBlock
+        />
+      </div>
+      <br/>
+      <br/>
 
 
       <p>
@@ -64,6 +103,26 @@ export default withLayout(function Badges() {
       {TYPES.map((variant, idx) => (
         <Badge variant={variant}>{variant}</Badge>
       ))}
+      
+      <br/>
+      <br/>
+      <div className="copyblock-container">
+        <div>
+          <h3>Code example</h3>
+        </div>
+       
+        <CopyBlock
+          theme={github}
+          text={`<span class="badge badge-primary">primary</span>`}
+          language="jsx"
+          showLineNumbers
+          wrapLines
+          codeBlock
+        />
+      </div>
+      <br/>
+      <br/>
+     
 
       <LinkedHeading h="2" id="pill">Pill</LinkedHeading>
       <p>Use the <code>.badge-pill</code> modifier class to make badges more rounded (with a larger border-radius and additional horizontal padding).</p>
@@ -71,6 +130,25 @@ export default withLayout(function Badges() {
       {TYPES.map((variant, idx) => (
         <Badge pill variant={variant}>{variant}</Badge>
       ))}
+
+      <br/>
+      <br/>
+      <div className="copyblock-container">
+        <div>
+          <h3>Code example</h3>
+        </div>
+       
+        <CopyBlock
+          theme={github}
+          text={`<span class="badge badge-pill badge-primary">primary</span>`}
+          language="jsx"
+          showLineNumbers
+          wrapLines
+          codeBlock
+        />  
+      </div>
+      <br/>
+      
     </>
   )
 });
