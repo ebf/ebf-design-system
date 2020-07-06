@@ -93,7 +93,7 @@ export default withLayout(function Buttons() {
 
       <br/>
       <br/>
-      <br/>
+
 
       <LinkedHeading h="2" id="outline-buttons">Outline buttons</LinkedHeading>
       <p>For a lighter touch, Buttons also come in outline-* variants with no background color.</p>
@@ -124,7 +124,7 @@ export default withLayout(function Buttons() {
 
       <br/>
       <br/>
-      <br/>
+
 
       <LinkedHeading h="2" id="button-sizes">Sizes</LinkedHeading>
 
@@ -158,7 +158,7 @@ export default withLayout(function Buttons() {
 
       <br/>
       <br/>
-      <br/>
+
      
 
 
@@ -194,7 +194,7 @@ export default withLayout(function Buttons() {
 
       <br/>
       <br/>
-      <br/>
+
       
       <LinkedHeading h="2" id="button-states">Button states</LinkedHeading>
 

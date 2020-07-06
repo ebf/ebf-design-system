@@ -45,7 +45,8 @@ export default withLayout(function Badges() {
       </div>
 
       <br/>
-      <div className="copyblock-container">
+
+      <div className="mb-3 copyblock-container">
         <div>
           <h3>Code example</h3>
         </div>
@@ -59,20 +60,21 @@ export default withLayout(function Badges() {
           codeBlock
         />
       </div>
+
       <br/>
-      <br/>
-      
-      <h2>Badges as counters</h2>
+            
+
+      <LinkedHeading h="2" id="badges-as-counters">Badges as counters</LinkedHeading>
       <p className="lead">Badges can be used as part of links or buttons to provide a counter.</p>
 
       <Button variant="primary" className="mb-4">
         Profile <Badge className="badge-round-element"  variant="white">99+</Badge>
         <span className="sr-only">unread messages</span>
       </Button>
+      
+      <br/>
 
-      <br/>
-      <br/>
-      <div className="copyblock-container">
+      <div className="mb-3 copyblock-container">
         <div>
           <h3>Code example</h3>
         </div>
@@ -86,9 +88,8 @@ export default withLayout(function Badges() {
           codeBlock
         />
       </div>
-      <br/>
-      <br/>
 
+      <br/>
 
       <p>
         Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies.
@@ -96,6 +97,8 @@ export default withLayout(function Badges() {
         Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.
         Unless the context is clear, consider including additional context with a visually hidden piece of additional text.  
       </p>
+
+      <br/>
 
       <LinkedHeading h="2" id="contextual-variations">Contextual variations</LinkedHeading>
       <p>Add any of the below mentioned modifier classes to change the appearance of a badge.</p>
@@ -105,8 +108,8 @@ export default withLayout(function Badges() {
       ))}
       
       <br/>
-      <br/>
-      <div className="copyblock-container">
+      
+      <div className="mb-3 copyblock-container">
         <div>
           <h3>Code example</h3>
         </div>
@@ -120,9 +123,8 @@ export default withLayout(function Badges() {
           codeBlock
         />
       </div>
-      <br/>
-      <br/>
-     
+
+      <br/>    
 
       <LinkedHeading h="2" id="pill">Pill</LinkedHeading>
       <p>Use the <code>.badge-pill</code> modifier class to make badges more rounded (with a larger border-radius and additional horizontal padding).</p>
@@ -132,8 +134,8 @@ export default withLayout(function Badges() {
       ))}
 
       <br/>
-      <br/>
-      <div className="copyblock-container">
+
+      <div className="mb-3 copyblock-container">
         <div>
           <h3>Code example</h3>
         </div>
@@ -147,7 +149,6 @@ export default withLayout(function Badges() {
           codeBlock
         />  
       </div>
-      <br/>
       
     </>
   )
