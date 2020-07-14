@@ -5,6 +5,18 @@
   color: $black;
 }
 
+.form-inline {
+  .form-group {
+    label {
+      padding-right: $spacer / 2;
+    }
+
+    input {
+      margin-right: $spacer;
+    }
+  }
+}
+
 fieldset {
   margin-top: $spacer / 2;
   margin-bottom: $spacer / 2;

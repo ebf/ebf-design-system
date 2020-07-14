@@ -119,7 +119,7 @@ const Swatch = ({ color, hex }) => (
   </div>
 );
 
-export default withLayout(function LinksPage() {
+export default withLayout(function ColorsPage() {
   return (
     <>
       
@@ -135,7 +135,7 @@ export default withLayout(function LinksPage() {
       <Row className="swatch-container">
         {GRAYS.map(color => (
           <Col xs={4} md={3} lg={2}>
-            <Swatch {...color} />
+            <Swatch {...color}/>            
           </Col>
         ))}
       </Row>

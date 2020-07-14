@@ -1,0 +1,50 @@
+/* Scrollable Nav Component styles */
+.scrollable-nav {
+  .list-group-item {
+    @include hover-focus {  
+      background-color: $scrollable-nav-link-hover-bg;
+    }
+  }
+
+  .list-group-item.active {
+      background-color: $scrollable-nav-link-active-bg;
+      border-color: $list-group-border-color;
+      color: $scrollable-nav-link-active-color;
+
+      @include hover-focus {  
+          background-color: $scrollable-nav-link-hover-bg;
+      }
+  }
+}
+
+
+
+.side-nav {
+  left: 0!important;
+
+  .sidebar-toggler {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999;   
+
+    .btn {
+      padding: .25rem;
+      background-color: $primary;
+      color: white;
+    }
+  }
+
+  
+  &.closed-sidebar {
+    position: fixed!important;
+    left: -100%!important;    
+
+    .sidebar-toggler {
+      position: fixed;
+      left: 0rem;
+      top: 4.5rem;
+    }
+  }
+ 
+}

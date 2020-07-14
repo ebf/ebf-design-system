@@ -93,6 +93,22 @@ $ebf-font-location: "../../scss/fonts";
   }
 }
 
+.border-radius {
+  border-radius: $border-radius;
+}
+
+.border-radius-xl {
+  border-radius: $border-radius-xl;
+}
+
+.border-radius-lg {
+  border-radius: $border-radius-lg;
+}
+
+.border-radius-sm {
+  border-radius: $border-radius-sm;
+}
+
 pre {
   margin-bottom: 0;
 }

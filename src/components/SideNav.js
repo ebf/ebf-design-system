@@ -16,7 +16,7 @@ function NavSection({ heading, location: { pathname }, items, path }) {
       </Link>
 
       {items && active && (
-        <Nav activeKey={pathname} onSelect={() => {}} className="d-block ml-4">
+        <Nav activeKey={pathname} onSelect={() => {}} className="d-block ml-4 nav-dots vertical-nav">
           {items.map(name => (
             <Nav.Item key={`${path}/${name}/`}>
               <Link className="nav-link" activeClassName='active' to={`${path}/${name}/`}>
@@ -45,6 +45,7 @@ const componentItems = [
   'footer',
   'modals',
   'navbar',
+  'navs',
   'progress',
   'spinners',
   'tables',

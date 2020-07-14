@@ -42,6 +42,18 @@ export default withLayout(function Tables() {
                 </Card.Body>
             </Card>
         </CardDeck>
+        <CardDeck>            
+            <Card className="ebf-card-select card-hover text-center">
+                <Card.Body>
+                    <i className="ebf ebf-apps ebf-card-icon mb-2"></i>
+                    <Card.Link href="#"><Card.Title className="mb-1">Card Title</Card.Title></Card.Link>             
+                    <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
+                    </Card.Text> 
+                </Card.Body>
+            </Card>
+        </CardDeck>
 
         <div className="mb-3 copyblock-container">
             <div>
@@ -152,11 +164,16 @@ export default withLayout(function Tables() {
                 <Card className="ebf-card-summary ebf-card-summary-horizontal mt-3">
                     <Card.Body>                            
                         <ListGroup variant="flush">
-                            <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
-                            <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>
-                            <ListGroup.Item><span>Kartenprofil:</span> 39728346-2</ListGroup.Item>
-                            <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
-                            <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
+                            <ListGroup variant="flush" className="summary-horizontal-container name-mail-container">                           
+                                <ListGroup.Item><span>Besitzer:</span> Carole Rosario</ListGroup.Item>
+                                <ListGroup.Item><span>eMail:</span> carolerosario@ebf.com</ListGroup.Item>   
+                            </ListGroup>
+                                                  
+                            <ListGroup variant="flush" className="summary-horizontal-container">
+                                <ListGroup.Item><span>Kartenprofil:</span> 000001-3972834-2</ListGroup.Item>
+                                <ListGroup.Item><span>Telefonnummer:</span> +49-175-5558-994</ListGroup.Item>
+                                <ListGroup.Item className="eid-color"><span>EID:</span> 984654</ListGroup.Item>
+                            </ListGroup>
                         </ListGroup>                   
                     </Card.Body>
                 </Card>

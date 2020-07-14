@@ -7,8 +7,7 @@ body {
   color: $footer-color;
   font-size: $footer-font-size;
   padding: $footer-padding-y 0;
-  
-  position: absolute;
+  position: sticky;
   bottom: 0;
   width: 100%;
   line-height: 1;

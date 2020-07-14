@@ -46,10 +46,15 @@
     }
 
     button + div,
+    form + div,
     div + div {
         box-shadow: $box-shadow-inset-sm;
+        background-color: $gray-100;
     }
-    
+
+    .shadow-none {
+        background-color: transparent;
+    }    
 }
 
 .react-syntax-highlighter-line-number {

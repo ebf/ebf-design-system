@@ -1,55 +1,116 @@
-/* Scrollable Nav Component styles */
-.scrollable-nav {
-  .list-group-item {
-    @include hover-focus {  
-      background-color: $scrollable-nav-link-hover-bg;
-    }
-  }
+//Navs 
 
-  .list-group-item.active {
-      background-color: $scrollable-nav-link-active-bg;
-      border-color: $list-group-border-color;
-      color: $scrollable-nav-link-active-color;
+.nav-dots {
+  margin-bottom: $spacer;
 
-      @include hover-focus {  
-          background-color: $scrollable-nav-link-hover-bg;
+  .nav-item {
+
+    .nav-link {
+      color: $nav-link-color;  
+      transition: $smooth-color-animation;       
+      position: relative;   
+      
+
+      &::after {
+        content: '';
+        display: block;
+        background: $blue;
+        width: $spacer / 2;
+        height: $spacer / 2;
+        border-radius: $spacer / 2;
+        margin: 0 auto;
+        position: relative;
+        bottom: -2px;
+        transition: $smooth-scaling-animation-dots;
+        transform-origin: center;
+        transform: scale(0);
       }
+
+      &:hover {
+        color: $primary;
+        
+      }
+
+      &.active {
+        color: $nav-link-active-color;        
+
+        &::after {
+          transform: scale(1);
+        }
+      }
+
+      &.disabled {
+        color: $nav-link-disabled-color;
+        pointer-events: none;
+      }
+    }
   }
 }
 
+.vertical-nav {
+  .nav-item {
+    .nav-link {
 
-.aside {
-  a {
-    color: $gray-700;
+      &::after {        
+        margin: 0;
+        bottom: auto;
+        position: absolute;
+        left: 0;
+        bottom: .875rem;
+      }
+
+      &.active {        
+        &::after {
+          transform: scale(1);
+        }
+      }
+    }
   }
 }
 
-.side-nav {
-  left: 0!important;
+.nav-tabs {
+  .nav-item {
+    i {
+      margin-right: $spacer / 4;
+    }
+    .nav-link {
+      color: $nav-link-color;
+      transition: $smooth-color-animation;
 
-  .sidebar-toggler {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 9999;   
+      &::after {
+        content: none;
+      }
 
-    .btn {
-      padding: .25rem;
-      background-color: $primary;
-      color: white;
+      &.disabled {
+        color: $nav-link-disabled-color;
+      }
+
+      &.active {
+        color: $nav-link-active-color;
+      }
     }
   }
+}
 
-  
-  &.closed-sidebar {
-    position: fixed!important;
-    left: -100%!important;    
+.nav-pills {
+  .nav-item {
+    .nav-link {      
+      color: $nav-link-color;
+      transition: $smooth-color-animation;
+      padding: $input-btn-padding-y $input-btn-padding-x;
+      line-height: 1;
 
-    .sidebar-toggler {
-      position: fixed;
-      left: 0rem;
-      top: 4.5rem;
+      &::after {
+        content: none;
+      }
+
+      &.disabled {
+        color: $nav-link-disabled-color;
+      }
+
+      &.active {
+        color: white;
+      }
     }
   }
- 
 }

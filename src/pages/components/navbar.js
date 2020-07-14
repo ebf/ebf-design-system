@@ -424,6 +424,7 @@ export default withLayout(function NavbarBrand() {
 			</InputGroup>
 		</Navbar.Collapse>
 	</Navbar>
+	
     </>
   )
 });

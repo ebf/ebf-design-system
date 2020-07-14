@@ -32,8 +32,8 @@ $gray-300: #e3e6ec !default;
 $gray-400: #d4d9e2 !default;
 $gray-500: #c6ccd7 !default;   // Line footer color
 $gray-600: #aeb8c6 !default;
-$gray-700: #afb8c7 !default;   // Line p color
-$gray-800: #97a3b5 !default;   // Line heading color
+$gray-700: #97a3b5 !default;   // Line p color
+$gray-800: #7f8fa4 !default;   // Line heading color
 $gray-900: #55677b !default;
 $black:    #2b3e51 !default;
 
@@ -733,8 +733,8 @@ $dropdown-item-padding-x:           1.5rem !default;
 
 // Navs
 
-$nav-link-padding-y:                .25rem !default;
-$nav-link-padding-x:                .75rem !default;
+$nav-link-padding-y:                .5rem !default;
+$nav-link-padding-x:                1rem !default;
 $nav-link-color:                    $gray-700 !default;
 $nav-link-active-color:             $primary-900 !default;
 $nav-link-disabled-color:           $gray-400 !default;
