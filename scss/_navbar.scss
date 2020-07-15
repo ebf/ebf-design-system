@@ -5,6 +5,7 @@
 
 .nav-link {
   font-size: .875rem;
+  transition: $smooth-color-animation;
 
   &.active {
     color: $black;

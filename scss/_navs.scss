@@ -89,6 +89,11 @@
         color: $nav-link-active-color;
       }
     }
+
+    .nav-link {
+      padding: $input-btn-padding-y $input-btn-padding-x;
+      line-height: 1;
+    }
   }
 }
 
