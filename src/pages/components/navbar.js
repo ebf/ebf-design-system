@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, ProgressBar} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, ProgressBar, Badge} from 'react-bootstrap';
 import {FormControl, InputGroup, Button} from 'react-bootstrap';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -166,8 +166,13 @@ export default withLayout(function NavbarBrand() {
 			</div>
 			<div className="centering-div">					
 				<Nav>
-					<Nav.Link href="#">Link</Nav.Link>
-					<Nav.Link href="#link">Link</Nav.Link>
+					<Nav.Item>
+						<Nav.Link href="#">Link</Nav.Link>
+						<Badge className="ebf-badge-notification" variant="danger"></Badge>
+					</Nav.Item>
+					<Nav.Item>
+						<Nav.Link href="#link">Link</Nav.Link>
+					</Nav.Item>
 				</Nav>
 			</div>
 		</Navbar>		

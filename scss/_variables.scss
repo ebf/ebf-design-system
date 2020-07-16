@@ -1075,6 +1075,20 @@ $smooth-scaling-animation-dots: all .2s cubic-bezier(0.440, -0.480, 0.465, 1.515
   }
 }
 
+@keyframes pulsate-animation-s {
+  0% {
+      transform: scale(0);
+      opacity: 0;
+  }
+  50% {      
+      opacity: .3;      
+  }
+  100% {
+      transform: scale(1.5);
+      opacity: 0;     
+  }
+}
+
 @keyframes heartbeat {
   0% {
     transform: scale(1);

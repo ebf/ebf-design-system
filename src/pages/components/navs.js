@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, ProgressBar} from 'react-bootstrap';
+import { Badge, Nav, NavDropdown, ProgressBar} from 'react-bootstrap';
 
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -14,7 +14,7 @@ export default withLayout(function Navs() {
 
     <Nav defaultActiveKey="#" className="nav-dots">
       <Nav.Item>
-        <Nav.Link href="#">Active</Nav.Link>
+        <Nav.Link href="#">Active</Nav.Link>        
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-1">Link</Nav.Link>
@@ -147,7 +147,9 @@ export default withLayout(function Navs() {
         <Nav.Link href="#">Active Link</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-1">Link</Nav.Link>
+        <Nav.Link eventKey="link-1">Link 
+        
+        </Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-2">Link</Nav.Link>

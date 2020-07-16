@@ -1,5 +1,9 @@
 //Navs 
 
+.nav-item {
+  position: relative;
+}
+
 .nav-dots {
   margin-bottom: $spacer;
 
@@ -77,6 +81,10 @@
       color: $nav-link-color;
       transition: $smooth-color-animation;
 
+      &:hover {
+        background: $gray-200;
+      }
+
       &::after {
         content: none;
       }
@@ -99,11 +107,16 @@
 
 .nav-pills {
   .nav-item {
-    .nav-link {      
+    .nav-link {    
+        
       color: $nav-link-color;
       transition: $smooth-color-animation;
       padding: $input-btn-padding-y $input-btn-padding-x;
       line-height: 1;
+
+      &:hover {
+        background: $gray-200;
+      }
 
       &::after {
         content: none;
@@ -117,5 +130,40 @@
         color: white;
       }
     }
+  }
+}
+
+
+// Badge 
+
+
+
+.ebf-badge-notification {
+  display: block!important;
+  width: $spacer / 2;
+  height: $spacer / 2;
+  border-radius: $spacer;    
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  padding: 0;
+
+  &:after {
+      content: '';                          
+      width: $spacer;
+      height: $spacer;
+      border-radius: $spacer;
+      display: block;
+      position: relative;
+      top: -4px;
+      right: 4px;
+      z-index: -1 !important;
+      background: inherit;                    
+      opacity: .2;
+      transform: scale(0);
+      transform-origin: center;
+      transition: $smooth-scaling-animation-dots;
+      animation: pulsate-animation-s 2.5s ease-in-out infinite both;
   }
 }
