@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Container, Row, Col } from 'react-bootstrap';
+import logo from '../images/logo.svg'
 
 import Header from "./Header"
 import SideNav from "./SideNav"
@@ -40,7 +41,30 @@ const Layout = ({ children, location }) => {
             </Col>
           </TocProvider>
         </Row>
+
+        
+        
       </Container>
+
+      <footer className="footer shadow doc-footer">
+          <div className="container footer-container">
+              <div className="centering-div">
+                  <span>© {new Date().getFullYear()} <a href="https://www.ebf.com">EBF</a></span>
+              </div>
+              <div className="centering-div">
+                  <img
+                      src={logo}
+                      width="auto"
+                      height="24"
+                      className="d-inline-block align-middle"
+                      alt="Logo"
+                  />
+              </div>
+              <div className="centering-div">
+                <span>v1.0.7</span>
+              </div>                
+          </div>
+        </footer>
     </main>
   )
 }
