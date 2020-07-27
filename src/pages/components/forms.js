@@ -364,21 +364,24 @@ export default withLayout(function FormsPage() {
          
       
       <div className="mb-4 copyblock-container">
-          <div className="shadow-none mt-4">
-              <h3>Code example</h3>               
-          </div>             
-        
-          <CopyBlock
-          theme={atomOneLight}
-          text={`<form>\n\t<div class="form-group">\n\t\t<label class="form-label" for="Form.ControlsText">Text</label>\n\t\t<input placeholder="Enter text" type="text" id="Form.ControlsText" class="form-control">\n\t</div>\n\t<div class="form-group">\n\t\t<label class="form-label" for="Form.ControlsEmail">Email address</label>\n\t\t<input placeholder="Enter email" type="email" id="Form.ControlsEmail" class="form-control">\n\t</div>\n\t<div class="form-group">\n\t\t<label class="form-label" for="Form.ControlsPassword">Password</label>\n\t\t<input type="password" id="Form.ControlsPassword" class="form-control">\n\t</div>\n\t<div class="form-group">\n\t\t<label class="form-label" for="Form.ControlsFile">File</label>\n\t\t<input type="file" id="Form.ControlsFile" class="form-control-file">\n\t\t<small class="form-text text-muted">Example block-level help text here.</small>\n\t</div>\n\t<div class="form-group">\n\t\t<div class="form-check">\n\t\t\t<input readonly="" type="checkbox" class="form-check-input" checked="">\n\t\t\t<label title="" class="form-check-label">Checkbox</label>\n\t\t</div>\n\t\t<div class="form-check">\n\t\t\t<input readonly="" type="radio" class="form-check-input" checked="">\n\t\t\t<label title="" class="form-check-label">Radio</label>\n\t\t</div>\n\t</div>\n</form>`}
-          language="jsx"
-          showLineNumbers
-          wrapLines
-          codeBlock
-          />
-        </div>
+        <div className="shadow-none mt-4">
+            <h3>Code example</h3>               
+        </div>             
+      
+        <CopyBlock
+        theme={atomOneLight}
+        text={`<form>\n\t<div class="form-group">\n\t\t<label class="form-label" for="Form.ControlsText">Text</label>\n\t\t<input placeholder="Enter text" type="text" id="Form.ControlsText" class="form-control">\n\t</div>\n\t<div class="form-group">\n\t\t<label class="form-label" for="Form.ControlsEmail">Email address</label>\n\t\t<input placeholder="Enter email" type="email" id="Form.ControlsEmail" class="form-control">\n\t</div>\n\t<div class="form-group">\n\t\t<label class="form-label" for="Form.ControlsPassword">Password</label>\n\t\t<input type="password" id="Form.ControlsPassword" class="form-control">\n\t</div>\n\t<div class="form-group">\n\t\t<label class="form-label" for="Form.ControlsFile">File</label>\n\t\t<input type="file" id="Form.ControlsFile" class="form-control-file">\n\t\t<small class="form-text text-muted">Example block-level help text here.</small>\n\t</div>\n\t<div class="form-group">\n\t\t<div class="form-check">\n\t\t\t<input readonly="" type="checkbox" class="form-check-input" checked="">\n\t\t\t<label title="" class="form-check-label">Checkbox</label>\n\t\t</div>\n\t\t<div class="form-check">\n\t\t\t<input readonly="" type="radio" class="form-check-input" checked="">\n\t\t\t<label title="" class="form-check-label">Radio</label>\n\t\t</div>\n\t</div>\n</form>`}
+        language="jsx"
+        showLineNumbers
+        wrapLines
+        codeBlock
+        />
+      </div>
 
-        <br/>      
+      <br/>    
+
+      <LinkedHeading h="2" id="form-controls">Checkboxes form controls</LinkedHeading>
+      
         
       <Form>
         <Form.Group>         

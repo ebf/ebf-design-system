@@ -104,6 +104,12 @@ export default class SideNav extends React.Component {
             path="/typography"
             location={location}           
           />
+
+          <NavSection
+            heading="Iconset"
+            path="/iconset"
+            location={location}           
+          />
            
           <NavSection
             heading="Layout"

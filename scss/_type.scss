@@ -23,3 +23,23 @@ h1, h2, h3, h4, h5, h6,
 .font-weight-extra-bold {
     font-weight: $font-weight-extra-bold;
 }
+
+
+.iconset-container {
+    text-align: center;
+  
+    i {
+      font-size: $font-size-base * 2.5;
+    }
+
+    input {
+        text-align: center;
+        
+
+        &:focus{
+            border-color: $gray-300;
+            box-shadow: none;
+        }
+    }
+  }
+  

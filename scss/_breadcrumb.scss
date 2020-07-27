@@ -14,7 +14,7 @@
         + .breadcrumb-item { 
             &:before {
                 @extend %ebf;
-                content: '\ea3f';
+                content: $ebf-chevron-right;
                 color: $primary-900;
                 font-size: $font-size-sm;
             }
