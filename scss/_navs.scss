@@ -31,8 +31,7 @@
       }
 
       &:hover {
-        color: $primary;
-        
+        color: $primary;        
       }
 
       &.active {
@@ -95,6 +94,10 @@
 
       &.active {
         color: $nav-link-active-color;
+
+        &:hover {
+          background: white;
+        }
       }
     }
 
@@ -128,6 +131,10 @@
 
       &.active {
         color: white;
+
+        &:hover {
+          background: $primary;
+        }
       }
     }
   }
