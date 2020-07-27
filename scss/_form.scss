@@ -62,7 +62,7 @@ fieldset {
     }
 
     &:after {
-      content: '\ea3c';
+      content: $ebf-check-ui;
       font-family: "ebf-iconset";
       font-size: .875rem;
       line-height: .875rem;      
