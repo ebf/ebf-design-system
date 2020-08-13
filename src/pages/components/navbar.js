@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, ProgressBar, Badge} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Dropdown, DropdownButton, ProgressBar, Badge, Container, Row, Col} from 'react-bootstrap';
 import {FormControl, InputGroup, Button} from 'react-bootstrap';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -18,6 +18,86 @@ export default withLayout(function NavbarBrand() {
 			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
+				
+
+				<Nav.Item>	
+						
+						<Dropdown role="menuitem" className="ebf-notif-dropdown" >
+							<Dropdown.Toggle 
+							alignRight
+							title="Dropdown right"
+							id="dropdown-menu-align-right"
+							variant="link"  className="nav-link">
+							
+								<i className="ebf ebf-bell font-size-lg">
+									<Badge className="ebf-badge-notification" variant="danger"></Badge>
+									
+								</i>	
+								Benachrichtigungen	
+							</Dropdown.Toggle>
+
+							<Dropdown.Menu>								
+								<Dropdown.Item eventKey="2">									
+									<Row>
+										<Col xs={2} className="d-flex justify-content-start align-items-center icon-notif">
+											<i className="ebf ebf-device-smartphone d-flex justify-content-center align-items-center"></i>
+										</Col>
+										<Col className="content-notif">
+											<span className="dropdown-title font-weight-bold">New phone order</span>
+											<p className="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+											<span className="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+										</Col>
+										<Col xs={1} className="dismiss-notif">
+											<i className="ebf ebf-plus"></i>
+										</Col>
+									</Row>									
+								</Dropdown.Item>
+
+								<Dropdown.Divider />
+
+								<Dropdown.Item eventKey="3">
+									<Row>
+										<Col xs={2} className="d-flex justify-content-start align-items-center icon-notif">
+											<i className="ebf ebf-apple d-flex justify-content-center align-items-center"></i>
+										</Col>
+										<Col className="content-notif">
+											<span className="dropdown-title font-weight-bold">New world order</span>
+											<p className="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+											<span className="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+										</Col>
+										<Col xs={1} className="dismiss-notif">
+											<i className="ebf ebf-plus"></i>
+										</Col>
+									</Row>									
+
+								</Dropdown.Item>
+								<Dropdown.Divider />
+								<Dropdown.Item eventKey="4">
+									<Row>
+										<Col xs={2} className="d-flex justify-content-start align-items-center icon-notif">
+											<i className="ebf ebf-grid-gap d-flex justify-content-center align-items-center"></i>
+										</Col>
+										<Col className="content-notif">
+											<span className="dropdown-title font-weight-bold">New world order</span>
+											<p className="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+											<span className="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+										</Col>
+										<Col xs={1} className="dismiss-notif">
+											<i className="ebf ebf-plus"></i>
+										</Col>
+									</Row>		
+								</Dropdown.Item>
+								<Dropdown.Divider />
+								<Dropdown.Item className="small font-weight-bold text-uppercase text-center">
+									Mark all as read
+								</Dropdown.Item>
+							</Dropdown.Menu>
+						</Dropdown>
+
+							
+					</Nav.Item>
+					
+				
 				<NavDropdown title="Dropdown" id="basic-nav-dropdown">
 					<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
 					<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -166,9 +246,77 @@ export default withLayout(function NavbarBrand() {
 			</div>
 			<div className="centering-div">					
 				<Nav>
-					<Nav.Item>
-						<Nav.Link href="#">Link</Nav.Link>
-						<Badge className="ebf-badge-notification" variant="danger"></Badge>
+					<Nav.Item>					
+						
+						<Dropdown role="menuitem" className="ebf-notif-dropdown" >
+							<Dropdown.Toggle variant="link" id="dropdown-basic" className="nav-link">
+							
+								<i className="ebf ebf-bell font-size-lg">
+									<Badge className="ebf-badge-notification" variant="danger"></Badge>
+									
+								</i>	
+								Benachrichtigungen	
+							</Dropdown.Toggle>
+
+							<Dropdown.Menu>								
+								<Dropdown.Item eventKey="2">									
+									<Row>
+										<Col xs={2} className="d-flex justify-content-start align-items-center icon-notif">
+											<i className="ebf ebf-device-smartphone d-flex justify-content-center align-items-center"></i>
+										</Col>
+										<Col className="content-notif">
+											<span className="dropdown-title font-weight-bold">New phone order</span>
+											<p className="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+											<span className="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+										</Col>
+										<Col xs={1} className="dismiss-notif">
+											<i className="ebf ebf-plus"></i>
+										</Col>
+									</Row>									
+								</Dropdown.Item>
+
+								<Dropdown.Divider />
+
+								<Dropdown.Item eventKey="3">
+									<Row>
+										<Col xs={2} className="d-flex justify-content-start align-items-center icon-notif">
+											<i className="ebf ebf-apple d-flex justify-content-center align-items-center"></i>
+										</Col>
+										<Col className="content-notif">
+											<span className="dropdown-title font-weight-bold">New world order</span>
+											<p className="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+											<span className="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+										</Col>
+										<Col xs={1} className="dismiss-notif">
+											<i className="ebf ebf-plus"></i>
+										</Col>
+									</Row>									
+
+								</Dropdown.Item>
+								<Dropdown.Divider />
+								<Dropdown.Item eventKey="4">
+									<Row>
+										<Col xs={2} className="d-flex justify-content-start align-items-center icon-notif">
+											<i className="ebf ebf-grid-gap d-flex justify-content-center align-items-center"></i>
+										</Col>
+										<Col className="content-notif">
+											<span className="dropdown-title font-weight-bold">New world order</span>
+											<p className="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+											<span className="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+										</Col>
+										<Col xs={1} className="dismiss-notif">
+											<i className="ebf ebf-plus"></i>
+										</Col>
+									</Row>		
+								</Dropdown.Item>
+								<Dropdown.Divider />
+								<Dropdown.Item className="small font-weight-bold text-uppercase text-center">
+									Mark all as read
+								</Dropdown.Item>
+							</Dropdown.Menu>
+						</Dropdown>
+
+							
 					</Nav.Item>
 					<Nav.Item>
 						<Nav.Link href="#link">Link</Nav.Link>

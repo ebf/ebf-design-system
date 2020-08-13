@@ -15,7 +15,7 @@
   padding: .5rem .625rem;
   border-radius: 1rem;
   color: $gray-900;
-  font-size: .75rem;
+  font-size: font-size-xs;
   box-shadow: $input-btn-focus-box-shadow;
   background-color: $black;
 }
@@ -38,4 +38,40 @@ h1, h2, h3, h4, h5, h6 {
   .badge {
     font-size: 65%;
   }
+}
+// Migration Progress Badge
+
+.progress-badge-title {
+  color: $black;
+  font-size: $font-size-sm;
+
+  &:first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.badge-circle {
+  font-size: 0;
+  width: $spacer;
+  height: $spacer;
+  border-radius: 50%;
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
+}
+
+.badge-uninformed {
+  background-color: $gray-300;
+}
+.badge-queued {
+  background-color: $secondary;
+}
+.badge-pending {
+  background-color: $warning;
+}
+.badge-failed {
+  background-color: $danger;
+}
+.badge-interrupted {
+  background: linear-gradient(90deg, $red 0%, $red 50%, $green 50%, $green 100%);
 }

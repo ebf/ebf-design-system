@@ -1,3 +1,7 @@
+// .navbar {
+//   z-index: 99999;
+// }
+
 .navbar-brand {
   padding: 0;
   margin-bottom: 0;
@@ -123,20 +127,13 @@
 
 
 #responsive-navbar-nav {
-  z-index: 999;
+  //z-index: 999;
   // background: white;
   // padding: 1rem;
   // margin: 0 -1rem;
 }
 
-.navbar-nav {
-  .nav-link {
-    i {
-      position: relative;
-      top: 2px;
-      font-size: 1.25rem;
-    }
-  }
+
 
   // TODO: FIX INVALID SCSS!!!
   // &:nth-last-child() {
@@ -145,7 +142,7 @@
   // &:nth-last-child() {
   //   padding-right: 0;
   // }
-}
+
 
 .navbar-subtitle {
   font-size: $h6-font-size;
@@ -166,5 +163,103 @@
 
   &:last-child > * {
     margin-left: auto;
+  }
+}
+
+
+
+// Dropdown
+
+.dropdown-menu {
+  //padding: 0;
+  //z-index: 999;
+}
+
+
+.navbar-nav {
+  .nav-link {
+    i {
+      position: relative;
+      top: 2px;
+      font-size: 1.25rem;
+      margin-right: $spacer / 2;
+    }
+  }
+}
+
+.ebf-notif-dropdown {
+  //padding: $btn-padding-y-sm  0;
+
+  .btn {
+    //padding: 0;
+    color: $gray-800;
+    line-height: 1.5;
+    border: 0;
+    align-self: center;
+    margin-right: 0!important;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $gray-900;
+      box-shadow: none!important;
+    }
+
+    &:not(.btn-link) {  
+      &:hover {
+        box-shadow: none;
+      }
+      
+      @include hover-focus {
+        transform: translateY(0px);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    min-width: 24rem;
+    max-width: 24rem;
+    float: left;
+    overflow: hidden;
+
+    .dropdown-item {
+      white-space: normal;
+
+      .icon-notif {
+        padding-right: 0;
+
+        i {
+          width: $spacer * 2.5;
+          height: $spacer * 2.5;
+          background: $primary-200;
+          border-radius: $spacer * 2;
+          color: $primary;
+          font-size: $font-size-lg;
+        }
+      }
+
+      .content-notif {
+        span {
+          display: block;
+        }
+        .dropdown-timestamp {
+          color: $gray-600;
+        }
+      }
+
+      .dismiss-notif {
+        i {
+          transform: rotate(45deg);
+        }
+      }
+
+      &.active {
+        .content-notif {
+          .dropdown-timestamp {
+            color: $primary-300;
+          }
+        }
+      }
+    }
   }
 }

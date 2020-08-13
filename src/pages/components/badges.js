@@ -16,6 +16,15 @@ const TYPES = [
   'dark',
 ];
 
+const PROGRESS = [
+  'uninformed',
+  'queued',
+  'pending',
+  'failed',
+  'interrupted',
+  'success',
+];
+
 export default withLayout(function Badges() {
   return (
     <>
@@ -103,7 +112,7 @@ export default withLayout(function Badges() {
       <LinkedHeading h="2" id="contextual-variations">Contextual variations</LinkedHeading>
       <p>Add any of the below mentioned modifier classes to change the appearance of a badge.</p>
 
-      {TYPES.map((variant, idx) => (
+      {TYPES.map((variant) => (
         <Badge variant={variant}>{variant}</Badge>
       ))}
       
@@ -129,7 +138,7 @@ export default withLayout(function Badges() {
       <LinkedHeading h="2" id="pill">Pill</LinkedHeading>
       <p>Use the <code>.badge-pill</code> modifier class to make badges more rounded (with a larger border-radius and additional horizontal padding).</p>
 
-      {TYPES.map((variant, idx) => (
+      {TYPES.map((variant) => (
         <Badge pill variant={variant}>{variant}</Badge>
       ))}
 
@@ -149,6 +158,20 @@ export default withLayout(function Badges() {
           codeBlock
         />  
       </div>
+
+      <br/>    
+
+      <LinkedHeading h="2" id="progress-pill">Progress Badge</LinkedHeading>
+      <p>Use the <code>.badge-circle</code> modifier class to make badges rounded. These are specifically used for tracking process statuses.</p>
+
+      {PROGRESS.map((variant) => (
+        <div>
+          <Badge variant={variant} className="badge-circle">{variant}</Badge>
+          <span className="progress-badge-title">{variant}</span>
+        </div>
+      ))}
+
+      <br/>
       
     </>
   )

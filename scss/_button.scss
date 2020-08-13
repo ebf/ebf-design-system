@@ -10,7 +10,7 @@
       @include box-shadow($btn-hover-box-shadow);
     }
     
-    @include hover-focus {
+    @include hover {
       transform: translateY(-2px);
     }
   }
