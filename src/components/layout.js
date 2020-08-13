@@ -61,7 +61,7 @@ const Layout = ({ children, location }) => {
                   />
               </div>
               <div className="centering-div">
-                <span>v1.0.7</span>
+                <span>v1.0.8</span>
               </div>                
           </div>
         </footer>
