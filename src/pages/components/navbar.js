@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Dropdown, DropdownButton, ProgressBar, Badge, Container, Row, Col} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Dropdown, ProgressBar, Badge, Container, Row, Col} from 'react-bootstrap';
 import {FormControl, InputGroup, Button} from 'react-bootstrap';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -18,16 +18,12 @@ export default withLayout(function NavbarBrand() {
 			<Nav>
 				<Nav.Link href="#">Home</Nav.Link>
 				<Nav.Link href="#link">Link</Nav.Link>
-				
 
-				<Nav.Item>	
+				<Nav.Item>					
 						
 						<Dropdown role="menuitem" className="ebf-notif-dropdown" >
 							<Dropdown.Toggle 
-							alignRight
-							title="Dropdown right"
-							id="dropdown-menu-align-right"
-							variant="link"  className="nav-link">
+							variant="link" id="dropdown-basic" className="nav-link">
 							
 								<i className="ebf ebf-bell font-size-lg">
 									<Badge className="ebf-badge-notification" variant="danger"></Badge>
