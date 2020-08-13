@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[19],{RXBc:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),c=t("7vrA"),r=t("3Z9Z"),s=t("JI6e"),u=t("Z/SS");n.default=Object(u.a)((function(){return l.a.createElement(c.a,null,l.a.createElement(r.a,null,l.a.createElement(s.a,{xs:12},l.a.createElement("h1",null,"EBF Design System"),l.a.createElement("p",null,"Usage:"),l.a.createElement("pre",null,l.a.createElement("code",null,"npm i @ebf/design-system")))))}),{title:"Home"})}}]);
+//# sourceMappingURL=component---src-pages-index-js-e18c9746ea690256c68a.js.map
