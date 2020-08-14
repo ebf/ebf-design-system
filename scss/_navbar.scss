@@ -171,8 +171,12 @@
 // Dropdown
 
 .dropdown-menu {
-  //padding: 0;
+  padding: 0;
   //z-index: 999;
+}
+
+.dropdown-divider {
+  margin: 0;
 }
 
 
@@ -224,6 +228,7 @@
 
     .dropdown-item {
       white-space: normal;
+      padding: $input-btn-padding-y $input-btn-padding-x;
 
       .icon-notif {
         padding-right: 0;
@@ -248,6 +253,8 @@
       }
 
       .dismiss-notif {
+        padding: 0;
+        text-align: center;
         i {
           transform: rotate(45deg);
         }
