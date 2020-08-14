@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Dropdown, ProgressBar, Badge, Container, Row, Col} from 'react-bootstrap';
+import { CopyBlock, github } from 'react-code-blocks';
 import {FormControl, InputGroup, Button} from 'react-bootstrap';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -64,10 +65,11 @@ export default withLayout(function NavbarBrand() {
 										<Col xs={1} className="dismiss-notif">
 											<i className="ebf ebf-plus"></i>
 										</Col>
-									</Row>									
-
+									</Row>
 								</Dropdown.Item>
+
 								<Dropdown.Divider />
+
 								<Dropdown.Item eventKey="4">
 									<Row>
 										<Col xs={2} className="d-flex justify-content-start align-items-center icon-notif">
@@ -89,11 +91,7 @@ export default withLayout(function NavbarBrand() {
 								</Dropdown.Item>
 							</Dropdown.Menu>
 						</Dropdown>
-
-							
 					</Nav.Item>
-					
-				
 				<NavDropdown title="Dropdown" id="basic-nav-dropdown">
 					<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
 					<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -105,6 +103,99 @@ export default withLayout(function NavbarBrand() {
 			</Nav>
 		</Navbar.Collapse>
 	</Navbar>
+
+  <br />
+
+	<div className="mb-3 copyblock-container">
+		<div>
+			<h3>Code example</h3>
+		</div>
+	
+		<CopyBlock
+		theme={github}
+		text={`<nav class="border-bottom justify-content-between navbar navbar-expand-lg navbar-light bg-white">
+  <a href="#" class="navbar-brand">EBF GmbH</a>
+  <button aria-controls="responsive-navbar-nav" type="button" aria-label="Toggle navigation" class="navbar-toggler collapsed">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="justify-content-end navbar-collapse collapse" id="responsive-navbar-nav">
+      <div class="navbar-nav">
+        <a href="#" data-rb-event-key="#" class="nav-link" role="button">Home</a>
+        <a href="#link" data-rb-event-key="#link" class="nav-link">Link</a>
+        <div class="nav-item">
+            <div role="menuitem" class="ebf-notif-dropdown dropdown">
+              <button aria-haspopup="true" aria-expanded="false" id="dropdown-basic" type="button" class="nav-link dropdown-toggle btn btn-link">
+                  <i class="ebf ebf-bell font-size-lg">
+                    <span class="ebf-badge-notification badge badge-danger"></span>
+                  </i>Benachrichtigungen
+              </button>
+              <div aria-labelledby="dropdown-basic" class="dropdown-menu">
+                  <a href="#" class="dropdown-item" role="button">
+                    <div class="row">
+                        <div class="d-flex justify-content-start align-items-center icon-notif col-2">
+                          <i class="ebf ebf-device-smartphone d-flex justify-content-center align-items-center"></i>
+                        </div>
+                        <div class="content-notif col">
+                          <span class="dropdown-title font-weight-bold">New phone order</span>
+                          <p class="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+                          <span class="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+                        </div>
+                        <div class="dismiss-notif col-1"><i class="ebf ebf-plus"></i></div>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider" role="separator"></div>
+                  <a href="#" class="dropdown-item" role="button">
+                    <div class="row">
+                        <div class="d-flex justify-content-start align-items-center icon-notif col-2">
+                          <i class="ebf ebf-apple d-flex justify-content-center align-items-center"></i>
+                        </div>
+                        <div class="content-notif col">
+                          <span class="dropdown-title font-weight-bold">New world order</span>
+                          <p class="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+                          <span class="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+                        </div>
+                        <div class="dismiss-notif col-1"><i class="ebf ebf-plus"></i></div>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider" role="separator"></div>
+                  <a href="#" class="dropdown-item" role="button">
+                    <div class="row">
+                        <div class="d-flex justify-content-start align-items-center icon-notif col-2">
+                          <i class="ebf ebf-grid-gap d-flex justify-content-center align-items-center"></i>
+                        </div>
+                        <div class="content-notif col">
+                          <span class="dropdown-title font-weight-bold">New world order</span>
+                          <p class="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+                          <span class="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+                        </div>
+                        <div class="dismiss-notif col-1"><i class="ebf ebf-plus"></i></div>
+                    </div>
+                  </a>
+                  <div class="dropdown-divider" role="separator"></div>
+                  <a href="#" class="clear-all-notif small font-weight-bold text-uppercase text-center dropdown-item" role="button">Mark all as read</a>
+              </div>
+            </div>
+        </div>
+        <div class="dropdown nav-item">
+            <a aria-haspopup="true" aria-expanded="false" href="#" class="dropdown-toggle nav-link" role="button">Dropdown</a>
+            <div aria-labelledby="" class="dropdown-menu">
+              <a href="#action/3.1" class="dropdown-item active">Action</a>
+              <a href="#action/3.2" class="dropdown-item">Another action</a>
+              <a href="#action/3.3" class="dropdown-item">Something</a>
+              <div class="dropdown-divider" role="separator"></div>
+              <a href="#action/3.4" class="dropdown-item">Separated link</a>
+            </div>
+        </div>
+        <a href="#disabled" data-rb-event-key="#disabled" class="nav-link disabled" tabindex="-1" aria-disabled="true">Disabled</a>
+      </div>
+  </div>
+</nav>`}
+		language="jsx"
+		showLineNumbers
+		wrapLines
+		codeBlock
+		/>
+	</div>
 
 	<br />
 
