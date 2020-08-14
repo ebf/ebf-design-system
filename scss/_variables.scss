@@ -1092,6 +1092,31 @@ $smooth-scaling-animation-dots: all .2s cubic-bezier(0.440, -0.480, 0.465, 1.515
   }
 }
 
+@keyframes heartbeat-hold {
+  0% {
+    //transform: scale(1);
+    transform: translateX(0);
+  }
+
+  100% {
+    //transform: scale(0.99);
+    transform: translateX(2%);
+  }
+}
+
+@keyframes heartbeat-reverse {
+  0% {
+    //transform: scale(.99);
+    transform: translateX(2%);
+  }
+  
+  100% {
+    //transform: scale(1);
+    transform: translateX(0);
+  }
+}
+
+
 @keyframes fade-out-top {
   0% {
     transform: translateY(0); 

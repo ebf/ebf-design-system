@@ -84,7 +84,7 @@ export default withLayout(function NavbarBrand() {
 									</Row>		
 								</Dropdown.Item>
 								<Dropdown.Divider />
-								<Dropdown.Item className="small font-weight-bold text-uppercase text-center">
+								<Dropdown.Item className="clear-all-notif small font-weight-bold text-uppercase text-center">
 									Mark all as read
 								</Dropdown.Item>
 							</Dropdown.Menu>
