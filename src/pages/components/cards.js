@@ -195,6 +195,57 @@ export default withLayout(function Tables() {
             />
         </div>
 
+        <LinkedHeading h="2" id="cards-option">Cards Option</LinkedHeading>
+
+        <CardDeck>
+          <Card className="ebf-card-select ebf-card-option mt-3">
+              <Card.Body>                            
+                <Card.Title className="mb-1 font-weight-bold">Card Title Example</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the bulk of
+                  the card's content.
+                </Card.Text>                                          
+              </Card.Body>
+          </Card>
+          <Card className="ebf-card-select ebf-card-option mt-3">
+              <Card.Body>                            
+                <Card.Title className="mb-1 font-weight-bold">Card Title Example</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the bulk of
+                  the card's content.
+                </Card.Text>                                          
+              </Card.Body>
+          </Card>
+        </CardDeck> 
+
+        <div className="mb-3 copyblock-container">
+            <div>
+                <h3>Code example</h3>
+            </div>
+        
+            <CopyBlock
+            theme={github}
+            text={`<div class="card-deck">
+  <div class="ebf-card-select ebf-card-option mt-3 card">
+      <div class="card-body">
+        <div class="mb-1 font-weight-bold card-title h5">Card Title Example</div>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+  </div>
+  <div class="ebf-card-select ebf-card-option mt-3 card">
+      <div class="card-body">
+        <div class="mb-1 font-weight-bold card-title h5">Card Title Example</div>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+  </div>
+</div>`}
+            language="jsx"
+            showLineNumbers
+            wrapLines
+            codeBlock
+            />
+        </div>
+
       </>
     )
   });
