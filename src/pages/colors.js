@@ -134,7 +134,7 @@ export default withLayout(function ColorsPage() {
       <LinkedHeading h="3" id="gray-colors">Grays</LinkedHeading>
       <Row className="swatch-container">
         {GRAYS.map(color => (
-          <Col xs={4} md={3} lg={2}>
+          <Col key={color.hex} xs={4} md={3} lg={2}>
             <Swatch {...color}/>            
           </Col>
         ))}
@@ -143,7 +143,7 @@ export default withLayout(function ColorsPage() {
       <LinkedHeading h="3" id="blue-colors">Blues</LinkedHeading>
       <Row className="swatch-container">
         {BLUES.map(color => (
-          <Col xs={4} md={3} lg={2}>
+          <Col key={color.hex} xs={4} md={3} lg={2}>
             <Swatch {...color} />
           </Col>
         ))}
@@ -159,7 +159,7 @@ export default withLayout(function ColorsPage() {
       <LinkedHeading h="3" id="red-colors">Reds</LinkedHeading>
       <Row className="swatch-container">
         {REDS.map(color => (
-          <Col xs={4} md={3} lg={2}>
+          <Col key={color.hex} xs={4} md={3} lg={2}>
             <Swatch {...color} />
           </Col>
         ))}
@@ -168,7 +168,7 @@ export default withLayout(function ColorsPage() {
       <LinkedHeading h="3" id="orange-colors">Oranges</LinkedHeading>
       <Row className="swatch-container">
         {ORANGES.map(color => (
-          <Col xs={4} md={3} lg={2}>
+          <Col key={color.hex} xs={4} md={3} lg={2}>
             <Swatch {...color} />
           </Col>
         ))}
@@ -177,7 +177,7 @@ export default withLayout(function ColorsPage() {
       <LinkedHeading h="3" id="yellow-colors">Yellows</LinkedHeading>
       <Row className="swatch-container">
         {YELLOWS.map(color => (
-          <Col xs={4} md={3} lg={2}>
+          <Col key={color.hex} xs={4} md={3} lg={2}>
             <Swatch {...color} />
           </Col>
         ))}
@@ -186,7 +186,7 @@ export default withLayout(function ColorsPage() {
       <LinkedHeading h="3" id="green-colors">Greens</LinkedHeading>
       <Row className="swatch-container">
         {GREENS.map(color => (
-          <Col xs={4} md={3} lg={2}>
+          <Col key={color.hex} xs={4} md={3} lg={2}>
             <Swatch {...color} />
           </Col>
         ))}
@@ -195,7 +195,7 @@ export default withLayout(function ColorsPage() {
       <LinkedHeading h="3" id="purple-colors">Purples</LinkedHeading>
       <Row className="swatch-container">
         {PURPLES.map(color => (
-          <Col xs={4} md={3} lg={2}>
+          <Col key={color.hex} xs={4} md={3} lg={2}>
             <Swatch {...color} />
           </Col>
         ))}

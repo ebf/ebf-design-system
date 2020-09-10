@@ -4,17 +4,6 @@ import { CopyBlock, atomOneLight } from 'react-code-blocks';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
 
-const TYPES = [
-  'primary',
-  'secondary',
-  'success',
-  'danger',
-  'warning',
-  'info',
-  'light',
-  'dark',
-];
-
 function HelpBlock({ children }) {
   return (
     <small className="form-text text-muted">

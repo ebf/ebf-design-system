@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Spinner, SpinnerProps } from 'react-bootstrap';
+import React from 'react';
+import { Spinner } from 'react-bootstrap';
 import { CopyBlock, github } from 'react-code-blocks';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
