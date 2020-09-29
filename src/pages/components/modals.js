@@ -141,7 +141,7 @@ function ShopModal() {
                   glyphMinus={{glyph:'ebf ebf-minus', position:'left'}} />
                 </Form.Group>
 
-                <FormGroup className="mt-6 mb-4">
+                <FormGroup className="mt-7 mb-4">
                   <h3 className="mb-3 product-price">116,93 €</h3>
                   <Button variant="primary">In den Warenkorb</Button>
                   <Button variant="link"><i className="ebf ebf-shopping-bag"></i>Warenkorb anzeigen</Button>

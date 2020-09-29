@@ -24,7 +24,7 @@ export default withLayout(function Footer() {
                   />
               </div>
               <div className="centering-div">
-                  <span>v1.0.10</span>
+                  <span>v1.0.11</span>
               </div>                
           </div>
       </footer>
