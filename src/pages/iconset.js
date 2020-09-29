@@ -1,6 +1,5 @@
 import React from "react"
-import classNames from 'classnames';
-import { Row, Col, Form, FormControl } from 'react-bootstrap';
+import { Row, Col, Form } from 'react-bootstrap';
 
 
 import LinkedHeading from '../components/LinkedHeading';
@@ -348,7 +347,7 @@ export default withLayout(function IconsPage() {
       
       <Row>
       {ICONS.map((value) => (
-        <Col xs={12} md={3} lg={3} className="iconset-container mb-4">
+        <Col key={value.icon} xs={12} md={3} lg={3} className="iconset-container mb-4">
           <i className={'ebf ' + value.icon}></i>         
           <Form.Control className="mt-2" size="sm" type="text" value={value.icon} readOnly/>
         </Col>

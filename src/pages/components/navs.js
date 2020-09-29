@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, Nav, NavDropdown, ProgressBar} from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"

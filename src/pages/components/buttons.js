@@ -68,14 +68,14 @@ export default withLayout(function Buttons() {
       <LinkedHeading h="2" id="button-types">Button types</LinkedHeading>
 
       {BUTTON_TYPES.map(({ type, label }) => (
-        <Button className="mb-4" variant={type}>{label}</Button>
+        <Button key={type} className="mb-4" variant={type}>{label}</Button>
       ))}
 
       {BUTTON_TYPES.map(({ type, label }) => {
         const variant = `${type}`;
 
         return (
-          <div className="mb-3 copyblock-container">
+          <div key={type} className="mb-3 copyblock-container">
             <LinkedHeading h="3" id={label + "-button"}>{label} Button</LinkedHeading>
             <Button className="mb-4" variant={variant}>{label}</Button>
             <CopyBlock
@@ -100,14 +100,14 @@ export default withLayout(function Buttons() {
 
 
       {BUTTON_TYPES.map(({ type, label }) => (
-        <Button className="mb-4" variant={'outline-' + type}>{label}</Button>
+        <Button key={type} className="mb-4" variant={'outline-' + type}>{label}</Button>
       ))}
 
       {BUTTON_TYPES.map(({ type, label }) => {
         const variant = `outline-${type}`;
 
         return (
-          <div className="mb-3 copyblock-container">
+          <div key={type} className="mb-3 copyblock-container">
             <LinkedHeading h="3" id={label + "-outline-button"}>{label} Outline Button</LinkedHeading>
             <Button className="mb-4" variant={variant}>{label}</Button>            
             <CopyBlock
@@ -131,66 +131,55 @@ export default withLayout(function Buttons() {
       <p>Fancy larger or smaller buttons? Add classes <code>"btn-sm"</code>, <code>"btn-lg"</code> for additional sizes.</p>
       
       {BUTTON_SIZES.map(({ type, size, label }) => (
-        <div className="mb-2">
+        <div key={size} className="mb-2">
           <Button className="mb-4" size={size} variant={type}>{label} Button</Button>
           <Button className="mb-4" size={size} variant="secondary">{label} Button</Button>
         </div>
       ))}
 
-      {BUTTON_SIZES.map(({ type, size, label }) => {
-        const variant = `${type}`;
-
-        return (
-          <div className="mb-3 copyblock-container">
-            <LinkedHeading h="3" id={size + "Button"}>{label} Outline Button</LinkedHeading>
-            <Button className="mb-4" size={size} variant={type}>{label}</Button>            
-            <CopyBlock
-              theme={github}
-              text={`<button type="button" class="btn btn-${type} btn-${size}">\n\t${label}\n</button>`}
-              language="jsx"
-              showLineNumbers
-              wrapLines
-              codeBlock
-            />
-          </div>
-        )
-      })}
+      {BUTTON_SIZES.map(({ type, size, label }) => (
+        <div key={size} className="mb-3 copyblock-container">
+          <LinkedHeading h="3" id={size + "Button"}>{label} Outline Button</LinkedHeading>
+          <Button className="mb-4" size={size} variant={type}>{label}</Button>            
+          <CopyBlock
+            theme={github}
+            text={`<button type="button" class="btn btn-${type} btn-${size}">\n\t${label}\n</button>`}
+            language="jsx"
+            showLineNumbers
+            wrapLines
+            codeBlock
+          />
+        </div>
+      ))}
 
       <br/>
       <br/>
-
-     
-
 
       <LinkedHeading h="2" id="block-button">Block Level Button</LinkedHeading>
 
       <p>Create block level buttons—those that span the full width of a parent—by adding <code>block</code></p>
 
       {BUTTON_BLOCK.map(({ type, block, label }) => (
-        <div className="mb-2">
+        <div key={label} className="mb-2">
           <Button className="mb-4" block={block} variant={type}>{label} Level Button</Button>
           <Button className="mb-4" block={block} variant="secondary">{label} Level Button</Button>
         </div>
       ))}  
 
-      {BUTTON_BLOCK.map(({ type, block, label }) => {
-        const variant = `${type}`;
-
-        return (
-          <div className="mb-3 copyblock-container">
-            <LinkedHeading h="3" id={block + "-button-markup"}>{label} Level Button Markup</LinkedHeading>
-            <Button className="mb-4" block={block} variant={type}>{label}</Button>            
-            <CopyBlock
-              theme={github}
-              text={`<button type="button" class="btn btn-${type} btn-${block}">\n\t${label}\n</button>`}
-              language="jsx"
-              showLineNumbers
-              wrapLines
-              codeBlock
-            />
-          </div>
-        )
-      })}    
+      {BUTTON_BLOCK.map(({ type, block, label }) => (
+        <div key={label} className="mb-3 copyblock-container">
+          <LinkedHeading h="3" id={block + "-button-markup"}>{label} Level Button Markup</LinkedHeading>
+          <Button className="mb-4" block={block} variant={type}>{label}</Button>            
+          <CopyBlock
+            theme={github}
+            text={`<button type="button" class="btn btn-${type} btn-${block}">\n\t${label}\n</button>`}
+            language="jsx"
+            showLineNumbers
+            wrapLines
+            codeBlock
+          />
+        </div>
+      ))}    
 
       <br/>
       <br/>
@@ -224,25 +213,21 @@ export default withLayout(function Buttons() {
 
       
       
-      {BUTTON_DISABLED.map(({ type, state, label }) => {
-        const variant = `${type}`;
-
-        return (
-          <div className="mb-3 copyblock-container">        
-            <Button className="mb-4" variant="primary" disabled>
-              Disabled Primary Button
-            </Button>  
-            <CopyBlock
-              theme={github}
-              text={`<button type="button" class="btn btn-${type}" ${state} >\n\t${label} Primary Button\n</button>`}
-              language="jsx"
-              showLineNumbers
-              wrapLines
-              codeBlock
-            />
-          </div>
-        )
-      })} 
+      {BUTTON_DISABLED.map(({ type, state, label }) => (
+        <div key={label} className="mb-3 copyblock-container">        
+          <Button className="mb-4" variant="primary" disabled>
+            Disabled Primary Button
+          </Button>  
+          <CopyBlock
+            theme={github}
+            text={`<button type="button" class="btn btn-${type}" ${state} >\n\t${label} Primary Button\n</button>`}
+            language="jsx"
+            showLineNumbers
+            wrapLines
+            codeBlock
+          />
+        </div>
+      ))}
 
     </>
   )

@@ -1,5 +1,15 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Dropdown, ProgressBar, Badge, Container, Row, Col} from 'react-bootstrap';
+import {
+	Navbar,
+	Nav,
+	NavDropdown,
+	Dropdown,
+	ProgressBar,
+	Badge,
+	Row,
+	Col,
+} from 'react-bootstrap';
 import { CopyBlock, github } from 'react-code-blocks';
 import {FormControl, InputGroup, Button} from 'react-bootstrap';
 import LinkedHeading from '../../components/LinkedHeading';

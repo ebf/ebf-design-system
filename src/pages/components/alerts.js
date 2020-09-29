@@ -1,6 +1,5 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
-import { Row, Col } from 'react-bootstrap';
 import LinkedHeading from '../../components/LinkedHeading';
 import { CopyBlock, github } from 'react-code-blocks';
 import withLayout from "../../with-layout"
@@ -31,7 +30,7 @@ export default withLayout(function Alerts () {
       </p>
 
 
-       {ALERT_TYPES.map((value, idx) => (
+      {ALERT_TYPES.map((value, idx) => (
         <Alert key={idx} variant={value.type} className="mb-4">
           {/* TODO */}
           <i className={'alert-icon ebf ' + value.icon}></i>
@@ -40,31 +39,27 @@ export default withLayout(function Alerts () {
       ))}      
       
 
-      {ALERT_TYPES.map(({ type, icon }) => {
-          const variant = `${type}`;
+      {ALERT_TYPES.map(({ type, icon }) => (
+        <div key={type} className="mb-3 capitalize-text copyblock-container">
+          <LinkedHeading h="3" id={type + "-alert"} >{type} Alert</LinkedHeading>
+          
+          <Alert  variant={type}  className="mb-4">
+            <i className={'alert-icon ebf ' + icon}></i>
+            This is a {type} alert — check it out!
+          </Alert>
 
-          return (
-            <div className="mb-3 capitalize-text copyblock-container">
-              <LinkedHeading h="3" id={type + "-alert"} >{type} Alert</LinkedHeading>
-              
-              <Alert  variant={type}  className="mb-4">
-                <i className={'alert-icon ebf ' + icon}></i>
-                This is a {type} alert — check it out!
-              </Alert>
+          <CopyBlock
+            theme={github}
+            text={`<div role="alert" class="fade alert alert-${type} show">s\n\t<i class="alert-icon ebf ${icon}"></i>\n\tThis is a ${type} alert - check it out!\n</div>`}
+            language="jsx"
+            showLineNumbers
+            wrapLines
+            codeBlock
+          />
+        </div>
+      ))}
 
-              <CopyBlock
-                theme={github}
-                text={`<div role="alert" class="fade alert alert-${type} show">s\n\t<i class="alert-icon ebf ${icon}"></i>\n\tThis is a ${type} alert - check it out!\n</div>`}
-                language="jsx"
-                showLineNumbers
-                wrapLines
-                codeBlock
-              />
-            </div>
-          )
-        })}
-
-        <hr></hr>
+      <hr></hr>
 
 
       <LinkedHeading h="2" id="links">Links Alerts</LinkedHeading>
@@ -78,31 +73,25 @@ export default withLayout(function Alerts () {
         </Alert>
       ))}
 
-      {ALERT_TYPES.map(({ type, icon }) => {
-        const variant = `${type}`;
+      {ALERT_TYPES.map(({ type, icon }) => (
+        <div key={type} className="mb-3 capitalize-text copyblock-container">
+          <LinkedHeading h="3" id={type + "-linked-alert"} >{type} Alert</LinkedHeading>
+          
+          <Alert  variant={type} className="mb-4">
+            <i className={'alert-icon ebf ' + icon}></i>
+            This is a {type} alert with{' '} <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.
+          </Alert>
 
-        return (
-          <div className="mb-3 capitalize-text copyblock-container">
-            <LinkedHeading h="3" id={type + "-linked-alert"} >{type} Alert</LinkedHeading>
-            
-            <Alert  variant={type} className="mb-4">
-              <i className={'alert-icon ebf ' + icon}></i>
-              This is a {type} alert with{' '} <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.
-            </Alert>
-
-            <CopyBlock
-              theme={github}
-              text={`<div role="alert" class="fade alert alert-${type} show">\n\t<i class="alert-icon ebf ${icon}"></i> \n\t This is a ${type} alert with \n\t<a class="alert-link" href="#" role="button">an example link</a>.\n</div>`}
-              language="jsx"
-              showLineNumbers
-              wrapLines
-              codeBlock
-            />
-          </div>
-        )
-      })}      
-
-
+          <CopyBlock
+            theme={github}
+            text={`<div role="alert" class="fade alert alert-${type} show">\n\t<i class="alert-icon ebf ${icon}"></i> \n\t This is a ${type} alert with \n\t<a class="alert-link" href="#" role="button">an example link</a>.\n</div>`}
+            language="jsx"
+            showLineNumbers
+            wrapLines
+            codeBlock
+          />
+        </div>
+      ))}
     </>
   )
 });

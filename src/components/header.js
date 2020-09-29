@@ -6,7 +6,7 @@ import logo from '../images/logo.svg'
 
 const Header = ({ siteTitle }) => (
   <header className="header border-bottom">
-    <Navbar collapseOnSelect expand="lg" bg="white" expand="lg">
+    <Navbar collapseOnSelect expand="lg" bg="white">
       <Link to="/" className="navbar-brand">
         <img
             src={logo}

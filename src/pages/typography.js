@@ -1,6 +1,4 @@
 import React from "react"
-import classNames from 'classnames';
-import { Row, Col, Container } from 'react-bootstrap';
 
 
 import LinkedHeading from '../components/LinkedHeading';

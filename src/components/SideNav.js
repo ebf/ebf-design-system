@@ -2,14 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import { Link, withPrefix } from "gatsby"
 import classNames from 'classnames';
-import { Nav } from 'react-bootstrap';
+import { Button, Nav } from 'react-bootstrap';
+
+const concat = (path, ...args) => _.filter(args, segment => !_.isEmpty(segment))
+  .reduce((state, segment) => `${state}/${segment}`, path);
 
 function NavSection({ heading, location: { pathname }, items, path }) {
   let active = pathname.startsWith(withPrefix(path));
+
   return (
     <>
       <Link
-        to={items ? `${path}/${items[0]}/` : `${path}/`}
+        to={items ? concat(path, _.first(items)) : path}
         className={classNames('nav-link', active && ' active')}
       >
         {heading}
@@ -18,8 +22,8 @@ function NavSection({ heading, location: { pathname }, items, path }) {
       {items && active && (
         <Nav activeKey={pathname} onSelect={() => {}} className="d-block ml-4 nav-dots vertical-nav">
           {items.map(name => (
-            <Nav.Item key={`${path}/${name}/`}>
-              <Link className="nav-link" activeClassName='active' to={`${path}/${name}/`}>
+            <Nav.Item key={concat(path, name)}>
+              <Link className="nav-link" activeClassName='active' to={concat(path, name)}>
                 {_.startCase(name.toLowerCase())}
               </Link>
             </Nav.Item>
@@ -83,9 +87,9 @@ export default class SideNav extends React.Component {
       
       <div className={classNames(className, 'side-nav', collapsed ? 'closed-sidebar' : 'open-sidebar')} {...props}>
 
-        <div size="sm" className="sidebar-toggler" onClick={() => this.handleCollapse()}>
-          {collapsed ? <i className="btn ebf ebf-arr-right"></i> : <i className="btn ebf ebf-arr-left"></i>}
-        </div>
+        <Button type="primary" size="sm" className="sidebar-toggler" onClick={this.handleCollapse}>
+          {collapsed ? <i className="ebf ebf-arr-right"></i> : <i className="ebf ebf-arr-left"></i>}
+        </Button>
 
         <nav className="flex-column nav mt-4 aside" role="complementary">
           <NavSection
