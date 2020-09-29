@@ -305,6 +305,30 @@ $grid-breakpoints: (
 @include _assert-starts-at-zero($grid-breakpoints);
 
 
+$breakpoint: map-get($grid-breakpoints, md);
+
+// Get the small breakpoint.
+@mixin respond-below($breakpoint) {
+
+  // If the breakpoint exists in the map.
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($grid-breakpoints, $breakpoint);
+
+    // Write the media query.
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
@@ -330,6 +354,8 @@ $spacers: map-merge((
   3: $spacer,
   4: ($spacer * 1.5),
   5: ($spacer * 3),
+  6: ($spacer * 6),
+  7: ($spacer * 7),
   'sm': ($spacer * 2),
   'md': ($spacer * 4),
   'lg': ($spacer * 6),
@@ -368,7 +394,8 @@ $box-shadow-sm:               0 .125rem .25rem rgba($black, .075);
 $box-shadow-md:               0 4px 16px rgba($black, .1), 0 4px 8px rgba($black, .07);
 $box-shadow-md-primary:       0 2px 10px rgba($primary, .07), 0 -2px 10px rgba($primary, .07);
 $box-shadow:                  0 15px 35px rgba($black, .1), 0 5px 15px rgba($black, .07);
-$box-shadow-dark:                  0 15px 35px rgba($black, .3), 0 5px 15px rgba($black, .2);
+$box-shadow-primary:                  0 15px 35px rgba($primary, .1), 0 5px 15px rgba($primary, .07);
+$box-shadow-dark:             0 15px 35px rgba($black, .3), 0 5px 15px rgba($black, .2);
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175);
 
 $component-active-color:        $white !default;
@@ -394,6 +421,7 @@ $font-family-alt: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-xl:                ($font-size-base * 1.5);
 $font-size-lg:                ($font-size-base * 1.25);
+$font-size-md:                ($font-size-base * 1.125);
 $font-size-sm:                ($font-size-base * .875);
 $font-size-13:                ($font-size-base * .8125);
 $font-size-xs:                ($font-size-base * .75);
@@ -1118,6 +1146,22 @@ $smooth-scaling-animation-dots: all .2s cubic-bezier(0.440, -0.480, 0.465, 1.515
 
 
 @keyframes fade-out-top {
+  0% {
+    transform: translateY(0); 
+    opacity: 0;   
+  }
+  50% {   
+    opacity: 1;
+  }
+
+  100% {    
+    transform: translateY(-46px);
+    opacity: 0;
+  }
+}
+
+
+@keyframes roll-out-mid {
   0% {
     transform: translateY(0); 
     opacity: 0;   

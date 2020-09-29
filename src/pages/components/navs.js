@@ -119,6 +119,26 @@ export default withLayout(function Navs() {
       </Nav.Item>
     </Nav>
 
+    <LinkedHeading h="2" id="simple-tabs-nav">Simple Tabs</LinkedHeading> 
+
+    <Nav variant="tabs" className="simple-tabs-nav" defaultActiveKey="#">
+      <Nav.Item>
+          <Nav.Link href="#"><i className="ebf ebf-device-smartphone"></i>Webshop</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+          <Nav.Link href="" eventKey="link-1"><i className="ebf ebf-tag"></i>Bestellungen</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+          <Nav.Link href="" eventKey="link-2"><i className="ebf ebf-file"></i>Kostenstelle</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+          <Nav.Link href="" eventKey="link-3"><i className="ebf ebf-map-pin"></i>Lieferadresse</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+          <Nav.Link href="" eventKey="disabled" disabled><i className="ebf ebf-shopping-bag"></i>Warenkorb</Nav.Link>
+      </Nav.Item>
+    </Nav>
+
     
     <LinkedHeading h="2" id="pills">Pills</LinkedHeading>
 

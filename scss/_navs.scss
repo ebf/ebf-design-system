@@ -108,6 +108,56 @@
   }
 }
 
+.simple-tabs-nav {
+  border-bottom: 0;
+  .nav-item {
+    
+    padding: $input-btn-padding-y-sm $input-btn-padding-x;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    .nav-link {
+      color: $black;
+      border: 0;
+      background: transparent;
+      padding: 0;
+      position: relative;     
+
+      &:hover {
+        background: transparent;
+      }
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 4px;
+        background: $primary;
+        display: block;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        transform-origin: center;
+        transform: scaleX(0);
+        transition: $smooth-scaling-animation;
+      }
+
+      &.active {
+        color: $primary;
+
+        &:after {
+          transform: scaleX(1);
+        }
+
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
 .nav-pills {
   .nav-item {
     .nav-link {    
@@ -142,8 +192,6 @@
 
 
 // Badge 
-
-
 
 .ebf-badge-notification {
   display: block!important;

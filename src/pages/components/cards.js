@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col, ListGroup, Card, CardDeck} from 'react-bootstrap';
+import {Row, Col, ListGroup, Card, CardDeck, Button, CardImg} from 'react-bootstrap';
 import { CopyBlock, github } from 'react-code-blocks';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
@@ -213,7 +213,8 @@ export default withLayout(function Tables() {
                 <Card.Text>
                   Some quick example text to build on the card title and make up the bulk of
                   the card's content.
-                </Card.Text>                                          
+                </Card.Text> 
+                                                       
               </Card.Body>
           </Card>
         </CardDeck> 
@@ -246,6 +247,104 @@ export default withLayout(function Tables() {
             />
         </div>
 
+
+        <LinkedHeading h="2" id="cards-option">Cards Product</LinkedHeading>
+
+        <CardDeck>
+          <Card className="ebf-card-select ebf-card-product hoverable-card  mt-5">
+              <Card.Body>                            
+                <Row>
+                  <Col className="image-row" md={5} xl={4}>
+                    <CardImg className="align-self-center" src="https://via.placeholder.com/244x512/2494c5/fff"
+            data-src="holder.js/244x512">
+
+                    </CardImg>
+                  </Col>
+                  <Col md={7} xl={8}>
+                    <Card.Title className="mb-2 font-weight-normal">Apple iPhone 11 schwarz</Card.Title>
+                    <Card.Text className="mb-4">
+                    Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation
+                    </Card.Text> 
+                    <div className="d-flex justify-content-between">
+                      <h4 color="primary">116,93 €</h4>
+                      <Button size="sm" variant="primary">Mehr Details</Button>
+                    </div>          
+                  </Col>
+                </Row>                                                
+              </Card.Body>
+          </Card>
+          <Card className="ebf-card-select ebf-card-product hoverable-card  mt-5">
+              <Card.Body>                            
+                <Row>
+                  <Col className="image-row" md={5} xl={4}>
+                    <CardImg className="align-self-center" src="https://via.placeholder.com/244x512/2494c5/fff"
+            data-src="holder.js/244x512">
+
+                    </CardImg>
+                  </Col>
+                  <Col md={7} xl={8}>
+                    <Card.Title className="mb-2 font-weight-normal">Apple iPhone 11 schwarz</Card.Title>
+                    <Card.Text className="mb-4">
+                    Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation
+                    </Card.Text> 
+                    <div className="d-flex justify-content-between">
+                      <h4 color="primary">116,93 €</h4>
+                      <Button size="sm" variant="primary">Mehr Details</Button>
+                    </div>          
+                  </Col>
+                </Row>                                                
+              </Card.Body>
+          </Card>
+          
+        </CardDeck> 
+        <CardDeck>
+          <Card className="ebf-card-select ebf-card-product hoverable-card  mt-5">
+              <Card.Body>                            
+                <Row>
+                  <Col className="image-row" md={5} xl={4}>
+                    <CardImg className="align-self-center" src="https://via.placeholder.com/244x512/2494c5/fff"
+            data-src="holder.js/244x512">
+
+                    </CardImg>
+                  </Col>
+                  <Col md={7} xl={8}>
+                    <Card.Title className="mb-2 font-weight-normal">Apple iPhone 11 schwarz</Card.Title>
+                    <Card.Text className="mb-4">
+                    Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation
+                    </Card.Text> 
+                    <div className="d-flex justify-content-between">
+                      <h4 color="primary">116,93 €</h4>
+                      <Button size="sm" variant="primary">Mehr Details</Button>
+                    </div>          
+                  </Col>
+                </Row>                                                
+              </Card.Body>
+          </Card>
+          <Card className="ebf-card-select ebf-card-product hoverable-card  mt-5">
+              <Card.Body>                            
+                <Row>
+                  <Col className="image-row" md={5} xl={4}>
+                    <CardImg className="align-self-center" src="https://via.placeholder.com/244x512/2494c5/fff"
+            data-src="holder.js/244x512">
+
+                    </CardImg>
+                  </Col>
+                  <Col md={7} xl={8}>
+                    <Card.Title className="mb-2 font-weight-normal">Apple iPhone 11 schwarz</Card.Title>
+                    <Card.Text className="mb-4">
+                    Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation
+                    </Card.Text> 
+                    <div className="d-flex justify-content-between">
+                      <h4 color="primary">116,93 €</h4>
+                      <Button size="sm" variant="primary">Mehr Details</Button>
+                    </div>          
+                  </Col>
+                </Row>                                                
+              </Card.Body>
+          </Card>
+          
+        </CardDeck> 
+        
       </>
     )
   });

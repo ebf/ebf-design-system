@@ -170,6 +170,7 @@ $box-shadow-card-hover: 0 8px 16px rgba(0,0,0,0.20), 0 5px 10px rgba(0,0,0,0.15)
 }
 
 .ebf-card-option {
+
   .card-body {
     padding: $spacer * 2;
   }
@@ -182,5 +183,61 @@ $box-shadow-card-hover: 0 8px 16px rgba(0,0,0,0.20), 0 5px 10px rgba(0,0,0,0.15)
   &.active {
     border: $border-width solid $primary;
     //box-shadow: $btn-box-shadow;
+  }
+}
+
+
+.ebf-card-product {
+
+  .card-body {
+    padding: $spacer * 1.5 $spacer * 1.5 $spacer * 1.5 $spacer * 2;
+  }
+
+  &:before {
+    content: '';
+    width: $spacer / 1.75;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    background-color: $primary;
+    border-radius: $spacer / 4 0 0 $spacer / 4;
+  }
+
+  .row {
+    .image-row {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      img {
+        position: absolute; 
+        width: auto;
+        height: auto;
+        border-radius: $spacer;
+        max-height: $spacer * 18;
+        transform: translateY(0);
+        transition: $smooth-color-animation-slow;
+      }
+    }
+  }
+
+  .flex-space-between {
+    h4 {
+      display: inline-block;
+    }
+  }
+
+  &:hover {
+    .row {
+      .image-row {
+        img {          
+          transform: translateY(-.5rem);
+        }
+      }
+    }
   }
 }
