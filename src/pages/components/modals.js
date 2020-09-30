@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
-import { Modal, Button, Media, Col, Row, Form, ListGroup, Container, Accordion, Card, FormGroup} from 'react-bootstrap';
+import { Modal, Button, Media, Col, Row, Form, ListGroup, Container, Accordion, FormGroup} from 'react-bootstrap';
 
 
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
-
-import ReactDOM from 'react-dom';
-import CounterInput from 'react-bootstrap-personalized-counter';
 
 
 
@@ -133,12 +130,7 @@ function ShopModal() {
 
                 <Form.Group className="device-quantity mb-4">
                   <Form.Label className="mb-2">Anzahl der Geräte:</Form.Label>
-                  <CounterInput
-                  value={1}
-                  min={1}
-                  max={9999999} 
-                  glyphPlus={{glyph:'ebf ebf-plus', position:'right'}}
-                  glyphMinus={{glyph:'ebf ebf-minus', position:'left'}} />
+                  
                 </Form.Group>
 
                 <FormGroup className="mt-7 mb-4">
