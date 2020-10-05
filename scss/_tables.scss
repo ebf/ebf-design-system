@@ -4,7 +4,7 @@
   border: $border-width solid $border-color;
 
   .ebf-table-header {
-    background: $gray-gradient;
+    background: $table-header-bg;
     border-bottom: none;
     color: $black;
     height: $spacer * 5.5;   

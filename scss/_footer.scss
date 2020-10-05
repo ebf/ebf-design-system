@@ -4,8 +4,6 @@ html {
 }
 
 body {
-  margin-bottom: 52px;
-  padding-bottom: 52px;
   background: $gray-100;
 }
 
@@ -14,16 +12,12 @@ body {
   color: $footer-color;
   font-size: $footer-font-size;
   padding: $footer-padding-y 0;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
   width: 100%;
   line-height: 1;
   height: 52px;
+  margin-top: $spacer * 3;
     
     
-
   a {
     color: $footer-link-color;
     
@@ -31,20 +25,4 @@ body {
       color: $footer-link-hover-color;
     }
   }
-
-  .container {
-    position: relative;
-    width: auto;   
-    padding: 0;
-  }
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.doc-footer {
-  
 }

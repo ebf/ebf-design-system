@@ -26,7 +26,15 @@ $gray-900: #383838 !default;
 
 $black:    #262626 !default;
 
+// Fonts
+
+$theme-font:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !default;
+$theme-font-alt:   -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif!default;
+
 @import "bootstrap/scss/functions";
 @import "../variables";
 @import "bootstrap/scss/variables";
 
+// Variables
+
+$table-header-bg: #fff;

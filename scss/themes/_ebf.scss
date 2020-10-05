@@ -28,9 +28,13 @@ $black:    #2b3e51 !default;
 
 // Fonts
 
-$font-family-base:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !default;
-$font-family-alt:   -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif!default;
+$theme-font:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !default;
+$theme-font-alt:   -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif!default;
 
 @import "bootstrap/scss/functions";
 @import "../variables";
 @import "bootstrap/scss/variables";
+
+// Variables
+
+$table-header-bg: $gray-gradient;

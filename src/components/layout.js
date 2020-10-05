@@ -34,25 +34,27 @@ const Layout = ({ children, location }) => (
       
     </Container>
 
-    <footer className="footer shadow doc-footer">
-        <div className="container footer-container">
-            <div className="centering-div">
-                <span>© {new Date().getFullYear()} <a href="https://www.ebf.com">EBF</a></span>
-            </div>
-            <div className="centering-div">
-                <img
-                    src={logo}
-                    width="auto"
-                    height="24"
-                    className="d-inline-block align-middle"
-                    alt="Logo"
-                />
-            </div>
-            <div className="centering-div">
-              <span>v1.0.10</span>
-            </div>                
-        </div>
-      </footer>
+    <footer className="footer shadow">  
+      <div className="container-fluid">
+        <Row className="align-items-center">
+          <Col className="text-left">
+          <span>© {new Date().getFullYear()} <a href="https://www.ebf.com">EBF</a></span>
+          </Col>
+          <Col className="text-center">
+            <img
+                src={logo}
+                width="auto"
+                height="24"
+                
+                alt="Logo"
+            />
+          </Col>
+          <Col className="text-right">
+            <span>v1.0.11</span>
+          </Col>
+        </Row>
+      </div>        
+    </footer>
   </main>
 );
 
