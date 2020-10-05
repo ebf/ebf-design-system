@@ -199,7 +199,8 @@ export default withLayout(function Tables() {
 
         <CardDeck>
           <Card className="ebf-card-select ebf-card-option mt-3">
-              <Card.Body>                            
+              <i className="option-select-icon ebf ebf-check-mark-circle-full-fill"></i>                           
+              <Card.Body> 
                 <Card.Title className="mb-1 font-weight-bold">Card Title Example</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up the bulk of
@@ -208,6 +209,7 @@ export default withLayout(function Tables() {
               </Card.Body>
           </Card>
           <Card className="ebf-card-select ebf-card-option mt-3">
+          <i className="option-select-icon ebf ebf-check-mark-circle-full-fill"></i> 
               <Card.Body>                            
                 <Card.Title className="mb-1 font-weight-bold">Card Title Example</Card.Title>
                 <Card.Text>

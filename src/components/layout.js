@@ -28,7 +28,7 @@ const Layout = ({ children, location }) => {
   `)
 
   return (
-    <main className="d-flex flex-column min-vh-100">
+    <main className="d-flex flex-column">
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <Container fluid className="flex-grow-1">

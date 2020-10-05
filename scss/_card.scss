@@ -184,6 +184,22 @@ $box-shadow-card-hover: 0 8px 16px rgba(0,0,0,0.20), 0 5px 10px rgba(0,0,0,0.15)
     border: $border-width solid $primary;
     //box-shadow: $btn-box-shadow;
   }
+
+  .option-select-icon {
+    align-self: flex-end;
+    margin-right: $spacer;
+    margin-top: $spacer;    
+    color: $primary;
+    position: absolute;
+    transition: $smooth-color-animation;
+    opacity: 0;
+  }
+
+  &.card-select {
+    .option-select-icon {
+      opacity: 1;
+    }
+  }
 }
 
 

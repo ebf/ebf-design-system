@@ -12,20 +12,20 @@
         font-weight: $font-weight-medium;
 
         + .breadcrumb-item { 
-            &:before {
-                @extend %ebf;
-                content: $ebf-chevron-right;
-                color: $primary-900;
-                font-size: $font-size-sm;
-            }
+          &:before {
+            @extend %ebf;
+            content: $ebf-chevron-right;
+            color: $primary-900;
+            font-size: $font-size-sm;
+          }
         }
 
         &.active {
-            font-weight: $font-weight-normal;
+          font-weight: $font-weight-normal;
         }
 
         a {
-            color: $primary-900;            
+          color: $primary-900;            
         }
     }
 }
