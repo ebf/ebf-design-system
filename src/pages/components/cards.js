@@ -197,8 +197,10 @@ export default withLayout(function Tables() {
 
         <LinkedHeading h="2" id="cards-option">Cards Option</LinkedHeading>
 
+        <p>In order to work properly, <code>ebf-card-select</code> sholud have <code>card-select</code> class appended to element.</p>
+
         <CardDeck>
-          <Card className="ebf-card-select ebf-card-option mt-3">
+          <Card className="ebf-card-select ebf-card-option card-select mt-3">
               <i className="option-select-icon ebf ebf-check-mark-circle-full-fill"></i>                           
               <Card.Body> 
                 <Card.Title className="mb-1 font-weight-bold">Card Title Example</Card.Title>
@@ -229,19 +231,22 @@ export default withLayout(function Tables() {
             <CopyBlock
             theme={github}
             text={`<div class="card-deck">
-  <div class="ebf-card-select ebf-card-option mt-3 card">
+  <div class="ebf-card-select ebf-card-option card-select mt-3 card">
+      <i class="option-select-icon ebf ebf-check-mark-circle-full-fill"></i>
       <div class="card-body">
         <div class="mb-1 font-weight-bold card-title h5">Card Title Example</div>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
   </div>
   <div class="ebf-card-select ebf-card-option mt-3 card">
+      <i class="option-select-icon ebf ebf-check-mark-circle-full-fill"></i>
       <div class="card-body">
         <div class="mb-1 font-weight-bold card-title h5">Card Title Example</div>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
   </div>
-</div>`}
+</div>
+         `}
             language="jsx"
             showLineNumbers
             wrapLines

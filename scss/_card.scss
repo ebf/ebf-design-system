@@ -171,13 +171,15 @@ $box-shadow-card-hover: 0 8px 16px rgba(0,0,0,0.20), 0 5px 10px rgba(0,0,0,0.15)
 
 .ebf-card-option {
 
-  .card-body {
-    padding: $spacer * 2;
-  }
-
+  opacity: .7;
   transition: $smooth-color-animation-slow;
 
+  .card-body {
+    padding: $spacer * 1.5 $spacer * 2;
+  }
+
   .option-select-icon {
+    font-size: $font-size-lg;
     align-self: flex-end;
     margin-right: $spacer;
     margin-top: $spacer;    
@@ -186,13 +188,19 @@ $box-shadow-card-hover: 0 8px 16px rgba(0,0,0,0.20), 0 5px 10px rgba(0,0,0,0.15)
     transition: $smooth-color-animation;
     opacity: 0;
   }
+  
 
-  &:hover,
+  &:hover {
+    opacity: 1;
+  }
+
   &:focus,
   &.focus,
   &.active,
   &.card-select {
     border: $border-width solid $primary;
+    opacity: 1;
+    
     .option-select-icon {
       opacity: 1;
     }
