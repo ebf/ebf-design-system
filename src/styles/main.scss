@@ -1,6 +1,7 @@
 // override the location for the fonts directory
 $ebf-font-location: "../../scss/fonts";
-@import "../../scss/ebf";
+
+@import "../../scss/telekom";
 
 .header {
   position: sticky;
