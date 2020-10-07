@@ -62,7 +62,35 @@ export default withLayout(function Tables() {
         
             <CopyBlock
             theme={github}
-            text={`<div class="card-deck">\n\t<div class="ebf-card-select card-hover text-center card">\n\t\t<div class="card-body">\n\t\t\t<i class="ebf ebf-esim ebf-card-icon mb-2"></i>\n\t\t\t<a class="card-link" href="#">\n\t\t\t\t<div class="mb-1 card-title h5">Card Title Example</div>\n\t\t\t</a>\n\t\t\t<p class="card-text">Some quick example text...</p>\n\t\t</div>\n\t</div>\n\t<div class="ebf-card-select card-hover text-center card">\n\t\t<div class="card-body">\n\t\t\t<i class="ebf ebf-esim ebf-card-icon mb-2"></i>\n\t\t\t<a class="card-link" href="#">\n\t\t\t\t<div class="mb-1 card-title h5">Card Title Example</div>\n\t\t\t</a>\n\t\t\t<p class="card-text">Some quick example text...</p>\n\t\t</div>\n\t</div>\n\t<div class="ebf-card-select card-hover text-center card">\n\t\t<div class="card-body">\n\t\t\t<i class="ebf ebf-esim ebf-card-icon mb-2"></i>\n\t\t\t<a class="card-link" href="#">\n\t\t\t\t<div class="mb-1 card-title h5">Card Title Example</div>\n\t\t\t</a>\n\t\t\t<p class="card-text">Some quick example text...</p>\n\t\t</div>\n\t</div>\n</div>`}
+            text={`<div class="card-deck">
+  <div class="ebf-card-select card-hover text-center card">
+      <div class="card-body">
+        <i class="ebf ebf-esim ebf-card-icon mb-2"></i>
+        <a class="card-link" href="#">
+            <div class="mb-1 card-title h5">Card Title Example</div>
+        </a>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Just adding up some text to fill in the third row.</p>
+      </div>
+  </div>
+  <div class="ebf-card-select card-hover text-center card">
+      <div class="card-body">
+        <i class="ebf ebf-device-smartphone ebf-card-icon mb-2"></i>
+        <a class="card-link" href="#">
+            <div class="mb-1 card-title h5">Long Card Title Example</div>
+        </a>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+  </div>
+  <div class="ebf-card-select card-hover text-center card">
+      <div class="card-body">
+        <i class="ebf ebf-apps ebf-card-icon mb-2"></i>
+        <a class="card-link" href="#">
+            <div class="mb-1 card-title h5">Card Title</div>
+        </a>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+  </div>
+</div>`}
             language="jsx"
             showLineNumbers
             wrapLines
@@ -114,7 +142,35 @@ export default withLayout(function Tables() {
         
             <CopyBlock
             theme={github}
-            text={`<div class="card-deck">\n\t<div class="ebf-card-select card-hover card-hover-effect text-center card">\n\t\t<div class="card-body">\n\t\t\t<i class="ebf ebf-esim ebf-card-icon mb-2"></i>\n\t\t\t<a class="card-link" href="#">\n\t\t\t\t<div class="mb-1 card-title h5">Card Title Example</div>\n\t\t\t</a>\n\t\t\t<p class="card-text">Some quick example text...</p>\n\t\t</div>\n\t</div>\n\t<div class="ebf-card-select card-hover card-hover-effect text-center card">\n\t\t<div class="card-body">\n\t\t\t<i class="ebf ebf-esim ebf-card-icon mb-2"></i>\n\t\t\t<a class="card-link" href="#">\n\t\t\t\t<div class="mb-1 card-title h5">Card Title Example</div>\n\t\t\t</a>\n\t\t\t<p class="card-text">Some quick example text...</p>\n\t\t</div>\n\t</div>\n\t<div class="ebf-card-select card-hover card-hover-effect text-center card">\n\t\t<div class="card-body">\n\t\t\t<i class="ebf ebf-esim ebf-card-icon mb-2"></i>\n\t\t\t<a class="card-link" href="#">\n\t\t\t\t<div class="mb-1 card-title h5">Card Title Example</div>\n\t\t\t</a>\n\t\t\t<p class="card-text">Some quick example text...</p>\n\t\t</div>\n\t</div>\n</div>`}
+            text={`<div class="card-deck">
+  <div class="ebf-card-select card-hover card-hover-effect text-center card">
+      <div class="card-body">
+        <i class="ebf ebf-esim ebf-card-icon mb-2"></i>
+        <a class="card-link" href="#">
+            <div class="mb-1 card-title h5">Card Title Example</div>
+        </a>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Just adding up some text to fill in the third row.</p>
+      </div>
+  </div>
+  <div class="ebf-card-select card-hover card-hover-effect text-center card">
+      <div class="card-body">
+        <i class="ebf ebf-device-smartphone ebf-card-icon mb-2"></i>
+        <a class="card-link" href="#">
+            <div class="mb-1 card-title h5">Long Card Title Example</div>
+        </a>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+  </div>
+  <div class="ebf-card-select card-hover card-hover-effect text-center card">
+      <div class="card-body">
+        <i class="ebf ebf-apps ebf-card-icon mb-2"></i>
+        <a class="card-link" href="#">
+            <div class="mb-1 card-title h5">Card Title</div>
+        </a>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+  </div>
+</div>`}
             language="jsx"
             showLineNumbers
             wrapLines
@@ -149,7 +205,21 @@ export default withLayout(function Tables() {
         
             <CopyBlock
             theme={github}
-            text={`<div class="ebf-card-container row">\n\t<div class="col-lg-4 col-md-6 col-sm-12 col">\n\t\t<div class="ebf-card-summary card">\n\t\t\t<div class="card-body">\n\t\t\t\t<div class="list-group list-group-flush">\n\t\t\t\t\t<div class="list-group-item">\n\t\t\t\t\t\t<span>Besitzer:</span> Carole Rosario\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="list-group-item">\n\t\t\t\t\t\t<span>eMail:</span> carolerosario@ebf.com\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="list-group-item">\n\t\t\t\t\t\t<span>Kartenprofil:</span> 000001-3972834-2\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="list-group-item">\n\t\t\t\t\t\t<span>Telefonnummer:</span> +49-175-5558-994\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="eid-color list-group-item">\n\t\t\t\t\t\t<span>EID:</span> 984654\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>`}
+            text={`<div class="ebf-card-container row">
+  <div class="col-lg-4 col-md-6 col-sm-12 col">
+      <div class="ebf-card-summary card">
+        <div class="card-body">
+            <div class="list-group list-group-flush">
+              <div class="list-group-item"><span>Besitzer:</span> Carole Rosario</div>
+              <div class="list-group-item"><span>eMail:</span> carolerosario@ebf.com</div>
+              <div class="list-group-item"><span>Kartenprofil:</span> 000001-3972834-2</div>
+              <div class="list-group-item"><span>Telefonnummer:</span> +49-175-5558-994</div>
+              <div class="eid-color list-group-item"><span>EID:</span> 984654</div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>`}
             language="jsx"
             showLineNumbers
             wrapLines
@@ -187,7 +257,25 @@ export default withLayout(function Tables() {
         
             <CopyBlock
             theme={github}
-            text={`<div class="ebf-card-container row">\n\t<div class="col-12 col">\n\t\t<div class="ebf-card-summary ebf-card-summary-horizontal mt-3 card">\n\t\t\t<div class="card-body">\n\t\t\t\t<div class="list-group list-group-flush">\n\t\t\t\t\t<div class="list-group-item">\n\t\t\t\t\t\t<span>Besitzer:</span> Carole Rosario\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="list-group-item">\n\t\t\t\t\t\t<span>eMail:</span> carolerosario@ebf.com\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="list-group-item">\n\t\t\t\t\t\t<span>Kartenprofil:</span> 000001-3972834-2\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="list-group-item">\n\t\t\t\t\t\t<span>Telefonnummer:</span> +49-175-5558-994\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="eid-color list-group-item">\n\t\t\t\t\t\t<span>EID:</span> 984654\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>`}
+            text={`<div class="ebf-card-container row">
+  <div class="col-12 col">
+      <div class="ebf-card-summary ebf-card-summary-horizontal mt-3 card">
+        <div class="card-body">
+            <div class="list-group list-group-flush">
+              <div class="summary-horizontal-container name-mail-container list-group list-group-flush">
+                  <div class="list-group-item"><span>Besitzer:</span> Carole Rosario</div>
+                  <div class="list-group-item"><span>eMail:</span> carolerosario@ebf.com</div>
+              </div>
+              <div class="summary-horizontal-container list-group list-group-flush">
+                  <div class="list-group-item"><span>Kartenprofil:</span> 000001-3972834-2</div>
+                  <div class="list-group-item"><span>Telefonnummer:</span> +49-175-5558-994</div>
+                  <div class="eid-color list-group-item"><span>EID:</span> 984654</div>
+              </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>`}
             language="jsx"
             showLineNumbers
             wrapLines
