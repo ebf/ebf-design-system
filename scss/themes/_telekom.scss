@@ -102,10 +102,12 @@ $telekom-font-location: "../../src/telekom-fonts";
 $theme-font:  TeleGroteskNext-Regular !default;
 $theme-font-alt:   TeleGroteskNext-Bold!default;
 
-@import "bootstrap/scss/functions";
-@import "../variables";
-@import "bootstrap/scss/variables";
 
 // Variables
 
-$table-header-bg: #fff;
+$table-header-bg: white;
+$thead-bg: white;
+
+@import "bootstrap/scss/functions";
+@import "../variables";
+@import "bootstrap/scss/variables";

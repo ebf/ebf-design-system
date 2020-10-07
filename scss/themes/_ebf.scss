@@ -6,23 +6,23 @@ $primary:    $blue !default;
 
 $primary-100: #e5f2f8 !default;
 $primary-200: #cae5f1 !default;
-$primary-300: #abd6e8 !default;
+$primary-300: #abd6e8 !default; //
 $primary-400: #87c5df !default;
 $primary-500: #5cb0d3 !default;
-$primary-600: #187bab !default;   
+$primary-600: #187bab !default; // nav-pills-link-hover-color
 $primary-700: #1c759b !default;   
-$primary-800: #176180 !default;
-$primary-900: #10455b !default;
+$primary-800: #176180 !default; //
+$primary-900: #10455b !default; //
 
-$gray-100: #f8f9fb !default;
-$gray-200: #f1f3f7 !default;
-$gray-300: #e3e6ec !default;
-$gray-400: #d4d9e2 !default;
-$gray-500: #c6ccd7 !default;   // Line footer color
-$gray-600: #aeb8c6 !default;
-$gray-700: #97a3b5 !default;   // Line p color
-$gray-800: #7f8fa4 !default;   // Line heading color
-$gray-900: #55677b !default;
+$gray-100: #f8f9fb !default;  //
+$gray-200: #f1f3f7 !default;  //
+$gray-300: #e3e6ec !default;  //
+$gray-400: #d4d9e2 !default;  //
+$gray-500: #c6ccd7 !default;  // Line footer color
+$gray-600: #aeb8c6 !default;  //
+$gray-700: #97a3b5 !default;  // Line p color
+$gray-800: #7f8fa4 !default;  // Line heading color
+$gray-900: #55677b !default;  //
 
 $black:    #2b3e51 !default;
 
@@ -31,10 +31,12 @@ $black:    #2b3e51 !default;
 $theme-font:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !default;
 $theme-font-alt:   -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif!default;
 
-@import "bootstrap/scss/functions";
-@import "../variables";
-@import "bootstrap/scss/variables";
-
 // Variables
 
 $table-header-bg: $gray-gradient;
+$thead-bg: $gray-200;
+
+
+@import "bootstrap/scss/functions";
+@import "../variables";
+@import "bootstrap/scss/variables";

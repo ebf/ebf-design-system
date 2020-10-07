@@ -132,10 +132,10 @@ $colors: map-merge((
   "green":      $green,
   "teal":       $teal,
   "cyan":       $cyan,
+  "gray-dark":  $gray-800,
   "gray":       $gray-600,
   "light":      $gray-400,
   "lighter":    $gray-200,
-  "gray-dark":  $gray-800,
   "white":      $white
 ), $colors);
 
@@ -530,7 +530,10 @@ $table-active-bg:             $table-hover-bg !default;
 $table-border-width:          $border-width !default;
 $table-border-color:          $border-color !default;
 
-$table-head-bg:               $gray-200 !default;
+// Theme Mod
+$table-head-bg:               $thead-bg !default;
+//
+
 $table-head-color:            $gray-700 !default;
 
 $table-dark-bg:               $gray-900 !default;
