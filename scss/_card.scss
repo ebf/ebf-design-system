@@ -177,14 +177,6 @@ $box-shadow-card-hover: 0 8px 16px rgba(0,0,0,0.20), 0 5px 10px rgba(0,0,0,0.15)
 
   transition: $smooth-color-animation-slow;
 
-  &:hover,
-  &:focus,
-  &.focus,
-  &.active {
-    border: $border-width solid $primary;
-    //box-shadow: $btn-box-shadow;
-  }
-
   .option-select-icon {
     align-self: flex-end;
     margin-right: $spacer;
@@ -195,7 +187,12 @@ $box-shadow-card-hover: 0 8px 16px rgba(0,0,0,0.20), 0 5px 10px rgba(0,0,0,0.15)
     opacity: 0;
   }
 
+  &:hover,
+  &:focus,
+  &.focus,
+  &.active,
   &.card-select {
+    border: $border-width solid $primary;
     .option-select-icon {
       opacity: 1;
     }
