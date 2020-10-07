@@ -523,8 +523,8 @@ $table-cell-padding:          .5rem .875rem !default;
 $table-cell-padding-sm:       .3rem !default;
 
 $table-bg:                    transparent !default;
-$table-accent-bg:             rgba($gray-100, .05);
-$table-hover-bg:              $gray-100;
+$table-accent-bg:             $gray-100;
+$table-hover-bg:              $gray-200;
 $table-active-bg:             $table-hover-bg !default;
 
 $table-border-width:          $border-width !default;

@@ -23,7 +23,6 @@ export default withLayout(function Tables() {
         
         <LinkedHeading h="2" id="simple-table">Simple table</LinkedHeading>   
         
-
         <div className="ebf-table">
             <header className="ebf-table-header">
                 <span className="ebf-table-headline">Table Header</span>
@@ -51,6 +50,311 @@ export default withLayout(function Tables() {
             </header>
             <div className="ebf-table-content">
                 <Table hover responsive>
+                    <thead>
+                        <tr>
+                            <th>
+                                <Form.Group controlId="formBasicCheckbox1" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox1" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </th>
+                            <th>Besitzer <i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>eMail <i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>IMEI <i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>EID <i className="ebf ebf-arr-up-fill"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox3" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox3" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Jacob</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="primary" className="badge-pill">Unbekannt</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr><tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr><tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr><tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr><tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr><tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr><tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr><tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox4" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox4" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Larry the Bird</td>
+                            <td>alayaward@ebf.com</td>
+                            <td>54321987</td>
+                            <td>
+                                <Button className="mb-0" variant="primary" size="sm" >Primary button</Button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </Table>
+            </div>
+        </div>
+
+        <LinkedHeading h="2" id="simple-table">Simple striped table</LinkedHeading>   
+        <p>Add class <code>table-striped</code> to <code>table</code> element</p>
+        <div className="ebf-table">
+            <header className="ebf-table-header">
+                <span className="ebf-table-headline">Table Header</span>
+                <div className="table-header-group">
+                    <InputGroup id="search" className="nav-search">          
+                        <FormControl
+                            placeholder="Search"
+                            aria-label="Search"
+                            aria-describedby="basic-addon"
+                            type="text"
+                        />
+                        <InputGroup.Append>
+                            <Button type="submit" id="basic-addon"><i className="ebf ebf-search-l"></i></Button>
+                        </InputGroup.Append>
+                    </InputGroup>   
+                                    
+                    <Form.Control className="ebf-select" as="select" custom>
+                        <option>First option select </option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </Form.Control> 
+                </div>
+            </header>
+            <div className="ebf-table-content">
+                <Table hover responsive className="table-striped">
                     <thead>
                         <tr>
                             <th>
