@@ -1,4 +1,4 @@
-//EBF Theme
+//EBF Colors
 
 $blue:    #2494c5 !default;
 
@@ -25,18 +25,3 @@ $gray-800: #7f8fa4 !default;  // Line heading color
 $gray-900: #55677b !default;  //
 
 $black:    #2b3e51 !default;
-
-// Fonts
-
-$theme-font:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif !default;
-$theme-font-alt:   -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif!default;
-
-// Variables
-
-$table-header-bg: $gray-gradient;
-$thead-bg: $gray-200;
-
-
-@import "bootstrap/scss/functions";
-@import "../variables";
-@import "bootstrap/scss/variables";

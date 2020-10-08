@@ -1,0 +1,18 @@
+//EBF Theme
+
+@import "colors";
+@import "fonts";
+@import "bootstrap/scss/functions";
+
+// Variables Theme Mod
+
+$thead-bg: $gray-200;
+
+
+@import "../../variables";
+@import "bootstrap/scss/variables";
+
+
+// Variables Theme Overwrite
+
+$table-header-bg: $gray-gradient;

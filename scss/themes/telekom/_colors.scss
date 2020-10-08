@@ -1,0 +1,29 @@
+//Telekom Colors
+
+$magenta:    #E30075;
+
+$primary: $magenta;
+
+$primary-100: lighten($magenta, 55%);
+$primary-200: lighten($magenta, 45%);
+$primary-300: lighten($magenta, 35%);
+$primary-400: lighten($magenta, 25%);
+$primary-500: lighten($magenta, 15%);
+$primary-600: darken($magenta, 10%);
+$primary-700: darken($magenta, 15%);
+$primary-800: darken($magenta, 20%);
+$primary-900: #BD0061;
+
+$gray-100: #f8f8f8 !default;
+$gray-200: #ededed !default;
+$gray-300: #dcdcdc !default;
+$gray-400: #d0d0d0 !default;
+$gray-500: #b2b2b2 !default;   // Line footer color
+$gray-600: #a3a3a3 !default;
+$gray-700: #7c7c7c !default;   // Line p color
+$gray-800: #737373 !default;   // Line heading color
+$gray-900: #383838 !default;
+
+$black:    #262626 !default;
+
+

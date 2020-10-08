@@ -1,0 +1,19 @@
+//Telekom Theme
+
+@import "colors";
+@import "fonts";
+@import "bootstrap/scss/functions";
+
+// Variables Theme Mod
+
+$thead-bg: white;
+
+
+@import "../../variables";
+@import "bootstrap/scss/variables";
+@import "card";
+
+
+// Variables Theme Overwrite
+
+$table-header-bg: white;
