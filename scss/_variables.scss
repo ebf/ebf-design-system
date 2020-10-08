@@ -428,12 +428,12 @@ $font-size-13:                ($font-size-base * .8125);
 $font-size-xs:                ($font-size-base * .75);
 
 // Refers to theme style variable
-$font-weight-thin:            fw-thin !default;
-$font-weight-light:           fw-light !default;
-$font-weight-normal:          fw-normal !default;
-$font-weight-medium:          fw-medium !default;
-$font-weight-bold:            fw-bold !default;
-$font-weight-extra-bold:      fw-extra-bold !default;
+$font-weight-thin:            $fw-thin !default;
+$font-weight-light:           $fw-light !default;
+$font-weight-normal:          $fw-normal !default;
+$font-weight-medium:          $fw-medium !default;
+$font-weight-bold:            $fw-bold !default;
+$font-weight-extra-bold:      $fw-extra-bold !default;
 
 $font-weight-base:            $font-weight-normal !default;
 $shape-height-base:            1 !default;
