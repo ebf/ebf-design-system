@@ -4,13 +4,6 @@ $telekom-font-location: "../../src/telekom-fonts";
 
 @font-face {
   font-family: TeleGroteskNext;  
-  font-style: normal;
-  src: url("#{$telekom-font-location}/TeleGroteskNext-Thin.woff2") format("woff2"), url("#{$telekom-font-location}/TeleGroteskNext-Thin.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: TeleGroteskNext-Thin;  
   font-weight: 100;
   font-style: normal;
   src: url("#{$telekom-font-location}/TeleGroteskNext-Thin.woff2") format("woff2"), url("#{$telekom-font-location}/TeleGroteskNext-Thin.woff") format("woff");
@@ -18,7 +11,7 @@ $telekom-font-location: "../../src/telekom-fonts";
 }
 
 @font-face {
-  font-family: TeleGroteskNext-Regular;
+  font-family: TeleGroteskNext;
   font-weight: 400;
   font-style: normal;
   src: url("#{$telekom-font-location}/TeleGroteskNext-Regular.woff2") format("woff2"), url("#{$telekom-font-location}/TeleGroteskNext-Regular.woff") format("woff");
@@ -26,7 +19,7 @@ $telekom-font-location: "../../src/telekom-fonts";
 }
 
 @font-face {
-  font-family: TeleGroteskNext-RegularItalic;
+  font-family: TeleGroteskNext;
   font-weight: 400;
   font-style: italic;
   src: url("#{$telekom-font-location}/TeleGroteskNext-RegularItalic.woff2") format("woff2"), url("#{$telekom-font-location}/TeleGroteskNext-RegularItalic.woff") format("woff");
@@ -35,14 +28,14 @@ $telekom-font-location: "../../src/telekom-fonts";
 
 
 @font-face {
-  font-family: TeleGroteskNext-Medium;
+  font-family: TeleGroteskNext;
   font-weight: 600;
   font-style: normal;
   src: url("#{$telekom-font-location}/TeleGroteskNext-Medium.woff2") format("woff2"), url("#{$telekom-font-location}/TeleGroteskNext-Medium.woff") format("woff");
   font-display: swap;
 }
 @font-face {
-  font-family: TeleGroteskNext-MediumItalic; 
+  font-family: TeleGroteskNext; 
   font-weight: 600; 
   font-style: italic;
   src: url("#{$telekom-font-location}/TeleGroteskNext-MediumItalic.woff2") format("woff2"), url("#{$telekom-font-location}/TeleGroteskNext-MediumItalic.woff") format("woff");
@@ -50,7 +43,7 @@ $telekom-font-location: "../../src/telekom-fonts";
 }
 
 @font-face {
-  font-family: TeleGroteskNext-Bold;  
+  font-family: TeleGroteskNext;  
   font-weight: 700;
   font-style: normal;
   src: url("#{$telekom-font-location}/TeleGroteskNext-Bold.woff2") format("woff2"), url("#{$telekom-font-location}/TeleGroteskNext-Bold.woff") format("woff");
@@ -58,7 +51,7 @@ $telekom-font-location: "../../src/telekom-fonts";
 }
 
 @font-face {
-  font-family: TeleGroteskNext-BoldItalic;  
+  font-family: TeleGroteskNext;  
   font-weight: 700;
   font-style: italic;
   src: url("#{$telekom-font-location}/TeleGroteskNext-BoldItalic.woff2") format("woff2"), url("#{$telekom-font-location}/TeleGroteskNext-BoldItalic.woff") format("woff");
@@ -66,7 +59,7 @@ $telekom-font-location: "../../src/telekom-fonts";
 }
 
 @font-face {
-  font-family: TeleGroteskNext-Ultra;  
+  font-family: TeleGroteskNext;  
   font-weight: 800;
   font-style: normal;
   src: url("#{$telekom-font-location}/TeleGroteskNext-Ultra.woff2") format("woff2"), url("#{$telekom-font-location}/TeleGroteskNext-Ultra.woff") format("woff");
