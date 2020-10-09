@@ -18,7 +18,6 @@
       font-size: $h6-font-size;
       margin-bottom: 0;   
     }
-
     .table-header-group {
       padding: 0!important;
       display: flex;
@@ -41,7 +40,7 @@
 
 
   .table {
-    font-size: $input-btn-font-size;
+    font-size: $theme-table-font-size;
     margin-bottom: 0;
     background-color: white;
 
@@ -55,7 +54,7 @@
       background: $white;
       border-bottom: none;
       color: $black;
-      font-size: $font-size-13;
+      font-size: $theme-th-font-size;
       font-weight: $font-weight-bold;
       padding: $table-cell-padding;      
       

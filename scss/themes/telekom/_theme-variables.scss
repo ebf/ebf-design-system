@@ -1,0 +1,81 @@
+// Theme Font Size Base -----------------------------
+$default-font-size-base:      1rem; // 16px
+
+$theme-font-size-base:        1.125rem; // Telekom 18px 
+
+$font-size-base:              $theme-font-size-base; 
+
+
+// Telekom Font Sizes 
+$TO-Font-Size-Hero-xl:        ($default-font-size-base * 3.75);   // 60px
+$TO-Font-Size-Hero-l:         ($default-font-size-base * 3.125);  // 50px
+$TO-Font-Size-Hero-s:         ($default-font-size-base * 2.5);    // 40px
+
+$TO-Font-Size-primary-xl:     ($default-font-size-base * 3);      // 48px
+$TO-Font-Size-primary-l:      ($default-font-size-base * 2.25);   // 36px
+$TO-Font-Size-primary-s:      ($default-font-size-base * 1.875);  // 30px
+
+$TO-Font-Size-secondary-xl:   ($TO-Font-Size-primary-l);          // 36px
+$TO-Font-Size-secondary-l:    ($default-font-size-base * 1.75);   // 28px
+$TO-Font-Size-secondary-s:    ($default-font-size-base * 1.5);    // 24px
+
+$TO-Font-Size-tertiary-xl:    ($TO-Font-Size-secondary-s);        // 24px
+$TO-Font-Size-tertiary-l:     ($default-font-size-base * 1.4375); // 23px
+$TO-Font-Size-tertiary-s:     ($default-font-size-base * 1.3125); // 21px
+
+$TO-Font-Size-quaternary-xl:  ($TO-Font-Size-tertiary-s);         // 21px
+$TO-Font-Size-quaternary-l:   ($default-font-size-base * 1.25);   // 20px
+$TO-Font-Size-quaternary-s:   ($default-font-size-base * 1.1875); // 19px
+
+$TO-Font-Size-copy:           ($theme-font-size-base);            // 18px
+
+$TO-Font-Size-small:          ($default-font-size-base * .9375);  // 15px
+$TO-Font-Size-micro:          ($default-font-size-base * .75);    // 12px
+
+
+// Theme Font Sizes Variables -----------------------------
+$font-size-xl:                $TO-Font-Size-secondary-s;  // 24px
+$font-size-lg:                $TO-Font-Size-quaternary-l; // 20px
+$font-size-md:                $TO-Font-Size-copy;         // 18px
+$font-size:                   $default-font-size-base;    // 16px
+$font-size-sm:                $TO-Font-Size-small;        // 15px
+$font-size-xsm:               $TO-Font-Size-micro;        // 12px
+$font-size-xs:                $TO-Font-Size-micro;        // 12px
+
+
+// Theme Font Weight Variables -----------------------------
+$theme-fw-thin:               100;
+$theme-fw-light:              300;
+$theme-fw-normal:             400;
+$theme-fw-medium:             600;
+$theme-fw-bold:               700;
+$theme-fw-extra-bold:         900;
+
+
+// Elements Font Properties -----------------------------
+
+// Headers
+$h1:                                    $TO-Font-Size-primary-xl;     // 48px
+$h2:                                    $TO-Font-Size-secondary-xl;   // 36px
+$h3:                                    $TO-Font-Size-tertiary-xl;    // 24px
+$h4:                                    $TO-Font-Size-quaternary-xl;  // 21px
+$h5:                                    $TO-Font-Size-quaternary-l;   // 20px
+$h6:                                    $TO-Font-Size-quaternary-s;   // 19px
+
+$theme-headings-line-height:            1.25;
+
+// Lead
+$theme-lead-font-size:                  $font-size-lg;
+
+// Paragraph 
+$theme-paragraph-font-size:             $font-size;
+$theme-paragraph-line-height:           1.33;
+
+// Navbar
+$theme-navbar-nav-link-font-size:       $font-size;
+
+// Table Font Sizes
+$theme-th-font-size:                    $font-size-sm;
+$theme-table-font-size:                 $default-font-size-base;
+
+// Elements Font Properties END -----------------------------

@@ -1,17 +1,37 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6  {
-    color: $black;   
-    font-family: $font-family-base;
+    color: $black;       
     font-weight: $font-weight-medium;
 }
 
+p {
+  line-height: $theme-paragraph-line-height;
+}
+
+pre {
+  margin-bottom: 0;
+}
+
+blockquote {
+  font-size: $font-size-lg;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+hr {
+  margin-top: $spacer;
+}
+
 .code-snippet {
-    display: block;
-    background-color: $black;
-    padding: $table-cell-padding;
-    border-radius: $border-radius-xl;
-    margin-bottom: $spacer * 6;
-    margin-top: $spacer * 2;
+  display: block;
+  background-color: $black;
+  padding: $table-cell-padding;
+  border-radius: $border-radius-xl;
+  margin-bottom: $spacer * 6;
+  margin-top: $spacer * 2;
 }
 
 .font-weight-thin {
@@ -43,16 +63,12 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .font-size-13 {
-    font-size: $font-size-13;
+    font-size: $font-size-xsm;
 }
 
 .font-size-xs {
     font-size: $font-size-xs;
 }
-
-
-
-
 
 .iconset-container {
     text-align: center;

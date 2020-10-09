@@ -2,21 +2,14 @@
 
 @import "colors";
 @import "fonts";
+@import "theme-variables-overwrites";
+@import "theme-variables";
 @import "bootstrap/scss/functions";
 
-// Variables Theme Mod
-
-// Tables
-
-$thead-bg: $gray-200;
-
-
+// Import Variables
 @import "../../variables";
 @import "bootstrap/scss/variables";
+
+
+// Import Variables Dependant Styles
 @import "card";
-
-// Variables Theme Overwrite
-
-//Tables
-
-$table-header-bg: $gray-gradient;

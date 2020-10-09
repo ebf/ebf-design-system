@@ -10,13 +10,15 @@
 
     .breadcrumb-item {
         font-weight: $font-weight-medium;
+        font-size: $font-size;        
 
         + .breadcrumb-item { 
           &:before {
             @extend %ebf;
             content: $ebf-chevron-right;
             color: $primary-900;
-            font-size: $font-size-sm;
+            font-size: $font-size;
+            line-height: 1.5;
           }
         }
 

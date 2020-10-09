@@ -12,8 +12,7 @@
     .nav-link {
       color: $nav-link-color;  
       transition: $smooth-color-animation;       
-      position: relative;   
-      
+      position: relative;         
 
       &::after {
         content: '';
@@ -24,7 +23,7 @@
         border-radius: $spacer / 2;
         margin: 0 auto;
         position: relative;
-        bottom: -2px;
+        bottom: 0;
         transition: $smooth-scaling-animation-dots;
         transform-origin: center;
         transform: scale(0);
@@ -59,7 +58,8 @@
         bottom: auto;
         position: absolute;
         left: 0;
-        bottom: .875rem;
+        line-height: inherit;
+        bottom: $theme-navbar-nav-link-font-size;
       }
 
       &.active {        
@@ -110,8 +110,8 @@
 
 .simple-tabs-nav {
   border-bottom: 0;
+  
   .nav-item {
-    
     padding: $input-btn-padding-y-sm $input-btn-padding-x;
 
     &:first-of-type {

@@ -42,8 +42,6 @@ $grays: map-merge((
   "black": $black
 ), $grays);
 
-$gray-gradient: linear-gradient(0deg, rgba(242,243,247,1) 0%, rgba(255,255,255,1) 100%);
-
 
 // Reds
 
@@ -413,42 +411,35 @@ $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
 
 // Fonts
-// Refers to theme style variable
+
+// Refers to Theme variables '_fonts.scss'
 $font-family-base:            $theme-font;                 
 $font-family-alt:             $theme-font;
 
-// Refers to theme style variable
-$font-size-base:              $theme-font-size-base !default; // Assumes the browser default, typically `16px`
 
-$font-size-xl:                ($font-size-base * 1.5);
-$font-size-lg:                ($font-size-base * 1.25);
-$font-size-md:                ($font-size-base * 1.125);
-$font-size-sm:                ($font-size-base * .875);
-$font-size-13:                ($font-size-base * .8125);
-$font-size-xs:                ($font-size-base * .75);
-
-// Refers to theme style variable
-$font-weight-thin:            $fw-thin !default;
-$font-weight-light:           $fw-light !default;
-$font-weight-normal:          $fw-normal !default;
-$font-weight-medium:          $fw-medium !default;
-$font-weight-bold:            $fw-bold !default;
-$font-weight-extra-bold:      $fw-extra-bold !default;
+// Refers to theme variables
+$font-weight-thin:            $theme-fw-thin !default;
+$font-weight-light:           $theme-fw-light !default;
+$font-weight-normal:          $theme-fw-normal !default;
+$font-weight-medium:          $theme-fw-medium !default;
+$font-weight-bold:            $theme-fw-bold !default;
+$font-weight-extra-bold:      $theme-fw-extra-bold !default;
 
 $font-weight-base:            $font-weight-normal !default;
 $shape-height-base:            1 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;  //2.1875rem
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base * 1.125 !default;
+// Refers to Theme variables '_fonts.scss'
+$h1-font-size:                $h1 !default;  //3rem
+$h2-font-size:                $h2 !default;
+$h3-font-size:                $h3 !default;
+$h4-font-size:                $h4 !default;
+$h5-font-size:                $h5 !default;
+$h6-font-size:                $h6 !default;
 
 $headings-font-family:        $font-family-base !default;
 $headings-margin-bottom:      ($spacer / 2);
 $headings-font-weight:        $font-weight-bold !default;
-$headings-line-height:        1.5 !default;
+$headings-line-height:        $theme-headings-line-height !default;
 $headings-color:              $body-color !default;
 
 $heading-letter-spacing:      .025em !default;
@@ -478,12 +469,12 @@ $display4-weight:             $font-weight-bold !default;
 $display-line-height:         $headings-line-height !default;
 $display-color:               $gray-500 !default;
 
-$paragraph-font-size:         1rem !default;
-$paragraph-font-weight:       300 !default;
-$paragraph-line-height:       1.7 !default;
+$paragraph-font-size:         $theme-paragraph-font-size !default;
+$paragraph-line-height:       $theme-paragraph-line-height !default;
+$paragraph-font-weight:       $font-weight-normal !default;
 
-$lead-font-size:              ($paragraph-font-size * 1.25);
-$lead-font-weight:            300 !default;
+$lead-font-size:              $theme-lead-font-size !default;
+$lead-font-weight:            $font-weight-normal !default;
 
 $small-font-size:             80% !default;
 
@@ -535,7 +526,8 @@ $table-border-width:          $border-width !default;
 $table-border-color:          $border-color !default;
 
 // Theme Mod
-$table-head-bg:               $thead-bg !default;
+$table-head-bg:               $theme-table-head-bg !default;
+$table-header-bg:             $theme-table-header-bg;
 //
 
 $table-head-color:            $gray-700 !default;
@@ -798,7 +790,7 @@ $navbar-nav-link-padding-x:         1rem !default;
 $navbar-nav-link-padding-y:         1rem !default;
 
 $navbar-nav-link-font-family:       $font-family-alt !default;
-$navbar-nav-link-font-size:         $font-size-sm !default;
+$navbar-nav-link-font-size:         $theme-navbar-nav-link-font-size !default;
 $navbar-nav-link-font-weight:       $font-weight-normal !default;
 $navbar-nav-link-text-transform:    normal !default;
 $navbar-nav-link-letter-spacing:    0 !default;
@@ -1071,7 +1063,7 @@ $footer-border-width:   1px !default;
 $footer-border-color:   $gray-200 !default;
 
 $footer-bg: $white !default;
-$footer-font-size: .9rem !default;
+$footer-font-size: $font-size-sm !default;
 $footer-color: $gray-600 !default;
 
 $footer-link-color: $gray-600 !default;

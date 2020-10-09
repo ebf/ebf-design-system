@@ -51,8 +51,8 @@ export default withLayout(function NavbarBrand() {
 										</Col>
 										<Col className="content-notif">
 											<span className="dropdown-title font-weight-bold">New phone order</span>
-											<p className="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
-											<span className="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+											<p className="dropdown-content font-size-xsm mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+											<span className="dropdown-timestamp font-size-xsm">Monday, April 10.2020.</span>
 										</Col>
 										<Col xs={1} className="dismiss-notif">
 											<i className="ebf ebf-plus"></i>
@@ -69,8 +69,8 @@ export default withLayout(function NavbarBrand() {
 										</Col>
 										<Col className="content-notif">
 											<span className="dropdown-title font-weight-bold">New world order</span>
-											<p className="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
-											<span className="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+											<p className="dropdown-content font-size-xsm mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+											<span className="dropdown-timestamp font-size-xsm">Monday, April 10.2020.</span>
 										</Col>
 										<Col xs={1} className="dismiss-notif">
 											<i className="ebf ebf-plus"></i>
@@ -87,8 +87,8 @@ export default withLayout(function NavbarBrand() {
 										</Col>
 										<Col className="content-notif">
 											<span className="dropdown-title font-weight-bold">New world order</span>
-											<p className="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
-											<span className="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+											<p className="dropdown-content font-size-xsm mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+											<span className="dropdown-timestamp font-size-xsm">Monday, April 10.2020.</span>
 										</Col>
 										<Col xs={1} className="dismiss-notif">
 											<i className="ebf ebf-plus"></i>
@@ -147,8 +147,8 @@ export default withLayout(function NavbarBrand() {
                         </div>
                         <div class="content-notif col">
                           <span class="dropdown-title font-weight-bold">New phone order</span>
-                          <p class="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
-                          <span class="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+                          <p class="dropdown-content font-size-xsm mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+                          <span class="dropdown-timestamp font-size-xsm">Monday, April 10.2020.</span>
                         </div>
                         <div class="dismiss-notif col-1"><i class="ebf ebf-plus"></i></div>
                     </div>
@@ -161,8 +161,8 @@ export default withLayout(function NavbarBrand() {
                         </div>
                         <div class="content-notif col">
                           <span class="dropdown-title font-weight-bold">New world order</span>
-                          <p class="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
-                          <span class="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+                          <p class="dropdown-content font-size-xsm mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+                          <span class="dropdown-timestamp font-size-xsm">Monday, April 10.2020.</span>
                         </div>
                         <div class="dismiss-notif col-1"><i class="ebf ebf-plus"></i></div>
                     </div>
@@ -175,8 +175,8 @@ export default withLayout(function NavbarBrand() {
                         </div>
                         <div class="content-notif col">
                           <span class="dropdown-title font-weight-bold">New world order</span>
-                          <p class="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
-                          <span class="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+                          <p class="dropdown-content font-size-xsm mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+                          <span class="dropdown-timestamp font-size-xsm">Monday, April 10.2020.</span>
                         </div>
                         <div class="dismiss-notif col-1"><i class="ebf ebf-plus"></i></div>
                     </div>
@@ -363,8 +363,8 @@ export default withLayout(function NavbarBrand() {
 										</Col>
 										<Col className="content-notif">
 											<span className="dropdown-title font-weight-bold">New phone order</span>
-											<p className="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
-											<span className="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+											<p className="dropdown-content font-size-xsm mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+											<span className="dropdown-timestamp font-size-xsm">Monday, April 10.2020.</span>
 										</Col>
 										<Col xs={1} className="dismiss-notif">
 											<i className="ebf ebf-plus"></i>
@@ -381,8 +381,8 @@ export default withLayout(function NavbarBrand() {
 										</Col>
 										<Col className="content-notif">
 											<span className="dropdown-title font-weight-bold">New world order</span>
-											<p className="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
-											<span className="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+											<p className="dropdown-content font-size-xsm mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+											<span className="dropdown-timestamp font-size-xsm">Monday, April 10.2020.</span>
 										</Col>
 										<Col xs={1} className="dismiss-notif">
 											<i className="ebf ebf-plus"></i>
@@ -398,8 +398,8 @@ export default withLayout(function NavbarBrand() {
 										</Col>
 										<Col className="content-notif">
 											<span className="dropdown-title font-weight-bold">New world order</span>
-											<p className="dropdown-content font-size-13 mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
-											<span className="dropdown-timestamp font-size-13">Monday, April 10.2020.</span>
+											<p className="dropdown-content font-size-xsm mt-1 mb-1">Curabitur ipsum est, porttitor vel turpis in, suscipit finibus urna. In laoreet eget nulla et viverra.</p>
+											<span className="dropdown-timestamp font-size-xsm">Monday, April 10.2020.</span>
 										</Col>
 										<Col xs={1} className="dismiss-notif">
 											<i className="ebf ebf-plus"></i>

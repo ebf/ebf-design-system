@@ -8,9 +8,9 @@
 }
 
 .nav-link {
-  font-size: .875rem;
   transition: $smooth-color-animation;
-
+  font-size: $navbar-nav-link-font-size;
+  
   &.active {
     color: $black;
   }
@@ -20,8 +20,7 @@
   border: none;
 }
 
-.nav-search {   
-  
+.nav-search {    
   
   &.gray-search {
     background: $gray-200;
@@ -96,8 +95,6 @@
     padding-top: 1rem;  
   }
 }
-
-
 
 .navbar-dark {
   .navbar-brand,

@@ -109,20 +109,3 @@ $ebf-font-location: "../../scss/fonts";
 .border-radius-sm {
   border-radius: $border-radius-sm;
 }
-
-pre {
-  margin-bottom: 0;
-}
-
-blockquote {
-  font-size: $font-size-lg;
-}
-
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-hr {
-  margin-top: $spacer;
-}

@@ -38,9 +38,14 @@
 
         span {
             background: transparent!important;
+            
 
             code {
                 background: transparent!important;
+
+                * {
+                  font-size: $font-size-xs;
+                }
             }
         }
     }
