@@ -560,9 +560,9 @@ $input-btn-line-height-lg:    $shape-height-lg !default;
 
 $input-btn-border-width:      1px !default;
 
-$input-btn-font-size-sm:      .75rem !default;
-$input-btn-font-size:         .875rem !default;
-$input-btn-font-size-lg:      1rem !default;
+$input-btn-font-size-sm:      $font-size-xsm !default;
+$input-btn-font-size:         $font-size-sm !default;
+$input-btn-font-size-lg:      $font-size !default;
 
 // Buttons
 
@@ -582,7 +582,7 @@ $btn-border-width:            $input-btn-border-width !default;
 
 
 
-$btn-font-weight:             400 !default;
+$btn-font-weight:             $font-weight-normal !default;
 $btn-text-transform:          uppercase !default;
 $btn-letter-spacing:          .025em !default;
 $btn-box-shadow:              0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);

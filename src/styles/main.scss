@@ -1,7 +1,7 @@
 // override the location for the fonts directory
 $ebf-font-location: "../../scss/fonts";
 
-@import "../../scss/telekom";
+@import "../../scss/ebf";
 
 .header {
   position: sticky;
@@ -9,17 +9,6 @@ $ebf-font-location: "../../scss/fonts";
   z-index: 1040; 
 }
 
-.side-nav {
-  display: flex;
-  position: sticky;
-  flex-direction: column;
-  justify-content: space-between;
-  top: 4rem;
-  z-index: 1000;
-  height: calc(100vh - 4rem);
-  background-color: $body-bg;
-  border-right: 1px solid $border-color;
-}
 
 .heading {
   margin-top: 2rem;
