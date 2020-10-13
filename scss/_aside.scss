@@ -19,20 +19,18 @@
 
 
 .side-nav {
+  
   display: flex;
-  position: sticky;
   flex-direction: column;
   justify-content: space-between;
-  //top: 4rem;
-  z-index: 1000;
-  //min-height: calc(100vh - 4rem);
-  min-height: 100vh;
-  height: 100vh;
-  background-color: $gray-400;
-  border-right: 1px solid $border-color;
+  position: sticky;
+  top: 4rem;
   overflow-y: scroll;
-  left: 0!important;
+  z-index: 1000;
+  height: calc(100vh - 4rem);
   background: linear-gradient(180deg, white 0%, $gray-100 100%);
+  background-color: #fff;
+  border-right: 1px solid #dcdcdc;
 
   .btn.sidebar-toggler {
     position: absolute;

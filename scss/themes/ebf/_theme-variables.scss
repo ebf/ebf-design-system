@@ -28,12 +28,12 @@ $theme-fw-extra-bold:         900;
 // Elements Font Properties -----------------------------
 
 // Headers
-$h1:                                    $default-font-size-base * 2.5 !default;     // 40px
-$h2:                                    $default-font-size-base * 2 !default;       // 32px
-$h3:                                    $default-font-size-base * 1.75 !default;    // 28px
-$h4:                                    $default-font-size-base * 1.5 !default;     // 24px
-$h5:                                    $default-font-size-base * 1.25 !default;    // 20px
-$h6:                                    $default-font-size-base * 1.125 !default;   // 18px
+$h1:                $default-font-size-base * 2.5 !default;     // 40px
+$h2:                $default-font-size-base * 2 !default;       // 32px
+$h3:                $default-font-size-base * 1.75 !default;    // 28px
+$h4:                $default-font-size-base * 1.5 !default;     // 24px
+$h5:                $default-font-size-base * 1.25 !default;    // 20px
+$h6:                $default-font-size-base * 1.125 !default;   // 18px
       
 $theme-headings-line-height:            1.5;
 

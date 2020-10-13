@@ -15,46 +15,21 @@ import SideNav from "./SideNav"
 import Toc, { TocProvider } from './Toc';
 import "../styles/main.scss";
 
-import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
-import 'react-pro-sidebar/dist/css/styles.css';
-
 const Layout = ({ children, location }) => (
-  
   <main className="d-flex flex-column min-vh-100">
-    
-      
-    
     <Header siteTitle="EBF Design System" />
 
-    
-
-    {/* <ProSidebar>
-      <Menu iconShape="circle">
-        <MenuItem icon={<i className="ebf ebf-apps-fill" />}>Dashboard</MenuItem>
-        <SubMenu title="Components" icon={<i className="ebf ebf-apps-fill" />}>
-          <MenuItem>Component 1</MenuItem>
-          <MenuItem>Component 2</MenuItem>
-        </SubMenu>
-      </Menu>
-    </ProSidebar> */}
-
     <Container fluid className="flex-grow-1">
-    
-      <TocProvider>
         <Row>
-
-          <Col as={SideNav} xs={12} md={3} xl={2} location={location} className="sidebar-offcanvas"></Col>
-
-          <Col as={Toc}  xl={2}></Col>   
-
+        <TocProvider>
+          <Col as={SideNav} xs={12} md={3} xl={2} location={location} />
+          <Col as={Toc} className="d-none d-xl-block" xl={2} />
           <Col xs={12} md={9} xl={8} id="rb-docs-content">
             {children}
           </Col>
-
-        </Row>
-      </TocProvider>
+        </TocProvider>
+        </Row>      
     </Container>
-    
 
     <footer className="footer shadow">  
       <div className="container-fluid">
