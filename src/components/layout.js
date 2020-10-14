@@ -47,7 +47,7 @@ const Layout = ({ children, location }) => (
             />
           </Col>
           <Col className="text-right">
-            <span>v1.0.11</span>
+            <span>v1.0.12</span>
           </Col>
         </Row>
       </div>        
