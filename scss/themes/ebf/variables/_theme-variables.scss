@@ -66,14 +66,14 @@ $h4:                $default-font-size-base * 1.5 !default;     // 24px
 $h5:                $default-font-size-base * 1.25 !default;    // 20px
 $h6:                $default-font-size-base * 1.125 !default;   // 18px
       
-$theme-headings-line-height:            1.5rem;
+$theme-headings-line-height:            1.5;
 
 // Lead      
 $theme-lead-font-size:                  $font-size-lg;
 
 // Paragraph     
 $theme-paragraph-font-size:             $font-size-base;
-$theme-paragraph-line-height:           1.7rem;
+$theme-paragraph-line-height:           1.7;
 
 // Navbar
 $theme-navbar-nav-link-font-size:       $font-size-sm;
