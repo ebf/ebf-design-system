@@ -40,7 +40,19 @@ export default withLayout(function Breadcrumbs() {
        
         <CopyBlock
           theme={github}
-          text={`<nav aria-label="breadcrumb">\n\t<ol class="breadcrumb">\n\t\t<li class="breadcrumb-item">\n\t\t\t<a href="#" role="button">Home</a>\n\t\t</li>\n\t\t<li class="breadcrumb-item">\n\t\t\t<a href="#" role="button">Library</a>\n\t\t</li>\n\t\t<li class="breadcrumb-item active" aria-current="page">\n\t\t\t<span class="active">Data</span>\n\t\t</li>\n\t</ol>\n</nav>`}
+          text={`<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="#" role="button">Home</a>
+    </li>
+    <li class="breadcrumb-item">
+      <a href="#" role="button">Library</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">
+      <span class="active">Data</span>
+    </li>
+  </ol>
+</nav>`}
           language="jsx"
           showLineNumbers
           wrapLines
@@ -80,7 +92,19 @@ export default withLayout(function Breadcrumbs() {
        
         <CopyBlock
           theme={github}
-          text={`<nav aria-label="breadcrumb" class="border-bottom">\n\t<ol class="breadcrumb">\n\t\t<li class="breadcrumb-item">\n\t\t\t<a href="#" role="button">Home</a>\n\t\t</li>\n\t\t<li class="breadcrumb-item">\n\t\t\t<a href="#" role="button">Library</a>\n\t\t</li>\n\t\t<li class="breadcrumb-item active" aria-current="page">\n\t\t\t<span class="active">Data</span>\n\t\t</li>\n\t</ol>\n</nav>`}
+          text={`<nav aria-label="breadcrumb" class="border-bottom">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="#" role="button">Home</a>
+    </li>
+    <li class="breadcrumb-item">
+      <a href="#" role="button">Library</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">
+      <span class="active">Data</span>
+    </li>
+  </ol>
+</nav>`}
           language="jsx"
           showLineNumbers
           wrapLines

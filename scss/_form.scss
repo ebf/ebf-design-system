@@ -169,6 +169,7 @@ fieldset {
       width: .75rem;
       height: .75rem;      
       transition: $smooth-scaling-animation;
+      top: add(($default-font-size-base * $line-height-base - $custom-control-indicator-size) / 2, $custom-control-indicator-border-width * 2)!important;
     }
     
     &:focus,

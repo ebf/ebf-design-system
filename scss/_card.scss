@@ -53,7 +53,7 @@ $box-shadow-card-hover: 0 8px 16px rgba(0,0,0,0.20), 0 5px 10px rgba(0,0,0,0.15)
 
   .card-text {
     color: $gray-800;
-    font-size: $font-size-sm;    
+    font-size: $theme-card-text-size;  
   }
   
   &:hover {
@@ -97,7 +97,7 @@ $box-shadow-card-hover: 0 8px 16px rgba(0,0,0,0.20), 0 5px 10px rgba(0,0,0,0.15)
   position: relative;
   overflow: hidden;
   border: none;
-  font-weight: $font-weight-medium;
+  font-weight: $theme-summary-card-text-font-weight;
   box-shadow: $box-shadow;
   font-size: $font-size-base - .125;  
   background: white;
@@ -109,9 +109,8 @@ $box-shadow-card-hover: 0 8px 16px rgba(0,0,0,0.20), 0 5px 10px rgba(0,0,0,0.15)
       .list-group-item {        
         background-color: transparent;
         color: $black;
-        border: none;
-        
-        padding: $spacer / 2 0 ;
+        border: none;        
+        padding: $theme-card-list-padding;
 
         &.eid-color {
           color: $primary;
@@ -119,7 +118,7 @@ $box-shadow-card-hover: 0 8px 16px rgba(0,0,0,0.20), 0 5px 10px rgba(0,0,0,0.15)
 
         span {
           color: $gray-800;
-          font-weight: $font-weight-normal;
+          font-weight: $theme-summary-card-label-font-weight;
         }
       }
     }

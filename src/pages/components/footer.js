@@ -22,11 +22,11 @@ export default withLayout(function Footer() {
   <div class="flex-grow-1 container-fluid">Content</div>
   <footer class="footer shadow">
     <div class="container">
-        <div class="align-items-center row">
-          <div class="text-left col"><span>© 2020 <a href="https://www.ebf.com">EBF</a></span></div>
-          <div class="text-center col"><img src="image.svg" width="auto" height="24" alt="Logo"></div>
-          <div class="text-right col"><span>v1.0.11</span></div>
-        </div>
+      <div class="align-items-center row">
+        <div class="text-left col"><span>© 2020 <a href="https://www.ebf.com">EBF</a></span></div>
+        <div class="text-center col"><img src="image.svg" width="auto" height="24" alt="Logo"></div>
+        <div class="text-right col"><span>v1.0.11</span></div>
+      </div>
     </div>
   </footer>
 </main>`}
@@ -70,11 +70,11 @@ export default withLayout(function Footer() {
       theme={github}
       text={`<footer class="footer shadow">
   <div class="container">
-      <div class="align-items-center row">
-        <div class="text-left col"><span>© 2020 <a href="https://www.ebf.com">EBF</a></span></div>
-        <div class="text-center col"><img src="image.svg" width="auto" height="24" alt="Logo"></div>
-        <div class="text-right col"><span>v1.0.12</span></div>
-      </div>
+    <div class="align-items-center row">
+      <div class="text-left col"><span>© 2020 <a href="https://www.ebf.com">EBF</a></span></div>
+      <div class="text-center col"><img src="image.svg" width="auto" height="24" alt="Logo"></div>
+      <div class="text-right col"><span>v1.0.12</span></div>
+    </div>
   </div>
 </footer>`}
       language="jsx"
@@ -118,11 +118,11 @@ export default withLayout(function Footer() {
       theme={github}
       text={`<footer class="footer shadow">
   <div class="container container-fluid">
-      <div class="align-items-center row">
-        <div class="text-left col"><span>© 2020 <a href="https://www.ebf.com">EBF</a></span></div>
-        <div class="text-center col"><img src="image.svg" width="auto" height="24" alt="Logo"></div>
-        <div class="text-right col"><span>v1.0.11</span></div>
-      </div>
+    <div class="align-items-center row">
+      <div class="text-left col"><span>© 2020 <a href="https://www.ebf.com">EBF</a></span></div>
+      <div class="text-center col"><img src="image.svg" width="auto" height="24" alt="Logo"></div>
+      <div class="text-right col"><span>v1.0.11</span></div>
+    </div>
   </div>
 </footer>`}
       language="jsx"

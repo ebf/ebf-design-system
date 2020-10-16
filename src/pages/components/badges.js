@@ -32,7 +32,7 @@ export default withLayout(function Badges() {
       <LinkedHeading h="1" id="badges">Badges</LinkedHeading>   
       <p className="lead">Badges scale to match the size of the immediate parent element by using relative font sizing and em units.</p>
 
-      <div>
+      <div className="mt-4">
         <h1>
           Example heading <Badge variant="primary">New</Badge>
         </h1>
@@ -53,16 +53,18 @@ export default withLayout(function Badges() {
         </h6>
       </div>
 
-      <br/>
+      
 
-      <div className="mb-3 copyblock-container">
-        <div>
+      <div className="mb-5 copyblock-container">
+        <div className="shadow-none mt-4">
           <h3>Code example</h3>
         </div>
        
         <CopyBlock
           theme={github}
-          text={`<h1>\n\tExample Heading <span class="badge badge-primary">New</span> \n</h1>`}
+          text={`<h1>
+  Example Heading <span class="badge badge-primary">New</span>
+</h1>`}
           language="jsx"
           showLineNumbers
           wrapLines
@@ -70,7 +72,7 @@ export default withLayout(function Badges() {
         />
       </div>
 
-      <br/>
+      
             
 
       <LinkedHeading h="2" id="badges-as-counters">Badges as counters</LinkedHeading>
@@ -81,16 +83,20 @@ export default withLayout(function Badges() {
         <span className="sr-only">unread messages</span>
       </Button>
       
-      <br/>
+      
 
-      <div className="mb-3 copyblock-container">
-        <div>
+      <div className="mb-5 copyblock-container">
+        <div className="shadow-none mt-4">
           <h3>Code example</h3>
         </div>
        
         <CopyBlock
           theme={github}
-          text={`<button type="button" class="btn btn-primary">\n\tProfile\n\t<span class="badge-round-element badge badge-white">99+</span>\n\t<span class="sr-only">unread messages</span> \n</button>`}
+          text={`<button type="button" class="btn btn-primary">
+  Profile
+  <span class="badge-round-element badge badge-white">99+</span>
+  <span class="sr-only">unread messages</span>
+</button>`}
           language="jsx"
           showLineNumbers
           wrapLines
@@ -98,7 +104,7 @@ export default withLayout(function Badges() {
         />
       </div>
 
-      <br/>
+      
 
       <p>
         Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies.
@@ -107,7 +113,7 @@ export default withLayout(function Badges() {
         Unless the context is clear, consider including additional context with a visually hidden piece of additional text.  
       </p>
 
-      <br/>
+      
 
       <LinkedHeading h="2" id="contextual-variations">Contextual variations</LinkedHeading>
       <p>Add any of the below mentioned modifier classes to change the appearance of a badge.</p>
@@ -116,10 +122,10 @@ export default withLayout(function Badges() {
         <Badge key={variant} variant={variant}>{variant}</Badge>
       ))}
       
-      <br/>
       
-      <div className="mb-3 copyblock-container">
-        <div>
+      
+      <div className="mb-5 copyblock-container">
+        <div className="shadow-none mt-4">
           <h3>Code example</h3>
         </div>
        
@@ -133,7 +139,7 @@ export default withLayout(function Badges() {
         />
       </div>
 
-      <br/>    
+          
 
       <LinkedHeading h="2" id="pill">Pill</LinkedHeading>
       <p>Use the <code>.badge-pill</code> modifier class to make badges more rounded (with a larger border-radius and additional horizontal padding).</p>
@@ -142,10 +148,10 @@ export default withLayout(function Badges() {
         <Badge key={variant} pill variant={variant}>{variant}</Badge>
       ))}
 
-      <br/>
+      
 
-      <div className="mb-3 copyblock-container">
-        <div>
+      <div className="mb-5 copyblock-container">
+        <div className="shadow-none mt-4">
           <h3>Code example</h3>
         </div>
        
@@ -159,19 +165,59 @@ export default withLayout(function Badges() {
         />  
       </div>
 
-      <br/>    
+          
 
       <LinkedHeading h="2" id="progress-pill">Progress Badge</LinkedHeading>
       <p>Use the <code>.badge-circle</code> modifier class to make badges rounded. These are specifically used for tracking process statuses.</p>
+      <div className="badge-progress-holder">
+        {PROGRESS.map((variant) => (
+          <div key={variant}>
+            <Badge variant={variant} className="badge-circle">{variant}</Badge>
+            <span className="progress-badge-title">{variant}</span>
+          </div>
+        ))}
+      </div>
 
-      {PROGRESS.map((variant) => (
-        <div key={variant}>
-          <Badge variant={variant} className="badge-circle">{variant}</Badge>
-          <span className="progress-badge-title">{variant}</span>
+      <div className="mb-5 copyblock-container">
+        <div className="shadow-none mt-4">
+          <h3>Code example</h3>
         </div>
-      ))}
+       
+        <CopyBlock
+          theme={github}
+          text={`<div>
+  <span class="badge-circle badge badge-uninformed">uninformed</span>
+  <span class="progress-badge-title">uninformed</span>
+</div>
+<div>
+  <span class="badge-circle badge badge-queued">queued</span>
+  <span class="progress-badge-title">queued</span>
+</div>
+<div>
+  <span class="badge-circle badge badge-pending">pending</span>
+  <span class="progress-badge-title">pending</span>
+</div>
+<div>
+  <span class="badge-circle badge badge-failed">failed</span>
+  <span class="progress-badge-title">failed</span>
+</div>
+<div>
+  <span class="badge-circle badge badge-interrupted">interrupted</span>
+  <span class="progress-badge-title">interrupted</span>
+</div>
+<div>
+  <span class="badge-circle badge badge-success">success</span>
+  <span class="progress-badge-title">success</span>
+</div>
+       `}
+          language="jsx"
+          showLineNumbers
+          wrapLines
+          codeBlock
+        />
+      </div>
 
-      <br/>
+      
       
     </>
   )

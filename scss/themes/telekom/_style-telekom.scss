@@ -1,14 +1,10 @@
 //Telekom Theme
+
 @import "colors";
 @import "fonts";
-@import "theme-variables";
-@import "theme-variables-overwrites";
+@import "variables/theme-variables";
+@import "variables/theme-variables-overwrites";
 @import "bootstrap/scss/functions";
-
-// //------------------ Variable Theme Redefine
-
-
-
 
 // Import Variables
 @import "../../variables";
@@ -16,4 +12,3 @@
 
 
 // Import Variables Dependant Styles
-@import "card";

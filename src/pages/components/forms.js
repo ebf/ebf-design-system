@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Col, Form } from 'react-bootstrap';
-import { CopyBlock, atomOneLight } from 'react-code-blocks';
+import { CopyBlock, github } from 'react-code-blocks';
 import LinkedHeading from '../../components/LinkedHeading';
 import withLayout from "../../with-layout"
 
@@ -69,14 +69,31 @@ export default withLayout(function FormsPage() {
         </Button>
       </Form>
 
-      <div className="mb-4 copyblock-container">
+      <div className="mb-5 copyblock-container">
             <div>
                 <h3>Code example</h3>               
             </div>
         
             <CopyBlock
-            theme={atomOneLight}
-            text={`<form>\n\t<div class="form-group">\n\t\t<label class="form-label" for="formBasicEmail">Email address</label>\n\t\t<input placeholder="Enter email" type="email" id="formBasicEmail" class="form-control">\n\t\t<small class="text-muted form-text">We'll never share your email with anyone else.</small>\n\t</div>\n\t<div class="form-group">\n\t\t<label class="form-label" for="formBasicPassword">Password</label>\n\t\t<input placeholder="Password" type="password" id="formBasicPassword" class="form-control">\n\t</div>\n\t<div class="form-group">\n\t\t<div class="form-check">\n\t\t\t<input type="checkbox" id="formBasicCheckbox" class="form-check-input">\n\t\t\t<label title="" for="formBasicCheckbox" class="form-check-label">Check me out</label>\n\t\t</div>\n\t</div>\n\t<button type="submit" class="btn btn-primary">Submit</button>\n</form>`}
+            theme={github}
+            text={`<form>
+  <div class="form-group">
+    <label class="form-label" for="formBasicEmail">Email address</label>
+    <input placeholder="Enter email" type="email" id="formBasicEmail" class="form-control">
+    <small class="text-muted form-text">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="formBasicPassword">Password</label>
+    <input placeholder="Password" type="password" id="formBasicPassword" class="form-control">
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input type="checkbox" id="formBasicCheckbox" class="form-check-input">
+      <label title="" for="formBasicCheckbox" class="form-check-label">Check me out</label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>`}
             language="jsx"
             showLineNumbers
             wrapLines
@@ -108,14 +125,31 @@ export default withLayout(function FormsPage() {
         </Button>
       </Form>
 
-      <div className="mb-4 copyblock-container">
+      <div className="mb-5 copyblock-container">
             <div>
                 <h3>Code example</h3>               
             </div>
         
             <CopyBlock
-            theme={atomOneLight}
-            text={`<form class="bg-gray-200 p-3">\n\t<div class="form-group">\n\t\t<label class="form-label" for="formBasicEmail">Email address</label>\n\t\t<input placeholder="Enter email" type="email" id="formBasicEmail" class="form-control">\n\t\t<small class="text-muted form-text">We'll never share your email with anyone else.</small>\n\t</div>\n\t<div class="form-group">\n\t\t<label class="form-label" for="formBasicPassword">Password</label>\n\t\t<input placeholder="Password" type="password" id="formBasicPassword" class="form-control">\n\t</div>\n\t<div class="form-group">\n\t\t<div class="form-check">\n\t\t\t<input type="checkbox" id="formBasicCheckbox" class="form-check-input">\n\t\t\t<label title="" for="formBasicCheckbox" class="form-check-label">Check me out</label>\n\t\t</div>\n\t</div>\n\t<button type="submit" class="btn btn-primary">Submit</button>\n</form>`}
+            theme={github}
+            text={`<form class="bg-gray-200 p-3">
+  <div class="form-group">
+    <label class="form-label" for="formBasicEmail">Email address</label>
+    <input placeholder="Enter email" type="email" id="formBasicEmail" class="form-control">
+    <small class="text-muted form-text">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="formBasicPassword">Password</label>
+    <input placeholder="Password" type="password" id="formBasicPassword" class="form-control">
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input type="checkbox" id="formBasicCheckbox" class="form-check-input">
+      <label title="" for="formBasicCheckbox" class="form-check-label">Check me out</label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>`}
             language="jsx"
             showLineNumbers
             wrapLines
@@ -146,7 +180,7 @@ export default withLayout(function FormsPage() {
         </Form.Text>
       </Form.Group>      
 
-      <div className="mb-4 copyblock-container">
+      <div className="mb-5 copyblock-container">
           <div className="shadow-none mt-4">
               <h3>Code example</h3>               
           </div>
@@ -160,8 +194,12 @@ export default withLayout(function FormsPage() {
           </Form>         
       
           <CopyBlock
-          theme={atomOneLight}
-          text={`<form>\n\t<label class="form-label">Large input field</label>\n\t<input placeholder="Large text" type="text" class="form-control form-control-lg">\n\t<small class="text-muted form-text">We'll never share your email with anyone else.</small>\n</form>`}
+          theme={github}
+          text={`<form>
+  <label class="form-label">Large input field</label>
+  <input placeholder="Large text" type="text" class="form-control form-control-lg">
+  <small class="text-muted form-text">We'll never share your email with anyone else.</small>
+</form>`}
           language="jsx"
           showLineNumbers
           wrapLines
@@ -181,8 +219,12 @@ export default withLayout(function FormsPage() {
           </Form>        
       
           <CopyBlock
-          theme={atomOneLight}
-          text={`<form>\n\t<label class="form-label">Normal input field</label>\n\t<input placeholder="Normal text" type="text" class="form-control form-control">\n\t<small class="text-muted form-text">We'll never share your email with anyone else.</small>\n</form>`}
+          theme={github}
+          text={`<form>
+  <label class="form-label">Normal input field</label>
+  <input placeholder="Normal text" type="text" class="form-control form-control">
+  <small class="text-muted form-text">We'll never share your email with anyone else.</small>
+</form>`}
           language="jsx"
           showLineNumbers
           wrapLines
@@ -202,8 +244,12 @@ export default withLayout(function FormsPage() {
           </Form>        
       
           <CopyBlock
-          theme={atomOneLight}
-          text={`<form>\n\t<label class="form-label">Small input field</label>\n\t<input placeholder="Small text" type="text" class="form-control form-control-sm">\n\t<small class="text-muted form-text">We'll never share your email with anyone else.</small>\n</form>`}
+          theme={github}
+          text={`<form>
+  <label class="form-label">Small input field</label>
+  <input placeholder="Small text" type="text" class="form-control form-control-sm">
+  <small class="text-muted form-text">We'll never share your email with anyone else.</small>
+</form>`}
           language="jsx"
           showLineNumbers
           wrapLines
@@ -247,7 +293,7 @@ export default withLayout(function FormsPage() {
         </Form.Group>
       </Form>
 
-      <div className="mb-4 copyblock-container">
+      <div className="mb-5 copyblock-container">
         <div className="shadow-none mt-4">
             <h3>Code example</h3>               
         </div>
@@ -264,8 +310,15 @@ export default withLayout(function FormsPage() {
         </Form>         
       
         <CopyBlock
-        theme={atomOneLight}
-        text={`<form>\n\t<label class="form-label">Large custom select</label>\n\t<select class="ebf-select form-control form-control-lg">\n\t\t<option>1</option>\n\t\t<option>2</option>\n\t\t<option>3</option>\n\t</select>\n</form>`}
+        theme={github}
+        text={`<form>
+  <label class="form-label">Large custom select</label>
+  <select class="ebf-select form-control form-control-lg">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+  </select>
+</form>`}
         language="jsx"
         showLineNumbers
         wrapLines
@@ -288,8 +341,15 @@ export default withLayout(function FormsPage() {
         </Form>         
       
         <CopyBlock
-        theme={atomOneLight}
-        text={`<form>\n\t<label class="form-label">Large custom select</label>\n\t<select class="ebf-select form-control">\n\t\t<option>1</option>\n\t\t<option>2</option>\n\t\t<option>3</option>\n\t</select>\n</form>`}
+        theme={github}
+        text={`<form>
+  <label class="form-label">Large custom select</label>
+  <select class="ebf-select form-control">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    </select>
+</form>`}
         language="jsx"
         showLineNumbers
         wrapLines
@@ -312,8 +372,15 @@ export default withLayout(function FormsPage() {
         </Form>         
       
         <CopyBlock
-        theme={atomOneLight}
-        text={`<form>\n\t<label class="form-label">Large custom select</label>\n\t<select class="ebf-select form-control form-control-sm">\n\t\t<option>1</option>\n\t\t<option>2</option>\n\t\t<option>3</option>\n\t</select>\n</form>`}
+        theme={github}
+        text={`<form>
+  <label class="form-label">Large custom select</label>
+  <select class="ebf-select form-control form-control-sm">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+  </select>
+</form>`}
         language="jsx"
         showLineNumbers
         wrapLines
@@ -352,14 +419,42 @@ export default withLayout(function FormsPage() {
       </Form>   
          
       
-      <div className="mb-4 copyblock-container">
+      <div className="mb-5 copyblock-container">
         <div className="shadow-none mt-4">
             <h3>Code example</h3>               
         </div>             
       
         <CopyBlock
-        theme={atomOneLight}
-        text={`<form>\n\t<div class="form-group">\n\t\t<label class="form-label" for="Form.ControlsText">Text</label>\n\t\t<input placeholder="Enter text" type="text" id="Form.ControlsText" class="form-control">\n\t</div>\n\t<div class="form-group">\n\t\t<label class="form-label" for="Form.ControlsEmail">Email address</label>\n\t\t<input placeholder="Enter email" type="email" id="Form.ControlsEmail" class="form-control">\n\t</div>\n\t<div class="form-group">\n\t\t<label class="form-label" for="Form.ControlsPassword">Password</label>\n\t\t<input type="password" id="Form.ControlsPassword" class="form-control">\n\t</div>\n\t<div class="form-group">\n\t\t<label class="form-label" for="Form.ControlsFile">File</label>\n\t\t<input type="file" id="Form.ControlsFile" class="form-control-file">\n\t\t<small class="form-text text-muted">Example block-level help text here.</small>\n\t</div>\n\t<div class="form-group">\n\t\t<div class="form-check">\n\t\t\t<input readonly="" type="checkbox" class="form-check-input" checked="">\n\t\t\t<label title="" class="form-check-label">Checkbox</label>\n\t\t</div>\n\t\t<div class="form-check">\n\t\t\t<input readonly="" type="radio" class="form-check-input" checked="">\n\t\t\t<label title="" class="form-check-label">Radio</label>\n\t\t</div>\n\t</div>\n</form>`}
+        theme={github}
+        text={`<form>
+  <div class="form-group">
+    <label class="form-label" for="Form.ControlsText">Text</label>
+    <input placeholder="Enter text" type="text" id="Form.ControlsText" class="form-control">
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="Form.ControlsEmail">Email address</label>
+    <input placeholder="Enter email" type="email" id="Form.ControlsEmail" class="form-control">
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="Form.ControlsPassword">Password</label>
+    <input type="password" id="Form.ControlsPassword" class="form-control">
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="Form.ControlsFile">File</label>
+    <input type="file" id="Form.ControlsFile" class="form-control-file">
+    <small class="form-text text-muted">Example block-level help text here.</small>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input readonly="" type="checkbox" class="form-check-input" checked="">
+      <label title="" class="form-check-label">Checkbox</label>
+    </div>
+    <div class="form-check">
+      <input readonly="" type="radio" class="form-check-input" checked="">
+      <label title="" class="form-check-label">Radio</label>
+    </div>
+  </div>
+</form>`}
         language="jsx"
         showLineNumbers
         wrapLines
@@ -367,26 +462,91 @@ export default withLayout(function FormsPage() {
         />
       </div>
 
-      <br/>    
-
       <LinkedHeading h="2" id="form-controls">Checkboxes form controls</LinkedHeading>
-      
-        
+       
       <Form>
         <Form.Group>         
             <Checkbox id="formBasicCheckbox4" inline label="1" />
             <Checkbox id="formBasicCheckbox5" inline label="2" />
             <Checkbox id="formBasicCheckbox6" inline label="3" />
           </Form.Group>
-
-          <Form.Group>
-            <Radio id="radio5" name="radioGroup" inline label="5" />
-            <Radio id="radio6" name="radioGroup" inline label="6" />
-            <Radio id="radio7" name="radioGroup" inline label="7" />          
-        </Form.Group>
       </Form>
-        <br/>
-        <Form>
+      <div className="mb-5 copyblock-container">
+        <div className="shadow-none mt-4"> 
+            <h3>Checkboxes Code example</h3>               
+        </div>
+    
+        <CopyBlock
+        theme={github}
+        text={`<form class="">
+  <div class="form-group">
+    <div class="form-check form-check-inline">
+      <input type="checkbox" id="formBasicCheckbox4" class="form-check-input">
+      <label title="" for="formBasicCheckbox4" class="form-check-label">1</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" id="formBasicCheckbox5" class="form-check-input">
+      <label title="" for="formBasicCheckbox5" class="form-check-label">2</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input type="checkbox" id="formBasicCheckbox6" class="form-check-input">
+      <label title="" for="formBasicCheckbox6" class="form-check-label">3</label>
+    </div>
+  </div>  
+</form>`}
+            language="jsx"
+            showLineNumbers
+            wrapLines
+            codeBlock
+            />
+      </div>
+
+      <LinkedHeading h="2" id="form-controls">Radio form controls</LinkedHeading>
+       
+       <Form>     
+ 
+           <Form.Group>
+             <Radio id="radio5" name="radioGroup" inline label="5" />
+             <Radio id="radio6" name="radioGroup" inline label="6" />
+             <Radio id="radio7" name="radioGroup" inline label="7" />          
+         </Form.Group>
+       </Form>
+
+       <div className="mb-5 copyblock-container">
+         <div className="shadow-none mt-4"> 
+             <h3>Radio Code example</h3>               
+         </div>
+     
+         <CopyBlock
+         theme={github}
+         text={`<form class="">
+   <div class="form-group">
+     <div class="form-check form-check-inline">
+       <input name="radioGroup" type="radio" id="radio5" class="form-check-input">
+       <label title="" for="radio5" class="form-check-label">5</label>
+     </div>
+     <div class="form-check form-check-inline">
+       <input name="radioGroup" type="radio" id="radio6" class="form-check-input">
+       <label title="" for="radio6" class="form-check-label">6</label>
+     </div>
+     <div class="form-check form-check-inline">
+       <input name="radioGroup" type="radio" id="radio7" class="form-check-input">
+       <label title="" for="radio7" class="form-check-label">7</label>
+     </div>
+   </div>
+ </form>`}
+             language="jsx"
+             showLineNumbers
+             wrapLines
+             codeBlock
+             />
+      </div>
+
+
+      <LinkedHeading h="2" id="switch-form-controls">Switch form controls</LinkedHeading>
+      
+        
+      <Form>
         <Form.Group>
           
           <Form.Check 
@@ -407,7 +567,68 @@ export default withLayout(function FormsPage() {
               id="disabled-custom-switch"
             />
         </Form.Group>
-          </Form>
+      </Form>
+
+      <div className="mb-5 copyblock-container">
+        <div className="shadow-none mt-4"> 
+          <h3>Switch Default Code example</h3>               
+        </div>
+        
+        <CopyBlock
+        theme={github}
+        text={`<div class="form-group">
+  <div class="custom-control custom-switch">
+    <input type="checkbox" id="custom-switch" class="custom-control-input">
+    <label title="" for="custom-switch" class="custom-control-label">Check this switch</label>
+  </div>  
+</div>`}
+            language="jsx"
+            showLineNumbers
+            wrapLines
+            codeBlock
+            />
+           
+            <div className="shadow-none mt-4">  
+              <h3>Switch Checked Code example</h3>  
+            </div>             
+
+            <CopyBlock
+            theme={github}
+            text={`<div class="form-group">
+  <div class="custom-control custom-switch">
+    <input type="checkbox" id="custom-switch-checked" class="custom-control-input" checked="">
+    <label title="" for="custom-switch-checked" class="custom-control-label">Checked switch</label>
+  </div>  
+</div>`}
+            language="jsx"
+            showLineNumbers
+            wrapLines
+            codeBlock
+            />
+
+            
+            <br />            
+            <h3>Switch Disabled Code example</h3>   
+            <CopyBlock
+            theme={github}
+            text={`<div class="form-group">
+  <div class="custom-control custom-switch">
+    <input disabled="" type="checkbox" id="disabled-custom-switch" class="custom-control-input">
+    <label title="" for="disabled-custom-switch" class="custom-control-label">Disabled switch</label>
+  </div>
+</div>`}
+            language="jsx"
+            showLineNumbers
+            wrapLines
+            codeBlock
+            />
+
+        </div>
+
+
+        <LinkedHeading h="2" id="select-form-controls">Select form controls</LinkedHeading>
+      
+        
 
         <Form>
         <Form.Group controlId="Form.ControlsSelect">
@@ -425,6 +646,26 @@ export default withLayout(function FormsPage() {
             <option value="other">Holding Ctrl/Cmd Selects</option>
           </Form.Control>
         </Form.Group>
+
+        <div className="mb-5 copyblock-container">
+          <div className="shadow-none mt-4"> 
+            <h3>Select Code example</h3>               
+          </div>
+          
+          <CopyBlock
+        theme={github}
+        text={`<div class="form-group">
+  <div class="custom-control custom-switch">
+    <input type="checkbox" id="custom-switch" class="custom-control-input">
+    <label title="" for="custom-switch" class="custom-control-label">Check this switch</label>
+  </div>  
+</div>`}
+            language="jsx"
+            showLineNumbers
+            wrapLines
+            codeBlock
+            />
+        </div>
 
         <Form.Group controlId="Form.ControlsTextarea">
           <Form.Label>Textarea</Form.Label>

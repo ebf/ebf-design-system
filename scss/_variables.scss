@@ -341,26 +341,6 @@ $container-max-widths: (
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
 
-// Spacing
-
-$spacer: 1rem !default;
-$spacers: () !default;
-$spacers: map-merge((
-  0: 0,
-  1: ($spacer * .25),
-  2: ($spacer * .5),
-  3: $spacer,
-  4: ($spacer * 1.5),
-  5: ($spacer * 3),
-  6: ($spacer * 6),
-  7: ($spacer * 7),
-  'sm': ($spacer * 2),
-  'md': ($spacer * 4),
-  'lg': ($spacer * 6),
-  'xl': ($spacer * 8)
-), $spacers);
-
-
 // This variable affects the `.h-*` and `.w-*` classes.
 
 $sizes: () !default;
@@ -514,7 +494,7 @@ $loader-border-width:         2px !default;
 
 // Tables
 
-$table-cell-padding:          .5rem .875rem !default;
+$table-cell-padding:          $theme-table-cell-padding;
 $table-cell-padding-sm:       .3rem !default;
 
 $table-bg:                    transparent !default;
@@ -734,7 +714,7 @@ $noui-origin-border-radius:       2px !default;
 $dropdown-min-width:                12rem !default;
 
 $dropdown-bg:                       $white !default;
-$dropdown-font-size:                $font-size-base * .9 !default;
+$dropdown-font-size:                $font-size-sm !default;
 $dropdown-color:                    $body-color !default;
 
 $dropdown-border-width:             0 !default;

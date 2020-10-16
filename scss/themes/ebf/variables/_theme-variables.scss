@@ -5,6 +5,25 @@ $theme-font-size-base:        1rem;
 
 $font-size-base:              $default-font-size-base; // Assumes the browser default, typically `16px` telekom is `18px`
 
+// Spacing
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 6),
+  7: ($spacer * 7),
+  'sm': ($spacer * 2),
+  'md': ($spacer * 4),
+  'lg': ($spacer * 6),
+  'xl': ($spacer * 8)
+), $spacers);
+
 
 // Theme Font Sizes variables -----------------------------
 $font-size-xl:                ($font-size-base * 1.5);      // 24px
@@ -25,6 +44,18 @@ $theme-fw-bold:               700;
 $theme-fw-extra-bold:         900;
 
 
+//Font Style
+$font-style-normal:                   normal;
+$font-style-italic:                   italic;
+$font-style-oblique:                  oblique;
+
+//Text Transform
+$uppercase:                   uppercase;
+$lowercase:                   lowercase;
+$capitalize:                  capitalize;
+
+
+
 // Elements Font Properties -----------------------------
 
 // Headers
@@ -35,20 +66,35 @@ $h4:                $default-font-size-base * 1.5 !default;     // 24px
 $h5:                $default-font-size-base * 1.25 !default;    // 20px
 $h6:                $default-font-size-base * 1.125 !default;   // 18px
       
-$theme-headings-line-height:            1.5;
+$theme-headings-line-height:            1.5rem;
 
 // Lead      
 $theme-lead-font-size:                  $font-size-lg;
 
 // Paragraph     
 $theme-paragraph-font-size:             $font-size-base;
-$theme-paragraph-line-height:           1.7;
+$theme-paragraph-line-height:           1.7rem;
 
 // Navbar
-$theme-navbar-nav-link-font-size:       $font-size-base;
+$theme-navbar-nav-link-font-size:       $font-size-sm;
+$theme-navbar-nav-link-font-weight:     $theme-fw-normal;
 
-// Table Font Sizes
+//Progress Bar
+$theme-progress-label-fw:               $theme-fw-normal;
+$theme-progress-label-font-style:       $font-style-italic;
+$theme-progress-text-transform:         $capitalize;
+$theme-progress-color:                  $gray-900;
+
+// Tables
 $theme-th-font-size:                    $font-size-sm;
-$theme-table-font-size:                 $default-font-size-base;
+$theme-table-font-size:                 $font-size-sm;
+
+//Cards
+
+$theme-card-text-size:                  $font-size-sm;
+$theme-card-list-padding:               $spacer / 2 0;
+
+$theme-summary-card-text-font-weight:   $theme-fw-medium;
+$theme-summary-card-label-font-weight:  $theme-fw-normal;
 
 // Elements Font Properties END -----------------------------

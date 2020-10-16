@@ -80,7 +80,9 @@ export default withLayout(function Buttons() {
             <Button className="mb-4" variant={variant}>{label}</Button>
             <CopyBlock
               theme={github}
-              text={`<button type="button" class="btn btn-outline-${type}">\n\t${label}\n</button>`}
+              text={`<button type="button" class="btn btn-outline-${type}">
+  ${label}
+</button>`}
               language="jsx"
               showLineNumbers
               wrapLines
@@ -112,7 +114,9 @@ export default withLayout(function Buttons() {
             <Button className="mb-4" variant={variant}>{label}</Button>            
             <CopyBlock
               theme={github}
-              text={`<button type="button" class="btn btn-outline-${type}">\n\t${label}\n</button>`}
+              text={`<button type="button" class="btn btn-outline-${type}">
+  {label}
+</button>`}
               language="jsx"
               showLineNumbers
               wrapLines
@@ -143,7 +147,9 @@ export default withLayout(function Buttons() {
           <Button className="mb-4" size={size} variant={type}>{label}</Button>            
           <CopyBlock
             theme={github}
-            text={`<button type="button" class="btn btn-${type} btn-${size}">\n\t${label}\n</button>`}
+            text={`<button type="button" class="btn btn-${type} btn-${size}">
+  ${label}
+</button>`}
             language="jsx"
             showLineNumbers
             wrapLines
@@ -172,7 +178,9 @@ export default withLayout(function Buttons() {
           <Button className="mb-4" block={block} variant={type}>{label}</Button>            
           <CopyBlock
             theme={github}
-            text={`<button type="button" class="btn btn-${type} btn-${block}">\n\t${label}\n</button>`}
+            text={`<button type="button" class="btn btn-${type} btn-${block}">
+  ${label}
+</button>`}
             language="jsx"
             showLineNumbers
             wrapLines
@@ -220,7 +228,9 @@ export default withLayout(function Buttons() {
           </Button>  
           <CopyBlock
             theme={github}
-            text={`<button type="button" class="btn btn-${type}" ${state} >\n\t${label} Primary Button\n</button>`}
+            text={`<button type="button" class="btn btn-${type}" ${state} >
+  ${label} Primary Button
+</button>`}
             language="jsx"
             showLineNumbers
             wrapLines

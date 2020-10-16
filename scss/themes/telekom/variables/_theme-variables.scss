@@ -5,6 +5,25 @@ $theme-font-size-base:        1.125rem; // Telekom 18px
 
 $font-size-base:              $theme-font-size-base; 
 
+// Spacing
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 6),
+  7: ($spacer * 7),
+  'sm': ($spacer * 2),
+  'md': ($spacer * 4),
+  'lg': ($spacer * 6),
+  'xl': ($spacer * 8)
+), $spacers);
+
 
 // Telekom Font Sizes 
 $TO-Font-Size-Hero-xl:        ($default-font-size-base * 3.75);   // 60px
@@ -52,6 +71,17 @@ $theme-fw-bold:               700;
 $theme-fw-extra-bold:         900;
 
 
+//Font Style
+$font-style-normal:                   normal;
+$font-style-italic:                   italic;
+$font-style-oblique:                  oblique;
+
+//Text Transform
+$uppercase:                   uppercase;
+$lowercase:                   lowercase;
+$capitalize:                  capitalize;
+
+
 // Elements Font Properties -----------------------------
 
 // Headers
@@ -62,20 +92,35 @@ $h4:                $TO-Font-Size-quaternary-xl;  // 21px
 $h5:                $TO-Font-Size-quaternary-l;   // 20px
 $h6:                $TO-Font-Size-quaternary-s;   // 19px
 
-$theme-headings-line-height:            1.25;
+$theme-headings-line-height:            1.25rem;
 
 // Lead
 $theme-lead-font-size:                  $font-size-lg;
 
 // Paragraph 
 $theme-paragraph-font-size:             $font-size;
-$theme-paragraph-line-height:           1.33;
+$theme-paragraph-line-height:           1.33rem;
 
 // Navbar
 $theme-navbar-nav-link-font-size:       $font-size;
+$theme-navbar-nav-link-font-weight:     $theme-fw-medium;
 
-// Table Font Sizes
+//Progress Bar
+$theme-progress-label-fw:               $theme-fw-bold;
+$theme-progress-label-font-style:       $font-style-normal;
+$theme-progress-text-transform:         $uppercase;
+$theme-progress-color:                  $gray-700;
+
+// Tables
 $theme-th-font-size:                    $font-size-sm;
 $theme-table-font-size:                 $default-font-size-base;
+
+//Cards
+
+$theme-card-text-size:                  $default-font-size-base;
+$theme-card-list-padding:               $spacer * .4 0;
+
+$theme-summary-card-text-font-weight:   $theme-fw-bold;
+$theme-summary-card-label-font-weight:  $theme-fw-medium;
 
 // Elements Font Properties END -----------------------------

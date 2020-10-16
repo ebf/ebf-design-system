@@ -5,15 +5,10 @@
     background: $gray-100;
 
     &.navbar-dark {
-        background: $black
-        ;
+        background: $black;
         .ebf-progress-bar {
             .progress {
                 background-color: $gray-900;
-
-                // .bg-primary {
-                //     background-color: $primary!important;
-                // }
             }
 
             .progress-bar-item-container {
@@ -24,7 +19,13 @@
 
                     &.active {
                         .progress-label {
-                            color: white;
+                          color: white;
+                        }
+
+                        &:hover {
+                          .progress-label {
+                              color: $primary;
+                          }
                         }
 
                         .progress-dot {
@@ -69,17 +70,20 @@
             position: relative;
             top: $spacer/3;
             font-size: $font-size-sm;
-            text-align: center;
-            font-style: italic;
+            text-align: center;            
             color: $black;
             pointer-events: none; 
             z-index: 9;
 
             .progress-label {
                 margin-bottom: $spacer * 1.5;
-                line-height: 1;
+                line-height: 1;               
                 transition: $smooth-color-animation;
-                color: $gray-900;
+                font-weight: $theme-progress-label-fw;
+                font-style: $theme-progress-label-font-style;
+                text-transform: $theme-progress-text-transform;
+                color: $theme-progress-color;
+                
 
                 &:after {
                     content: '';                   
@@ -110,7 +114,6 @@
                 transform-origin: center;
                 transform: scale(1);
                 transition: $smooth-scaling-animation-dots;
-                
             }   
             
             &:hover {      
@@ -130,6 +133,7 @@
 
                 .progress-label {
                     color: $black;
+                    font-style: $font-style-normal;
                 }
             
                 .progress-dot {
@@ -147,6 +151,7 @@
                 pointer-events: none;                
                                 
                 .progress-label {
+                    color: $black;
                     
                     &:after {
                         transform: scale(1.25);

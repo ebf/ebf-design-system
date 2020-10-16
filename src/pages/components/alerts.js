@@ -34,7 +34,7 @@ export default withLayout(function Alerts () {
         <Alert key={idx} variant={value.type} className="mb-4">
           {/* TODO */}
           <i className={'alert-icon ebf ' + value.icon}></i>
-          This is a {value.type} alert — check it out! .
+          This is a {value.type} alert — check it out!
         </Alert>
       ))}      
       
@@ -50,7 +50,10 @@ export default withLayout(function Alerts () {
 
           <CopyBlock
             theme={github}
-            text={`<div role="alert" class="fade alert alert-${type} show">s\n\t<i class="alert-icon ebf ${icon}"></i>\n\tThis is a ${type} alert - check it out!\n</div>`}
+            text={`<div role="alert" class="fade alert alert-${type} show">
+  <i class="alert-icon ebf ${icon}"></i>
+  This is a ${type} alert - check it out!
+</div>`}
             language="jsx"
             showLineNumbers
             wrapLines
@@ -84,7 +87,12 @@ export default withLayout(function Alerts () {
 
           <CopyBlock
             theme={github}
-            text={`<div role="alert" class="fade alert alert-${type} show">\n\t<i class="alert-icon ebf ${icon}"></i> \n\t This is a ${type} alert with \n\t<a class="alert-link" href="#" role="button">an example link</a>.\n</div>`}
+            text={`<div role="alert" class="fade alert alert-${type} show">
+  <i class="alert-icon ebf ${icon}"></i>
+  This is a ${type} alert with
+  <a class="alert-link" href="#" role="button">an example link</a>.
+  Give it a click if you like. 
+</div>`}
             language="jsx"
             showLineNumbers
             wrapLines

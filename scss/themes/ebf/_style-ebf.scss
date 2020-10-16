@@ -2,8 +2,8 @@
 
 @import "colors";
 @import "fonts";
-@import "theme-variables-overwrites";
-@import "theme-variables";
+@import "variables/theme-variables-overwrites";
+@import "variables/theme-variables";
 @import "bootstrap/scss/functions";
 
 // Import Variables
@@ -12,4 +12,3 @@
 
 
 // Import Variables Dependant Styles
-@import "card";
