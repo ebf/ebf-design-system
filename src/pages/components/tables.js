@@ -316,10 +316,10 @@ export default withLayout(function Tables() {
                                     </Form>
                                 </Form.Group>
                             </th>
-                            <th>Besitzer <i className="ebf ebf-arr-up-fill"></i></th>
-                            <th>eMail <i className="ebf ebf-arr-up-fill"></i></th>
-                            <th>IMEI <i className="ebf ebf-arr-up-fill"></i></th>
-                            <th>EID <i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>Besitzer<i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>eMail<i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>IMEI<i className="ebf ebf-arr-up-fill"></i></th>                            
+                            <th>EID<i className="ebf ebf-arr-up-fill"></i></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -368,6 +368,136 @@ export default withLayout(function Tables() {
                 </Table>
             </div>
         </div>
+
+
+        <LinkedHeading h="2" id="simple-table">Table Example</LinkedHeading>   
+        <p>Just Table with random elements</p>
+        <div className="ebf-table">
+            <header className="ebf-table-header">
+                <span className="ebf-table-headline">Table Header</span>
+                <div className="table-header-group">
+                    <InputGroup id="search" className="nav-search">          
+                        <FormControl
+                            placeholder="Search"
+                            aria-label="Search"
+                            aria-describedby="basic-addon"
+                            type="text"
+                        />
+                        <InputGroup.Append>
+                            <Button type="submit" id="basic-addon"><i className="ebf ebf-search-l"></i></Button>
+                        </InputGroup.Append>
+                    </InputGroup>   
+                                    
+                    <Form.Control className="ebf-select" as="select" custom>
+                        <option>First option select </option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </Form.Control> 
+                </div>
+            </header>
+            <div className="ebf-table-content">
+                <Table hover responsive className="table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                <Form.Group controlId="formBasicCheckbox1" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox1" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </th>
+                            <th>Besitzer <i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>eMail <i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>E-Mail senden<i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>EID <i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>Telefonnummer<i className="ebf ebf-arr-up-fill"></i></th>
+                            <th>Kartennummer <i className="ebf ebf-arr-up-fill"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>                       
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox2" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox2" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Mark</td>
+                            <td>alayaward@ebf.com</td>
+<td><Form.Check 
+              type="switch"
+              id="custom-switch"
+              label=""
+            /></td>
+                            <td><Badge variant="info" className="badge-pill">in Bearbeitung</Badge></td>
+<td><Form.Control className="ebf-select" as="select" size="sm" custom>
+            <option>8949020000167585219-2</option>
+            <option>8949020000167585219-2</option>
+            <option>8949020000167585219-2</option>
+            <option>8949020000167585219-2</option>
+            <option>8949020000167585219-2</option>
+          </Form.Control></td>
+                            <td>8949020000167585219-1</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox3" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox3" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Jacob</td>
+                            <td>alayaward@ebf.com</td>
+<td><Form.Check 
+              type="switch"
+              id="custom-switch1"
+              label=""
+            /></td>
+                            <td>55728394</td>
+<td><Form.Control className="ebf-select" as="select" size="sm" custom>
+            <option>8949020000167585219-2</option>
+            <option>8949020000167585219-2</option>
+            <option>8949020000167585219-2</option>
+            <option>8949020000167585219-2</option>
+            <option>8949020000167585219-2</option>
+          </Form.Control></td>
+                            <td>8949020000167585219-1</td>
+                        </tr>
+                       
+                        <tr>
+                            <td>
+                                <Form.Group controlId="formBasicCheckbox4" className="mb-0">
+                                    <Form inline>
+                                        <Checkbox id="formBasicCheckbox4" label="1"/>
+                                    </Form>
+                                </Form.Group>
+                            </td>
+                            <td>Larry the Bird</td>
+                            <td>alayaward@ebf.com</td>
+<td><Form.Check 
+              type="switch"
+              id="custom-switch2"
+              label=""
+            /></td>
+                            <td>55728394</td>
+<td><Form.Control className="ebf-select" as="select" size="sm" custom>
+            <option>8949020000167585219-2</option>
+            <option>8949020000167585219-2</option>
+            <option>8949020000167585219-2</option>
+            <option>8949020000167585219-2</option>
+            <option>8949020000167585219-2</option>
+          </Form.Control></td>
+                            <td>8949020000167585219-1</td>
+                        </tr>
+                    </tbody>
+                </Table>
+            </div>
+        </div>
+
         
       </>
     )
