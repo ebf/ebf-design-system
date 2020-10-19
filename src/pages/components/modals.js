@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Modal, Button, Media, Col, Row, Form, ListGroup, Container, Accordion, FormGroup} from 'react-bootstrap';
+import { Modal, Button, Col, Row, Form, ListGroup, Container, Accordion, FormGroup} from 'react-bootstrap';
+import { CopyBlock, github } from 'react-code-blocks';
 
 
 import LinkedHeading from '../../components/LinkedHeading';
@@ -33,6 +34,45 @@ function Example() {
             Save Changes
           </Button>
         </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
+
+
+function ExampleCode() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  
+
+  return (
+    <>    
+      <Button variant="primary" onClick={handleShow}>
+        Launch code demo modal
+      </Button>  
+
+      <Modal className="modal-code" show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title className="h5">Code Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="copyblock-container">       
+            <CopyBlock
+              theme={github}
+              text={`<button type="button" class="btn btn-primary">
+  Profile
+  <span class="badge-round-element badge badge-white">99+</span>
+  <span class="sr-only">unread messages</span>
+</button>`}
+              language="js"
+              showLineNumbers
+              wrapLines
+              codeBlock
+            />
+          </div>
+        </Modal.Body>        
       </Modal>
     </>
   );
@@ -215,12 +255,16 @@ export default withLayout(function Modals() {
   return (
     <>
       <LinkedHeading h="1" id="modals">Modals</LinkedHeading> 
-      <p className="lead">Add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+      <p className="lead">Add dialogs to your site for lightboxes, user notifications, or completely custom content.</p>      
 
       <LinkedHeading h="2" id="demo">Simple Modal</LinkedHeading>
       <p>Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page.</p>
-      
       <Example />
+
+      <LinkedHeading h="2" id="demo">Code Modal</LinkedHeading>
+      <p>Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page.</p>
+      <ExampleCode />
+      
 
       <LinkedHeading h="2" id="fullscreen-demo">Fullscreen modal</LinkedHeading>
       <p>Toggle a working modal demo by clicking the button below. It activates fullscreen modal.</p>

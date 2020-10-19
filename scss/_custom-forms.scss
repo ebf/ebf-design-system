@@ -182,7 +182,6 @@
     border-radius: 34px !important;
     background-color: transparent;
 
-
     &:before {
         position: absolute;
         content: "";
@@ -198,4 +197,12 @@
 
 .custom-select-lg {
   padding-left: $spacer * 2;
+}
+
+.custom-select-sm {
+  
+  font-size: $theme-table-custom-select-font-size;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: calc(#{$font-size-sm} + #{$font-size-xs});
 }

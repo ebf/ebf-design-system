@@ -236,7 +236,10 @@ fieldset {
 }
 
 .form-control-sm {
-  padding: .2rem $input-btn-padding-y;
+  font-size: $theme-table-custom-select-font-size;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: calc(#{$font-size-sm} + #{$font-size-xs});
 }
 
 .fc-alt {

@@ -68,9 +68,18 @@
 
 code {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
-    font-size: $font-size-sm!important;
+    font-size: $font-size-xs!important;
 
     .plain-text {
         color: $gray-600;
     }
+}
+
+.modal-content {
+  .copyblock-container {
+    div {
+      box-shadow: $box-shadow-inset-sm;
+      background-color: $gray-100;
+    }
+  }
 }

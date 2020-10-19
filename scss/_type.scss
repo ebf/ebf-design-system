@@ -8,6 +8,19 @@ p {
   line-height: $theme-paragraph-line-height;
 }
 
+
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-color;
+    text-decoration: underline;
+  }
+}
+
+
 pre {
   margin-bottom: 0;
 }
@@ -71,20 +84,19 @@ hr {
 }
 
 .iconset-container {
-    text-align: center;
-  
-    i {
-      font-size: $font-size-base * 2.5;
-    }
+  text-align: center;
 
-    input {
-        text-align: center;
-        
-
-        &:focus{
-            border-color: $gray-300;
-            box-shadow: none;
-        }
-    }
+  i {
+    font-size: $font-size-base * 2.5;
   }
-  
+
+  input {
+      text-align: center;
+      
+
+      &:focus{
+          border-color: $gray-300;
+          box-shadow: none;
+      }
+  }
+}

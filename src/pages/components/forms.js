@@ -313,7 +313,7 @@ export default withLayout(function FormsPage() {
         theme={github}
         text={`<form>
   <label class="form-label">Large custom select</label>
-  <select class="ebf-select form-control form-control-lg">
+  <select class="ebf-select custom-select custom-select-lg">
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -344,7 +344,7 @@ export default withLayout(function FormsPage() {
         theme={github}
         text={`<form>
   <label class="form-label">Large custom select</label>
-  <select class="ebf-select form-control">
+  <select class="ebf-select custom-select">
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -361,7 +361,7 @@ export default withLayout(function FormsPage() {
         </div>
 
         <Form className="mb-4 mt-2">            
-          <Form.Label>Normal custom select</Form.Label>
+          <Form.Label>Small custom select</Form.Label>
           <Form.Control className="ebf-select" as="select" size="sm" custom>
             <option>1</option>
             <option>2</option>
