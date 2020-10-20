@@ -457,7 +457,7 @@ export default withLayout(function Tables() {
               id="custom-switch1"
               label=""
             /></td>
-                            <td>55728394</td>
+                            <td><a href="#">55728394</a></td>
 <td><Form.Control className="ebf-select" as="select" size="sm" custom>
             <option>8949020000167585219-2</option>
             <option>8949020000167585219-2</option>

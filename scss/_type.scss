@@ -10,13 +10,16 @@ p {
 
 
 
-a {
-  color: $link-color;
-  text-decoration: none;
-
-  &:hover {
+table,
+p {
+  a {
     color: $link-color;
-    text-decoration: underline;
+    text-decoration: none;
+  
+    &:hover {
+      color: $link-color;
+      text-decoration: underline;
+    }
   }
 }
 
