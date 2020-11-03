@@ -32,7 +32,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: "telekom-fonts",
-        path: `${__dirname}/src/telekom-fonts/`
+        path: `${__dirname}/scss/telekom-fonts/`
       },
     },
     `gatsby-transformer-remark`,
