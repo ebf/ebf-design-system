@@ -55,7 +55,7 @@ export default withLayout(function Footer() {
             />
           </Col>
           <Col className="text-right">
-            <span>v1.0.12</span>
+            <span>v1.0.13</span>
           </Col>
         </Row>
       </Container>        
@@ -73,7 +73,7 @@ export default withLayout(function Footer() {
     <div class="align-items-center row">
       <div class="text-left col"><span>© 2020 <a href="https://www.ebf.com">EBF</a></span></div>
       <div class="text-center col"><img src="image.svg" width="auto" height="24" alt="Logo"></div>
-      <div class="text-right col"><span>v1.0.12</span></div>
+      <div class="text-right col"><span>v1.0.13</span></div>
     </div>
   </div>
 </footer>`}
@@ -103,7 +103,7 @@ export default withLayout(function Footer() {
             />
           </Col>
           <Col className="text-right">
-            <span>v1.0.12</span>
+            <span>v1.0.13</span>
           </Col>
         </Row>
       </div>        
