@@ -15,7 +15,9 @@ import SideNav from "./SideNav"
 import Toc, { TocProvider } from './Toc';
 import "../styles/main.scss";
 
+
 const Layout = ({ children, location }) => (
+  
   <main className="d-flex flex-column min-vh-100">
     <Header siteTitle="EBF Design System" />
 

@@ -87,10 +87,6 @@ export default class SideNav extends React.Component {
       
       <div className={classNames(className, 'side-nav', collapsed ? 'closed-sidebar' : 'open-sidebar')} {...props}>
 
-        <Button type="primary" size="sm" className="sidebar-toggler" onClick={this.handleCollapse}>
-          {collapsed ? <i className="ebf ebf-arr-right"></i> : <i className="ebf ebf-arr-left"></i>}
-        </Button>
-
         <nav className="flex-column nav mt-4 aside" role="complementary">
           <NavSection
             heading="Getting started"
@@ -127,6 +123,9 @@ export default class SideNav extends React.Component {
             location={location}
             items={componentItems}
           />
+          <Button type="primary" size="sm" className="sidebar-toggler" onClick={this.handleCollapse}>
+          {collapsed ? <i className="ebf ebf-arr-right"></i> : <i className="ebf ebf-arr-left"></i>}
+        </Button>
 
         </nav>       
       </div>
