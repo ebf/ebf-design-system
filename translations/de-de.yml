@@ -1,0 +1,76 @@
+#### Language and Locales ####
+
+locales:
+  en_US: English US
+  de_DE: Deutsch
+
+## Date Ranges
+date-ranges:
+  label: Datumsbereiche
+  today: Heute
+  yesterday: Gestern
+  last-7-days: Letzte 7 Tage
+  last-30-days: Letzte 30 Tage
+  this-month: Dieser Monat
+  last-month: Letzter Monat
+
+## Pagination
+pagination:
+  label: Pagination
+  first: Erstens
+  previous: Vorherige
+  next: Nächste
+  last: Zuletzt
+  total: "Total: {total}"
+
+### Forms ###
+forms:
+  labels:
+    save: Speichern
+
+  ## Address Form Fields ##
+  address:
+    labels:
+      city: Stadt
+      additional-address: Adresszusatz
+      country: Land
+      state: Staat
+      legend: Adresse
+      street: Straße und Nummer
+      zip: Postleitzahl
+
+
+### Notifications ###
+notifications:
+  dropdown:
+    clear: Löschen
+    label: Benachrichtigungen
+    empty: Alles erledigt!
+  dirty:
+    cancel: 'Nein, zurückgehen'
+    confirm: Ja
+    text: Sie haben Änderungen vorgenommen, die nicht gespeichert wurden. Möchten Sie fortfahren, ohne diese Änderungen zu speichern?
+    title: Bist du sicher?
+  delete:
+    cancel: 'Nein, ich habe es mir anders überlegt'
+    confirm: 'Ja, ich bin sicher'
+    success: Datensatz wurde erfolgreich entfernt
+    text: Dieser Vorgang kann nicht rückgängig gemacht werden. Möchten Sie diesen Datensatz wirklich entfernen?
+    title: Sind Sie sicher?
+  save:
+    invalid: >-
+      Ihre Änderungen konnten nicht gespeichert werden, da einige davon nicht
+      gültig sind. Bitte korrigieren Sie die Fehler und versuchen Sie es erneut
+    success: Änderungen wurden erfolgreich gespeichert
+
+pages:
+  error:
+    headline: Huston !? Wir haben ein Problem!
+    home-link: Zuhause
+    support-link: Kontaktieren Sie unseren Support
+
+#### Error Messages ####
+errors:
+  access-denied: Anscheinend verfügen Sie nicht über ausreichende Berechtigungen, um diese Aktion auszuführen.
+  general: <h5>Es ist ein Fehler aufgetreten.</h5><p>Ein unerwarteter Fehler ist aufgetreten. Bitte wenden Sie sich an den Support.</p>
+  not-found: Dies ist nicht die Seite, die Sie suchen

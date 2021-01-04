@@ -1,0 +1,3 @@
+# Notifications
+
+{{docs/notifications/example}}

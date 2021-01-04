@@ -1,0 +1,12 @@
+<header class="header ebf-double-navbar shadow" ...attributes>
+  <BsNavbar @type="light" class="bg-white" as |navbar|>
+    {{yield navbar}}
+  </BsNavbar>
+
+  {{!-- Ember Wormhole placeholder that is used by the Layout::Headline component --}}
+  <div id="page-headline"></div>
+
+  {{!-- Ember Wormhole placeholder that is used by the Layout::Wizard component --}}
+  <div id="page-wizard"></div>
+
+</header>

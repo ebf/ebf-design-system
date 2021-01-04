@@ -1,0 +1,7 @@
+<div class="my-3">
+  {{#each this.types as |type|}}
+    <BsAlert @type={{type}} @dismissible={{false}}>
+      Alert with type <b>{{type}}</b>
+    </BsAlert>
+  {{/each}}
+</div>

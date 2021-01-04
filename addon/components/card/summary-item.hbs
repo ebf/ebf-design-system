@@ -1,0 +1,11 @@
+<li class="list-group-item" ...attributes>
+  {{#if @label}}
+    <span>{{@label}}</span>
+  {{/if}}
+
+  {{#if (has-block)}}
+    {{yield}}
+  {{else if @value}}
+    {{@value}}
+  {{/if}}
+</li>

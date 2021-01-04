@@ -1,0 +1,7 @@
+<p class="card-text" ...attributes>
+  {{#if (has-block)}}
+    {{yield}}
+  {{else if @value}}
+    {{@value}}
+  {{/if}}
+</p>

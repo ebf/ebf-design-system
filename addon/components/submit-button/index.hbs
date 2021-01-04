@@ -1,0 +1,24 @@
+<BsButton
+  class="btn-submit"
+  ...attributes
+  @active={{@active}}
+  @block={{this.block}}
+  @type={{@type}}
+  @size={{@size}}
+  @state={{@state}}
+  @onClick={{fn this.clicked}}
+  type={{@buttonType}}
+  disabled={{@disabled}}
+  {{did-insert this.inserted}}
+  as |button|>
+  {{#if (has-block)}}
+    {{yield button}}
+  {{else}}
+    {{#if button.isPending}}
+      <Loader @size={{@size}} />
+    {{else}}
+      {{if @label @label (t "forms.labels.save")}}
+    {{/if}}
+  {{/if}}
+</BsButton>
+

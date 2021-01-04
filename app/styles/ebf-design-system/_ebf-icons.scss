@@ -1,0 +1,1678 @@
+$ebf-alert: '\ea01';
+$ebf-alert-fill: '\ea02';
+$ebf-alert-wide: '\ea03';
+$ebf-alert-wide-fill: '\ea04';
+$ebf-android: '\ea05';
+$ebf-android-fill: '\ea06';
+$ebf-apple: '\ea07';
+$ebf-apple-fill: '\ea08';
+$ebf-apps: '\ea09';
+$ebf-apps-fill: '\ea0a';
+$ebf-arr-corner-down-left: '\ea0b';
+$ebf-arr-corner-down-right: '\ea0c';
+$ebf-arr-corner-left-down: '\ea0d';
+$ebf-arr-corner-left-up: '\ea0e';
+$ebf-arr-corner-right-down: '\ea0f';
+$ebf-arr-corner-right-up: '\ea10';
+$ebf-arr-corner-up-left: '\ea11';
+$ebf-arr-corner-up-right: '\ea12';
+$ebf-arr-down: '\ea13';
+$ebf-arr-down-dots: '\ea14';
+$ebf-arr-down-left: '\ea15';
+$ebf-arr-down-right: '\ea16';
+$ebf-arr-left: '\ea17';
+$ebf-arr-maximize: '\ea18';
+$ebf-arr-minimize: '\ea19';
+$ebf-arr-move: '\ea1a';
+$ebf-arr-right: '\ea1b';
+$ebf-arr-up: '\ea1c';
+$ebf-arr-up-dots: '\ea1d';
+$ebf-arr-up-left: '\ea1e';
+$ebf-arr-up-right: '\ea1f';
+$ebf-art: '\ea20';
+$ebf-art-fill: '\ea21';
+$ebf-at-sign: '\ea22';
+$ebf-audit-logs: '\ea23';
+$ebf-audit-logs-fill: '\ea24';
+$ebf-bar-chart-left: '\ea25';
+$ebf-bar-chart-right: '\ea26';
+$ebf-bar-chart-square-left: '\ea27';
+$ebf-bar-chart-square-left-fill: '\ea28';
+$ebf-bar-chart-square-right: '\ea29';
+$ebf-bar-chart-square-right-fill: '\ea2a';
+$ebf-beach: '\ea2b';
+$ebf-beach-fill: '\ea2c';
+$ebf-bell: '\ea2d';
+$ebf-bell-fill: '\ea2e';
+$ebf-bell-off: '\ea2f';
+$ebf-bell-off-fill: '\ea30';
+$ebf-book: '\ea31';
+$ebf-book-fill: '\ea32';
+$ebf-bookmark: '\ea33';
+$ebf-bookmark-fill: '\ea34';
+$ebf-border: '\ea35';
+$ebf-box: '\ea36';
+$ebf-box-fill: '\ea37';
+$ebf-brush-left: '\ea38';
+$ebf-brush-left-fill: '\ea39';
+$ebf-brush-right: '\ea3a';
+$ebf-brush-right-fill: '\ea3b';
+$ebf-burger: '\ea3c';
+$ebf-camera: '\ea3d';
+$ebf-camera-fill: '\ea3e';
+$ebf-cancel: '\ea3f';
+$ebf-cancel-fill: '\ea40';
+$ebf-chart-line: '\ea41';
+$ebf-chart-pie: '\ea42';
+$ebf-check-mark: '\ea43';
+$ebf-check-mark-circle: '\ea44';
+$ebf-check-mark-circle-full: '\ea45';
+$ebf-check-mark-circle-full-fill: '\ea46';
+$ebf-check-ui: '\ea47';
+$ebf-chevron-down: '\ea48';
+$ebf-chevron-left: '\ea49';
+$ebf-chevron-right: '\ea4a';
+$ebf-chevron-up: '\ea4b';
+$ebf-chevrons-down: '\ea4c';
+$ebf-chevrons-left: '\ea4d';
+$ebf-chevrons-right: '\ea4e';
+$ebf-chevrons-up: '\ea4f';
+$ebf-circle: '\ea50';
+$ebf-circle-fill: '\ea51';
+$ebf-clock: '\ea52';
+$ebf-clock-fill: '\ea53';
+$ebf-code: '\ea54';
+$ebf-coffee: '\ea55';
+$ebf-coffee-fill: '\ea56';
+$ebf-compass: '\ea57';
+$ebf-compass-fill: '\ea58';
+$ebf-complain-hammer-fill: '\ea59';
+$ebf-connection: '\ea5a';
+$ebf-connection-fill: '\ea5b';
+$ebf-copy: '\ea5c';
+$ebf-copy-fill: '\ea5d';
+$ebf-create: '\ea5e';
+$ebf-create-fill: '\ea5f';
+$ebf-dashboard: '\ea60';
+$ebf-dashboard-fill: '\ea61';
+$ebf-data-pending: '\ea62';
+$ebf-data-pending-fill: '\ea63';
+$ebf-device-smartphone: '\ea64';
+$ebf-device-smartphone-fill: '\ea65';
+$ebf-dots: '\ea66';
+$ebf-download: '\ea67';
+$ebf-download-circle: '\ea68';
+$ebf-download-circle-fill: '\ea69';
+$ebf-download-cloud: '\ea6a';
+$ebf-download-square: '\ea6b';
+$ebf-download-square-fill: '\ea6c';
+$ebf-edit-left: '\ea6d';
+$ebf-edit-left-fill: '\ea6e';
+$ebf-edit-right: '\ea6f';
+$ebf-edit-right-fill: '\ea70';
+$ebf-esim: '\ea71';
+$ebf-esim-fill: '\ea72';
+$ebf-eye: '\ea73';
+$ebf-eye-fill: '\ea74';
+$ebf-eye-off: '\ea75';
+$ebf-eye-off-fill: '\ea76';
+$ebf-fassbrause: '\ea77';
+$ebf-fassbrause-fill: '\ea78';
+$ebf-file: '\ea79';
+$ebf-file-forward: '\ea7a';
+$ebf-file-forward-fill: '\ea7b';
+$ebf-file-sort: '\ea7c';
+$ebf-file-sort-fill: '\ea7d';
+$ebf-fileserver: '\ea7e';
+$ebf-fileserver-fill: '\ea7f';
+$ebf-flag: '\ea80';
+$ebf-flag-fill: '\ea81';
+$ebf-folder: '\ea82';
+$ebf-folder-add: '\ea83';
+$ebf-folder-add-fill: '\ea84';
+$ebf-folder-fill: '\ea85';
+$ebf-folder-remove: '\ea86';
+$ebf-folder-remove-fill: '\ea87';
+$ebf-font: '\ea88';
+$ebf-font-fill: '\ea89';
+$ebf-font-strike: '\ea8a';
+$ebf-font-strike-fill: '\ea8b';
+$ebf-font-underline: '\ea8c';
+$ebf-font-underline-fill: '\ea8d';
+$ebf-graph-01-fill: '\ea8e';
+$ebf-graph-02-fill: '\ea8f';
+$ebf-grid: '\ea90';
+$ebf-grid-fill: '\ea91';
+$ebf-grid-gap: '\ea92';
+$ebf-grid-gap-fill: '\ea93';
+$ebf-hammer: '\ea94';
+$ebf-hand-move: '\ea95';
+$ebf-hand-move-fill: '\ea96';
+$ebf-headphones: '\ea97';
+$ebf-headphones-fill: '\ea98';
+$ebf-heart: '\ea99';
+$ebf-heart-fill: '\ea9a';
+$ebf-help-circle: '\ea9b';
+$ebf-help-circle-fill: '\ea9c';
+$ebf-hoodie: '\ea9d';
+$ebf-hoodie-fill: '\ea9e';
+$ebf-ibook: '\ea9f';
+$ebf-ibook-fill: '\eaa0';
+$ebf-inbox: '\eaa1';
+$ebf-inbox-fill: '\eaa2';
+$ebf-info: '\eaa3';
+$ebf-info-fill: '\eaa4';
+$ebf-key-left: '\eaa5';
+$ebf-key-left-fill: '\eaa6';
+$ebf-key-right: '\eaa7';
+$ebf-key-right-fill: '\eaa8';
+$ebf-koelsch: '\eaa9';
+$ebf-koelsch-fill: '\eaaa';
+$ebf-line-diag: '\eaab';
+$ebf-line-horz: '\eaac';
+$ebf-link-01: '\eaad';
+$ebf-link-02: '\eaae';
+$ebf-link-03: '\eaaf';
+$ebf-list: '\eab0';
+$ebf-loader: '\eab1';
+$ebf-loader-fill: '\eab2';
+$ebf-local-files: '\eab3';
+$ebf-local-files-fill: '\eab4';
+$ebf-locked: '\eab5';
+$ebf-locked-fill: '\eab6';
+$ebf-log-in: '\eab7';
+$ebf-log-out: '\eab8';
+$ebf-maintenance: '\eab9';
+$ebf-maintenance-fill: '\eaba';
+$ebf-map: '\eabb';
+$ebf-map-fill: '\eabc';
+$ebf-map-pin: '\eabd';
+$ebf-map-pin-fill: '\eabe';
+$ebf-merge: '\eabf';
+$ebf-merge-fill: '\eac0';
+$ebf-minus: '\eac1';
+$ebf-minus-circle: '\eac2';
+$ebf-minus-circle-fill: '\eac3';
+$ebf-minus-square: '\eac4';
+$ebf-minus-square-fill: '\eac5';
+$ebf-mountain: '\eac6';
+$ebf-mountain-fill: '\eac7';
+$ebf-move: '\eac8';
+$ebf-move-fill: '\eac9';
+$ebf-ms-excel: '\eaca';
+$ebf-ms-excel-fill: '\eacb';
+$ebf-ms-onedrive: '\eacc';
+$ebf-ms-onedrive-fill: '\eacd';
+$ebf-ms-powerpoint: '\eace';
+$ebf-ms-powerpoint-fill: '\eacf';
+$ebf-ms-sharepoint: '\ead0';
+$ebf-ms-sharepoint-fill: '\ead1';
+$ebf-ms-word: '\ead2';
+$ebf-ms-word-fill: '\ead3';
+$ebf-navigation-down: '\ead4';
+$ebf-navigation-down-fill: '\ead5';
+$ebf-navigation-down-left: '\ead6';
+$ebf-navigation-down-left-fill: '\ead7';
+$ebf-navigation-down-right: '\ead8';
+$ebf-navigation-down-right-fill: '\ead9';
+$ebf-navigation-up: '\eada';
+$ebf-navigation-up-fill: '\eadb';
+$ebf-navigation-up-left: '\eadc';
+$ebf-navigation-up-left-fill: '\eadd';
+$ebf-navigation-up-right: '\eade';
+$ebf-navigation-up-right-fill: '\eadf';
+$ebf-note: '\eae0';
+$ebf-note-fill: '\eae1';
+$ebf-open-new-app: '\eae2';
+$ebf-open-new-app-fill: '\eae3';
+$ebf-organization: '\eae4';
+$ebf-organization-fill: '\eae5';
+$ebf-pen-left-down: '\eae6';
+$ebf-pen-left-down-fill: '\eae7';
+$ebf-pen-left-up: '\eae8';
+$ebf-pen-left-up-fill: '\eae9';
+$ebf-pen-right-down: '\eaea';
+$ebf-pen-right-down-fill: '\eaeb';
+$ebf-pen-right-up: '\eaec';
+$ebf-pen-right-up-fill: '\eaed';
+$ebf-pending: '\eaee';
+$ebf-pending-fill: '\eaef';
+$ebf-photo: '\eaf0';
+$ebf-photo-fill: '\eaf1';
+$ebf-plane-arrival: '\eaf2';
+$ebf-plane-arrival-fill: '\eaf3';
+$ebf-plane-departure: '\eaf4';
+$ebf-plane-departure-fill: '\eaf5';
+$ebf-play: '\eaf6';
+$ebf-play-fill: '\eaf7';
+$ebf-plus: '\eaf8';
+$ebf-plus-circle: '\eaf9';
+$ebf-plus-circle-fill: '\eafa';
+$ebf-plus-square: '\eafb';
+$ebf-plus-square-fill: '\eafc';
+$ebf-rectangle: '\eafd';
+$ebf-rectangle-fill: '\eafe';
+$ebf-remove-device: '\eaff';
+$ebf-remove-device-fill: '\eb00';
+$ebf-rename: '\eb01';
+$ebf-rename-fill: '\eb02';
+$ebf-save: '\eb03';
+$ebf-save-fill: '\eb04';
+$ebf-scales: '\eb05';
+$ebf-scales-fill: '\eb06';
+$ebf-search-l: '\eb07';
+$ebf-search-l-fill: '\eb08';
+$ebf-search-s: '\eb09';
+$ebf-search-s-fill: '\eb0a';
+$ebf-send: '\eb0b';
+$ebf-send-fill: '\eb0c';
+$ebf-settings: '\eb0d';
+$ebf-settings-fill: '\eb0e';
+$ebf-share: '\eb0f';
+$ebf-share-fill: '\eb10';
+$ebf-shirt: '\eb11';
+$ebf-shirt-fill: '\eb12';
+$ebf-shopping-bag: '\eb13';
+$ebf-shopping-bag-fill: '\eb14';
+$ebf-signature: '\eb15';
+$ebf-sim: '\eb16';
+$ebf-sim-fill: '\eb17';
+$ebf-sort-by-date: '\eb18';
+$ebf-sort-by-date-fill: '\eb19';
+$ebf-sort-by-name: '\eb1a';
+$ebf-sort-by-name-fill: '\eb1b';
+$ebf-sort-by-size: '\eb1c';
+$ebf-sort-by-size-fill: '\eb1d';
+$ebf-sort-by-type: '\eb1e';
+$ebf-sort-by-type-fill: '\eb1f';
+$ebf-sport-event: '\eb20';
+$ebf-sport-event-fill: '\eb21';
+$ebf-star: '\eb22';
+$ebf-star-fill: '\eb23';
+$ebf-support: '\eb24';
+$ebf-support-fill: '\eb25';
+$ebf-sync: '\eb26';
+$ebf-sync-circle: '\eb27';
+$ebf-synch-fill: '\eb28';
+$ebf-tag: '\eb29';
+$ebf-tag-fill: '\eb2a';
+$ebf-tea: '\eb2b';
+$ebf-tea-fill: '\eb2c';
+$ebf-text: '\eb2d';
+$ebf-text-fill: '\eb2e';
+$ebf-tie: '\eb2f';
+$ebf-tie-fill: '\eb30';
+$ebf-trash: '\eb31';
+$ebf-trash-fill: '\eb32';
+$ebf-unlocked: '\eb33';
+$ebf-unlocked-fill: '\eb34';
+$ebf-upload: '\eb35';
+$ebf-upload-circle: '\eb36';
+$ebf-upload-circle-fill: '\eb37';
+$ebf-upload-cloud: '\eb38';
+$ebf-upload-fill: '\eb39';
+$ebf-upload-square: '\eb3a';
+$ebf-upload-square-fill: '\eb3b';
+$ebf-user: '\eb3c';
+$ebf-user-add: '\eb3d';
+$ebf-user-add-fill: '\eb3e';
+$ebf-user-check: '\eb3f';
+$ebf-user-check-fill: '\eb40';
+$ebf-user-delete: '\eb41';
+$ebf-user-delete-fill: '\eb42';
+$ebf-user-fill: '\eb43';
+$ebf-user-remove: '\eb44';
+$ebf-user-remove-fill: '\eb45';
+$ebf-voicemail: '\eb46';
+$ebf-voicemail-fill: '\eb47';
+$ebf-workout: '\eb48';
+$ebf-workout-fill: '\eb49';
+
+$ebf-font-location: '/fonts' !default;
+
+@font-face {
+  font-family: 'ebf-iconset';
+  src: url('#{$ebf-font-location}/ebf-iconset.eot');
+  src: url('#{$ebf-font-location}/ebf-iconset.eot') format('embedded-opentype'),
+    url('#{$ebf-font-location}/ebf-iconset.woff2') format('woff2'),
+    url('#{$ebf-font-location}/ebf-iconset.woff') format('woff'),
+    url('#{$ebf-font-location}/ebf-iconset.ttf') format('truetype'),
+    url('#{$ebf-font-location}/ebf-iconset.svg') format('svg');
+  font-style: normal;
+  font-weight: 400;
+}
+
+%ebf {
+  display: inline-block;
+  font-family: 'ebf-iconset' !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ebf {
+  @extend %ebf;
+}
+
+.ebf-alert::before {
+  content: '\ea01';
+}
+
+.ebf-alert-fill::before {
+  content: '\ea02';
+}
+
+.ebf-alert-wide::before {
+  content: '\ea03';
+}
+
+.ebf-alert-wide-fill::before {
+  content: '\ea04';
+}
+
+.ebf-android::before {
+  content: '\ea05';
+}
+
+.ebf-android-fill::before {
+  content: '\ea06';
+}
+
+.ebf-apple::before {
+  content: '\ea07';
+}
+
+.ebf-apple-fill::before {
+  content: '\ea08';
+}
+
+.ebf-apps::before {
+  content: '\ea09';
+}
+
+.ebf-apps-fill::before {
+  content: '\ea0a';
+}
+
+.ebf-arr-corner-down-left::before {
+  content: '\ea0b';
+}
+
+.ebf-arr-corner-down-right::before {
+  content: '\ea0c';
+}
+
+.ebf-arr-corner-left-down::before {
+  content: '\ea0d';
+}
+
+.ebf-arr-corner-left-up::before {
+  content: '\ea0e';
+}
+
+.ebf-arr-corner-right-down::before {
+  content: '\ea0f';
+}
+
+.ebf-arr-corner-right-up::before {
+  content: '\ea10';
+}
+
+.ebf-arr-corner-up-left::before {
+  content: '\ea11';
+}
+
+.ebf-arr-corner-up-right::before {
+  content: '\ea12';
+}
+
+.ebf-arr-down::before {
+  content: '\ea13';
+}
+
+.ebf-arr-down-dots::before {
+  content: '\ea14';
+}
+
+.ebf-arr-down-left::before {
+  content: '\ea15';
+}
+
+.ebf-arr-down-right::before {
+  content: '\ea16';
+}
+
+.ebf-arr-left::before {
+  content: '\ea17';
+}
+
+.ebf-arr-maximize::before {
+  content: '\ea18';
+}
+
+.ebf-arr-minimize::before {
+  content: '\ea19';
+}
+
+.ebf-arr-move::before {
+  content: '\ea1a';
+}
+
+.ebf-arr-right::before {
+  content: '\ea1b';
+}
+
+.ebf-arr-up::before {
+  content: '\ea1c';
+}
+
+.ebf-arr-up-dots::before {
+  content: '\ea1d';
+}
+
+.ebf-arr-up-left::before {
+  content: '\ea1e';
+}
+
+.ebf-arr-up-right::before {
+  content: '\ea1f';
+}
+
+.ebf-art::before {
+  content: '\ea20';
+}
+
+.ebf-art-fill::before {
+  content: '\ea21';
+}
+
+.ebf-at-sign::before {
+  content: '\ea22';
+}
+
+.ebf-audit-logs::before {
+  content: '\ea23';
+}
+
+.ebf-audit-logs-fill::before {
+  content: '\ea24';
+}
+
+.ebf-bar-chart-left::before {
+  content: '\ea25';
+}
+
+.ebf-bar-chart-right::before {
+  content: '\ea26';
+}
+
+.ebf-bar-chart-square-left::before {
+  content: '\ea27';
+}
+
+.ebf-bar-chart-square-left-fill::before {
+  content: '\ea28';
+}
+
+.ebf-bar-chart-square-right::before {
+  content: '\ea29';
+}
+
+.ebf-bar-chart-square-right-fill::before {
+  content: '\ea2a';
+}
+
+.ebf-beach::before {
+  content: '\ea2b';
+}
+
+.ebf-beach-fill::before {
+  content: '\ea2c';
+}
+
+.ebf-bell::before {
+  content: '\ea2d';
+}
+
+.ebf-bell-fill::before {
+  content: '\ea2e';
+}
+
+.ebf-bell-off::before {
+  content: '\ea2f';
+}
+
+.ebf-bell-off-fill::before {
+  content: '\ea30';
+}
+
+.ebf-book::before {
+  content: '\ea31';
+}
+
+.ebf-book-fill::before {
+  content: '\ea32';
+}
+
+.ebf-bookmark::before {
+  content: '\ea33';
+}
+
+.ebf-bookmark-fill::before {
+  content: '\ea34';
+}
+
+.ebf-border::before {
+  content: '\ea35';
+}
+
+.ebf-box::before {
+  content: '\ea36';
+}
+
+.ebf-box-fill::before {
+  content: '\ea37';
+}
+
+.ebf-brush-left::before {
+  content: '\ea38';
+}
+
+.ebf-brush-left-fill::before {
+  content: '\ea39';
+}
+
+.ebf-brush-right::before {
+  content: '\ea3a';
+}
+
+.ebf-brush-right-fill::before {
+  content: '\ea3b';
+}
+
+.ebf-burger::before {
+  content: '\ea3c';
+}
+
+.ebf-camera::before {
+  content: '\ea3d';
+}
+
+.ebf-camera-fill::before {
+  content: '\ea3e';
+}
+
+.ebf-cancel::before {
+  content: '\ea3f';
+}
+
+.ebf-cancel-fill::before {
+  content: '\ea40';
+}
+
+.ebf-chart-line::before {
+  content: '\ea41';
+}
+
+.ebf-chart-pie::before {
+  content: '\ea42';
+}
+
+.ebf-check-mark::before {
+  content: '\ea43';
+}
+
+.ebf-check-mark-circle::before {
+  content: '\ea44';
+}
+
+.ebf-check-mark-circle-full::before {
+  content: '\ea45';
+}
+
+.ebf-check-mark-circle-full-fill::before {
+  content: '\ea46';
+}
+
+.ebf-check-ui::before {
+  content: '\ea47';
+}
+
+.ebf-chevron-down::before {
+  content: '\ea48';
+}
+
+.ebf-chevron-left::before {
+  content: '\ea49';
+}
+
+.ebf-chevron-right::before {
+  content: '\ea4a';
+}
+
+.ebf-chevron-up::before {
+  content: '\ea4b';
+}
+
+.ebf-chevrons-down::before {
+  content: '\ea4c';
+}
+
+.ebf-chevrons-left::before {
+  content: '\ea4d';
+}
+
+.ebf-chevrons-right::before {
+  content: '\ea4e';
+}
+
+.ebf-chevrons-up::before {
+  content: '\ea4f';
+}
+
+.ebf-circle::before {
+  content: '\ea50';
+}
+
+.ebf-circle-fill::before {
+  content: '\ea51';
+}
+
+.ebf-clock::before {
+  content: '\ea52';
+}
+
+.ebf-clock-fill::before {
+  content: '\ea53';
+}
+
+.ebf-code::before {
+  content: '\ea54';
+}
+
+.ebf-coffee::before {
+  content: '\ea55';
+}
+
+.ebf-coffee-fill::before {
+  content: '\ea56';
+}
+
+.ebf-compass::before {
+  content: '\ea57';
+}
+
+.ebf-compass-fill::before {
+  content: '\ea58';
+}
+
+.ebf-complain-hammer-fill::before {
+  content: '\ea59';
+}
+
+.ebf-connection::before {
+  content: '\ea5a';
+}
+
+.ebf-connection-fill::before {
+  content: '\ea5b';
+}
+
+.ebf-copy::before {
+  content: '\ea5c';
+}
+
+.ebf-copy-fill::before {
+  content: '\ea5d';
+}
+
+.ebf-create::before {
+  content: '\ea5e';
+}
+
+.ebf-create-fill::before {
+  content: '\ea5f';
+}
+
+.ebf-dashboard::before {
+  content: '\ea60';
+}
+
+.ebf-dashboard-fill::before {
+  content: '\ea61';
+}
+
+.ebf-data-pending::before {
+  content: '\ea62';
+}
+
+.ebf-data-pending-fill::before {
+  content: '\ea63';
+}
+
+.ebf-device-smartphone::before {
+  content: '\ea64';
+}
+
+.ebf-device-smartphone-fill::before {
+  content: '\ea65';
+}
+
+.ebf-dots::before {
+  content: '\ea66';
+}
+
+.ebf-download::before {
+  content: '\ea67';
+}
+
+.ebf-download-circle::before {
+  content: '\ea68';
+}
+
+.ebf-download-circle-fill::before {
+  content: '\ea69';
+}
+
+.ebf-download-cloud::before {
+  content: '\ea6a';
+}
+
+.ebf-download-square::before {
+  content: '\ea6b';
+}
+
+.ebf-download-square-fill::before {
+  content: '\ea6c';
+}
+
+.ebf-edit-left::before {
+  content: '\ea6d';
+}
+
+.ebf-edit-left-fill::before {
+  content: '\ea6e';
+}
+
+.ebf-edit-right::before {
+  content: '\ea6f';
+}
+
+.ebf-edit-right-fill::before {
+  content: '\ea70';
+}
+
+.ebf-esim::before {
+  content: '\ea71';
+}
+
+.ebf-esim-fill::before {
+  content: '\ea72';
+}
+
+.ebf-eye::before {
+  content: '\ea73';
+}
+
+.ebf-eye-fill::before {
+  content: '\ea74';
+}
+
+.ebf-eye-off::before {
+  content: '\ea75';
+}
+
+.ebf-eye-off-fill::before {
+  content: '\ea76';
+}
+
+.ebf-fassbrause::before {
+  content: '\ea77';
+}
+
+.ebf-fassbrause-fill::before {
+  content: '\ea78';
+}
+
+.ebf-file::before {
+  content: '\ea79';
+}
+
+.ebf-file-forward::before {
+  content: '\ea7a';
+}
+
+.ebf-file-forward-fill::before {
+  content: '\ea7b';
+}
+
+.ebf-file-sort::before {
+  content: '\ea7c';
+}
+
+.ebf-file-sort-fill::before {
+  content: '\ea7d';
+}
+
+.ebf-fileserver::before {
+  content: '\ea7e';
+}
+
+.ebf-fileserver-fill::before {
+  content: '\ea7f';
+}
+
+.ebf-flag::before {
+  content: '\ea80';
+}
+
+.ebf-flag-fill::before {
+  content: '\ea81';
+}
+
+.ebf-folder::before {
+  content: '\ea82';
+}
+
+.ebf-folder-add::before {
+  content: '\ea83';
+}
+
+.ebf-folder-add-fill::before {
+  content: '\ea84';
+}
+
+.ebf-folder-fill::before {
+  content: '\ea85';
+}
+
+.ebf-folder-remove::before {
+  content: '\ea86';
+}
+
+.ebf-folder-remove-fill::before {
+  content: '\ea87';
+}
+
+.ebf-font::before {
+  content: '\ea88';
+}
+
+.ebf-font-fill::before {
+  content: '\ea89';
+}
+
+.ebf-font-strike::before {
+  content: '\ea8a';
+}
+
+.ebf-font-strike-fill::before {
+  content: '\ea8b';
+}
+
+.ebf-font-underline::before {
+  content: '\ea8c';
+}
+
+.ebf-font-underline-fill::before {
+  content: '\ea8d';
+}
+
+.ebf-graph-01-fill::before {
+  content: '\ea8e';
+}
+
+.ebf-graph-02-fill::before {
+  content: '\ea8f';
+}
+
+.ebf-grid::before {
+  content: '\ea90';
+}
+
+.ebf-grid-fill::before {
+  content: '\ea91';
+}
+
+.ebf-grid-gap::before {
+  content: '\ea92';
+}
+
+.ebf-grid-gap-fill::before {
+  content: '\ea93';
+}
+
+.ebf-hammer::before {
+  content: '\ea94';
+}
+
+.ebf-hand-move::before {
+  content: '\ea95';
+}
+
+.ebf-hand-move-fill::before {
+  content: '\ea96';
+}
+
+.ebf-headphones::before {
+  content: '\ea97';
+}
+
+.ebf-headphones-fill::before {
+  content: '\ea98';
+}
+
+.ebf-heart::before {
+  content: '\ea99';
+}
+
+.ebf-heart-fill::before {
+  content: '\ea9a';
+}
+
+.ebf-help-circle::before {
+  content: '\ea9b';
+}
+
+.ebf-help-circle-fill::before {
+  content: '\ea9c';
+}
+
+.ebf-hoodie::before {
+  content: '\ea9d';
+}
+
+.ebf-hoodie-fill::before {
+  content: '\ea9e';
+}
+
+.ebf-ibook::before {
+  content: '\ea9f';
+}
+
+.ebf-ibook-fill::before {
+  content: '\eaa0';
+}
+
+.ebf-inbox::before {
+  content: '\eaa1';
+}
+
+.ebf-inbox-fill::before {
+  content: '\eaa2';
+}
+
+.ebf-info::before {
+  content: '\eaa3';
+}
+
+.ebf-info-fill::before {
+  content: '\eaa4';
+}
+
+.ebf-key-left::before {
+  content: '\eaa5';
+}
+
+.ebf-key-left-fill::before {
+  content: '\eaa6';
+}
+
+.ebf-key-right::before {
+  content: '\eaa7';
+}
+
+.ebf-key-right-fill::before {
+  content: '\eaa8';
+}
+
+.ebf-koelsch::before {
+  content: '\eaa9';
+}
+
+.ebf-koelsch-fill::before {
+  content: '\eaaa';
+}
+
+.ebf-line-diag::before {
+  content: '\eaab';
+}
+
+.ebf-line-horz::before {
+  content: '\eaac';
+}
+
+.ebf-link-01::before {
+  content: '\eaad';
+}
+
+.ebf-link-02::before {
+  content: '\eaae';
+}
+
+.ebf-link-03::before {
+  content: '\eaaf';
+}
+
+.ebf-list::before {
+  content: '\eab0';
+}
+
+.ebf-loader::before {
+  content: '\eab1';
+}
+
+.ebf-loader-fill::before {
+  content: '\eab2';
+}
+
+.ebf-local-files::before {
+  content: '\eab3';
+}
+
+.ebf-local-files-fill::before {
+  content: '\eab4';
+}
+
+.ebf-locked::before {
+  content: '\eab5';
+}
+
+.ebf-locked-fill::before {
+  content: '\eab6';
+}
+
+.ebf-log-in::before {
+  content: '\eab7';
+}
+
+.ebf-log-out::before {
+  content: '\eab8';
+}
+
+.ebf-maintenance::before {
+  content: '\eab9';
+}
+
+.ebf-maintenance-fill::before {
+  content: '\eaba';
+}
+
+.ebf-map::before {
+  content: '\eabb';
+}
+
+.ebf-map-fill::before {
+  content: '\eabc';
+}
+
+.ebf-map-pin::before {
+  content: '\eabd';
+}
+
+.ebf-map-pin-fill::before {
+  content: '\eabe';
+}
+
+.ebf-merge::before {
+  content: '\eabf';
+}
+
+.ebf-merge-fill::before {
+  content: '\eac0';
+}
+
+.ebf-minus::before {
+  content: '\eac1';
+}
+
+.ebf-minus-circle::before {
+  content: '\eac2';
+}
+
+.ebf-minus-circle-fill::before {
+  content: '\eac3';
+}
+
+.ebf-minus-square::before {
+  content: '\eac4';
+}
+
+.ebf-minus-square-fill::before {
+  content: '\eac5';
+}
+
+.ebf-mountain::before {
+  content: '\eac6';
+}
+
+.ebf-mountain-fill::before {
+  content: '\eac7';
+}
+
+.ebf-move::before {
+  content: '\eac8';
+}
+
+.ebf-move-fill::before {
+  content: '\eac9';
+}
+
+.ebf-ms-excel::before {
+  content: '\eaca';
+}
+
+.ebf-ms-excel-fill::before {
+  content: '\eacb';
+}
+
+.ebf-ms-onedrive::before {
+  content: '\eacc';
+}
+
+.ebf-ms-onedrive-fill::before {
+  content: '\eacd';
+}
+
+.ebf-ms-powerpoint::before {
+  content: '\eace';
+}
+
+.ebf-ms-powerpoint-fill::before {
+  content: '\eacf';
+}
+
+.ebf-ms-sharepoint::before {
+  content: '\ead0';
+}
+
+.ebf-ms-sharepoint-fill::before {
+  content: '\ead1';
+}
+
+.ebf-ms-word::before {
+  content: '\ead2';
+}
+
+.ebf-ms-word-fill::before {
+  content: '\ead3';
+}
+
+.ebf-navigation-down::before {
+  content: '\ead4';
+}
+
+.ebf-navigation-down-fill::before {
+  content: '\ead5';
+}
+
+.ebf-navigation-down-left::before {
+  content: '\ead6';
+}
+
+.ebf-navigation-down-left-fill::before {
+  content: '\ead7';
+}
+
+.ebf-navigation-down-right::before {
+  content: '\ead8';
+}
+
+.ebf-navigation-down-right-fill::before {
+  content: '\ead9';
+}
+
+.ebf-navigation-up::before {
+  content: '\eada';
+}
+
+.ebf-navigation-up-fill::before {
+  content: '\eadb';
+}
+
+.ebf-navigation-up-left::before {
+  content: '\eadc';
+}
+
+.ebf-navigation-up-left-fill::before {
+  content: '\eadd';
+}
+
+.ebf-navigation-up-right::before {
+  content: '\eade';
+}
+
+.ebf-navigation-up-right-fill::before {
+  content: '\eadf';
+}
+
+.ebf-note::before {
+  content: '\eae0';
+}
+
+.ebf-note-fill::before {
+  content: '\eae1';
+}
+
+.ebf-open-new-app::before {
+  content: '\eae2';
+}
+
+.ebf-open-new-app-fill::before {
+  content: '\eae3';
+}
+
+.ebf-organization::before {
+  content: '\eae4';
+}
+
+.ebf-organization-fill::before {
+  content: '\eae5';
+}
+
+.ebf-pen-left-down::before {
+  content: '\eae6';
+}
+
+.ebf-pen-left-down-fill::before {
+  content: '\eae7';
+}
+
+.ebf-pen-left-up::before {
+  content: '\eae8';
+}
+
+.ebf-pen-left-up-fill::before {
+  content: '\eae9';
+}
+
+.ebf-pen-right-down::before {
+  content: '\eaea';
+}
+
+.ebf-pen-right-down-fill::before {
+  content: '\eaeb';
+}
+
+.ebf-pen-right-up::before {
+  content: '\eaec';
+}
+
+.ebf-pen-right-up-fill::before {
+  content: '\eaed';
+}
+
+.ebf-pending::before {
+  content: '\eaee';
+}
+
+.ebf-pending-fill::before {
+  content: '\eaef';
+}
+
+.ebf-photo::before {
+  content: '\eaf0';
+}
+
+.ebf-photo-fill::before {
+  content: '\eaf1';
+}
+
+.ebf-plane-arrival::before {
+  content: '\eaf2';
+}
+
+.ebf-plane-arrival-fill::before {
+  content: '\eaf3';
+}
+
+.ebf-plane-departure::before {
+  content: '\eaf4';
+}
+
+.ebf-plane-departure-fill::before {
+  content: '\eaf5';
+}
+
+.ebf-play::before {
+  content: '\eaf6';
+}
+
+.ebf-play-fill::before {
+  content: '\eaf7';
+}
+
+.ebf-plus::before {
+  content: '\eaf8';
+}
+
+.ebf-plus-circle::before {
+  content: '\eaf9';
+}
+
+.ebf-plus-circle-fill::before {
+  content: '\eafa';
+}
+
+.ebf-plus-square::before {
+  content: '\eafb';
+}
+
+.ebf-plus-square-fill::before {
+  content: '\eafc';
+}
+
+.ebf-rectangle::before {
+  content: '\eafd';
+}
+
+.ebf-rectangle-fill::before {
+  content: '\eafe';
+}
+
+.ebf-remove-device::before {
+  content: '\eaff';
+}
+
+.ebf-remove-device-fill::before {
+  content: '\eb00';
+}
+
+.ebf-rename::before {
+  content: '\eb01';
+}
+
+.ebf-rename-fill::before {
+  content: '\eb02';
+}
+
+.ebf-save::before {
+  content: '\eb03';
+}
+
+.ebf-save-fill::before {
+  content: '\eb04';
+}
+
+.ebf-scales::before {
+  content: '\eb05';
+}
+
+.ebf-scales-fill::before {
+  content: '\eb06';
+}
+
+.ebf-search-l::before {
+  content: '\eb07';
+}
+
+.ebf-search-l-fill::before {
+  content: '\eb08';
+}
+
+.ebf-search-s::before {
+  content: '\eb09';
+}
+
+.ebf-search-s-fill::before {
+  content: '\eb0a';
+}
+
+.ebf-send::before {
+  content: '\eb0b';
+}
+
+.ebf-send-fill::before {
+  content: '\eb0c';
+}
+
+.ebf-settings::before {
+  content: '\eb0d';
+}
+
+.ebf-settings-fill::before {
+  content: '\eb0e';
+}
+
+.ebf-share::before {
+  content: '\eb0f';
+}
+
+.ebf-share-fill::before {
+  content: '\eb10';
+}
+
+.ebf-shirt::before {
+  content: '\eb11';
+}
+
+.ebf-shirt-fill::before {
+  content: '\eb12';
+}
+
+.ebf-shopping-bag::before {
+  content: '\eb13';
+}
+
+.ebf-shopping-bag-fill::before {
+  content: '\eb14';
+}
+
+.ebf-signature::before {
+  content: '\eb15';
+}
+
+.ebf-sim::before {
+  content: '\eb16';
+}
+
+.ebf-sim-fill::before {
+  content: '\eb17';
+}
+
+.ebf-sort-by-date::before {
+  content: '\eb18';
+}
+
+.ebf-sort-by-date-fill::before {
+  content: '\eb19';
+}
+
+.ebf-sort-by-name::before {
+  content: '\eb1a';
+}
+
+.ebf-sort-by-name-fill::before {
+  content: '\eb1b';
+}
+
+.ebf-sort-by-size::before {
+  content: '\eb1c';
+}
+
+.ebf-sort-by-size-fill::before {
+  content: '\eb1d';
+}
+
+.ebf-sort-by-type::before {
+  content: '\eb1e';
+}
+
+.ebf-sort-by-type-fill::before {
+  content: '\eb1f';
+}
+
+.ebf-sport-event::before {
+  content: '\eb20';
+}
+
+.ebf-sport-event-fill::before {
+  content: '\eb21';
+}
+
+.ebf-star::before {
+  content: '\eb22';
+}
+
+.ebf-star-fill::before {
+  content: '\eb23';
+}
+
+.ebf-support::before {
+  content: '\eb24';
+}
+
+.ebf-support-fill::before {
+  content: '\eb25';
+}
+
+.ebf-sync::before {
+  content: '\eb26';
+}
+
+.ebf-sync-circle::before {
+  content: '\eb27';
+}
+
+.ebf-synch-fill::before {
+  content: '\eb28';
+}
+
+.ebf-tag::before {
+  content: '\eb29';
+}
+
+.ebf-tag-fill::before {
+  content: '\eb2a';
+}
+
+.ebf-tea::before {
+  content: '\eb2b';
+}
+
+.ebf-tea-fill::before {
+  content: '\eb2c';
+}
+
+.ebf-text::before {
+  content: '\eb2d';
+}
+
+.ebf-text-fill::before {
+  content: '\eb2e';
+}
+
+.ebf-tie::before {
+  content: '\eb2f';
+}
+
+.ebf-tie-fill::before {
+  content: '\eb30';
+}
+
+.ebf-trash::before {
+  content: '\eb31';
+}
+
+.ebf-trash-fill::before {
+  content: '\eb32';
+}
+
+.ebf-unlocked::before {
+  content: '\eb33';
+}
+
+.ebf-unlocked-fill::before {
+  content: '\eb34';
+}
+
+.ebf-upload::before {
+  content: '\eb35';
+}
+
+.ebf-upload-circle::before {
+  content: '\eb36';
+}
+
+.ebf-upload-circle-fill::before {
+  content: '\eb37';
+}
+
+.ebf-upload-cloud::before {
+  content: '\eb38';
+}
+
+.ebf-upload-fill::before {
+  content: '\eb39';
+}
+
+.ebf-upload-square::before {
+  content: '\eb3a';
+}
+
+.ebf-upload-square-fill::before {
+  content: '\eb3b';
+}
+
+.ebf-user::before {
+  content: '\eb3c';
+}
+
+.ebf-user-add::before {
+  content: '\eb3d';
+}
+
+.ebf-user-add-fill::before {
+  content: '\eb3e';
+}
+
+.ebf-user-check::before {
+  content: '\eb3f';
+}
+
+.ebf-user-check-fill::before {
+  content: '\eb40';
+}
+
+.ebf-user-delete::before {
+  content: '\eb41';
+}
+
+.ebf-user-delete-fill::before {
+  content: '\eb42';
+}
+
+.ebf-user-fill::before {
+  content: '\eb43';
+}
+
+.ebf-user-remove::before {
+  content: '\eb44';
+}
+
+.ebf-user-remove-fill::before {
+  content: '\eb45';
+}
+
+.ebf-voicemail::before {
+  content: '\eb46';
+}
+
+.ebf-voicemail-fill::before {
+  content: '\eb47';
+}
+
+.ebf-workout::before {
+  content: '\eb48';
+}
+
+.ebf-workout-fill::before {
+  content: '\eb49';
+}

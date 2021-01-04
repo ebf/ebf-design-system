@@ -1,0 +1,18 @@
+<footer class="footer" ...attributes>
+  <div class="container {{if @fluid "container-fluid"}}">
+    {{#if (has-block)}}
+      {{yield (hash
+        copyright=(component "layout/footer/copyright")
+        version=(component "layout/footer/version")
+        logo=(component "layout/footer/logo")
+      )}}
+    {{else}}
+      <div class="align-items-center justify-content-between row">
+        <Layout::Footer::Copyright @label={{@copyright}} class="col text-left" />
+        <Layout::Footer::Logo @url={{@logo}} @label={{@copyright}} class="col text-center" />
+        <Layout::Footer::Version @version={{@version}} class="col text-right" />
+      </div>
+      {{@value}}
+    {{/if}}
+  </div>
+</footer>

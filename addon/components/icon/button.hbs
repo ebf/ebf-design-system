@@ -1,0 +1,21 @@
+<BsButton
+  @type={{@type}}
+  @block={{@isBlock}}
+  @outline={{@outline}}
+  @size={{@size}}
+  @value={{@value}}
+  @onClick={{@onClick}}
+  disabled={{@disabled}} class="btn-icon"
+  ...attributes
+>
+  <Icon
+    @icon={{@icon}}
+    @prefix={{@prefix}}
+    @size={{@size}}
+    @spin={{@spin}}
+    @tooltip={{@tooltip}}
+    @placement={{@placement}}
+    class="icon-button"
+  />
+  {{if @label @label}}
+</BsButton>

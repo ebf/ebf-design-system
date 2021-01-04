@@ -1,68 +1,114 @@
 {
-  "name": "@ebf/design-system",
+  "name": "@ebf/ebf-design-system",
+  "version": "2.0.0",
   "description": "Design System library of EBF GmbH",
-  "version": "1.0.13",
   "author": "dev@ebf.com",
-  "dependencies": {
-    "bootstrap": "^4.5.2",
-    "react-intl": "^5.10.6",
-    "react-pro-sidebar": "^0.4.4",
-    "react-switch": "^5.0.1"
-  },
-  "peerDependencies": {
-    "jquery": "1.9.1 - 3",
-    "popper.js": "^1.16.0"
-  },
-  "devDependencies": {
-    "@restart/context": "^2.1.4",
-    "gatsby": "^2.24.60",
-    "gatsby-image": "^2.4.18",
-    "gatsby-plugin-manifest": "^2.4.29",
-    "gatsby-plugin-offline": "^3.2.28",
-    "gatsby-plugin-react-helmet": "^3.3.11",
-    "gatsby-plugin-sass": "^2.3.13",
-    "gatsby-plugin-sharp": "^2.6.36",
-    "gatsby-remark-embed-snippet": "^4.3.14",
-    "gatsby-remark-prismjs": "^3.5.13",
-    "gatsby-source-filesystem": "^2.3.30",
-    "gatsby-transformer-remark": "^2.8.35",
-    "gatsby-transformer-sharp": "^2.5.15",
-    "gh-pages": "^2.2.0",
-    "jquery": "^3.5.1",
-    "node-sass": "^4.14.1",
-    "npm-run-all": "4.1.5",
-    "popper.js": "^1.16.1",
-    "prettier": "^1.19.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-bootstrap": "^1.3.0",
-    "react-code-blocks": "0.0.7",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1"
-  },
+  "keywords": [
+    "ember-addon"
+  ],
   "license": "MIT",
-  "scripts": {
-    "build": "npm-run-all build:*",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "build:gatsby": "gatsby build",
-    "build:sass": "npm run styles",
-    "deploy": "npm run styles && gatsby build --prefix-paths && gh-pages -d public",
-    "styles": "node-sass scss --include-path node_modules -o dist --source-map true --output-style compressed",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ebf/ebf-design-system"
+    "url": "git@github.com:ebf/design-system.git"
   },
   "bugs": {
     "url": "https://github.com/ebf/ebf-design-system/issues"
   },
-  "files": [
-    "dist",
-    "scss"
-  ]
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "ember build --environment=production",
+    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
+    "lint:hbs": "ember-template-lint .",
+    "lint:css": "stylelint app/styles/**/*.scss",
+    "lint:js": "eslint .",
+    "start": "ember serve",
+    "test": "npm-run-all lint:* test:*",
+    "test:ember": "COVERAGE=true ember test",
+    "test:ember-compatibility": "ember try:each"
+  },
+  "dependencies": {
+    "@bagaar/ember-breadcrumbs": "1.0.0-beta.3",
+    "bootstrap": "4.5.3",
+    "ember-await": "2.0.0",
+    "ember-basic-dropdown": "3.0.11",
+    "ember-bootstrap": "4.5.0",
+    "ember-bootstrap-changeset-validations": "4.0.0",
+    "ember-changeset": "3.10.5",
+    "ember-changeset-validations": "3.10.3",
+    "ember-cli-babel": "7.23.0",
+    "ember-cli-htmlbars": "5.3.1",
+    "ember-cli-moment-shim": "3.8.0",
+    "ember-cli-nprogress": "0.3.1",
+    "ember-debug-logger": "2.1.1",
+    "ember-element-helper": "0.3.2",
+    "ember-fetch": "8.0.2",
+    "ember-intl": "5.6.0",
+    "ember-local-storage": "1.7.2",
+    "ember-lodash": "4.19.5",
+    "ember-moment": "8.0.1",
+    "ember-notify": "6.0.0",
+    "ember-power-calendar": "0.16.3",
+    "ember-power-calendar-moment": "0.1.7",
+    "ember-power-select": "4.1.0",
+    "nprogress": "0.2.0"
+  },
+  "devDependencies": {
+    "@ember/optional-features": "2.0.0",
+    "@glimmer/component": "1.0.3",
+    "@glimmer/tracking": "1.0.3",
+    "babel-eslint": "10.1.0",
+    "broccoli-asset-rev": "3.0.0",
+    "broccoli-funnel": "3.0.3",
+    "broccoli-merge-trees": "4.2.0",
+    "els-a11y-addon": "1.0.4",
+    "els-addon-docs": "1.0.2",
+    "els-addon-typed-templates": "^3.0.0",
+    "ember-auto-import": "1.10.1",
+    "ember-cli": "~3.23.0",
+    "ember-cli-addon-docs": "1.0.0",
+    "ember-cli-addon-docs-esdoc": "0.2.3",
+    "ember-cli-code-coverage": "1.0.2",
+    "ember-cli-dependency-checker": "3.2.0",
+    "ember-cli-inject-live-reload": "2.0.2",
+    "ember-cli-sass": "10.0.1",
+    "ember-cli-sri": "2.1.1",
+    "ember-cli-terser": "4.0.1",
+    "ember-data": "3.23.0",
+    "ember-disable-prototype-extensions": "1.1.3",
+    "ember-export-application-global": "2.0.1",
+    "ember-load-initializers": "2.1.2",
+    "ember-maybe-import-regenerator": "0.1.6",
+    "ember-qunit": "4.6.0",
+    "ember-resolver": "8.0.2",
+    "ember-source": "3.23.1",
+    "ember-source-channel-url": "3.0.0",
+    "ember-template-lint": "2.15.0",
+    "ember-try": "1.4.0",
+    "eslint": "7.16.0",
+    "eslint-plugin-ember": "10.0.2",
+    "eslint-plugin-node": "11.1.0",
+    "loader.js": "4.7.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "^2.2.1",
+    "qunit-dom": "1.6.0",
+    "sass": "1.30.0",
+    "stylelint": "13.8.0",
+    "stylelint-a11y": "1.2.3",
+    "stylelint-config-sass-guidelines": "7.1.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "3.18.0"
+  },
+  "engines": {
+    "node": "10.* || >= 12"
+  },
+  "ember": {
+    "edition": "octane"
+  },
+  "ember-addon": {
+    "configPath": "tests/dummy/config",
+    "after": "ember-bootstrap"
+  }
 }

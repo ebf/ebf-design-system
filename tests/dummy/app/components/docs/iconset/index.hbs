@@ -1,0 +1,22 @@
+<div class="my-4">
+  <DocsDemo as |demo|>
+    <demo.example>
+      <Icon::Ebf @icon="ebf-user" @size="2x" @type="primary" />
+    </demo.example>
+
+    <DocsSnippet @name="ebf-icon.hbs">
+      <Icon::Ebf @icon="ebf-user" @size="2x" @type="primary" />
+    </DocsSnippet>
+  </DocsDemo>
+</div>
+
+<h3>Available icons</h3>
+
+<div class="row my-4">
+  {{#each this.icons as |icon|}}
+    <div class="col-12 col-md-4 col-xl-3 mb-4 text-center">
+      <Icon::Ebf @icon={{icon.icon}} @size="3x" class="m-2"/>
+      <p class="my-2">{{icon.icon}}</p>
+    </div>
+  {{/each}}
+</div>

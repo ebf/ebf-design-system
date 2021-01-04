@@ -1,0 +1,9 @@
+<div class="ebf-card-select card-hover text-center card {{if @effect "card-hover-effect"}}" ...attributes>
+  <div class="card-body">
+    {{yield (hash
+      icon=(component "icon/ebf" card=true)
+      title=(component "card/title")
+      description=(component "card/description")
+    )}}
+  </div>
+</div>

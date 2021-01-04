@@ -1,0 +1,23 @@
+{{#if @tooltip}}
+  <FaIcon
+    @icon={{@icon}}
+    @prefix={{@prefix}}
+    @size={{@size}}
+    @spin={{@spin}}
+    {{on "click" this.clicked}}
+    {{ref this "triggerElement"}}
+    class={{this.classNames}}
+    ...attributes
+  />
+  <BsTooltip @placement={{this.placement}} @triggerElement={{this.triggerElement}}>{{@tooltip}}</BsTooltip>
+{{else}}
+  <FaIcon
+    @icon={{@icon}}
+    @prefix={{@prefix}}
+    @size={{@size}}
+    @spin={{@spin}}
+    {{on "click" this.clicked}}
+    class={{this.classNames}}
+    ...attributes
+  />
+{{/if}}

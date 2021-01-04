@@ -1,0 +1,30 @@
+<DocsDemo as |demo|>
+  <demo.example @name="ajax-demo.hbs">
+    <Await @defer={{fn this.defer}} as |await|>
+      <BsButton @type="primary" @onClick={{await.run}}>
+        Execute request...
+      </BsButton>
+
+      <await.Initial>
+        <p class="my-3">Hit the button to load some AJAX data</p>
+      </await.Initial>
+
+      <await.Rejected>
+        <p class="text-danger">Something went wrong :(</p>
+      </await.Rejected>
+
+      <await.Pending>
+        <Loader @size="xl" @label="Loading results..."/>
+      </await.Pending>
+
+      <await.Fulfilled as |result|>
+        <div class="bg-light rounded py-3 my-3">
+          <pre><code>{{result}}</code></pre>
+        </div>
+      </await.Fulfilled>
+    </Await>
+  </demo.example>
+
+  {{demo.snippet "ajax-demo.hbs"}}
+  {{demo.snippet "ajax-demo-component.js" label="component.js"}}
+</DocsDemo>

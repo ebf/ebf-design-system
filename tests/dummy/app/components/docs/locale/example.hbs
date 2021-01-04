@@ -1,0 +1,25 @@
+<DocsDemo as |demo|>
+  <demo.example @name="locale-demo.hbs">
+    <ul class="list-group">
+      <li class="list-group-item m-0">
+        <h5 class="mb-1">
+          {{t (concat "locales." this.current.iso)}} <code>{{this.current.iso}}</code>
+        </h5>
+        <span class="d-block">
+          Language code <code>{{this.current.language}}</code>
+        </span>
+        <span class="d-block">
+          Country code <code>{{this.current.country}}</code>
+        </span>
+      </li>
+      {{#each this.available as |locale|}}
+        <li class="list-group-item m-0">
+          {{t (concat "locales." locale.iso)}} <code>{{locale.iso}}</code>
+        </li>
+      {{/each}}
+    </ul>
+  </demo.example>
+
+  {{demo.snippet "locale-demo.hbs"}}
+  {{demo.snippet "locale-demo-component.js" label="component.js"}}
+</DocsDemo>

@@ -1,0 +1,35 @@
+<BasicDropdown
+  @renderInPlace={{true}}
+  @verticalPosition={{@verticalPosition}}
+  @horizontalPosition={{@horizontalPosition}}
+  as |dropdown|>
+  <div class="date-input-group">
+    <input type="text"
+      class="form-control"
+      onclick={{dropdown.actions.toggle}}
+      value={{if @value (format-date @value 'L')}}
+      placeholder={{@placeholder}}
+    >
+    <Icon::Ebf
+      @type="default"
+      @icon="ebf-times"
+      @onClick={{fn this.selected}}
+    />
+  </div>
+
+  <dropdown.Content class="py-2 px-3">
+    <PowerCalendar
+      @selected={{@value}}
+      @center={{this.center}}
+      @onSelect={{fn this.selected}}
+      @onCenterChange={{fn this.centered}}
+      as |calendar|
+    >
+      <calendar.Nav/>
+      <calendar.Days
+        @maxDate={{@maxDate}}
+        @minDate={{@minDate}}
+      />
+    </PowerCalendar>
+  </dropdown.Content>
+</BasicDropdown>
