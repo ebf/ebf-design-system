@@ -1,9 +1,13 @@
-<BsDropdown class="carrot-none" as |dd|>
+<BsDropdown as |dd|
+>
   <dd.button @type="link" class="mx-1">
-    <LanguageSwitcher::Image
-      @locale={{this.active}}
-      @label={{t (concat "locales." this.active.iso)}}
-    />
+    {{#if @showFlags}}
+      <LanguageSwitcher::Image
+        @locale={{this.active}}
+        @label={{t (concat "locales." this.active.iso)}}
+      />
+    {{/if}}
+    {{uppercase this.active.language}}
   </dd.button>
   <dd.menu>
     {{#each this.available as |locale|}}
@@ -15,10 +19,12 @@
             {{on "click" (disable-bubbling (fn this.select locale))}}
           >
             <div class="d-flex align-items-center">
-              <LanguageSwitcher::Image
-                @locale={{locale}}
-                @label={{label}}
-              />
+              {{#if @showFlags}}
+                <LanguageSwitcher::Image
+                  @locale={{locale}}
+                  @label={{label}}
+                />
+              {{/if}}
               <span class="ml-2">
                 {{label}}
               </span>
