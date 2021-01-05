@@ -25,11 +25,13 @@ Router.map(function() {
     this.route('errors');
     this.route('modals');
     this.route('navs');
+    this.route('inputs');
     this.route('notifications');
     this.route('language-switcher');
     this.route('loaders');
     this.route('pagination');
     this.route('progress');
+    this.route('stats');
     this.route('table');
 
     this.route('services', function() {

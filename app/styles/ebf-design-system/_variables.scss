@@ -994,6 +994,16 @@ $modal-footer-padding-x: $modal-footer-padding !default;
 $modal-footer-border-color: $modal-content-border-color !default;
 $modal-footer-border-width: $modal-content-border-width !default;
 
+// Stats
+
+$stats-font-size: $small-font-size !default;
+
+$stats-padding-x: 0;
+$stats-padding-y: $grid-gutter-width / 2 !default;
+
+$stats-padding-inline-x: $stats-padding-x !default;
+$stats-padding-inline-y: $stats-padding-y !default;
+
 // Datepicker
 
 $datepicker-border-radius: $card-border-radius !default;

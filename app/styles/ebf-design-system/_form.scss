@@ -20,6 +20,15 @@
   }
 }
 
+.input-group .btn {
+  @include box-shadow(none);
+
+  @include hover {
+    @include box-shadow(none);
+    transform: none;
+  }
+}
+
 fieldset {
   margin-top: $spacer / 2;
   margin-bottom: $spacer / 2;

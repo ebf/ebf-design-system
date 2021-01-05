@@ -1,0 +1,9 @@
+<div class="stats {{if @inline "stats-inline"}}" ...attributes>
+  {{#if @title}}
+    <h3 class="my-3">{{@title}}</h3>
+  {{/if}}
+
+  {{yield (hash
+    row=(component "stats/row" inline=@inline)
+  )}}
+</div>
