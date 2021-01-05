@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/components/date-picker/field';
+export { default } from '@ebf/design-system/components/date-picker/field';

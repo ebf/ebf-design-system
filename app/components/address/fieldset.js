@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/components/address/fieldset';
+export { default } from '@ebf/design-system/components/address/fieldset';

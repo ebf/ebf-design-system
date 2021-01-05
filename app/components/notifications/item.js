@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/components/notifications/item';
+export { default } from '@ebf/design-system/components/notifications/item';

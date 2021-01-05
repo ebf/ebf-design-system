@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/services/locale';
+export { default } from '@ebf/design-system/services/locale';

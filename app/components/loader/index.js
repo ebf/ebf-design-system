@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/components/loader/index';
+export { default } from '@ebf/design-system/components/loader/index';

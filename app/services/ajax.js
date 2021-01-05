@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/services/ajax';
+export { default } from '@ebf/design-system/services/ajax';

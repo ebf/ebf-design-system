@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/components/layout/footer/copyright';
+export { default } from '@ebf/design-system/components/layout/footer/copyright';

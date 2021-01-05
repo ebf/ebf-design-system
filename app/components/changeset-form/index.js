@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/components/changeset-form/index';
+export { default } from '@ebf/design-system/components/changeset-form/index';

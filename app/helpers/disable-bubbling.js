@@ -1,1 +1,1 @@
-export { default, disableBubbling } from '@ebf/ember-cli-design-system/helpers/disable-bubbling';
+export { default, disableBubbling } from '@ebf/design-system/helpers/disable-bubbling';

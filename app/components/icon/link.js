@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/components/icon/link';
+export { default } from '@ebf/design-system/components/icon/link';

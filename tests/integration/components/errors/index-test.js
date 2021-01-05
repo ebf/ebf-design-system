@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 import { htmlSafe } from '@ember/string';
-import ResolvedError from '@ebf/ember-cli-design-system/resolved-error';
+import ResolvedError from '@ebf/design-system/resolved-error';
 
 module('Integration | Component | errors/index', function(hooks) {
   setupRenderingTest(hooks);

@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/components/language-switcher/image';
+export { default } from '@ebf/design-system/components/language-switcher/image';

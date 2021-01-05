@@ -1,5 +1,5 @@
 // BEGIN-SNIPPET logging-interceptor.js
-import RequestInterceptor from '@ebf/ember-cli-design-system/interceptor';
+import RequestInterceptor from '@ebf/design-system/interceptor';
 
 export default class LoggingRequestInterceptor extends RequestInterceptor {
   request(request) {

@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/services/progress';
+export { default } from '@ebf/design-system/services/progress';

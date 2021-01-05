@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/components/card/summary';
+export { default } from '@ebf/design-system/components/card/summary';

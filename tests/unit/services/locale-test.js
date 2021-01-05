@@ -2,7 +2,7 @@ import moment from 'moment';
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 import { run } from '@ember/runloop';
-import Locale from '@ebf/ember-cli-design-system/locale';
+import Locale from '@ebf/design-system/locale';
 import resetStorages from 'ember-local-storage/test-support/reset-storage';
 
 const en = new Locale('en', 'US');

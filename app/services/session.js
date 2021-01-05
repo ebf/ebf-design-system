@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/services/session';
+export { default } from '@ebf/design-system/services/session';

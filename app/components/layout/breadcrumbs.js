@@ -1,1 +1,1 @@
-export { default } from '@ebf/ember-cli-design-system/components/layout/breadcrumbs';
+export { default } from '@ebf/design-system/components/layout/breadcrumbs';

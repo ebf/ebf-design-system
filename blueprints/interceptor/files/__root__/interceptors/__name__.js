@@ -1,4 +1,4 @@
-import RequestInterceptor from '@ebf/ember-cli-design-system/interceptor';
+import RequestInterceptor from '@ebf/design-system/interceptor';
 
 export default class <%= classifiedModuleName %>RequestInterceptor extends RequestInterceptor {
   name = <%= camelizedModuleName %>;
