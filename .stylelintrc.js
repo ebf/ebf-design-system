@@ -10,7 +10,11 @@ module.exports = {
   ],
   rules: {
     /* Prettier config rules */
-    'prettier/prettier': true,
+    'prettier/prettier': [true, {
+      singleQuote: true,
+      printWidth: 120,
+      tabWidth: 2
+    }],
 
     /* Standard rules */
     'max-nesting-depth': 5,

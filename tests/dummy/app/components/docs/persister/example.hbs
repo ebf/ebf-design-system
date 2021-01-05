@@ -1,0 +1,8 @@
+<DocsDemo as |demo|>
+  <demo.example @name="persister-demo-component.hbs">
+    <SubmitButton @state={{this.state}} @onClick={{perform this.save}} />
+  </demo.example>
+
+  {{demo.snippet "persister-demo-component.hbs"}}
+  {{demo.snippet "persister-demo-component.js" label="component.js"}}
+</DocsDemo>

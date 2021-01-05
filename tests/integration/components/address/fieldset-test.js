@@ -24,17 +24,18 @@ module('Integration | Component | address/fieldset', function(hooks) {
       </ChangesetForm>
     `);
 
-    assert.ok(this.element.querySelector('[name="address"]'));
-    assert.ok(this.element.querySelector('[name="zip"]'));
-    assert.ok(this.element.querySelector('[name="city"]'));    
-    assert.ok(this.element.querySelector('[name="country"]'));
-    assert.notOk(this.element.querySelector('[name="additional-address"]'));
-    assert.notOk(this.element.querySelector('[name="state"]'));
+    assert.ok(this.element.querySelector('input[name="address"]'));
+    assert.ok(this.element.querySelector('input[name="postal-code"]'));
+    assert.ok(this.element.querySelector('input[name="city"]'));    
+    assert.ok(this.element.querySelector('input[name="country"]'));
+    assert.notOk(this.element.querySelector('input[name="additional-address"]'));
+    assert.notOk(this.element.querySelector('input[name="state"]'));
+    assert.notOk(this.element.querySelector('legend'));
 
-    assert.equal(this.element.querySelector('[name="address"] input').value, address.address);
-    assert.equal(this.element.querySelector('[name="zip"] input').value, address.postalCode);
-    assert.equal(this.element.querySelector('[name="city"] input').value, address.city);
-    assert.equal(this.element.querySelector('[name="country"] input').value, address.country);
+    assert.equal(this.element.querySelector('input[name="address"]').value, address.address);
+    assert.equal(this.element.querySelector('input[name="postal-code"]').value, address.postalCode);
+    assert.equal(this.element.querySelector('input[name="city"]').value, address.city);
+    assert.equal(this.element.querySelector('input[name="country"]').value, address.country);
   });
 
   test('it renders additional address fields', async function(assert) {
@@ -42,22 +43,30 @@ module('Integration | Component | address/fieldset', function(hooks) {
 
     await render(hbs`
       <ChangesetForm @model={{this.model}} as |changeset form|>
-        <Address::Fieldset @form={{form}} @changeset={{changeset}} @additional={{true}} @state={{true}}/>
+        <Address::Fieldset
+          @legend="Address"
+          @form={{form}}
+          @changeset={{changeset}}
+          @additional={{true}}
+          @state={{true}}
+        />
       </ChangesetForm>
     `);
 
-    assert.ok(this.element.querySelector('[name="address"]'));
-    assert.ok(this.element.querySelector('[name="zip"]'));
-    assert.ok(this.element.querySelector('[name="city"]'));    
-    assert.ok(this.element.querySelector('[name="country"]'));
-    assert.ok(this.element.querySelector('[name="additional-address"]'));
-    assert.ok(this.element.querySelector('[name="state"]'));
+    assert.ok(this.element.querySelector('input[name="address"]'));
+    assert.ok(this.element.querySelector('input[name="postal-code"]'));
+    assert.ok(this.element.querySelector('input[name="city"]'));    
+    assert.ok(this.element.querySelector('input[name="country"]'));
+    assert.ok(this.element.querySelector('input[name="additional-address"]'));
+    assert.ok(this.element.querySelector('input[name="state"]'));
+    assert.ok(this.element.querySelector('legend'));
 
-    assert.equal(this.element.querySelector('[name="address"] input').value, address.address);
-    assert.equal(this.element.querySelector('[name="additional-address"] input').value, address.additionalAddress);
-    assert.equal(this.element.querySelector('[name="zip"] input').value, address.postalCode);
-    assert.equal(this.element.querySelector('[name="city"] input').value, address.city);
-    assert.equal(this.element.querySelector('[name="state"] input').value, address.state);
-    assert.equal(this.element.querySelector('[name="country"] input').value, address.country);
+    assert.dom(this.element.querySelector('legend')).hasText('Address');
+    assert.equal(this.element.querySelector('input[name="address"]').value, address.address);
+    assert.equal(this.element.querySelector('input[name="additional-address"]').value, address.additionalAddress);
+    assert.equal(this.element.querySelector('input[name="postal-code"]').value, address.postalCode);
+    assert.equal(this.element.querySelector('input[name="city"]').value, address.city);
+    assert.equal(this.element.querySelector('input[name="state"]').value, address.state);
+    assert.equal(this.element.querySelector('input[name="country"]').value, address.country);
   });
 });

@@ -155,12 +155,13 @@ export default class ErrorResolverService extends Service {
    * Resolves an error using the `#resolve` method and for each resolved error it would try to show the
    * the error notification using the `ember-notify` service.
    *
-   * @param {Error|Object|String} error 
+   * @param {Error|Object|String} error   Error that needs to be resolved and shown as a notification
+   * @param {Object}              options Options object for the `ember-notify` service
    */
-  notify(error) {
+  notify(error, options = {}) {
     const resolved = this.resolve(error);
 
-    resolved.errors.forEach(({ type, ...error }) => this.notifications.show(type, error));
+    resolved.errors.forEach(({ type, ...error }) => this.notifications.show(type, { ...options, ...error }));
   }
 
 }

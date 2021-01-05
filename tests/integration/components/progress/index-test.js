@@ -13,9 +13,6 @@ module('Integration | Component | progress/index', function(hooks) {
 
     await render(hbs`<Progress @register={{this.register}} />`);
 
-    console.log(registered);
-    console.log(this.element.innerHTML);
-
-    assert.equal(registered.length, 1);
+    assert.equal(registered.length, 0);
   });
 });

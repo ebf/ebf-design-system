@@ -30,12 +30,15 @@ Router.map(function() {
     this.route('loaders');
     this.route('pagination');
     this.route('progress');
+    this.route('table');
 
     this.route('services', function() {
       this.route('ajax');
       this.route('cookies');
+      this.route('destroyer');
       this.route('locale');
       this.route('error-resolver');
+      this.route('persister');
     });
   });
 });

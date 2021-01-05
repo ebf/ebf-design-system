@@ -1,0 +1,24 @@
+<DocsDemo as |demo|>
+  <demo.example @name="table-example.hbs">
+    <Table @tableClassNames={{"table table-condensed table-hover"}}
+      @columns={{this.columns}}
+      @model={{this.sorted}}
+      @onSort={{fn this.onSort}}
+      as |table|
+    >
+      <table.title @title="Table Example" />
+
+      <table.filters as |filters|>
+        <filters.text
+            @name="email"
+            @filter={{fn this.filterByEmail}}
+            @placeholder={{"Filer by email"}}
+        />
+
+      </table.filters>
+    </Table>
+  </demo.example>
+
+  {{demo.snippet "table-example.hbs"}}
+  {{demo.snippet "table-example.js" label="component.js"}}
+</DocsDemo>

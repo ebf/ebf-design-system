@@ -8,6 +8,10 @@ import { run } from '@ember/runloop';
 export default class DatePickerFieldComponent extends Component {
   @tracked center;
 
+  get dateFormat() {
+    return this.args.dateFormat || 'L';
+  }
+
   @action selected(event = {}) {
     const { onChange = noop } = this.args;
     const { date = null } = event;

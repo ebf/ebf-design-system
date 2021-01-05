@@ -1,26 +1,30 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { click, render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | date-picker/range', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`<DatePicker::Range />`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
+  test('it renders default range list', async function(assert) {
     await render(hbs`
-      <DatePicker::Range>
-        template block text
-      </DatePicker::Range>
+      <DatePicker::Range
+        @selected={{this.selected.id}}
+        @onSelect={{fn (mut this.selected)}}
+      />
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom(this.element.querySelector('.nav')).exists()
+      .hasAttribute('role', 'navigation')
+      .hasAria('label', 'Date ranges');
+
+    assert.equal(this.element.querySelectorAll('.nav-link').length, 5);
+    assert.dom(this.element.querySelector('.nav-link.active')).doesNotExist();
+
+    await click('.nav-link:nth-child(2)');
+
+    assert.dom(this.element.querySelector('.nav-link:nth-child(2)')).exists()
+      .hasClass('active')
+      .hasAria('selected', '');
   });
 });

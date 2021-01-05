@@ -7,7 +7,7 @@
     <input type="text"
       class="form-control"
       onclick={{dropdown.actions.toggle}}
-      value={{if @value (format-date @value 'L')}}
+      value={{if @value (format-date @value this.dateFormat)}}
       placeholder={{@placeholder}}
     >
     <Icon::Ebf

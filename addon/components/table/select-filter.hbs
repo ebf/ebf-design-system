@@ -1,0 +1,17 @@
+<div class="form-group">
+  {{#if @label}}
+    <label>{{@label}}</label>
+  {{/if}}
+
+  <div class="form-group">
+    <PowerSelect
+      @allowClear={{true}}
+      @options={{@options}}
+      @selected={{this.value}}
+      @placeholder={{@placeholder}}
+      @onChange={{fn this.selected}}
+    as |option|>
+      {{yield option}}
+    </PowerSelect>
+  </div>
+</div>
