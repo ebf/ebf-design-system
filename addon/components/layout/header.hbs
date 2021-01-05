@@ -1,5 +1,14 @@
 <header class="header ebf-double-navbar shadow" ...attributes>
-  <BsNavbar @type="light" class="bg-white" as |navbar|>
+  <div class="banner container {{if @fluid "container-fluid"}}">
+    <div class="align-items-center justify-content-between row">
+      <Layout::Header::Brander @logo={{@logo}} @label={{@label}} class="col text-left" />
+      <div id="header-language" class="col text-right">
+      	<LanguageSwitcher />
+      </div>
+    </div>
+  </div>
+
+  <BsNavbar @type="light" class="bg-white navbar-align-right" as |navbar|>
     {{yield navbar}}
   </BsNavbar>
 

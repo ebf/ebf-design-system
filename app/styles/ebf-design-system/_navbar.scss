@@ -177,3 +177,13 @@
     }
   }
 }
+
+.navbar-align-right {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.header {
+  clear: both;
+}

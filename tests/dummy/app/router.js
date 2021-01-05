@@ -24,6 +24,7 @@ Router.map(function() {
     this.route('headline');
     this.route('errors');
     this.route('modals');
+    this.route('header');
     this.route('navs');
     this.route('inputs');
     this.route('notifications');

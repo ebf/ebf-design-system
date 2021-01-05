@@ -1,0 +1,32 @@
+// Header
+
+.brand {
+  display: flex;
+  align-items: center;
+  height: $spacer * 4.5;
+
+  .brand-logo {
+    display: inline-flex;
+  }
+
+  .brand-label {
+    display: inline-flex;
+    font-size: $brander-font-size;
+    margin-left: $grid-gutter-width / 2;
+  }
+}
+
+.banner {
+  display: block;
+  background-color: $brander-bg;
+  color: $brander-text-color;
+  height: $spacer * 4.5;
+
+  button {
+    color: $brander-text-color;
+
+    &:hover {
+      color: $brander-text-color;
+    }
+  }
+}

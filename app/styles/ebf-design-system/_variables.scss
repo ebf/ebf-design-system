@@ -796,6 +796,12 @@ $navbar-light-disabled-color: $gray-300;
 $navbar-light-toggler-border-color: transparent !default;
 $navbar-light-box-shadow: 0 2px 6px 0 rgba($black, 0.03) !default;
 
+// Brander
+
+$brander-bg: $primary !default;
+$brander-text-color: $white !default;
+$brander-font-size: $font-size-base !default;
+
 // Alerts
 
 $alert-notify-margin: 1.5rem !default;
