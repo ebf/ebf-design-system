@@ -1,3 +1,4 @@
+/* eslint-disable ember/no-get */
 import { map } from 'lodash';
 import Component from '@glimmer/component';
 import { get, action } from '@ember/object';

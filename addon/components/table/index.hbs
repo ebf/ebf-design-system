@@ -3,7 +3,7 @@
     {{yield
       (hash
         title=(component "table/title")
-        filters=(component "table/filters" model=@model table=table)
+        filters=(component "table/filters" model=@model table=this.table)
     )
     }}
   </header>
