@@ -1,0 +1,23 @@
+// Brander Header component
+
+.navbar-brander {
+  height: $spacer * 4.5;
+  background-color: $navbar-brander-bg;
+  color: $navbar-brander-color;
+  max-height: $spacer * 4;
+  padding: $navbar-padding-y $navbar-padding-x;
+
+  .navbar-brand,
+  .dropdown-toggle,
+  .navbar-nav .nav-link {
+    color: $navbar-brander-color;
+
+    @include hover-focus() {
+      color: $navbar-brander-hover-color;
+    }
+
+    &.disabled {
+      color: $navbar-brander-disabled-color;
+    }
+  }
+}

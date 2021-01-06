@@ -1,0 +1,57 @@
+{{#if @route}}
+  {{#if @model}}
+    <LinkTo @route={{@route}} @model={{@model}} ...attributes>
+      <Icon
+        @icon={{@icon}}
+        @type={{@type}}
+        @prefix={{@prefix}}
+        @size={{@size}}
+        @spin={{@spin}}
+        @tooltip={{@tooltip}}
+        @placement={{@placement}}
+        class="icon-link"
+      />
+    </LinkTo>
+  {{else}}
+    <LinkTo @route={{@route}} ...attributes>
+      <Icon
+        @icon={{@icon}}
+        @type={{@type}}
+        @prefix={{@prefix}}
+        @size={{@size}}
+        @spin={{@spin}}
+        @tooltip={{@tooltip}}
+        @placement={{@placement}}
+        class="icon-link"
+      />
+    </LinkTo>
+  {{/if}}
+{{/if}}
+
+{{#if @href}}
+  <a href={{@href}} ...attributes>
+    <Icon
+      @icon={{@icon}}
+      @type={{@type}}
+      @prefix={{@prefix}}
+      @size={{@size}}
+      @spin={{@spin}}
+      @tooltip={{@tooltip}}
+      @placement={{@placement}}
+      class="icon-link"
+    />
+  </a>
+{{else if @onClick}}
+  <a href {{on "click" (disable-bubbling @onClick)}} ...attributes>
+    <Icon
+      @icon={{@icon}}
+      @type={{@type}}
+      @prefix={{@prefix}}
+      @size={{@size}}
+      @spin={{@spin}}
+      @tooltip={{@tooltip}}
+      @placement={{@placement}}
+      class="icon-link"
+    />
+  </a>
+{{/if}}

@@ -1,0 +1,14 @@
+<div class="stats-row row" ...attributes>
+  {{#with (if @inline "col-6" "col-12") as |className|}}
+    <div class="{{className}} font-weight-bolder">
+      {{@label}}
+    </div>
+    <div class="{{className}}">
+      {{#if (has-block)}}
+        {{yield}}
+      {{else if @value}}
+        {{@value}}
+      {{/if}}
+    </div>
+  {{/with}}
+</div>

@@ -1,0 +1,9 @@
+<div class="d-flex flex-wrap my-3">
+  {{#each this.types as |type|}}
+    <div class="m-2">
+      <BsButton @type={{type}} @outline={{@outline}} @size={{@size}}>
+        {{type}}
+      </BsButton>
+    </div>
+  {{/each}}
+</div>

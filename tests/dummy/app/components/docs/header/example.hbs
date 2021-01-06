@@ -1,0 +1,40 @@
+<DocsDemo as |demo|>
+  <demo.example @name="brand.hbs">
+    <Layout::Header as |header|>
+      <header.brander class="container-fluid" as |brander|>
+        <brander.image @src="/ebf-logo.png" @label="EBF"/>
+        <brander.language-switcher />
+      </header.brander>
+      <header.navbar as |navbar|>
+        <navbar.toggle />
+        <navbar.content>
+          <navbar.nav as |nav|>
+            <nav.item>
+              <nav.link-to @route="index">
+                <Icon::Ebf @icon="ebf-grid" /> Home
+              </nav.link-to>
+            </nav.item>
+            <nav.item>
+              <nav.link-to @route="docs.navs">
+                <Icon::Ebf @icon="ebf-list" /> Navs
+              </nav.link-to>
+            </nav.item>
+            <nav.dropdown as |dd|>
+              <dd.toggle>Dropdown <span class="caret"></span></dd.toggle>
+              <dd.menu as |ddm|>
+                <ddm.item>
+                  <ddm.link-to @route="index">Home</ddm.link-to>
+                </ddm.item>
+                <ddm.item>
+                  <ddm.link-to @route="docs.header">Header</ddm.link-to>
+                </ddm.item>
+              </dd.menu>
+            </nav.dropdown>
+          </navbar.nav>
+        </navbar.content>
+      </header.navbar>
+    </Layout::Header>
+  </demo.example>
+
+  {{demo.snippet "brand.hbs"}}
+</DocsDemo>

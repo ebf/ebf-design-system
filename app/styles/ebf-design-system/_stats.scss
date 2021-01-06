@@ -1,0 +1,13 @@
+.stats-row {
+  font-size: $stats-font-size;
+  padding: $stats-padding-y $stats-padding-x;
+}
+
+.stats-inline .stats-row {
+  border-bottom-width: 1px;
+  padding: $stats-padding-inline-y $stats-padding-inline-x;
+
+  &:first-of-type {
+    border-top-width: 1px;
+  }
+}

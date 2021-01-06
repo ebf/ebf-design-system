@@ -1,0 +1,13 @@
+<header class="header ebf-double-navbar shadow" ...attributes>
+  {{yield (hash
+    brander=(component "layout/header/brander")
+    navbar=(component "bs-navbar" type="light" backgroundColor="white")
+  )}}
+
+  {{!-- Ember Wormhole placeholder that is used by the Layout::Headline component --}}
+  <div id="page-headline"></div>
+
+  {{!-- Ember Wormhole placeholder that is used by the Layout::Wizard component --}}
+  <div id="page-wizard"></div>
+
+</header>

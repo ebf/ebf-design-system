@@ -1,0 +1,8 @@
+<DocsDemo as |demo|>
+  <demo.example @name="destroyer-demo-component.hbs">
+    <SubmitButton @label="Delete" @state={{this.state}} @onClick={{perform this.delete}} />
+  </demo.example>
+
+  {{demo.snippet "destroyer-demo-component.hbs"}}
+  {{demo.snippet "destroyer-demo-component.js" label="component.js"}}
+</DocsDemo>

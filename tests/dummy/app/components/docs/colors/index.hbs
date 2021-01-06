@@ -1,0 +1,14 @@
+<div class="row my-3">
+  {{#each this.palletes as |pallete|}}
+    <div class="col-6 col-md-4 my-3">
+      <div class="color-swatch"> 
+        <div class="color-swatch-bg bg-{{pallete.color}}">
+        </div>
+        <div class="color-swatch-text">
+          <p class="my-1">Class: {{pallete.color}}</p>
+          <p class="my-1">Hex: {{pallete.hex}}</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

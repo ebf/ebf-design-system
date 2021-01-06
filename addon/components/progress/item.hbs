@@ -1,0 +1,16 @@
+<span
+  class={{this.classNames}}
+  role="button"
+  disabled={{@disabled}}
+  aria-label={{@label}}
+  aria-disabled={{@disabled}}
+  aria-selected={{@selected}}
+  tabindex="0"
+  {{did-insert this.register}}
+  {{will-destroy this.unregister}}
+  {{on "click" (disable-bubbling this.clicked)}}
+  ...attributes
+>
+  <span class="progress-label">{{@label}}</span>
+  <span class="progress-dot"></span>
+</span>

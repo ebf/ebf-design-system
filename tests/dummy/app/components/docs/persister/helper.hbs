@@ -1,0 +1,38 @@
+<DocsDemo as |demo|>
+  <demo.example @name="persister-demo-helper.hbs">
+    <div class="card card-body my-3">
+      <ChangesetForm
+        @model={{this.model}}
+        @onSubmit={{fn (persist)}}
+        as |changeset form|
+      >
+        <form.element
+          @controlType="email"
+          @label="Email"
+          @helpText="We'll never share your email with anyone else."
+          @property="email"
+          as |el|
+        >
+          <el.control name="email" placeholder="Enter your email address" />
+        </form.element>
+
+        <form.element
+          @controlType="password"
+          @label="Password"
+          @property="password"
+          as |el|
+        >
+          <el.control name="password" placeholder="Enter your password" />
+        </form.element>
+      </ChangesetForm>
+    </div>
+
+    <div class="card card-body my-3">
+      <p>E-Mail: {{this.model.email}}</p>
+      <p>Password: {{this.model.password}}</p>
+    </div>
+  </demo.example>
+
+  {{demo.snippet "persister-demo-helper.hbs"}}
+  {{demo.snippet "persister-demo-helper.js" label="component.js"}}
+</DocsDemo>

@@ -1,0 +1,7 @@
+{{#if (and @row.address @row.city @row.country @row.postalCode)}}
+  <small class="table-cell-address">
+    <span>{{@row.address}}</span>
+    <span>{{@row.city}} {{@row.postalCode}}, {{@row.country}}</span>
+  </small>  
+{{/if}}
+

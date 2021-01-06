@@ -1,0 +1,3 @@
+{{#with (if @column.modelPath @column.modelPath "id") as |modelPath|}}
+  <LinkTo @route={{@column.route}} @model={{get @row modelPath}}>{{@value}}</LinkTo>
+{{/with}}

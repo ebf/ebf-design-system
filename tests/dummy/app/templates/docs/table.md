@@ -1,0 +1,3 @@
+# Table
+
+{{docs/table/example}}

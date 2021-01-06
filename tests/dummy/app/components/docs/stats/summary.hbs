@@ -1,0 +1,45 @@
+<DocsDemo @class="bg-white" as |demo|>
+  <demo.example @name="stats-example-summary.hbs">
+    <Stats @title="Summary" @inline={{true}} as |stats|>
+      <stats.row class="border-top-0">
+        <div class="row text-right font-weight-bolder">
+          <div class="col-6">
+            Quantity
+          </div>
+          <div class="col-6">
+            Amount
+          </div>
+        </div>
+      </stats.row>
+      <stats.row @label="Total (net)">
+        <div class="row text-right">
+          <div class="col-12 text-primary font-weight-bolder">
+            7.825,65 EUR
+          </div>
+        </div>
+      </stats.row>
+      <stats.row @label="Total (brutto)">
+          <div class="row text-right">
+            <div class="col-6">
+              1
+            </div>
+            <div class="col-6">
+              7.900,65 EUR
+            </div>
+          </div>
+        </stats.row>
+        <stats.row @label="Tax">
+          <div class="row text-right">
+            <div class="col-6">
+              1
+            </div>
+            <div class="col-6">
+              75 EUR
+            </div>
+          </div>
+        </stats.row>
+    </Stats>
+  </demo.example>
+
+  {{demo.snippet "stats-example-summary.hbs"}}
+</DocsDemo>

@@ -1,0 +1,33 @@
+.border-bottom {
+  .breadcrumb {
+    background-color: transparent;
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+
+  .breadcrumb-item {
+    font-weight: $font-weight-medium;
+    font-size: $font-size;
+    margin-bottom: 0;
+
+    + .breadcrumb-item {
+      &::before {
+        @extend %ebf;
+        content: $ebf-chevron-right;
+        color: $primary-900;
+        font-size: $font-size;
+        line-height: 1.5;
+      }
+    }
+
+    &.active {
+      font-weight: $font-weight-normal;
+    }
+
+    a {
+      color: $primary-900;
+    }
+  }
+}

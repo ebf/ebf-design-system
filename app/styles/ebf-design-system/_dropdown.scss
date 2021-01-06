@@ -1,0 +1,45 @@
+.carrot-none {
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.dropdown-menu {
+  &.show {
+    animation: show-navbar-dropdown 0.25s ease forwards;
+  }
+
+  &.close {
+    animation: hide-navbar-dropdown 0.15s ease backwards;
+    display: block;
+  }
+}
+
+.dropdown-item {
+  width: 100%;
+}
+
+@keyframes show-navbar-dropdown {
+  0% {
+    opacity: 0;
+    top: 1rem;
+    transition: top 0.25s, visibility 0.25s, opacity 0.25s;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes hide-navbar-dropdown {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    top: 1rem;
+  }
+}

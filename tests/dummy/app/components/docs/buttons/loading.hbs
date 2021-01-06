@@ -1,0 +1,14 @@
+<div class="my-3">
+  <DocsDemo class="bg-white" as |demo|>
+    <demo.example @name="submit-button-example.hbs">
+      <SubmitButton
+        @type="primary"
+        @state={{this.state}}
+        @onClick={{this.clicked}}
+      />
+    </demo.example>
+
+    {{demo.snippet "submit-button-example.hbs"}}
+    {{demo.snippet "submit-button-example.js" label="component.js"}}
+  </DocsDemo>
+</div>

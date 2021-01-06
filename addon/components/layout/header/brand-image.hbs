@@ -1,0 +1,8 @@
+<LinkTo @route={{bs-default @route "index"}} class="navbar-brand">
+  {{#if @src}}
+    <img class="d-inline" width="32" height="32" src={{@src}} alt={{@label}} title={{@label}} ...attributes />
+  {{/if}}
+  {{#if @label}}
+    <span class="ml-2 text-uppercase">{{@label}}</span>
+  {{/if}}
+</LinkTo>

@@ -1,0 +1,6 @@
+{{#if @tooltip}}
+  <i class={{this.classNames}} role="button" {{ref this "el"}} {{on "click" this.clicked}} ...attributes></i>
+  <BsTooltip @placement={{this.placement}} @triggerElement={{this.el}}>{{@tooltip}}</BsTooltip>
+{{else}}
+  <i class={{this.classNames}} role="button" {{on "click" this.clicked}} ...attributes></i>
+{{/if}}

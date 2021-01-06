@@ -1,0 +1,33 @@
+<div class="d-flex align-items-center flex-grow-1">
+  <div class="container my-4 text-center">
+    <Icon::Ebf @icon="ebf-workout" @size="4x" class="text-danger my-4" />
+
+    <p class="display-2 my-4 font-weight-light text-muted">
+      {{this.status}}
+    </p>
+
+    <h1 class="text-danger display-4 my-4 font-weight-light">
+      {{t "pages.error.headline"}}
+    </h1>
+
+    {{#each this.errors as |error|}}
+      {{html-safe error.html}}
+    {{/each}}
+
+    <hr class="mt-4">
+
+    <div class="my-4">
+      {{#if @home}}
+        <LinkTo @route={{@home}} class="btn btn-outline-dark px-4 m-1">
+          <Icon::Ebf @icon="ebf-apps" /> {{t "pages.error.home-link"}}
+        </LinkTo>
+      {{/if}}
+
+      {{#if @support}}
+        <LinkTo @route={{@support}} class="btn btn-outline-dark px-4 m-1">
+          <Icon::Ebf @icon="ebf-support" /> {{t "pages.error.support-link"}}
+        </LinkTo>
+      {{/if}}
+    </div>
+  </div>
+</div>

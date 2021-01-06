@@ -1,0 +1,12 @@
+<DocsDemo @class="bg-white" as |demo|>
+  <demo.example @name="stats-example-address.hbs">
+    <Stats @title="Billing address" @inline={{true}} as |stats|>
+      <stats.row @label="Company name" @value="TUV Rheinland" />
+      <stats.row @label="Address" @value="Am Posthof 39" />
+      <stats.row @label="Postal code, City" @value="53121, Bonn" />
+      <stats.row @label="Country" @value="Germany" />
+    </Stats>
+  </demo.example>
+
+  {{demo.snippet "stats-example-address.hbs"}}
+</DocsDemo>

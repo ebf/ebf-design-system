@@ -1,0 +1,12 @@
+//Telekom Theme
+@import 'colors';
+@import 'fonts';
+@import 'variables/theme-variables';
+@import 'variables/theme-variables-overwrites';
+@import 'ember-bootstrap/functions';
+
+// Import Variables
+@import '../../variables';
+@import 'ember-bootstrap/variables';
+
+// Import Variables Dependant Styles

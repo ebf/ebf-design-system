@@ -1,0 +1,14 @@
+<DocsDemo @class="bg-white" as |demo|>
+  <demo.example @name="stats-example-phone.hbs">
+    <Stats @title="Apple iPhone 1" as |stats|>
+      <stats.row @label="Product No." @value="99930996" />
+      <stats.row @label="Size and weight" @value="138,4 x 67,3 x 7,3 mm | ca. 148" />
+      <stats.row @label="Batter" @value="Li-Ion" />
+      <stats.row @label="Camera" @value="12 Megapixel" />
+      <stats.row @label="Display" @value="Retina Display 16,7 milion colors" />
+      <stats.row @label="Processor" @value="Processor Type A13 Bionic Chip" />
+    </Stats>
+  </demo.example>
+
+  {{demo.snippet "stats-example-phone.hbs"}}
+</DocsDemo>

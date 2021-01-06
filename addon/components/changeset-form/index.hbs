@@ -1,0 +1,27 @@
+{{#with (changeset @model this.validations) as |changeset|}}
+  <BsForm
+    @autocomplete={{@autocomplete}}
+    @disabled={{@disabled}}
+    @formLayout={{@formLayout}}
+    @model={{changeset}}
+    @onSubmit={{@onSubmit}}
+    @submitButtonComponent="submit-button"
+    ...attributes
+    as |form|
+  >
+    {{yield changeset form}}
+
+    {{#if this.shouldShowSubmitButton}}
+      <div class="form-submit-button-row row">
+        <div class="form-submit-button-col col">
+          <form.submitButton
+            @type="primary"
+            @label={{if @buttonLabel @buttonLabel (t "forms.labels.save")}}
+            @onClick={{form.submit}}
+            disabled={{or @disabled form.isSubmitting}}
+          />
+        </div>
+      </div>
+    {{/if}}
+  </BsForm>
+{{/with}}

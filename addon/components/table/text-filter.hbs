@@ -1,0 +1,14 @@
+<div class="form-group">
+  {{#if @label}}
+    <label>{{@label}}</label>
+  {{/if}}
+
+  <Input
+    @type={{@type}}
+    @value={{this.value}}
+    name={{@name}}
+    placeholder={{@placeholder}}
+    class="form-control"
+    ...attributes
+  />
+</div>

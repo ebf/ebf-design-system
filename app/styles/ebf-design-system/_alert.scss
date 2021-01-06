@@ -1,0 +1,68 @@
+.alert-primary {
+  color: $primary-200;
+}
+
+.alert-secondary {
+  color: $gray-200;
+}
+
+.alert-success {
+  color: $green-200;
+}
+
+.alert-danger {
+  color: $red-200;
+}
+
+.alert-warning {
+  color: $yellow-800;
+}
+
+.alert-info {
+  color: $primary-500;
+}
+
+.alert-light {
+  color: $gray-800;
+}
+
+.alert-dark {
+  color: $gray-200;
+}
+
+.alert-icon {
+  margin-right: 0.5rem;
+}
+
+.alert {
+  box-shadow: $alert-box-shadow;
+
+  .alert-link {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    background-color: $value;
+  }
+}
+
+/* Set the width for Ember Notify notification element */
+.ember-notify-default {
+  .ember-notify.alert {
+    width: 460px;
+    margin: $alert-notify-margin;
+    border-width: $alert-border-width;
+    padding: $alert-padding-y $alert-padding-x;
+  }
+}
+
+.capitalize-text {
+  .heading {
+    .anchor {
+      text-transform: capitalize;
+    }
+  }
+}

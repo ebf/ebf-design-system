@@ -1,0 +1,4 @@
+{{#if @value}}
+  {{moment-format @value (if @column.dateFormat @column.dateFormat "L")}}
+{{/if}}
+

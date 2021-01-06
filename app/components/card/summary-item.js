@@ -1,0 +1,1 @@
+export { default } from '@ebf/design-system/components/card/summary-item';

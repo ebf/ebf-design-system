@@ -1,0 +1,11 @@
+{{#let (compute (fn this.resolve) @error) as |resolved|}}
+  {{#each resolved.errors as |error|}}
+    {{#if (has-block)}}
+      {{yield error resolved}}
+    {{else}}
+      <div class="text-{{error.level}}">
+        {{html-safe error.html}}
+      </div>
+    {{/if}}
+  {{/each}}
+{{/let}}

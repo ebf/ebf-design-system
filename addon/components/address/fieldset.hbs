@@ -1,0 +1,78 @@
+<fieldset name="address">
+  {{#if @legend}}
+    <legend>{{@legend}}</legend>
+  {{/if}}
+
+  {{#with @form.element as |Element|}}
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <Element
+          @property={{concat @prefix "address"}}
+          @label={{t "forms.address.labels.street"}}
+          @errors={{get @changeset.error (concat @prefix "address.validation")}}
+          as |el|
+        >
+          <el.control name="address" />
+        </Element>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <Element
+          @property={{concat @prefix "postalCode"}}
+          @label={{t "forms.address.labels.zip"}}
+          @errors={{get @changeset.error (concat @prefix "postalCode.validation")}}
+          as |el|
+        >
+          <el.control name="postal-code" />
+        </Element>
+      </div>
+
+      {{#if @additional}}
+        <div class="col-12 col-md-8">
+          <Element
+            @property={{concat @prefix "additionalAddress"}}
+            @label={{t "forms.address.labels.additional-address"}}
+            @errors={{get @changeset.error (concat @prefix "additionalAddress.validation")}}
+            as |el|
+          >
+            <el.control name="additional-address" />
+          </Element>
+        </div>
+      {{/if}}
+    </div>
+    <div class="row">
+      <div class="col-12 {{if @state "col-md-4" "col-md-6"}}">
+        <Element
+          @property={{concat @prefix "city"}}
+          @label={{t "forms.address.labels.city"}}
+          @errors={{get @changeset.error (concat @prefix "city.validation")}}
+          as |el|
+        >
+          <el.control name="city" />
+        </Element>
+      </div>
+      {{#if @state}}
+        <div class="col-12 col-md-4">
+          <Element
+            @property={{concat @prefix "state"}}
+            @label={{t "forms.address.labels.state"}}
+            @errors={{get @changeset.error (concat @prefix "state.validation")}}
+            as |el|
+          >
+            <el.control name="state" />
+          </Element>
+        </div>
+      {{/if}}
+      <div class="col-12 {{if @state "col-md-4" "col-md-6"}}">
+        <Element
+          @property={{concat @prefix "country"}}
+          @label={{t "forms.address.labels.country"}}
+          @errors={{get @changeset.error (concat @prefix "country.validation")}}
+          as |el|
+          >
+            <el.control name="country" />
+          </Element>
+      </div>
+    </div>
+  {{/with}}
+</fieldset>

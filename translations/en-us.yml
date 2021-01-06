@@ -1,0 +1,75 @@
+#### Language and Locales ####
+
+locales:
+  en_US: English US
+  de_DE: Deutsch
+
+#### Layout Components ####
+
+## Date Ranges
+date-ranges:
+  label: Date ranges
+  today: Today
+  yesterday: Yesterday
+  last-7-days: Last 7 days
+  last-30-days: Last 30 days
+  this-month: This month 
+  last-month: Last month
+
+## Pagination
+pagination:
+  label: Pagination
+  first: First
+  previous: Previous
+  next: Next
+  last: Last
+  total: "Total: {total}"
+
+### Forms ###
+forms:
+  labels:
+    save: Save
+
+  ## Address Fields ##
+  address:
+    labels:
+      city: City
+      additional-address: Additional address
+      country: Country
+      state: State
+      legend: Address
+      street: Street and Number
+      zip: Postal code
+
+### Notifications ###
+notifications:
+  dropdown:
+    clear: Clear
+    label: Notifications
+    empty: All done here!
+  dirty:
+    title: Are you sure?
+    text: You have made changes which were not saved. Do you want to continue without saving these changes?
+    cancel: 'No, go back'
+    confirm: 'Yes'
+  delete:
+    cancel: 'No, I''ve changed my mind'
+    confirm: 'Yes, I am sure'
+    success: Record has been successfully removed
+    text: This operation can not be reverted. Are you sure you wish to remove this record?
+    title: Are you sure?
+  save:
+    invalid: Could not save your changes as some of them are not valid. Please correct the errors and try again
+    success: Changes have been successfully saved
+
+pages:
+  error:
+    home-link: Home
+    headline: Huston!? We have a problem!
+    support-link: Contact support
+
+#### Error Messages ####
+errors:
+  access-denied: It seems you do not have sufficient permissions to perform this action.
+  general: <h5>Something went wrong</h5><p>An unexpected error occurred, please contact support</p>
+  not-found: This is not the page you are looking for

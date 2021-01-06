@@ -1,0 +1,23 @@
+<div class="card card-body py-3" ...attributes>
+  <h5 class="card-title border-bottom">
+    {{@label}}
+  </h5>
+  <p class="mb-0">
+    {{this.recipient}}
+  </p>
+  <p class="mb-0">
+    {{this.address}}
+    {{#if this.additionalAddress}}
+      <i>, {{this.additionalAddress}}</i>
+    {{/if}}
+  </p>
+  <p class="mb-0">
+    {{this.city}}, {{this.postalCode}}
+  </p>
+  <p class="mb-0">
+    {{#if this.state}}
+      <span>{{this.state}}, </span>
+    {{/if}}
+    <span>{{this.country}}</span>
+  </p>
+</div>

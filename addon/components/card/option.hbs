@@ -1,0 +1,17 @@
+<div class="ebf-card-select ebf-card-option card {{if @selected 'card-select'}}" ...attributes>
+  {{#if @selected}}
+    <i class="option-select-icon ebf ebf-check-mark-circle-full-fill"></i>
+  {{/if}}
+
+  <div class="card-body">
+    {{#if (has-block)}}
+      {{yield (hash
+        title=(component "card/title")
+        description=(component "card/description")
+      )}}
+    {{else}}
+      <Card::Title @title={{@title}} />
+      <Card::Description @value={{@description}} />
+    {{/if}}
+  </div>
+</div>

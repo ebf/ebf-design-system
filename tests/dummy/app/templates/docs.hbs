@@ -1,0 +1,48 @@
+<DocsViewer as |viewer|>
+  <viewer.nav as |nav|>
+    {{nav.section "Introduction"}}
+    {{nav.item "Quickstart" "docs.index"}}
+    {{nav.item "Usage" "docs.usage"}}
+    {{nav.item "Colors" "docs.colors"}}
+    {{nav.item "Typography" "docs.typography"}}
+    {{nav.item "Icons" "docs.icons"}}
+    {{nav.item 'Layout' 'docs.layout'}}
+
+    {{nav.section "Components"}}
+    {{nav.item "Address" "docs.address"}}
+    {{nav.item "Alerts" "docs.alerts"}}
+    {{nav.item "Buttons" "docs.buttons"}}
+    {{nav.item "Breadcrumbs" "docs.breadcrumbs"}}
+    {{nav.item "Cards" "docs.cards"}}
+    {{nav.item "Errors" "docs.errors"}}
+    {{nav.item "Footer" "docs.footer"}}
+    {{nav.item "Forms" "docs.form"}}
+    {{nav.item "Header" "docs.header"}}
+    {{nav.item "Headline" "docs.headline"}}
+    {{nav.item "Modals" "docs.modals"}}
+    {{nav.item "Navs" "docs.navs"}}
+    {{nav.item "Inputs" "docs.inputs"}}
+    {{nav.item "Notifications" "docs.notifications"}}
+    {{nav.item "Language switcher" "docs.language-switcher"}}
+    {{nav.item "Loaders" "docs.loaders"}}
+    {{nav.item "Pagination" "docs.pagination"}}
+    {{nav.item "Progress" "docs.progress"}}
+    {{nav.item "Stats" "docs.stats"}}
+    {{nav.item "Table" "docs.table"}}
+    {{nav.item "Themes" "docs.themes"}}
+    
+    {{nav.section "Services"}}
+    {{nav.item "AJAX" "docs.services.ajax"}}
+    {{nav.item "Cookies" "docs.services.cookies"}}
+    {{nav.item "Destroyer" "docs.services.destroyer"}}
+    {{nav.item "Locale" "docs.services.locale"}}
+    {{nav.item "Error resolver" "docs.services.error-resolver"}}
+    {{nav.item "Persister" "docs.services.persister"}}
+
+    {{!-- {{nav.item "Layout" "docs.components.layout"}} --}}
+  </viewer.nav>
+
+  <viewer.main>
+    {{outlet}}
+  </viewer.main>
+</DocsViewer>

@@ -1,0 +1,13 @@
+<nav class="nav flex-column" role="navigation" aria-label={{bs-default @label (t "date-ranges.label")}}>
+  {{#each-in this.ranges as |label range|}}
+    {{#let (eq label @selected) as |active|}}
+      <a href
+        class="nav-link {{if active "active"}}"
+        aria-selected={{active}}
+        {{on "click" (disable-bubbling (fn this.select range label))}}
+      >
+        {{t label}}
+      </a>
+    {{/let}}
+  {{/each-in}}
+</nav>

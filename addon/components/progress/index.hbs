@@ -1,0 +1,12 @@
+<div class="ebf-progress-bar" ...attributes>
+  <div class="progress-bar-item-container">
+    {{yield (hash
+      item=(component "progress/item" register=(fn this.register) unregister=(fn this.unregister))
+    )}}
+  </div>
+
+	<Progress::Bar
+		@max={{this.size}}
+		@value={{this.progress}}
+	/>
+</div>

@@ -1,0 +1,44 @@
+/* Loading Spinner */
+.loading-spinner {
+  display: block;
+  position: relative;
+
+  .loading-icon {
+    @include loader-size($loader-size);
+    display: inline-block;
+    box-sizing: border-box;
+
+    border: solid 2px transparent;
+    border-top-color: $primary;
+    border-left-color: $primary;
+    border-radius: 50%;
+
+    animation: nprogress-spinner 600ms linear infinite;
+  }
+
+  &.loading-spinner-xs .loading-icon {
+    @include loader-size($loader-size-xs);
+  }
+
+  &.loading-spinner-sm .loading-icon {
+    @include loader-size($loader-size-sm);
+  }
+
+  &.loading-spinner-lg .loading-icon {
+    @include loader-size($loader-size-lg);
+  }
+
+  &.loading-spinner-xl .loading-icon {
+    @include loader-size($loader-size-xl);
+  }
+}
+
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

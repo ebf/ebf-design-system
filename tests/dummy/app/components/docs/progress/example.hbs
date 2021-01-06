@@ -1,0 +1,11 @@
+<DocsDemo as |demo|>
+  <demo.example @name="progress.hbs">
+    <Progress as |progress|>
+      <progress.item @name="first" @label="first" @completed={{true}} @clicked={{fn this.next "second"}}/>
+      <progress.item @name="second" @label="second" @selected={{true}} @clicked={{fn this.next "third"}}/>
+      <progress.item @name="third" @label="third" @disabled={{true}} @clicked={{fn this.next}}/>
+    </Progress>
+  </demo.example>
+
+  {{demo.snippet "progress.hbs"}}
+</DocsDemo>

@@ -1,0 +1,15 @@
+<Await @promise={{@promise}} @defer={{@defer}} as |await|>
+    <await.Pending>
+      <Loader @size={{@size}} @label={{@label}} />
+    </await.Pending>
+
+    <await.Fulfilled as |resolved|>
+      {{yield resolved await}}
+    </await.Fulfilled>
+
+    <await.Rejected as |error|>
+      <div class="d-flex justify-content-center my-4">
+        <Errors @error={{error}} />
+      </div>
+    </await.Rejected>
+  </Await>

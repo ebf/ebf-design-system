@@ -1,0 +1,34 @@
+<div class="input-group input-counter" ...attributes>
+  <div class="input-group-prepend">
+    {{#let (lte this.value this.min) as |disabled|}}
+      <BsButton
+        disabled={{disabled}}
+        aria-disabled={{disabled}}
+        @type="light"
+        @onClick={{fn this.decrement this.value}}>
+        <Icon::Ebf @icon="ebf-minus" />
+      </BsButton>
+    {{/let}}
+  </div>
+  <input
+    type="number"
+    class="form-control"
+    min={{this.min}}
+    max={{this.max}} 
+    value={{@value}}
+    onchange={{this.changed}}
+    aria-label={{@label}}
+    placeholder={{@placeholder}}
+  />
+  <div class="input-group-append">
+    {{#let (gte this.value this.max) as |disabled|}}
+      <BsButton
+        disabled={{disabled}}
+        aria-disabled={{disabled}}
+        @type="light"
+        @onClick={{fn this.increment this.value}}>
+        <Icon::Ebf @icon="ebf-plus" />
+      </BsButton>
+    {{/let}}
+  </div>
+</div>

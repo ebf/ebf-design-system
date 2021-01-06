@@ -1,0 +1,1 @@
+export { default } from '@ebf/design-system/components/changeset-form/index';

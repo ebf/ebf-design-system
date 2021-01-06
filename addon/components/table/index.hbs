@@ -1,0 +1,48 @@
+<div class="ebf-table">
+  <header class="ebf-table-header">
+    {{yield
+      (hash
+        title=(component "table/title")
+        filters=(component "table/filters" model=@model table=this.table)
+    )
+    }}
+  </header>
+
+  <div class="ebf-table-contents">
+    <div class="table-responsive">
+
+      <LightTable
+              @table={{this.table}}
+              @height={{this.height}}
+              @tableClassNames={{@tableClassNames}}
+              class="table"
+              ...attributes
+              as |t|>
+
+        <t.head
+                @onColumnClick={{fn this.columnClicked}}
+                @iconSortable='sort'
+                @iconAscending='ebf-arr-up-dots'
+                @iconDescending='ebf-arr-down-dots'
+                @iconComponent='table/sort-icon'
+                @fixed={{true}}
+        />
+
+        <t.body @canSelect={{false}}
+                @onScrolledToBottom={{fn this.scrolledToBottom}}
+                as |body|
+        >
+          {{#if this.isLoading}}
+            <body.loader>
+              <Loader @size="xl"/>
+            </body.loader>
+          {{/if}}
+        </t.body>
+      </LightTable>
+
+
+    </div>
+  </div>
+</div>
+
+

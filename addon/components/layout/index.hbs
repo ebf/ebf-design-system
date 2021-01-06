@@ -1,0 +1,14 @@
+<main class="d-flex flex-column min-vh-100" ...attributes>
+  {{yield (hash
+    header=(component "layout/header")
+    headline=(component "layout/headline")
+    breadcrumbs=(component "layout/breadcrumbs")
+    footer=(component "layout/footer")
+    wizard=(component "layout/wizard")
+  )}}
+</main>
+
+<EmberNotify
+  @messageStyle="bootstrap"
+  @closeAfter={{8000}}
+/>

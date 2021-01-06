@@ -1,0 +1,82 @@
+<nav aria-label={{bs-default @label (t "pagination.label")}}>
+  <ul class="pagination" ...attributes>
+    {{!-- first page link --}}
+    <li class="page-item page-first {{if this.firstDisabled 'disabled'}}">
+      <a href
+        class="page-link"
+        disabled={{this.firstDisabled}}
+        aria-label={{t "pagination.last"}}
+        aria-disabled={{this.firstDisabled}}
+        {{on "click" (disable-bubbling (fn this.onFirstPage))}}
+      >
+        <Icon::Ebf @icon="ebf-chevrons-left" />
+      </a>
+    </li>
+
+    {{!-- previous page link --}}
+    <li class="page-item page-previous {{if this.previousDisabled 'disabled'}}">
+      <a href
+        class="page-link"
+        disabled={{this.previousDisabled}}
+        aria-label={{t "pagination.previous"}}
+        aria-disabled={{this.previousDisabled}}
+        {{on "click" (disable-bubbling (fn this.onPreviousPage))}}
+      >
+        <Icon::Ebf @icon="ebf-chevron-left" />
+      </a>
+    </li>
+
+    {{!-- links with clickable pages --}}
+    {{#each this.pages as |page|}}
+      <li class="page-item page-page {{if page.disabled 'disabled'}}" aria-current={{if page.disabled "page"}}>
+        <a href
+          class="page-link"
+          disabled={{page.disabled}}
+          aria-disabled={{page.disabled}}
+          {{on "click" (disable-bubbling (fn this.onPage page.value))}}
+        >
+          {{page.value}}
+        </a>
+      </li>
+    {{/each}}
+
+    {{!-- next page link --}}
+    <li class="page-item page-next {{if this.nextDisabled 'disabled'}}">
+      <a href
+        class="page-link"
+        disabled={{this.nextDisabled}}
+        aria-label={{t "pagination.next"}}
+        aria-disabled={{this.nextDisabled}}
+        {{on "click" (disable-bubbling (fn this.onNextPage))}}
+      >
+        <Icon::Ebf @icon="ebf-chevron-right" />
+      </a>
+    </li>
+
+    {{!-- last page link --}}
+    <li class="page-item page-last {{if this.lastDisabled 'disabled'}}">
+      <a href
+        class="page-link"
+        disabled={{this.lastDisabled}}
+        aria-label={{t "pagination.last"}}
+        aria-disabled={{this.lastDisabled}}
+        {{on "click" (disable-bubbling (fn this.onLastPage))}}>
+        <Icon::Ebf @icon="ebf-chevrons-right" />
+      </a>
+    </li>
+
+    {{!-- total records --}}
+    <li class="page-item disabled page-total">
+      <span class="page-link">
+        {{t "pagination.total" total=this.totalResults}}
+      </span>
+    </li>
+
+    {{!-- page size selection --}}
+    {{!-- <select onchange={{action "pageSizeSelected" value="target.value"}} class="page-item pagination-select">
+      {{#each pageSizes as |size|}}
+        <option value={{size}} selected={{eq model.size size}}>{{size}}</option>
+      {{/each}}
+    </select> --}}
+  </ul>
+</nav>
