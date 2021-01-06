@@ -11,7 +11,7 @@ import Service, { inject as service } from '@ember/service';
 import { isHTMLSafe } from '@ember/string';
 import ResolvedError from '../resolved-error';
 
-const log = debug('service:error-resolver');
+const log = debug('ebf-design-system:service:error-resolver');
 
 const GENERAL_ERROR_MESSAGE = 'errors.general';
 

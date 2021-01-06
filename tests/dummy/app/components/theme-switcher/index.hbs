@@ -1,0 +1,20 @@
+<BsDropdown as |dd|>
+  <dd.button @type="link">
+    Active theme is {{this.manager.active.name}}
+  </dd.button>
+  <dd.menu>
+    {{#each this.manager.themes as |theme|}}
+      {{#let (eq theme.name this.manager.active.name) as |active|}}
+        <a href
+          class="dropdown-item {{if active "active"}}"
+          aria-selected={{active}}
+          {{on "click" (disable-bubbling (fn this.select theme.name))}}
+        >
+          <div class="d-flex align-items-center">
+            {{theme.name}}
+          </div>
+        </a>
+      {{/let}}
+    {{/each}}
+  </dd.menu>
+</BsDropdown>

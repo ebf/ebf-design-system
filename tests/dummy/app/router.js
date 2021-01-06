@@ -34,6 +34,7 @@ Router.map(function() {
     this.route('progress');
     this.route('stats');
     this.route('table');
+    this.route('themes');
 
     this.route('services', function() {
       this.route('ajax');

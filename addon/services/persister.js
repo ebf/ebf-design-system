@@ -11,7 +11,7 @@ import { isChangeset } from 'validated-changeset';
 const DEFAULT_SUCCESS_MESSAGE = 'notifications.save.success';
 const DEFAULT_INVALID_MESSAGE = 'notifications.save.invalid';
 
-const log = debug('service:persister');
+const log = debug('ebf-design-system:service:persister');
 
 const defaultSave = (model) => {
   assert('Default `save` option expects that the Model has a `save` method', isFunction(model.save));

@@ -6,7 +6,7 @@ import { get, indexOf, trim, chain } from 'lodash';
 const STATE = Symbol('STATE');
 const COOKIES = Symbol('COOKIES');
 
-const log = debug('service:cookies');
+const log = debug('ebf-design-system:service:cookies');
 
 const reducer = (cookies, { name, value }) => {
   try {

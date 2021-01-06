@@ -13,7 +13,7 @@ import { CONTENT_TYPES } from '../constants';
 import RequestError from '../request-error';
 import URLFormatter from '../url-formatter';
 
-const log = debug('service:ajax');
+const log = debug('ebf-design-system:service:ajax');
 
 const REQUEST_INTERCEPTOR_TYPE = 'interceptor';
 

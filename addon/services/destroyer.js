@@ -13,7 +13,7 @@ const CONFIRM_DELETE_TEXT_MESSAGE = 'notifications.delete.text';
 const CONFIRM_DELETE_CONFIRM_MESSAGE = 'notifications.delete.confirm';
 const CONFIRM_DELETE_CANCEL_MESSAGE = 'notifications.delete.cancel';
 
-const log = debug('service:destroyer');
+const log = debug('ebf-design-system:service:destroyer');
 
 const defaultDestroy = (model) => {
   assert('Default `destroy` option expects that the Model has a `destroyRecord` method', isFunction(model.destroyRecord));

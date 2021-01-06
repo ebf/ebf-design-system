@@ -6,6 +6,11 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    themes: [{
+      name: 'ebf', default: true,
+    }, {
+      name: 'telekom',
+    }],
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

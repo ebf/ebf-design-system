@@ -1,7 +1,13 @@
 <header class="header ebf-double-navbar shadow" ...attributes>
   <div class="banner container {{if @fluid "container-fluid"}}">
     <div class="align-items-center justify-content-between row">
-      <Layout::Header::Brander @logo={{@logo}} @label={{@label}} class="col text-left" />
+      
+      <Layout::Header::Brander
+        @logo={{@logo}}
+        @label={{@label}}
+        class="col text-left"
+      />
+      
       <div id="header-language" class="col text-right">
       	<LanguageSwitcher />
       </div>

@@ -9,7 +9,7 @@ import Service, { inject as service } from '@ember/service';
 import { storageFor } from 'ember-local-storage';
 import Locale from '../locale';
 
-const log = debug('service:locale');
+const log = debug('ebf-design-system:service:locale');
 
 export const DEFAULT_LOCALE = Locale.from('de-de');
 

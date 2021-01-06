@@ -8,7 +8,7 @@ import Service, { inject as service } from '@ember/service';
 import { storageFor } from 'ember-local-storage';
 import UnauthenticatedError from '../unauthenticated-error';
 
-const log = debug('service:session');
+const log = debug('ebf-design-system:service:session');
 
 // Seems that there is an issue with Babbel when running tests with code coverage
 // https://github.com/ember-cli/babel-plugin-ember-modules-api-polyfill/issues/112
@@ -71,6 +71,12 @@ export default class SessionService extends Service.extend(Evented) {
    * @type {Object}
    */
   @computed.alias('session.tenant') tenant;
+
+  /**
+   * Current stylesheet theme extracted from the session state.
+   * @type {Object}
+   */
+  @computed.alias('session.theme') theme;
 
   /**
    * List of permissions that are associated with currently logged in user.
