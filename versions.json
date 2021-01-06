@@ -1,0 +1,8 @@
+{
+  "ember-workspaces": {
+    "path": "versions/ember-workspaces",
+    "name": "ember-workspaces",
+    "sha": "4efc67a07a402475254bd6b8c9b667bf451bc17d",
+    "tag": null
+  }
+}
