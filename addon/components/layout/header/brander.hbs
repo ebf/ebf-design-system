@@ -1,6 +1,6 @@
-<div class="brand" ...attributes>
-  <div class="brand-logo">
-    <img class="m-auto logo" width="32" height="32" src={{@logo}} alt={{@label}} title={{@label}} />
-  </div>
-  <div class="brand-label">{{uppercase @label}}</div>
+<div class="navbar navbar-brander d-flex justify-content-between" ...attributes>
+  {{yield (hash
+    image=(component "layout/header/brand-image")
+    language-switcher=(component "language-switcher")
+  )}}
 </div>

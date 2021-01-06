@@ -1,32 +1,23 @@
-// Header
+// Brander Header component
 
-.brand {
-  display: flex;
-  align-items: center;
+.navbar-brander {
   height: $spacer * 4.5;
+  background-color: $navbar-brander-bg;
+  color: $navbar-brander-color;
+  max-height: $spacer * 4;
+  padding: $navbar-padding-y $navbar-padding-x;
 
-  .brand-logo {
-    display: inline-flex;
-  }
+  .navbar-brand,
+  .dropdown-toggle,
+  .navbar-nav .nav-link {
+    color: $navbar-brander-color;
 
-  .brand-label {
-    display: inline-flex;
-    font-size: $brander-font-size;
-    margin-left: $grid-gutter-width / 2;
-  }
-}
+    @include hover-focus() {
+      color: $navbar-brander-hover-color;
+    }
 
-.banner {
-  display: block;
-  background-color: $brander-bg;
-  color: $brander-text-color;
-  height: $spacer * 4.5;
-
-  button {
-    color: $brander-text-color;
-
-    &:hover {
-      color: $brander-text-color;
+    &.disabled {
+      color: $navbar-brander-disabled-color;
     }
   }
 }

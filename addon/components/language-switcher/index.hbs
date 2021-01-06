@@ -1,5 +1,5 @@
-<BsDropdown as |dd|>
-  <dd.button @type="link" class="mx-1">
+<BsDropdown @inNav={{@inNav}} as |dd|>
+  <dd.toggle>
     {{#if @showFlags}}
       <LanguageSwitcher::Image
         @locale={{this.active}}
@@ -7,7 +7,7 @@
       />
     {{/if}}
     {{uppercase this.active.language}}
-  </dd.button>
+  </dd.toggle>
   <dd.menu>
     {{#each this.available as |locale|}}
       {{#let (t (concat "locales." locale.iso)) as |label|}}

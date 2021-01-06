@@ -1,22 +1,8 @@
 <header class="header ebf-double-navbar shadow" ...attributes>
-  <div class="banner container {{if @fluid "container-fluid"}}">
-    <div class="align-items-center justify-content-between row">
-      
-      <Layout::Header::Brander
-        @logo={{@logo}}
-        @label={{@label}}
-        class="col text-left"
-      />
-      
-      <div id="header-language" class="col text-right">
-      	<LanguageSwitcher />
-      </div>
-    </div>
-  </div>
-
-  <BsNavbar @type="light" class="bg-white navbar-align-right" as |navbar|>
-    {{yield navbar}}
-  </BsNavbar>
+  {{yield (hash
+    brander=(component "layout/header/brander")
+    navbar=(component "bs-navbar" type="light" backgroundColor="white")
+  )}}
 
   {{!-- Ember Wormhole placeholder that is used by the Layout::Headline component --}}
   <div id="page-headline"></div>

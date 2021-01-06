@@ -773,34 +773,34 @@ $navbar-nav-link-letter-spacing: 0 !default;
 $navbar-nav-link-border-radius: $border-radius !default;
 
 $navbar-dark-bg: transparent !default;
-$navbar-dark-hover-bg: rgba(255, 255, 255, 0.1);
-$navbar-dark-active-bg: rgba(255, 255, 255, 0.1);
-$navbar-dark-color: $gray-400;
-$navbar-dark-hover-color: $primary-300;
-$navbar-dark-active-color: $white;
-$navbar-dark-disabled-color: rgba($white, 0.25);
+$navbar-dark-hover-bg: rgba(255, 255, 255, 0.1) !default;
+$navbar-dark-active-bg: rgba(255, 255, 255, 0.1) !default;
+$navbar-dark-color: $gray-400 !default;
+$navbar-dark-hover-color: $primary-300 !default;
+$navbar-dark-active-color: $white !default;
+$navbar-dark-disabled-color: rgba($white, 0.25) !default;
 $navbar-dark-toggler-border-color: transparent !default;
 
 $navbar-light-bg: transparent !default;
-$navbar-light-hover-bg: rgba(0, 0, 0, 0.1);
-$navbar-light-active-bg: rgba(0, 0, 0, 0.1);
-$navbar-light-color: $gray-800;
-$navbar-light-hover-color: $gray-900;
-$navbar-light-brand-color: $primary-900;
-$navbar-light-brand-hover-color: $primary-900;
-$navbar-light-active-color: $primary-900;
-$navbar-light-disabled-color: $gray-300;
+$navbar-light-hover-bg: rgba(0, 0, 0, 0.1) !default;
+$navbar-light-active-bg: rgba(0, 0, 0, 0.1) !default;
+$navbar-light-color: $gray-800 !default;
+$navbar-light-hover-color: $gray-900 !default;
+$navbar-light-brand-color: $primary-900 !default;
+$navbar-light-brand-hover-color: $primary-900 !default;
+$navbar-light-active-color: $primary-900 !default;
+$navbar-light-disabled-color: $gray-300 !default;
+
+$navbar-brander-bg: $primary !default;
+$navbar-brander-color: rgba($white, 0.8) !default;
+$navbar-brander-hover-color: $white !default;
+$navbar-brander-active-color: $white !default;
+$navbar-brander-disabled-color: $navbar-dark-disabled-color !default;
 
 //$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml !default;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 
 $navbar-light-toggler-border-color: transparent !default;
 $navbar-light-box-shadow: 0 2px 6px 0 rgba($black, 0.03) !default;
-
-// Brander
-
-$brander-bg: $primary !default;
-$brander-text-color: $white !default;
-$brander-font-size: $font-size-base !default;
 
 // Alerts
 

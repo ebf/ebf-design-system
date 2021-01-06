@@ -1,6 +1,11 @@
 @import 'ember-power-calendar';
 @import 'ember-power-select';
 
+.docs-md .navbar-nav,
+.docs-md .nav .nav-item {
+  margin-bottom: 0 !important;
+}
+
 .color-swatch {
   padding: $grid-gutter-width / 4;
   border-radius: $border-radius;
