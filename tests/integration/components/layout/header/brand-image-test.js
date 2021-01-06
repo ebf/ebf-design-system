@@ -7,20 +7,22 @@ module('Integration | Component | layout/header/brand-image', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<Layout::Header::BrandImage />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.dom(this.element.querySelector('img')).doesNotExist();
+    assert.dom(this.element.querySelector('span')).doesNotExist();
 
-    // Template block usage:
     await render(hbs`
-      <Layout::Header::BrandImage>
-        template block text
-      </Layout::Header::BrandImage>
+      <Layout::Header::BrandImage
+        @src="/image.png"
+        @label="Brand"
+      />
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom(this.element.querySelector('img')).exists()
+      .hasAttribute('src', '/image.png')
+      .hasAttribute('title', 'Brand')
+      .hasAttribute('alt', 'Brand');
+    assert.dom(this.element.querySelector('span')).exists().containsText('Brand');
   });
 });

@@ -8,26 +8,21 @@ module('Integration | Component | layout/header', function(hooks) {
 
   test('it renders', async function(assert) {
     await render(hbs`
-      <Layout::Header
-        @fluid={{true}}
-        @label="Test label"
-        @logo="/ebf-logo.png"
-      />`);
+      <Layout::Header />`);
 
-    assert.dom('.header').hasText('TEST LABEL EN', 'without content displays correctly');
+    assert.dom('.header').exists();
+    assert.dom('#page-headline').exists();
+    assert.dom('#page-wizard').exists();
 
     // Template block usage:
     await render(hbs`
-      <Layout::Header
-        @fluid={{true}}
-        @label="Test label"
-        @logo="/ebf-logo.png"
-        as |header|
-      >
-        Test content
+      <Layout::Header as |header|>
+        <header.brander />
+        <header.navbar />
       </Layout::Header> 
     `);
 
-    assert.dom('.header').hasText('TEST LABEL EN Test content', 'with content displays correctly');
+    assert.dom('.navbar-brander').exists();
+    assert.dom('.navbar-light').exists();
   });
 });
