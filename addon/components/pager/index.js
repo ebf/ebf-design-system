@@ -51,39 +51,21 @@ export default class PagerComponent extends Component {
   }
 
   /**
-   * Checks if the first page link is disabled
+   * Checks if there is a next page
    *
    * @type Boolean
    */
-  get firstDisabled() {
-    return this.currentPage === 1;
+  get hasNext() {
+    return this.currentPage < this.totalPages;
   }
 
   /**
-   * Checks if the last page link is disabled
+   * Checks if there is a previous page
    *
    * @type Boolean
    */
-  get lastDisabled() {
-    return this.currentPage >= this.totalPages;
-  }
-
-  /**
-   * Checks if the previous page link is disabled
-   *
-   * @type Boolean
-   */
-  get previousDisabled() {
-    return this.currentPage <= 1;
-  }
-
-  /**
-   * Checks if the next page link is disabled
-   *
-   * @type Boolean
-   */
-  get nextDisabled() {
-    return (this.currentPage + 1) >= this.totalPages;
+   get hasPrevious() {
+    return this.currentPage > 1;
   }
 
   /**

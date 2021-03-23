@@ -1,17 +1,76 @@
 /* eslint-disable ember/no-computed-properties-in-native-classes, ember/no-get */
-import { find, isEmpty, map }  from 'lodash';
+import { find, map }  from 'lodash';
 import debug from 'debug';
-import moment from 'moment';
-import { run } from '@ember/runloop';
-import { computed, get, set } from '@ember/object';
-import { scheduleOnce } from '@ember/runloop';
+import { get, set } from '@ember/object';
+import Evented from '@ember/object/evented';
 import Service, { inject as service } from '@ember/service';
+import { scheduleOnce } from '@ember/runloop';
+import { isPresent } from '@ember/utils';
+import { tracked } from '@glimmer/tracking';
 import { storageFor } from 'ember-local-storage';
 import Locale from '../locale';
 
 const log = debug('ebf-design-system:service:locale');
 
 export const DEFAULT_LOCALE = Locale.from('de-de');
+
+/**
+ * Resolves the initial state for the locale service from the locale
+ * stored in the session storage object. 
+ * 
+ * If locale is present, it would override the default locale coming from
+ * the Intl Service.
+ * 
+ * @param {LocaleService} service Locale service
+ */
+ const resolveInitialLocaleState = (service) => {
+  const locale = get(service.storage, 'locale');
+
+  // session locale is not set or not supported, use intl default one...
+  if (!service.isSupported(locale)) {
+    service._active = Locale.from(service.intl.locale);
+    return;
+  }
+
+  // session locale is set, set it to be the active one and update the intl service to force
+  // rerender of `t` helper.
+  // NOTE: do not use `active` setter as it would trigger computation errors
+  service._active = Locale.from(locale);
+  scheduleOnce('actions', service.intl, 'setLocale', service.active.locale);
+}
+
+/**
+ * Resolves the state for the locale service when the session has been restored.
+ * 
+ * If the principal is present and he has a preffered locale set, we should use this one
+ * in case the session storage does not have a locale.
+ * 
+ * @param {LocaleService} service Locale service
+ */
+ const resolveSessionLocaleState = (service, session = {}) => {
+  log('Attempting to set locale from session:', session);
+
+  const locale = get(service.storage, 'locale');
+
+  // session locale is set, it has precendence over the one from the user
+  if (isPresent(locale)) {
+    return;
+  }
+
+  const { principal = {} } = session;
+
+  // principal is either not present or it has no valid locale set, do not update locale state
+  if (!service.isSupported(principal.locale)) {
+    return;
+  }
+
+  // session locale is set, set it to be the active one and update the intl service to force
+  // rerender of `t` helper.
+  // NOTE: do not use `active` setter as it would trigger computation errors
+  service._active = Locale.from(principal.locale);
+  service.intl.setLocale(service.active.locale);
+  service.moment.setLocale(service.active.language);
+}
 
 /**
  * Service for managing and selecting locales for your application.
@@ -48,145 +107,112 @@ export const DEFAULT_LOCALE = Locale.from('de-de');
  *
  * @class LocaleService
  * @extends Service
+ * @uses Evented
  */
-export default class LocaleService extends Service {
+/* istanbul ignore next */
+export default class LocaleService extends Service.extend(Evented) {
   /**
    * Session storage that is used to extract the current session locale value
    *
    * @type {Object}
    * @public
    */
-  @storageFor('session') storage;
+   @storageFor('session') storage;
 
-  /**
-   * Session service instance that is used to retrieve the locale from the currently logged
-   * in user preferences.
-   *
-   * @type {SessionService}
-   * @public
-   */
-  @service() session;
+   /**
+    * Session service instance that is used to extract the configured locale from the
+    * currently logged in user account.
+    *
+    * @type {SessionService}
+    * @public
+    */
+   @service() session;
+ 
+   /**
+    * Ember' `intl` service instance that is used to extract available locales that can be
+    * used for selection and to update the currently selected locale.
+    *
+    * @type {Intl}
+    * @public
+    */
+   @service() intl;
+ 
+   /**
+    * Ember's `moment` service instance that is used to format dates.
+    *
+    * @type {Moment}
+    * @public
+    */
+   @service() moment;
+ 
+   /**
+    * An array of available locales that are avaiable for selection.
+    *
+    * This value is derived from Ember Intl addon. Please check the `ember-intl` addon to see
+    * how to configure available locales.
+    *
+    * @type {Locale[]}
+    * @public
+    */
+   available = map(this.intl.locales, this.normalize);
+ 
+   /**
+    * Currently active locale instance.
+    *
+    * @type {Locale}
+    * @private
+    */
+   @tracked _active = null;
+ 
+   constructor() {
+     super(...arguments);
+ 
+     // setup initial locale state...
+     resolveInitialLocaleState(this);
+ 
+     // setup moment locale format
+     this.moment.setLocale(this.active.language);
+ 
+     // setup locale state when session is restored...
+     const onSessionRestored = (event) => resolveSessionLocaleState(this, event.session);
+     this.session.on('session:restored', this, onSessionRestored);
+   }
+ 
+   /**
+    * Normalizes the locale the string into an Object containg the language and country code.
+    *
+    * @method normalize
+    * @param {String} locale Locale string
+    * @return {Locale}
+    */
+   normalize() {
+     return Locale.from(...arguments);
+   }
+ 
+   isSupported(locale) {
+     return isPresent(locale) && find(this.available, ['iso', Locale.from(locale).iso]);
+   }
+ 
+   get active() {
+     return this._active;
+   }
+ 
+   set active(locale) {
+    if (!this.isSupported(locale)) {
+       return;
+     }
 
-  /**
-   * Ember' `intl` service instance that is used to extract available locales that can be
-   * used for selection and to update the currently selected locale.
-   *
-   * @type {Intl}
-   * @public
-   */
-  @service() intl;
-
-  constructor() {
-    super(...arguments);
-
-    const setup = () => {
-      const locale = this.active;
-  
-      if (!locale.is(moment.locale())) {
-        moment.locale(locale.locale);
-      }
-  
-      if (!locale.is(this.intl.primaryLocale)) {
-        this.intl.locale = locale.locale;
-      }
-    };
-
-    scheduleOnce('actions', this, setup);
-  }
-
-  /**
-   * Normalizes the locale the string into a `Locale` instance containing the language and country code.
-   *
-   * @method normalize
-   * @param {String} locale Locale string
-   * @return {Locale}
-   */
-  normalize() {
-    return Locale.from(...arguments);
-  }
-
-  /**
-   * Attempts to figure out if the locale from the resolver is supported by the
-   * Internationalization service.
-   * 
-   * @method resolve
-   * @param {Function} resolver Resolver function that returns the locale to be selected
-   * @return {Locale} Locale for selection or null
-   */
-  resolve(resolver) {
-    const locale = run(resolver);
-  
-    if (isEmpty(locale)) {
-      return null;
-    }
-  
-    return find(this.available, ['language', Locale.from(locale).language]);
-  }
-
-  /**
-   * An array of available locales that are avaiable for selection.
-   *
-   * This value is derived from Ember Intl addon. Please check the `ember-intl` addon to see
-   * how to configure available locales.
-   *
-   * @type {Locale[]}
-   * @public
-   */
-  // eslint-disable-next-line ember/require-computed-property-dependencies
-  @computed('intl.locales') get available() {
-    return map(this.intl.locales, this.normalize);
-  }
-
-  /**
-   * Currently active locale instance, it would try to resolve it using the following chain:
-   * 
-   * - Preferred User Account Locale
-   * - Stored Locale in the currently active session
-   * - Primary locale from the `ember-intl` service
-   * - Browser's current settings
-   * - Defaults to `de-de`
-   *
-   * @type {Locale}
-   * @public
-   */
-  @computed('available', 'storage.locale', 'intl.primaryLocale', 'session.user.locale') get active() {
-    let locale = this.resolve(() => get(this.session, 'user.locale'));
-
-    if (!locale) {
-      locale = this.resolve(() => get(this.storage, 'locale'));
-    }
-
-    if (!locale) {
-      locale = this.resolve(() => get(this.intl, 'primaryLocale'));
-    }
-
-    if (!locale) {
-      locale = this.resolve(() => navigator.language || navigator.userLanguage);
-    }
-
-    if (!locale) {
-      locale = DEFAULT_LOCALE;
-    }
-
-    return locale;
-  }
-
-  set active(locale) {
-    const normalized = this.normalize(locale);
-
-    if (this.active.is(normalized)) {
-      return;
-    }
-
-    log('Setting locale to:', normalized.iso);
-
-    // update moments locale in order to update it's labels and formats
-    moment.locale(normalized.locale);
-
-    // update `ember-intl` current locale in order to update rendered translations
-    set(this.intl, 'locale', normalized.locale);
-
-    // store the selected locale in the session storage
-    set(this.storage, 'locale', normalized.locale);
-  }
+     const normalized = Locale.from(locale);
+ 
+     log('Setting locale to:', normalized.iso);
+ 
+     this.intl.setLocale(normalized.locale);
+     this.moment.setLocale(normalized.language);
+ 
+     set(this.storage, 'locale', normalized.locale);
+ 
+     this._active = normalized;
+ 
+     this.trigger('locale', normalized);
+   }
 }

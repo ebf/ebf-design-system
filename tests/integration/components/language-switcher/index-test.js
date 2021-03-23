@@ -16,7 +16,7 @@ module('Integration | Component | language-switcher', function(hooks) {
     assert.dom(this.element.querySelector('.dropdown-toggle img')).exists()
       .hasAttribute('title', 'Deutsch')
       .hasAttribute('alt', 'Deutsch')
-      .hasAttribute('src', '/images/countries/de.svg');
+      .hasAttribute('src', '/ebf-design-system/images/countries/de.svg');
 
     await click('.dropdown-toggle');
 
@@ -31,7 +31,7 @@ module('Integration | Component | language-switcher', function(hooks) {
     assert.dom(this.element.querySelector('.dropdown-toggle img')).exists()
       .hasAttribute('title', 'English US')
       .hasAttribute('alt', 'English US')
-      .hasAttribute('src', '/images/countries/us.svg');
+      .hasAttribute('src', '/ebf-design-system/images/countries/us.svg');
   });
 
   test('it renders without flags', async function(assert) {

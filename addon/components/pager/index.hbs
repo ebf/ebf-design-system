@@ -1,12 +1,12 @@
 <nav aria-label={{bs-default @label (t "pagination.label")}}>
   <ul class="pagination" ...attributes>
     {{!-- first page link --}}
-    <li class="page-item page-first {{if this.firstDisabled 'disabled'}}">
+    <li class="page-item page-first {{unless this.hasPrevious 'disabled'}}">
       <a href
         class="page-link"
-        disabled={{this.firstDisabled}}
+        disabled={{not this.hasPrevious}}
         aria-label={{t "pagination.last"}}
-        aria-disabled={{this.firstDisabled}}
+        aria-disabled={{not this.hasPrevious}}
         {{on "click" (disable-bubbling (fn this.onFirstPage))}}
       >
         <Icon::Ebf @icon="ebf-chevrons-left" />
@@ -14,12 +14,12 @@
     </li>
 
     {{!-- previous page link --}}
-    <li class="page-item page-previous {{if this.previousDisabled 'disabled'}}">
+    <li class="page-item page-previous {{unless this.hasPrevious 'disabled'}}">
       <a href
         class="page-link"
-        disabled={{this.previousDisabled}}
+        disabled={{not this.hasPrevious}}
         aria-label={{t "pagination.previous"}}
-        aria-disabled={{this.previousDisabled}}
+        aria-disabled={{not this.hasPrevious}}
         {{on "click" (disable-bubbling (fn this.onPreviousPage))}}
       >
         <Icon::Ebf @icon="ebf-chevron-left" />
@@ -41,12 +41,12 @@
     {{/each}}
 
     {{!-- next page link --}}
-    <li class="page-item page-next {{if this.nextDisabled 'disabled'}}">
+    <li class="page-item page-next {{unless this.hasNext 'disabled'}}">
       <a href
         class="page-link"
-        disabled={{this.nextDisabled}}
+        disabled={{not this.hasNext}}
         aria-label={{t "pagination.next"}}
-        aria-disabled={{this.nextDisabled}}
+        aria-disabled={{not this.hasNext}}
         {{on "click" (disable-bubbling (fn this.onNextPage))}}
       >
         <Icon::Ebf @icon="ebf-chevron-right" />
@@ -54,12 +54,12 @@
     </li>
 
     {{!-- last page link --}}
-    <li class="page-item page-last {{if this.lastDisabled 'disabled'}}">
+    <li class="page-item page-last {{unless this.hasNext 'disabled'}}">
       <a href
         class="page-link"
-        disabled={{this.lastDisabled}}
+        disabled={{not this.hasNext}}
         aria-label={{t "pagination.last"}}
-        aria-disabled={{this.lastDisabled}}
+        aria-disabled={{not this.hasNext}}
         {{on "click" (disable-bubbling (fn this.onLastPage))}}>
         <Icon::Ebf @icon="ebf-chevrons-right" />
       </a>

@@ -4,6 +4,7 @@
       <LanguageSwitcher::Image
         @locale={{this.active}}
         @label={{t (concat "locales." this.active.iso)}}
+        class="d-inline"
       />
     {{/if}}
     {{uppercase this.active.language}}
