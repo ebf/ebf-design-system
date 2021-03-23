@@ -1,8 +1,17 @@
-{{#let (element (bs-default @as "h1")) as |Element|}}
-  <Element class="headline my-4 py-4" ...attributes>
+{{#if @as}}
+  {{#let @as as |Tag|}}
+    <Tag>
+      {{@title}}
+      {{#if @subtitle}}
+        <small class="d-block text-muted mt-1 font-weight-light">{{@subtitle}}</small>
+      {{/if}}
+    </Tag>
+  {{/let}}
+{{else}}
+  <h1 class="headline my-4 py-4" ...attributes>
     {{@title}}
     {{#if @subtitle}}
       <small class="d-block text-muted mt-1 font-weight-light">{{@subtitle}}</small>
     {{/if}}
-  </Element>
-{{/let}}
+  </h1>
+{{/if}}

@@ -41,15 +41,20 @@ module.exports = {
   },
 
   /**
-   * Override the method in order not to include the addon name when public resources
+   * Override the method in order to include the normalized addon name when public resources
    * are processed by the Ember build process. We would like to put the resources in
-   * the root `public` folder in the final build.
+   * the root `ebf-design-system` folder in the final build.
    *
    * @param {Tree} tree Public tree
    */
-  treeForPublic() {
-    return new Funnel(path.resolve('./public'), {
-      destDir: '/',
+  treeForPublic(tree) {
+    if (!tree) {
+      return tree;
+    }
+
+    return new Funnel(tree, {
+      srcDir: '/',
+      destDir: `/ebf-design-system`,
       annotation: `Addon#treeForPublic (${this.name})`,
     });
   },

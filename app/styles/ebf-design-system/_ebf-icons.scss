@@ -328,7 +328,7 @@ $ebf-voicemail-fill: '\eb47';
 $ebf-workout: '\eb48';
 $ebf-workout-fill: '\eb49';
 
-$ebf-font-location: '/fonts' !default;
+$ebf-font-location: '../ebf-design-system/fonts' !default;
 
 @font-face {
   font-family: 'ebf-iconset';

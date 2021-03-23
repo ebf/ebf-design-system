@@ -24,11 +24,11 @@ Simple component that would render the `<h1/>` headline element with a subtitle.
 
 ## Sizes
 
-You can configure the size of the headline by supplying the `@as` argument to any HTML headline element, like `h3`.
+You can configure the size of the headline by supplying the `@as` argument to any component, like `{{element "h3"}}`.
 
 {{#docs-demo class="bg-white" as |demo|}}
   {{#demo.example name="headline-size.hbs"}}
-    <Headline @as="h3" @title="My headline" @subtitle="Some additional text" />
+    <Headline @as={{element "h3"}} @title="My headline" @subtitle="Some additional text" />
   {{/demo.example}}
 
   {{demo.snippet "headline-size.hbs"}}
@@ -38,7 +38,7 @@ Or you can specify it as a simple paragraph.
 
 {{#docs-demo class="bg-white" as |demo|}}
   {{#demo.example name="headline-paragraph.hbs"}}
-    <Headline @as="p" @title="My headline" @subtitle="Some additional text" />
+    <Headline @as={{element "p"}} @title="My headline" @subtitle="Some additional text" />
   {{/demo.example}}
 
   {{demo.snippet "headline-paragraph.hbs"}}
