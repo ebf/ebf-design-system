@@ -17,7 +17,6 @@ jobs:
     # Environment properties for the job
     env:
       CI: true
-      NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
