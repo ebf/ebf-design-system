@@ -28,7 +28,7 @@ jobs:
           node-version: 14
 
     - name: Setup Git
-      run: >-
+      run: |
         git config --global url."https://github.com/".insteadOf git@github.com:
         git config --global url."https://".insteadOf git://
 
