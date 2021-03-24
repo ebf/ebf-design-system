@@ -11,9 +11,9 @@
       class="justify-content-center"
       @label="Employee results pages"
       @page={{this.page}}
+      @size={{this.size}}
       @pages={{this.pages}}
       @total={{this.total}}
-      @onChange={{fn this.changed}}
     />
   {{/demo.example}}
 

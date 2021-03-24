@@ -19,3 +19,10 @@ export const CONTENT_TYPES = {
  * @type {RegExp}
  */
 export const ABSOLUTE_URL_REGEX = /^(http|https)/;
+
+/**
+ * List of available country codes for selection
+ *
+ * @type {String[]}
+ */
+export const AVAILABLE_CONTRIES = ['AT', 'BE', 'CH', 'DE', 'FR', 'LU', 'NL', 'RS', 'UK', 'US'];

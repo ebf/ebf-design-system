@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { click, render } from '@ember/test-helpers';
+import { click, currentURL, render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | pager/index', function(hooks) {
@@ -50,36 +50,5 @@ module('Integration | Component | pager/index', function(hooks) {
     assert.dom(this.element.querySelector('.page-total')).containsText(20);
     assert.dom(this.element.querySelector('.page-next a')).hasAttribute('disabled');
     assert.dom(this.element.querySelector('.page-last a')).hasAttribute('disabled');
-  });
-
-  test('it renders pager and updates the page using the provided action', async function(assert) {
-    this.set('page', 1);
-    this.set('clicked', (page) => {
-      this.set('page', page);
-    });
-
-    await render(hbs`<Pager @page={{this.page}} @pages={{10}} @total={{20}} @onChange={{this.clicked}} />`);
-
-    await click(this.element.querySelectorAll('.page-page a')[4]);
-    assert.equal(this.page, 5);
-
-    await click(this.element.querySelector('.page-previous a'));
-    assert.equal(this.page, 4);
-
-    await click(this.element.querySelector('.page-first a'));
-    assert.equal(this.page, 1);
-
-    await click(this.element.querySelector('.page-next a'));
-    assert.equal(this.page, 2);
-
-    await click(this.element.querySelector('.page-last a'));
-    assert.equal(this.page, 10);
-
-    await click(this.element.querySelector('.page-next a'));
-    assert.equal(this.page, 10);
-
-    await click(this.element.querySelector('.page-previous a'));
-    assert.equal(this.page, 9);
-
   });
 });

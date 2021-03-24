@@ -15,12 +15,6 @@ Component that can be used when you wish to render common address fields in your
   </div>
 </div>
 
-{{date-picker/range selected=this.range.id onSelect=(fn (mut this.range)) }}
-{{log this.range}}
-
-{{date-picker/field value=this.value onChange=(fn (mut this.value)) }}
-{{log this.value}}
-
 {{#docs-demo class="bg-white" as |demo|}}
   {{#demo.example name="address-fieldset.hbs"}}
     <ChangesetForm
@@ -69,7 +63,8 @@ This component can also accept an address object, like so:
       @address={{hash
         label="Delivery address"
         recipient="John doe"
-        address="Fake street 123"
+        streetName="Fake street"
+        streetNumber="123"
         city="NYC"
         postalCode="12345"
         country="USA"

@@ -25,7 +25,6 @@ export default class PersistHelper extends Helper {
 
   compute(_, options = {}) {
     return async (model) => {
-      console.warn(Error('Executing'));
       let record = model;
 
       if (options && options.value) {

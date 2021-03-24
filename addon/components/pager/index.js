@@ -1,8 +1,12 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
+import { inject as service } from '@ember/service';
 
 // there should be 5 page links in total
 const VISIBILE_ITEMS = 5;
+
+const DEFAULT_SIZE = 10;
+const DEFAULT_SIZES = [10, 20, 50];
 
 /**
  * Class that represents the Page that should be rendered by the component
@@ -23,6 +27,17 @@ class Page {
  * @extends Component
  */
 export default class PagerComponent extends Component {
+  @service router;
+
+  /**
+   * Property that defines the current page size
+   *
+   * @type Number
+   */
+   get currentSize() {
+    return this.args.size || DEFAULT_SIZE;
+  }
+
   /**
    * Property that defines the current page
    *
@@ -50,6 +65,10 @@ export default class PagerComponent extends Component {
     return this.args.total || 0;
   }
 
+  get sizes() {
+    return this.args.sizes || DEFAULT_SIZES;
+  }
+
   /**
    * Checks if there is a next page
    *
@@ -66,6 +85,24 @@ export default class PagerComponent extends Component {
    */
    get hasPrevious() {
     return this.currentPage > 1;
+  }
+
+  /**
+   * Previous page number
+   *
+   * @type Number
+   */
+  get previousPage() {
+    return this.currentPage - 1;
+  }
+
+  /**
+   * Next page number
+   *
+   * @type Number
+   */
+  get nextPage() {
+    return this.currentPage + 1;
   }
 
   /**
@@ -108,34 +145,9 @@ export default class PagerComponent extends Component {
     return pages;
   }
 
-  @action onPage(page) {
-    const { onChange } = this.args || {};
-
-    if (onChange) {
-      onChange(page);
-    }
-  }
-
-  @action onFirstPage() {
-    this.onPage(1);
-  }
-
-  @action onLastPage() {
-    this.onPage(this.totalPages);
-  }
-
-  @action onNextPage() {
-    const page = this.currentPage + 1;
-    
-    if (page <= this.totalPages) {
-      this.onPage(page);
-    }
-  }
-
-  @action onPreviousPage() {
-    if (this.currentPage > 1) {
-      this.onPage(this.currentPage - 1);
-    }
+  @action onSize(event) {
+    const { value = DEFAULT_SIZE } = event.target;
+    this.router.transitionTo({ queryParams: { page: 1, size: value } });
   }
 
 }

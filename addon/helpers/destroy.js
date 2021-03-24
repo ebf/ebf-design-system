@@ -30,8 +30,6 @@ export default class DestroyHelper extends Helper {
         record = get(model, options.value);
       }
 
-      console.log('Destroyer helper', { record, options: { ...options } });
-
       return await this.destroyer.destroy(record, { ...options });
     };
   }

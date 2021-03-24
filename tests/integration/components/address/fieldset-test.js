@@ -4,7 +4,8 @@ import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 const address = {
-  address: 'Baker Street 221B',
+  streetName: 'Baker Street',
+  streetNumber: '221B',
   additionalAddress: 'Holmes apartment',
   postalCode: 'NW1 6XE',
   state: 'Marylebone',
@@ -24,18 +25,20 @@ module('Integration | Component | address/fieldset', function(hooks) {
       </ChangesetForm>
     `);
 
-    assert.ok(this.element.querySelector('input[name="address"]'));
+    assert.ok(this.element.querySelector('input[name="street-name"]'));
+    assert.ok(this.element.querySelector('input[name="street-number"]'));
     assert.ok(this.element.querySelector('input[name="postal-code"]'));
     assert.ok(this.element.querySelector('input[name="city"]'));    
-    assert.ok(this.element.querySelector('input[name="country"]'));
+    assert.ok(this.element.querySelector('.form-group[name="country"]'));
     assert.notOk(this.element.querySelector('input[name="additional-address"]'));
     assert.notOk(this.element.querySelector('input[name="state"]'));
     assert.notOk(this.element.querySelector('legend'));
 
-    assert.equal(this.element.querySelector('input[name="address"]').value, address.address);
+    assert.equal(this.element.querySelector('input[name="street-name"]').value, address.streetName);
+    assert.equal(this.element.querySelector('input[name="street-number"]').value, address.streetNumber);
     assert.equal(this.element.querySelector('input[name="postal-code"]').value, address.postalCode);
     assert.equal(this.element.querySelector('input[name="city"]').value, address.city);
-    assert.equal(this.element.querySelector('input[name="country"]').value, address.country);
+    assert.dom(this.element.querySelector('.ember-power-select-selected-item')).hasText('United Kingdom');
   });
 
   test('it renders additional address fields', async function(assert) {
@@ -53,20 +56,22 @@ module('Integration | Component | address/fieldset', function(hooks) {
       </ChangesetForm>
     `);
 
-    assert.ok(this.element.querySelector('input[name="address"]'));
+    assert.ok(this.element.querySelector('input[name="street-name"]'));
+    assert.ok(this.element.querySelector('input[name="street-number"]'));
     assert.ok(this.element.querySelector('input[name="postal-code"]'));
     assert.ok(this.element.querySelector('input[name="city"]'));    
-    assert.ok(this.element.querySelector('input[name="country"]'));
+    assert.ok(this.element.querySelector('.form-group[name="country"]'));
     assert.ok(this.element.querySelector('input[name="additional-address"]'));
     assert.ok(this.element.querySelector('input[name="state"]'));
     assert.ok(this.element.querySelector('legend'));
 
     assert.dom(this.element.querySelector('legend')).hasText('Address');
-    assert.equal(this.element.querySelector('input[name="address"]').value, address.address);
+    assert.equal(this.element.querySelector('input[name="street-name"]').value, address.streetName);
+    assert.equal(this.element.querySelector('input[name="street-number"]').value, address.streetNumber);
     assert.equal(this.element.querySelector('input[name="additional-address"]').value, address.additionalAddress);
     assert.equal(this.element.querySelector('input[name="postal-code"]').value, address.postalCode);
     assert.equal(this.element.querySelector('input[name="city"]').value, address.city);
     assert.equal(this.element.querySelector('input[name="state"]').value, address.state);
-    assert.equal(this.element.querySelector('input[name="country"]').value, address.country);
+    assert.dom(this.element.querySelector('.ember-power-select-selected-item')).hasText('United Kingdom');
   });
 });

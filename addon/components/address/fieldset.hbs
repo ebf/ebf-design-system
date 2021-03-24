@@ -5,25 +5,23 @@
 
   {{#with @form.element as |Element|}}
     <div class="row">
-      <div class="col-12 col-md-8">
+      <div class="col-8 col-md-5">
         <Element
-          @property={{concat @prefix "address"}}
-          @label={{t "forms.address.labels.street"}}
-          @errors={{get @changeset.error (concat @prefix "address.validation")}}
-          as |el|
-        >
-          <el.control name="address" />
+          @property={{concat @prefix "streetName"}}
+          @label={{t "forms.address.labels.street-name"}}
+          @errors={{get @changeset.error (concat @prefix "streetName.validation")}}
+        as |el|>
+          <el.control name="street-name" />
         </Element>
       </div>
 
-      <div class="col-12 col-md-4">
+      <div class="col-4 col-md-3">
         <Element
-          @property={{concat @prefix "postalCode"}}
-          @label={{t "forms.address.labels.zip"}}
-          @errors={{get @changeset.error (concat @prefix "postalCode.validation")}}
-          as |el|
-        >
-          <el.control name="postal-code" />
+          @property={{concat @prefix "streetNumber"}}
+          @label={{t "forms.address.labels.street-number"}}
+          @errors={{get @changeset.error (concat @prefix "streetNumber.validation")}}
+        as |el|>
+          <el.control name="street-number" />
         </Element>
       </div>
 
@@ -33,45 +31,59 @@
             @property={{concat @prefix "additionalAddress"}}
             @label={{t "forms.address.labels.additional-address"}}
             @errors={{get @changeset.error (concat @prefix "additionalAddress.validation")}}
-            as |el|
-          >
+          as |el|>
             <el.control name="additional-address" />
           </Element>
         </div>
       {{/if}}
     </div>
+
     <div class="row">
-      <div class="col-12 {{if @state "col-md-4" "col-md-6"}}">
+      <div class="col-12 {{if @state "col-md-2" "col-md-3"}}">
+        <Element
+          name="postal-code"
+          @property={{concat @prefix "postalCode"}}
+          @label={{t "forms.address.labels.zip"}}
+          @errors={{get @changeset.error (concat @prefix "postalCode.validation")}}
+        as |el|>
+          <el.control name="postal-code" />
+        </Element>
+      </div>
+
+      <div class="col-12 {{if @state "col-md-2" "col-md-3"}}">
         <Element
           @property={{concat @prefix "city"}}
           @label={{t "forms.address.labels.city"}}
           @errors={{get @changeset.error (concat @prefix "city.validation")}}
-          as |el|
-        >
+        as |el|>
           <el.control name="city" />
         </Element>
       </div>
+
       {{#if @state}}
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-3">
           <Element
             @property={{concat @prefix "state"}}
             @label={{t "forms.address.labels.state"}}
             @errors={{get @changeset.error (concat @prefix "state.validation")}}
-            as |el|
-          >
+          as |el|>
             <el.control name="state" />
           </Element>
         </div>
       {{/if}}
-      <div class="col-12 {{if @state "col-md-4" "col-md-6"}}">
+
+      <div class="col-12 {{if @state "col-md-3" "col-md-6"}}">
         <Element
+          name="country"
+          @controlType="power-select"
           @property={{concat @prefix "country"}}
           @label={{t "forms.address.labels.country"}}
-          @errors={{get @changeset.error (concat @prefix "country.validation")}}
-          as |el|
-          >
-            <el.control name="country" />
-          </Element>
+          @options={{this.countries}}
+        as |el|>
+          <el.control as |country|>
+            {{country-label country}}
+          </el.control>
+        </Element>
       </div>
     </div>
   {{/with}}

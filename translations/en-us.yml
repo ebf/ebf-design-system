@@ -23,6 +23,7 @@ pagination:
   previous: Previous
   next: Next
   last: Last
+  select-size: Select page size
   total: "Total: {total}"
 
 ### Forms ###
@@ -38,8 +39,22 @@ forms:
       country: Country
       state: State
       legend: Address
-      street: Street and Number
+      street-name: Street name
+      street-number: House Number
       zip: Postal code
+
+### Country list ###
+countries:
+  AT: Austria
+  BE: Belgium
+  CH: Switzerland
+  DE: Germany
+  FR: France
+  LU: Luxembourg
+  NL: Netherlands
+  RS: Serbia
+  UK: United Kingdom
+  US: United States
 
 ### Notifications ###
 notifications:

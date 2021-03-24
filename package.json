@@ -35,7 +35,6 @@
     "ember-cli-htmlbars": "5.3.1"
   },
   "peerDependencies": {
-    "@bagaar/ember-breadcrumbs": "1.0.0-beta.3",
     "ember-await": "2.0.0",
     "ember-basic-dropdown": "3.0.16",
     "ember-bootstrap": "4.6.3",
@@ -60,7 +59,6 @@
     "ember-truth-helpers": "3.0.0"
   },
   "devDependencies": {
-    "@bagaar/ember-breadcrumbs": "1.0.0-beta.3",
     "@ember/optional-features": "2.0.0",
     "@glimmer/component": "1.0.3",
     "@glimmer/tracking": "1.0.3",
@@ -77,6 +75,7 @@
     "ember-basic-dropdown": "3.0.11",
     "ember-bootstrap": "^4.6.3",
     "ember-bootstrap-changeset-validations": "4.0.0",
+    "ember-bootstrap-power-select": "^3.0.1",
     "ember-changeset": "3.10.5",
     "ember-changeset-validations": "3.10.3",
     "ember-cli": "~3.23.0",
@@ -112,7 +111,7 @@
     "ember-notify": "6.0.0",
     "ember-power-calendar": "0.16.3",
     "ember-power-calendar-moment": "0.1.7",
-    "ember-power-select": "4.1.0",
+    "ember-power-select": "^4.1.0",
     "ember-qunit": "4.6.0",
     "ember-resolver": "8.0.2",
     "ember-responsive": "^4.0.1",

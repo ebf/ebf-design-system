@@ -1,10 +1,10 @@
 'use strict';
 
 const ADDONS = {
-  '@bagaar/ember-breadcrumbs': '1.0.0-beta.3',
   'ember-await': '2.0.0',
   'ember-basic-dropdown': '3.0.16',
   'ember-bootstrap': '4.6.3',
+  'ember-bootstrap-power-select': '3.0.1',
   'ember-bootstrap-changeset-validations': '4.0.0',
   'ember-changeset': '3.13.2',
   'ember-changeset-validations': '3.14.2',

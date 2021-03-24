@@ -16,7 +16,7 @@ export default {
   ],
   country: [
     validatePresence(true),
-    validateLength({ allowBlank: false, min: 3, max: 35  }),
+    validateLength({ allowBlank: false, min: 2, max: 2  }),
   ],
 };
 // END-SNIPPET

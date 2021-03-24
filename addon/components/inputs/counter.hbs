@@ -4,6 +4,7 @@
       <BsButton
         disabled={{disabled}}
         aria-disabled={{disabled}}
+        aria-label={{t "labels.counter.decrement"}}
         @type="light"
         @onClick={{fn this.decrement this.value}}>
         <Icon::Ebf @icon="ebf-minus" />
@@ -25,6 +26,7 @@
       <BsButton
         disabled={{disabled}}
         aria-disabled={{disabled}}
+        aria-label={{t "labels.counter.increment"}}
         @type="light"
         @onClick={{fn this.increment this.value}}>
         <Icon::Ebf @icon="ebf-plus" />

@@ -36,8 +36,6 @@ module('Unit | Service | locale', function(hooks) {
       return assert.ok(true);
     }
 
-    console.log('ADDIDID', this, ...asd);
-
     const service = this.owner.lookup('service:locale');
     const moment = this.owner.lookup('service:moment');
     const intl = this.owner.lookup('service:intl');

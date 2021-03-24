@@ -30,7 +30,11 @@ export default class AddressCardComponent extends Component {
       return address;
     }
 
-    return address.address;
+    if (typeOf(address.address) === 'string') {
+      return address.address;
+    }
+
+    return `${address.streetName || ''} ${address.streetNumber || ''}`;
   }
 
   get additionalAddress() {
