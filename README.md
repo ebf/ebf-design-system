@@ -20,14 +20,16 @@ ember install ember-cli-design-system
 ```
 
 
-Usage
-------------------------------------------------------------------------------
-
-[Longer description of how to use the addon in apps.]
-
-
 Contributing
 ------------------------------------------------------------------------------
+
+Before installing the dependencies for the project please run the following
+commands in your terminal:
+
+```sh
+git config --global url."https://github.com/".insteadOf git@github.com:
+git config --global url."https://".insteadOf git://
+```
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
