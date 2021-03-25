@@ -1,0 +1,18 @@
+<th style={{html-safe this.styles}}>
+
+  {{#if this.sortable}}
+    <LinkTo class="cursor-pointer table-header-link d-block" @query={{hash sort=this.sort}}>
+      <span>{{this.label}}</span>
+
+      {{#if (eq @sort.column this.column.sortBy)}}
+        <Icon::Ebf
+          @icon={{if @sort.ascending 'ebf-arr-up-dots' 'ebf-arr-down-dots'}}
+          @type="primary"
+          class="float-right mt-1"
+        />
+      {{/if}}
+    </LinkTo>
+  {{else}}
+    {{this.label}}
+  {{/if}}
+</th>

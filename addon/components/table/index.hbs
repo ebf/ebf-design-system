@@ -1,48 +1,64 @@
-<div class="ebf-table">
-  <header class="ebf-table-header">
-    {{yield
-      (hash
-        title=(component "table/title")
-        filters=(component "table/filters" model=@model table=this.table)
-    )
-    }}
-  </header>
+{{! template-lint-disable no-invalid-interactive }}
 
-  <div class="ebf-table-contents">
-    <div class="table-responsive">
-
-      <LightTable
-              @table={{this.table}}
-              @height={{this.height}}
-              @tableClassNames={{@tableClassNames}}
-              class="table"
-              ...attributes
-              as |t|>
-
-        <t.head
-                @onColumnClick={{fn this.columnClicked}}
-                @iconSortable='sort'
-                @iconAscending='ebf-arr-up-dots'
-                @iconDescending='ebf-arr-down-dots'
-                @iconComponent='table/sort-icon'
-                @fixed={{true}}
-        />
-
-        <t.body @canSelect={{false}}
-                @onScrolledToBottom={{fn this.scrolledToBottom}}
-                as |body|
-        >
-          {{#if this.isLoading}}
-            <body.loader>
-              <Loader @size="xl"/>
-            </body.loader>
-          {{/if}}
-        </t.body>
-      </LightTable>
-
-
-    </div>
+<div class="ebf-table-content">
+  <div class="table-responsive">
+    <table class="table table-hover table-bordered" ...attributes>
+      <thead>
+        <tr>
+          {{#each this.columns as |column|}}
+            <Table::Th @column={{column}} @sort={{this.sort}} @state={{this.state}} />
+          {{/each}}
+        </tr>
+      </thead>
+      <tbody>
+        {{#unless this.isLoading}}
+          {{#each this.rows as |row index|}}
+            <tr {{on "click" (fn this.onRowClick row)}} class={{if @onRowClick 'cursor-pointer'}}>
+              {{#each this.columns as |column|}}
+                <Table::Td
+                  @row={{row}}
+                  @index={{index}}
+                  @column={{column}}
+                  @tableActions={{@tableActions}}
+                />
+              {{/each}}
+            </tr>
+          {{/each}}
+        {{/unless}}
+      </tbody>
+    </table>
   </div>
+
+  {{#if (has-block)}}
+    {{yield (hash
+      isEmpty=this.isEmpty
+      isLoading=this.isLoading
+      pager=(component 'pager' page=@page size=@size pages=@pages total=@total)
+      empty=(component 'empty-state')
+      loader=(component 'loader' size="xl")
+    )}}
+  {{else}}
+    {{#if this.isLoading}}
+      <div class="container my-4">
+        <Loader @size="xl" />
+      </div>
+    {{/if}}
+
+    {{#if this.isEmpty}}
+      <div class="container text-center my-4">
+        <EmptyState @size="4x" @icon="ebf-folder-remove" />
+      </div>
+    {{else}}
+      <div class="container">
+        <Pager
+          class="justify-content-center"
+          @label={{@pagerLabel}}
+          @page={{@page}}
+          @size={{@size}}
+          @pages={{@pages}}
+          @total={{@total}}
+        />
+      </div>
+    {{/if}}
+  {{/if}}
 </div>
-
-

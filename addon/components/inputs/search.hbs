@@ -1,0 +1,35 @@
+<div class="search-field">
+  <input
+    type={{@type}}
+    value={{@value}}
+    name={{@name}}
+    disabled={{@disabled}}
+    placeholder={{if @placeholder @placeholder @label}}
+    class="form-control"
+    aria-label={{if @label @label @placeholder}}
+    {{on "keydown" this.onKeyDown passive=true}}
+    {{on "focusout" this.submit passive=true}}
+    {{did-insert (fn this.inserted)}}
+    {{will-destroy (fn this.removed)}}
+    ...attributes
+  />
+
+  <Icon::Ebf
+    @icon="ebf-search-l search-field-submit"
+    type="button"
+    aria-label={{t "inputs.search.label"}}
+    @disabled={{@disabled}}
+    @onClick={{this.submit}}
+  />
+
+  {{#if (and @onReset (not (is-empty @value)))}}
+    <Icon::Ebf
+      @icon="ebf-minus-circle search-field-reset"
+      @type="danger"
+      type="button"
+      aria-label={{t "inputs.search.reset"}}
+      @disabled={{@disabled}}
+      @onClick={{@onReset}}
+    />
+  {{/if}}
+</div>

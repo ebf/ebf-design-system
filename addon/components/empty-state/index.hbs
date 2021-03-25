@@ -1,0 +1,15 @@
+<section class="empty-state text-center text-muted" ...attributes>
+  {{#if @image}}
+    <img src={{@image}} height={{@height}} width={{@width}} alt={{@label}} />
+  {{else if @icon}}
+    <Icon @icon={{@icon}} @size={{@size}} @prefix={{@prefix}} />
+  {{/if}}
+
+  {{#if @label}}
+    <h4 class="my-4 font-weight-light">{{@label}}</h4>
+  {{/if}}
+
+  {{#if (has-block)}}
+    {{yield}}
+  {{/if}}
+</section>
