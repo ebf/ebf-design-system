@@ -1,0 +1,14 @@
+<td>
+  {{#if this.cellComponent}}
+    {{component
+      this.cellComponent
+      value=this.value
+      column=@column
+      row=@row
+      rowIndex=@index
+      tableActions=@tableActions
+    }}
+  {{else}}
+    {{this.value}}
+  {{/if}}
+</td>

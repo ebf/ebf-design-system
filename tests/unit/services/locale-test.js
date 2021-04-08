@@ -29,7 +29,7 @@ module('Unit | Service | locale', function(hooks) {
     assert.deepEqual(moment.locale, service.active.language);
   });
 
-  test('it resolves to a locale from session storage', function(assert, ...asd) {
+  test('it resolves to a locale from session storage', function(assert) {
     if (window.localStorage) {
       window.localStorage.setItem('storage:session', JSON.stringify({ locale: de.iso }));
     } else {

@@ -33,6 +33,7 @@
           @query={{hash size=this.currentSize page=page.value}}
           class="page-link"
           disabled={{page.disabled}}
+          aria-label={{t "pagination.page" page=page.value}}
           aria-disabled={{page.disabled}}
         >
           {{page.value}}

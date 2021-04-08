@@ -21,8 +21,18 @@ pagination:
   previous: Vorherige
   next: Nächste
   last: Zuletzt
+  page: Seite {page}
   select-size: Wähle die Größe aus
   total: "Total: {total}"
+
+### Inputs ###
+inputs:
+  counter:
+    increment: Erhöhen
+    decrement: Verringern
+  search:
+    label: Suche
+    reset: Zurücksetzen
 
 ### Forms ###
 forms:

@@ -48,3 +48,38 @@ Simply pass the `input-group-sm` or `input-group-xl` class to the component to s
 
   {{demo.snippet "counter-size.hbs"}}
 {{/docs-demo}}
+
+## Search field
+
+{{#docs-demo class="bg-white" as |demo|}}
+  {{#demo.example name="search-simple.hbs"}}
+    <Inputs::Search
+      @placeholder="Enter your search query"
+      @value={{this.search}}
+      @onChange={{fn (mut this.search)}}
+      class="form-group"
+    />
+
+    <p>Search term: {{this.search}}</p>
+  {{/demo.example}}
+
+  {{demo.snippet "search-simple.hbs"}}
+{{/docs-demo}}
+
+### With reset button
+
+{{#docs-demo class="bg-white" as |demo|}}
+  {{#demo.example name="search-reset.hbs"}}
+    <Inputs::Search
+      @placeholder="Enter your search query"
+      @value={{this.search}}
+      @onChange={{fn (mut this.search)}}
+      @onReset={{fn (mut this.search) null}}
+      class="form-group"
+    />
+
+    <p>Search term: {{this.search}}</p>
+  {{/demo.example}}
+
+  {{demo.snippet "search-reset.hbs"}}
+{{/docs-demo}}
