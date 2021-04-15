@@ -1,0 +1,233 @@
+// Navs
+
+.nav-item {
+  position: relative;
+}
+
+.nav-dots {
+  margin-bottom: $spacer;
+
+  .nav-item {
+    .nav-link {
+      color: $nav-link-color;
+      transition: $smooth-color-animation;
+      position: relative;
+
+      @include hover {
+        color: $primary;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        background: $primary;
+        width: $spacer / 2;
+        height: $spacer / 2;
+        border-radius: $spacer / 2;
+        margin: 0 auto;
+        position: relative;
+        bottom: 0;
+        transition: $smooth-scaling-animation-dots;
+        transform-origin: center;
+        transform: scale(0);
+      }
+
+      &.active {
+        color: $nav-link-active-color;
+
+        &::after {
+          transform: scale(1);
+        }
+      }
+
+      &.disabled {
+        color: $nav-link-disabled-color;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.vertical-nav {
+  .nav-item {
+    .nav-link {
+      font-size: $theme-navbar-nav-link-font-size;
+
+      &::after {
+        margin: 0;
+        bottom: auto;
+        position: absolute;
+        left: 0;
+        line-height: inherit;
+        bottom: $theme-navbar-nav-link-font-size;
+      }
+
+      &.active {
+        &::after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+.nav-tabs {
+  .nav-item {
+    i {
+      margin-right: $spacer / 4;
+    }
+
+    .nav-link {
+      color: $nav-link-color;
+      transition: $smooth-color-animation;
+
+      @include hover {
+        background: transparent;
+        border-color: transparent;
+      }
+
+      &::after {
+        content: none;
+      }
+
+      &.disabled {
+        color: $nav-link-disabled-color;
+      }
+
+      &.active {
+        color: $nav-link-active-color;
+        background-color: $white;
+        border-top: 1px solid $gray-300;
+        border-right: 1px solid $gray-300;
+        border-bottom: 1px solid $white;
+        border-left: 1px solid $gray-300;
+      }
+    }
+
+    .nav-link {
+      padding: $input-btn-padding-y $input-btn-padding-x;
+      line-height: 1;
+    }
+  }
+}
+
+.nav-simple-tabs,
+.simple-tabs-nav {
+  border-bottom: 0;
+
+  .nav-item {
+    padding: $input-btn-padding-y-sm $input-btn-padding-x;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    .nav-link {
+      color: $black;
+      border: 0;
+      background: transparent;
+      padding: 0;
+      position: relative;
+
+      @include hover {
+        background: transparent;
+      }
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 4px;
+        background: $primary;
+        display: block;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        transform-origin: center;
+        transform: scaleX(0);
+        transition: $smooth-scaling-animation;
+      }
+
+      &.active {
+        color: $primary;
+        border: 0 none;
+        background: none;
+
+        @include hover {
+          background: transparent;
+        }
+
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+
+      &.disabled {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.nav-pills {
+  .nav-item {
+    .nav-link {
+      color: $nav-link-color;
+      transition: $smooth-color-animation;
+      padding: $input-btn-padding-y $input-btn-padding-x;
+      line-height: 1;
+
+      @include hover {
+        background: $gray-200;
+      }
+
+      &::after {
+        content: none;
+      }
+
+      &.disabled {
+        color: $nav-link-disabled-color;
+        pointer-events: none;
+      }
+
+      &.active {
+        color: $white;
+
+        @include hover {
+          background: $primary;
+        }
+      }
+    }
+  }
+}
+
+// Badge
+
+.ebf-badge-notification {
+  display: block !important;
+  width: $spacer / 2;
+  height: $spacer / 2;
+  border-radius: $spacer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  padding: 0;
+
+  &::after {
+    content: '';
+    width: $spacer;
+    height: $spacer;
+    border-radius: $spacer;
+    display: block;
+    position: relative;
+    top: -4px;
+    right: 4px;
+    z-index: -1 !important;
+    background: inherit;
+    opacity: 0.2;
+    transform: scale(0);
+    transform-origin: center;
+    transition: $smooth-scaling-animation-dots;
+    animation: pulsate-animation-s 2.5s ease-in-out infinite both;
+  }
+}

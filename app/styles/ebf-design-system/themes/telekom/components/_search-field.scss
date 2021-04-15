@@ -1,0 +1,25 @@
+.search-field {
+  position: relative;
+
+  .search-field-submit,
+  .search-field-reset {
+    position: absolute;
+    top: $input-btn-padding-y;
+  }
+
+  .search-field-submit {
+    right: $input-btn-padding-x;
+
+    @include hover-focus {
+      color: $input-btn-focus-color;
+    }
+  }
+
+  .search-field-reset {
+    right: $input-btn-padding-x / 4;
+
+    @include hover-focus {
+      color: darken($danger, 10%);
+    }
+  }
+}

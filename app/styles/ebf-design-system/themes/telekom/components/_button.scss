@@ -1,0 +1,98 @@
+.btn {
+  position: relative;
+  transition: $smooth-color-animation;
+  will-change: transform;
+  letter-spacing: $btn-letter-spacing;
+
+  &:not(.btn-link) {
+    @include hover {
+      @include box-shadow($btn-hover-box-shadow);
+      transform: translateY(-2px);
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  // Loading indicator: compensate for the border width, color and size
+  .loading-spinner .loading-icon {
+    @include loader-size($btn-font-size);
+
+    border-top-color: rgba($white, 0.75) !important;
+    border-left-color: rgba($white, 0.75) !important;
+    margin: -1px auto !important;
+  }
+
+  &.btn-lg .loading-spinner .loading-icon {
+    @include loader-size($btn-font-size-lg);
+  }
+
+  &.btn-sm .loading-spinner .loading-icon {
+    @include loader-size($btn-font-size-sm);
+  }
+}
+
+.btn-icon {
+  padding: $input-btn-padding-y $input-btn-padding-y;
+
+  &.btn-lg {
+    @include button-size(
+      $btn-padding-y-lg,
+      $btn-padding-y-lg,
+      $btn-font-size-lg,
+      $btn-line-height-lg,
+      $btn-border-radius-lg
+    );
+  }
+
+  &.btn-sm {
+    @include button-size(
+      $btn-padding-y-sm,
+      $btn-padding-y-sm,
+      $btn-font-size-sm,
+      $btn-line-height-sm,
+      $btn-border-radius-sm
+    );
+  }
+}
+
+/* Sweet alert buttons */
+.swal2-popup .swal2-styled {
+  &.swal2-confirm,
+  &.swal2-cancel {
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  }
+
+  &.swal2-confirm {
+    background-color: $primary !important;
+  }
+
+  &.swal2-cancel {
+    background-color: $secondary !important;
+    color: darken(theme-color('secondary'), 50%) !important;
+  }
+}
+
+.btn {
+  &.disabled,
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.file-upload-input {
+  &::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+  &::before {
+    content: 'Choose file';
+    // @extend .btn;
+    // @extend .btn-sm;
+    // @extend .btn-primary;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}

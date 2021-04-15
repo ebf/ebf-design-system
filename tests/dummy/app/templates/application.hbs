@@ -1,7 +1,11 @@
-<Layout as |layout|>
-  <DocsHeader />
+<Layout as |layout|>  
+  
 
-  <div class="pt-4">
+  <DocsHeader>
+    {{theme-switcher}}
+  </DocsHeader>
+
+  <div class="pt-4">    
     {{outlet}}
   </div>
 

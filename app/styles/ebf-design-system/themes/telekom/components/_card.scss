@@ -1,0 +1,261 @@
+/* Make BS Cards point out when hovered */
+
+$box-shadow-card: 0 4px 8px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-card-hover: 0 8px 16px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.15);
+
+.hoverable-card {
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: $box-shadow-card;
+
+  @include hover {
+    text-decoration: none;
+    box-shadow: $box-shadow-card-hover;
+    transform: translateY(-0.25rem);
+  }
+}
+
+.ebf-card-container {
+  .col {
+    padding-bottom: 1.875rem;
+  }
+}
+
+.card-deck {
+  margin-bottom: $spacer * 2;
+}
+
+.card-body {
+  padding: $spacer * 3 $spacer;
+}
+
+.card-hover {
+  transition: $smooth-color-animation-slow;
+
+  @include hover {
+    transform: translateY(-4%);
+    box-shadow: $box-shadow !important;
+    border: 1px solid transparent;
+  }
+}
+
+.ebf-card-select {
+  cursor: pointer;
+
+  @include hover {
+    .ebf-card-icon {
+      animation: heartbeat 0.3s ease-in-out both;
+    }
+  }
+
+  .ebf-card-icon {
+    text-align: center;
+    font-size: $fs-6;
+    padding: $spacer;
+    background-color: $primary;
+    color: $white;
+    border-radius: $spacer * 2;
+  }
+
+  .card-text {
+    color: $gray-800;
+    font-size: $fs-2;
+  }
+
+  &.card-hover-effect {
+    transition: $smooth-color-animation-slow;
+
+    .ebf-card-icon {
+      transition: $smooth-color-animation-slow;
+    }
+
+    .card-title,
+    .card-text {
+      transition: $smooth-color-animation 0.1s;
+    }
+
+    &:hover {
+      background: $primary;
+      border: 1px solid $primary;
+      box-shadow: $box-shadow-dark !important;
+
+      .ebf-card-icon {
+        background-color: $white;
+        color: $primary;
+      }
+
+      .card-title {
+        color: $white;
+      }
+
+      .card-text {
+        color: $white;
+      }
+    }
+  }
+}
+
+.ebf-card-summary {
+  position: relative;
+  overflow: hidden;
+  border: 0 none;
+  font-weight: $font-weight-medium;
+  box-shadow: $box-shadow;
+  font-size: $font-size-base - 0.125;
+  background: $white;
+
+  .card-body {
+    padding: $spacer * 1.5 $spacer * 1.5 $spacer * 1.5 $spacer * 2;
+
+    .list-group {
+      .list-group-item {
+        background-color: transparent;
+        color: $black;
+        border: 0 none;
+        padding: $theme-card-list-padding;
+
+        &.eid-color {
+          color: $primary;
+        }
+
+        span {
+          color: $gray-800;
+          font-weight: $theme-summary-card-label-font-weight;
+        }
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    width: $spacer / 2;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    background-color: $primary;
+  }
+
+  &.ebf-card-summary-horizontal {
+    //max-height: $spacer*6;
+
+    .card-body {
+      .list-group {
+        flex-direction: row;
+        justify-content: space-around;
+
+        .summary-horizontal-container {
+          width: 50%;
+        }
+
+        .name-mail-container {
+          .list-group-item {
+            width: 100%;
+          }
+        }
+
+        .list-group-item {
+          padding: $spacer / 5.333 $spacer / 2;
+          flex: 1 1 0;
+          width: 50%;
+
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ebf-card-option {
+  opacity: 0.7;
+  transition: $smooth-color-animation-slow;
+
+  @include hover {
+    opacity: 1;
+  }
+
+  .card-body {
+    padding: $spacer * 1.5 $spacer * 2;
+  }
+
+  .option-select-icon {
+    font-size: $font-size-lg;
+    align-self: flex-end;
+    margin-right: $spacer;
+    margin-top: $spacer;
+    color: $primary;
+    position: absolute;
+    transition: $smooth-color-animation;
+    opacity: 0;
+  }
+
+  &:focus,
+  &.focus,
+  &.active,
+  &.card-select {
+    border: $border-width solid $primary;
+    opacity: 1;
+
+    .option-select-icon {
+      opacity: 1;
+    }
+  }
+}
+
+.ebf-card-product {
+  .card-body {
+    padding: $spacer * 1.5 $spacer * 1.5 $spacer * 1.5 $spacer * 2;
+  }
+
+  &::before {
+    content: '';
+    width: $spacer / 1.75;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    background-color: $primary;
+    border-radius: $spacer / 4 0 0 $spacer / 4;
+  }
+
+  .row {
+    .image-row {
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      img {
+        position: absolute;
+        width: auto;
+        height: auto;
+        border-radius: $spacer;
+        max-height: $spacer * 18;
+        transform: translateY(0);
+        transition: $smooth-color-animation-slow;
+      }
+    }
+  }
+
+  .flex-space-between {
+    h4 {
+      display: inline-block;
+    }
+  }
+
+  &:hover {
+    .row {
+      .image-row {
+        img {
+          transform: translateY(-0.5rem);
+        }
+      }
+    }
+  }
+}

@@ -7,9 +7,9 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     themes: [{
-      name: 'ebf', default: true,
+      name: 'ebf',
     }, {
-      name: 'telekom',
+      name: 'telekom', default: true,
     }],
     EmberENV: {
       FEATURES: {

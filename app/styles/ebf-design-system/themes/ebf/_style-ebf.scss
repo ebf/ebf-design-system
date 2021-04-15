@@ -1,14 +1,30 @@
-//EBF Theme
-
+//Telekom Theme
 @import 'colors';
 @import 'fonts';
-@import 'variables/theme-variables-overwrites';
+
 @import 'variables/theme-variables';
+@import 'variables/theme-variables-overwrites';
 @import 'ember-bootstrap/functions';
 
 // Import Variables
-@import '../../variables';
-@import 'ember-bootstrap/variables';
 
+@import 'ember-bootstrap/variables';
+@import 'variables/variables';
+@import 'mixins/mixins';
 
 // Import Variables Dependant Styles
+// // Core
+
+//Themes
+
+@import 'ember-bootstrap/mixins';
+@import 'ember-bootstrap/mixins/background-variant';
+
+
+// Bootstrap components
+
+@import 'ember-bootstrap/bootstrap';
+
+@import 'utilities/utilities';
+
+@import 'components/components';

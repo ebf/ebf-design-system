@@ -1,0 +1,45 @@
+.breadcrumb-item+.breadcrumb-item {
+  &::before {
+    @extend %ebf;
+    font-size: $fs-1;
+    line-height: 1.66;
+  }
+}
+
+.breadcrumb {
+
+  .breadcrumb-item {
+    //transition: font-weight .3s ease;
+    font-weight: $font-weight-normal;
+
+    & +.breadcrumb-item {
+      padding-left: $fs-1;
+    }
+    
+    a {
+      color: $gray-1200;
+      text-align: center;
+
+
+      &:after {
+        content: attr(data-text);
+        font-weight: $font-weight-bold;
+        display: block;
+        visibility: hidden;
+        overflow: hidden;
+        height: 0;
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+
+    &:hover,
+    &.active {
+      font-weight: $font-weight-bold;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

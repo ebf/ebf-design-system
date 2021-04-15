@@ -1,0 +1,425 @@
+//Telekom Colors
+
+$white:           #fff !default;
+$black:           #000 !default;
+
+$link-color: #00739f;
+
+// Refactoring
+
+$primary:         #e20074 !default;
+$primary-hover:   #d1006c !default;
+$primary-active:  #bd0061 !default;
+$primary-focus:   $primary-hover !default;
+
+$primary-colors: () !default;
+$primary-colors: map-merge(
+  (
+    "primary":        $primary,
+    "primary-hover":  $primary-hover,
+    "primary-active": $primary-active,
+    "primary-focus":  $primary-focus
+   
+  ),
+  $primary-colors
+);
+
+// Grays
+
+$gray-100:        #f8f8f8!default;
+$gray-200:        #ededed!default;
+$gray-300:        #dcdcdc!default;
+$gray-400:        #d0d0d0!default;
+$gray-500:        #b2b2b2!default;
+$gray-600:        #a3a3a3!default;
+$gray-700:        #7c7c7c!default;
+$gray-800:        #737373!default;
+$gray-900:        #6b6b6b!default;
+$gray-1000:       #4b4b4b !default;
+$gray-1100:       #383838 !default;
+$gray-1200:       #262626 !default;
+
+// Functional Colors
+
+$function-red:            #d90000 !default;
+$function-yellow:         #fecb00 !default;
+$function-green:          #46a800 !default;
+$function-blue:           #009de0 !default;
+$function-blue-light:     #e5f5fd !default;
+$function-yellow-light:   #fff7d9 !default;
+
+// Blues
+
+$blue:              $function-blue !default;
+$light-blue:        #53baf2 !default;
+$light-blue-light:  #7ecbf5 !default;
+$light-blue-dark:   #317cb3 !default;
+$dark-blue:         #1063ad !default;
+$dark-blue-light:   #529ad6 !default;
+$dark-blue-dark:    #235482 !default;
+
+// Greens
+
+$green:             #bfcb44 !default;
+$light-green:       #cfd873 !default;
+$dark-green:        #889130 !default;
+
+// Yellows
+
+$yellow:            #ffd329 !default;
+$light-yellow:      #ffde5d !default;
+$dark-yellow:       #dbad39 !default;
+
+// Oranges
+
+$orange:            #ff9a1e !default;
+$light-orange:      #ffb336 !default;
+$dark-orange:       #d48936 !default;
+
+// Colors Misc
+
+$purple:  #203db0 !default;
+$red:     #d64b4b !default;
+$indigo:  #6610f2 !default;
+$pink:    #e83e8c !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+// Transparent Colors
+
+$transparent-b:   rgba($black, 0);
+$black-7: rgba($black, .07);
+$black-15: rgba($black, .15);
+$transparent-w:   rgba($white, 0);
+$white-7: rgba($white, .07);
+$white-15: rgba($white, .15);
+
+// Brand Colors
+
+$facebook: #3b5999 !default;
+$twitter: #1da1f2 !default;
+$google-plus: #dd4b39 !default;
+$instagram: #e4405f !default;
+$pinterest: #bd081c !default;
+$youtube: #cd201f !default;
+$slack: #3aaf85 !default;
+$dribbble: #ea4c89 !default;
+$github: #222 !default;
+
+
+// Color Maps
+
+// Grays
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    "gray-100": $gray-100,
+    "gray-200": $gray-200,
+    "gray-300": $gray-300,
+    "gray-400": $gray-400,
+    "gray-500": $gray-500,
+    "gray-600": $gray-600,
+    "gray-700": $gray-700,
+    "gray-800": $gray-800,
+    "gray-900": $gray-900,
+    "gray-1000": $gray-1000,
+    "gray-1100": $gray-1100,
+    "gray-1200": $gray-1200
+  ),
+  $grays
+);
+
+// Functional Colors
+
+$function-colors: () !default;
+$function-colors: map-merge(
+  (
+    "function-red":           $function-red,        
+    "function-yellow":        $function-yellow,      
+    "function-green":         $function-green,       
+    "function-blue":          $function-blue,       
+    "function-blue-light":    $function-blue-light,  
+    "function-yellow-light":  $function-yellow-light
+  ),
+  $function-colors
+);
+
+// Blues
+
+$blues: () !default;
+$blues: map-merge(
+  (
+    "blue":             $blue,         
+    "light-blue":       $light-blue, 
+    "light-blue-light": $light-blue-light,
+    "light-blue-dark":  $light-blue-dark,
+    "dark-blue":        $dark-blue,
+    "dark-blue-light":  $dark-blue-light,
+    "dark-blue-dark":   $dark-blue-dark
+  ),
+  $blues
+);
+
+// Greens
+
+$greens: () !default;
+$greens: map-merge(
+  (
+    "green":             $green,         
+    "light-green":       $light-green, 
+    "dark-green":        $dark-green
+  ),
+  $greens
+);
+
+// Yellows
+
+$yellows: () !default;
+$yellows: map-merge(
+  (
+    "yellow":             $yellow,         
+    "light-yellow":       $light-yellow, 
+    "dark-yellow":        $dark-yellow
+  ),
+  $yellows
+);
+
+// Oranges
+
+$oranges: () !default;
+$oranges: map-merge(
+  (
+    "orange":             $orange,         
+    "light-orange":       $light-orange, 
+    "dark-orange":        $dark-orange
+  ),
+  $oranges
+);
+
+// Color Naming - Variables Depend on this
+
+$secondary: gray-600;
+$success:   $function-green;
+$info:      $function-blue;
+$warning:   $function-yellow;
+$danger:    $function-red;
+$error:     $function-red;
+$light:     $gray-100;
+$dark:      $gray-1200;
+
+// Misc Colors
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "purple":     $purple,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800,
+    "indigo":     $indigo,
+    "pink":       $pink,
+    "teal":       $teal,
+    "cyan":       $cyan
+  ),
+  $colors
+);
+
+// Transparent Colors
+
+$transparent-colors: () !default;
+$transparent-colors: map-merge(
+  (
+    "transparent-b":  $transparent-b,
+    "black-7":        $black-7,
+    "black-15":       $black-15,
+    "transparent-w":  $transparent-w,
+    "white-7":        $white-7,
+    "white-15":       $white-15   
+  ),
+  $transparent-colors
+);
+
+// Theme Colors 
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $gray-600,
+    "success":    $function-green,
+    "info":       $function-blue,
+    "warning":    $function-yellow,
+    "danger":     $function-red,
+    "error":      $function-red,
+    "light":      $gray-100,
+    "dark":       $gray-1200
+  ),
+  $theme-colors
+);
+
+// Theme Colors Hover
+
+$theme-colors-hover: () !default;
+$theme-colors-hover: map-merge(
+  (
+    "primary":    $primary-hover,
+    "secondary":  $gray-800,
+    "success":    $dark-green,
+    "info":       $dark-blue,
+    "warning":    $dark-yellow,
+    "danger":     $function-red,
+    "error":      $function-red,
+    "light":      $gray-500,
+    "dark":       $gray-1200
+  ),
+  $theme-colors-hover
+);
+
+// Theme Colors Focus
+
+$theme-colors-focus: () !default;
+$theme-colors-focus: map-merge(
+  (
+    "primary":    $primary-focus,
+    "secondary":  $gray-900,
+    "success":    $dark-green,
+    "info":       $dark-blue,
+    "warning":    $dark-yellow,
+    "danger":     $function-red,
+    "error":      $function-red,
+    "light":      $gray-900,
+    "dark":       $gray-1200
+  ),
+  $theme-colors-focus
+);
+
+// Theme Colors Active
+
+$theme-colors-active: () !default;
+$theme-colors-active: map-merge(
+  (
+    "primary":    $primary-focus,
+    "secondary":  $gray-900,
+    "success":    $dark-green,
+    "info":       $dark-blue,
+    "warning":    $dark-yellow,
+    "danger":     $function-red,
+    "error":      $function-red,
+    "light":      $gray-700,
+    "dark":       $gray-1200
+  ),
+  $theme-colors-active
+);
+
+$brand-colors: () !default;
+$brand-colors: map-merge(
+  (
+    'facebook': $facebook,
+    'twitter': $twitter,
+    'google-plus': $google-plus,
+    'instagram': $instagram,
+    'pinterest': $pinterest,
+    'youtube': $youtube,
+    'slack': $slack,
+    'dribbble': $dribbble,
+    'github': $github,
+  ),
+  $brand-colors
+);
+
+
+// Shapes Colors
+
+
+
+$shape-colors: () !default;
+$shape-colors: map-merge(
+  (
+    'default': #32325d,
+    'primary': #53f,
+    'secondary': #24b47e,
+    'neutral': #e9ecef,
+    'primary-gray': #b2cbe1,
+  ),
+  $shape-colors
+);
+
+$shapes-primary-colors: () !default;
+$shapes-primary-colors: map-merge(
+  (
+    'step-1-gradient-bg': #281483,
+    'step-2-gradient-bg': #8f6ed5,
+    'step-3-gradient-bg': #d782d9,
+    'span-1-bg': #53f,
+    'span-2-bg': #4553ff,
+    'span-3-bg': #4f40ff,
+    'span-4-bg': #25ddf5,
+    'span-5-bg': #1fa2ff,
+  ),
+  $shapes-primary-colors
+);
+
+$shapes-default-colors: () !default;
+$shapes-default-colors: map-merge(
+  (
+    'step-1-gradient-bg': #7795f8,
+    'step-2-gradient-bg': #6772e5,
+    'step-3-gradient-bg': #555abf,
+    'span-1-bg': #7795f8,
+    'span-2-bg': #7b9aff,
+    'span-3-bg': #6f8ff8,
+    'span-4-bg': #76eea7,
+    'span-5-bg': #6adaff,
+  ),
+  $shapes-default-colors
+);
+
+$shapes-light-colors: () !default;
+$shapes-light-colors: map-merge(
+  (
+    'step-1-gradient-bg': #b2cbe1,
+    'step-2-gradient-bg': #f6f9fc,
+    'step-3-gradient-bg': #f6f9fc,
+    'span-1-bg': #b4cce1,
+    'span-2-bg': #c5dbef,
+    'span-3-bg': #b9d5ed,
+    'span-4-bg': #74e4a2,
+    'span-5-bg': #008169,
+  ),
+  $shapes-light-colors
+);
+
+$shapes-dark-colors: () !default;
+$shapes-dark-colors: map-merge(
+  (
+    'step-1-gradient-bg': #32325d,
+    'step-2-gradient-bg': #32325d,
+    'step-3-gradient-bg': #32325d,
+    'span-1-bg': #2e2e57,
+    'span-2-bg': #2b2b58,
+    'span-3-bg': #25254d,
+    'span-4-bg': #d782d9,
+    'span-5-bg': #008169,
+  ),
+  $shapes-dark-colors
+);
+
+// Sections
+
+$section-colors: () !default;
+$section-colors: map-merge(
+  (
+    'primary': $white,
+    'secondary': $primary,
+    'light': $gray-200,
+    'dark': $gray-1200,
+    'darker': $black,
+  ),
+  $section-colors
+);

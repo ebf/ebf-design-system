@@ -1,0 +1,23 @@
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    background-color: $value;
+  }
+}
+
+/* Set the width for Ember Notify notification element */
+.ember-notify-default {
+  .ember-notify.alert {
+    width: 460px;
+    margin: $alert-notify-margin;
+    border-width: $alert-border-width;
+    padding: $alert-padding-y $alert-padding-x;
+  }
+}
+
+.capitalize-text {
+  .heading {
+    .anchor {
+      text-transform: capitalize;
+    }
+  }
+}

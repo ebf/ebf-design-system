@@ -1,0 +1,188 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors */
+
+.nav-ebf-progress-bar {
+  height: $spacer * 5.5;
+  max-height: $spacer * 5.5;
+  padding: 1.25rem 0 1.75rem;
+  background: $gray-100;
+
+  &.navbar-dark {
+    background: $black;
+
+    .ebf-progress-bar {
+      .progress {
+        background-color: $gray-900;
+      }
+
+      .progress-bar-item-container {
+        .progress-bar-item {
+          .progress-dot {
+            background: $gray-900;
+          }
+
+          &.active {
+            @include hover {
+              .progress-label {
+                color: $primary;
+              }
+            }
+
+            .progress-label {
+              color: $white;
+            }
+
+            .progress-dot {
+              background: $primary;
+            }
+          }
+
+          &.current {
+            .progress-label {
+              &::after {
+                background: $primary !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ebf-progress-bar {
+  position: relative;
+  margin: 0 auto;
+
+  .progress {
+    height: $spacer / 8;
+  }
+
+  .progress-bar-item-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .progress-bar-item {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 0;
+      position: relative;
+      top: $spacer/3;
+      font-size: $font-size-sm;
+      text-align: center;
+      color: $black;
+      pointer-events: none;
+      z-index: 9;
+
+      &:focus {
+        outline: 0;
+      }
+
+      .progress-label {
+        margin-bottom: $spacer * 1.5;
+        line-height: 1;
+        transition: $smooth-color-animation;
+        font-weight: $theme-progress-label-fw;
+        font-style: $theme-progress-label-font-style;
+        text-transform: $theme-progress-text-transform;
+        color: $theme-progress-color;
+
+        &::after {
+          content: '';
+          width: $spacer;
+          height: $spacer;
+          border-radius: $spacer;
+          display: block;
+          position: absolute;
+          bottom: -4px;
+          left: -8px;
+          z-index: -1 !important;
+          background: $primary;
+          opacity: 0.2;
+          transform: scale(0);
+          transform-origin: center;
+          transition: $smooth-scaling-animation-dots;
+        }
+      }
+
+      .progress-dot {
+        align-self: flex-end;
+        width: $spacer/2;
+        height: $spacer/2;
+        display: block;
+        background: $gray-300;
+        border-radius: $spacer;
+        position: absolute;
+        transform-origin: center;
+        transform: scale(1);
+        transition: $smooth-scaling-animation-dots;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        .progress-label {
+          &::after {
+            transform: scale(1.5);
+          }
+        }
+
+        .progress-dot {
+          transform: scale(1.5);
+        }
+      }
+
+      &.active,
+      &.completed {
+        pointer-events: all;
+        font-style: normal;
+
+        .progress-label {
+          color: $black;
+          font-style: $font-style-normal;
+        }
+
+        .progress-dot {
+          background: $primary;
+        }
+
+        &:hover {
+          .progress-label {
+            color: $primary;
+            text-decoration: none;
+          }
+        }
+      }
+
+      &.current,
+      &.selected {
+        pointer-events: none;
+
+        .progress-label {
+          color: $black;
+
+          &::after {
+            transform: scale(1.25);
+            animation: pulsate-animation 2.5s ease-in-out infinite both;
+          }
+        }
+
+        .progress-dot {
+          transform: scale(1.5);
+        }
+
+        &:hover {
+          .progress-label {
+            &::after {
+              transform: scale(1.5) !important;
+              opacity: 0.5 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

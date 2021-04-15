@@ -1,12 +1,36 @@
 //Telekom Theme
-@import 'colors';
-@import 'fonts';
-@import 'variables/theme-variables';
-@import 'variables/theme-variables-overwrites';
+
+
+// Import Colors, Fonts and Icon Webfonts
+// These Must be Imported First!
+
+@import 'colors/colors';
+@import 'fonts/fonts';
+@import 'fonts/icons-webfont';
+
+// Import Bootstrap Header Resizer
+
+
+
+// Import Bootstrap Mixins and Functions
+
+@import 'ember-bootstrap/mixins';
 @import 'ember-bootstrap/functions';
 
-// Import Variables
-@import '../../variables';
-@import 'ember-bootstrap/variables';
 
-// Import Variables Dependant Styles
+// Import Theme Variables
+@import 'variables/variables';
+
+
+// Import Bootstrap Variables
+@import "ember-bootstrap/variables";
+
+
+// Bootstrap components
+@import 'ember-bootstrap/bootstrap';
+
+
+// Custom components
+@import 'mixins/mixins';
+@import 'utilities/utilities';
+@import 'components/components';
