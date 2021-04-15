@@ -1,14 +1,13 @@
+/* stylelint-disable function-parentheses-space-inside */
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-$caret-width:             0.3em !default;
-
 $transition-base:         all 0.15s ease !default;
 $transition-fade:         opacity 0.15s linear !default;
 $transition-collapse:     height 0.35s ease !default;
-
 
 // Languages
 
@@ -23,7 +22,7 @@ $theme-color-interval:      8% !default;
 $yiq-contrasted-threshold:  150 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark:             $gray-900 !default;
+$yiq-text-dark:             $gray-1200 !default;
 $yiq-text-light:            $white !default;
 
 // Characters which are escaped by the escape-svg function
@@ -104,9 +103,9 @@ $body-color:                $gray-1200 !default;
 //
 // Style anchor elements.
 
-$link-color:                              theme-color("primary") !default;
+$link-color:                              $theme-link-color !default;
 $link-decoration:                         none !default;
-$link-hover-color:                        link-color !default;
+$link-hover-color:                        $theme-link-color !default;
 $link-hover-decoration:                   underline !default;
 
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
@@ -118,15 +117,8 @@ $star-rating-color: $gray-400 !default;
 $star-rating-color-active: $yellow !default;
 $favorite-color: $yellow !default;
 $like-color: $primary !default;
-$love-color: $red !default;
+$love-color: $function-red !default;
 
-
-// Links
-
-$link-color: $primary !default;
-$link-decoration: none !default;
-$link-hover-color: $primary-hover;
-$link-hover-decoration: none !default;
 
 // Paragraphs
 //
@@ -203,23 +195,22 @@ $border-radius-sm:            .2rem !default;
 
 $rounded-pill:                50rem !default;
 
-$box-shadow-inset-md: inset 0 7px 15px rgba($black, 0.1), 0 5px 7px rgba($black, 0.07);
-$box-shadow-inset-sm: inset 0 -5px 15px rgba($gray-800, 0.1);
+$box-shadow-inset-md:         inset 0 7px 15px rgba($black, 0.1), 0 5px 7px rgba($black, 0.07);
+$box-shadow-inset-sm:         inset 0 -5px 15px rgba($gray-800, 0.1);
 
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow:                  0 15px 35px rgba($black, 0.1), 0 5px 15px rgba($black, 0.07);
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 
+$box-shadow-md:               0 4px 16px rgba($black, 0.1), 0 4px 8px rgba($black, 0.07);
+$box-shadow-md-primary:       0 2px 10px rgba($primary, 0.07), 0 -2px 10px rgba($primary, 0.07);
 
-$box-shadow-md:           0 4px 16px rgba($black, 0.1), 0 4px 8px rgba($black, 0.07);
-$box-shadow-md-primary:   0 2px 10px rgba($primary, 0.07), 0 -2px 10px rgba($primary, 0.07);
-
-$box-shadow-primary:      0 15px 35px rgba($primary, 0.1), 0 5px 15px rgba($primary, 0.07);
-$box-shadow-dark:         0 15px 35px rgba($black, 0.3), 0 5px 15px rgba($black, 0.2);
-
+$box-shadow-primary:          0 15px 35px rgba($primary, 0.1), 0 5px 15px rgba($primary, 0.07);
+$box-shadow-dark:             0 15px 35px rgba($black, 0.3), 0 5px 15px rgba($black, 0.2);
 
 $component-active-color:      $white !default;
 $component-active-bg:         theme-color("primary") !default;
+$component-active-border-color: theme-color('primary') !default;
                                             
 $caret-width:                 .5rem !default;
 $caret-vertical-align:         -.125rem;
@@ -245,7 +236,8 @@ $embed-responsive-aspect-ratios: join(
 //
 // Font, line-height, and color for body text, headings, and more.
 
-// Theme Font -----------------------------
+// Theme Font 
+
 $theme-font: TeleGroteskNext !default;
 
 // stylelint-disable value-keyword-case
@@ -254,13 +246,13 @@ $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberati
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
-// Theme Font Size Base -----------------------------
+
+// Theme Font Size Base 
 
 $default-font-size-base:      1rem; // 16px
 $theme-font-size-base:        1.125rem; // Telekom 18px 
 
 $font-size-base:              $theme-font-size-base; 
-
 
 $font-weight-lighter:         100 !default;
 $font-weight-normal:          400 !default;
@@ -268,12 +260,12 @@ $font-weight-medium:          600 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          900 !default;
 
-
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.33 !default;
 
 $line-height-display:         $line-height-sm !default;
 $line-height-headline:        $line-height-lg !default;
+
 
 // Telekom Font Sizes
 
@@ -294,6 +286,7 @@ $fs-14:                       4.25rem;     // 68px
 $fs-15:                       4.75rem;     // 76px
 $fs-16:                       5.25rem;     // 84px
 $fs-17:                       5.75rem;     // 92px
+
 
 $TO-Font-Size-Hero-xl:        ($default-font-size-base * 3.75);   // 60px
 $TO-Font-Size-Hero-l:         ($default-font-size-base * 3.125);  // 50px
@@ -342,9 +335,9 @@ $TO-Font-Size-micro:          ($default-font-size-base * .75);    // 12px
 .fs-quaternary-l {font-size: $TO-Font-Size-quaternary-l;}
 .fs-quaternary-s {font-size: $TO-Font-Size-quaternary-s;}
 
-
 $font-size-lg:                $fs-4 !default;
 $font-size-sm:                $fs-2 !default;
+
 
 // Telekom Font Sizes Map
 
@@ -396,7 +389,6 @@ $display2-size:               $fs-16 !default;
 $display3-size:               $fs-14 !default;
 $display4-size:               $fs-13 !default;
 
-
 $lead-font-size:              $fs-4 !default;
 $lead-font-weight:            $font-weight-normal !default;
 
@@ -424,12 +416,10 @@ $mark-bg:                     $primary !default;
 
 $hr-margin-y:                 $spacer !default;
 
-// Tables
 
 //Tables
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
-
 
 $table-cell-padding:          .9rem .875rem !default;
 $table-cell-padding-sm:       0.3rem !default;

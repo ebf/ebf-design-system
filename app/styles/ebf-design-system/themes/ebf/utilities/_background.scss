@@ -1,0 +1,57 @@
+// stylelint-disable declaration-no-important
+
+@each $color, $value in $theme-colors {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+@each $color, $value in $primary-colors {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+@each $color, $value in $grays {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+@each $color, $value in $blues {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+@each $color, $value in $greens {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+@each $color, $value in $yellows {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+@each $color, $value in $oranges {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+@each $color, $value in $reds {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+@each $color, $value in $purples {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+@each $color, $value in $function-colors {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+@each $color, $value in $colors {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+@each $color, $value in $transparent-colors {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}

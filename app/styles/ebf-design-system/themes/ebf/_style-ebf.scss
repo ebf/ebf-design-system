@@ -1,30 +1,32 @@
-//Telekom Theme
-@import 'colors';
-@import 'fonts';
+//EBF Theme
 
-@import 'variables/theme-variables';
-@import 'variables/theme-variables-overwrites';
-@import 'ember-bootstrap/functions';
 
-// Import Variables
+// Import Colors, Fonts and Icon Webfonts
+// These Must be Imported First!
 
-@import 'ember-bootstrap/variables';
-@import 'variables/variables';
-@import 'mixins/mixins';
+@import 'colors/colors';
+@import 'fonts/fonts';
+@import 'fonts/icons-webfont';
 
-// Import Variables Dependant Styles
-// // Core
-
-//Themes
+// Import Bootstrap Mixins and Functions
 
 @import 'ember-bootstrap/mixins';
-@import 'ember-bootstrap/mixins/background-variant';
+@import 'ember-bootstrap/functions';
+
+
+// Import Theme Variables
+@import 'variables/variables';
+
+
+// Import Bootstrap Variables
+@import "ember-bootstrap/variables";
 
 
 // Bootstrap components
-
 @import 'ember-bootstrap/bootstrap';
 
-@import 'utilities/utilities';
 
+// Custom components
+@import 'mixins/mixins';
+@import 'utilities/utilities';
 @import 'components/components';

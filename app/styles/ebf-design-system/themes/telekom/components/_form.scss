@@ -71,7 +71,7 @@ fieldset {
     }
 
     &::after {
-      content: $ebf-check-ui;
+      content: $ebf-check-mark;
       font-family: 'ebf-iconset';
       font-size: 0.875rem;
       line-height: 0.875rem;

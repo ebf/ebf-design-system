@@ -31,7 +31,7 @@
 
 /* Add a nice drop shadow to the Sweet Alert modal dialogs */
 .swal2-modal {
-  box-shadow: $model-drop-shadow;
+  box-shadow: $box-shadow;
 }
 
 .modal-fullscreen {
@@ -60,7 +60,7 @@
       justify-content: flex-end;
       border-bottom: 0;
 
-      @include respond-below(md) {
+      @include media-breakpoint-down(md) {
         justify-content: center !important;
       }
 
@@ -90,7 +90,7 @@
       padding: 0;
       background-color: $gray-100;
 
-      @include respond-below(md) {
+      @include media-breakpoint-down(md) {
         text-align: center;
       }
 
@@ -105,7 +105,7 @@
           flex-direction: row;
           flex-wrap: wrap;
 
-          @include respond-below(md) {
+          @include media-breakpoint-down(md) {
             justify-content: center !important;
           }
 
@@ -147,7 +147,7 @@
           width: auto !important;
           justify-content: flex-start !important;
 
-          @include respond-below(md) {
+          @include media-breakpoint-down(md) {
             justify-content: center !important;
           }
 
@@ -192,7 +192,7 @@
       }
 
       .btn {
-        @include respond-below(lg) {
+        @include media-breakpoint-down(lg) {
           @include button-size(
             $btn-padding-y-sm,
             $btn-padding-y-sm,

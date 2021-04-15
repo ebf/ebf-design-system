@@ -71,7 +71,7 @@ fieldset {
     }
 
     &::after {
-      content: $ebf-check-ui;
+      content: $ebf-check-mark;
       font-family: 'ebf-iconset';
       font-size: 0.875rem;
       line-height: 0.875rem;
@@ -250,7 +250,7 @@ fieldset {
   font-size: $theme-table-custom-select-font-size;
   padding-top: 0;
   padding-bottom: 0;
-  height: calc(#{$font-size-sm} + #{$font-size-xs});
+  height: calc(#{$font-size-sm} + #{$fs-1});
 }
 
 .fc-alt {

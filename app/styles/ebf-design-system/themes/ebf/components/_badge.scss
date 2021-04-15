@@ -1,7 +1,7 @@
 .badge {
   color: $white;
   text-transform: uppercase;
-  font-size: $font-size-xs;
+  font-size: $fs-2;
 
   a {
     color: #fff;
@@ -48,7 +48,7 @@ h6 {
 
 .progress-badge-title {
   color: $black;
-  font-size: $font-size-sm;
+  font-size: $fs-2;
 
   &::first-letter {
     text-transform: capitalize;
