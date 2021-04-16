@@ -1,0 +1,55 @@
+@mixin theme-caret-down() {
+  border: 0;
+  content: $ebf-chevron-down;
+}
+
+@mixin theme-caret-up() {
+  border: 0;
+  content: $ebf-chevron-up;
+}
+
+@mixin theme-caret-right() {
+  border: 0;
+  content: $ebf-chevron-right;
+}
+
+@mixin theme-caret-left() {
+  border: 0;
+  content: $ebf-chevron-left;
+}
+
+@mixin theme-caret($direction: down) {
+  @if $enable-caret {
+    &::after {      
+      margin-left: $caret-spacing;
+      vertical-align: $caret-vertical-align;
+      @extend %ebf;
+
+      @if $direction == down {
+        @include theme-caret-down();
+      } @else if $direction == up {
+        @include theme-caret-up();
+      } @else if $direction == right {
+        @include theme-caret-right();
+      }
+    }
+
+    @if $direction == left {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: inline-block;
+        margin-right: $caret-spacing;
+        vertical-align: $caret-vertical-align;
+        content: '';
+        @include theme-caret-left();
+      }
+    }
+
+    &:empty::after {
+      margin-left: 0;
+    }
+  }
+}

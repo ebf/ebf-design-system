@@ -20,6 +20,10 @@
   @include text-emphasis-variant(".text-#{$color}", $value, true);
 }
 
+@each $color, $value in $link-colors {
+  @include text-emphasis-variant(".text-#{$color}", $value, true);
+}
+
 @each $color, $value in $primary-colors {
   @include text-emphasis-variant(".text-#{$color}", $value, true);
 }

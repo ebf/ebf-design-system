@@ -8,11 +8,11 @@
 @import 'fonts/fonts';
 @import 'fonts/icons-webfont';
 
+
 // Import Bootstrap Mixins and Functions
 
 @import 'ember-bootstrap/mixins';
 @import 'ember-bootstrap/functions';
-
 
 // Import Theme Variables
 @import 'variables/variables';
@@ -28,5 +28,7 @@
 
 // Custom components
 @import 'mixins/mixins';
+@import 'mixins/caret';
+
 @import 'utilities/utilities';
 @import 'components/components';

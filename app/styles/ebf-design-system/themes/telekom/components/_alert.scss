@@ -1,6 +1,7 @@
 @each $color, $value in $theme-colors {
   .alert-#{$color} {
     background-color: $value;
+    color: $white;
   }
 }
 

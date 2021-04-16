@@ -10,6 +10,12 @@
   }
 }
 
+@each $color, $value in $link-colors {
+  .border-#{$color} {
+    border-color: $value !important;
+  }
+}
+
 @each $color, $value in $primary-colors {
   .border-#{$color} {
     border-color: $value !important;

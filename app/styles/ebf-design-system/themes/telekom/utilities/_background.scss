@@ -4,6 +4,10 @@
   @include bg-variant(".bg-#{$color}", $value, true);
 }
 
+@each $color, $value in $link-colors {
+  @include bg-variant(".bg-#{$color}", $value, true);
+}
+
 @each $color, $value in $primary-colors {
   @include bg-variant(".bg-#{$color}", $value, true);
 }

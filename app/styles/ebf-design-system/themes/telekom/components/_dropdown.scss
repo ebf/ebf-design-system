@@ -1,4 +1,9 @@
-.carrot-none {
+
+.dropdown-toggle {
+  @include theme-caret();
+}
+
+.caret-none {
   &::before,
   &::after {
     display: none !important;
