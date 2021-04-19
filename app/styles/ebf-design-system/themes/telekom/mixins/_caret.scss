@@ -1,6 +1,8 @@
 @mixin theme-caret-down() {
   border: 0;
   content: $ebf-chevron-down;
+  transform-origin: center;
+  transition: transform .2s ease-in-out;    
 }
 
 @mixin theme-caret-up() {
@@ -26,7 +28,7 @@
       @extend %ebf;
 
       @if $direction == down {
-        @include theme-caret-down();
+        @include theme-caret-down();        
       } @else if $direction == up {
         @include theme-caret-up();
       } @else if $direction == right {

@@ -306,7 +306,7 @@ $theme-colors-focus: map-merge(
 $theme-colors-active: () !default;
 $theme-colors-active: map-merge(
   (
-    "primary":    $primary-focus,
+    "primary":    $primary-active,
     "secondary":  $gray-900,
     "success":    $dark-green,
     "info":       $dark-blue,

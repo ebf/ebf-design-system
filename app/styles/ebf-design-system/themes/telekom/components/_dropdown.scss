@@ -1,6 +1,19 @@
 
 .dropdown-toggle {
   @include theme-caret();
+  transform: scale(1) !important; 
+
+  &[aria-expanded="false"] {
+    &::after {
+      transform: rotate(0deg);
+    }
+  }
+
+  &[aria-expanded="true"] {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .caret-none {
