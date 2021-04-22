@@ -207,7 +207,7 @@ $info:      $function-blue;
 $warning:   $function-yellow;
 $danger:    $function-red;
 $error:     $function-red;
-$light:     $gray-100;
+$light:     $gray-200;
 $dark:      $gray-1200;
 
 // Misc Colors
@@ -259,7 +259,7 @@ $theme-colors: map-merge(
     "warning":    $function-yellow,
     "danger":     $function-red,
     "error":      $function-red,
-    "light":      $gray-100,
+    "light":      $gray-200,
     "dark":       $gray-1200
   ),
   $theme-colors
@@ -277,7 +277,7 @@ $theme-colors-hover: map-merge(
     "warning":    $dark-yellow,
     "danger":     $function-red,
     "error":      $function-red,
-    "light":      $gray-500,
+    "light":      $gray-400,
     "dark":       $gray-1200
   ),
   $theme-colors-hover
@@ -295,7 +295,7 @@ $theme-colors-focus: map-merge(
     "warning":    $dark-yellow,
     "danger":     $function-red,
     "error":      $function-red,
-    "light":      $gray-900,
+    "light":      $gray-400,
     "dark":       $gray-1200
   ),
   $theme-colors-focus
@@ -313,7 +313,7 @@ $theme-colors-active: map-merge(
     "warning":    $dark-yellow,
     "danger":     $function-red,
     "error":      $function-red,
-    "light":      $gray-700,
+    "light":      $gray-600,
     "dark":       $gray-1200
   ),
   $theme-colors-active

@@ -27,6 +27,8 @@
 
 
 // Custom components
-@import 'mixins/mixins';
+@import '../mixins/mixins';
+@import '../mixins/caret';
+
 @import 'utilities/utilities';
 @import 'components/components';

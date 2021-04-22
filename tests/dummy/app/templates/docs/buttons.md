@@ -8,142 +8,203 @@ This page shows some example usage of the `<BsButton>` component.
 ## Primary Buttons
 <!-- {{docs/buttons/example}} -->
 
-<button type="button" class="btn btn-primary">Primary</button>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="primary-button.hbs"}}
+  <BsButton @type="primary">
+    Primary 
+  </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "primary-button.hbs"}}
+{{/docs-demo}}
 
 ### Primary Button With Icon
 
-<button type="button" class="btn btn-primary">
-  <i class="ebf ebf-download pr-2"></i>
-  Primary with icon
-</button>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="primary-button-icon.hbs"}}
+  <BsButton @type="primary">
+    <i class="ebf ebf-download pr-2"></i>
+    Primary 
+  </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "primary-button-icon.hbs"}}
+{{/docs-demo}}
 
 ### Primary Button Icon Only
 
-<button type="button" class="btn btn-primary icon-only">
-  <i class="ebf ebf-download"></i>  
-</button>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="primary-button-icon-only.hbs"}}
+  <BsButton @type="primary" class="btn-iocn">
+    <i class="ebf ebf-download"></i> 
+  </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "primary-button-icon-only.hbs"}}
+{{/docs-demo}}
 
 ### Primary Button Round
 
-<button type="button" class="btn btn-primary icon-only round-button">
-  <i class="ebf ebf-download"></i>  
-</button>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="simple-icon-round-button.hbs"}}
+  <BsButton @type="primary" class="btn-icon btn-round">
+    <i class="ebf ebf-download"></i>  
+  </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "simple-icon-round-button.hbs"}}
+{{/docs-demo}}
 
 
 ## Outline Buttons
 
-<button type="button" class="btn btn-outline-variant">Outline</button>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-button.hbs"}}
+  <BsButton @type="outline">
+    Outline 
+  </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-button.hbs"}}
+{{/docs-demo}}
 
 ### Outline Button with Icon
 
-<button type="button" class="btn btn-outline-variant">
-  <i class="ebf ebf-download pr-2"></i>
-  Outline
-</button>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-button-icon.hbs"}}
+  <BsButton @type="outline">
+    <i class="ebf ebf-download pr-2"></i>
+    Outline
+  </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-button-icon.hbs"}}
+{{/docs-demo}}
 
 ### Outline Button With Icon Only
 
-<button type="button" class="btn btn-outline-variant icon-only">
-  <i class="ebf ebf-download"></i>
-</button>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-button-icon-only.hbs"}}
+    <BsButton @type="outline" class="btn-icon">
+      <i class="ebf ebf-download"></i>
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-button-icon-only.hbs"}}
+{{/docs-demo}}
 
 ### Outline Button Round
 
-<button type="button" class="btn btn-outline-variant icon-only round-button">
-  <i class="ebf ebf-download"></i>
-</button>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-button-icon-round.hbs"}}
+    <BsButton @type="outline"  class="btn-icon btn-round">
+      <i class="ebf ebf-download"></i>
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-button-icon-round.hbs"}}
+{{/docs-demo}}
 
 
 ## Outline Buttons White
 
-<div class="bg-gray-1200 py-2 px-2">
-  <button type="button" class="btn btn-outline-variant-white">Outline</button>
-</div>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-white.hbs" class="bg-gray-1200"}}
+    <BsButton @type="white" @outline={{true}}>
+      Outline White
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-white.hbs"}}
+{{/docs-demo}}
+
 
 ### Outline Button with Icon
 
-<div class="bg-gray-1200 py-2 px-2">
-  <button type="button" class="btn btn-outline-variant-white">
-    <i class="ebf ebf-download pr-2"></i>
-    Outline
-  </button>
-</div>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-white-icon.hbs" class="bg-gray-1200"}}
+    <BsButton @type="white" @outline={{true}}>
+      <i class="ebf ebf-download mr-2"></i>
+      Outline White
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-white-icon.hbs"}}
+{{/docs-demo}}
 
 ### Outline Button With Icon Only
 
-<div class="bg-gray-1200 py-2 px-2">
-  <button type="button" class="btn btn-outline-variant-white icon-only">
-    <i class="ebf ebf-download"></i>
-  </button>
-</div>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-white-icon-only.hbs" class="bg-gray-1200"}}
+    <BsButton @type="white" @outline={{true}} class="btn-icon">
+      <i class="ebf ebf-download"></i>  
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-white-icon-only.hbs"}}
+{{/docs-demo}}
 
 ### Outline Button Round
 
-<div class="bg-gray-1200 py-2 px-2">
-  <button type="button" class="btn btn-outline-variant-white icon-only round-button">
-    <i class="ebf ebf-download"></i>
-  </button>
-</div>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-white-icon-round-button.hbs" class="bg-gray-1200"}}
+    <BsButton @type="white" @outline={{true}} class="btn-icon btn-round">
+      <i class="ebf ebf-download"></i>  
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-white-icon-round-button.hbs"}}
+{{/docs-demo}}
 
 
 ## Ghost Buttons
 
-<button type="button" class="btn btn-ghost">Outline</button>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="ghost-button.hbs"}}
+    <BsButton @type="ghost">
+      Ghost  
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "ghost-button.hbs"}}
+{{/docs-demo}}
 
 ### Ghost Button with Icon
 
-<button type="button" class="btn btn-ghost">
-  <i class="ebf ebf-download pr-2"></i>
-  Outline
-</button>
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="ghost-button-icon.hbs"}}
+    <BsButton @type="ghost">
+      <i class="ebf ebf-download pr-2"></i>
+      Ghost  
+    </BsButton>
+  {{/demo.example}}
+  {{demo.snippet "ghost-button-icon.hbs"}}
+{{/docs-demo}}
+
 
 ### Ghost Button With Icon Only
 
-<button type="button" class="btn btn-ghost icon-only">
-  <i class="ebf ebf-download"></i>
-</button>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="ghost-button-icon-only.hbs"}}
+    <BsButton @type="ghost" class="btn-icon">
+      <i class="ebf ebf-download"></i>        
+    </BsButton>
+  {{/demo.example}}
+  {{demo.snippet "ghost-button-icon-only.hbs"}}
+{{/docs-demo}}
 
 ### Ghost Button Round
 
-<button type="button" class="btn btn-ghost icon-only round-button">
-  <i class="ebf ebf-download"></i>
-</button>
+{{#docs-demo as |demo|}}
+  {{#demo.example name="ghost-button-icon-only-round.hbs"}}
+    <BsButton @type="ghost" class="btn-icon btn-round">
+      <i class="ebf ebf-download"></i>        
+    </BsButton>
+  {{/demo.example}}
+  {{demo.snippet "ghost-button-icon-only-round.hbs"}}
+{{/docs-demo}}
 
-
-<!-- ### Available types
-{{docs/buttons}} -->
-<!-- 
-### Outline buttons
-
-For a lighter touch, Buttons also come in outline-* variants with no background color.
-
-{{docs/buttons outline=true}} -->
-<!-- 
-{{#docs-snippet name="your-snippet-name.hbs"}}
-  <BsButton @type="primary" @outline={{true}}>
-    primary
-  </BsButton>
-{{/docs-snippet}} -->
-<!-- 
-### Sizing
-
-Fancy larger or smaller buttons? Add classes "btn-sm", "btn-lg" for additional sizes. -->
-<!-- 
-{{docs/buttons types=(array "primary" "secondary") size="sm"}}
-
-{{#docs-snippet name="your-snippet-name.hbs"}}
-  <BsButton @type="primary" @size="sm">
-    primary
-  </BsButton>
-{{/docs-snippet}} -->
-<!-- 
-{{docs/buttons types=(array "primary" "secondary") size="lg"}}
-
-{{#docs-snippet name="your-snippet-name.hbs"}}
-  <BsButton @type="primary" @size="lg">
-    primary
-  </BsButton>
-{{/docs-snippet}} -->
 
 ## Submit button
 

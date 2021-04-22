@@ -5,7 +5,6 @@ export const BOOTSTRAP_TYPES = [
   'info',
   'warning',
   'danger',
-  'default',
   'light',
   'dark'
 ];

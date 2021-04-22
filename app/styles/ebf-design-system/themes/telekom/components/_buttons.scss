@@ -1,10 +1,13 @@
 .btn {  
   // Loading indicator: compensate for the border width, color and size
-  .loading-spinner .loading-icon {
-    @include loader-size($btn-font-size);
-    border-top-color: rgba($white, 0.75) !important;
-    border-left-color: rgba($white, 0.75) !important;
-    margin: -1px auto !important;
+  
+  .loading-spinner {
+    .loading-icon {
+      @include loader-size($btn-font-size);
+      border-top-color: $white;
+      border-left-color: $white;
+      margin: -2px auto !important;
+    }
   }
 
   &.btn-lg .loading-spinner .loading-icon {
@@ -16,9 +19,7 @@
   }
 }
 
-.btn-icon {
-  padding: $input-btn-padding-y $input-btn-padding-y;
-  
+.btn-icon {   
   &.btn-lg {
     @include button-size(
       $btn-padding-y-lg,
@@ -99,7 +100,8 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
 
 // Outline Variant
 
-.btn-outline-variant {
+.btn-outline,
+.btn-outline-outline {
   @include button-variant(
   $transparent-b,         //background
   $gray-900,              //border
@@ -112,10 +114,9 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
   color: $gray-1200 !important;
 }
 
-
 // Outline Variant White
 
-.btn-outline-variant-white {
+.btn-outline-white {
   @include button-variant(
   $transparent-w,         //background
   $white,                 //border
@@ -144,15 +145,59 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
   color: $gray-1200!important;  
 }
 
+//
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+// Outline Fallbacks
+
+.btn-white {
+  @include button-variant(
+  $white,                 //background
+  $white,                 //border
+  $gray-100,               //hover-background
+  $gray-100,                 //hover-border
+  $gray-200,               //active-background
+  $gray-200                  //active-border
+  );   
+  
+  color: $gray-1200 !important;
+}
+
+
+.btn-outline-ghost {
+  @include button-variant(
+    $transparent-b,   //background
+    $transparent-b,   //border
+    $black-7,   //hover-background
+    $transparent-b,         //hover-border
+    $black-15,        //active-background
+    $transparent-b         //active-border
+  ); 
+  
+  color: $gray-1200!important;  
+}
 
 // Round Button
 
 .btn {
-  &.icon-only {
+  &.btn-icon {
     padding-right: $fs-3;
     padding-left: $fs-3;
     
-    &.round-button {
+    &.btn-round {
       border-radius: $spacer * 2;
       max-width: 2.625rem;
       width: 2.625rem;
@@ -175,21 +220,37 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
 // General Button Styles and Height Overrides
 
 .btn {
-  
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  user-select: none;
   overflow: hidden;   
   white-space: nowrap;
   transition: $btn-custom-transition;
   transform-origin: center;
+  border-width: $input-btn-border-width;
+  border-style: solid;
   transform: scale(1);
 
-  &:active,
-  &.active {
-    &:not(:disabled):not(.disabled):active,
-    &:not(:disabled):not(.disabled).active,
-    .show > &.dropdown-toggle {
-      transform: scale(.92);
-    }
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;   
   }
+
+  &:not(:disabled):not(.disabled) {    
+    &:active,
+    &.active {
+      transform: scale(.92);
+      &:focus {
+        
+      }
+    }
+  } 
 
   @include button-size (
     0.6875rem,    //padding-y
@@ -215,27 +276,94 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
   }
 }
 
-// .dropdown-toggle {
-//   &::after {
-//     @extend %ebf;
-//     content: $ebf-chevron-down;
-//     border: 0!important;
-//     transform-origin: center;
-//     transition: transform .2s ease-in-out;    
-//   }
+//
+// Block button
+//
 
-//   &[aria-expanded="false"] {
-//     &::after {
-//       transform: rotate(0deg);
-//     }
-//   }
+.btn-block {
+  display: block;
+  width: 100%;
 
-//   &[aria-expanded="true"] {
-//     &::after {
-//       transform: rotate(180deg);
-//     }
-//   }
-// }
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link,
+.btn-outline-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  text-decoration: $link-decoration;
+  border: none;
+
+  @include hover() {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  // No need for an active state here
+}
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
 
 // Filter Tabs
 
@@ -473,3 +601,25 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
   }
 }
 
+
+// .dropdown-toggle {
+//   &::after {
+//     @extend %ebf;
+//     content: $ebf-chevron-down;
+//     border: 0!important;
+//     transform-origin: center;
+//     transition: transform .2s ease-in-out;    
+//   }
+
+//   &[aria-expanded="false"] {
+//     &::after {
+//       transform: rotate(0deg);
+//     }
+//   }
+
+//   &[aria-expanded="true"] {
+//     &::after {
+//       transform: rotate(180deg);
+//     }
+//   }
+// }
