@@ -19,20 +19,20 @@
 
 
 // Import Bootstrap Variables
-@import "ember-bootstrap/variables";
+//@import "ember-bootstrap/variables";
 
 
 // Bootstrap components
 
 @import 'ember-bootstrap/root';
 @import 'ember-bootstrap/reboot';
-@import 'ember-bootstrap/type';
+//@import 'ember-bootstrap/type';
 @import 'ember-bootstrap/images';
 @import 'ember-bootstrap/code';
 @import 'ember-bootstrap/grid';
 @import 'ember-bootstrap/tables';
 @import 'ember-bootstrap/forms';
-@import 'ember-bootstrap/functions';
+//@import 'ember-bootstrap/functions';
 //@import 'ember-bootstrap/buttons';
 @import 'ember-bootstrap/transitions';
 @import 'ember-bootstrap/dropdown';
@@ -45,11 +45,11 @@
 @import 'ember-bootstrap/pagination';
 @import 'ember-bootstrap/badge';
 @import 'ember-bootstrap/jumbotron';
-@import 'ember-bootstrap/alert';
+//@import 'ember-bootstrap/alert';
 @import 'ember-bootstrap/progress';
 @import 'ember-bootstrap/media';
 @import 'ember-bootstrap/list-group';
-@import 'ember-bootstrap/close';
+//@import 'ember-bootstrap/close';
 @import 'ember-bootstrap/modal';
 @import 'ember-bootstrap/tooltip';
 @import 'ember-bootstrap/popover';
