@@ -35,7 +35,7 @@ This page shows some example usage of the `<BsButton>` component.
 
 {{#docs-demo as |demo|}}
   {{#demo.example name="primary-button-icon-only.hbs"}}
-  <BsButton @type="primary" class="btn-iocn">
+  <BsButton @type="primary" class="btn-icon">
     <i class="ebf ebf-download"></i> 
   </BsButton>
   {{/demo.example}}

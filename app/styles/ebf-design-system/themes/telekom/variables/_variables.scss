@@ -992,6 +992,9 @@ $jumbotron-bg:                      $gray-200 !default;
 
 // Cards
 
+$card-align-text:                   center;
+$card-align-flex:                   center;
+
 $card-spacer-y:                     .75rem !default;
 $card-spacer-x:                     1.25rem !default;
 
@@ -999,11 +1002,14 @@ $card-border-width:                 $border-width !default;
 $card-border-radius:                0 !default;
 $card-border-color:                 $border-color !default;
 $card-inner-border-radius:          0 !default;
-$card-cap-bg:                       $white !default;
-$card-cap-color:                    null !default;
-$card-height:                       null !default;
-$card-color:                        null !default;
+$card-cap-bg:                       null !default;
+$card-cap-color:                    $gray-1200 !default;
+$card-height:                       100% !default;
+$card-color:                        $gray-1200 !default;
 $card-bg:                           $white !default;
+
+$card-title-size:                   $fs-4;
+$card-text-size:                    $fs-2;
 
 $card-img-overlay-padding:          1.25rem !default;
 
@@ -1014,6 +1020,8 @@ $card-columns-count:                3 !default;
 $card-columns-gap:                  1.25rem !default;
 $card-columns-margin:               $card-spacer-y !default;
 
+$card-img-width:              auto;
+$card-img-height:             3rem;
 
 // Tooltips
 

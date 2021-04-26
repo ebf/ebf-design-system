@@ -39,7 +39,10 @@
 
       .alert-text {
         font-size: $fs-2;
-        margin-bottom: 0;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 

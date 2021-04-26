@@ -2,7 +2,7 @@
   <demo.example @name="option-card.hbs">
     <div class="row">
       <div class="col-6">
-        <Card::Option @selected={{true}} class="h-100" as |card|>
+        <Card::Option @selected={{true}} as |card|>
           <card.title>
             Selected card
           </card.title>
@@ -15,7 +15,6 @@
         <Card::Option
           @title="Card option"
           @description="Some quick example text to build on the card title and make up the bulk of the card's content."
-          class="h-100"
         />
       </div>
     </div>
