@@ -139,7 +139,7 @@ For grid building, same general method is used as in the Primary and Secondary C
           <!-- Availability -->
           <div class="card-availability">
             <i class="ebf ebf-check-mark-circle-full text-success"></i>
-            <p class="fs-3 mb-0">Vorrätig</p>
+            <p>Vorrätig</p>
           </div>
           <!-- Descripion -->
           <p class="card-text">Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation</p>
