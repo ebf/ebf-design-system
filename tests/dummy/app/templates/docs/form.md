@@ -31,7 +31,6 @@ Concepts behind `ember-changeset` and how validations can be configured, please 
         >
           <el.control name="email" placeholder="Enter your email address" />
         </form.element>
-
         <form.element
           @controlType="password"
           @label="Password"
@@ -40,7 +39,6 @@ Concepts behind `ember-changeset` and how validations can be configured, please 
         >
           <el.control name="password" placeholder="Enter your password" />
         </form.element>
-
         <form.element
           @controlType="checkbox"
           @label="Remember me"
@@ -54,3 +52,43 @@ Concepts behind `ember-changeset` and how validations can be configured, please 
 
   {{demo.snippet "simple-form.hbs"}}
 {{/docs-demo}}
+
+## Basic Inputs
+
+<form>
+  <div class="form-group">
+    <label class="form-label" for="formBasic">Label</label>
+    <input placeholder="Placeholder text" type="text" id="formBasic" class="form-control">
+  </div>
+  <div class="form-group input-success">
+    <label class="form-label" for="formBasic">Label</label>
+    <input placeholder="Placeholder text" type="text" id="formBasic" class="form-control">
+  </div>
+  <div class="form-group input-error">
+    <label class="form-label" for="formBasic">Label</label>
+    <input placeholder="Placeholder text" type="text" id="formBasic" class="form-control">
+  </div>
+  <div class="form-group input-disabled">
+    <label class="form-label" for="formBasic">Label</label>
+    <input placeholder="Placeholder text" type="text" id="formBasic" class="form-control" disabled>
+  </div>  
+</form>
+
+<form>
+  <div class="custom-control custom-checkbox mb-4">
+    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+    <label class="custom-control-label" for="customCheck">Check this custom checkbox</label>
+  </div>
+</form>
+<form>
+  <div class="custom-control custom-radio mb-4">
+    <input type="radio" class="custom-control-input" id="customRadio4" name="example4" value="customEx">
+    <label class="custom-control-label" for="customRadio4">Custom radio</label>
+  </div>
+</form>
+<form>
+  <div class="custom-control custom-switch mb-4">
+    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+    <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+  </div>
+</form>
