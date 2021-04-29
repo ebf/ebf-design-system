@@ -1,38 +1,47 @@
-@mixin theme-caret-down() {
+@mixin caret-down() {
   border: 0;
   content: $ebf-chevron-down;
   transform-origin: center;
   transition: transform .2s ease-in-out;    
 }
 
-@mixin theme-caret-up() {
+@mixin caret-up() {
   border: 0;
   content: $ebf-chevron-up;
+  transform-origin: center;
+  transition: transform .2s ease-in-out; 
 }
 
-@mixin theme-caret-right() {
+@mixin caret-right() {
   border: 0;
   content: $ebf-chevron-right;
+  transform-origin: center;
+  transition: transform .2s ease-in-out; 
 }
 
-@mixin theme-caret-left() {
+@mixin caret-left() {
   border: 0;
   content: $ebf-chevron-left;
+  transform-origin: center;
+  transition: transform .2s ease-in-out; 
 }
 
-@mixin theme-caret($direction: down) {
+@mixin caret($direction: down) {
   @if $enable-caret {
     &::after {      
       margin-left: $caret-spacing;
       vertical-align: $caret-vertical-align;
-      @extend %ebf;
+      font-family: telekom-iconset;
+      display: inline-block;      
+      font-size: inherit;
+      line-height: 0;
 
       @if $direction == down {
-        @include theme-caret-down();        
+        @include caret-down();        
       } @else if $direction == up {
-        @include theme-caret-up();
+        @include caret-up();
       } @else if $direction == right {
-        @include theme-caret-right();
+        @include caret-right();
       }
     }
 
@@ -45,8 +54,12 @@
         display: inline-block;
         margin-right: $caret-spacing;
         vertical-align: $caret-vertical-align;
+        font-family: telekom-iconset;
+        display: inline-block;        
+        font-size: inherit;
+        line-height: 0;
         content: '';
-        @include theme-caret-left();
+        @include caret-left();
       }
     }
 

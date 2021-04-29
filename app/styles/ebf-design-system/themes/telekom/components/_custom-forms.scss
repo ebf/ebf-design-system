@@ -140,6 +140,12 @@
      ~ .custom-control-label::before {
        border-color: $function-red;
      }
+
+     @include hover-focus {
+       &~ .custom-control-label::before {
+         background-color: $white;
+       }
+     }
   }
 
   .custom-control-input:disabled {
@@ -148,6 +154,14 @@
     }
     &:indeterminate ~ .custom-control-label::before {
       @include gradient-bg($custom-control-indicator-checked-disabled-bg);
+    }
+  }  
+
+  .custom-control-label {
+    @include hover-focus {
+      &::before {
+        background-color: $gray-200;
+      }
     }
   }
 }
@@ -172,11 +186,25 @@
     &:checked ~ .custom-control-label::before {
       @include gradient-bg($custom-control-indicator-checked-disabled-bg);
     }
+
+    @include hover-focus {
+      &~ .custom-control-label::before {
+        background-color: $white;
+      }
+    }
   }
 
   .custom-control-input:disabled {
     ~ .custom-control-label::before {
       border-color: $function-red;
+    }
+  }
+
+  .custom-control-label {
+    @include hover-focus {
+      &::before {
+        background-color: $gray-200;
+      }
     }
   }
 }

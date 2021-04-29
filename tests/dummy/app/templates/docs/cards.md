@@ -85,9 +85,9 @@ Basically the same as Primary Card, excluding the image.
   {{#demo.example name="secondary-card.hbs"}}
   <div class="col mb-4">
     <div class="card card-secondary">
-      <div class="card-body">        
+      <div class="card-body">
         <div class="card-title">Card title</div>
-        <div class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
+        <div class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>
       </div>
     </div>
   </div>

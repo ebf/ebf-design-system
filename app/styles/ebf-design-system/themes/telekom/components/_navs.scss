@@ -1,204 +1,384 @@
-// Navs
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s, `<ul>`s or `<ol>`s.
 
-.nav-item {
-  position: relative;
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0 !important;
+  list-style: none;
+  align-items: center;
 }
 
-.nav-dots {
-  margin-bottom: $spacer;
+.nav-link {
+  display: block;
+  font-size: $fs-4;
+  color: $nav-link-color;
+  line-height: $line-height-sm;  
+  font-weight: $font-weight-bolder;  
+  padding: $nav-link-padding-y $nav-link-padding-x;
+  text-decoration: if($link-decoration == none, null, none);
+  transition: $transition-base;
+  
+  @include hover-focus() {
+    text-decoration: none;
+    color: $nav-link-hover-color;
+  }
 
-  .nav-item {
-    .nav-link {
-      color: $nav-link-color;
-      transition: $smooth-color-animation;
-      position: relative;
+  // Disabled state lightens text
+  &.disabled,
+  &:disabled {
+    color: $nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
 
-      @include hover {
-        color: $primary;
-      }
+  &.active,
+  &:active {
+    color: $nav-link-active-color;
+  }
 
-      &::after {
-        content: '';
-        display: block;
-        background: $primary;
-        width: $spacer / 2;
-        height: $spacer / 2;
-        border-radius: $spacer / 2;
-        margin: 0 auto;
-        position: relative;
-        bottom: 0;
-        transition: $smooth-scaling-animation-dots;
-        transform-origin: center;
-        transform: scale(0);
-      }
+  i {
+    line-height: inherit;
+  }
 
-      &.active {
-        color: $nav-link-active-color;
+  .dropdown-toggle {
 
-        &::after {
-          transform: scale(1);
-        }
-      }
+    color: $nav-link-color;
 
-      &.disabled {
-        color: $nav-link-disabled-color;
-        pointer-events: none;
-      }
+    @include hover-focus() {
+      text-decoration: none;
+      color: $nav-link-hover-color;
+    }
+
+    &.disabled,
+    &:disabled {
+      color: $nav-link-disabled-color;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    &.active,
+    &:active {
+      color: $nav-link-active-color;
     }
   }
 }
 
-.vertical-nav {
-  .nav-item {
-    .nav-link {
-      font-size: $theme-navbar-nav-link-font-size;
 
-      &::after {
-        margin: 0;
-        bottom: auto;
-        position: absolute;
-        left: 0;
-        line-height: inherit;
-        bottom: $theme-navbar-nav-link-font-size;
-      }
-
-      &.active {
-        &::after {
-          transform: scale(1);
-        }
-      }
-    }
-  }
-}
+//
+// Tabs
+//
 
 .nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
   .nav-item {
-    i {
-      margin-right: $spacer / 4;
+    margin-bottom: -$nav-tabs-border-width;
+  }
+
+  .nav-link {
+    border: $nav-tabs-border-width solid transparent;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    @include hover-focus() {
+      border-color: $nav-tabs-link-hover-border-color;
     }
 
-    .nav-link {
-      color: $nav-link-color;
-      transition: $smooth-color-animation;
-
-      @include hover {
-        background: transparent;
-        border-color: transparent;
-      }
-
-      &::after {
-        content: none;
-      }
-
-      &.disabled {
-        color: $nav-link-disabled-color;
-      }
-
-      &.active {
-        color: $nav-link-active-color;
-        background-color: $white;
-        border-top: 1px solid $gray-300;
-        border-right: 1px solid $gray-300;
-        border-bottom: 1px solid $white;
-        border-left: 1px solid $gray-300;
-      }
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
     }
+  }
 
-    .nav-link {
-      padding: $input-btn-padding-y $input-btn-padding-x;
-      line-height: 1;
-    }
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
   }
 }
 
-.nav-simple-tabs,
-.simple-tabs-nav {
-  border-bottom: 0;
 
-  .nav-item {
-    padding: $input-btn-padding-y-sm $input-btn-padding-x;
-
-    &:first-of-type {
-      padding-left: 0;
-    }
-
-    .nav-link {
-      color: $black;
-      border: 0;
-      background: transparent;
-      padding: 0;
-      position: relative;
-
-      @include hover {
-        background: transparent;
-      }
-
-      &::after {
-        content: '';
-        width: 100%;
-        height: 4px;
-        background: $primary;
-        display: block;
-        position: absolute;
-        bottom: -8px;
-        left: 0;
-        transform-origin: center;
-        transform: scaleX(0);
-        transition: $smooth-scaling-animation;
-      }
-
-      &.active {
-        color: $primary;
-        border: 0 none;
-        background: none;
-
-        @include hover {
-          background: transparent;
-        }
-
-        &::after {
-          transform: scaleX(1);
-        }
-      }
-
-      &.disabled {
-        pointer-events: none;
-      }
-    }
-  }
-}
+//
+// Pills
+//
 
 .nav-pills {
-  .nav-item {
-    .nav-link {
-      color: $nav-link-color;
-      transition: $smooth-color-animation;
-      padding: $input-btn-padding-y $input-btn-padding-x;
-      line-height: 1;
+  .nav-link {
+    @include border-radius($nav-pills-border-radius);
+  }
 
-      @include hover {
-        background: $gray-200;
-      }
-
-      &::after {
-        content: none;
-      }
-
-      &.disabled {
-        color: $nav-link-disabled-color;
-        pointer-events: none;
-      }
-
-      &.active {
-        color: $white;
-
-        @include hover {
-          background: $primary;
-        }
-      }
-    }
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
   }
 }
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  > .nav-link,
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  > .nav-link,
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Navs
+
+// .nav-item {
+//   position: relative;
+// }
+
+// .nav-dots {
+//   margin-bottom: $spacer;
+
+//   .nav-item {
+//     .nav-link {
+//       color: $nav-link-color;
+//       transition: $smooth-color-animation;
+//       position: relative;
+
+//       @include hover {
+//         color: $primary;
+//       }
+
+//       &::after {
+//         content: '';
+//         display: block;
+//         background: $primary;
+//         width: $spacer / 2;
+//         height: $spacer / 2;
+//         border-radius: $spacer / 2;
+//         margin: 0 auto;
+//         position: relative;
+//         bottom: 0;
+//         transition: $smooth-scaling-animation-dots;
+//         transform-origin: center;
+//         transform: scale(0);
+//       }
+
+//       &.active {
+//         color: $nav-link-active-color;
+
+//         &::after {
+//           transform: scale(1);
+//         }
+//       }
+
+//       &.disabled {
+//         color: $nav-link-disabled-color;
+//         pointer-events: none;
+//       }
+//     }
+//   }
+// }
+
+// .vertical-nav {
+//   .nav-item {
+//     .nav-link {
+//       font-size: $theme-navbar-nav-link-font-size;
+
+//       &::after {
+//         margin: 0;
+//         bottom: auto;
+//         position: absolute;
+//         left: 0;
+//         line-height: inherit;
+//         bottom: $theme-navbar-nav-link-font-size;
+//       }
+
+//       &.active {
+//         &::after {
+//           transform: scale(1);
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .nav-tabs {
+//   .nav-item {
+//     i {
+//       margin-right: $spacer / 4;
+//     }
+
+//     .nav-link {
+//       color: $nav-link-color;
+//       transition: $smooth-color-animation;
+
+//       @include hover {
+//         background: transparent;
+//         border-color: transparent;
+//       }
+
+//       &::after {
+//         content: none;
+//       }
+
+//       &.disabled {
+//         color: $nav-link-disabled-color;
+//       }
+
+//       &.active {
+//         color: $nav-link-active-color;
+//         background-color: $white;
+//         border-top: 1px solid $gray-300;
+//         border-right: 1px solid $gray-300;
+//         border-bottom: 1px solid $white;
+//         border-left: 1px solid $gray-300;
+//       }
+//     }
+
+//     .nav-link {
+//       padding: $input-btn-padding-y $input-btn-padding-x;
+//       line-height: 1;
+//     }
+//   }
+// }
+
+// .nav-simple-tabs,
+// .simple-tabs-nav {
+//   border-bottom: 0;
+
+//   .nav-item {
+//     padding: $input-btn-padding-y-sm $input-btn-padding-x;
+
+//     &:first-of-type {
+//       padding-left: 0;
+//     }
+
+//     .nav-link {
+//       color: $black;
+//       border: 0;
+//       background: transparent;
+//       padding: 0;
+//       position: relative;
+
+//       @include hover {
+//         background: transparent;
+//       }
+
+//       &::after {
+//         content: '';
+//         width: 100%;
+//         height: 4px;
+//         background: $primary;
+//         display: block;
+//         position: absolute;
+//         bottom: -8px;
+//         left: 0;
+//         transform-origin: center;
+//         transform: scaleX(0);
+//         transition: $smooth-scaling-animation;
+//       }
+
+//       &.active {
+//         color: $primary;
+//         border: 0 none;
+//         background: none;
+
+//         @include hover {
+//           background: transparent;
+//         }
+
+//         &::after {
+//           transform: scaleX(1);
+//         }
+//       }
+
+//       &.disabled {
+//         pointer-events: none;
+//       }
+//     }
+//   }
+// }
+
+// .nav-pills {
+//   .nav-item {
+//     .nav-link {
+//       color: $nav-link-color;
+//       transition: $smooth-color-animation;
+//       padding: $input-btn-padding-y $input-btn-padding-x;
+//       line-height: 1;
+
+//       @include hover {
+//         background: $gray-200;
+//       }
+
+//       &::after {
+//         content: none;
+//       }
+
+//       &.disabled {
+//         color: $nav-link-disabled-color;
+//         pointer-events: none;
+//       }
+
+//       &.active {
+//         color: $white;
+
+//         @include hover {
+//           background: $primary;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // Badge
 

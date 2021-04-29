@@ -11,8 +11,32 @@ To know more how `<BsForm />` component works and what are the options please re
 
 Concepts behind `ember-changeset` and how validations can be configured, please refer to the following docs:
 
-* [Changeset](https://github.com/poteto/ember-changeset)
-* [Changeset validations](https://github.com/poteto/ember-changeset-validations)
+[Changeset](https://github.com/poteto/ember-changeset)
+
+[Changeset validations](https://github.com/poteto/ember-changeset-validations)
+
+
+## Custom Controls
+
+These are default bootstrap <code>html</code> coded custom controls - I couldn't find it in Ember docs, so they need to be redone as custom components in <code>Ember</code> syntax.
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="form-controls.hbs"}}
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+      <label class="custom-control-label" for="customCheck">Check this custom checkbox</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="customRadio4" name="example4" value="customEx">
+      <label class="custom-control-label" for="customRadio4">Custom radio</label>
+    </div>
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="customSwitch1">
+      <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+    </div>
+  {{/demo.example}}
+  {{demo.snippet "form-controls.hbs"}}
+{{/docs-demo}}
 
 ## Simple form
 
@@ -52,43 +76,3 @@ Concepts behind `ember-changeset` and how validations can be configured, please 
 
   {{demo.snippet "simple-form.hbs"}}
 {{/docs-demo}}
-
-## Basic Inputs
-
-<form>
-  <div class="form-group">
-    <label class="form-label" for="formBasic">Label</label>
-    <input placeholder="Placeholder text" type="text" id="formBasic" class="form-control">
-  </div>
-  <div class="form-group input-success">
-    <label class="form-label" for="formBasic">Label</label>
-    <input placeholder="Placeholder text" type="text" id="formBasic" class="form-control">
-  </div>
-  <div class="form-group input-error">
-    <label class="form-label" for="formBasic">Label</label>
-    <input placeholder="Placeholder text" type="text" id="formBasic" class="form-control">
-  </div>
-  <div class="form-group input-disabled">
-    <label class="form-label" for="formBasic">Label</label>
-    <input placeholder="Placeholder text" type="text" id="formBasic" class="form-control" disabled>
-  </div>  
-</form>
-
-<form>
-  <div class="custom-control custom-checkbox mb-4">
-    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-    <label class="custom-control-label" for="customCheck">Check this custom checkbox</label>
-  </div>
-</form>
-<form>
-  <div class="custom-control custom-radio mb-4">
-    <input type="radio" class="custom-control-input" id="customRadio4" name="example4" value="customEx">
-    <label class="custom-control-label" for="customRadio4">Custom radio</label>
-  </div>
-</form>
-<form>
-  <div class="custom-control custom-switch mb-4">
-    <input type="checkbox" class="custom-control-input" id="customSwitch1">
-    <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
-  </div>
-</form>
