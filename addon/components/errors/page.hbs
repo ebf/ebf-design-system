@@ -18,15 +18,16 @@
 
     <div class="my-4">
       {{#if @home}}
-        <LinkTo @route={{@home}} class="btn btn-outline-dark px-4 m-1">
-          <Icon::Ebf @icon="ebf-apps" /> {{t "pages.error.home-link"}}
-        </LinkTo>
+      <BsButton @route={{@home}} @type="primary">
+        <Icon::Ebf @icon="ebf-home" /> {{t "pages.error.home-link"}} 
+      </BsButton>
+        
       {{/if}}
 
       {{#if @support}}
-        <LinkTo @route={{@support}} class="btn btn-outline-dark px-4 m-1">
+        <BsButton @route={{@support}} @type="outline">
           <Icon::Ebf @icon="ebf-support" /> {{t "pages.error.support-link"}}
-        </LinkTo>
+        </BsButton>
       {{/if}}
     </div>
   </div>

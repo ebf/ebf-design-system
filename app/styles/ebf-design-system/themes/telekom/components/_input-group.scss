@@ -11,6 +11,13 @@
   align-items: stretch;
   width: 100%;
 
+  .form-control {
+    @include media-breakpoint-down(md) {
+      max-height: 3rem;
+      height: 3rem;
+    }
+  }
+
   > .form-control,
   > .form-control-plaintext,
   > .custom-select,
@@ -20,6 +27,7 @@
     width: 1%;
     min-width: 0; // https://stackoverflow.com/questions/36247140/why-dont-flex-items-shrink-past-content-size
     margin-bottom: 0;
+
 
     + .form-control,
     + .custom-select,
@@ -75,6 +83,10 @@
   .btn {
     position: relative;
     z-index: 2;
+    transform: scale(1)!important;
+    font-size: 1rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
 
     &:focus {
       z-index: 3;
@@ -86,6 +98,12 @@
   .input-group-text + .input-group-text,
   .input-group-text + .btn {
     margin-left: -$input-border-width;
+  }
+}
+
+.input-counter {
+  .form-control {
+    text-align: center;
   }
 }
 
@@ -131,16 +149,20 @@
   height: $input-height-lg;
 }
 
+
 .input-group-lg > .form-control,
 .input-group-lg > .custom-select,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
-  padding: $input-padding-y-lg $input-padding-x-lg;
+  
+  padding-left: $input-padding-x-lg - .1875rem;
+  padding-right: $input-padding-x-lg - .1875rem;
+
   @include font-size($input-font-size-lg);
-  line-height: $input-line-height-lg;
   @include border-radius($input-border-radius-lg);
+
 }
 
 .input-group-sm > .form-control:not(textarea),

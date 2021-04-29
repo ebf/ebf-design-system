@@ -189,6 +189,7 @@ textarea.form-control {
 
 .form-text {
   display: block;
+  color: $form-text-color;
   margin-top: $form-text-margin-top;
 }
 
@@ -387,3 +388,5 @@ textarea.form-control {
     background-size: .85rem;
   }
 }
+
+

@@ -89,7 +89,7 @@ notifications:
 
 pages:
   error:
-    headline: Huston !? Wir haben ein Problem!
+    headline: Houston !? Wir haben ein Problem!
     home-link: Zuhause
     support-link: Kontaktieren Sie unseren Support
 

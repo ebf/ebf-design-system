@@ -1,25 +1,58 @@
 .search-field {
   position: relative;
 
+  input {
+    padding-right: 2.125rem;
+  }
+
   .search-field-submit,
   .search-field-reset {
     position: absolute;
-    top: $input-btn-padding-y;
+    top: $input-btn-padding-y + $border-width;
+
+    @include media-breakpoint-down(md) {
+      top: 0.9375rem;
+    }
   }
 
   .search-field-submit {
     right: $input-btn-padding-x;
+    transition: $transition-base;
 
     @include hover-focus {
-      color: $input-btn-focus-color;
+      color: $primary-focus;
     }
   }
 
   .search-field-reset {
-    right: $input-btn-padding-x / 4;
+    right: $input-padding-x * 2.5;
+    transition: $transition-base;
 
     @include hover-focus {
-      color: darken($danger, 10%);
+      color: $danger;
     }
   }
 }
+
+.input-group-lg {
+  .search-field-reset {
+    right: 4.75rem;
+    top: 1.25rem;   
+
+    @include media-breakpoint-down(md) {
+      top: 0.9375rem;
+    }
+  }
+}
+
+.input-group-sm {
+  .search-field-reset {
+    right: 2.75rem;
+    top: .375rem;   
+
+    @include media-breakpoint-down(md) {
+      top: 0.9375rem;
+    }
+  }
+}
+

@@ -191,13 +191,13 @@ $grid-row-columns:            6 !default;
 // Define common padding and border radius sizes and more.
 
 $line-height-lg:              1.25 !default;
-$line-height-sm:              1.1 !default;
+$line-height-sm:              1 !default;
 
 $border-width:                0.0625rem !default;
 $border-color:                $gray-300 !default;
 
 $border-radius:               .25rem !default;
-$border-radius-xl:            .35rem !default;
+$border-radius-xl:            .5rem !default;
 $border-radius-lg:            .3rem !default;
 $border-radius-sm:            .2rem !default;
 
@@ -408,7 +408,9 @@ $lead-font-weight:            $font-weight-normal !default;
 
 $small-font-size:             $fs-2 !default;
 
-$text-muted:                  $gray-600 !default;
+
+
+$text-muted:                  $gray-400 !default;
 
 $blockquote-small-color:      $gray-600 !default;
 $blockquote-small-font-size:  $small-font-size !default;
@@ -470,23 +472,23 @@ $table-border-level:          -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .625rem !default;
+$input-btn-padding-y:         .6875rem !default;
 $input-btn-padding-x:         1.375rem !default;
 $input-btn-font-family:       null !default;
-$input-btn-font-size:         $theme-font-size-base !default;
-$input-btn-line-height:       $line-height-base !default;
+$input-btn-font-size:         1.125rem !default;
+$input-btn-line-height:       1 !default;
 
 $input-btn-focus-width:       0 !default;
 $input-btn-focus-color:       $component-active-bg;
 $input-btn-focus-box-shadow:  none !default;
 
-$input-btn-padding-y-sm:      0.375rem !default;
-$input-btn-padding-x-sm:      1rem !default;
+$input-btn-padding-y-sm:      .375rem !default;
+$input-btn-padding-x-sm:      .5rem !default;
 $input-btn-font-size-sm:      $fs-2 !default;
 $input-btn-line-height-sm:    $line-height-sm !default;
 
-$input-btn-padding-y-lg:      0.938rem !default;
-$input-btn-padding-x-lg:      $input-btn-padding-x * 2 !default;
+$input-btn-padding-y-lg:      1.25rem !default;
+$input-btn-padding-x-lg:      $input-btn-padding-x!default;
 $input-btn-font-size-lg:      $fs-4 !default;
 $input-btn-line-height-lg:    $line-height-lg !default;
 
@@ -550,7 +552,7 @@ $close-text-shadow:           none !default;
 $label-margin-bottom:                   $spacer / 2 !default;
 
 $input-padding-y:                       $input-btn-padding-y !default;
-$input-padding-x:                       $input-btn-padding-x !default;
+$input-padding-x:                       1.25rem !default;
 $input-line-height:                     $input-btn-line-height !default;
 $input-font-family:                     $input-btn-font-family !default;
 $input-font-size:                       $input-btn-font-size !default;
@@ -585,7 +587,7 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-$input-muted-bg: $gray-300 !default;
+$input-muted-bg:                        $white !default;
 
 $input-alternative-box-shadow:          0 1px 3px rgba(50, 50, 93, 0.15), 0 1px 0 rgba(0, 0, 0, 0.02);
 $input-focus-alternative-box-shadow:    0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -595,17 +597,18 @@ $input-plaintext-color:                 $input-color !default;
 
 $input-height-border:                   $input-border-width * 2 !default;
 
-$input-height-inner:                    add($input-line-height * 1em, $input-padding-y * 2) !default;
-$input-height-inner-half:               add($input-line-height * .5em, $input-padding-y) !default;
-$input-height-inner-quarter:            add($input-line-height * .25em, $input-padding-y / 2) !default;
+$input-height-inner:                    add($input-line-height * 1rem, $input-padding-y * 2) !default;
+$input-height-inner-half:               add($input-line-height * .5rem, $input-padding-y) !default;
+$input-height-inner-quarter:            add($input-line-height * .25rem, $input-padding-y / 2) !default;
 
-$input-height:                          add($input-line-height * 1em, add($input-padding-y * 2, $input-height-border, false)) !default;
-$input-height-sm:                       add($input-line-height-sm * 1em, add($input-padding-y-sm * 2, $input-height-border, false)) !default;
-$input-height-lg:                       add($input-line-height-lg * 1em, add($input-padding-y-lg * 2, $input-height-border, false)) !default;
+$input-height:                          add($input-line-height * 1rem, add($input-padding-y * 2, $input-height-border, false)) !default;
+$input-height-sm:                       add($input-line-height-sm * 1rem, add($input-padding-y-sm * 2, $input-height-border, false)) !default;
+$input-height-lg:                       add($input-line-height-lg * 1rem, $input-padding-y-lg * 2, false) !default;
 
 $input-transition:                      all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) !default;
 
 $form-text-margin-top:                  .5rem !default;
+$form-text-color:                       $gray-1200;
 
 $form-check-input-gutter:               1.25rem !default;
 $form-check-input-margin-y:             .3rem !default;

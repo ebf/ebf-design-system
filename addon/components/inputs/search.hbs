@@ -1,4 +1,4 @@
-<div class="search-field">
+<div class="input-group search-field">
   <input
     type={{@type}}
     value={{@value}}
@@ -14,22 +14,26 @@
     ...attributes
   />
 
-  <Icon::Ebf
-    @icon="ebf-search-l search-field-submit"
-    type="button"
-    aria-label={{t "inputs.search.label"}}
-    @disabled={{@disabled}}
-    @onClick={{this.submit}}
-  />
-
   {{#if (and @onReset (not (is-empty @value)))}}
     <Icon::Ebf
-      @icon="ebf-minus-circle search-field-reset"
-      @type="danger"
+      @icon="ebf-cancel search-field-reset"
+      @type="dark"
       type="button"
       aria-label={{t "inputs.search.reset"}}
       @disabled={{@disabled}}
       @onClick={{@onReset}}
     />
   {{/if}}
+
+  <div class="input-group-append">    
+    <BsButton
+      disabled={{disabled}}
+      aria-disabled={{disabled}}
+      aria-label={{t "inputs.search.label"}}
+      @type="outline"        
+      @onClick={{this.submit}}>        
+      <Icon::Ebf @icon="ebf-search-l" /> 
+    </BsButton>    
+  </div>
+
 </div>

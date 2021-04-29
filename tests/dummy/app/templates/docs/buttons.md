@@ -23,7 +23,7 @@ This page shows some example usage of the `<BsButton>` component.
 {{#docs-demo as |demo|}}
   {{#demo.example name="primary-button-icon.hbs"}}
   <BsButton @type="primary">
-    <i class="ebf ebf-download pr-2"></i>
+    <Icon::Ebf @icon="ebf-download" />
     Primary 
   </BsButton>
   {{/demo.example}}
@@ -36,7 +36,7 @@ This page shows some example usage of the `<BsButton>` component.
 {{#docs-demo as |demo|}}
   {{#demo.example name="primary-button-icon-only.hbs"}}
   <BsButton @type="primary" class="btn-icon">
-    <i class="ebf ebf-download"></i> 
+    <Icon::Ebf @icon="ebf-download" />
   </BsButton>
   {{/demo.example}}
 
@@ -48,7 +48,7 @@ This page shows some example usage of the `<BsButton>` component.
 {{#docs-demo as |demo|}}
   {{#demo.example name="simple-icon-round-button.hbs"}}
   <BsButton @type="primary" class="btn-icon btn-round">
-    <i class="ebf ebf-download"></i>  
+    <Icon::Ebf @icon="ebf-download" /> 
   </BsButton>
   {{/demo.example}}
 
@@ -73,7 +73,7 @@ This page shows some example usage of the `<BsButton>` component.
 {{#docs-demo as |demo|}}
   {{#demo.example name="outline-button-icon.hbs"}}
   <BsButton @type="outline">
-    <i class="ebf ebf-download pr-2"></i>
+    <Icon::Ebf @icon="ebf-download" />
     Outline
   </BsButton>
   {{/demo.example}}
@@ -86,7 +86,7 @@ This page shows some example usage of the `<BsButton>` component.
 {{#docs-demo as |demo|}}
   {{#demo.example name="outline-button-icon-only.hbs"}}
     <BsButton @type="outline" class="btn-icon">
-      <i class="ebf ebf-download"></i>
+      <Icon::Ebf @icon="ebf-download" />
     </BsButton>
   {{/demo.example}}
 
@@ -98,7 +98,7 @@ This page shows some example usage of the `<BsButton>` component.
 {{#docs-demo as |demo|}}
   {{#demo.example name="outline-button-icon-round.hbs"}}
     <BsButton @type="outline"  class="btn-icon btn-round">
-      <i class="ebf ebf-download"></i>
+      <Icon::Ebf @icon="ebf-download" />
     </BsButton>
   {{/demo.example}}
 
@@ -137,7 +137,7 @@ This page shows some example usage of the `<BsButton>` component.
 {{#docs-demo as |demo|}}
   {{#demo.example name="outline-white-icon-only.hbs" class="bg-gray-1200"}}
     <BsButton @type="white" @outline={{true}} class="btn-icon">
-      <i class="ebf ebf-download"></i>  
+      <Icon::Ebf @icon="ebf-download" /> 
     </BsButton>
   {{/demo.example}}
 
@@ -149,7 +149,7 @@ This page shows some example usage of the `<BsButton>` component.
 {{#docs-demo as |demo|}}
   {{#demo.example name="outline-white-icon-round-button.hbs" class="bg-gray-1200"}}
     <BsButton @type="white" @outline={{true}} class="btn-icon btn-round">
-      <i class="ebf ebf-download"></i>  
+      <Icon::Ebf @icon="ebf-download" /> 
     </BsButton>
   {{/demo.example}}
 
@@ -175,7 +175,7 @@ This page shows some example usage of the `<BsButton>` component.
 {{#docs-demo as |demo|}}
   {{#demo.example name="ghost-button-icon.hbs"}}
     <BsButton @type="ghost">
-      <i class="ebf ebf-download pr-2"></i>
+      <Icon::Ebf @icon="ebf-download" />
       Ghost  
     </BsButton>
   {{/demo.example}}
@@ -188,7 +188,7 @@ This page shows some example usage of the `<BsButton>` component.
 {{#docs-demo as |demo|}}
   {{#demo.example name="ghost-button-icon-only.hbs"}}
     <BsButton @type="ghost" class="btn-icon">
-      <i class="ebf ebf-download"></i>        
+      <Icon::Ebf @icon="ebf-download" />       
     </BsButton>
   {{/demo.example}}
   {{demo.snippet "ghost-button-icon-only.hbs"}}
@@ -199,7 +199,7 @@ This page shows some example usage of the `<BsButton>` component.
 {{#docs-demo as |demo|}}
   {{#demo.example name="ghost-button-icon-only-round.hbs"}}
     <BsButton @type="ghost" class="btn-icon btn-round">
-      <i class="ebf ebf-download"></i>        
+      <Icon::Ebf @icon="ebf-download" />       
     </BsButton>
   {{/demo.example}}
   {{demo.snippet "ghost-button-icon-only-round.hbs"}}
