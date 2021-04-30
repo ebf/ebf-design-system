@@ -547,6 +547,19 @@ $close-font-weight:           $font-weight-normal !default;
 $close-color:                 $gray-1200 !default;
 $close-text-shadow:           none !default;
 
+$btn-close-width:            1em;
+$btn-close-height:           $btn-close-width;
+$btn-close-padding-x:        .25em;
+$btn-close-padding-y:        $btn-close-padding-x;
+$btn-close-color:            $gray-1200;
+$btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>");
+$btn-close-focus-shadow:     $input-btn-focus-box-shadow;
+$btn-close-opacity:          .5;
+$btn-close-hover-opacity:    .75;
+$btn-close-focus-opacity:    1;
+$btn-close-disabled-opacity: .25;
+$btn-close-white-filter:     invert(1) grayscale(100%) brightness(200%);
+
 // Forms
 
 $label-margin-bottom:                   $spacer / 2 !default;
@@ -601,7 +614,7 @@ $input-height-inner:                    add($input-line-height * 1rem, $input-pa
 $input-height-inner-half:               add($input-line-height * .5rem, $input-padding-y) !default;
 $input-height-inner-quarter:            add($input-line-height * .25rem, $input-padding-y / 2) !default;
 
-$input-height:                          add($input-line-height * 1rem, add($input-padding-y * 2, $input-height-border, false)) !default;
+$input-height:                          add($input-line-height * 1rem, add($input-padding-y * 2, $input-height-border * 2, false)) !default;
 $input-height-sm:                       add($input-line-height-sm * 1rem, add($input-padding-y-sm * 2, $input-height-border, false)) !default;
 $input-height-lg:                       add($input-line-height-lg * 1rem, $input-padding-y-lg * 2, false) !default;
 
@@ -710,7 +723,7 @@ $custom-select-disabled-bg:                             $gray-200 !default;
 $custom-select-bg-size:                                 8px 10px !default; // In pixels because image dimensions
 $custom-select-indicator-color:                         $gray-800 !default;
 $custom-select-indicator:                               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") !default;
-$custom-select-background:                              escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
+$custom-select-background:                              escape-svg($custom-select-indicator) right $custom-select-padding-x center / $custom-select-bg-size no-repeat !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 
 $custom-select-feedback-icon-padding-right:             add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
 $custom-select-feedback-icon-position:                  center right ($custom-select-padding-x + $custom-select-indicator-padding) !default;
@@ -1305,6 +1318,8 @@ $spinner-width-sm:        1rem !default;
 $spinner-height-sm:       $spinner-width-sm !default;
 $spinner-border-width-sm: .2em !default;
 
+$spinner-animation-speed:  1.5s;
+
 
 // Close
 
@@ -1450,18 +1465,19 @@ $datepicker-highlighted-bg: $datepicker-active-background !default;
 
 // Footer
 
-$footer-padding-y: 0.9375rem !default;
-$footer-padding-x: 0.9375rem !default;
 
-$footer-border-width: 1px !default;
-$footer-border-color: $gray-200 !default;
+$footer-padding-y:      .9375rem !default;
+$footer-padding-x:      .9375rem !default;
 
-$footer-bg: $white !default;
-$footer-font-size: $font-size-sm !default;
-$footer-color: $gray-600 !default;
+$footer-border-width:   1px !default;
+$footer-border-color:   $gray-200 !default;
 
-$footer-link-color: $gray-600 !default;
-$footer-link-hover-color: $gray-700 !default;
+$footer-bg: $gray-1200 !default;
+$footer-font-size: $fs-2 !default;
+$footer-color: $white !default;
+
+$footer-link-color: $white !default;
+$footer-link-hover-color: $white !default;
 
 
 // Animations

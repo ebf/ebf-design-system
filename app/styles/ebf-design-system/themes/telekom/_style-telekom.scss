@@ -9,7 +9,7 @@
 @import 'fonts/icons-webfont';
 
 
-// Import Bootstrap Mixins and Functions
+// Import Bootstrap Functions
 
 @import 'ember-bootstrap/functions';
 
@@ -25,7 +25,7 @@
 
 // Utilities
 @import "ember-bootstrap/mixins/breakpoints";
-@import "ember-bootstrap/mixins/hover";
+//@import "ember-bootstrap/mixins/hover";
 @import "ember-bootstrap/mixins/image";
 @import "ember-bootstrap/mixins/badge";
 @import "ember-bootstrap/mixins/resize";
@@ -41,11 +41,11 @@
 @import "ember-bootstrap/mixins/alert";
 @import "ember-bootstrap/mixins/buttons";
 //@import "ember-bootstrap/mixins/caret";
-@import "ember-bootstrap/mixins/pagination";
+//@import "ember-bootstrap/mixins/pagination";
 @import "ember-bootstrap/mixins/lists";
 @import "ember-bootstrap/mixins/list-group";
 @import "ember-bootstrap/mixins/nav-divider";
-@import "ember-bootstrap/mixins/forms";
+//@import "ember-bootstrap/mixins/forms";
 @import "ember-bootstrap/mixins/table-row";
 
 // Skins
@@ -64,7 +64,7 @@
 // Custom Mixins Import
 
 @import '../mixins/mixins';
-@import '../mixins/caret';
+
 
 // Import Theme Variables
 @import 'variables/variables';
@@ -96,17 +96,17 @@
 //@import 'ember-bootstrap/custom-forms';
 //@import 'ember-bootstrap/nav';
 //@import 'ember-bootstrap/navbar';
-@import 'ember-bootstrap/pagination';
+//@import 'ember-bootstrap/pagination';
 @import 'ember-bootstrap/badge';
 @import 'ember-bootstrap/jumbotron';
-@import 'ember-bootstrap/progress';
+//@import 'ember-bootstrap/progress';
 @import 'ember-bootstrap/media';
 @import 'ember-bootstrap/list-group';
 @import 'ember-bootstrap/modal';
 @import 'ember-bootstrap/tooltip';
 //@import 'ember-bootstrap/popover';
-@import 'ember-bootstrap/spinners';
-@import 'ember-bootstrap/carousel';
+//@import 'ember-bootstrap/spinners';
+//@import 'ember-bootstrap/carousel';
 @import 'ember-bootstrap/print';
 
 // Bootstrap Utilities
@@ -129,11 +129,6 @@
 //@import "ember-bootstrap/utilities/text";
 @import "ember-bootstrap/utilities/visibility";
 
-
-
-
 // Custom components
-
-
 @import 'utilities/utilities';
 @import 'components/components';

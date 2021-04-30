@@ -1,3 +1,9 @@
+// stylelint-disable selector-list-comma-newline-after
+
+//
+// Headings
+//
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: $headings-margin-bottom;
@@ -90,6 +96,36 @@ mark,
     margin-right: $list-inline-padding;
   }
 }
+
+
+.list-square {
+  list-style-type: square;
+  padding-inline-start: 18px;
+
+  li {
+    padding-bottom: $spacer;
+    
+    &::marker {
+      color: $primary;
+      margin-right: $spacer!important;
+    }
+  } 
+}   
+
+
+.list-square-popover {
+  list-style-type: square;
+  padding-inline-start: 18px;
+
+  li {
+    padding-bottom: 0;
+    
+    &::marker {
+      color: $white;
+      margin-right: $spacer!important;
+    }
+  } 
+}   
 
 
 //

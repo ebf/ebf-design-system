@@ -14,10 +14,10 @@
 
 .nav-link {
   display: block;
-  font-size: $fs-4;
+  font-size: $fs-2;
   color: $nav-link-color;
   line-height: $line-height-sm;  
-  font-weight: $font-weight-bolder;  
+  font-weight: $font-weight-normal;  
   padding: $nav-link-padding-y $nav-link-padding-x;
   text-decoration: if($link-decoration == none, null, none);
   transition: $transition-base;
@@ -75,11 +75,8 @@
 .nav-tabs {
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
-  .nav-item {
-    margin-bottom: -$nav-tabs-border-width;
-  }
-
   .nav-link {
+    margin-bottom: -$nav-tabs-border-width;
     border: $nav-tabs-border-width solid transparent;
     @include border-top-radius($nav-tabs-border-radius);
 

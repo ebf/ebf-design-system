@@ -85,17 +85,41 @@
 
 $btn-custom-transition:              color .1s ease, background-color .2s ease, border-color .15s cubic-bezier(0.440, -0.480, 0.465, 1.515), box-shadow .15s cubic-bezier(0.440, -0.480, 0.465, 1.515), transform .15s cubic-bezier(0.440, -0.480, 0.465, 1.515) !default;
 
+//
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+    
+    @include hover-focus-active {
+      color: $white;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
 // Primary
 
 .btn-primary {
   @include button-variant(
-    $primary,         //background
-    $primary,              //border
-    $primary-hover,               //hover-background
-    $primary-hover,              //hover-border
-    $primary-active,              //active-background
-    $primary-active               //active-border
-    );   
+  $primary,         //background
+  $primary,              //border
+  $primary-hover,               //hover-background
+  $primary-hover,              //hover-border
+  $primary-active,              //active-background
+  $primary-active               //active-border
+  );   
+
+  &:hover {
+    color: $white;
+  }
 }
 
 // Outline Variant
@@ -145,21 +169,6 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
   color: $gray-1200!important;  
 }
 
-//
-// Alternate buttons
-//
-
-@each $color, $value in $theme-colors {
-  .btn-#{$color} {
-    @include button-variant($value, $value);
-  }
-}
-
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
-    @include button-outline-variant($value);
-  }
-}
 
 // Outline Fallbacks
 
@@ -386,40 +395,26 @@ input[type="button"] {
   font-size: $fs-2!important;
   padding: $spacer / 2 12px!important;
   max-height: $spacer * 2!important;
-
-  &:hover,
-  &.hover,
-  &:focus,
-  &.focus {
-    &:not(:disabled):not(.disabled):hover,
-    &:not(:disabled):not(.disabled).hover,
-    &:not(:disabled):not(.disabled):focus,
-    &:not(:disabled):not(.disabled).focus,
-    .show > &.dropdown-toggle {
-      background-color: $black-7;
-      border-color: $gray-1200;
-      color: $gray-1200;
-    }
-  }
-
-  &:active,
-  &.active,
-  &[aria-pressed="true"] {
-    &:not(:disabled):not(.disabled):active,
-    &:not(:disabled):not(.disabled).active,
-    .show > &.dropdown-toggle {
-      color: $white;
-      background-color: $gray-1100;
-      transform: scale(1)!important;
-    }
-  }
-  
+       
   &.disabled,
   &:disabled {
     color: $gray-1200;
     background-color: $white;
     border-color: $gray-1200;
+    pointer-events: none;
   }
+
+  @include hover-focus {
+    background-color: $black-7;
+    border-color: $gray-1200;
+    color: $gray-1200;
+  }    
+  
+  @include active {
+    color: $white;
+    background-color: $gray-1100;
+    transform: scale(1)!important;
+  } 
 }
 
 // Color Selector White

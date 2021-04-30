@@ -113,12 +113,31 @@
   margin-bottom: 0;
   list-style: none; 
 
+
   .nav-link {
+    font-size: $fs-4;
+    font-weight: $font-weight-bolder;  
     padding-right: 0;
     padding-left: 0; 
     
     @include hover-focus {
       color: $navbar-light-hover-color;
+    }
+  }
+
+  // Nav Padding Fix
+  
+  .nav-item {
+    &:first-child {
+      .nav-link {
+        padding-left: 0;
+      }
+    }
+
+    &:last-child {
+      .nav-link {
+        padding-right: 0;
+      }
     }
   }
 
@@ -153,7 +172,7 @@
   flex-grow: 1;
   // For always expanded or extra full navbars, ensure content aligns itself
   // properly vertically. Can be easily overridden with flex utilities.
-  align-items: center;
+  align-items: flex-start;
 }
 
 // Button for toggling the navbar when in its collapsed state
@@ -178,8 +197,12 @@
   height: 1.5em;
   vertical-align: middle;
   content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
+  background: 50% / 100% 100% no-repeat;
+}
+
+.navbar-nav-scroll {
+  max-height: $navbar-nav-scroll-max-height;
+  overflow-y: auto;
 }
 
 // Generate series of `.navbar-expand-*` responsive classes for configuring
@@ -239,6 +262,10 @@
           > .container#{breakpoint-infix($size, $container-max-widths)} {
             @extend %container-nesting-#{$breakpoint};
           }
+        }
+
+        .navbar-nav-scroll {
+          overflow: visible;
         }
 
         .navbar-collapse {

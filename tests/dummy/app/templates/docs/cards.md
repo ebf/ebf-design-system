@@ -154,7 +154,7 @@ For grid building, same general method is used as in the Primary and Secondary C
     </div>
   </div>
   <BsPopover @title="Mengenabhängige Preisstaffel:" @triggerElement=".popover-trigger" @triggerEvents="hover">
-    <ul>
+    <ul class="list-square-popover">
       <li>1 - 100 Geräte XY€</li>
       <li>101 - 300 Geräte XY€</li>
       <li>ab 301 Geräte XY€ </li>
