@@ -160,7 +160,51 @@
 }
 
 
+//
+// Custom Tabs
+//
 
+.nav-custom-tabs {
+ 
+  .nav-item {
+    border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  }
+
+  .nav-link {
+    border-bottom: $nav-custom-tabs-border-width solid transparent;
+
+    @include hover-focus {
+      border-color: $nav-custom-tabs-link-hover-border-color;
+      color: $nav-custom-tabs-link-hover-border-color;
+    }
+
+    @include active {
+      border-color: $nav-custom-tabs-link-active-border-color;
+      color: $nav-custom-tabs-link-active-color;
+    }
+  }
+  
+  &.nav-xl {
+    .nav-link {
+      font-size: $fs-5;
+      padding: 0 3rem .875rem 3rem; 
+    }
+  }
+
+  &.nav-lg {
+    .nav-link {
+      font-size: $fs-5;
+      padding: 0 1.5rem .875rem 1.5rem;
+    }
+  }
+
+  &.nav-sm {
+    .nav-link {
+      font-size: $fs-4;
+      padding: 0 1.5rem .6875rem 1.5rem;
+    }
+  }
+}
 
 
 

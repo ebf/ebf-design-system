@@ -853,6 +853,15 @@ $nav-tabs-link-active-color:        $gray-700 !default;
 $nav-tabs-link-active-bg:           $body-bg !default;
 $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 
+$nav-custom-tabs-border-color:             $primary !default;
+$nav-custom-tabs-border-width:             $border-width * 4 !default;
+$nav-custom-tabs-border-radius:            null !default;
+$nav-custom-tabs-link-hover-border-color:  $primary !default;
+$nav-custom-tabs-link-active-color:        $primary !default;
+$nav-custom-tabs-link-active-bg:           $body-bg !default;
+$nav-custom-tabs-link-active-border-color: $primary !default;
+
+
 $nav-pills-border-radius:           $border-radius !default;
 $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
