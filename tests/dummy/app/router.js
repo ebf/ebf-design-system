@@ -17,6 +17,7 @@ Router.map(function() {
     this.route('address');
     this.route('alerts');
     this.route('buttons');
+    this.route('breadcrumbs');
     this.route('cards');
     this.route('footer');
     this.route('form');

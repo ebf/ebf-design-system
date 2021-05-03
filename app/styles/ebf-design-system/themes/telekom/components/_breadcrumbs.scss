@@ -3,23 +3,64 @@
   flex-wrap: wrap;
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   margin-bottom: $breadcrumb-margin-bottom;
-  @include font-size($breadcrumb-font-size);
   list-style: none;
   background-color: $breadcrumb-bg;
+  @include font-size($breadcrumb-font-size);
   @include border-radius($breadcrumb-border-radius);
+  margin-bottom: 0 !important;
 }
 
 .breadcrumb-item {
+  display: flex;
+  font-weight: $font-weight-normal;
+  margin-bottom: 0 !important;
+
+  a {
+    color: $gray-1200;
+    text-align: center;
+
+    &:after {
+      content: attr(data-text);
+      font-weight: $font-weight-bold;
+      display: block;
+      visibility: hidden;
+      overflow: hidden;
+      height: 0;
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+
+  @include hover-focus-active {
+    font-weight: $font-weight-bold; 
+
+    a {
+      text-decoration: none;
+      color: $breadcrumb-active-color;
+      
+    }
+  }
   
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item {
-    padding-left: $breadcrumb-item-padding;
+    padding-left: $breadcrumb-item-padding;    
 
     &::before {
       float: left; // Suppress inline spacings and underlining of the separator
-      padding-right: $breadcrumb-item-padding;
+      padding-right: $breadcrumb-divider-padding;
       color: $breadcrumb-divider-color;
-      content: escape-svg($breadcrumb-divider);
+      content: $breadcrumb-divider;
+      @extend %ebf;
+      font-size: $fs-1;
+      line-height: 1.66;
+    }  
+    
+    @include active {
+      font-weight: $font-weight-bold;
+
+      &::before {
+        //content: $ebf-chevron-left !important;
+      }   
     }
   }
 
@@ -36,57 +77,5 @@
   + .breadcrumb-item:hover::before {
     text-decoration: none;
   }
-
-  &.active {
-    color: $breadcrumb-active-color;
-  }
 }
 
-
-
-
-.breadcrumb-item+.breadcrumb-item {
-  &::before {
-    @extend %ebf;
-    font-size: $fs-1;
-    line-height: 1.66;
-  }
-}
-
-.breadcrumb {
-
-  .breadcrumb-item {
-    //transition: font-weight .3s ease;
-    font-weight: $font-weight-normal;
-
-    & +.breadcrumb-item {
-      padding-left: $fs-1;
-    }
-    
-    a {
-      color: $gray-1200;
-      text-align: center;
-
-
-      &:after {
-        content: attr(data-text);
-        font-weight: $font-weight-bold;
-        display: block;
-        visibility: hidden;
-        overflow: hidden;
-        height: 0;
-        user-select: none;
-        pointer-events: none;
-      }
-    }
-
-    &:hover,
-    &.active {
-      font-weight: $font-weight-bold;
-
-      a {
-        text-decoration: none;
-      }
-    }
-  }
-}

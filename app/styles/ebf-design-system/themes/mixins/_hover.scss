@@ -37,7 +37,8 @@
 }
 
 @mixin active() {  
-  &:active {
+  &:active,
+  &.active {
     @content;
   }
 }
