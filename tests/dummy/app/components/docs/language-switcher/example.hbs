@@ -3,13 +3,16 @@
     <demo.example @name="language-switcher-demo-flags.hbs">
       <LanguageSwitcher @showFlags={{true}} />
     </demo.example>
+    {{demo.snippet "language-switcher-demo-flags.hbs"}}    
+  </DocsDemo>
 
-    {{docs.snippet "language-switcher-demo-flags.hbs"}}
-
+  <DocsDemo as |demo|>    
     <demo.example @name="language-switcher-demo.hbs">
-      <LanguageSwitcher />
+      <div class="px-4 py-4 bg-gray-1200">
+        <LanguageSwitcher @white={{true}} @sm={{true}} />
+      </div>
     </demo.example>
 
-    {{docs.snippet "language-switcher-demo.hbs"}}
+    {{demo.snippet "language-switcher-demo.hbs"}}
   </DocsDemo>
 </div>
