@@ -1,24 +1,24 @@
-.ebf-notification {
+.notification-custom {
   &,
-  .ebf-notification-icon {
+  .notification-icon {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .ebf-notification-icon {
+  .notification-icon {
     margin-left: $spacer / 4;
     margin-right: $spacer / 4;
     min-width: $font-size-lg * 2;
     min-height: $font-size-lg * 2;
-    background: $primary-hover;
+    background: $transparent-b;
     border-radius: 50%;
-    color: $primary;
+    color: $gray-1200;
     font-size: $font-size-lg;
     transition: $smooth-color-animation-slow;
   }
 
-  .ebf-notification-details {
+  .notification-details {
     flex-grow: 1;
     font-size: $font-size-sm;
     white-space: normal;
@@ -27,23 +27,22 @@
     transition-property: transform;
   }
 
-  .ebf-notification-close {
+  .notification-close {
     align-self: flex-start;
     transition-duration: 0.2s;
     transition-property: transform;
 
     @include hover-focus {
-      color: $black !important;
-      transform: rotate(45deg);
+      color: $black !important;      
     }
   }
 }
 
-.ebf-notification-drodown-toggle {
+.notification-dropdown-toggle {
   position: relative;
 }
 
-.ebf-notification-dropdown-menu {
+.notification-dropdown-menu {
   min-width: 24rem;
   max-width: 24rem;
   max-height: none;
@@ -57,26 +56,64 @@
     }
   }
 
-  .ebf-notification {
+  .dropdown-divider {
+    margin: 0;
+  }
+
+  .notification-clear {
+    text-align: center;
+    padding: $spacer / 2 0;
+    display: block;
+    font-weight: $font-weight-bold;
+  }
+
+  .notification-custom {
     padding: $dropdown-item-padding-y;
 
-    &:active,
-    &:focus,
-    &:hover {
+    @include hover-focus-active {
       background: $gray-100;
 
-      .ebf-notification-icon {
-        background: $primary-hover;
-      }
-
-      .ebf-notification-details {
+      .notification-details {
         transform: translateX($spacer / 2);
       }
 
-      .ebf-notification-details,
-      .ebf-notification-close {
+      .notification-details,
+      .notification-close {
         color: $gray-800;
       }
     }
   }
 }
+
+// Badge Notification
+
+.badge-notification {
+  display: block !important;
+  width: $spacer / 2;
+  height: $spacer / 2;
+  border-radius: $spacer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  padding: 0;
+
+  &::after {
+    content: '';
+    width: $spacer;
+    height: $spacer;
+    border-radius: $spacer;
+    display: block;
+    position: relative;
+    top: -4px;
+    right: 4px;
+    z-index: -1 !important;
+    background: inherit;
+    opacity: 0.2;
+    transform: scale(0);
+    transform-origin: center;
+    transition: $smooth-scaling-animation-dots;
+    animation: pulsate-animation-s 2.5s ease-in-out infinite both;
+  }
+}
+

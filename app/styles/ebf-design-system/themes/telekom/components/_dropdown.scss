@@ -238,6 +238,19 @@
   color: $dropdown-link-color;
 }
 
+
+// Dropdown Toggle Custom
+
+.dropdown-toggle-notification {
+  &::after {
+    content: none;
+  }
+
+  .notification-label {
+    position: absolute;
+  }
+}
+
 // Custom styles
 
 .caret-none {
