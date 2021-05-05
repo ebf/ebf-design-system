@@ -206,9 +206,9 @@ $rounded-pill:                50rem !default;
 $box-shadow-inset-md:         inset 0 7px 15px rgba($black, 0.1), 0 5px 7px rgba($black, 0.07);
 $box-shadow-inset-sm:         inset 0 -5px 15px rgba($gray-800, 0.1);
 
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow:                  0 15px 35px rgba($black, 0.1), 0 5px 15px rgba($black, 0.07);
-$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
+$box-shadow-sm:               0 .125rem .25rem rgba($gray-1000, .1) !default;
+$box-shadow:                  0 15px 35px rgba($gray-1000, 0.1), 0 5px 15px rgba($black, 0.07);
+$box-shadow-lg:               0 1rem 3rem rgba($gray-1000, .175) !default;
 
 $box-shadow-md:               0 4px 16px rgba($black, 0.1), 0 4px 8px rgba($black, 0.07);
 $box-shadow-md-primary:       0 2px 10px rgba($primary, 0.07), 0 -2px 10px rgba($primary, 0.07);

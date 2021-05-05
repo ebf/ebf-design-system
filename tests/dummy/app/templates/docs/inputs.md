@@ -29,7 +29,6 @@ Page contanining various input form components
       @onChange={{fn (mut this.search)}}
       class="form-group"
     />
-
     <p class="mt-4">Search term: <span class="text-success">{{this.search}}</span></p>
   {{/demo.example}}
 
@@ -48,9 +47,42 @@ Page contanining various input form components
       @onReset={{fn (mut this.search) null}}
       class="form-group"
     />
-
     <p class="mt-4">Search term: <span class="text-success">{{this.search}}</span></p>
   {{/demo.example}}
 
   {{demo.snippet "search-reset.hbs"}}
+{{/docs-demo}}
+
+### Large Search
+
+{{#docs-demo class="bg-white" as |demo|}}
+  {{#demo.example name="search-large.hbs"}}
+     <Inputs::Search
+      @placeholder="Enter your search query"
+      @lg="true"
+      @value={{this.search}}
+      @onChange={{fn (mut this.search)}}
+      class="form-group"
+    />
+    <p class="mt-4">Search term: <span class="text-success">{{this.search}}</span></p>
+  {{/demo.example}}
+
+  {{demo.snippet "search-large.hbs"}}
+{{/docs-demo}}
+
+### Small Search
+
+{{#docs-demo class="bg-white" as |demo|}}
+  {{#demo.example name="search-small.hbs"}}
+     <Inputs::Search
+      @placeholder="Enter your search query"
+      @sm="true"
+      @value={{this.search}}
+      @onChange={{fn (mut this.search)}}
+      class="form-group"
+    />
+    <p class="mt-4">Search term: <span class="text-success">{{this.search}}</span></p>
+  {{/demo.example}}
+
+  {{demo.snippet "search-small.hbs"}}
 {{/docs-demo}}

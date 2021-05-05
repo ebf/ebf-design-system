@@ -12,13 +12,13 @@ This type of card should always be kept in a grid as shown in Card Grid below
 {{#docs-demo as |demo|}}
   {{#demo.example name="primary-card.hbs"}}
   <div class="col mb-4">
-    <div class="card card-primary">
+    <div class="card card-primary card-hover">
       <div class="card-body">
         <div class="card-image">
           <img src="https://dummyimage.com/48x48/7c7c7c/ffffff.png" alt="Card Image">
         </div>
         <div class="card-title">Card title</div>
-        <div class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
+        <div class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@ In order to change number of grid columns, you need to alter parent element clas
   {{#demo.example name="primary-card-grid.hbs"}}
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
     <div class="col mb-4">
-      <div class="card card-primary">
+      <div class="card card-primary card-hover">
         <div class="card-body">
           <div class="card-image">
             <img src="https://dummyimage.com/48x48/7c7c7c/ffffff.png" alt="Card Image">
@@ -49,7 +49,7 @@ In order to change number of grid columns, you need to alter parent element clas
       </div>
     </div>
     <div class="col mb-4">
-      <div class="card card-primary">
+      <div class="card card-primary card-hover">
         <div class="card-body">
           <div class="card-image">
             <img src="https://dummyimage.com/48x48/7c7c7c/ffffff.png" alt="Card Image">
@@ -60,7 +60,7 @@ In order to change number of grid columns, you need to alter parent element clas
       </div>
     </div>
     <div class="col mb-4">
-      <div class="card card-primary">
+      <div class="card card-primary card-hover">
         <div class="card-body">
           <div class="card-image">
             <img src="https://dummyimage.com/48x48/7c7c7c/ffffff.png" alt="Card Image">
@@ -84,7 +84,7 @@ Basically the same as Primary Card, excluding the image.
 {{#docs-demo as |demo|}}
   {{#demo.example name="secondary-card.hbs"}}
   <div class="col mb-4">
-    <div class="card card-secondary">
+    <div class="card card-secondary card-hover">
       <div class="card-body">
         <div class="card-title">Card title</div>
         <div class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>
