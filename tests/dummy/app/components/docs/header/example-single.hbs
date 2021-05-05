@@ -1,24 +1,14 @@
 <DocsDemo as |demo|>
   <demo.example @name="single.hbs">
     <BsNavbar @type="dark" @backgroundColor="primary" @collapsed={{true}} as |navbar|>
-      <div class="navbar-header">
+      <div class="navbar-header mr-auto">
         <a class="navbar-brand" href="#">
           <img src="/telekom-logo-white.svg"/>
           <span class="label">Erleben, was verbindet.</span>
         </a>
         <navbar.toggle />
       </div>     
-      <BsDropdown class="ml-auto" as |dd|>
-        <dd.button @size="sm" @type="outline-white">DE<span class="caret"></span></dd.button>
-        <dd.menu as |ddm|>
-          <ddm.item>
-            <ddm.linkTo @route="index">EN</ddm.linkTo>
-          </ddm.item>
-          <ddm.item>
-            <ddm.linkTo @route="index">DE</ddm.linkTo>
-          </ddm.item>
-        </dd.menu>
-      </BsDropdown>
+      <LanguageSwitcher @white={{true}} @sm={{true}} />
     </BsNavbar>
   </demo.example>
 
