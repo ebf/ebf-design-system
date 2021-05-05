@@ -20,7 +20,7 @@ Native Ember Bootstrap Accordion with modded styles and Stats Component within.
         <Icon::Ebf @icon="ebf-chevron-down" />
       </aitem.title>
       <aitem.body>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea eos hic neque quia sequi sunt. Amet at atque corporis earum et fugiat illum magnam nisi sapiente voluptatem. Laudantium, quam?  </p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea eos hic neque quia sequi sunt. Amet at atque corporis earum et fugiat illum magnam nisi sapiente voluptatem. Laudantium, quam?
       </aitem.body>
     </acc.item>
     <acc.item @value="3" as |aitem|>
