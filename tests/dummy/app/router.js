@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('typography');
     this.route('layout');
 
+    this.route('accordion');
     this.route('address');
     this.route('alerts');
     this.route('buttons');
