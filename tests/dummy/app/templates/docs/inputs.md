@@ -59,7 +59,7 @@ Page contanining various input form components
   {{#demo.example name="search-large.hbs"}}
      <Inputs::Search
       @placeholder="Enter your search query"
-      @lg="true"
+      @size="lg"
       @value={{this.search}}
       @onChange={{fn (mut this.search)}}
       class="form-group"
@@ -76,7 +76,7 @@ Page contanining various input form components
   {{#demo.example name="search-small.hbs"}}
      <Inputs::Search
       @placeholder="Enter your search query"
-      @sm="true"
+      @size="sm"
       @value={{this.search}}
       @onChange={{fn (mut this.search)}}
       class="form-group"
