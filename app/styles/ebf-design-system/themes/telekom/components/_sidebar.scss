@@ -2,9 +2,7 @@
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
-// html {
-//   padding-bottom: calc(.5rem + env(safe-area-inset-bottom));
-// }
+
 $sidebar-animation: max-width .2s cubic-bezier(0.600, 0.000, 0.120, 1), min-width .2s cubic-bezier(0.600, 0.000, 0.120, 1);
 
 .container-w-sidebar {
@@ -457,28 +455,6 @@ a[data-toggle="collapse"] {
   position: relative;
 }
 
-
-
-// a[aria-expanded="false"]::before,
-// a[aria-expanded="true"]::before {
-//   content: $ebf-support;
-//   display: block;
-//   position: absolute;
-//   left: $spacer;
-//   font-family: 'ebf-iconset';
-// }
-
-// a[aria-expanded="true"]::before {
-//   content: $ebf-support;
-// }
-
-
-/* ---------------------------------------------------
-  CONTENT STYLE
------------------------------------------------------ */
-// #content {  
-//   min-height: 100vh;
-// }
 
 
 /* ---------------------------------------------------

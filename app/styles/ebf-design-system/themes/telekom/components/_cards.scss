@@ -406,22 +406,7 @@
   }
 }
 
-//////////////////
-
-
-// .ebf-card-container {
-//   .col {
-//     padding-bottom: 1.875rem;
-//   }
-// }
-
-// .card-deck {
-//   margin-bottom: $spacer * 2;
-// }
-
-// .card-body {
-//   padding: $spacer * 3 $spacer;
-// }
+// Card Select
 
 .card-select {
   cursor: pointer;
@@ -478,7 +463,6 @@
   }
 
   &.card-summary-horizontal {
-    //max-height: $spacer*6;
 
     .card-body {
       .list-group {

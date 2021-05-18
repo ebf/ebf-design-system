@@ -73,9 +73,6 @@
 
   &::before {
     content: 'Choose file';
-    // @extend .btn;
-    // @extend .btn-sm;
-    // @extend .btn-primary;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
@@ -598,26 +595,3 @@ input[type="button"] {
     }  
   }
 }
-
-
-// .dropdown-toggle {
-//   &::after {
-//     @extend %ebf;
-//     content: $ebf-chevron-down;
-//     border: 0!important;
-//     transform-origin: center;
-//     transition: transform .2s ease-in-out;    
-//   }
-
-//   &[aria-expanded="false"] {
-//     &::after {
-//       transform: rotate(0deg);
-//     }
-//   }
-
-//   &[aria-expanded="true"] {
-//     &::after {
-//       transform: rotate(180deg);
-//     }
-//   }
-// }
