@@ -1,5 +1,5 @@
 <BsDropdown @inNav={{@inNav}} @direction={{@direction}} as |dd|>
-  <dd.button class="align-items-center {{if @white "btn-outline-white" "btn-outline"}} {{if @sm "btn-sm" ""}}">
+  <dd.button class="align-items-center {{bs-size-class "btn" @size}} {{if @white "btn-outline-white" "btn-outline"}}">
     {{#if @showFlags}}
       <LanguageSwitcher::Image
         @locale={{this.active}}
