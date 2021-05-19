@@ -2,7 +2,6 @@
 :root {
   // Custom variable values only support SassScript inside `#{}`.
 
-
   @each $color, $value in $primary-colors {
     --#{$color}: #{$value};
   }
@@ -30,7 +29,7 @@
   @each $color, $value in $greens {
     --#{$color}: #{$value};
   }
-  
+
   @each $color, $value in $transparent-colors {
     --#{$color}: #{$value};
   }

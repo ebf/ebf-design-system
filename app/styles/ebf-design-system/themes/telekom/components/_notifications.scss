@@ -33,7 +33,7 @@
     transition-property: transform;
 
     @include hover-focus {
-      color: $black !important;      
+      color: $black !important;
     }
   }
 }
@@ -116,4 +116,3 @@
     animation: pulsate-animation-s 2.5s ease-in-out infinite both;
   }
 }
-

@@ -1,11 +1,11 @@
 .close {
-  float: right;
   @include font-size($close-font-size);
+  float: right;
   font-weight: $close-font-weight;
   line-height: 1;
   color: $close-color;
   text-shadow: $close-text-shadow;
-  opacity: .75;
+  opacity: 0.75;
 
   // Override <a>'s hover style
   @include hover() {
@@ -45,6 +45,7 @@ a.close.disabled {
 // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
 
 .btn-close {
+  @include border-radius();
   box-sizing: content-box;
   width: $btn-close-width;
   height: $btn-close-height;
@@ -52,7 +53,6 @@ a.close.disabled {
   color: $btn-close-color;
   background: transparent escape-svg($btn-close-bg) center / $btn-close-width auto no-repeat; // include transparent for button elements
   border: 0; // for button elements
-  @include border-radius();
   opacity: $btn-close-opacity;
 
   // Override <a>'s hover style

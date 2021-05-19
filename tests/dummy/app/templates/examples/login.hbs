@@ -1,0 +1,16 @@
+<BsNavbar 
+  @type="dark"
+  @backgroundColor="primary"
+  @collapsed={{true}}
+  @fluid={{false}} 
+  class="sticky-top"
+  as |navbar|>
+  <div class="navbar-header mr-auto">
+    <LinkTo @route="examples.login" @model={{a}} class="navbar-brand">
+      <img src="/telekom-logo-white.svg"/>
+      <span class="label">Erleben, was verbindet.</span>
+    </LinkTo>
+    <navbar.toggle />
+  </div>     
+  <LanguageSwitcher @white={{true}} @size="sm" />
+</BsNavbar>

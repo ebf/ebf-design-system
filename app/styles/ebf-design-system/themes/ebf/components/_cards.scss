@@ -3,6 +3,7 @@
 //
 
 .card {
+  @include border-radius($card-border-radius);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -12,7 +13,6 @@
   background-color: $card-bg;
   background-clip: border-box;
   border: $card-border-width solid $card-border-color;
-  @include border-radius($card-border-radius);
 
   > hr {
     margin-right: 0;
@@ -24,13 +24,13 @@
     border-bottom: inherit;
 
     &:first-child {
-      border-top-width: 0;
       @include border-top-radius($card-inner-border-radius);
+      border-top-width: 0;
     }
 
-    &:last-child  {
-      border-bottom-width: 0;
+    &:last-child {
       @include border-bottom-radius($card-inner-border-radius);
+      border-bottom-width: 0;
     }
   }
 
@@ -42,7 +42,6 @@
   }
 }
 
-
 .card-body {
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
@@ -51,11 +50,11 @@
   // See: https://github.com/twbs/bootstrap/pull/28855
   min-height: 1px;
   padding: $card-spacer-x;
-  color: $card-color;  
+  color: $card-color;
 }
 
 .card-title {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-size: $card-title-size;
   font-weight: $font-weight-medium;
 }
@@ -66,11 +65,11 @@
 }
 
 .card-image {
-  display: flex; 
+  display: flex;
   justify-content: $card-align-flex;
   padding-bottom: 1.5rem;
 
-  img {    
+  img {
     width: $card-img-width;
     height: $card-img-height;
   }
@@ -93,7 +92,6 @@
     margin-left: $card-spacer-x;
   }
 }
-
 
 //
 // Optional textual caps
@@ -122,7 +120,6 @@
   }
 }
 
-
 //
 // Header navs
 //
@@ -141,13 +138,13 @@
 
 // Card image
 .card-img-overlay {
+  @include border-radius($card-inner-border-radius);
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   padding: $card-img-overlay-padding;
-  @include border-radius($card-inner-border-radius);
 }
 
 .card-img,
@@ -167,13 +164,9 @@
   @include border-bottom-radius($card-inner-border-radius);
 }
 
-
 // Card deck
 
 .card-deck {
-  .card {
-    margin-bottom: $card-deck-margin;
-  }
 
   @include media-breakpoint-up(sm) {
     display: flex;
@@ -189,19 +182,17 @@
       margin-left: $card-deck-margin;
     }
   }
-}
 
+  .card {
+    margin-bottom: $card-deck-margin;
+  }
+}
 
 //
 // Card groups
 //
 
 .card-group {
-  // The child selector allows nested `.card` within `.card-group`
-  // to display properly.
-  > .card {
-    margin-bottom: $card-group-margin;
-  }
 
   @include media-breakpoint-up(sm) {
     display: flex;
@@ -228,6 +219,7 @@
             // stylelint-disable-next-line property-disallowed-list
             border-top-right-radius: 0;
           }
+
           .card-img-bottom,
           .card-footer {
             // stylelint-disable-next-line property-disallowed-list
@@ -243,6 +235,7 @@
             // stylelint-disable-next-line property-disallowed-list
             border-top-left-radius: 0;
           }
+
           .card-img-bottom,
           .card-footer {
             // stylelint-disable-next-line property-disallowed-list
@@ -252,17 +245,18 @@
       }
     }
   }
+  // The child selector allows nested `.card` within `.card-group`
+  // to display properly.
+  > .card {
+    margin-bottom: $card-group-margin;
+  }
 }
-
 
 //
 // Columns
 //
 
 .card-columns {
-  .card {
-    margin-bottom: $card-columns-margin;
-  }
 
   @include media-breakpoint-up(sm) {
     column-count: $card-columns-count;
@@ -275,8 +269,11 @@
       width: 100%; // Don't let their width change
     }
   }
-}
 
+  .card {
+    margin-bottom: $card-columns-margin;
+  }
+}
 
 //
 // Accordion
@@ -289,8 +286,8 @@
     overflow: hidden;
 
     &:not(:last-of-type) {
-      border-bottom: 0;
       @include border-bottom-radius(0);
+      border-bottom: 0;
     }
 
     &:not(:first-of-type) {
@@ -304,7 +301,6 @@
   }
 }
 
-
 // Card
 
 .card-primary,
@@ -313,22 +309,23 @@
   justify-content: $card-align-flex;
 
   &.card-hover {
+
+    @include hover {
+      .card-text {
+        &::after {
+          left: $spacer;
+        }
+      }
+    }
+
     .card-text {
-      &:after {
-        content: $ebf-arr-right;
+      &::after {
         @extend %ebf;
+        content: $ebf-arr-right;
         position: relative;
         left: $spacer / 2;
         color: $link-color;
         transition: $smooth-color-animation-slow;
-      }
-    }
-  
-    @include hover {
-      .card-text { 
-        &:after {
-          left: $spacer;
-        }
       }
     }
   }
@@ -338,12 +335,11 @@
   cursor: pointer;
   transition: $smooth-color-animation-slow;
 
-  @include hover {    
+  @include hover {
     //box-shadow: $box-shadow !important;
-    background-color: $gray-100;    
+    background-color: $gray-100;
   }
 }
-
 
 .card-select {
   cursor: pointer;
@@ -517,7 +513,6 @@
 // Card Product
 
 .card-product {
-
   .card-body {
     padding: $spacer * 2 $spacer * 1.5;
 
@@ -545,7 +540,7 @@
           display: flex;
           margin-bottom: $spacer * 1.5;
           align-items: center;
-          
+
           i {
             margin-right: $spacer / 2;
           }
@@ -564,7 +559,7 @@
           .price {
             display: block;
             font-size: $fs-6;
-            color: $primary;          
+            color: $primary;
             margin-bottom: 0;
           }
 
@@ -577,7 +572,7 @@
             color: $gray-1200;
           }
         }
-      }      
+      }
     }
   }
 }

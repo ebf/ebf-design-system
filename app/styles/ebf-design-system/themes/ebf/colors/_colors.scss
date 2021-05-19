@@ -1,130 +1,125 @@
 //EBF Colors
 
-$white:           #fff !default;
-$black:           #000 !default;
+$white: #fff !default;
+$black: #000 !default;
 
 $theme-link-color: #2444c5 !default;
 
 // Refactoring
 
-$primary:       #2494c5 !default;
+$primary: #2494c5 !default;
 $primary-hover: #187bab !default;
-$primary-active:#176180 !default;
-$primary-focus:   $primary-hover !default;
+$primary-active: #176180 !default;
+$primary-focus: $primary-hover !default;
 
 $primary-colors: () !default;
-$primary-colors: map-merge(
-  (
-    "primary":        $primary,
-    "primary-hover":  $primary-hover,
-    "primary-active": $primary-active,
-    "primary-focus":  $primary-focus
-   
-  ),
-  $primary-colors
-);
+$primary-colors: map-merge((
+  'primary': $primary,
+  'primary-hover': $primary-hover,
+  'primary-active': $primary-active,
+  'primary-focus': $primary-focus,
+),
+$primary-colors);
 
 // Grays
 
-$gray-100:  #fbfbfd !default;
-$gray-200:  #f8f9fb !default;
-$gray-300:  #f1f3f7 !default;
-$gray-400:  #e3e6ec !default;
-$gray-500:  #d4d9e2 !default;
-$gray-600:  #c6ccd7 !default;
-$gray-700:  #aeb8c6 !default;
-$gray-800:  #97a3b5 !default;
-$gray-900:  #7f8fa4 !default;
+$gray-100: #fbfbfd !default;
+$gray-200: #f8f9fb !default;
+$gray-300: #f1f3f7 !default;
+$gray-400: #e3e6ec !default;
+$gray-500: #d4d9e2 !default;
+$gray-600: #c6ccd7 !default;
+$gray-700: #aeb8c6 !default;
+$gray-800: #97a3b5 !default;
+$gray-900: #7f8fa4 !default;
 $gray-1000: #55677b !default;
 $gray-1100: #2b3e51 !default;
 $gray-1200: #161f29 !default;
 
 // Functional Colors
 
-$function-red:            #ed5454 !default;
-$function-yellow:         #ffbd08 !default;
-$function-green:          #24c554 !default;
-$function-blue:           #5cb0d3 !default;
-$function-blue-light:     #e5f2f8 !default;
-$function-yellow-light:   #fff6df !default;
+$function-red: #ed5454 !default;
+$function-yellow: #ffbd08 !default;
+$function-green: #24c554 !default;
+$function-blue: #5cb0d3 !default;
+$function-blue-light: #e5f2f8 !default;
+$function-yellow-light: #fff6df !default;
 
 // Blues
 
-$blue:              $function-blue !default;
-$light-blue:        #abd6e8 !default;
-$light-blue-light:  #cae5f1 !default;
-$light-blue-dark:   #87c5df !default;
-$dark-blue:         #176180 !default;
-$dark-blue-light:   #1c759b !default;
-$dark-blue-dark:    #10455b !default;
+$blue: $function-blue !default;
+$light-blue: #abd6e8 !default;
+$light-blue-light: #cae5f1 !default;
+$light-blue-dark: #87c5df !default;
+$dark-blue: #176180 !default;
+$dark-blue-light: #1c759b !default;
+$dark-blue-dark: #10455b !default;
 
 // Greens
 
-$green:             #20b24b !default;
-$light-green:       #87dfa1 !default;
+$green: #20b24b !default;
+$light-green: #87dfa1 !default;
 $light-green-light: #caf0d5 !default;
-$light-green-dark:  #5bd37f !default;
-$dark-green:        #178137 !default;
-$dark-green-light:  #1c9c42 !default;
-$dark-green-dark:   #115d27 !default;
+$light-green-dark: #5bd37f !default;
+$dark-green: #178137 !default;
+$dark-green-light: #1c9c42 !default;
+$dark-green-dark: #115d27 !default;
 
 // Yellows
 
-$yellow:            #e6ab07 !default;
-$light-yellow:      #ffe398 !default;
-$light-yellow-light:#ffedbd !default;
+$yellow: #e6ab07 !default;
+$light-yellow: #ffe398 !default;
+$light-yellow-light: #ffedbd !default;
 $light-yellow-dark: #ffcb3f !default;
-$dark-yellow:       #a87c05 !default;
+$dark-yellow: #a87c05 !default;
 $dark-yellow-light: #ca9606 !default;
-$dark-yellow-dark:  #7a5a03 !default;
-
+$dark-yellow-dark: #7a5a03 !default;
 
 // Oranges
 
-$orange:            #c55424 !default;
-$light-orange:      #e1a68e !default;
-$light-orange-light:#f1d8cd !default;
+$orange: #c55424 !default;
+$light-orange: #e1a68e !default;
+$light-orange-light: #f1d8cd !default;
 $light-orange-dark: #d58562 !default;
-$dark-orange:       #9b421c !default;
+$dark-orange: #9b421c !default;
 $dark-orange-light: #b14b20 !default;
-$dark-orange-dark:  #7f3617 !default;
+$dark-orange-dark: #7f3617 !default;
 
 //Reds
 
-$red:               #d64b4b !default;
-$light-red:         #f5a7a7 !default;
-$light-red-light:   #fad8d8 !default;
-$light-red-dark:    #f28585 !default;
-$dark-red:          #9b3636 !default;
-$dark-red-light:    #bb4242 !default;
-$dark-red-dark:     #6e2727 !default;
+$red: #d64b4b !default;
+$light-red: #f5a7a7 !default;
+$light-red-light: #fad8d8 !default;
+$light-red-dark: #f28585 !default;
+$dark-red: #9b3636 !default;
+$dark-red-light: #bb4242 !default;
+$dark-red-dark: #6e2727 !default;
 
+// Purples
 
-// Purples 
-
-$purple:            #203db0 !default;
-$light-purple:      #95a5e3 !default;
-$light-purple-light:#d1d8f3 !default;
+$purple: #203db0 !default;
+$light-purple: #95a5e3 !default;
+$light-purple-light: #d1d8f3 !default;
 $light-purple-dark: #6b80d7 !default;
-$dark-purple:       #162b7d !default;
+$dark-purple: #162b7d !default;
 $dark-purple-light: #1c3599 !default;
-$dark-purple-dark:  #0f1d56 !default;
+$dark-purple-dark: #0f1d56 !default;
 
 // Colors Misc
 
-$indigo:            #6610f2 !default;
-$pink:              #e83e8c !default;
-$teal:              #20c997 !default;
-$cyan:              #17a2b8 !default;
+$indigo: #6610f2 !default;
+$pink: #e83e8c !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
 
 // Transparent Colors
 
-$transparent-b:   rgba($black, 0);
-$black-7: rgba($black, .07);
-$black-15: rgba($black, .15);
-$transparent-w:   rgba($white, 0);
-$white-7: rgba($white, .07);
-$white-15: rgba($white, .15);
+$transparent-b: rgba($black, 0);
+$black-7: rgba($black, 0.07);
+$black-15: rgba($black, 0.15);
+$transparent-w: rgba($white, 0);
+$white-7: rgba($white, 0.07);
+$white-15: rgba($white, 0.15);
 
 // Brand Colors
 
@@ -143,357 +138,313 @@ $github: #222 !default;
 // Grays
 
 $grays: () !default;
-$grays: map-merge(
-  (
-    "gray-100": $gray-100,
-    "gray-200": $gray-200,
-    "gray-300": $gray-300,
-    "gray-400": $gray-400,
-    "gray-500": $gray-500,
-    "gray-600": $gray-600,
-    "gray-700": $gray-700,
-    "gray-800": $gray-800,
-    "gray-900": $gray-900,
-    "gray-1000": $gray-1000,
-    "gray-1100": $gray-1100,
-    "gray-1200": $gray-1200
-  ),
-  $grays
-);
+$grays: map-merge((
+  'gray-100': $gray-100,
+  'gray-200': $gray-200,
+  'gray-300': $gray-300,
+  'gray-400': $gray-400,
+  'gray-500': $gray-500,
+  'gray-600': $gray-600,
+  'gray-700': $gray-700,
+  'gray-800': $gray-800,
+  'gray-900': $gray-900,
+  'gray-1000': $gray-1000,
+  'gray-1100': $gray-1100,
+  'gray-1200': $gray-1200,
+),
+$grays);
 
 // Functional Colors
 
 $function-colors: () !default;
-$function-colors: map-merge(
-  (
-    "function-red":           $function-red,        
-    "function-yellow":        $function-yellow,      
-    "function-green":         $function-green,       
-    "function-blue":          $function-blue,       
-    "function-blue-light":    $function-blue-light,  
-    "function-yellow-light":  $function-yellow-light
-  ),
-  $function-colors
-);
-
+$function-colors: map-merge((
+  'function-red': $function-red,
+  'function-yellow': $function-yellow,
+  'function-green': $function-green,
+  'function-blue': $function-blue,
+  'function-blue-light': $function-blue-light,
+  'function-yellow-light': $function-yellow-light,
+),
+$function-colors);
 
 // Blues
 
 $blues: () !default;
-$blues: map-merge(
-  (
-    "blue":             $blue,         
-    "light-blue":       $light-blue, 
-    "light-blue-light": $light-blue-light,
-    "light-blue-dark":  $light-blue-dark,
-    "dark-blue":        $dark-blue,
-    "dark-blue-light":  $dark-blue-light,
-    "dark-blue-dark":   $dark-blue-dark
-  ),
-  $blues
-);
+$blues: map-merge((
+  'blue': $blue,
+  'light-blue': $light-blue,
+  'light-blue-light': $light-blue-light,
+  'light-blue-dark': $light-blue-dark,
+  'dark-blue': $dark-blue,
+  'dark-blue-light': $dark-blue-light,
+  'dark-blue-dark': $dark-blue-dark,
+),
+$blues);
 
 // Greens
 
 $greens: () !default;
-$greens: map-merge(
-  (
-    "green":             $green,         
-    "light-green":       $light-green, 
-    "light-green-light": $light-green-light,
-    "light-green-dark":  $light-green-dark,
-    "dark-green":        $dark-green,
-    "dark-green-light":  $dark-green-light,
-    "dark-green-dark":   $dark-green-dark
-  ),
-  $greens
-);
+$greens: map-merge((
+  'green': $green,
+  'light-green': $light-green,
+  'light-green-light': $light-green-light,
+  'light-green-dark': $light-green-dark,
+  'dark-green': $dark-green,
+  'dark-green-light': $dark-green-light,
+  'dark-green-dark': $dark-green-dark,
+),
+$greens);
 
 // Yellows
 
 $yellows: () !default;
-$yellows: map-merge(
-  (
-    "yellow":             $yellow,         
-    "light-yellow":       $light-yellow, 
-    "light-yellow-light": $light-yellow-light,
-    "light-yellow-dark":  $light-yellow-dark,
-    "dark-yellow":        $dark-yellow,
-    "dark-yellow-light":  $dark-yellow-light,
-    "dark-yellow-dark":   $dark-yellow-dark
-  ),
-  $yellows
-);
+$yellows: map-merge((
+  'yellow': $yellow,
+  'light-yellow': $light-yellow,
+  'light-yellow-light': $light-yellow-light,
+  'light-yellow-dark': $light-yellow-dark,
+  'dark-yellow': $dark-yellow,
+  'dark-yellow-light': $dark-yellow-light,
+  'dark-yellow-dark': $dark-yellow-dark,
+),
+$yellows);
 
 // Oranges
 
 $oranges: () !default;
-$oranges: map-merge(
-  (
-    "orange":             $orange,         
-    "light-orange":       $light-orange, 
-    "light-orange-light": $light-orange-light,
-    "light-orange-dark":  $light-orange-dark,
-    "dark-orange":        $dark-orange,
-    "dark-orange-light":  $dark-orange-light,
-    "dark-orange-dark":   $dark-orange-dark
-  ),
-  $oranges
-);
+$oranges: map-merge((
+  'orange': $orange,
+  'light-orange': $light-orange,
+  'light-orange-light': $light-orange-light,
+  'light-orange-dark': $light-orange-dark,
+  'dark-orange': $dark-orange,
+  'dark-orange-light': $dark-orange-light,
+  'dark-orange-dark': $dark-orange-dark,
+),
+$oranges);
 
 // Reds
 
 $reds: () !default;
-$reds: map-merge(
-  (
-    "red":             $red,         
-    "light-red":       $light-red, 
-    "light-red-light": $light-red-light,
-    "light-red-dark":  $light-red-dark,
-    "dark-red":        $dark-red,
-    "dark-red-light":  $dark-red-light,
-    "dark-red-dark":   $dark-red-dark
-  ),
-  $reds
-);
+$reds: map-merge((
+  'red': $red,
+  'light-red': $light-red,
+  'light-red-light': $light-red-light,
+  'light-red-dark': $light-red-dark,
+  'dark-red': $dark-red,
+  'dark-red-light': $dark-red-light,
+  'dark-red-dark': $dark-red-dark,
+),
+$reds);
 
 // Purples
 
 $purples: () !default;
-$purples: map-merge(
-  (
-    "purple":             $purple,         
-    "light-purple":       $light-purple, 
-    "light-purple-light": $light-purple-light,
-    "light-purple-dark":  $light-purple-dark,
-    "dark-purple":        $dark-purple,
-    "dark-purple-light":  $dark-purple-light,
-    "dark-purple-dark":   $dark-purple-dark
-  ),
-  $purples
-);
+$purples: map-merge((
+  'purple': $purple,
+  'light-purple': $light-purple,
+  'light-purple-light': $light-purple-light,
+  'light-purple-dark': $light-purple-dark,
+  'dark-purple': $dark-purple,
+  'dark-purple-light': $dark-purple-light,
+  'dark-purple-dark': $dark-purple-dark,
+),
+$purples);
 
 // Color Naming - Variables Depend on this
 
 $secondary: gray-600;
-$success:   $function-green;
-$info:      $function-blue;
-$warning:   $function-yellow;
-$danger:    $function-red;
-$error:     $function-red;
-$light:     $gray-100;
-$dark:      $gray-1200;
+$success: $function-green;
+$info: $function-blue;
+$warning: $function-yellow;
+$danger: $function-red;
+$error: $function-red;
+$light: $gray-100;
+$dark: $gray-1200;
 
 // Misc Colors
 
 $colors: () !default;
-$colors: map-merge(
-  (
-    "blue":       $blue,
-    "purple":     $purple,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "white":      $white,
-    "gray":       $gray-600,
-    "gray-dark":  $gray-800,
-    "indigo":     $indigo,
-    "pink":       $pink,
-    "teal":       $teal,
-    "cyan":       $cyan
-  ),
-  $colors
-);
+$colors: map-merge((
+  'blue': $blue,
+  'purple': $purple,
+  'red': $red,
+  'orange': $orange,
+  'yellow': $yellow,
+  'green': $green,
+  'white': $white,
+  'gray': $gray-600,
+  'gray-dark': $gray-800,
+  'indigo': $indigo,
+  'pink': $pink,
+  'teal': $teal,
+  'cyan': $cyan,
+),
+$colors);
 
 // Transparent Colors
 
 $transparent-colors: () !default;
-$transparent-colors: map-merge(
-  (
-    "transparent-b":  $transparent-b,
-    "black-7":        $black-7,
-    "black-15":       $black-15,
-    "transparent-w":  $transparent-w,
-    "white-7":        $white-7,
-    "white-15":       $white-15   
-  ),
-  $transparent-colors
-);
+$transparent-colors: map-merge((
+  'transparent-b': $transparent-b,
+  'black-7': $black-7,
+  'black-15': $black-15,
+  'transparent-w': $transparent-w,
+  'white-7': $white-7,
+  'white-15': $white-15,
+),
+$transparent-colors);
 
-// Theme Colors 
+// Theme Colors
 
 $theme-colors: () !default;
-$theme-colors: map-merge(
-  (
-    "primary":    $primary,
-    "secondary":  $gray-600,
-    "success":    $function-green,
-    "info":       $function-blue,
-    "warning":    $function-yellow,
-    "danger":     $function-red,
-    "error":      $function-red,
-    "light":      $gray-100,
-    "dark":       $gray-1200
-  ),
-  $theme-colors
-);
+$theme-colors: map-merge((
+  'primary': $primary,
+  'secondary': $gray-600,
+  'success': $function-green,
+  'info': $function-blue,
+  'warning': $function-yellow,
+  'danger': $function-red,
+  'error': $function-red,
+  'light': $gray-100,
+  'dark': $gray-1200,
+),
+$theme-colors);
 
 // Theme Colors Hover
 
 $theme-colors-hover: () !default;
-$theme-colors-hover: map-merge(
-  (
-    "primary":    $primary-hover,
-    "secondary":  $gray-800,
-    "success":    $dark-green,
-    "info":       $dark-blue,
-    "warning":    $dark-yellow,
-    "danger":     $function-red,
-    "error":      $function-red,
-    "light":      $gray-500,
-    "dark":       $gray-1200
-  ),
-  $theme-colors-hover
-);
+$theme-colors-hover: map-merge((
+  'primary': $primary-hover,
+  'secondary': $gray-800,
+  'success': $dark-green,
+  'info': $dark-blue,
+  'warning': $dark-yellow,
+  'danger': $function-red,
+  'error': $function-red,
+  'light': $gray-500,
+  'dark': $gray-1200,
+),
+$theme-colors-hover);
 
 // Theme Colors Focus
 
 $theme-colors-focus: () !default;
-$theme-colors-focus: map-merge(
-  (
-    "primary":    $primary-focus,
-    "secondary":  $gray-900,
-    "success":    $dark-green,
-    "info":       $dark-blue,
-    "warning":    $dark-yellow,
-    "danger":     $function-red,
-    "error":      $function-red,
-    "light":      $gray-900,
-    "dark":       $gray-1200
-  ),
-  $theme-colors-focus
-);
+$theme-colors-focus: map-merge((
+  'primary': $primary-focus,
+  'secondary': $gray-900,
+  'success': $dark-green,
+  'info': $dark-blue,
+  'warning': $dark-yellow,
+  'danger': $function-red,
+  'error': $function-red,
+  'light': $gray-900,
+  'dark': $gray-1200,
+),
+$theme-colors-focus);
 
 // Theme Colors Active
 
 $theme-colors-active: () !default;
-$theme-colors-active: map-merge(
-  (
-    "primary":    $primary-focus,
-    "secondary":  $gray-900,
-    "success":    $dark-green,
-    "info":       $dark-blue,
-    "warning":    $dark-yellow,
-    "danger":     $function-red,
-    "error":      $function-red,
-    "light":      $gray-700,
-    "dark":       $gray-1200
-  ),
-  $theme-colors-active
-);
+$theme-colors-active: map-merge((
+  'primary': $primary-focus,
+  'secondary': $gray-900,
+  'success': $dark-green,
+  'info': $dark-blue,
+  'warning': $dark-yellow,
+  'danger': $function-red,
+  'error': $function-red,
+  'light': $gray-700,
+  'dark': $gray-1200,
+),
+$theme-colors-active);
 
 $brand-colors: () !default;
-$brand-colors: map-merge(
-  (
-    'facebook': $facebook,
-    'twitter': $twitter,
-    'google-plus': $google-plus,
-    'instagram': $instagram,
-    'pinterest': $pinterest,
-    'youtube': $youtube,
-    'slack': $slack,
-    'dribbble': $dribbble,
-    'github': $github,
-  ),
-  $brand-colors
-);
-
+$brand-colors: map-merge((
+  'facebook': $facebook,
+  'twitter': $twitter,
+  'google-plus': $google-plus,
+  'instagram': $instagram,
+  'pinterest': $pinterest,
+  'youtube': $youtube,
+  'slack': $slack,
+  'dribbble': $dribbble,
+  'github': $github,
+),
+$brand-colors);
 
 // Shapes Colors
 
 $shape-colors: () !default;
-$shape-colors: map-merge(
-  (
-    'default': #32325d,
-    'primary': #53f,
-    'secondary': #24b47e,
-    'neutral': #e9ecef,
-    'primary-gray': #b2cbe1,
-  ),
-  $shape-colors
-);
+$shape-colors: map-merge((
+  'default': #32325d,
+  'primary': #53f,
+  'secondary': #24b47e,
+  'neutral': #e9ecef,
+  'primary-gray': #b2cbe1,
+),
+$shape-colors);
 
 $shapes-primary-colors: () !default;
-$shapes-primary-colors: map-merge(
-  (
-    'step-1-gradient-bg': #281483,
-    'step-2-gradient-bg': #8f6ed5,
-    'step-3-gradient-bg': #d782d9,
-    'span-1-bg': #53f,
-    'span-2-bg': #4553ff,
-    'span-3-bg': #4f40ff,
-    'span-4-bg': #25ddf5,
-    'span-5-bg': #1fa2ff,
-  ),
-  $shapes-primary-colors
-);
+$shapes-primary-colors: map-merge((
+  'step-1-gradient-bg': #281483,
+  'step-2-gradient-bg': #8f6ed5,
+  'step-3-gradient-bg': #d782d9,
+  'span-1-bg': #53f,
+  'span-2-bg': #4553ff,
+  'span-3-bg': #4f40ff,
+  'span-4-bg': #25ddf5,
+  'span-5-bg': #1fa2ff,
+),
+$shapes-primary-colors);
 
 $shapes-default-colors: () !default;
-$shapes-default-colors: map-merge(
-  (
-    'step-1-gradient-bg': #7795f8,
-    'step-2-gradient-bg': #6772e5,
-    'step-3-gradient-bg': #555abf,
-    'span-1-bg': #7795f8,
-    'span-2-bg': #7b9aff,
-    'span-3-bg': #6f8ff8,
-    'span-4-bg': #76eea7,
-    'span-5-bg': #6adaff,
-  ),
-  $shapes-default-colors
-);
+$shapes-default-colors: map-merge((
+  'step-1-gradient-bg': #7795f8,
+  'step-2-gradient-bg': #6772e5,
+  'step-3-gradient-bg': #555abf,
+  'span-1-bg': #7795f8,
+  'span-2-bg': #7b9aff,
+  'span-3-bg': #6f8ff8,
+  'span-4-bg': #76eea7,
+  'span-5-bg': #6adaff,
+),
+$shapes-default-colors);
 
 $shapes-light-colors: () !default;
-$shapes-light-colors: map-merge(
-  (
-    'step-1-gradient-bg': #b2cbe1,
-    'step-2-gradient-bg': #f6f9fc,
-    'step-3-gradient-bg': #f6f9fc,
-    'span-1-bg': #b4cce1,
-    'span-2-bg': #c5dbef,
-    'span-3-bg': #b9d5ed,
-    'span-4-bg': #74e4a2,
-    'span-5-bg': #008169,
-  ),
-  $shapes-light-colors
-);
+$shapes-light-colors: map-merge((
+  'step-1-gradient-bg': #b2cbe1,
+  'step-2-gradient-bg': #f6f9fc,
+  'step-3-gradient-bg': #f6f9fc,
+  'span-1-bg': #b4cce1,
+  'span-2-bg': #c5dbef,
+  'span-3-bg': #b9d5ed,
+  'span-4-bg': #74e4a2,
+  'span-5-bg': #008169,
+),
+$shapes-light-colors);
 
 $shapes-dark-colors: () !default;
-$shapes-dark-colors: map-merge(
-  (
-    'step-1-gradient-bg': #32325d,
-    'step-2-gradient-bg': #32325d,
-    'step-3-gradient-bg': #32325d,
-    'span-1-bg': #2e2e57,
-    'span-2-bg': #2b2b58,
-    'span-3-bg': #25254d,
-    'span-4-bg': #d782d9,
-    'span-5-bg': #008169,
-  ),
-  $shapes-dark-colors
-);
+$shapes-dark-colors: map-merge((
+  'step-1-gradient-bg': #32325d,
+  'step-2-gradient-bg': #32325d,
+  'step-3-gradient-bg': #32325d,
+  'span-1-bg': #2e2e57,
+  'span-2-bg': #2b2b58,
+  'span-3-bg': #25254d,
+  'span-4-bg': #d782d9,
+  'span-5-bg': #008169,
+),
+$shapes-dark-colors);
 
 // Sections
 
 $section-colors: () !default;
-$section-colors: map-merge(
-  (
-    'primary': $white,
-    'secondary': $primary,
-    'light': $gray-200,
-    'dark': $gray-1200,
-    'darker': $black,
-  ),
-  $section-colors
-);
+$section-colors: map-merge((
+  'primary': $white,
+  'secondary': $primary,
+  'light': $gray-200,
+  'dark': $gray-1200,
+  'darker': $black,
+),
+$section-colors);

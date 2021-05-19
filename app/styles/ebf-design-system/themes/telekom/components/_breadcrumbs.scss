@@ -1,12 +1,12 @@
 .breadcrumb {
+  @include font-size($breadcrumb-font-size);
+  @include border-radius($breadcrumb-border-radius);
   display: flex;
   flex-wrap: wrap;
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   margin-bottom: $breadcrumb-margin-bottom;
   list-style: none;
   background-color: $breadcrumb-bg;
-  @include font-size($breadcrumb-font-size);
-  @include border-radius($breadcrumb-border-radius);
   margin-bottom: 0 !important;
 }
 
@@ -15,11 +15,20 @@
   font-weight: $font-weight-normal;
   margin-bottom: 0 !important;
 
+  @include hover-focus-active {
+    font-weight: $font-weight-bold;
+
+    a {
+      text-decoration: none;
+      color: $breadcrumb-active-color;
+    }
+  }
+
   a {
     color: $gray-1200;
     text-align: center;
 
-    &:after {
+    &::after {
       content: attr(data-text);
       font-weight: $font-weight-bold;
       display: block;
@@ -31,36 +40,26 @@
     }
   }
 
-  @include hover-focus-active {
-    font-weight: $font-weight-bold; 
-
-    a {
-      text-decoration: none;
-      color: $breadcrumb-active-color;
-      
-    }
-  }
-  
   // The separator between breadcrumbs (by default, a forward-slash: "/")
   + .breadcrumb-item {
-    padding-left: $breadcrumb-item-padding;    
+    padding-left: $breadcrumb-item-padding;
 
-    &::before {
-      float: left; // Suppress inline spacings and underlining of the separator
-      padding-right: $breadcrumb-divider-padding;
-      color: $breadcrumb-divider-color;
-      content: $breadcrumb-divider;
-      @extend %ebf;
-      font-size: $fs-1;
-      line-height: 1.66;
-    }  
-    
     @include active {
       font-weight: $font-weight-bold;
 
       &::before {
         //content: $ebf-chevron-left !important;
-      }   
+      }
+    }
+
+    &::before {
+      @extend %ebf;
+      float: left; // Suppress inline spacings and underlining of the separator
+      padding-right: $breadcrumb-divider-padding;
+      color: $breadcrumb-divider-color;
+      content: $breadcrumb-divider;
+      font-size: $fs-1;
+      line-height: 1.66;
     }
   }
 
@@ -78,4 +77,3 @@
     text-decoration: none;
   }
 }
-

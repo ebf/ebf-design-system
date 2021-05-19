@@ -1,3 +1,7 @@
+<DocsHeader>
+  {{theme-switcher}}
+</DocsHeader>
+
 <DocsViewer as |viewer|>
   <viewer.nav as |nav|>
     {{nav.section "Introduction"}}
@@ -47,3 +51,13 @@
     {{outlet}}
   </viewer.main>
 </DocsViewer>
+
+<Layout::Footer
+  @fluid={{false}}
+  @dark={{false}}
+  @copyright="EBF GmbH"
+  
+  @label="EBF GmbH"
+  @version="1.0.0"
+  class="shadow" 
+/>

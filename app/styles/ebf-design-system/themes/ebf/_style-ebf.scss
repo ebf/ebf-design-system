@@ -1,6 +1,5 @@
 //EBF Theme
 
-
 // Import Colors, Fonts and Icon Webfonts
 // These Must be Imported First!
 
@@ -13,14 +12,11 @@
 @import 'ember-bootstrap/mixins';
 @import 'ember-bootstrap/functions';
 
-
 // Import Theme Variables
 @import 'variables/variables';
 
-
 // Import Bootstrap Variables
-@import "ember-bootstrap/variables";
-
+@import 'ember-bootstrap/variables';
 
 // Bootstrap components
 
@@ -57,7 +53,6 @@
 @import 'ember-bootstrap/carousel';
 @import 'ember-bootstrap/utilities';
 @import 'ember-bootstrap/print';
-
 
 // Custom components
 @import '../mixins/mixins';

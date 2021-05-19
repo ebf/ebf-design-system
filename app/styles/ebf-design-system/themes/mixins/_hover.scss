@@ -10,7 +10,9 @@
 // Issue: https://github.com/twbs/bootstrap/issues/25195
 
 @mixin hover() {
-  &:hover { @content; }
+  &:hover {
+    @content;
+  }
 }
 
 @mixin hover-focus() {
@@ -37,7 +39,7 @@
   }
 }
 
-@mixin active() {  
+@mixin active() {
   &:active,
   &.active {
     @content;

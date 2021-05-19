@@ -1,6 +1,6 @@
-.btn {  
+.btn {
   // Loading indicator: compensate for the border width, color and size
-  
+
   .loading-spinner {
     .loading-icon {
       @include loader-size($btn-font-size);
@@ -19,7 +19,7 @@
   }
 }
 
-.btn-icon {   
+.btn-icon {
   &.btn-lg {
     @include button-size(
       $btn-padding-y-lg,
@@ -81,21 +81,28 @@
   }
 }
 
-// Refactor 
+// Refactor
 
-$btn-custom-transition:              color .1s ease, background-color .2s ease, border-color .15s cubic-bezier(0.440, -0.480, 0.465, 1.515), box-shadow .15s cubic-bezier(0.440, -0.480, 0.465, 1.515), transform .15s cubic-bezier(0.440, -0.480, 0.465, 1.515) !default;
+$btn-custom-transition: color 0.1s ease, background-color 0.2s ease,
+  border-color 0.15s cubic-bezier(0.44, -0.48, 0.465, 1.515), box-shadow 0.15s cubic-bezier(0.44, -0.48, 0.465, 1.515),
+  transform 0.15s cubic-bezier(0.44, -0.48, 0.465, 1.515) !default;
 
 // Primary
 
 .btn-primary {
   @include button-variant(
-    $primary,         //background
-    $primary,              //border
-    $primary-hover,               //hover-background
-    $primary-hover,              //hover-border
-    $primary-active,              //active-background
-    $primary-active               //active-border
-    );   
+    $primary,
+    //background
+    $primary,
+    //border
+    $primary-hover,
+    //hover-background
+    $primary-hover,
+    //hover-border
+    $primary-active,
+    //active-background
+    $primary-active //active-border
+  );
 }
 
 // Outline Variant
@@ -103,13 +110,18 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
 .btn-outline,
 .btn-outline-outline {
   @include button-variant(
-  $transparent-b,         //background
-  $gray-900,              //border
-  $black-7,               //hover-background
-  $gray-900,              //hover-border
-  $black-15,              //active-background
-  $gray-900               //active-border
-  );   
+    $transparent-b,
+    //background
+    $gray-900,
+    //border
+    $black-7,
+    //hover-background
+    $gray-900,
+    //hover-border
+    $black-15,
+    //active-background
+    $gray-900 //active-border
+  );
 
   color: $gray-1200 !important;
 }
@@ -118,31 +130,40 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
 
 .btn-outline-white {
   @include button-variant(
-  $transparent-w,         //background
-  $white,                 //border
-  $white-7,               //hover-background
-  $white,                 //hover-border
-  $white-15,              //active-background
-  $white                  //active-border
-  );   
-  
+    $transparent-w,
+    //background
+    $white,
+    //border
+    $white-7,
+    //hover-background
+    $white,
+    //hover-border
+    $white-15,
+    //active-background
+    $white //active-border
+  );
+
   color: $white !important;
 }
-
 
 // Ghost Button
 
 .btn-ghost {
   @include button-variant(
-    $transparent-b,   //background
-    $transparent-b,   //border
-    $black-7,         //hover-background
-    $transparent-b,   //hover-border
-    $black-15,        //active-background
-    $transparent-b    //active-border
-  ); 
-  
-  color: $gray-1200!important;  
+    $transparent-b,
+    //background
+    $transparent-b,
+    //border
+    $black-7,
+    //hover-background
+    $transparent-b,
+    //hover-border
+    $black-15,
+    //active-background
+    $transparent-b //active-border
+  );
+
+  color: $gray-1200 !important;
 }
 
 //
@@ -165,29 +186,38 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
 
 .btn-white {
   @include button-variant(
-  $white,                 //background
-  $white,                 //border
-  $gray-100,               //hover-background
-  $gray-100,                 //hover-border
-  $gray-200,               //active-background
-  $gray-200                  //active-border
-  );   
-  
+    $white,
+    //background
+    $white,
+    //border
+    $gray-100,
+    //hover-background
+    $gray-100,
+    //hover-border
+    $gray-200,
+    //active-background
+    $gray-200 //active-border
+  );
+
   color: $gray-1200 !important;
 }
 
-
 .btn-outline-ghost {
   @include button-variant(
-    $transparent-b,   //background
-    $transparent-b,   //border
-    $black-7,   //hover-background
-    $transparent-b,         //hover-border
-    $black-15,        //active-background
-    $transparent-b         //active-border
-  ); 
-  
-  color: $gray-1200!important;  
+    $transparent-b,
+    //background
+    $transparent-b,
+    //border
+    $black-7,
+    //hover-background
+    $transparent-b,
+    //hover-border
+    $black-15,
+    //active-background
+    $transparent-b //active-border
+  );
+
+  color: $gray-1200 !important;
 }
 
 // Round Button
@@ -196,7 +226,7 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
   &.btn-icon {
     padding-right: $fs-3;
     padding-left: $fs-3;
-    
+
     &.btn-round {
       border-radius: $spacer * 2;
       max-width: 2.625rem;
@@ -204,7 +234,7 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
       height: 2.625rem;
       padding-left: 10px;
       padding-right: 10px;
-      
+
       @include media-breakpoint-down(md) {
         border-radius: $spacer * 2;
         max-width: $spacer * 3;
@@ -220,6 +250,18 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
 // General Button Styles and Height Overrides
 
 .btn {
+
+  @include button-size(
+    0.6875rem,
+     //padding-
+    1.375rem,
+     //padding-
+    1.125rem,
+     // font-siz
+    1,
+     //line-heigh
+    4px  // border-radiu
+  );
   display: inline-block;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
@@ -228,7 +270,7 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
   white-space: $btn-white-space;
   vertical-align: middle;
   user-select: none;
-  overflow: hidden;   
+  overflow: hidden;
   white-space: nowrap;
   transition: $btn-custom-transition;
   transform-origin: center;
@@ -236,43 +278,39 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
   border-style: solid;
   transform: scale(1);
 
+  @include media-breakpoint-down(md) {
+
+    @include button-size(
+      0.875rem,
+       //padding-
+      1.375rem,
+       //padding-
+      1.125rem!important,
+       // font-siz
+      1,
+       //line-heigh
+      4px  // border-radiu
+    );
+    max-height: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    opacity: $btn-disabled-opacity;   
+    opacity: $btn-disabled-opacity;
   }
 
-  &:not(:disabled):not(.disabled) {    
+  &:not(:disabled):not(.disabled) {
     &:active,
     &.active {
-      transform: scale(.92);
+      transform: scale(0.92);
+
       &:focus {
-        
       }
     }
-  } 
-
-  @include button-size (
-    0.6875rem,    //padding-y
-    1.375rem,     //padding-x
-    1.125rem,     // font-size
-    1,            //line-height
-    4px           // border-radius
-  ); 
-  
-  @include media-breakpoint-down(md) {
-    max-height: 3rem;  
-    height: 3rem;
-    overflow: hidden;   
-    white-space: nowrap;
-  
-    @include button-size (
-      0.875rem,    //padding-y
-      1.375rem,     //padding-x
-      1.125rem!important,     // font-size
-      1,            //line-height
-      4px           // border-radius
-    );  
   }
 }
 
@@ -291,9 +329,9 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
 }
 
 // Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   &.btn-block {
     width: 100%;
   }
@@ -335,11 +373,23 @@ input[type="button"] {
 //
 
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+  @include button-size(
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $btn-line-height-lg,
+    $btn-border-radius-lg
+  );
 }
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  @include button-size(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $btn-line-height-sm,
+    $btn-border-radius-sm
+  );
 }
 
 //
@@ -357,9 +407,9 @@ input[type="button"] {
 }
 
 // Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   &.btn-block {
     width: 100%;
   }
@@ -368,21 +418,26 @@ input[type="button"] {
 // Filter Tabs
 
 .btn-filter-tabs {
-  @include button-variant (
-    $transparent-b,     //background
-    $gray-1200,         //border
-    $black-7,           //hover-background
-    $gray-1200,         //hover-border
-    $gray-1100,           //active-background
-    $gray-1200           //active-border
-    );      
+  @include button-variant(
+    $transparent-b,
+     //backgroun
+    $gray-1200,
+     //borde
+    $black-7,
+     //hover-backgroun
+    $gray-1200,
+     //hover-borde
+    $gray-1100,
+     //active-backgroun
+    $gray-1200  //active-borde
+  );
 
   background-color: $transparent-b;
   color: $gray-1200;
   font-weight: $font-weight-normal;
-  font-size: $fs-2!important;
-  padding: $spacer / 2 12px!important;
-  max-height: $spacer * 2!important;
+  font-size: $fs-2 !important;
+  padding: $spacer / 2 12px !important;
+  max-height: $spacer * 2 !important;
 
   &:hover,
   &.hover,
@@ -401,16 +456,16 @@ input[type="button"] {
 
   &:active,
   &.active,
-  &[aria-pressed="true"] {
+  &[aria-pressed='true'] {
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
     .show > &.dropdown-toggle {
       color: $white;
       background-color: $gray-1100;
-      transform: scale(1)!important;
+      transform: scale(1) !important;
     }
   }
-  
+
   &.disabled,
   &:disabled {
     color: $gray-1200;
@@ -422,17 +477,22 @@ input[type="button"] {
 // Color Selector White
 
 .btn-color-selector-white {
-  @include button-variant (
-    $white,           //background
-    $gray-300,          //border
-    $white,           //hover-background
-    $gray-300,         //hover-border
-    $white,         //active-background
-    $gray-1200          //active-border
-    );      
+  @include button-variant(
+    $white,
+     //backgroun
+    $gray-300,
+     //borde
+    $white,
+     //hover-backgroun
+    $gray-300,
+     //hover-borde
+    $white,
+     //active-backgroun
+    $gray-1200  //active-borde
+  );
 
   color: $transparent-b;
-  font-weight: $font-weight-normal;  
+  font-weight: $font-weight-normal;
   padding: $spacer / 4 !important;
   width: $spacer * 2 !important;
   height: $spacer * 2 !important;
@@ -441,20 +501,20 @@ input[type="button"] {
     display: none;
     font-size: $fs-5;
   }
+
   .ebf-line-diag {
     display: none;
     font-size: $fs-5;
   }
 
-
   &:active,
   &.active,
-  &[aria-pressed="true"] {
+  &[aria-pressed='true'] {
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
     .show > &.dropdown-toggle {
-      color: $gray-1200;      
-      transform: scale(1)!important;
+      color: $gray-1200;
+      transform: scale(1) !important;
 
       .ebf-check-mark {
         display: inline-block;
@@ -465,35 +525,40 @@ input[type="button"] {
   &.disabled,
   &:disabled {
     opacity: 1;
-    padding: 0!important;
+    padding: 0 !important;
     color: $gray-1200;
     background-color: $white;
     border-color: $gray-300;
 
     .ebf-check-mark {
       display: none;
-    }     
+    }
 
     .ebf-line-diag {
       display: inline-block;
-    }    
+    }
   }
 }
 
 // Color Selector Light
 
 .btn-color-selector-light {
-  @include button-variant (
-    $gray-300,           //background
-    $gray-300,          //border
-    $gray-300,           //hover-background
-    $gray-300,         //hover-border
-    $gray-300,         //active-background
-    $gray-1200          //active-border
-    );      
+  @include button-variant(
+    $gray-300,
+     //backgroun
+    $gray-300,
+     //borde
+    $gray-300,
+     //hover-backgroun
+    $gray-300,
+     //hover-borde
+    $gray-300,
+     //active-backgroun
+    $gray-1200  //active-borde
+  );
 
   color: $transparent-b;
-  font-weight: $font-weight-normal;  
+  font-weight: $font-weight-normal;
   padding: $spacer / 4 !important;
   width: $spacer * 2 !important;
   height: $spacer * 2 !important;
@@ -502,20 +567,20 @@ input[type="button"] {
     display: none;
     font-size: $fs-5;
   }
+
   .ebf-line-diag {
     display: none;
     font-size: $fs-5;
   }
 
-
   &:active,
   &.active,
-  &[aria-pressed="true"] {
+  &[aria-pressed='true'] {
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
     .show > &.dropdown-toggle {
-      color: $gray-1200;      
-      transform: scale(1)!important;
+      color: $gray-1200;
+      transform: scale(1) !important;
 
       .ebf-check-mark {
         display: inline-block;
@@ -526,35 +591,40 @@ input[type="button"] {
   &.disabled,
   &:disabled {
     opacity: 1;
-    padding: 0!important;
+    padding: 0 !important;
     color: $gray-1200;
     background-color: $gray-300;
     border-color: $gray-300;
 
     .ebf-check-mark {
       display: none;
-    }     
+    }
 
     .ebf-line-diag {
       display: inline-block;
-    }    
+    }
   }
 }
 
 // Color Selector Dark
 
 .btn-color-selector-dark {
-  @include button-variant (
-    $gray-1200,     //background
-    $gray-1200,          //border
-    $gray-1200,           //hover-background
-    $gray-1200,         //hover-border
-    $gray-1200,         //active-background
-    $gray-1200          //active-border
-    );      
+  @include button-variant(
+    $gray-1200,
+     //backgroun
+    $gray-1200,
+     //borde
+    $gray-1200,
+     //hover-backgroun
+    $gray-1200,
+     //hover-borde
+    $gray-1200,
+     //active-backgroun
+    $gray-1200  //active-borde
+  );
 
   color: $transparent-w;
-  font-weight: $font-weight-normal; 
+  font-weight: $font-weight-normal;
   padding: $spacer / 4 !important;
   width: $spacer * 2 !important;
   height: $spacer * 2 !important;
@@ -563,44 +633,44 @@ input[type="button"] {
     display: none;
     font-size: $fs-5;
   }
+
   .ebf-line-diag {
     display: none;
   }
 
   &:active,
   &.active,
-  &[aria-pressed="true"] {
+  &[aria-pressed='true'] {
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
     .show > &.dropdown-toggle {
       color: $white;
       background-color: $gray-1200;
-      transform: scale(1)!important;
+      transform: scale(1) !important;
 
       .ebf-check-mark {
         display: inline-block;
       }
     }
   }
-  
+
   &.disabled,
   &:disabled {
     opacity: 1;
-    padding: 0!important;
+    padding: 0 !important;
     color: $white;
     background-color: $gray-1200;
     border-color: $gray-1200;
 
     .ebf-check-mark {
       display: none;
-    }     
+    }
 
     .ebf-line-diag {
       display: inline-block;
-    }  
+    }
   }
 }
-
 
 // .dropdown-toggle {
 //   &::after {
@@ -608,7 +678,7 @@ input[type="button"] {
 //     content: $ebf-chevron-down;
 //     border: 0!important;
 //     transform-origin: center;
-//     transition: transform .2s ease-in-out;    
+//     transition: transform .2s ease-in-out;
 //   }
 
 //   &[aria-expanded="false"] {

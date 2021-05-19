@@ -1,4 +1,3 @@
-
 html {
   position: relative;
   min-height: 100%;
@@ -6,23 +5,21 @@ html {
 
 .footer {
   font-size: $footer-font-size;
-  padding: $footer-padding-y $footer-padding-x ;
-  width: 100%;  
-
+  padding: $footer-padding-y $footer-padding-x;
+  width: 100%;
 
   .label {
     display: block;
     font-weight: $font-weight-bolder;
-    font-size: $fs-1;    
+    font-size: $fs-1;
     line-height: $line-height-base;
     text-transform: $uppercase;
     text-decoration: none;
     position: relative;
     top: 2px;
-    margin-left: $grid-gutter-width;    
+    margin-left: $grid-gutter-width;
   }
 
-  
   .footer-brand {
     img {
       height: $spacer * 2.375;
@@ -31,7 +28,6 @@ html {
   }
 
   .nav-link {
-    
     @include hover-focus-active() {
       text-decoration: underline;
     }
@@ -66,8 +62,6 @@ html {
   }
 
   .nav {
-   
-
     .nav-link {
       color: $navbar-dark-color;
 
@@ -77,14 +71,13 @@ html {
 
       &.disabled {
         color: $navbar-dark-disabled-color;
-      }      
+      }
     }
 
     .nav-item {
-      @include media-breakpoint-down(sm) {    
-
+      @include media-breakpoint-down(sm) {
         .nav-link {
-          padding: $spacer/2; 
+          padding: $spacer/2;
         }
 
         &:first-of-type {
@@ -109,9 +102,9 @@ html {
     }
   }
 
-  
   .navbar-text {
     color: $navbar-dark-color;
+
     a {
       color: $navbar-dark-active-color;
 
@@ -121,7 +114,6 @@ html {
     }
   }
 }
-
 
 // Dark links against a light background
 .footer-light {
@@ -140,7 +132,7 @@ html {
 
   .footer-brand {
     color: $navbar-light-brand-color;
-  
+
     @include hover-focus() {
       color: $navbar-light-brand-hover-color;
     }
@@ -154,12 +146,12 @@ html {
         color: $navbar-light-hover-color;
       }
 
-      &.disabled {
-        color: $navbar-light-disabled-color;
+      @include media-breakpoint-down(sm) {
+        padding: $spacer/2;
       }
 
-      @include media-breakpoint-down(sm) {
-        padding: $spacer/2;  
+      &.disabled {
+        color: $navbar-light-disabled-color;
       }
     }
 
@@ -171,9 +163,9 @@ html {
     }
   }
 
-  
   .navbar-text {
     color: $navbar-light-color;
+
     a {
       color: $navbar-light-active-color;
 
@@ -183,4 +175,3 @@ html {
     }
   }
 }
-

@@ -7,19 +7,18 @@
 }
 
 .dropdown-toggle {
-  white-space: nowrap;
-  transform: scale(1) !important;   
-
   // Generate the caret automatically
   @include caret();
+  white-space: nowrap;
+  transform: scale(1) !important;
 
-  &[aria-expanded="false"] {
+  &[aria-expanded='false'] {
     &::after {
       transform: rotate(0deg);
     }
   }
-  
-  &[aria-expanded="true"] {
+
+  &[aria-expanded='true'] {
     &::after {
       transform: rotate(180deg);
     }
@@ -28,6 +27,8 @@
 
 // The dropdown menu
 .dropdown-menu {
+  @include font-size($dropdown-font-size);
+  @include border-radius($dropdown-border-radius);
   position: absolute;
   top: 100%;
   left: 0;
@@ -37,7 +38,6 @@
   min-width: $dropdown-min-width;
   padding: $dropdown-padding-y $dropdown-padding-x;
   margin: $dropdown-spacer 0 0; // override default ul
-  @include font-size($dropdown-font-size);
   color: $dropdown-color;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
@@ -45,7 +45,6 @@
   background-clip: padding-box;
   border: $dropdown-border-width solid $dropdown-border-color;
   box-shadow: $dropdown-box-shadow;
-  @include border-radius($dropdown-border-radius);
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -67,7 +66,6 @@
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
 // Just add .dropup after the standard .dropdown class and you're set.
 
-
 .dropup {
   .dropdown-menu {
     top: auto;
@@ -88,7 +86,6 @@
     }
   }
 }
-
 
 .dropright {
   .dropdown-menu {
@@ -123,37 +120,36 @@
     &::before {
       vertical-align: $caret-vertical-align;
     }
-
   }
 
   .dropdown-toggle {
     @include caret(left);
-    
+
     &::before {
       vertical-align: $caret-vertical-align;
     }
 
-    &[aria-expanded="false"] {
+    &[aria-expanded='false'] {
       &::before {
         transform: rotate(0deg);
       }
     }
-    
-    &[aria-expanded="true"] {
+
+    &[aria-expanded='true'] {
       &::before {
         transform: rotate(180deg);
       }
     }
-  }  
+  }
 }
 
 // When enabled Popper.js, reset basic dropdown position
 // stylelint-disable-next-line no-duplicate-selectors
 .dropdown-menu {
-  &[x-placement^="top"],
-  &[x-placement^="right"],
-  &[x-placement^="bottom"],
-  &[x-placement^="left"] {
+  &[x-placement^='top'],
+  &[x-placement^='right'],
+  &[x-placement^='bottom'],
+  &[x-placement^='left'] {
     right: auto;
     bottom: auto;
   }
@@ -193,16 +189,16 @@
   }
 
   @include hover-focus() {
+    @include gradient-bg($dropdown-link-hover-bg);
     color: $dropdown-link-hover-color;
     text-decoration: none;
-    @include gradient-bg($dropdown-link-hover-bg);
   }
 
   &.active,
   &:active {
+    @include gradient-bg($dropdown-link-active-bg);
     color: $dropdown-link-active-color;
     text-decoration: none;
-    @include gradient-bg($dropdown-link-active-bg);
   }
 
   &.disabled,
@@ -223,10 +219,10 @@
 
 // Dropdown section headers
 .dropdown-header {
+  @include font-size($font-size-sm);
   display: block;
   padding: $dropdown-header-padding;
   margin-bottom: 0; // for use with heading elements
-  @include font-size($font-size-sm);
   color: $dropdown-header-color;
   white-space: nowrap; // as with > li > a
 }
@@ -237,7 +233,6 @@
   padding: $dropdown-item-padding-y $dropdown-item-padding-x;
   color: $dropdown-link-color;
 }
-
 
 // Dropdown Toggle Custom
 

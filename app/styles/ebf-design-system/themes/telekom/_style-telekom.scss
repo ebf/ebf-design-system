@@ -1,13 +1,11 @@
 //Telekom Theme
 
-
 // Import Colors, Fonts and Icon Webfonts
 // These Must be Imported First!
 
 @import 'colors/colors';
 @import 'fonts/fonts';
 @import 'fonts/icons-webfont';
-
 
 // Import Bootstrap Functions
 
@@ -18,61 +16,58 @@
 // Used in conjunction with global variables to enable certain theme features.
 
 // Vendor
-@import "ember-bootstrap/vendor/rfs";
+@import 'ember-bootstrap/vendor/rfs';
 
 // Deprecate
-@import "ember-bootstrap/mixins/deprecate";
+@import 'ember-bootstrap/mixins/deprecate';
 
 // Utilities
-@import "ember-bootstrap/mixins/breakpoints";
-//@import "ember-bootstrap/mixins/hover";
-@import "ember-bootstrap/mixins/image";
-@import "ember-bootstrap/mixins/badge";
-@import "ember-bootstrap/mixins/resize";
-@import "ember-bootstrap/mixins/screen-reader";
-@import "ember-bootstrap/mixins/size";
-@import "ember-bootstrap/mixins/reset-text";
-@import "ember-bootstrap/mixins/text-emphasis";
-@import "ember-bootstrap/mixins/text-hide";
-@import "ember-bootstrap/mixins/text-truncate";
-@import "ember-bootstrap/mixins/visibility";
+@import 'ember-bootstrap/mixins/breakpoints';
+//@import 'ember-bootstrap/mixins/hover';
+@import 'ember-bootstrap/mixins/image';
+@import 'ember-bootstrap/mixins/badge';
+@import 'ember-bootstrap/mixins/resize';
+@import 'ember-bootstrap/mixins/screen-reader';
+@import 'ember-bootstrap/mixins/size';
+@import 'ember-bootstrap/mixins/reset-text';
+@import 'ember-bootstrap/mixins/text-emphasis';
+@import 'ember-bootstrap/mixins/text-hide';
+@import 'ember-bootstrap/mixins/text-truncate';
+@import 'ember-bootstrap/mixins/visibility';
 
 // Components
-@import "ember-bootstrap/mixins/alert";
-@import "ember-bootstrap/mixins/buttons";
-//@import "ember-bootstrap/mixins/caret";
-//@import "ember-bootstrap/mixins/pagination";
-@import "ember-bootstrap/mixins/lists";
-@import "ember-bootstrap/mixins/list-group";
-@import "ember-bootstrap/mixins/nav-divider";
-//@import "ember-bootstrap/mixins/forms";
-@import "ember-bootstrap/mixins/table-row";
+@import 'ember-bootstrap/mixins/alert';
+@import 'ember-bootstrap/mixins/buttons';
+//@import 'ember-bootstrap/mixins/caret';
+//@import 'ember-bootstrap/mixins/pagination';
+@import 'ember-bootstrap/mixins/lists';
+@import 'ember-bootstrap/mixins/list-group';
+@import 'ember-bootstrap/mixins/nav-divider';
+//@import 'ember-bootstrap/mixins/forms';
+@import 'ember-bootstrap/mixins/table-row';
 
 // Skins
-@import "ember-bootstrap/mixins/background-variant";
-@import "ember-bootstrap/mixins/border-radius";
-@import "ember-bootstrap/mixins/box-shadow";
-@import "ember-bootstrap/mixins/gradients";
-@import "ember-bootstrap/mixins/transition";
+@import 'ember-bootstrap/mixins/background-variant';
+@import 'ember-bootstrap/mixins/border-radius';
+@import 'ember-bootstrap/mixins/box-shadow';
+@import 'ember-bootstrap/mixins/gradients';
+@import 'ember-bootstrap/mixins/transition';
 
 // Layout
-@import "ember-bootstrap/mixins/clearfix";
-@import "ember-bootstrap/mixins/grid-framework";
-@import "ember-bootstrap/mixins/grid";
-@import "ember-bootstrap/mixins/float";
+@import 'ember-bootstrap/mixins/clearfix';
+@import 'ember-bootstrap/mixins/grid-framework';
+@import 'ember-bootstrap/mixins/grid';
+@import 'ember-bootstrap/mixins/float';
 
 // Custom Mixins Import
 
 @import '../mixins/mixins';
 
-
 // Import Theme Variables
 @import 'variables/variables';
 
-
 // Import Bootstrap Variables
-//@import "ember-bootstrap/variables";
-
+//@import 'ember-bootstrap/variables';
 
 // Bootstrap components
 
@@ -110,24 +105,24 @@
 @import 'ember-bootstrap/print';
 
 // Bootstrap Utilities
-@import "ember-bootstrap/utilities/align";
-//@import "ember-bootstrap/utilities/background";
-//@import "ember-bootstrap/utilities/borders";
-@import "ember-bootstrap/utilities/clearfix";
-@import "ember-bootstrap/utilities/display";
-@import "ember-bootstrap/utilities/embed";
-@import "ember-bootstrap/utilities/flex";
-@import "ember-bootstrap/utilities/float";
-@import "ember-bootstrap/utilities/interactions";
-@import "ember-bootstrap/utilities/overflow";
-//@import "ember-bootstrap/utilities/position";
-@import "ember-bootstrap/utilities/screenreaders";
-@import "ember-bootstrap/utilities/shadows";
-//@import "ember-bootstrap/utilities/sizing";
-@import "ember-bootstrap/utilities/spacing";
-@import "ember-bootstrap/utilities/stretched-link";
-//@import "ember-bootstrap/utilities/text";
-@import "ember-bootstrap/utilities/visibility";
+@import 'ember-bootstrap/utilities/align';
+//@import 'ember-bootstrap/utilities/background';
+//@import 'ember-bootstrap/utilities/borders';
+@import 'ember-bootstrap/utilities/clearfix';
+@import 'ember-bootstrap/utilities/display';
+@import 'ember-bootstrap/utilities/embed';
+@import 'ember-bootstrap/utilities/flex';
+@import 'ember-bootstrap/utilities/float';
+@import 'ember-bootstrap/utilities/interactions';
+@import 'ember-bootstrap/utilities/overflow';
+//@import 'ember-bootstrap/utilities/position';
+@import 'ember-bootstrap/utilities/screenreaders';
+@import 'ember-bootstrap/utilities/shadows';
+//@import 'ember-bootstrap/utilities/sizing';
+@import 'ember-bootstrap/utilities/spacing';
+@import 'ember-bootstrap/utilities/stretched-link';
+//@import 'ember-bootstrap/utilities/text';
+@import 'ember-bootstrap/utilities/visibility';
 
 // Custom components
 

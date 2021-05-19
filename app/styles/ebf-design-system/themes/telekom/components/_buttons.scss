@@ -1,6 +1,6 @@
-.btn {  
+.btn {
   // Loading indicator: compensate for the border width, color and size
-  
+
   .loading-spinner {
     .loading-icon {
       @include loader-size($btn-font-size);
@@ -19,7 +19,7 @@
   }
 }
 
-.btn-icon {   
+.btn-icon {
   &.btn-lg {
     @include button-size(
       $btn-padding-y-lg,
@@ -78,9 +78,11 @@
   }
 }
 
-// Refactor 
+// Refactor
 
-$btn-custom-transition:              color .1s ease, background-color .2s ease, border-color .15s cubic-bezier(0.440, -0.480, 0.465, 1.515), box-shadow .15s cubic-bezier(0.440, -0.480, 0.465, 1.515), transform .15s cubic-bezier(0.440, -0.480, 0.465, 1.515) !default;
+$btn-custom-transition: color 0.1s ease, background-color 0.2s ease,
+  border-color 0.15s cubic-bezier(0.44, -0.48, 0.465, 1.515), box-shadow 0.15s cubic-bezier(0.44, -0.48, 0.465, 1.515),
+  transform 0.15s cubic-bezier(0.44, -0.48, 0.465, 1.515) !default;
 
 //
 // Alternate buttons
@@ -89,7 +91,7 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     @include button-variant($value, $value);
-    
+
     @include hover-focus-active {
       color: $white;
     }
@@ -106,13 +108,19 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
 
 .btn-primary {
   @include button-variant(
-  $primary,         //background
-  $primary,              //border
-  $primary-hover,               //hover-background
-  $primary-hover,              //hover-border
-  $primary-active,              //active-background
-  $primary-active               //active-border
-  );   
+    //background
+    $primary,
+    //border
+    $primary,
+    //hover-background
+    $primary-hover,
+    //hover-border
+    $primary-hover,
+    //active-background
+    $primary-active,
+    //active-border
+    $primary-active
+  );
 
   &:hover {
     color: $white;
@@ -124,13 +132,19 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
 .btn-outline,
 .btn-outline-outline {
   @include button-variant(
-  $transparent-b,         //background
-  $gray-900,              //border
-  $black-7,               //hover-background
-  $gray-900,              //hover-border
-  $black-15,              //active-background
-  $gray-900               //active-border
-  );   
+    //background
+    $transparent-b,
+    //border
+    $gray-900,
+    //hover-background
+    $black-7,
+    //hover-border
+    $gray-900,
+    //active-background
+    $black-15,
+    //active-border
+    $gray-900
+  );
 
   color: $gray-1200 !important;
 }
@@ -139,61 +153,82 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
 
 .btn-outline-white {
   @include button-variant(
-  $transparent-w,         //background
-  $white,                 //border
-  $white-7,               //hover-background
-  $white,                 //hover-border
-  $white-15,              //active-background
-  $white                  //active-border
-  );   
-  
+    //background
+    $transparent-w,
+    //border
+    $white,
+    //hover-background
+    $white-7,
+    //hover-border
+    $white,
+    //active-background
+    $white-15,
+    //active-border
+    $white
+  );
+
   color: $white !important;
 }
-
 
 // Ghost Button
 
 .btn-ghost {
   @include button-variant(
-    $transparent-b,   //background
-    $transparent-b,   //border
-    $black-7,         //hover-background
-    $transparent-b,   //hover-border
-    $black-15,        //active-background
-    $transparent-b    //active-border
-  ); 
-  
-  color: $gray-1200!important;  
-}
+    //background
+    $transparent-b,
+    //border
+    $transparent-b,
+    //hover-background
+    $black-7,
+    //hover-border
+    $transparent-b,
+    //active-background
+    $black-15,
+    //active-border
+    $transparent-b
+  );
 
+  color: $gray-1200 !important;
+}
 
 // Outline Fallbacks
 
 .btn-white {
   @include button-variant(
-  $white,                 //background
-  $white,                 //border
-  $gray-100,               //hover-background
-  $gray-100,                 //hover-border
-  $gray-200,               //active-background
-  $gray-200                  //active-border
-  );   
-  
+    //background
+    $white,
+    //border
+    $white,
+    //hover-background
+    $gray-100,
+    //hover-border
+    $gray-100,
+    //active-background
+    $gray-200,
+    //active-border
+    $gray-200
+  );
+
   color: $gray-1200 !important;
 }
 
-
 .btn-outline-ghost {
   @include button-variant(
-    $transparent-b,   //background
-    $transparent-b,   //border
-    $black-7,   //hover-background
-    $transparent-b,         //hover-border
-    $black-15,        //active-background
-    $transparent-b         //active-border
-  ); 
-  
-  color: $gray-1200!important;  
+    //background
+    $transparent-b,
+    //border
+    $transparent-b,
+    //hover-background
+    $black-7,
+    //hover-border
+    $transparent-b,
+    //active-background
+    $black-15,
+    //active-border
+    $transparent-b
+  );
+
+  color: $gray-1200 !important;
 }
 
 // Round Button
@@ -202,7 +237,7 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
   &.btn-icon {
     padding-right: $fs-3;
     padding-left: $fs-3;
-    
+
     &.btn-round {
       border-radius: $spacer * 2;
       max-width: 2.625rem;
@@ -210,7 +245,7 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
       height: 2.625rem;
       padding-left: 10px;
       padding-right: 10px;
-      
+
       @include media-breakpoint-down(md) {
         border-radius: $spacer * 2;
         max-width: $spacer * 3;
@@ -226,6 +261,7 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
 // General Button Styles and Height Overrides
 
 .btn {
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   display: inline-block;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
@@ -234,54 +270,49 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
   white-space: $btn-white-space;
   vertical-align: middle;
   user-select: none;
-  overflow: hidden;   
+  overflow: hidden;
   white-space: nowrap;
   transition: $btn-custom-transition;
   transform-origin: center;
   border-width: $input-btn-border-width;
   border-style: solid;
   transform: scale(1);
-  
-  @include button-size(
-    $btn-padding-y,
-    $btn-padding-x,
-    $btn-font-size, 
-    $btn-line-height,
-    $btn-border-radius
-  );
+
+  @include media-breakpoint-down(md) {
+    @include button-size(
+      //padding-y
+      0.875rem,
+      //padding-x
+      1.375rem,
+      //font-size
+      1.125rem!important,
+      //line-height
+      1,
+      //border-radius
+      4px
+    );
+    max-height: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
-    opacity: $btn-disabled-opacity;   
+    opacity: $btn-disabled-opacity;
   }
 
-  &:not(:disabled):not(.disabled) {    
+  &:not(:disabled):not(.disabled) {
     &:active,
     &.active {
-      transform: scale(.92);
+      transform: scale(0.92);
     }
-  } 
-
-  // Line height 1 breaks button height beyond 42px needed. 
-  i {
-    line-height: 0;
   }
 
-  
-  @include media-breakpoint-down(md) {
-    max-height: 3rem;  
-    height: 3rem;
-    overflow: hidden;   
-    white-space: nowrap;
-  
-    @include button-size (
-      0.875rem,    //padding-y
-      1.375rem,     //padding-x
-      1.125rem!important,     // font-size
-      1,            //line-height
-      4px           // border-radius
-    );  
+  // Line height 1 breaks button height beyond 42px needed.
+  i {
+    line-height: 0;
   }
 }
 
@@ -299,15 +330,6 @@ $btn-custom-transition:              color .1s ease, background-color .2s ease, 
   }
 }
 
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  &.btn-block {
-    width: 100%;
-  }
-}
-
 //
 // Link buttons
 //
@@ -318,7 +340,7 @@ input[type="button"] {
   font-weight: $font-weight-normal;
   color: $link-color;
   text-decoration: $link-decoration;
-  border: none;
+  border-width: 0;
 
   @include hover() {
     color: $link-hover-color;
@@ -344,55 +366,64 @@ input[type="button"] {
 //
 
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+  @include button-size(
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $btn-line-height-lg,
+    $btn-border-radius-lg
+  );
 }
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  @include button-size(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $btn-line-height-sm,
+    $btn-border-radius-sm
+  );
 }
 
 //
-// Block button
-//
-
-.btn-block {
-  display: block;
-  width: 100%;
-
-  // Vertically space out multiple block buttons
-  + .btn-block {
-    margin-top: $btn-block-spacing-y;
-  }
-}
-
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  &.btn-block {
-    width: 100%;
-  }
-}
-
 // Filter Tabs
+//
 
 .btn-filter-tabs {
-  @include button-variant (
-    $transparent-b,     //background
-    $gray-1200,         //border
-    $black-7,           //hover-background
-    $gray-1200,         //hover-border
-    $gray-1100,           //active-background
-    $gray-1200           //active-border
-    );      
+  @include button-variant(
+    //background
+    $transparent-b,
+    //border
+    $gray-1200,
+    //hover-background
+    $black-7,
+    //hover-border
+    $gray-1200,
+    //active-background
+    $gray-1100,
+    //active-border
+    $gray-1200
+  );
 
   background-color: $transparent-b;
   color: $gray-1200;
   font-weight: $font-weight-normal;
-  font-size: $fs-2!important;
-  padding: $spacer / 2 12px!important;
-  max-height: $spacer * 2!important;
-       
+  font-size: $fs-2 !important;
+  padding: $spacer / 2 12px !important;
+  max-height: $spacer * 2 !important;
+
+  @include hover-focus {
+    background-color: $black-7;
+    border-color: $gray-1200;
+    color: $gray-1200;
+  }
+
+  @include active {
+    color: $white;
+    background-color: $gray-1100;
+    transform: scale(1) !important;
+  }
+
   &.disabled,
   &:disabled {
     color: $gray-1200;
@@ -400,34 +431,28 @@ input[type="button"] {
     border-color: $gray-1200;
     pointer-events: none;
   }
-
-  @include hover-focus {
-    background-color: $black-7;
-    border-color: $gray-1200;
-    color: $gray-1200;
-  }    
-  
-  @include active {
-    color: $white;
-    background-color: $gray-1100;
-    transform: scale(1)!important;
-  } 
 }
 
 // Color Selector White
 
 .btn-color-selector-white {
-  @include button-variant (
-    $white,           //background
-    $gray-300,          //border
-    $white,           //hover-background
-    $gray-300,         //hover-border
-    $white,         //active-background
-    $gray-1200          //active-border
-    );      
+  @include button-variant(
+    //background
+    $white,
+    //border
+    $gray-300,
+    //hover-background
+    $white,
+    //hover-border
+    $gray-300,
+    //active-background
+    $white,
+    //active-border
+    $gray-1200
+  );
 
   color: $transparent-b;
-  font-weight: $font-weight-normal;  
+  font-weight: $font-weight-normal;
   padding: $spacer / 4 !important;
   width: $spacer * 2 !important;
   height: $spacer * 2 !important;
@@ -436,20 +461,20 @@ input[type="button"] {
     display: none;
     font-size: $fs-5;
   }
+
   .ebf-line-diag {
     display: none;
     font-size: $fs-5;
   }
 
-
   &:active,
   &.active,
-  &[aria-pressed="true"] {
+  &[aria-pressed='true'] {
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
     .show > &.dropdown-toggle {
-      color: $gray-1200;      
-      transform: scale(1)!important;
+      color: $gray-1200;
+      transform: scale(1) !important;
 
       .ebf-check-mark {
         display: inline-block;
@@ -460,35 +485,41 @@ input[type="button"] {
   &.disabled,
   &:disabled {
     opacity: 1;
-    padding: 0!important;
+    padding: 0 !important;
     color: $gray-1200;
     background-color: $white;
     border-color: $gray-300;
 
     .ebf-check-mark {
       display: none;
-    }     
+    }
 
     .ebf-line-diag {
       display: inline-block;
-    }    
+    }
   }
 }
 
 // Color Selector Light
 
 .btn-color-selector-light {
-  @include button-variant (
-    $gray-300,           //background
-    $gray-300,          //border
-    $gray-300,           //hover-background
-    $gray-300,         //hover-border
-    $gray-300,         //active-background
-    $gray-1200          //active-border
-    );      
+  @include button-variant(
+    //background
+    $gray-300,
+    //border
+    $gray-300,
+    //hover-background
+    $gray-300,
+    //hover-border
+    $gray-300,
+    //active-background
+    $gray-300,
+    //active-border
+    $gray-1200
+  );
 
   color: $transparent-b;
-  font-weight: $font-weight-normal;  
+  font-weight: $font-weight-normal;
   padding: $spacer / 4 !important;
   width: $spacer * 2 !important;
   height: $spacer * 2 !important;
@@ -497,20 +528,20 @@ input[type="button"] {
     display: none;
     font-size: $fs-5;
   }
+
   .ebf-line-diag {
     display: none;
     font-size: $fs-5;
   }
 
-
   &:active,
   &.active,
-  &[aria-pressed="true"] {
+  &[aria-pressed='true'] {
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
     .show > &.dropdown-toggle {
-      color: $gray-1200;      
-      transform: scale(1)!important;
+      color: $gray-1200;
+      transform: scale(1) !important;
 
       .ebf-check-mark {
         display: inline-block;
@@ -521,35 +552,41 @@ input[type="button"] {
   &.disabled,
   &:disabled {
     opacity: 1;
-    padding: 0!important;
+    padding: 0 !important;
     color: $gray-1200;
     background-color: $gray-300;
     border-color: $gray-300;
 
     .ebf-check-mark {
       display: none;
-    }     
+    }
 
     .ebf-line-diag {
       display: inline-block;
-    }    
+    }
   }
 }
 
 // Color Selector Dark
 
 .btn-color-selector-dark {
-  @include button-variant (
-    $gray-1200,     //background
-    $gray-1200,          //border
-    $gray-1200,           //hover-background
-    $gray-1200,         //hover-border
-    $gray-1200,         //active-background
-    $gray-1200          //active-border
-    );      
+  @include button-variant(
+    //background
+    $gray-1200,
+    //border
+    $gray-1200,
+    //hover-background
+    $gray-1200,
+    //hover-border
+    $gray-1200,
+    //active-background
+    $gray-1200,
+    //active-border
+    $gray-1200
+  );
 
   color: $transparent-w;
-  font-weight: $font-weight-normal; 
+  font-weight: $font-weight-normal;
   padding: $spacer / 4 !important;
   width: $spacer * 2 !important;
   height: $spacer * 2 !important;
@@ -558,40 +595,41 @@ input[type="button"] {
     display: none;
     font-size: $fs-5;
   }
+
   .ebf-line-diag {
     display: none;
   }
 
   &:active,
   &.active,
-  &[aria-pressed="true"] {
+  &[aria-pressed='true'] {
     &:not(:disabled):not(.disabled):active,
     &:not(:disabled):not(.disabled).active,
     .show > &.dropdown-toggle {
       color: $white;
       background-color: $gray-1200;
-      transform: scale(1)!important;
+      transform: scale(1) !important;
 
       .ebf-check-mark {
         display: inline-block;
       }
     }
   }
-  
+
   &.disabled,
   &:disabled {
     opacity: 1;
-    padding: 0!important;
+    padding: 0 !important;
     color: $white;
     background-color: $gray-1200;
     border-color: $gray-1200;
 
     .ebf-check-mark {
       display: none;
-    }     
+    }
 
     .ebf-line-diag {
       display: inline-block;
-    }  
+    }
   }
 }
