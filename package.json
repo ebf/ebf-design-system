@@ -114,7 +114,7 @@
     "ember-qunit": "4.6.0",
     "ember-resolver": "8.0.2",
     "ember-responsive": "^4.0.1",
-    "ember-source": "3.23.1",
+    "ember-source": "https://s3.amazonaws.com/builds.emberjs.com/release/shas/8e57edd86d2c6a0171340b316b6c436b53efb7f6.tgz",
     "ember-source-channel-url": "3.0.0",
     "ember-sweetalert": "2.0.0-alpha.1",
     "ember-template-lint": "2.15.0",
