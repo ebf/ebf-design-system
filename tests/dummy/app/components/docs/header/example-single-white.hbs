@@ -1,0 +1,53 @@
+<DocsDemo as |demo|>
+  <demo.example @name="single-white.hbs">
+    <BsNavbar @type="light" @backgroundColor="white" @collapsed={{true}} class="border-top-primary" as |navbar|>
+      <div class="container">        
+        <a class="navbar-brand" href="#">
+          <img src="/telekom-logo-magenta.svg"/>
+          <span class="label">Erleben, was verbindet.</span>
+        </a>
+        <navbar.toggle class="ml-auto" />            
+        <navbar.content class="flex-grow-1">
+          <navbar.nav class="flex-nowrap" as |nav|>
+            <nav.item>
+              <nav.link-to @route="index">Home</nav.link-to>
+            </nav.item>
+            <nav.item>
+              <nav.link-to @route="index">Navbars</nav.link-to>
+            </nav.item>
+            <nav.dropdown as |dd|>
+              <dd.toggle>Dropdown  <span class="caret"></span></dd.toggle>
+              <dd.menu as |ddm|>
+                <ddm.item>
+                  <ddm.link-to @route="index">Home</ddm.link-to>
+                </ddm.item>
+                <ddm.item>
+                  <ddm.link-to @route="index">Navbars</ddm.link-to>
+                </ddm.item>
+              </dd.menu>
+            </nav.dropdown>
+          </navbar.nav>
+        </navbar.content>
+        <navbar.content class="ml-auto flex-grow-0">
+          <navbar.nav class="flex-nowrap" as |nav|>
+            <nav.item>
+              <nav.link-to @route="index"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
+            </nav.item>
+            <nav.item>
+              <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+            </nav.item>
+            <nav.item>
+              <nav.link-to @route="index"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
+            </nav.item>
+            <nav.item>
+              <nav.link-to @route="index"><Icon::Ebf @icon="ebf-link-01" /></nav.link-to>
+            </nav.item>
+          </navbar.nav>
+        </navbar.content>
+      </div>
+    </BsNavbar>
+  </demo.example>
+
+  {{demo.snippet "single-white.hbs"}}
+</DocsDemo>
+

@@ -7,6 +7,9 @@ const Router = AddonDocsRouter.extend({
 });
 
 Router.map(function() {
+  this.route('examples', function() {
+    this.route('login');
+  }) 
   docsRoute(this, function() {
     this.route('usage');
     this.route('colors');
@@ -14,9 +17,11 @@ Router.map(function() {
     this.route('typography');
     this.route('layout');
 
+    this.route('accordion');
     this.route('address');
     this.route('alerts');
     this.route('buttons');
+    this.route('breadcrumbs');
     this.route('cards');
     this.route('footer');
     this.route('form');

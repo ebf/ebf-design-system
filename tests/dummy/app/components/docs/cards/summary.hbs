@@ -1,8 +1,8 @@
 <DocsDemo as |demo|>
   <demo.example @name="summary-card.hbs">
     <div class="row">
-      <div class="col-6">
-        <Card::Summary class="mb-4" as |card|>
+      <div class="col-6 mb-4">
+        <Card::Summary as |card|>
           <card.item @label="Name" @value="Vladimir spasic" />
           <card.item @label="Email">
             <a href="mailto:vladimir.spasic@ebf.com">vladimir.spasic@ebf.com</a>
@@ -11,7 +11,7 @@
           <card.item @label="Profile" @value="001-3972834-2" />
         </Card::Summary>
       </div>
-      <div class="col-12">
+      <div class="col-12 mb-4">
         <Card::Summary @horizontal={{true}} as |card|>
           <card.item @label="Name" @value="Vladimir spasic" />
           <card.item @label="Email">

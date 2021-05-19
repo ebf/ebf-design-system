@@ -1,49 +1,212 @@
 # Buttons
 
-Custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+Custom button styles for actions in forms, dialogs, and more. Button sizes are constant and resized only on mobile. 
 
-This page shows some example usage of the `<BsButton>` component. For the full documentation please refer to the
-[Ember Bootstrap API Docs](https://www.ember-bootstrap.com/api/classes/Components.Button.html)
+This page shows some example usage of the `<BsButton>` component. 
 
-### Simple example
-{{docs/buttons/example}}
 
-### Available types
-{{docs/buttons}}
+## Primary Buttons
+<!-- {{docs/buttons/example}} -->
 
-### Outline buttons
-
-For a lighter touch, Buttons also come in outline-* variants with no background color.
-
-{{docs/buttons outline=true}}
-
-{{#docs-snippet name="your-snippet-name.hbs"}}
-  <BsButton @type="primary" @outline={{true}}>
-    primary
+{{#docs-demo as |demo|}}
+  {{#demo.example name="primary-button.hbs"}}
+  <BsButton @type="primary">
+    Primary 
   </BsButton>
-{{/docs-snippet}}
+  {{/demo.example}}
 
-### Sizing
+  {{demo.snippet "primary-button.hbs"}}
+{{/docs-demo}}
 
-Fancy larger or smaller buttons? Add classes "btn-sm", "btn-lg" for additional sizes.
+### Primary Button With Icon
 
-{{docs/buttons types=(array "primary" "secondary") size="sm"}}
-
-{{#docs-snippet name="your-snippet-name.hbs"}}
-  <BsButton @type="primary" @size="sm">
-    primary
+{{#docs-demo as |demo|}}
+  {{#demo.example name="primary-button-icon.hbs"}}
+  <BsButton @type="primary">
+    <Icon::Ebf @icon="ebf-download" />
+    Primary 
   </BsButton>
-{{/docs-snippet}}
+  {{/demo.example}}
 
-{{docs/buttons types=(array "primary" "secondary") size="lg"}}
+  {{demo.snippet "primary-button-icon.hbs"}}
+{{/docs-demo}}
 
-{{#docs-snippet name="your-snippet-name.hbs"}}
-  <BsButton @type="primary" @size="lg">
-    primary
+### Primary Button Icon Only
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="primary-button-icon-only.hbs"}}
+  <BsButton @type="primary" class="btn-icon">
+    <Icon::Ebf @icon="ebf-download" />
   </BsButton>
-{{/docs-snippet}}
+  {{/demo.example}}
 
-### Submit button
+  {{demo.snippet "primary-button-icon-only.hbs"}}
+{{/docs-demo}}
+
+### Primary Button Round
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="simple-icon-round-button.hbs"}}
+  <BsButton @type="primary" class="btn-icon btn-round">
+    <Icon::Ebf @icon="ebf-download" /> 
+  </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "simple-icon-round-button.hbs"}}
+{{/docs-demo}}
+
+
+## Outline Buttons
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-button.hbs"}}
+  <BsButton @type="outline">
+    Outline 
+  </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-button.hbs"}}
+{{/docs-demo}}
+
+### Outline Button with Icon
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-button-icon.hbs"}}
+  <BsButton @type="outline">
+    <Icon::Ebf @icon="ebf-download" />
+    Outline
+  </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-button-icon.hbs"}}
+{{/docs-demo}}
+
+### Outline Button With Icon Only
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-button-icon-only.hbs"}}
+    <BsButton @type="outline" class="btn-icon">
+      <Icon::Ebf @icon="ebf-download" />
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-button-icon-only.hbs"}}
+{{/docs-demo}}
+
+### Outline Button Round
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-button-icon-round.hbs"}}
+    <BsButton @type="outline"  class="btn-icon btn-round">
+      <Icon::Ebf @icon="ebf-download" />
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-button-icon-round.hbs"}}
+{{/docs-demo}}
+
+
+## Outline Buttons White
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-white.hbs" class="bg-gray-1200"}}
+    <BsButton @type="white" @outline={{true}}>
+      Outline White
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-white.hbs"}}
+{{/docs-demo}}
+
+
+### Outline Button with Icon
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-white-icon.hbs" class="bg-gray-1200"}}
+    <BsButton @type="white" @outline={{true}}>
+      <i class="ebf ebf-download mr-2"></i>
+      Outline White
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-white-icon.hbs"}}
+{{/docs-demo}}
+
+### Outline Button With Icon Only
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-white-icon-only.hbs" class="bg-gray-1200"}}
+    <BsButton @type="white" @outline={{true}} class="btn-icon">
+      <Icon::Ebf @icon="ebf-download" /> 
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-white-icon-only.hbs"}}
+{{/docs-demo}}
+
+### Outline Button Round
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="outline-white-icon-round-button.hbs" class="bg-gray-1200"}}
+    <BsButton @type="white" @outline={{true}} class="btn-icon btn-round">
+      <Icon::Ebf @icon="ebf-download" /> 
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "outline-white-icon-round-button.hbs"}}
+{{/docs-demo}}
+
+
+## Ghost Buttons
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="ghost-button.hbs"}}
+    <BsButton @type="ghost">
+      Ghost  
+    </BsButton>
+  {{/demo.example}}
+
+  {{demo.snippet "ghost-button.hbs"}}
+{{/docs-demo}}
+
+### Ghost Button with Icon
+
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="ghost-button-icon.hbs"}}
+    <BsButton @type="ghost">
+      <Icon::Ebf @icon="ebf-download" />
+      Ghost  
+    </BsButton>
+  {{/demo.example}}
+  {{demo.snippet "ghost-button-icon.hbs"}}
+{{/docs-demo}}
+
+
+### Ghost Button With Icon Only
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="ghost-button-icon-only.hbs"}}
+    <BsButton @type="ghost" class="btn-icon">
+      <Icon::Ebf @icon="ebf-download" />       
+    </BsButton>
+  {{/demo.example}}
+  {{demo.snippet "ghost-button-icon-only.hbs"}}
+{{/docs-demo}}
+
+### Ghost Button Round
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="ghost-button-icon-only-round.hbs"}}
+    <BsButton @type="ghost" class="btn-icon btn-round">
+      <Icon::Ebf @icon="ebf-download" />       
+    </BsButton>
+  {{/demo.example}}
+  {{demo.snippet "ghost-button-icon-only-round.hbs"}}
+{{/docs-demo}}
+
+
+## Submit button
 
 Used internaly by the `<ChangesetForm />` to display the submit button, but you can use in as you seem fit.
 It builds upon the `<BsButton />` aggregated state where the `<Loader />` is rendered when the state is `pending`.

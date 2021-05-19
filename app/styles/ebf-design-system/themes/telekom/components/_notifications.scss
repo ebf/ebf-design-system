@@ -1,0 +1,118 @@
+.notification-custom {
+  &,
+  .notification-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .notification-icon {
+    margin-left: $spacer / 4;
+    margin-right: $spacer / 4;
+    min-width: $font-size-lg * 2;
+    min-height: $font-size-lg * 2;
+    background: $transparent-b;
+    border-radius: 50%;
+    color: $gray-1200;
+    font-size: $font-size-lg;
+    transition: $smooth-color-animation-slow;
+  }
+
+  .notification-details {
+    flex-grow: 1;
+    font-size: $font-size-sm;
+    white-space: normal;
+    padding-left: $spacer / 2;
+    transition-duration: 0.5s;
+    transition-property: transform;
+  }
+
+  .notification-close {
+    align-self: flex-start;
+    transition-duration: 0.2s;
+    transition-property: transform;
+
+    @include hover-focus {
+      color: $black !important;
+    }
+  }
+}
+
+.notification-dropdown-toggle {
+  position: relative;
+}
+
+.notification-dropdown-menu {
+  min-width: 24rem;
+  max-width: 24rem;
+  max-height: none;
+
+  .dropdown-item {
+    padding: 0;
+
+    @include hover-focus {
+      border: 0 none;
+      outline: none;
+    }
+  }
+
+  .dropdown-divider {
+    margin: 0;
+  }
+
+  .notification-clear {
+    text-align: center;
+    padding: $spacer / 2 0;
+    display: block;
+    font-weight: $font-weight-bold;
+  }
+
+  .notification-custom {
+    padding: $dropdown-item-padding-y;
+
+    @include hover-focus-active {
+      background: $gray-100;
+
+      .notification-details {
+        transform: translateX($spacer / 2);
+      }
+
+      .notification-details,
+      .notification-close {
+        color: $gray-800;
+      }
+    }
+  }
+}
+
+// Badge Notification
+
+.badge-notification {
+  display: block !important;
+  width: $spacer / 2;
+  height: $spacer / 2;
+  border-radius: $spacer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  padding: 0;
+
+  &::after {
+    content: '';
+    width: $spacer;
+    height: $spacer;
+    border-radius: $spacer;
+    display: block;
+    position: relative;
+    top: -4px;
+    right: 4px;
+    z-index: -1 !important;
+    background: inherit;
+    opacity: 0.2;
+    transform: scale(0);
+    transform-origin: center;
+    transition: $smooth-scaling-animation-dots;
+    animation: pulsate-animation-s 2.5s ease-in-out infinite both;
+  }
+}

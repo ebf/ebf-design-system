@@ -1,6 +1,6 @@
-<div class="ebf-card-summary {{if @horizontal "ebf-card-summary-horizontal"}} card" ...attributes>
+<div class="card-summary {{if @horizontal "card-summary-horizontal"}} card" ...attributes>
   <div class="card-body">
-    <ul class="list-group list-group-flush">
+    <ul class="list-group list-group-flush mb-0">
       {{yield (hash
         item=(component "card/summary-item")
       )}}

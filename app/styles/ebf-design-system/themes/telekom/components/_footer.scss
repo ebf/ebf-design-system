@@ -1,0 +1,177 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+  font-size: $footer-font-size;
+  padding: $footer-padding-y $footer-padding-x;
+  width: 100%;
+
+  .label {
+    display: block;
+    font-weight: $font-weight-bolder;
+    font-size: $fs-1;
+    line-height: $line-height-base;
+    text-transform: $uppercase;
+    text-decoration: none;
+    position: relative;
+    top: 2px;
+    margin-left: $grid-gutter-width;
+  }
+
+  .footer-brand {
+    img {
+      height: $spacer * 2.375;
+      width: auto;
+    }
+  }
+
+  .nav-link {
+    @include hover-focus-active() {
+      text-decoration: underline;
+    }
+
+    &.disabled {
+      color: $gray-600;
+    }
+  }
+}
+
+// White links against a dark background
+.footer-dark {
+  color: $footer-dark-color;
+
+  .label {
+    color: $navbar-dark-brand-color;
+  }
+
+  hr {
+    border-color: $footer-dark-border-color;
+    margin-top: $spacer * 1.5;
+    margin-bottom: $spacer * 1.5;
+    border-width: $footer-border-width;
+  }
+
+  .footer-brand {
+    color: $navbar-dark-brand-color;
+
+    @include hover-focus() {
+      color: $navbar-dark-brand-hover-color;
+    }
+  }
+
+  .nav {
+    .nav-link {
+      color: $navbar-dark-color;
+
+      @include hover-focus() {
+        color: $navbar-dark-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-dark-disabled-color;
+      }
+    }
+
+    .nav-item {
+      @include media-breakpoint-down(sm) {
+        .nav-link {
+          padding: $spacer/2;
+        }
+
+        &:first-of-type {
+          .nav-link {
+            padding-left: 0;
+          }
+        }
+
+        &:last-of-type {
+          .nav-link {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-dark-active-color;
+    }
+  }
+
+  .navbar-text {
+    color: $navbar-dark-color;
+
+    a {
+      color: $navbar-dark-active-color;
+
+      @include hover-focus() {
+        color: $navbar-dark-active-color;
+      }
+    }
+  }
+}
+
+// Dark links against a light background
+.footer-light {
+  color: $footer-light-color;
+
+  .label {
+    color: $primary;
+  }
+
+  hr {
+    border-color: $footer-light-border-color;
+    margin-top: $spacer * 1.5;
+    margin-bottom: $spacer * 1.5;
+    border-width: $footer-border-width;
+  }
+
+  .footer-brand {
+    color: $navbar-light-brand-color;
+
+    @include hover-focus() {
+      color: $navbar-light-brand-hover-color;
+    }
+  }
+
+  .nav {
+    .nav-link {
+      color: $navbar-light-color;
+
+      @include hover-focus() {
+        color: $navbar-light-hover-color;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding: $spacer/2;
+      }
+
+      &.disabled {
+        color: $navbar-light-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-light-active-color;
+    }
+  }
+
+  .navbar-text {
+    color: $navbar-light-color;
+
+    a {
+      color: $navbar-light-active-color;
+
+      @include hover-focus() {
+        color: $navbar-light-active-color;
+      }
+    }
+  }
+}

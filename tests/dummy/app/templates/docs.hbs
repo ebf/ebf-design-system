@@ -1,3 +1,7 @@
+<DocsHeader>
+  {{theme-switcher}}
+</DocsHeader>
+
 <DocsViewer as |viewer|>
   <viewer.nav as |nav|>
     {{nav.section "Introduction"}}
@@ -9,9 +13,11 @@
     {{nav.item 'Layout' 'docs.layout'}}
 
     {{nav.section "Components"}}
+    {{nav.item "Accordion" "docs.accordion"}}
     {{nav.item "Address" "docs.address"}}
     {{nav.item "Alerts" "docs.alerts"}}
     {{nav.item "Buttons" "docs.buttons"}}
+    {{nav.item "Breadcrumbs" "docs.breadcrumbs"}}
     {{nav.item "Cards" "docs.cards"}}
     {{nav.item "Errors" "docs.errors"}}
     {{nav.item "Footer" "docs.footer"}}
@@ -45,3 +51,13 @@
     {{outlet}}
   </viewer.main>
 </DocsViewer>
+
+<Layout::Footer
+  @fluid={{false}}
+  @dark={{false}}
+  @copyright="EBF GmbH"
+  
+  @label="EBF GmbH"
+  @version="1.0.0"
+  class="shadow" 
+/>

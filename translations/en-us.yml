@@ -90,7 +90,7 @@ notifications:
 pages:
   error:
     home-link: Home
-    headline: Huston!? We have a problem!
+    headline: Houston!? We have a problem!
     support-link: Contact support
 
 #### Error Messages ####

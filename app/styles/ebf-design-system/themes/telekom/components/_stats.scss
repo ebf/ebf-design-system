@@ -1,0 +1,14 @@
+.stats {
+  &:last-child() {
+    margin-bottom: 0 !important;
+  }
+}
+
+.stats-inline .stats-row {
+  border-bottom-width: $border-width;
+  padding: $stats-padding-inline-y $stats-padding-inline-x;
+
+  &:first-of-type {
+    border-top-width: $border-width;
+  }
+}

@@ -6,23 +6,27 @@ For the full documentation please refer to the [Bootstrap Docs](https://getboots
 
 ## Primary colors
 
-Our primary palette is comprised of neutrals, white, and blue. These colors are present across most touch points from marketing to product.
+Our primary palette is comprised of neutrals, white, and primary theme colors. 
 
-### Grays
+### Primary Theme Colors
+
+{{docs/colors type="primary_colors"}}
+
+### Gray Shades
 
 {{docs/colors type="grays"}}
 
-### Blues
+### Function Colors
 
-{{docs/colors type="blues"}}
+{{docs/colors type="function_colors"}}
 
 ## Secondary colors
 
 Our secondary palette is comprised of orange, red, green, blue and yellow. These colors are present across most touch points in products.
 
-### Reds
+### Blues
 
-{{docs/colors type="reds"}}
+{{docs/colors type="blues"}}
 
 ### Oranges
 
@@ -36,6 +40,6 @@ Our secondary palette is comprised of orange, red, green, blue and yellow. These
 
 {{docs/colors type="greens"}}
 
-### Purples
+### Link Color
 
-{{docs/colors type="purples"}}
+{{docs/colors type="link_colors"}}

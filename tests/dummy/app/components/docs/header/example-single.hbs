@@ -1,0 +1,16 @@
+<DocsDemo as |demo|>
+  <demo.example @name="single.hbs">
+    <BsNavbar @type="dark" @backgroundColor="primary" @collapsed={{true}} as |navbar|>
+      <div class="navbar-header mr-auto">
+        <a class="navbar-brand" href="#">
+          <img src="/telekom-logo-white.svg"/>
+          <span class="label">Erleben, was verbindet.</span>
+        </a>
+        <navbar.toggle />
+      </div>     
+      <LanguageSwitcher @white={{true}} @size="sm" />
+    </BsNavbar>
+  </demo.example>
+
+  {{demo.snippet "single.hbs"}}
+</DocsDemo>

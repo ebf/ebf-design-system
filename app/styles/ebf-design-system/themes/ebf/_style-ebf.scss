@@ -1,14 +1,62 @@
 //EBF Theme
 
-@import 'colors';
-@import 'fonts';
-@import 'variables/theme-variables-overwrites';
-@import 'variables/theme-variables';
+// Import Colors, Fonts and Icon Webfonts
+// These Must be Imported First!
+
+@import 'colors/colors';
+@import 'fonts/fonts';
+@import 'fonts/icons-webfont';
+
+// Import Bootstrap Mixins and Functions
+
+@import 'ember-bootstrap/mixins';
 @import 'ember-bootstrap/functions';
 
-// Import Variables
-@import '../../variables';
+// Import Theme Variables
+@import 'variables/variables';
+
+// Import Bootstrap Variables
 @import 'ember-bootstrap/variables';
 
+// Bootstrap components
 
-// Import Variables Dependant Styles
+@import 'ember-bootstrap/root';
+@import 'ember-bootstrap/reboot';
+//@import 'ember-bootstrap/type';
+//@import 'ember-bootstrap/alert';
+//@import 'ember-bootstrap/buttons';
+//@import 'ember-bootstrap/card';
+//@import 'ember-bootstrap/close';
+@import 'ember-bootstrap/images';
+@import 'ember-bootstrap/code';
+@import 'ember-bootstrap/grid';
+@import 'ember-bootstrap/tables';
+@import 'ember-bootstrap/forms';
+//@import 'ember-bootstrap/functions';
+@import 'ember-bootstrap/transitions';
+@import 'ember-bootstrap/dropdown';
+@import 'ember-bootstrap/button-group';
+@import 'ember-bootstrap/input-group';
+@import 'ember-bootstrap/custom-forms';
+@import 'ember-bootstrap/nav';
+@import 'ember-bootstrap/navbar';
+@import 'ember-bootstrap/pagination';
+@import 'ember-bootstrap/badge';
+@import 'ember-bootstrap/jumbotron';
+@import 'ember-bootstrap/progress';
+@import 'ember-bootstrap/media';
+@import 'ember-bootstrap/list-group';
+@import 'ember-bootstrap/modal';
+@import 'ember-bootstrap/tooltip';
+//@import 'ember-bootstrap/popover';
+@import 'ember-bootstrap/spinners';
+@import 'ember-bootstrap/carousel';
+@import 'ember-bootstrap/utilities';
+@import 'ember-bootstrap/print';
+
+// Custom components
+@import '../mixins/mixins';
+@import '../mixins/caret';
+
+@import 'utilities/utilities';
+@import 'components/components';

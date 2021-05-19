@@ -1,14 +1,14 @@
 <BsDropdown @inNav={{@inNav}} @direction={{@direction}} as |dd|>
-  <dd.toggle>
+  <dd.button class="align-items-center {{bs-size-class "btn" @size}} {{if @white "btn-outline-white" "btn-outline"}}">
     {{#if @showFlags}}
       <LanguageSwitcher::Image
         @locale={{this.active}}
         @label={{t (concat "locales." this.active.iso)}}
-        class="d-inline"
+        class="d-inline mr-1"
       />
     {{/if}}
     {{uppercase this.active.language}}
-  </dd.toggle>
+  </dd.button>
   <dd.menu>
     {{#each this.available as |locale|}}
       {{#let (t (concat "locales." locale.iso)) as |label|}}

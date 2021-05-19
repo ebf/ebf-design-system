@@ -8,45 +8,15 @@ Page contanining various input form components
   {{#demo.example name="counter-simple.hbs"}}
     <Inputs::Counter
       @label="Size"
-      @placeholder="Enter your desired size"
-      @min="10"
-      @max="20"
+      @placeholder="Enter your desired amount"
+      @min="1"
+      @max="999"
       @value={{this.value}}
       @onChange={{fn (mut this.value)}}
     />
   {{/demo.example}}
 
   {{demo.snippet "counter-simple.hbs"}}
-{{/docs-demo}}
-
-### Sizing
-
-Simply pass the `input-group-sm` or `input-group-xl` class to the component to size the counter component
-
-{{#docs-demo class="bg-white" as |demo|}}
-  {{#demo.example name="counter-size.hbs"}}
-    <Inputs::Counter
-      class="input-group-sm my-3"
-      @label="Size"
-      @placeholder="Enter your desired size"
-      @min="10"
-      @max="20"
-      @value={{this.value}}
-      @onChange={{fn (mut this.value)}}
-    />
-
-    <Inputs::Counter
-      class="input-group-lg my-3"
-      @label="Size"
-      @placeholder="Enter your desired size"
-      @min="10"
-      @max="20"
-      @value={{this.value}}
-      @onChange={{fn (mut this.value)}}
-    />
-  {{/demo.example}}
-
-  {{demo.snippet "counter-size.hbs"}}
 {{/docs-demo}}
 
 ## Search field
@@ -59,12 +29,12 @@ Simply pass the `input-group-sm` or `input-group-xl` class to the component to s
       @onChange={{fn (mut this.search)}}
       class="form-group"
     />
-
-    <p>Search term: {{this.search}}</p>
+    <p class="mt-4">Search term: <span class="text-success">{{this.search}}</span></p>
   {{/demo.example}}
 
   {{demo.snippet "search-simple.hbs"}}
 {{/docs-demo}}
+
 
 ### With reset button
 
@@ -77,9 +47,42 @@ Simply pass the `input-group-sm` or `input-group-xl` class to the component to s
       @onReset={{fn (mut this.search) null}}
       class="form-group"
     />
-
-    <p>Search term: {{this.search}}</p>
+    <p class="mt-4">Search term: <span class="text-success">{{this.search}}</span></p>
   {{/demo.example}}
 
   {{demo.snippet "search-reset.hbs"}}
+{{/docs-demo}}
+
+### Large Search
+
+{{#docs-demo class="bg-white" as |demo|}}
+  {{#demo.example name="search-large.hbs"}}
+     <Inputs::Search
+      @placeholder="Enter your search query"
+      @size="lg"
+      @value={{this.search}}
+      @onChange={{fn (mut this.search)}}
+      class="form-group"
+    />
+    <p class="mt-4">Search term: <span class="text-success">{{this.search}}</span></p>
+  {{/demo.example}}
+
+  {{demo.snippet "search-large.hbs"}}
+{{/docs-demo}}
+
+### Small Search
+
+{{#docs-demo class="bg-white" as |demo|}}
+  {{#demo.example name="search-small.hbs"}}
+     <Inputs::Search
+      @placeholder="Enter your search query"
+      @size="sm"
+      @value={{this.search}}
+      @onChange={{fn (mut this.search)}}
+      class="form-group"
+    />
+    <p class="mt-4">Search term: <span class="text-success">{{this.search}}</span></p>
+  {{/demo.example}}
+
+  {{demo.snippet "search-small.hbs"}}
 {{/docs-demo}}

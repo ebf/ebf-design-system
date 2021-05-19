@@ -1,14 +1,14 @@
 {{#component (bs-default @dropdownComponent (component "bs-dropdown")) closeOnMenuClick=false as |dd|}}
-  <dd.toggle>
-    <span class="ebf-notification-drodown-toggle">
+  <dd.toggle class="dropdown-toggle-notification nav-link">
+    <span class="notification-dropdown-toggle">
       <Icon::Ebf @icon="ebf-bell" />
-      <span class="ebf-badge-notification badge {{if @notifications 'badge-danger' ''}}"></span>
+      <span class="badge-notification {{if @notifications 'badge-danger' ''}}"></span>
     </span>
-    <span class="ml-1">
+    <span class="notification-label ml-1">
       {{bs-default @triggerLabel (t "notifications.dropdown.label")}}
     </span>
   </dd.toggle>
-  <dd.menu class="ebf-notification-dropdown-menu" as |ddm|>
+  <dd.menu class="notification-dropdown-menu" as |ddm|>
     {{#if @notifications}}
       {{#each @notifications as |notification|}}
         <button type="button" class="dropdown-item" role="button" {{on "click" (disable-bubbling (fn this.select notification dd))}}>
@@ -20,8 +20,8 @@
         <ddm.divider />
       {{/each}}
 
-      <button type="button" class="dropdown-item py-2 text-center" role="button" {{on "click" (disable-bubbling (fn @onClear))}}>
-        <small class="font-weight-bold text-uppercase ">
+      <button type="button" class="dropdown-item" role="button" {{on "click" (disable-bubbling (fn @onClear))}}>
+        <small class="notification-clear">
           {{bs-default @clearLabel (t "notifications.dropdown.clear")}}
         </small>
       </button>

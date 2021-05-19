@@ -1,0 +1,695 @@
+.btn {
+  // Loading indicator: compensate for the border width, color and size
+
+  .loading-spinner {
+    .loading-icon {
+      @include loader-size($btn-font-size);
+      border-top-color: $white;
+      border-left-color: $white;
+      margin: -2px auto !important;
+    }
+  }
+
+  &.btn-lg .loading-spinner .loading-icon {
+    @include loader-size($btn-font-size-lg);
+  }
+
+  &.btn-sm .loading-spinner .loading-icon {
+    @include loader-size($btn-font-size-sm);
+  }
+}
+
+.btn-icon {
+  &.btn-lg {
+    @include button-size(
+      $btn-padding-y-lg,
+      $btn-padding-y-lg,
+      $btn-font-size-lg,
+      $btn-line-height-lg,
+      $btn-border-radius-lg
+    );
+  }
+
+  &.btn-sm {
+    @include button-size(
+      $btn-padding-y-sm,
+      $btn-padding-y-sm,
+      $btn-font-size-sm,
+      $btn-line-height-sm,
+      $btn-border-radius-sm
+    );
+  }
+}
+
+/* Sweet alert buttons */
+.swal2-popup .swal2-styled {
+  &.swal2-confirm,
+  &.swal2-cancel {
+    @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  }
+
+  &.swal2-confirm {
+    background-color: $primary !important;
+  }
+
+  &.swal2-cancel {
+    background-color: $secondary !important;
+    color: darken(theme-color('secondary'), 50%) !important;
+  }
+}
+
+.btn {
+  &.disabled,
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.file-upload-input {
+  &::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+  &::before {
+    content: 'Choose file';
+    // @extend .btn;
+    // @extend .btn-sm;
+    // @extend .btn-primary;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+// Refactor
+
+$btn-custom-transition: color 0.1s ease, background-color 0.2s ease,
+  border-color 0.15s cubic-bezier(0.44, -0.48, 0.465, 1.515), box-shadow 0.15s cubic-bezier(0.44, -0.48, 0.465, 1.515),
+  transform 0.15s cubic-bezier(0.44, -0.48, 0.465, 1.515) !default;
+
+// Primary
+
+.btn-primary {
+  @include button-variant(
+    $primary,
+    //background
+    $primary,
+    //border
+    $primary-hover,
+    //hover-background
+    $primary-hover,
+    //hover-border
+    $primary-active,
+    //active-background
+    $primary-active //active-border
+  );
+}
+
+// Outline Variant
+
+.btn-outline,
+.btn-outline-outline {
+  @include button-variant(
+    $transparent-b,
+    //background
+    $gray-900,
+    //border
+    $black-7,
+    //hover-background
+    $gray-900,
+    //hover-border
+    $black-15,
+    //active-background
+    $gray-900 //active-border
+  );
+
+  color: $gray-1200 !important;
+}
+
+// Outline Variant White
+
+.btn-outline-white {
+  @include button-variant(
+    $transparent-w,
+    //background
+    $white,
+    //border
+    $white-7,
+    //hover-background
+    $white,
+    //hover-border
+    $white-15,
+    //active-background
+    $white //active-border
+  );
+
+  color: $white !important;
+}
+
+// Ghost Button
+
+.btn-ghost {
+  @include button-variant(
+    $transparent-b,
+    //background
+    $transparent-b,
+    //border
+    $black-7,
+    //hover-background
+    $transparent-b,
+    //hover-border
+    $black-15,
+    //active-background
+    $transparent-b //active-border
+  );
+
+  color: $gray-1200 !important;
+}
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+// Outline Fallbacks
+
+.btn-white {
+  @include button-variant(
+    $white,
+    //background
+    $white,
+    //border
+    $gray-100,
+    //hover-background
+    $gray-100,
+    //hover-border
+    $gray-200,
+    //active-background
+    $gray-200 //active-border
+  );
+
+  color: $gray-1200 !important;
+}
+
+.btn-outline-ghost {
+  @include button-variant(
+    $transparent-b,
+    //background
+    $transparent-b,
+    //border
+    $black-7,
+    //hover-background
+    $transparent-b,
+    //hover-border
+    $black-15,
+    //active-background
+    $transparent-b //active-border
+  );
+
+  color: $gray-1200 !important;
+}
+
+// Round Button
+
+.btn {
+  &.btn-icon {
+    padding-right: $fs-3;
+    padding-left: $fs-3;
+
+    &.btn-round {
+      border-radius: $spacer * 2;
+      max-width: 2.625rem;
+      width: 2.625rem;
+      height: 2.625rem;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      @include media-breakpoint-down(md) {
+        border-radius: $spacer * 2;
+        max-width: $spacer * 3;
+        width: $spacer * 3;
+        height: $spacer * 3;
+        padding-left: $fs-1;
+        padding-right: $fs-1;
+      }
+    }
+  }
+}
+
+// General Button Styles and Height Overrides
+
+.btn {
+
+  @include button-size(
+    0.6875rem,
+     //padding-
+    1.375rem,
+     //padding-
+    1.125rem,
+     // font-siz
+    1,
+     //line-heigh
+    4px  // border-radiu
+  );
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: $btn-custom-transition;
+  transform-origin: center;
+  border-width: $input-btn-border-width;
+  border-style: solid;
+  transform: scale(1);
+
+  @include media-breakpoint-down(md) {
+
+    @include button-size(
+      0.875rem,
+       //padding-
+      1.375rem,
+       //padding-
+      1.125rem!important,
+       // font-siz
+      1,
+       //line-heigh
+      4px  // border-radiu
+    );
+    max-height: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+  }
+
+  &:not(:disabled):not(.disabled) {
+    &:active,
+    &.active {
+      transform: scale(0.92);
+
+      &:focus {
+      }
+    }
+  }
+}
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link,
+.btn-outline-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  text-decoration: $link-decoration;
+  border: none;
+
+  @include hover() {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  // No need for an active state here
+}
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size(
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $btn-line-height-lg,
+    $btn-border-radius-lg
+  );
+}
+
+.btn-sm {
+  @include button-size(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $btn-line-height-sm,
+    $btn-border-radius-sm
+  );
+}
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+// Filter Tabs
+
+.btn-filter-tabs {
+  @include button-variant(
+    $transparent-b,
+     //backgroun
+    $gray-1200,
+     //borde
+    $black-7,
+     //hover-backgroun
+    $gray-1200,
+     //hover-borde
+    $gray-1100,
+     //active-backgroun
+    $gray-1200  //active-borde
+  );
+
+  background-color: $transparent-b;
+  color: $gray-1200;
+  font-weight: $font-weight-normal;
+  font-size: $fs-2 !important;
+  padding: $spacer / 2 12px !important;
+  max-height: $spacer * 2 !important;
+
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus {
+    &:not(:disabled):not(.disabled):hover,
+    &:not(:disabled):not(.disabled).hover,
+    &:not(:disabled):not(.disabled):focus,
+    &:not(:disabled):not(.disabled).focus,
+    .show > &.dropdown-toggle {
+      background-color: $black-7;
+      border-color: $gray-1200;
+      color: $gray-1200;
+    }
+  }
+
+  &:active,
+  &.active,
+  &[aria-pressed='true'] {
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+      color: $white;
+      background-color: $gray-1100;
+      transform: scale(1) !important;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $gray-1200;
+    background-color: $white;
+    border-color: $gray-1200;
+  }
+}
+
+// Color Selector White
+
+.btn-color-selector-white {
+  @include button-variant(
+    $white,
+     //backgroun
+    $gray-300,
+     //borde
+    $white,
+     //hover-backgroun
+    $gray-300,
+     //hover-borde
+    $white,
+     //active-backgroun
+    $gray-1200  //active-borde
+  );
+
+  color: $transparent-b;
+  font-weight: $font-weight-normal;
+  padding: $spacer / 4 !important;
+  width: $spacer * 2 !important;
+  height: $spacer * 2 !important;
+
+  .ebf-check-mark {
+    display: none;
+    font-size: $fs-5;
+  }
+
+  .ebf-line-diag {
+    display: none;
+    font-size: $fs-5;
+  }
+
+  &:active,
+  &.active,
+  &[aria-pressed='true'] {
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+      color: $gray-1200;
+      transform: scale(1) !important;
+
+      .ebf-check-mark {
+        display: inline-block;
+      }
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: 1;
+    padding: 0 !important;
+    color: $gray-1200;
+    background-color: $white;
+    border-color: $gray-300;
+
+    .ebf-check-mark {
+      display: none;
+    }
+
+    .ebf-line-diag {
+      display: inline-block;
+    }
+  }
+}
+
+// Color Selector Light
+
+.btn-color-selector-light {
+  @include button-variant(
+    $gray-300,
+     //backgroun
+    $gray-300,
+     //borde
+    $gray-300,
+     //hover-backgroun
+    $gray-300,
+     //hover-borde
+    $gray-300,
+     //active-backgroun
+    $gray-1200  //active-borde
+  );
+
+  color: $transparent-b;
+  font-weight: $font-weight-normal;
+  padding: $spacer / 4 !important;
+  width: $spacer * 2 !important;
+  height: $spacer * 2 !important;
+
+  .ebf-check-mark {
+    display: none;
+    font-size: $fs-5;
+  }
+
+  .ebf-line-diag {
+    display: none;
+    font-size: $fs-5;
+  }
+
+  &:active,
+  &.active,
+  &[aria-pressed='true'] {
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+      color: $gray-1200;
+      transform: scale(1) !important;
+
+      .ebf-check-mark {
+        display: inline-block;
+      }
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: 1;
+    padding: 0 !important;
+    color: $gray-1200;
+    background-color: $gray-300;
+    border-color: $gray-300;
+
+    .ebf-check-mark {
+      display: none;
+    }
+
+    .ebf-line-diag {
+      display: inline-block;
+    }
+  }
+}
+
+// Color Selector Dark
+
+.btn-color-selector-dark {
+  @include button-variant(
+    $gray-1200,
+     //backgroun
+    $gray-1200,
+     //borde
+    $gray-1200,
+     //hover-backgroun
+    $gray-1200,
+     //hover-borde
+    $gray-1200,
+     //active-backgroun
+    $gray-1200  //active-borde
+  );
+
+  color: $transparent-w;
+  font-weight: $font-weight-normal;
+  padding: $spacer / 4 !important;
+  width: $spacer * 2 !important;
+  height: $spacer * 2 !important;
+
+  .ebf-check-mark {
+    display: none;
+    font-size: $fs-5;
+  }
+
+  .ebf-line-diag {
+    display: none;
+  }
+
+  &:active,
+  &.active,
+  &[aria-pressed='true'] {
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show > &.dropdown-toggle {
+      color: $white;
+      background-color: $gray-1200;
+      transform: scale(1) !important;
+
+      .ebf-check-mark {
+        display: inline-block;
+      }
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: 1;
+    padding: 0 !important;
+    color: $white;
+    background-color: $gray-1200;
+    border-color: $gray-1200;
+
+    .ebf-check-mark {
+      display: none;
+    }
+
+    .ebf-line-diag {
+      display: inline-block;
+    }
+  }
+}
+
+// .dropdown-toggle {
+//   &::after {
+//     @extend %ebf;
+//     content: $ebf-chevron-down;
+//     border: 0!important;
+//     transform-origin: center;
+//     transition: transform .2s ease-in-out;
+//   }
+
+//   &[aria-expanded="false"] {
+//     &::after {
+//       transform: rotate(0deg);
+//     }
+//   }
+
+//   &[aria-expanded="true"] {
+//     &::after {
+//       transform: rotate(180deg);
+//     }
+//   }
+// }

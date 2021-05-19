@@ -1,14 +1,14 @@
-<div class="ebf-notification">
-  <div class="ebf-notification-icon">
+<div class="notification-custom">
+  <div class="notification-icon">
     <Icon::Ebf @icon={{bs-default @icon "ebf-bell"}} />
   </div>
-  <div class="ebf-notification-details">
+  <div class="notification-details">
     {{#if @title}}
-      <p class="mb-1 font-weight-bolder">{{@title}}</p>
+      <p class="mb-2 font-weight-bolder">{{@title}}</p>
     {{/if}}
 
     {{#if @text}}
-      <p class="mb-1">{{@text}}</p>
+      <p class="mb-2">{{@text}}</p>
     {{/if}}
 
     {{#if @date}}
@@ -16,8 +16,8 @@
     {{/if}}
   </div>
   {{#if @onDismiss}}
-    <div class="ebf-notification-close">
-      <Icon::Ebf @icon="ebf-plus p-1" @onClick={{disable-bubbling (fn @onDismiss)}} />
+    <div class="notification-close">
+      <Icon::Ebf @icon="ebf-cancel p-1" @onClick={{disable-bubbling (fn @onDismiss)}} />
     </div>
   {{/if}}
 </div>

@@ -1,0 +1,79 @@
+.breadcrumb {
+  @include font-size($breadcrumb-font-size);
+  @include border-radius($breadcrumb-border-radius);
+  display: flex;
+  flex-wrap: wrap;
+  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+  margin-bottom: $breadcrumb-margin-bottom;
+  list-style: none;
+  background-color: $breadcrumb-bg;
+  margin-bottom: 0 !important;
+}
+
+.breadcrumb-item {
+  display: flex;
+  font-weight: $font-weight-normal;
+  margin-bottom: 0 !important;
+
+  @include hover-focus-active {
+    font-weight: $font-weight-bold;
+
+    a {
+      text-decoration: none;
+      color: $breadcrumb-active-color;
+    }
+  }
+
+  a {
+    color: $gray-1200;
+    text-align: center;
+
+    &::after {
+      content: attr(data-text);
+      font-weight: $font-weight-bold;
+      display: block;
+      visibility: hidden;
+      overflow: hidden;
+      height: 0;
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+
+  // The separator between breadcrumbs (by default, a forward-slash: "/")
+  + .breadcrumb-item {
+    padding-left: $breadcrumb-item-padding;
+
+    @include active {
+      font-weight: $font-weight-bold;
+
+      &::before {
+        //content: $ebf-chevron-left !important;
+      }
+    }
+
+    &::before {
+      @extend %ebf;
+      float: left; // Suppress inline spacings and underlining of the separator
+      padding-right: $breadcrumb-divider-padding;
+      color: $breadcrumb-divider-color;
+      content: $breadcrumb-divider;
+      font-size: $fs-1;
+      line-height: 1.66;
+    }
+  }
+
+  // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
+  // without `<ul>`s. The `::before` pseudo-element generates an element
+  // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
+  //
+  // To trick IE into suppressing the underline, we give the pseudo-element an
+  // underline and then immediately remove it.
+  + .breadcrumb-item:hover::before {
+    text-decoration: underline;
+  }
+  // stylelint-disable-next-line no-duplicate-selectors
+  + .breadcrumb-item:hover::before {
+    text-decoration: none;
+  }
+}

@@ -11,8 +11,32 @@ To know more how `<BsForm />` component works and what are the options please re
 
 Concepts behind `ember-changeset` and how validations can be configured, please refer to the following docs:
 
-* [Changeset](https://github.com/poteto/ember-changeset)
-* [Changeset validations](https://github.com/poteto/ember-changeset-validations)
+[Changeset](https://github.com/poteto/ember-changeset)
+
+[Changeset validations](https://github.com/poteto/ember-changeset-validations)
+
+
+## Custom Controls
+
+These are default bootstrap <code>html</code> coded custom controls - I couldn't find it in Ember docs, so they need to be redone as custom components in <code>Ember</code> syntax.
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="form-controls.hbs"}}
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+      <label class="custom-control-label" for="customCheck">Check this custom checkbox</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" id="customRadio4" name="example4" value="customEx">
+      <label class="custom-control-label" for="customRadio4">Custom radio</label>
+    </div>
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="customSwitch1">
+      <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+    </div>
+  {{/demo.example}}
+  {{demo.snippet "form-controls.hbs"}}
+{{/docs-demo}}
 
 ## Simple form
 
@@ -31,7 +55,6 @@ Concepts behind `ember-changeset` and how validations can be configured, please 
         >
           <el.control name="email" placeholder="Enter your email address" />
         </form.element>
-
         <form.element
           @controlType="password"
           @label="Password"
@@ -40,7 +63,6 @@ Concepts behind `ember-changeset` and how validations can be configured, please 
         >
           <el.control name="password" placeholder="Enter your password" />
         </form.element>
-
         <form.element
           @controlType="checkbox"
           @label="Remember me"

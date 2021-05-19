@@ -2,8 +2,10 @@
   <demo.example @name="hover-card.hbs">
     <div class="row">
       <div class="col-6">
-        <Card class="h-100" as |card|>
-          <card.icon @icon="ebf-device-smartphone" />
+        <Card class="card-primary" as |card|>      
+          <div class="card-image">
+            <img src="https://dummyimage.com/48x48/7c7c7c/ffffff.png" alt="Card Image">
+          </div>   
           <card.title>
             Card with hover effect
           </card.title>
@@ -11,14 +13,17 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           </card.description>
         </Card>
-        </div>
-      <div class="col-6">
-        <Card @effect={{true}} class="h-100" as |card|>
-          <card.icon @icon="ebf-device-smartphone" />
-          <card.title @title="Card with background effect" />
-          <card.description @value="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor" />
-        </Card>
       </div>
+      <div class="col-6">
+        <Card class="card-secondary" as |card|>         
+          <card.title>
+            Card with hover effect
+          </card.title>
+          <card.description>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          </card.description>
+        </Card>
+      </div>      
     </div>
   </demo.example>
 
