@@ -81,7 +81,7 @@
   max-height: $spacer * 4;
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   .navbar {
     max-height: none;
   }
