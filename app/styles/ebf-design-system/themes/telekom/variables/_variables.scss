@@ -957,8 +957,8 @@ $dropdown-inner-border-radius:      0 !default;
 
 $dropdown-divider-bg:               $border-color !default;
 $dropdown-divider-margin-y:         $nav-divider-margin-y !default;
-$dropdown-box-shadow:               0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15),
-0 5px 15px rgba(0, 0, 0, 0.1);
+$dropdown-box-shadow:               0 50px 100px rgba($gray-1200, 0.1), 0 15px 35px rgba($gray-1200, 0.15),
+0 5px 15px rgba($black, 0.1);
 
 $dropdown-link-color:               $gray-1200 !default;
 $dropdown-link-hover-color:         $gray-1200 !default;
