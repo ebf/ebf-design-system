@@ -1,0 +1,132 @@
+<div class="double-navbar-container sticky-top">
+  <BsNavbar 
+    @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+    class="sticky-top shadow-sm border-top-primary"  as |navbar|>
+    <div class="navbar-header mr-auto">
+      <LinkTo @route="examples.login" class="navbar-brand">
+        <img src="/telekom-logo-magenta.svg"/ alt="Deutsche Telekom AG">
+        <span class="label">Erleben, was verbindet.</span>
+      </LinkTo>
+      <navbar.toggle />
+    </div>     
+    <navbar.content class="ml-auto flex-grow-0">
+      <navbar.nav class="flex-nowrap" as |nav|>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-link-01" /></nav.link-to>
+        </nav.item>
+      </navbar.nav>
+    </navbar.content>
+  </BsNavbar>
+  <BsNavbar 
+  @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+     class="shadow-sm" as |navbar|>     
+      <navbar.toggle class="mr-auto" />      
+      <navbar.content class="flex-grow-1">
+        <navbar.nav as |nav|>
+          <nav.item>
+            <nav.link-to @route="examples.webshop">Produkte</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.cost-center">Kostentelle</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.address-management">Adressmanagement</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.orders">Bestellungen</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.saved-shopping-cart-empty-state">Bestellvorlagen</nav.link-to>
+          </nav.item>
+        </navbar.nav>
+      </navbar.content>
+      <navbar.content class="ml-auto flex-grow-0">
+        <navbar.nav as |nav|>           
+          <nav.item>
+            <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+          </nav.item>            
+        </navbar.nav>
+      </navbar.content>    
+  </BsNavbar>
+</div>
+
+<div class="container-fluid bg-gray-100">
+  <div class="container py-9">    
+    <div class="row">
+      <div class="col-10">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><LinkTo @route="examples.dashboard" data-text="Dashboard">Dashboard</LinkTo></li>
+            <li class="breadcrumb-item"><LinkTo @route="examples.address-management" data-text="Adressmanagement">Adressmanagement</LinkTo></li>
+          </ol>
+        </nav>
+        <h2>Adressmanagement</h2>
+        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="my-5 d-flex align-items-center justify-content-end">        
+        {{#link-to "examples.address-management-new" class="btn btn-ghost text-decoration-none"}}
+          <i class="ebf ebf-plus"></i> Lieferadresse erstellen
+        {{/link-to}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="px-4 py-5 border">
+        <div class="row mb-4">
+          <div class="col-12 d-flex align-items-center">
+            <h4 class="mb-0 flex-grow-1">Lieferadresse Namen 01</h4>
+            <div class="custom-control custom-checkbox justify-content-end">
+              <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+              <label class="custom-control-label" for="customCheck">Bevorzugte Rechnungsadresse</label>
+            </div>
+            <div class="custom-control custom-checkbox justify-content-end ml-3">
+              <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+              <label class="custom-control-label" for="customCheck">Bevorzugte Lieferadresse</label>
+            </div>
+          </div>          
+        </div>
+        <div class="row">
+          <div class="col-12">      
+            <Stats @inline={{true}} as |stats|>
+              <stats.row @label="Kundenkontonummer" @value="0060964925" />
+              <stats.row @label="Kostenstelle" @value="Lorem ipsum - Eingetragene Kostenstelle" />
+              <stats.row @label="Kostenstellennutzer" @value="Lorem ipsum - Eingetragene Kostenstellennutzer" />        
+            </Stats>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="my-5 d-flex align-items-center justify-content-end">
+        {{#link-to "examples.address-management-new" class="btn btn-ghost text-decoration-none"}}
+          <i class="ebf ebf-plus"></i> Lieferadresse erstellen
+        {{/link-to}}
+      </div>
+    </div>
+  </div>
+</div>
