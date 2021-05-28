@@ -1,16 +1,82 @@
 <BsNavbar 
   @type="dark"
   @backgroundColor="primary"
-  @collapsed={{true}}
-  @fluid={{false}} 
+  @collapsed={{false}}
+  @fluid={{false}}
   class="sticky-top"
   as |navbar|>
   <div class="navbar-header mr-auto">
-    <LinkTo @route="examples.login" @model={{a}} class="navbar-brand">
-      <img src="/telekom-logo-white.svg"/>
+    <LinkTo @route="examples.login" class="navbar-brand">
+      <img src="/telekom-logo-white.svg"/ alt="Deutsche Telekom AG">
       <span class="label">Erleben, was verbindet.</span>
     </LinkTo>
     <navbar.toggle />
   </div>     
   <LanguageSwitcher @white={{true}} @size="sm" />
 </BsNavbar>
+<div class="container d-flex flex-grow-1">
+  <div class="row align-self-center pt-md-0 pt-sm-9 pb-md-0 pb-sm-9">
+    <div class="col-lg-6 col-md-12 col-sm-12 gray-1200 align-self-center ">          
+      <h2 class="font-weight-bold line-height-display mb-md-4 mb-sm-4 text-md-left text-sm-center">Telekom<br> Device Cycle Suite</h2>
+      <p class="mb-md-7 mb-sm-4 text-md-left text-sm-center">Bitte geben Sie Ihre E-Mail-Adresse ein, damit wir die Optionen für die Anmeldung festlegen können</p>
+      <BsForm class="row mb-md-4 mb-sm-0" as |form|>
+        <form.element @controlType="email" @label="E-mail Adresse" @property="email" class="mb-0 col-lg-8 col-md-12 col-sm-12" as |el|>
+          <el.control placeholder="Geben Sie bitte Ihre Email-Adresse ein" required />
+        </form.element>
+        <div class="d-flex col-lg-4 col-md-12 col-sm-12 text-md-left text-sm-center align-items-end">
+          <form.submitButton class="mt-auto mt-lg-0 mt-md-5 mt-sm-5 mb-lg-0 mb-md-5 mb-sm-5">Überprüfen</form.submitButton>
+        </div>
+      </BsForm>
+      <p class="mb-md-4">Noch keinen Telekom Login? <a href="#">Jetzt registrieren.</a></p>
+      <p class="mb-md-4">Click <LinkTo @route="examples.dashboard">here</LinkTo> to contact support if you have issues logging in</p>
+    </div>
+    <div class="col-6 col-md-6 col-lg-6 d-lg-block align-self-center d-md-none d-sm-none">
+      <img class="align-self-center img-fluid" src="/dummy-images/login-cover-graphic.svg" alt="Telekom Login">
+    </div>
+  </div>
+</div>
+<Layout::Footer
+  @fluid={{false}}
+  @dark={{true}} as |footer|>
+  <div class="row justify-content-between">
+    <div class="col-6 col-md-6 col-sm-5 d-flex flex-wrap align-content-center text-left justify-content-start mr-auto">
+      <LinkTo @route="examples.login" class="footer-brand">
+        <Layout::Footer::Logo @url="/telekom-logo-white.svg" @label="Deutsche Telekom AG" />
+      </LinkTo>
+    </div>  
+    <div class="col-6 col-md-6 col-sm-7 d-flex flex-wrap align-content-center text-right justify-content-end">
+      <span class="label">Erleben, was verbindet.</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <hr>
+    </div>
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-md-4 col-sm-12 d-flex flex-wrap align-content-center text-left justify-content-start mb-lg-0 mb-md-0 mb-sm-3">
+      <Layout::Footer::Copyright @label="Deutsche Telekom AG"/>
+    </div>  
+    <div class="col-md-8 col-sm-12 d-flex flex-wrap text-right justify-content-lg-end justify-content-sm-start justify-content-md-end">
+      <BsNav
+        @justified={{false}}
+        @stacked={{false}}
+        @fill={{false}}
+        class="justify-content-md-end" as |nav|
+      >
+        <nav.item>
+          <nav.link-to @route="index">Kontakt</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index">AGB</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index">Datenschutz</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index">Impressum</nav.link-to>
+        </nav.item>
+      </BsNav>          
+    </div>
+  </div>
+</Layout::Footer>

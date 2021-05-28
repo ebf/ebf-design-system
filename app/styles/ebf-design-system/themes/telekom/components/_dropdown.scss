@@ -270,6 +270,13 @@
   width: 100%;
 }
 
+.dropdown-toggle-fw {
+  &::after {
+    float: right;
+    line-height: 1;
+  }
+}
+
 @keyframes show-navbar-dropdown {
   0% {
     opacity: 0;

@@ -110,6 +110,27 @@ mark,
   background-color: $mark-bg;
 }
 
+// Alignment
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
 //
 // Lists
 //

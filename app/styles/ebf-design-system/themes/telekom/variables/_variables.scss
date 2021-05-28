@@ -412,7 +412,7 @@ $custom-font-sizes: map-merge(
 
 @each $size, $value in $custom-font-sizes {
   .fs-#{$size} {
-    font-size: $value;
+    font-size: $value !important;
   }
 }
 
@@ -977,7 +977,7 @@ $navbar-dark-brand-hover-color: $white !default;
 //
 // Dropdown menu container and contents.
 
-$dropdown-min-width: 12rem !default;
+$dropdown-min-width: 100% !default;
 $dropdown-padding-x: 0 !default;
 $dropdown-padding-y: 0.5rem !default;
 $dropdown-spacer: 0.5rem !default;
@@ -985,9 +985,9 @@ $dropdown-font-size: $font-size-base !default;
 $dropdown-color: $body-color !default;
 $dropdown-bg: $white !default;
 
-$dropdown-border-color: $border-color !default;
-$dropdown-border-radius: 0 !default;
-$dropdown-border-width: 0 !default;
+$dropdown-border-color: $input-border-color !default;
+$dropdown-border-radius: $border-radius !default;
+$dropdown-border-width: $border-width !default;
 $dropdown-inner-border-radius: 0 !default;
 
 $dropdown-divider-bg: $border-color !default;
@@ -1067,7 +1067,7 @@ $card-height: 100% !default;
 $card-color: $gray-1200 !default;
 $card-bg: $white !default;
 
-$card-title-size: $fs-4;
+$card-title-size: $fs-5;
 $card-text-size: $fs-2;
 
 $card-img-overlay-padding: 1.25rem !default;
@@ -1291,7 +1291,7 @@ $figure-caption-color: $gray-1200 !default;
 $breadcrumb-font-size: $fs-2 !default;
 
 $breadcrumb-padding-y: 0.5rem !default;
-$breadcrumb-padding-x: 1rem !default;
+$breadcrumb-padding-x: 0 !default;
 $breadcrumb-item-padding: 1rem !default;
 $breadcrumb-divider-padding: 0.75rem !default;
 
