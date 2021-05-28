@@ -1,0 +1,186 @@
+<BsNavbar 
+  @type="light"
+  @backgroundColor="white"
+  @collapsed={{true}}
+  @fluid={{true}}
+  class="sticky-top border-top-primary shadow-sm"
+  as |navbar|>
+  <div class="navbar-header mr-auto">
+    <LinkTo @route="examples.login" class="navbar-brand">
+      <img src="/telekom-logo-magenta.svg"/ alt="Deutsche Telekom AG">
+      <span class="label">Erleben, was verbindet.</span>
+    </LinkTo>
+    <navbar.toggle />
+  </div>     
+  <navbar.content class="ml-auto flex-grow-0">
+    <navbar.nav class="flex-nowrap" as |nav|>
+      <nav.item>
+        <nav.link-to @route="index"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
+      </nav.item>
+      <nav.item>
+        <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+      </nav.item>
+      <nav.item>
+        <nav.link-to @route="index"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
+      </nav.item>
+      <nav.item>
+        <nav.link-to @route="index"><Icon::Ebf @icon="ebf-link-01" /></nav.link-to>
+      </nav.item>
+    </navbar.nav>
+  </navbar.content>
+</BsNavbar>
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12 text-center my-7">     
+      <p class="fs-3">Herzlich Willkommen!</p>
+      <h2>Telekom Device Cycle Suite</h2>      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="mb-4 d-flex justify-content-between align-items-center">
+        <div class="fs-5 font-weight-bold">Meine Spaces</div>
+        <button class="btn btn-ghost"><i class="ebf ebf-plus mr-2 text-dark fs-3"></i>Add Space</button>
+      </div>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 main-cards mb-9">
+    <div class="col mb-4">
+      <LinkTo @route="examples.webshop-search" class="card-link">
+      <div class="card card-primary card-hover h-100">               
+        <div class="card-body">
+          <div class="card-image">
+            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+          </div>
+          <div class="card-title mb-2 fs-4 text-1200">Webshop</div>
+          <div class="card-text fs-2 text-1200">Produkte kaufen und Bestellungen verwalten</div>                
+        </div>
+      </div>
+      </LinkTo>
+    </div> 
+    <div class="col mb-4">
+      <div class="card card-primary card-hover h-100">               
+        <div class="card-body">
+          <div class="card-image">
+            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+          </div>
+          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
+          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
+        </div>
+      </div>
+    </div> 
+    <div class="col mb-4">
+      <div class="card card-primary card-hover h-100">               
+        <div class="card-body">
+          <div class="card-image">
+            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+          </div>
+          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
+          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
+        </div>
+      </div>
+    </div> 
+    <div class="col mb-4">
+      <div class="card card-primary card-hover h-100">               
+        <div class="card-body">
+          <div class="card-image">
+            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+          </div>
+          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
+          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
+        </div>
+      </div>
+    </div> 
+    <div class="col mb-4">
+      <div class="card card-primary card-hover h-100">               
+        <div class="card-body">
+          <div class="card-image">
+            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+          </div>
+          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
+          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
+        </div>
+      </div>
+    </div> 
+    <div class="col mb-4">
+      <div class="card card-primary card-hover h-100">               
+        <div class="card-body">
+          <div class="card-image">
+            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+          </div>
+          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
+          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
+        </div>
+      </div>
+    </div> 
+    <div class="col mb-4">
+      <div class="card card-primary card-hover h-100">               
+        <div class="card-body">
+          <div class="card-image">
+            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+          </div>
+          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
+          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
+        </div>
+      </div>
+    </div> 
+    <div class="col mb-4">
+      <div class="card card-primary card-hover h-100">               
+        <div class="card-body">
+          <div class="card-image">
+            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+          </div>
+          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
+          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
+        </div>
+      </div>
+    </div>                 
+  </div>
+</div>
+
+<Layout::Footer
+  @fluid={{false}}
+  @dark={{true}} as |footer|>
+  <div class="row justify-content-between">
+    <div class="col-6 col-md-6 col-sm-5 d-flex flex-wrap align-content-center text-left justify-content-start mr-auto">
+      <a href="#" class="footer-brand">
+        <Layout::Footer::Logo @url="/telekom-logo-white.svg" @label="Deutsche Telekom AG" />
+      </a>
+    </div>  
+    <div class="col-6 col-md-6 col-sm-7 d-flex flex-wrap align-content-center text-right justify-content-end">
+      <span class="label">Erleben, was verbindet.</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <hr>
+    </div>
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-md-4 col-sm-12 d-flex flex-wrap align-content-center text-left justify-content-start mb-lg-0 mb-md-0 mb-sm-3">
+      <Layout::Footer::Copyright @label="Deutsche Telekom AG"/>
+    </div>  
+    <div class="col-md-8 col-sm-12 d-flex flex-wrap text-right justify-content-lg-end justify-content-sm-start justify-content-md-end">
+      <BsNav
+        @justified={{false}}
+        @stacked={{false}}
+        @fill={{false}}
+        class="justify-content-md-end" as |nav|
+      >
+        <nav.item>
+          <nav.link-to @route="index">Kontakt</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index">AGB</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index">Datenschutz</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index">Impressum</nav.link-to>
+        </nav.item>
+      </BsNav>          
+    </div>
+  </div>
+</Layout::Footer>

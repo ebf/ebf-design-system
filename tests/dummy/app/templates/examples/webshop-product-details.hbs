@@ -1,0 +1,255 @@
+<div class="double-navbar-container sticky-top">
+  <BsNavbar 
+    @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+    class="sticky-top shadow-sm border-top-primary"  as |navbar|>
+    <div class="navbar-header mr-auto">
+      <LinkTo @route="examples.login" class="navbar-brand">
+        <img src="/telekom-logo-magenta.svg"/ alt="Deutsche Telekom AG">
+        <span class="label">Erleben, was verbindet.</span>
+      </LinkTo>
+      <navbar.toggle />
+    </div>     
+    <navbar.content class="ml-auto flex-grow-0">
+      <navbar.nav class="flex-nowrap" as |nav|>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-link-01" /></nav.link-to>
+        </nav.item>
+      </navbar.nav>
+    </navbar.content>
+  </BsNavbar>
+  <BsNavbar 
+  @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+     class="shadow-sm" as |navbar|>     
+      <navbar.toggle class="mr-auto" />      
+      <navbar.content class="flex-grow-1">
+        <navbar.nav as |nav|>
+          <nav.item>
+            <nav.link-to @route="examples.webshop" class="active">Produkte</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.cost-center">Kostentelle</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.address-management">Adressmanagement</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.orders">Bestellungen</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.saved-shopping-cart-empty-state">Bestellvorlagen</nav.link-to>
+          </nav.item>
+        </navbar.nav>
+      </navbar.content>
+      <navbar.content class="ml-auto flex-grow-0">
+        <navbar.nav as |nav|>           
+          <nav.item>
+            <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+          </nav.item>            
+        </navbar.nav>
+      </navbar.content>    
+  </BsNavbar>
+</div>
+
+<div class="container-fluid">
+  <div class="container py-9">    
+    <div class="row">
+      <div class="col-10">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><LinkTo @route="examples.dashboard" data-text="Dashboard">Dashboard</LinkTo></li>
+            <li class="breadcrumb-item"><LinkTo @route="examples.webshop-search" data-text="Webshop">Webshop</LinkTo></li>
+            <li class="breadcrumb-item"><LinkTo @route="examples.webshop-product-details" data-text="Webshop">Apple iPhone 11 Pro</LinkTo></li>
+          </ol>
+        </nav>
+      </div>     
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-end">
+    <div class="col-lg-7 col-md-12 col-sm-12">
+      <h3 class="font-weight-bold text-lg-left text-md-center text-sm-center">Apple iPhone 11 Pro</h3>
+      <p class="mb-0 mb-sm-5 text-lg-left text-md-center text-sm-center">
+        <i class="ebf ebf-check-mark-circle-full text-success mr-2"></i>
+        Geringe Warenbestände - Artikel eingeschränkt verfügbar</p>
+    </div>
+  </div>
+  <div class="media d-flex flex-lg-row flex-md-column flex-sm-column flex-xs-column mb-9">
+    <img class="align-self-start col-lg-5 col-md-12 col-sm-12" src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="Generic placeholder image">
+    <div class="media-body col-lg-7 col-md-12 col-sm-12">
+      <ul class="list-square mt-5">
+        <li>5,8” Super Retina XDR OLED Display (14,7 cm Diagonale)*</li>
+        <li>Wasser- und Staubschutz (4 Meter bis zu 30 Minuten, IP68)*</li>
+        <li>12 Megapixel Drei-Kamera-System mit Ultraweitwinkel-, Weitwinkel- und Teleobjektiv, Nachtmodus, Porträtmodus und 4K Video bis zu 60 fps</li>
+        <li>12 Megapixel TrueDepth Frontkamera mit Porträtmodus, 4K Video und Zeitlupe</li>
+        <li>Face ID für sicheres Authentifizieren und Apple Pay</li>
+      </ul>
+      <a href="#">zu den Gerätedetails</a>
+      <div class="row pt-7">
+        <div class="col-lg-5 col-md-12 col-sm-12">
+          <label class="w-100 text-dark">Farbe: <span class="font-weight-bold">Weiß</span></label>
+          <button type="button" class="btn btn-color-selector-white mr-2" data-toggle="button" aria-pressed="true" autocomplete="off">
+            <i class="ebf ebf-check-mark"></i>
+            <i class="ebf ebf-line-diag"></i>
+          </button>
+          <button type="button" class="btn btn-color-selector-light mr-2" data-toggle="button" aria-pressed="false" autocomplete="off">
+            <i class="ebf ebf-check-mark"></i>
+            <i class="ebf ebf-line-diag"></i>
+          </button>
+          <button type="button" class="btn btn-color-selector-dark mr-2" data-toggle="button" aria-pressed="false" autocomplete="off">
+            <i class="ebf ebf-check-mark"></i>
+            <i class="ebf ebf-line-diag"></i>
+          </button>
+          <hr class="my-lg-4 my-md-4 my-sm-5">
+        </div>
+        <div class="col-lg-7 col-md-12 col-sm-12 flex-nowrap">
+          <label class="w-100 text-dark">Speichergröße: <span class="font-weight-bold">256 GB</span></label>
+          <button type="button" class="btn btn-filter-tabs mr-lg-2 mr-md-1" data-toggle="button" aria-pressed="false" autocomplete="off">64 GB</button>
+          <button type="button" class="btn btn-filter-tabs mr-lg-2 mr-md-1" data-toggle="button" aria-pressed="false" autocomplete="off">128 GB</button>
+          <button type="button" class="btn btn-filter-tabs mr-lg-2 mr-md-1 active" data-toggle="button" aria-pressed="true" autocomplete="off">256 GB</button>
+          <button type="button" class="btn btn-filter-tabs" data-toggle="button" aria-pressed="false" autocomplete="off" disabled>512 GB</button>
+          <hr class="my-lg-4 my-md-4 my-sm-5">
+        </div>                
+      </div>
+      <div class="row">
+        <div class="d-lg-inline-flex d-md-inline-flex d-sm-block justify-content-start align-items-end col-lg-12 col-md-12 col-sm-12">    
+          <form class="mr-5">
+            <label class="text-dark">Anzahl: <span class="font-weight-bold">{{this.value}} Endgeräte</span></label>
+           <Inputs::Counter
+              @label={{this.value}}
+              @placeholder="Enter your desired amount"
+              @min="1"
+              @max="999"
+              @value={{this.value}}
+              @onChange={{fn (mut this.value)}}
+            />
+          </form>      
+          <hr class="d-lg-none d-md-none my-sm-5">              
+          <span class="fs-5 mr-3 mb-0 font-weight-bolder text-primary line-height-display">
+            <strong class="price">ab</strong>
+            <strong class="price">116,93 €</strong>
+          </span>
+          <p class="fs-2 mb-0">einmalig (netto)
+            <i class="ebf ebf-info popover-trigger"></i>
+          </p>
+          <BsPopover @title="Mengenabhängige Preisstaffel:" @triggerElement=".popover-trigger" @triggerEvents="hover">
+            <ul class="list-square-popover">
+              <li>1 - 100 Geräte XY€</li>
+              <li>101 - 300 Geräte XY€</li>
+              <li>ab 301 Geräte XY€ </li>
+            </ul>
+          </BsPopover>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <hr class="my-lg-4 my-md-4 my-sm-5">
+          <BsButton @type="primary" class="mt-2 w-md-auto w-sm-100">In den Warenkorb</BsButton>           
+        </div>
+      </div>
+    </div>
+  </div>            
+  <hr class="my-lg-4 my-md-4 my-sm-5">     
+</div>
+
+<div class="container">
+  <div class="row mt-5 mb-9">
+    <div class="col-12 text-center">
+      <h3>Kompatibles Zubehör</h3>
+      <h5>Ergänzen Sie Ihre Bestellung mit passendem Zubehör</h5>
+    </div>
+  </div>
+  <div class="row mb-9">
+    <div class="col-12 text-center">
+      <p class="text-primary">Carousel Placeholder</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-gray-100 py-9">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-9 text-center">
+        <h3>Gerätedetails</h3>
+        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <BsAccordion as |acc|>
+        <acc.item @value="1" as |aitem|>
+          <aitem.title>
+            <span>Lieferumfang</span>
+            <Icon::Ebf @icon="ebf-chevron-down" />
+          </aitem.title>
+          <aitem.body>
+            <Stats as |stats|>
+              <stats.row @label="Product No." @value="99930996" />
+              <stats.row @label="Size and weight" @value="138,4 x 67,3 x 7,3 mm | ca. 148" />
+              <stats.row @label="Batter" @value="Li-Ion" />
+              <stats.row @label="Camera" @value="12 Megapixel" />
+              <stats.row @label="Display" @value="Retina Display 16,7 milion colors" />
+              <stats.row @label="Processor" @value="Processor Type A13 Bionic Chip" />
+            </Stats>
+          </aitem.body>
+        </acc.item>
+        <acc.item @value="2" as |aitem|>
+          <aitem.title>
+            <span>Technische Informationen</span>
+            <Icon::Ebf @icon="ebf-chevron-down" />
+          </aitem.title>
+          <aitem.body>
+            <Stats as |stats|>
+              <stats.row @label="Product No." @value="99930996" />
+              <stats.row @label="Size and weight" @value="138,4 x 67,3 x 7,3 mm | ca. 148" />
+              <stats.row @label="Batter" @value="Li-Ion" />
+              <stats.row @label="Camera" @value="12 Megapixel" />
+              <stats.row @label="Display" @value="Retina Display 16,7 milion colors" />
+              <stats.row @label="Processor" @value="Processor Type A13 Bionic Chip" />
+            </Stats>
+          </aitem.body>
+        </acc.item>
+        <acc.item @value="3" as |aitem|>
+          <aitem.title>
+            <span>Konnektivität</span>
+            <Icon::Ebf @icon="ebf-chevron-down" />
+          </aitem.title>
+          <aitem.body>
+            <Stats as |stats|>
+              <stats.row @label="Product No." @value="99930996" />
+              <stats.row @label="Size and weight" @value="138,4 x 67,3 x 7,3 mm | ca. 148" />
+              <stats.row @label="Batter" @value="Li-Ion" />
+              <stats.row @label="Camera" @value="12 Megapixel" />
+              <stats.row @label="Display" @value="Retina Display 16,7 milion colors" />
+              <stats.row @label="Processor" @value="Processor Type A13 Bionic Chip" />
+            </Stats>
+          </aitem.body>
+        </acc.item>
+      </BsAccordion>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-white shadow">
+  <div class="container py-4 d-flex align-items-center justify-content-between">
+    {{link-to "Weiter einkaufen" "examples.webshop"}}
+    {{link-to "zum Warenkorb" "examples.webshop" class="btn btn-primary text-decoration-none"}}
+  </div>
+</div>

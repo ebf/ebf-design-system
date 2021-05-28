@@ -10,6 +10,15 @@ Router.map(function() {
   this.route('examples', function() {
     this.route('login');
     this.route('dashboard');
+    this.route('webshop');
+    this.route('webshop-search');
+    this.route('webshop-product-details');   
+    this.route('cost-center');
+    this.route('cost-center-new');
+    this.route('address-management');
+    this.route('address-management-new');
+    this.route('orders');
+    this.route('saved-shopping-cart-empty-state');
   }) 
   docsRoute(this, function() {
     this.route('usage');
