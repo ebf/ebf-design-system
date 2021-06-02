@@ -1,0 +1,148 @@
+<div class="double-navbar-container sticky-top">
+  <BsNavbar 
+    @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+    class="sticky-top shadow-sm border-top-primary"  as |navbar|>
+    <div class="navbar-header mr-auto">
+      <LinkTo @route="examples.login" class="navbar-brand">
+        <img src="/telekom-logo-magenta.svg"/ alt="Deutsche Telekom AG">
+        <span class="label">Erleben, was verbindet.</span>
+      </LinkTo>
+      <navbar.toggle />
+    </div>     
+    <navbar.content class="ml-auto flex-grow-0">
+      <navbar.nav class="flex-nowrap" as |nav|>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-link-01" /></nav.link-to>
+        </nav.item>
+      </navbar.nav>
+    </navbar.content>
+  </BsNavbar>
+  <BsNavbar 
+  @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+     class="shadow-sm" as |navbar|>     
+      <navbar.toggle class="mr-auto" />      
+      <navbar.content class="flex-grow-1">
+        <navbar.nav as |nav|>
+          <nav.item>
+            <nav.link-to @route="examples.webshop">Produkte</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.cost-center">Kostentelle</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.address-management">Adressmanagement</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.orders">Bestellungen</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.saved-shopping-cart-empty-state">Bestellvorlagen</nav.link-to>
+          </nav.item>
+        </navbar.nav>
+      </navbar.content>
+      <navbar.content class="ml-auto flex-grow-0">
+        <navbar.nav as |nav|>           
+          <nav.item>
+            <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+          </nav.item>            
+        </navbar.nav>
+      </navbar.content>    
+  </BsNavbar>
+</div>
+
+<div class="container-fluid bg-gray-100">
+  <div class="container py-9">    
+    <div class="row">
+      <div class="col-10">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><LinkTo @route="examples.dashboard" data-text="Dashboard">Dashboard</LinkTo></li>
+            <li class="breadcrumb-item"><LinkTo @route="examples.orders" data-text="Bestellungen">Bestellungen</LinkTo></li>
+          </ol>
+        </nav>
+        <h2>Ihre Bestellungen</h2>
+        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid pt-9 px-4">
+  <div class="row">
+    <div class="col">
+      <div class="table-responsive">
+        <div class="input-group">
+          <div class="input-group-prepend border-0">
+            <span class="input-group-text border-0" id="basic-addon1"><i class="ebf ebf-search-l"></i></span>
+          </div>
+          <input type="text" class="form-control border-0" placeholder="Suchfilter" aria-label="Suchfilter" aria-describedby="basic-addon1">
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Bestellnummer<i class="ebf ebf-sort-by-size ml-2"></i></th>
+              <th scope="col">Gesamtbetrag brutto<i class="ebf ebf-sort-by-size ml-2"></i></th>
+              <th scope="col">Gesamtbetrag netto<i class="ebf ebf-sort-by-size ml-2"></i></th>
+              <th scope="col">Erzeugt<i class="ebf ebf-sort-by-size ml-2"></i></th>
+              <th scope="col">Aktualisiert<i class="ebf ebf-sort-by-size ml-2"></i></th>
+              <th scope="col">Status<i class="ebf ebf-sort-by-size ml-2"></i></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <LinkTo @route="examples.orders-summary">
+                  EBF-C8-1-390805-49
+                </LinkTo>
+              </td>  
+              <td>1.079,85 €</td>
+              <td>907,44 €</td>
+              <td>31.08.2020</td>
+              <td>31.08.2020</td>
+              <td><i class="ebf ebf-check-mark-circle-full-fill text-success fs-4 mr-2"></i>Abgeschlossen</td>
+            </tr>
+            <tr>
+              <td>
+                <LinkTo @route="examples.login">
+                  EBF-C8-1-390805-49
+                </LinkTo>
+              </td> 
+              <td>1.079,85 €</td>
+              <td>907,44 €</td>
+              <td>31.08.2020</td>
+              <td>31.08.2020</td>
+              <td><i class="ebf ebf-cancel-circle-fill text-danger fs-4 mr-2"></i>Gescheitert</td>
+            </tr>
+            <tr>
+              <td>
+                <LinkTo @route="examples.login">
+                  EBF-C8-1-390805-49
+                </LinkTo>
+              </td> 
+              <td>1.079,85 €</td>
+              <td>907,44 €</td>
+              <td>31.08.2020</td>
+              <td>31.08.2020</td>
+              <td><i class="ebf ebf-upload-fill-1 text-warning fs-4 mr-2"></i>In Bearbeitung</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>    
+  </div>
+</div>

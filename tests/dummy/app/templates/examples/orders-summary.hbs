@@ -1,0 +1,304 @@
+<div class="double-navbar-container sticky-top">
+  <BsNavbar 
+    @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+    class="sticky-top shadow-sm border-top-primary"  as |navbar|>
+    <div class="navbar-header mr-auto">
+      <LinkTo @route="examples.login" class="navbar-brand">
+        <img src="/telekom-logo-magenta.svg"/ alt="Deutsche Telekom AG">
+        <span class="label">Erleben, was verbindet.</span>
+      </LinkTo>
+      <navbar.toggle />
+    </div>     
+    <navbar.content class="ml-auto flex-grow-0">
+      <navbar.nav class="flex-nowrap" as |nav|>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-link-01" /></nav.link-to>
+        </nav.item>
+      </navbar.nav>
+    </navbar.content>
+  </BsNavbar>
+  <BsNavbar 
+  @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+     class="shadow-sm" as |navbar|>     
+      <navbar.toggle class="mr-auto" />      
+      <navbar.content class="flex-grow-1">
+        <navbar.nav as |nav|>
+          <nav.item>
+            <nav.link-to @route="examples.webshop">Produkte</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.cost-center">Kostentelle</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.address-management">Adressmanagement</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.orders" class="active">Bestellungen</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.saved-shopping-cart-empty-state">Bestellvorlagen</nav.link-to>
+          </nav.item>
+        </navbar.nav>
+      </navbar.content>
+      <navbar.content class="ml-auto flex-grow-0">
+        <navbar.nav as |nav|>           
+          <nav.item>
+            <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+          </nav.item>            
+        </navbar.nav>
+      </navbar.content>    
+  </BsNavbar>
+</div>
+
+<div class="container-fluid">
+  <div class="container py-9">    
+    <div class="row">
+      <div class="col-10">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><LinkTo @route="examples.dashboard" data-text="Dashboard">Dashboard</LinkTo></li>
+            <li class="breadcrumb-item"><LinkTo @route="examples.orders" data-text="Bestellungen">Bestellungen</LinkTo></li>
+            <li class="breadcrumb-item"><LinkTo @route="examples.orders-summary" data-text="Zusammenfassung">Zusammenfassung</LinkTo></li>
+          </ol>
+        </nav>
+        <h2>Zusammenfassung</h2>
+        <p class="mb-0">Überprüfen sie Ihre Bestellung</p>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="px-4 pt-2 pb-4 border">
+    <div class="row">
+      <div class="col-12">      
+        <Stats @title="Rechnungsadresse" @inline={{true}} as |stats|>
+          <stats.row @label="Firmenname" @value="TÜV Rheinland" />
+          <stats.row @label="Strasse, Hausnummer" @value="Am Propsthof 49" />
+          <stats.row @label="PLZ, Ort" @value="53121, Bonn" />        
+          <stats.row @label="Land" @value="Deutschland" />        
+        </Stats>
+      </div>
+    </div>
+    <div class="row pt-7">
+      <div class="col-12">      
+        <Stats @title="Rechnungsmethode" @inline={{true}} as |stats|>
+          <stats.row @label="Email" @value="max.mustermann@tuv.de" />                 
+        </Stats>
+      </div>
+    </div>
+    <div class="row pt-7">
+      <div class="col-12">      
+        <Stats @title="Kostenstelle" @inline={{true}} as |stats|>
+          <stats.row @label="Kundenkontonummer" @value="0060964925" />                 
+          <stats.row @label="Kostenstelle" @value="Lorem ipsum – Eingetragene Kostenstelle" />                 
+          <stats.row @label="Kostenstellennutzer" @value="Lorem ipsum – Eingetragener Kostenstellennutzer" />                 
+        </Stats>
+      </div>
+    </div>
+    <div class="row pt-7">
+      <div class="col-12">      
+        <Stats @title="Lieferadresse" @inline={{true}} as |stats|>
+          <stats.row @label="(Firmen) Name" @value="T-Systems International GmbH" />
+          <stats.row @label="Zusatz 1" @value="BSP-QS" />
+          <stats.row @label="Strasse, Hausnummer" @value="Am Propsthof 49" />
+          <stats.row @label="PLZ, Ort" @value="53121, Bonn" />        
+          <stats.row @label="Land" @value="Deutschland" />
+          <stats.row @label="Private Adresse" @value="Nein" />
+        </Stats>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container z-shopping-cart mt-9">
+  <h3>Ihre Bestellung</h3>
+
+  <div class="shadow">
+    <div class="row">
+      <div class="col d-flex justify-content-end pt-4 pb-9">
+        <BsButton @type="link">Löschen</BsButton>
+      </div>
+    </div>
+    <div class="table-responsive">    
+      <table class="table table-striped table-cart mb-0">
+        <thead>
+          <tr>
+            <th scope="col" colspan="3" class="fs-2">Produkte</th>
+            <th scope="col" colspan="3" class="fs-2">Anzahl</th>
+            <th scope="col" class="fs-2 text-right">Einmalig (netto)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="iPhone"/>
+            </td>
+            <td>
+              <h6>Apple iPhone 11 64GB (Schwarz)</h6>
+              <p>Kartentyp: 4 x TripleSIM</p>
+            </td>
+            <td class="text-center">
+              <BsButton @type="ghost">
+                <i class="ebf ebf-trash"></i>
+              </BsButton>
+            </td>
+            <td>
+              <Inputs::Counter
+                @label="Size"
+                @placeholder="1"
+                @min="1"
+                @max="999"
+                @value={{this.value}}
+                @onChange={{fn (mut this.value)}}
+              />
+            </td>
+            <td class="fs-4 text-center">x</td>
+            <td class="fs-4">119,93 €</td>
+            <td class="text-primary fs-4 text-right">2.398,64 €</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" style="height: 120px; max-width: initial; " class="w-auto" alt="iPhone"/>
+            </td>
+            <td>
+              <h6>Apple iPhone 11 64GB (Schwarz)</h6>
+              <p>Kartentyp: 4 x TripleSIM</p>
+            </td>
+            <td class="text-center">
+              <BsButton @type="ghost">
+                <i class="ebf ebf-trash"></i>
+              </BsButton>
+            </td>
+            <td>
+              <Inputs::Counter
+                @label="Size"
+                @placeholder="1"
+                @min="1"
+                @max="999"
+                @value={{this.value}}
+                @onChange={{fn (mut this.value)}}
+              />
+            </td>
+            <td class="fs-4 text-center">x</td>
+            <td class="fs-4">119,93 €</td>
+            <td class="text-primary fs-4 text-right">2.398,64 €</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="iPhone"/>
+            </td>
+            <td>
+              <h6>Apple iPhone 11 64GB (Schwarz)</h6>
+              <p>Kartentyp: 4 x TripleSIM</p>
+            </td>
+            <td class="text-center">
+              <BsButton @type="ghost">
+                <i class="ebf ebf-trash"></i>
+              </BsButton>
+            </td>
+            <td>
+              <Inputs::Counter
+                @label="Size"
+                @placeholder="1"
+                @min="1"
+                @max="999"
+                @value={{this.value}}
+                @onChange={{fn (mut this.value)}}
+              />
+            </td>
+            <td class="fs-4 text-center">x</td>
+            <td class="fs-4">119,93 €</td>
+            <td class="text-primary fs-4 text-right">2.398,64 €</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="iPhone"/>
+            </td>
+            <td>
+              <h6>Apple iPhone 11 64GB (Schwarz)</h6>
+              <p>Kartentyp: 4 x TripleSIM</p>
+            </td>
+            <td class="text-center">
+              <BsButton @type="ghost">
+                <i class="ebf ebf-trash"></i>
+              </BsButton>
+            </td>
+            <td>
+              <Inputs::Counter
+                @label="Size"
+                @placeholder="1"
+                @min="1"
+                @max="999"
+                @value={{this.value}}
+                @onChange={{fn (mut this.value)}}
+              />
+            </td>
+            <td class="fs-4 text-center">x</td>
+            <td class="fs-4">119,93 €</td>
+            <td class="text-primary fs-4 text-right">2.398,64 €</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>  
+</div>
+
+<div class="container py-9">
+  <div class="row">
+    <Stats @title="Zusammenfassung" @inline={{true}} class="w-100 col mb-0" as |stats|>
+      <stats.row class="font-weight-medium border-top-0">
+        <div class="row text-right">
+          <div class="col-6">
+            Anzahl
+          </div>
+          <div class="col-6">
+            Einmalig
+          </div>
+        </div>
+      </stats.row>
+      <stats.row @label="Gesamtpreis (netto)" class="fs-4 font-weight-bold">
+        <div class="row text-right">
+          <div class="col-12 text-primary">
+            7.825,65 €
+          </div>
+        </div>
+      </stats.row>
+      <stats.row @label="Gesamtpreis (brutto)" class="fs-4 font-weight-medium">
+          <div class="row text-right">
+            <div class="col-6">
+              1
+            </div>
+            <div class="col-6">
+              7.900,65 €
+            </div>
+          </div>
+        </stats.row>
+        <stats.row @label="Enthaltene Mehrwertsteuer" class="fs-4 font-weight-medium">
+          <div class="row text-right">
+            <div class="col-6">
+              1
+            </div>
+            <div class="col-6">
+              75 €
+            </div>
+          </div>
+        </stats.row>
+    </Stats>      
+  </div>
+</div>

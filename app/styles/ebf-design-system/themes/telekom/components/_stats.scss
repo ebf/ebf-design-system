@@ -11,4 +11,8 @@
   &:first-of-type {
     border-top-width: $border-width;
   }
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
 }

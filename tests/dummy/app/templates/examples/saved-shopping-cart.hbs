@@ -1,0 +1,238 @@
+<div class="double-navbar-container sticky-top">
+  <BsNavbar 
+    @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+    class="sticky-top shadow-sm border-top-primary"  as |navbar|>
+    <div class="navbar-header mr-auto">
+      <LinkTo @route="examples.login" class="navbar-brand">
+        <img src="/telekom-logo-magenta.svg"/ alt="Deutsche Telekom AG">
+        <span class="label">Erleben, was verbindet.</span>
+      </LinkTo>
+      <navbar.toggle />
+    </div>     
+    <navbar.content class="ml-auto flex-grow-0">
+      <navbar.nav class="flex-nowrap" as |nav|>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-link-01" /></nav.link-to>
+        </nav.item>
+      </navbar.nav>
+    </navbar.content>
+  </BsNavbar>
+  <BsNavbar 
+  @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+     class="shadow-sm" as |navbar|>     
+      <navbar.toggle class="mr-auto" />      
+      <navbar.content class="flex-grow-1">
+        <navbar.nav as |nav|>
+          <nav.item>
+            <nav.link-to @route="examples.webshop">Produkte</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.cost-center">Kostentelle</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.address-management">Adressmanagement</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.orders">Bestellungen</nav.link-to>
+          </nav.item>
+          <nav.item>
+            <nav.link-to @route="examples.saved-shopping-cart">Bestellvorlagen</nav.link-to>
+          </nav.item>
+        </navbar.nav>
+      </navbar.content>
+      <navbar.content class="ml-auto flex-grow-0">
+        <navbar.nav as |nav|>           
+          <nav.item>
+            <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+          </nav.item>            
+        </navbar.nav>
+      </navbar.content>    
+  </BsNavbar>
+</div>
+
+<div class="container-fluid bg-gray-100">
+  <div class="container py-9">    
+    <div class="row">
+      <div class="col-10">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><LinkTo @route="examples.dashboard" data-text="Dashboard">Dashboard</LinkTo></li>
+            <li class="breadcrumb-item"><LinkTo @route="examples.saved-shopping-cart" data-text="Bestellvorlagen">Bestellvorlagen</LinkTo></li>
+          </ol>
+        </nav>
+        <h2>Ihre gespeicherten Bestellvorlagen</h2>
+        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<div class="container pt-9">
+  <div class="table-responsive">
+    <div class="input-group">
+      <div class="input-group-prepend border-0">
+        <span class="input-group-text border-0" id="basic-addon1"><i class="ebf ebf-search-l"></i></span>
+      </div>
+      <input type="text" class="form-control border-0" placeholder="Suchfilter" aria-label="Suchfilter" aria-describedby="basic-addon1">
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Name<i class="ebf ebf-sort-by-size ml-2"></i></th>
+          <th scope="col">Rahmenvertrag<i class="ebf ebf-sort-by-size ml-2"></i></th>
+          <th scope="col">Erstellt<i class="ebf ebf-sort-by-size ml-2"></i></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <BsButton @type="link" class="px-0 py-0" @onClick={{fn (mut this.simple) true}}>
+              Warenkorb Name 1
+            </BsButton>
+          </td>  
+          <td>MN-211</td>
+          <td>25.11.2020</td>
+        </tr>
+        <tr>
+          <td><a href="">Warenkorb Name 2</a></td>
+          <td>MN-211</td>
+          <td>18.01.2021</td>
+        </tr>
+        <tr>
+          <td><a href="">Warenkorb Name 3</a></td>
+          <td>MN-211</td>
+          <td>01.09.2020</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<BsModal
+  @size="xl"
+  @open={{if this.simple true false}}
+  @onSubmit={{fn (mut this.simple) false}}
+  @onHidden={{fn (mut this.simple) false}}
+  as |modal| >
+  <modal.header>
+    <h3 class="modal-title font-weight-bold">Warenkorb Name 1</h3>
+  </modal.header>
+  <modal.body class="p-0">
+    <div class="table-responsive">
+      <table class="table table-striped table-cart mb-0">
+        <thead>
+          <tr>
+            <th scope="col" colspan="3" class="fs-2">Produkte</th>
+            <th scope="col" colspan="3" class="fs-2">Anzahl</th>
+            <th scope="col" class="fs-2">Einmalig (netto)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="iPhone"/>
+            </td>
+            <td>
+              <h6>Apple iPhone 11 64GB (Schwarz)</h6>
+              <p>Kartentyp: 4 x TripleSIM</p>
+            </td>
+            <td class="text-center">
+              <BsButton @type="ghost">
+                <i class="ebf ebf-trash"></i>
+              </BsButton>
+            </td>
+            <td>
+              <Inputs::Counter
+                @label="Size"
+                @placeholder="1"
+                @min="1"
+                @max="999"
+                @value={{this.value}}
+                @onChange={{fn (mut this.value)}}
+              />
+            </td>
+            <td class="fs-4 text-center">x</td>
+            <td class="fs-4">119,93 €</td>
+            <td class="text-primary fs-4">2.398,64 €</td>
+          </tr>
+           <tr>
+            <td>
+              <img src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" style="height: 120px; max-width: initial; " class="w-auto" alt="iPhone"/>
+            </td>
+            <td>
+              <h6>Apple iPhone 11 64GB (Schwarz)</h6>
+              <p>Kartentyp: 4 x TripleSIM</p>
+            </td>
+            <td class="text-center">
+              <BsButton @type="ghost">
+                <i class="ebf ebf-trash"></i>
+              </BsButton>
+            </td>
+            <td>
+              <Inputs::Counter
+                @label="Size"
+                @placeholder="1"
+                @min="1"
+                @max="999"
+                @value={{this.value}}
+                @onChange={{fn (mut this.value)}}
+              />
+            </td>
+            <td class="fs-4 text-center">x</td>
+            <td class="fs-4">119,93 €</td>
+            <td class="text-primary fs-4">2.398,64 €</td>
+          </tr>
+           <tr>
+            <td>
+              <img src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="iPhone"/>
+            </td>
+            <td>
+              <h6>Apple iPhone 11 64GB (Schwarz)</h6>
+              <p>Kartentyp: 4 x TripleSIM</p>
+            </td>
+            <td class="text-center">
+              <BsButton @type="ghost">
+                <i class="ebf ebf-trash"></i>
+              </BsButton>
+            </td>
+            <td>
+              <Inputs::Counter
+                @label="Size"
+                @placeholder="1"
+                @min="1"
+                @max="999"
+                @value={{this.value}}
+                @onChange={{fn (mut this.value)}}
+              />
+            </td>
+            <td class="fs-4 text-center">x</td>
+            <td class="fs-4">119,93 €</td>
+            <td class="text-primary fs-4">2.398,64 €</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </modal.body>
+  <modal.footer class="d-flex justify-content-center" as |footer|>
+    <BsButton @onClick={{fn modal.close}} @type="ghost">Abbrechen</BsButton>
+
+    <LinkTo @route="examples.webshop-shopping-cart" class="btn btn-primary text-decoration-none">
+      Zum Warenkorb hinzufügen
+    </LinkTo>
+  </modal.footer>
+</BsModal>

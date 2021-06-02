@@ -13,11 +13,14 @@ Router.map(function() {
     this.route('webshop');
     this.route('webshop-search');
     this.route('webshop-product-details');   
+    this.route('webshop-shopping-cart');   
     this.route('cost-center');
     this.route('cost-center-new');
     this.route('address-management');
     this.route('address-management-new');
     this.route('orders');
+    this.route('orders-summary');
+    this.route('saved-shopping-cart');
     this.route('saved-shopping-cart-empty-state');
   }) 
   docsRoute(this, function() {
