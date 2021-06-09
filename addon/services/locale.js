@@ -12,23 +12,26 @@ import Locale from '../locale';
 
 const log = debug('ebf-design-system:service:locale');
 
-export const DEFAULT_LOCALE = Locale.from('de-de');
+const defaultLocale = 'de-DE';
+export const DEFAULT_LOCALE = Locale.from(defaultLocale);
 
 /**
  * Resolves the initial state for the locale service from the locale
- * stored in the session storage object. 
- * 
+ * stored in the session storage object.
+ *
  * If locale is present, it would override the default locale coming from
  * the Intl Service.
- * 
+ *
  * @param {LocaleService} service Locale service
  */
  const resolveInitialLocaleState = (service) => {
-  const locale = get(service.storage, 'locale');
+  const locale = get(service.storage, 'locale') || navigator.language;
 
-  // session locale is not set or not supported, use intl default one...
+  // session locale is not set or not supported, default to `defaultLocale`
   if (!service.isSupported(locale)) {
-    service._active = Locale.from(service.intl.locale);
+    service._active = Locale.from(defaultLocale);
+    service.intl.setLocale(defaultLocale);
+    service.moment.setLocale(defaultLocale);
     return;
   }
 
@@ -41,10 +44,10 @@ export const DEFAULT_LOCALE = Locale.from('de-de');
 
 /**
  * Resolves the state for the locale service when the session has been restored.
- * 
+ *
  * If the principal is present and he has a preffered locale set, we should use this one
  * in case the session storage does not have a locale.
- * 
+ *
  * @param {LocaleService} service Locale service
  */
  const resolveSessionLocaleState = (service, session = {}) => {
@@ -74,22 +77,22 @@ export const DEFAULT_LOCALE = Locale.from('de-de');
 
 /**
  * Service for managing and selecting locales for your application.
- * 
+ *
  * Here is an example Language switcher component using the `locale` service:
- * 
+ *
  * ```js
  * export default class LanguageSwitcherComponent extends Component {
  *   @service locale;
- *   
+ *
  *   // update the active locale
  *   @action update(locale) {
  *     this.locale.active = locale;
  *   }
  * }
  * ```
- * 
+ *
  * And it's corresponding template:
- * 
+ *
  * ```handlebars
  * <div class="list-group">
  *   {{#each this.locale.available as |locale|}}
@@ -101,7 +104,7 @@ export const DEFAULT_LOCALE = Locale.from('de-de');
  * ```
  * You would notice that when the locale is selected the translation for the locale would change to the
  * appropriate language as this service is setting the primary locale in the `ember-intl` addon under the hood.
- * 
+ *
  * The same applies to `moment`, where all the date labels and formats would be updated if you are using the
  * `ember-moment` helpers.
  *
@@ -127,7 +130,7 @@ export default class LocaleService extends Service.extend(Evented) {
     * @public
     */
    @service() session;
- 
+
    /**
     * Ember' `intl` service instance that is used to extract available locales that can be
     * used for selection and to update the currently selected locale.
@@ -136,7 +139,7 @@ export default class LocaleService extends Service.extend(Evented) {
     * @public
     */
    @service() intl;
- 
+
    /**
     * Ember's `moment` service instance that is used to format dates.
     *
@@ -144,7 +147,7 @@ export default class LocaleService extends Service.extend(Evented) {
     * @public
     */
    @service() moment;
- 
+
    /**
     * An array of available locales that are avaiable for selection.
     *
@@ -155,7 +158,7 @@ export default class LocaleService extends Service.extend(Evented) {
     * @public
     */
    available = map(this.intl.locales, this.normalize);
- 
+
    /**
     * Currently active locale instance.
     *
@@ -163,21 +166,21 @@ export default class LocaleService extends Service.extend(Evented) {
     * @private
     */
    @tracked _active = null;
- 
+
    constructor() {
      super(...arguments);
- 
+
      // setup initial locale state...
      resolveInitialLocaleState(this);
- 
+
      // setup moment locale format
      this.moment.setLocale(this.active.language);
- 
+
      // setup locale state when session is restored...
      const onSessionRestored = (event) => resolveSessionLocaleState(this, event.session);
      this.session.on('session:restored', this, onSessionRestored);
    }
- 
+
    /**
     * Normalizes the locale the string into an Object containg the language and country code.
     *
@@ -188,31 +191,31 @@ export default class LocaleService extends Service.extend(Evented) {
    normalize() {
      return Locale.from(...arguments);
    }
- 
+
    isSupported(locale) {
      return isPresent(locale) && find(this.available, ['iso', Locale.from(locale).iso]);
    }
- 
+
    get active() {
      return this._active;
    }
- 
+
    set active(locale) {
     if (!this.isSupported(locale)) {
        return;
      }
 
      const normalized = Locale.from(locale);
- 
+
      log('Setting locale to:', normalized.iso);
- 
+
      this.intl.setLocale(normalized.locale);
      this.moment.setLocale(normalized.language);
- 
+
      set(this.storage, 'locale', normalized.locale);
- 
+
      this._active = normalized;
- 
+
      this.trigger('locale', normalized);
    }
 }
