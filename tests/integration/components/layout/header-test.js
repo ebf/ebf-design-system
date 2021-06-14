@@ -22,7 +22,7 @@ module('Integration | Component | layout/header', function(hooks) {
       </Layout::Header> 
     `);
 
-    assert.dom('.navbar-brander').exists();
+    assert.dom('.navbar').exists();
     assert.dom('.navbar-light').exists();
   });
 });

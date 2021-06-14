@@ -2,12 +2,12 @@
   @type="dark"
   @backgroundColor="primary"
   @collapsed={{true}}
-  @fluid={{false}} 
+  @fluid={{false}}
   class="sticky-top"
   as |navbar|>
   <div class="navbar-header mr-auto">
-    <LinkTo @route="examples.login" @model={{a}} class="navbar-brand">
-      <img src="/telekom-logo-white.svg"/>
+    <LinkTo @route="examples.login" @model={{this.a}} class="navbar-brand">
+      <img src="/telekom-logo-white.svg"/ alt="Deutsche Telekom AG">
       <span class="label">Erleben, was verbindet.</span>
     </LinkTo>
     <navbar.toggle />

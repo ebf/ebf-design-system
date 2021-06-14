@@ -4,7 +4,7 @@ import { click, render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 const notifications = [{
-  icon: 'ebf-apple',
+  icon: 'ebf-device-smartphone',
   title: 'Title',
   text: 'Notification',
 }];
@@ -19,13 +19,13 @@ module('Integration | Component | notifications/index', function(hooks) {
       @notifications={{this.notifications}}
     />`);
 
-    assert.dom(this.element.querySelector('.ebf-notification-dropdown-menu')).doesNotExist();
+    assert.dom(this.element.querySelector('.notification-dropdown-menu')).doesNotExist();
     assert.dom(this.element.querySelector('.dropdown-toggle')).containsText('Notifications');
-    assert.dom(this.element.querySelector('.ebf-badge-notification')).hasNoClass('badge-danger');
+    assert.dom(this.element.querySelector('.badge-notification')).hasNoClass('badge-danger');
 
     await click('a.dropdown-toggle');
 
-    assert.dom(this.element.querySelector('.ebf-notification-dropdown-menu')).exists();
+    assert.dom(this.element.querySelector('.notification-dropdown-menu')).exists();
     assert.dom(this.element.querySelector('.dropdown-item')).containsText('All done here!');
   });
 
@@ -44,21 +44,21 @@ module('Integration | Component | notifications/index', function(hooks) {
         />
     </Notifications>`);
 
-    assert.dom(this.element.querySelector('.ebf-notification-dropdown-menu')).doesNotExist();
+    assert.dom(this.element.querySelector('.notification-dropdown-menu')).doesNotExist();
     assert.dom(this.element.querySelector('.dropdown-toggle')).containsText('Notifications');
-    assert.dom(this.element.querySelector('.ebf-badge-notification')).hasClass('badge-danger');
+    assert.dom(this.element.querySelector('.badge-notification')).hasClass('badge-danger');
 
     await click('a.dropdown-toggle');
 
-    assert.dom(this.element.querySelector('.ebf-notification-dropdown-menu')).exists();
+    assert.dom(this.element.querySelector('.notification-dropdown-menu')).exists();
     assert.dom(this.element.querySelector('.dropdown-item:last-child')).containsText('Clear');
     assert.dom(this.element.querySelector('.dropdown-item:first-child')).exists();
-    assert.dom(this.element.querySelector('.ebf-notification')).exists();
+    assert.dom(this.element.querySelector('.notification-custom')).exists();
 
     await click('.dropdown-item:last-child');
 
-    assert.dom(this.element.querySelector('.ebf-notification-dropdown-menu')).exists();
-    assert.dom(this.element.querySelector('.ebf-notification')).doesNotExist();
+    assert.dom(this.element.querySelector('.notification-dropdown-menu')).exists();
+    assert.dom(this.element.querySelector('.notification-custom')).doesNotExist();
     assert.dom(this.element.querySelector('.dropdown-item')).containsText('All done here!');
   });
 
@@ -80,11 +80,11 @@ module('Integration | Component | notifications/index', function(hooks) {
     await click('a.dropdown-toggle');
 
     assert.dom(this.element.querySelector('.dropdown-item:first-child')).exists();
-    assert.dom(this.element.querySelector('.ebf-notification')).exists();
+    assert.dom(this.element.querySelector('.notification-custom')).exists();
 
     await click('.dropdown-item:first-child');
 
-    assert.dom(this.element.querySelector('.ebf-notification-dropdown-menu')).doesNotExist();
+    assert.dom(this.element.querySelector('.notification-dropdown-menu')).doesNotExist();
     assert.equal(this.selected, notifications[0]);
   });
 
@@ -108,11 +108,11 @@ module('Integration | Component | notifications/index', function(hooks) {
     await click('a.dropdown-toggle');
 
     assert.dom(this.element.querySelector('.dropdown-item:first-child')).exists();
-    assert.dom(this.element.querySelector('.ebf-notification .ebf-notification-close i')).exists();
+    assert.dom(this.element.querySelector('.notification-custom .notification-close i')).exists();
 
-    await click('.ebf-notification-close i');
+    await click('.notification-close i');
 
-    assert.dom(this.element.querySelector('.ebf-notification-dropdown-menu')).exists();
+    assert.dom(this.element.querySelector('.notification-dropdown-menu')).exists();
     assert.dom(this.element.querySelector('.dropdown-item')).containsText('All done here!');
   });
 });

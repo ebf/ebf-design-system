@@ -11,8 +11,8 @@ module('Integration | Component | stats/row', function(hooks) {
 
     assert.dom(this.element.querySelector('.stats-row')).containsText('Label');
     assert.dom(this.element.querySelector('.stats-row')).containsText('Value');
-    assert.dom(this.element.querySelector('.col-12')).exists();
-    assert.dom(this.element.querySelector('.col-6')).doesNotExist();
+    assert.dom(this.element.querySelector('.col-6')).exists();
+    assert.dom(this.element.querySelector('.col-12')).doesNotExist();
 
     await render(hbs`<Stats::Row @inline={{true}} @label="Label" @value="Value" />`);
 
