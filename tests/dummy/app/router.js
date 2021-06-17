@@ -9,7 +9,7 @@ const Router = AddonDocsRouter.extend({
 Router.map(function() {
   this.route('examples', function() {
     this.route('login');
-  }) 
+  })
   docsRoute(this, function() {
     this.route('usage');
     this.route('colors');
@@ -34,6 +34,7 @@ Router.map(function() {
     this.route('notifications');
     this.route('language-switcher');
     this.route('loaders');
+    this.route('layout-component');
     this.route('pagination');
     this.route('progress');
     this.route('stats');
