@@ -2,66 +2,134 @@
   <BsNavbar 
     @type="light"
     @backgroundColor="white"
-    @collapsed={{true}}
+    @collapsed={{false}}
     @fluid={{true}}
-    class="sticky-top shadow-sm border-top-primary"  as |navbar|>
+    class="sticky-top shadow-sm border-top-primary flex-sm-nowrap" as |navbar|>
     <div class="navbar-header mr-auto">
       <LinkTo @route="examples.login" class="navbar-brand">
         <img src="/telekom-logo-magenta.svg"/ alt="Deutsche Telekom AG">
         <span class="label">Erleben, was verbindet.</span>
-      </LinkTo>
-      <navbar.toggle />
+      </LinkTo>      
     </div>     
-    <navbar.content class="ml-auto flex-grow-0">
-      <navbar.nav class="flex-nowrap" as |nav|>
+    <navbar.content class="navbar-expand-sm ml-auto flex-grow-0">
+      <navbar.nav class="flex-nowrap justify-content-end" as |nav|>
         <nav.item>
-          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
+          <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
         </nav.item>
         <nav.item>
-          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+          <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
         </nav.item>
         <nav.item>
-          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
+          <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
         </nav.item>
-        <nav.item>
-          <nav.link-to @route="index"><Icon::Ebf @icon="ebf-link-01" /></nav.link-to>
-        </nav.item>
+        <nav.dropdown class="no-caret" as |dd|>
+          <dd.toggle><Icon::Ebf @icon="ebf-link-01" /></dd.toggle>
+          <dd.menu class="dropdown-menu-right dropdown-quick-link mt-6 py-3" as |ddm|>
+            <ddm.item>
+              <ddm.link-to @route="examples.webshop" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-shopping-bag" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Webshop</p>
+                    <p class="fs-2 mb-0">Produkte kaufen und Bestellungen verwalten</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-file" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Nachrichten</p>
+                    <p class="fs-2 mb-0">Zeigen Sie alle Ihre Nachrichten in unserem Benachrichtigungscenter an</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-user" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Kunden verwalten</p>
+                    <p class="fs-2 mb-0">Erhalten Sie Einblick in Ihre Gerätedaten</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-bookmark" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Bookmarks</p>
+                    <p class="fs-2 mb-0">Erhalten Sie Einblick in Ihre Gerätedaten</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-note" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Reports</p>
+                    <p class="fs-2 mb-0">Zeigen Sie alle Ihre Nachrichten in unserem Benachrichtigungscenter an</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+          </dd.menu>
+        </nav.dropdown>
       </navbar.nav>
     </navbar.content>
   </BsNavbar>
   <BsNavbar 
-  @type="light"
+    @type="light"
     @backgroundColor="white"
     @collapsed={{true}}
     @fluid={{true}}
-     class="shadow-sm" as |navbar|>     
-      <navbar.toggle class="mr-auto" />      
-      <navbar.content class="flex-grow-1">
-        <navbar.nav as |nav|>
-          <nav.item>
-            <nav.link-to @route="examples.webshop" class="active">Produkte</nav.link-to>
-          </nav.item>
-          <nav.item>
-            <nav.link-to @route="examples.cost-center">Kostentelle</nav.link-to>
-          </nav.item>
-          <nav.item>
-            <nav.link-to @route="examples.address-management">Adressmanagement</nav.link-to>
-          </nav.item>
-          <nav.item>
-            <nav.link-to @route="examples.orders">Bestellungen</nav.link-to>
-          </nav.item>
-          <nav.item>
-            <nav.link-to @route="examples.saved-shopping-cart-empty-state">Bestellvorlagen</nav.link-to>
-          </nav.item>
-        </navbar.nav>
-      </navbar.content>
-      <navbar.content class="ml-auto flex-grow-0">
-        <navbar.nav as |nav|>           
-          <nav.item>
-            <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
-          </nav.item>            
-        </navbar.nav>
-      </navbar.content>    
+     class="shadow-sm" as |navbar|>
+    <navbar.toggle class="mr-auto" />
+    <navbar.content class="order-2 order-lg-1">
+      <navbar.nav as |nav|>
+        <nav.item>
+          <nav.link-to @route="examples.webshop-search" class="active">Produkte</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.cost-center">Kostentelle</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.address-management">Adressmanagement</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.orders">Bestellungen</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.saved-shopping-cart">Bestellvorlagen</nav.link-to>
+        </nav.item>
+      </navbar.nav>
+    </navbar.content>
+    <navbar.nav class="order-1 order-lg-2" as |nav|>           
+      <nav.item>
+        <nav.link-to class="fs-1 font-weight-bold d-flex align-items-center notification-active" @route="examples.webshop-shopping-cart">
+          <Icon::Ebf class="fs-5 mr-2 font-weight-normal" @icon="ebf-shopping-bag" />
+          <div class="notification-indicator bg-success fs-1 text-white text-center">6</div>
+          Warenkorb
+        </nav.link-to>
+      </nav.item>
+    </navbar.nav>
   </BsNavbar>
 </div>
 
@@ -83,16 +151,16 @@
 
 <div class="container">
   <div class="row justify-content-end">
-    <div class="col-lg-7 col-md-12 col-sm-12">
-      <h3 class="font-weight-bold text-lg-left text-md-center text-sm-center">Apple iPhone 11 Pro</h3>
-      <p class="mb-0 mb-sm-5 text-lg-left text-md-center text-sm-center">
+    <div class="col-12 col-lg-7">
+      <h3 class="text-center text-lg-left font-weight-bold ">Apple iPhone 11 Pro</h3>
+      <p class="text-center text-lg-left mb-5 mb-lg-0">
         <i class="ebf ebf-check-mark-circle-full text-success mr-2"></i>
         Geringe Warenbestände - Artikel eingeschränkt verfügbar</p>
     </div>
   </div>
-  <div class="media d-flex flex-lg-row flex-md-column flex-sm-column flex-xs-column mb-9">
-    <img class="align-self-start col-lg-5 col-md-12 col-sm-12" src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="Generic placeholder image">
-    <div class="media-body col-lg-7 col-md-12 col-sm-12">
+  <div class="media d-flex flex-column flex-lg-row mb-9">
+    <img class="col-12 col-lg-5 align-self-start" src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="Generic placeholder image">
+    <div class="media-body col-12 col-lg-7">
       <ul class="list-square mt-5">
         <li>5,8” Super Retina XDR OLED Display (14,7 cm Diagonale)*</li>
         <li>Wasser- und Staubschutz (4 Meter bis zu 30 Minuten, IP68)*</li>
@@ -102,33 +170,33 @@
       </ul>
       <a href="#">zu den Gerätedetails</a>
       <div class="row pt-7">
-        <div class="col-lg-5 col-md-12 col-sm-12">
+        <div class="col-12 col-lg-5">
           <label class="w-100 text-dark">Farbe: <span class="font-weight-bold">Weiß</span></label>
-          <button type="button" class="btn btn-color-selector-white mr-2" data-toggle="button" aria-pressed="true" autocomplete="off">
+          <button type="button" class="btn btn-color-selector-white mr-1 mr-xl-2" data-toggle="button" aria-pressed="true" autocomplete="off">
             <i class="ebf ebf-check-mark"></i>
             <i class="ebf ebf-line-diag"></i>
           </button>
-          <button type="button" class="btn btn-color-selector-light mr-2" data-toggle="button" aria-pressed="false" autocomplete="off">
+          <button type="button" class="btn btn-color-selector-light mr-1 mr-xl-2" data-toggle="button" aria-pressed="false" autocomplete="off">
             <i class="ebf ebf-check-mark"></i>
             <i class="ebf ebf-line-diag"></i>
           </button>
-          <button type="button" class="btn btn-color-selector-dark mr-2" data-toggle="button" aria-pressed="false" autocomplete="off">
+          <button type="button" class="btn btn-color-selector-dark mr-1 mr-xl-2" data-toggle="button" aria-pressed="false" autocomplete="off">
             <i class="ebf ebf-check-mark"></i>
             <i class="ebf ebf-line-diag"></i>
           </button>
-          <hr class="my-lg-4 my-md-4 my-sm-5">
+          <hr class="my-5 my-md-4">
         </div>
-        <div class="col-lg-7 col-md-12 col-sm-12 flex-nowrap">
+        <div class="col-12 col-lg-7 flex-nowrap">
           <label class="w-100 text-dark">Speichergröße: <span class="font-weight-bold">256 GB</span></label>
-          <button type="button" class="btn btn-filter-tabs mr-lg-2 mr-md-1" data-toggle="button" aria-pressed="false" autocomplete="off">64 GB</button>
-          <button type="button" class="btn btn-filter-tabs mr-lg-2 mr-md-1" data-toggle="button" aria-pressed="false" autocomplete="off">128 GB</button>
-          <button type="button" class="btn btn-filter-tabs mr-lg-2 mr-md-1 active" data-toggle="button" aria-pressed="true" autocomplete="off">256 GB</button>
+          <button type="button" class="btn btn-filter-tabs mr-1 mr-xl-2" data-toggle="button" aria-pressed="false" autocomplete="off">64 GB</button>
+          <button type="button" class="btn btn-filter-tabs mr-1 mr-xl-2" data-toggle="button" aria-pressed="false" autocomplete="off">128 GB</button>
+          <button type="button" class="btn btn-filter-tabs mr-1 mr-xl-2 active" data-toggle="button" aria-pressed="true" autocomplete="off">256 GB</button>
           <button type="button" class="btn btn-filter-tabs" data-toggle="button" aria-pressed="false" autocomplete="off" disabled>512 GB</button>
-          <hr class="my-lg-4 my-md-4 my-sm-5">
+          <hr class="my-5 my-md-4">
         </div>                
       </div>
       <div class="row">
-        <div class="d-lg-inline-flex d-md-inline-flex d-sm-block justify-content-start align-items-end col-lg-12 col-md-12 col-sm-12">    
+        <div class="col-12 d-block d-md-inline-flex justify-content-start align-items-end ">    
           <form class="mr-5">
             <label class="text-dark">Anzahl: <span class="font-weight-bold">{{this.value}} Endgeräte</span></label>
            <Inputs::Counter
@@ -140,7 +208,7 @@
               @onChange={{fn (mut this.value)}}
             />
           </form>      
-          <hr class="d-lg-none d-md-none my-sm-5">              
+          <hr class="d-block d-md-none my-5">              
           <span class="fs-5 mr-3 mb-0 font-weight-bolder text-primary line-height-display">
             <strong class="price">ab</strong>
             <strong class="price">116,93 €</strong>
@@ -158,14 +226,14 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-          <hr class="my-lg-4 my-md-4 my-sm-5">
-          <BsButton @type="primary" class="mt-2 w-md-auto w-sm-100">In den Warenkorb</BsButton>           
+        <div class="col-12">
+          <hr class="my-5 my-md-4">
+          <BsButton @type="primary" class="mt-2 w-100 w-md-auto">In den Warenkorb</BsButton>           
         </div>
       </div>
     </div>
   </div>            
-  <hr class="my-lg-4 my-md-4 my-sm-5">     
+  <hr class="my-5 my-md-4">     
 </div>
 
 <div class="container">
@@ -249,7 +317,12 @@
 
 <div class="container-fluid bg-white shadow">
   <div class="container py-4 d-flex align-items-center justify-content-between">
-    {{link-to "Weiter einkaufen" "examples.webshop"}}
-    {{link-to "zum Warenkorb" "examples.webshop" class="btn btn-primary text-decoration-none"}}
+    <LinkTo @route="examples.webshop" class="btn btn-ghost">
+      Weiter einkaufen
+    </LinkTo>
+    <LinkTo @route="examples.webshop-shopping-cart" class="btn btn-primary">
+      Zum Warenkorb
+    </LinkTo>
+    
   </div>
 </div>

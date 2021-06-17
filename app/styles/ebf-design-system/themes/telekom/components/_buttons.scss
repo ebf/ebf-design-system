@@ -271,12 +271,15 @@ $btn-custom-transition: color 0.1s ease, background-color 0.2s ease,
   vertical-align: middle;
   user-select: none;
   overflow: hidden;
-  white-space: nowrap;
   transition: $btn-custom-transition;
   transform-origin: center;
   border-width: $input-btn-border-width;
   border-style: solid;
   transform: scale(1);
+
+  &:hover {
+    text-decoration: none;
+  }
 
   @include media-breakpoint-down(md) {
     @include button-size(

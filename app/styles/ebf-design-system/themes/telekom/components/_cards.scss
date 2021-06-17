@@ -558,12 +558,19 @@
 
   .card-title {
     font-weight: $font-weight-bold;
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
   }
 
   .card-availability {
     display: flex;
     margin-bottom: $spacer * 1.5;
     align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+    }
 
     i {
       margin-right: $spacer / 2;

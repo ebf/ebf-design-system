@@ -1,141 +1,208 @@
 <BsNavbar 
   @type="light"
   @backgroundColor="white"
-  @collapsed={{true}}
+  @collapsed={{false}}
   @fluid={{true}}
-  class="sticky-top border-top-primary shadow-sm"
-  as |navbar|>
+  class="sticky-top shadow-sm border-top-primary flex-sm-nowrap" as |navbar|>
   <div class="navbar-header mr-auto">
     <LinkTo @route="examples.login" class="navbar-brand">
       <img src="/telekom-logo-magenta.svg"/ alt="Deutsche Telekom AG">
       <span class="label">Erleben, was verbindet.</span>
-    </LinkTo>
-    <navbar.toggle />
+    </LinkTo>      
   </div>     
-  <navbar.content class="ml-auto flex-grow-0">
-    <navbar.nav class="flex-nowrap" as |nav|>
+  <navbar.content class="navbar-expand-sm ml-auto flex-grow-0">
+    <navbar.nav class="flex-nowrap justify-content-end" as |nav|>
       <nav.item>
-        <nav.link-to @route="index"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
+        <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
       </nav.item>
       <nav.item>
-        <nav.link-to @route="index"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+        <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
       </nav.item>
       <nav.item>
-        <nav.link-to @route="index"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
+        <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
       </nav.item>
-      <nav.item>
-        <nav.link-to @route="index"><Icon::Ebf @icon="ebf-link-01" /></nav.link-to>
-      </nav.item>
+      <nav.dropdown class="no-caret" as |dd|>
+        <dd.toggle><Icon::Ebf @icon="ebf-link-01" /></dd.toggle>
+        <dd.menu class="dropdown-menu-right dropdown-quick-link mt-6 py-3" as |ddm|>
+          <ddm.item>
+            <ddm.link-to @route="examples.webshop" class="py-3">
+              <div class="d-flex flex-row">
+                <div class="m-auto align-content-center px-2">
+                  <Icon::Ebf @icon="ebf-shopping-bag" class="fs-5"/>
+                </div>
+                <div class="pl-3 pr-2 flex-grow-1">
+                  <p class="fs-4 mb-2 font-weight-medium">Webshop</p>
+                  <p class="fs-2 mb-0">Produkte kaufen und Bestellungen verwalten</p>
+                </div>
+              </div>
+            </ddm.link-to>
+          </ddm.item>
+          <ddm.item>
+            <ddm.link-to @route="examples.login" class="py-3">
+              <div class="d-flex flex-row">
+                <div class="m-auto align-content-center px-2">
+                  <Icon::Ebf @icon="ebf-file" class="fs-5"/>
+                </div>
+                <div class="pl-3 pr-2 flex-grow-1">
+                  <p class="fs-4 mb-2 font-weight-medium">Nachrichten</p>
+                  <p class="fs-2 mb-0">Zeigen Sie alle Ihre Nachrichten in unserem Benachrichtigungscenter an</p>
+                </div>
+              </div>
+            </ddm.link-to>
+          </ddm.item>
+          <ddm.item>
+            <ddm.link-to @route="examples.login" class="py-3">
+              <div class="d-flex flex-row">
+                <div class="m-auto align-content-center px-2">
+                  <Icon::Ebf @icon="ebf-user" class="fs-5"/>
+                </div>
+                <div class="pl-3 pr-2 flex-grow-1">
+                  <p class="fs-4 mb-2 font-weight-medium">Kunden verwalten</p>
+                  <p class="fs-2 mb-0">Erhalten Sie Einblick in Ihre Gerätedaten</p>
+                </div>
+              </div>
+            </ddm.link-to>
+          </ddm.item>
+          <ddm.item>
+            <ddm.link-to @route="examples.login" class="py-3">
+              <div class="d-flex flex-row">
+                <div class="m-auto align-content-center px-2">
+                  <Icon::Ebf @icon="ebf-bookmark" class="fs-5"/>
+                </div>
+                <div class="pl-3 pr-2 flex-grow-1">
+                  <p class="fs-4 mb-2 font-weight-medium">Bookmarks</p>
+                  <p class="fs-2 mb-0">Erhalten Sie Einblick in Ihre Gerätedaten</p>
+                </div>
+              </div>
+            </ddm.link-to>
+          </ddm.item>
+          <ddm.item>
+            <ddm.link-to @route="examples.login" class="py-3">
+              <div class="d-flex flex-row">
+                <div class="m-auto align-content-center px-2">
+                  <Icon::Ebf @icon="ebf-note" class="fs-5"/>
+                </div>
+                <div class="pl-3 pr-2 flex-grow-1">
+                  <p class="fs-4 mb-2 font-weight-medium">Reports</p>
+                  <p class="fs-2 mb-0">Zeigen Sie alle Ihre Nachrichten in unserem Benachrichtigungscenter an</p>
+                </div>
+              </div>
+            </ddm.link-to>
+          </ddm.item>
+        </dd.menu>
+      </nav.dropdown>
     </navbar.nav>
   </navbar.content>
 </BsNavbar>
 
-<div class="container">
-  <div class="row">
-    <div class="col col-12 text-center my-7">     
-      <p class="fs-3">Herzlich Willkommen!</p>
-      <h2>Telekom Device Cycle Suite</h2>      
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12">
-      <div class="mb-4 d-flex justify-content-between align-items-center">
-        <div class="fs-5 font-weight-bold">Meine Spaces</div>
-        <button class="btn btn-ghost"><i class="ebf ebf-plus mr-2 text-dark fs-3"></i>Add Space</button>
+<div class="bg-gray-100">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12 text-center my-7">     
+        <p class="fs-3">Herzlich Willkommen!</p>
+        <h2>Telekom Device Cycle Suite</h2>      
       </div>
     </div>
-  </div>
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 main-cards mb-9">
-    <div class="col mb-4">
-      <LinkTo @route="examples.webshop-search" class="card-link">
-      <div class="card card-primary card-hover h-100">               
-        <div class="card-body">
-          <div class="card-image">
-            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
-          </div>
-          <div class="card-title mb-2 fs-4 text-1200">Webshop</div>
-          <div class="card-text fs-2 text-1200">Produkte kaufen und Bestellungen verwalten</div>                
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-4 d-flex justify-content-between align-items-center">
+          <div class="fs-5 font-weight-bold">Meine Spaces</div>
+          <button class="btn btn-ghost"><i class="ebf ebf-plus mr-2 text-dark fs-3"></i>Add Space</button>
         </div>
       </div>
-      </LinkTo>
-    </div> 
-    <div class="col mb-4">
-      <div class="card card-primary card-hover h-100">               
-        <div class="card-body">
-          <div class="card-image">
-            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 main-cards mb-9">
+      <div class="col mb-4">
+        <LinkTo @route="examples.webshop-search" class="card-link">
+        <div class="card card-primary card-hover h-100">               
+          <div class="card-body">
+            <div class="card-image">
+              <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+            </div>
+            <div class="card-title mb-2 fs-4 text-1200">Webshop</div>
+            <div class="card-text fs-2 text-1200">Produkte kaufen und Bestellungen verwalten</div>                
           </div>
-          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
-          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
         </div>
-      </div>
-    </div> 
-    <div class="col mb-4">
-      <div class="card card-primary card-hover h-100">               
-        <div class="card-body">
-          <div class="card-image">
-            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+        </LinkTo>
+      </div> 
+      <div class="col mb-4">
+        <div class="card card-primary card-hover h-100">               
+          <div class="card-body">
+            <div class="card-image">
+              <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+            </div>
+            <div class="card-title mb-2 fs-4 text-1200">Webshop profiles</div>
+            <div class="card-text fs-2 text-1200">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>                
           </div>
-          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
-          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
         </div>
-      </div>
-    </div> 
-    <div class="col mb-4">
-      <div class="card card-primary card-hover h-100">               
-        <div class="card-body">
-          <div class="card-image">
-            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+      </div> 
+      <div class="col mb-4">
+        <div class="card card-primary card-hover h-100">               
+          <div class="card-body">
+            <div class="card-image">
+              <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+            </div>
+            <div class="card-title mb-2 fs-4 text-1200">Kunden verwalten</div>
+            <div class="card-text fs-2 text-1200">Erhalten Sie Einblick in Ihre Gerätedaten</div>                
           </div>
-          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
-          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
         </div>
-      </div>
-    </div> 
-    <div class="col mb-4">
-      <div class="card card-primary card-hover h-100">               
-        <div class="card-body">
-          <div class="card-image">
-            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+      </div> 
+      <div class="col mb-4">
+        <div class="card card-primary card-hover h-100">               
+          <div class="card-body">
+            <div class="card-image">
+              <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+            </div>
+            <div class="card-title mb-2 fs-4 text-1200">Angebot Konfigurator</div>
+            <div class="card-text fs-2 text-1200">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>                
           </div>
-          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
-          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
         </div>
-      </div>
-    </div> 
-    <div class="col mb-4">
-      <div class="card card-primary card-hover h-100">               
-        <div class="card-body">
-          <div class="card-image">
-            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+      </div> 
+      <div class="col mb-4">
+        <div class="card card-primary card-hover h-100">               
+          <div class="card-body">
+            <div class="card-image">
+              <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+            </div>
+            <div class="card-title mb-2 fs-4 text-1200">Nachrichten</div>
+            <div class="card-text fs-2 text-1200">Zeigen Sie alle Ihre Nachrichten in unserem Benachrichtigungscenter an</div>                
           </div>
-          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
-          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
         </div>
-      </div>
-    </div> 
-    <div class="col mb-4">
-      <div class="card card-primary card-hover h-100">               
-        <div class="card-body">
-          <div class="card-image">
-            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+      </div> 
+      <div class="col mb-4">
+        <div class="card card-primary card-hover h-100">               
+          <div class="card-body">
+            <div class="card-image">
+              <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+            </div>
+            <div class="card-title mb-2 fs-4 text-1200">Einstellungen</div>
+            <div class="card-text fs-2 text-1200">Erhalten Sie Einblick in Ihre Gerätedaten</div>                
           </div>
-          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
-          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
         </div>
-      </div>
-    </div> 
-    <div class="col mb-4">
-      <div class="card card-primary card-hover h-100">               
-        <div class="card-body">
-          <div class="card-image">
-            <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+      </div> 
+      <div class="col mb-4">
+        <div class="card card-primary card-hover h-100">               
+          <div class="card-body">
+            <div class="card-image">
+              <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+            </div>
+            <div class="card-title mb-2 fs-4 text-1200">Bookmarks</div>
+            <div class="card-text fs-2 text-1200">Produkte kaufen und Bestellungen verwalten</div>                
           </div>
-          <div class="card-title mb-2 fs-4 text-1200">Card title</div>
-          <div class="card-text fs-2 text-1200">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>                
         </div>
-      </div>
-    </div>                 
+      </div> 
+      <div class="col mb-4">
+        <div class="card card-primary card-hover h-100">               
+          <div class="card-body">
+            <div class="card-image">
+              <img src="/pictograms/webshop-icon.svg" alt="Card"/>
+            </div>
+            <div class="card-title mb-2 fs-4 text-1200">Reports</div>
+            <div class="card-text fs-2 text-1200">Zeigen Sie alle Ihre Nachrichten in unserem Benachrichtigungscenter an</div>                
+          </div>
+        </div>
+      </div>                 
+    </div>
   </div>
 </div>
 
@@ -143,10 +210,10 @@
   @fluid={{false}}
   @dark={{true}} as |footer|>
   <div class="row justify-content-between">
-    <div class="col-6 col-md-6 col-sm-5 d-flex flex-wrap align-content-center text-left justify-content-start mr-auto">
-      <a href="#" class="footer-brand">
+    <div class="col-5 col-md-6 d-flex flex-wrap align-content-center text-left justify-content-start mr-auto">
+      <LinkTo @route="examples.login" class="footer-brand">
         <Layout::Footer::Logo @url="/telekom-logo-white.svg" @label="Deutsche Telekom AG" />
-      </a>
+      </LinkTo>
     </div>  
     <div class="col-6 col-md-6 col-sm-7 d-flex flex-wrap align-content-center text-right justify-content-end">
       <span class="label">Erleben, was verbindet.</span>
@@ -158,10 +225,10 @@
     </div>
   </div>
   <div class="row justify-content-between">
-    <div class="col-md-4 col-sm-12 d-flex flex-wrap align-content-center text-left justify-content-start mb-lg-0 mb-md-0 mb-sm-3">
+    <div class="col-12 col-md-4 d-flex flex-wrap align-content-center text-left justify-content-start mb-lg-0 mb-md-0 mb-sm-3">
       <Layout::Footer::Copyright @label="Deutsche Telekom AG"/>
     </div>  
-    <div class="col-md-8 col-sm-12 d-flex flex-wrap text-right justify-content-lg-end justify-content-sm-start justify-content-md-end">
+    <div class="col-12 col-md-8 d-flex flex-wrap text-right justify-content-start justify-content-md-end">
       <BsNav
         @justified={{false}}
         @stacked={{false}}

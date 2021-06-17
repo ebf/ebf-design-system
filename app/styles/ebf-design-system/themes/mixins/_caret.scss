@@ -67,3 +67,11 @@
     }
   }
 }
+
+.no-caret {
+  .dropdown-toggle {
+    &::after {
+      content: none !important;
+    }
+  }
+}

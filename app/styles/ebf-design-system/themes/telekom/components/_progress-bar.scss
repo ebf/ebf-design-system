@@ -54,7 +54,8 @@
   margin: 0 auto;
 
   .progress {
-    height: $spacer / 8;
+    height: 2px;
+    background-color: $gray-700;
   }
 
   .progress-bar-item-container {
@@ -182,6 +183,112 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+// Custom Progress Bar
+
+.custom-progress-bar {
+  height: 2.25rem;
+
+  .progress {
+    height: 1px;
+    margin-top: -0.75rem;
+    background-color: $gray-700;
+  }
+
+  .progress-bar-item-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -0.75rem;
+
+    .progress-bar-item {
+      display: flex;
+      align-items: center;
+      width: auto;
+      position: relative;
+      top: $spacer/3;
+      font-size: $fs-2;
+      text-align: center;
+      color: $white;
+      pointer-events: none;
+      z-index: 9;
+      background-color: $gray-1200;
+      padding: 0 1.5rem;
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+
+      .progress-label {         
+        font-style: normal;
+        color: $white;
+        margin-left: 0.75rem;
+      }
+
+      .progress-dot {
+        align-self: flex-start;
+        width: 2.25rem;
+        height: 2.25rem;
+        line-height: 2.25rem;
+        text-align: center;
+        display: block;
+        background-color: transparent;
+        border-radius: 2.25rem;
+        border-width: 1px;
+        border-style: solid;
+        border-color: $gray-700;
+        color: $white;
+        font-size: 1rem;
+        font-weight: $font-weight-medium;
+      }
+
+      &.active {
+        pointer-events: all;
+        font-style: normal;
+
+        .progress-label {
+          font-style: $font-style-normal;
+          font-weight: $font-weight-medium;
+        }
+
+        .progress-dot {
+          background: $primary;
+          border-color: $primary;
+          font-weight: $font-weight-bold;
+        }
+
+        &:hover {
+          .progress-label {
+            color: $white;
+            text-decoration: none;
+          }
+        }
+      }
+
+      &.completed {
+        .progress-dot {
+          background-color: $success;
+          border-color: $success;
+        }
+      }
+
+      &.current,
+      &.selected {
+        pointer-events: none;
       }
     }
   }

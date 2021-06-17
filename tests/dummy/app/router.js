@@ -19,7 +19,10 @@ Router.map(function() {
     this.route('address-management');
     this.route('address-management-new');
     this.route('orders');
+    this.route('summary');
+    this.route('confirmation');
     this.route('orders-summary');
+    this.route('order-details');
     this.route('saved-shopping-cart');
     this.route('saved-shopping-cart-empty-state');
   }) 
