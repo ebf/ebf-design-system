@@ -64,21 +64,6 @@ module('Unit | Service | locale', function(hooks) {
     assert.deepEqual(moment.locale, service.active.language);
   });
 
-  test('it defaults to de_DE if neither storage nor browser locales are supported', function(assert) {
-    if (window.localStorage) {
-      window.localStorage.setItem('storage:session', JSON.stringify({ locale: rs.iso }));
-    } else {
-      return assert.ok(true);
-    }
-
-    const service = this.owner.lookup('service:locale');
-    const moment = this.owner.lookup('service:moment');
-
-    assert.ok(service.active);
-    assert.true(service.active.is(Locale.from('de_DE')));
-    assert.deepEqual(moment.locale, 'de');
-  });
-
   test('it should update the locale from the session:restored event', function(assert) {
     const intl = this.owner.lookup('service:intl');
     intl.setLocale(en.iso);
@@ -103,7 +88,7 @@ module('Unit | Service | locale', function(hooks) {
     const intl = this.owner.lookup('service:intl');
 
     assert.true(service.active.is(en));
-
+    
     service.session.trigger('session:restored', { session: { principal: { locale: 'de-de' } } });
 
     assert.true(service.active.is(en));

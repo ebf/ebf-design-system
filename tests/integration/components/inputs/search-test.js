@@ -101,7 +101,7 @@ module('Integration | Component | inputs/search', function(hooks) {
     assert.dom(this.element.querySelector('input')).hasValue('search term changed');
     assert.equal(this.term, 'search term');
 
-    await click('i.ebf-cancel');
+    await click('i.ebf-minus-circle');
 
     assert.dom(this.element.querySelector('input')).hasNoValue();
     assert.equal(this.term, null);

@@ -10,16 +10,16 @@ module('Integration | Component | notifications/item', function(hooks) {
   test('it renders default icon', async function(assert) {
     await render(hbs`<Notifications::Item />`);
 
-    assert.dom(this.element.querySelector('.notification-icon .icon')).exists();
-    assert.dom(this.element.querySelector('.notification-icon .icon')).hasClass('ebf-bell');
+    assert.dom(this.element.querySelector('.ebf-notification-icon .icon')).exists();
+    assert.dom(this.element.querySelector('.ebf-notification-icon .icon')).hasClass('ebf-bell');
   });
 
   test('it renders a defined icon', async function(assert) {
     await render(hbs`<Notifications::Item @icon="ebf-user" />`);
 
-    assert.dom(this.element.querySelector('.notification-icon .icon')).exists();
-    assert.dom(this.element.querySelector('.notification-icon .icon')).hasClass('ebf-user');
-    assert.dom(this.element.querySelector('.notification-icon .icon')).hasNoClass('ebf-bell');
+    assert.dom(this.element.querySelector('.ebf-notification-icon .icon')).exists();
+    assert.dom(this.element.querySelector('.ebf-notification-icon .icon')).hasClass('ebf-user');
+    assert.dom(this.element.querySelector('.ebf-notification-icon .icon')).hasNoClass('ebf-bell');
   });
 
   test('it renders with title and text', async function(assert) {
@@ -28,8 +28,8 @@ module('Integration | Component | notifications/item', function(hooks) {
       @text="Notification"
     />`);
 
-    assert.dom(this.element.querySelector('.notification-details p:first-child')).containsText('Title');
-    assert.dom(this.element.querySelector('.notification-details p:last-child')).containsText('Notification');
+    assert.dom(this.element.querySelector('.ebf-notification-details p:first-child')).containsText('Title');
+    assert.dom(this.element.querySelector('.ebf-notification-details p:last-child')).containsText('Notification');
   });
 
   test('it should not render date', async function(assert) {
@@ -51,7 +51,7 @@ module('Integration | Component | notifications/item', function(hooks) {
   test('it should not render close icon', async function(assert) {
     await render(hbs`<Notifications::Item />`);
 
-    assert.dom(this.element.querySelector('.notification-close')).doesNotExist();
+    assert.dom(this.element.querySelector('.ebf-notification-close')).doesNotExist();
   });
 
 
@@ -60,10 +60,10 @@ module('Integration | Component | notifications/item', function(hooks) {
 
     await render(hbs`<Notifications::Item @onDismiss={{fn (mut this.clicked) true}} />`);
 
-    assert.dom(this.element.querySelector('.notification-close')).exists();
-    assert.dom(this.element.querySelector('.notification-close .ebf-cancel')).exists();
+    assert.dom(this.element.querySelector('.ebf-notification-close')).exists();
+    assert.dom(this.element.querySelector('.ebf-notification-close .ebf-plus')).exists();
 
-    await click('.notification-close .ebf-cancel');
+    await click('.ebf-notification-close .ebf-plus');
 
     assert.true(this.clicked);
   });

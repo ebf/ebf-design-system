@@ -1,7 +1,3 @@
 {{#in-element this.destinationElement}}
-  <nav class="border-top justify-content-between secondary-nav navbar navbar-expand navbar-light bg-white">
-    {{yield (hash
-      item=(component "layout/headline-item")
-    )}}
-  </nav>
+  {{yield}}
 {{/in-element}}

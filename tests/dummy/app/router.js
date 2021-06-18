@@ -50,7 +50,6 @@ Router.map(function() {
     this.route('notifications');
     this.route('language-switcher');
     this.route('loaders');
-    this.route('layout-component');
     this.route('pagination');
     this.route('progress');
     this.route('stats');
