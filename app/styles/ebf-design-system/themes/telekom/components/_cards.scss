@@ -316,6 +316,9 @@
       background-color: $white;
     }
 
+    @include media-breakpoint-down(md) {
+      padding: 0 $grid-gutter-width / 2;
+    }
     .btn {
       font-size: $fs-4;
       font-weight: $font-weight-medium;

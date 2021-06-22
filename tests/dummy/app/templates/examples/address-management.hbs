@@ -133,8 +133,8 @@
   </BsNavbar>
 </div>
 
-<div class="container-fluid bg-gray-100">
-  <div class="container py-9">    
+<div class="container-fluid bg-gray-100 px-0">
+  <div class="container py-5 py-lg-9">    
     <div class="row">
       <div class="col-10">
         <nav aria-label="breadcrumb">
@@ -154,25 +154,27 @@
   <div class="row">
     <div class="col-12">
       <div class="my-5 d-flex align-items-center justify-content-end">        
-        {{#link-to "examples.address-management-new" class="btn btn-ghost text-decoration-none"}}
+        <LinkTo @route="examples.address-management-new" class="btn btn-ghost mx-auto mx-md-0">
           <i class="ebf ebf-plus"></i> Lieferadresse erstellen
-        {{/link-to}}
+        </LinkTo>
       </div>
     </div>
   </div>
-  <div class="row">
+    <div class="row">
     <div class="col">
       <div class="px-4 py-5 border">
         <div class="row mb-4">
-          <div class="col-12 d-flex align-items-center">
-            <h4 class="mb-0 flex-grow-1">Lieferadresse Namen 01</h4>
-            <div class="custom-control custom-checkbox justify-content-end">
-              <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-              <label class="custom-control-label" for="customCheck">Bevorzugte Rechnungsadresse</label>
-            </div>
-            <div class="custom-control custom-checkbox justify-content-end ml-3">
-              <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-              <label class="custom-control-label" for="customCheck">Bevorzugte Lieferadresse</label>
+          <div class="col-12 d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-start justify-content-lg-between">
+            <h4 class="mb-lg-0 flex-grow-1">Lieferadresse Namen 01</h4>
+            <div class="d-flex flex-column flex-md-row justify-content-end">
+              <div class="custom-control custom-checkbox mr-3 mb-3 mb-md-0">
+                <input type="checkbox" class="custom-control-input" id="customCheck1" name="example1">
+                <label class="custom-control-label" for="customCheck1">Bevorzugte Rechnungsadresse</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck2" name="example2">
+                <label class="custom-control-label" for="customCheck2">Bevorzugte Lieferadresse</label>
+              </div>
             </div>
           </div>          
         </div>
@@ -190,10 +192,10 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <div class="my-5 d-flex align-items-center justify-content-end">
-        {{#link-to "examples.address-management-new" class="btn btn-ghost text-decoration-none"}}
+      <div class="my-5 d-flex align-items-center justify-content-end">        
+        <LinkTo @route="examples.address-management-new" class="btn btn-ghost mx-auto mx-md-0">
           <i class="ebf ebf-plus"></i> Lieferadresse erstellen
-        {{/link-to}}
+        </LinkTo>
       </div>
     </div>
   </div>

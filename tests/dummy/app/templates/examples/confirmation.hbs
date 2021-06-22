@@ -35,8 +35,8 @@
   </div>
 </div>
 
-<div class="container-fluid bg-gray-100 flex-grow-1">
-  <div class="container py-9">    
+<div class="container-fluid d-flex flex-grow-1 flex-column bg-gray-100 px-0">
+  <div class="container py-5 py-lg-9">    
     <div class="row">
       <div class="col-10">        
         <h2>Bestätigung</h2>
@@ -45,7 +45,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container d-flex flex-column mb-4 mb-lg-9">
     <div class="px-4 pt-2 pb-4 bg-white border">
       <div class="row">
         <div class="col-12">      
@@ -57,12 +57,46 @@
         </div>
       </div>
     </div>
+    <BsButton @type="link" class="mt-4 px-0 py-0 align-self-end" @onClick={{fn (mut this.simple) true}}>
+      Warenkorb speichern
+    </BsButton>
   </div>  
 </div>
 
+<BsModal
+  @size="md"
+  @open={{if this.simple true false}}
+  @onSubmit={{fn (mut this.simple) false}}
+  @onHidden={{fn (mut this.simple) false}}  
+  as |modal| >
+  <modal.header class="text-center justify-content-center">
+    <h6 class="modal-title mt-5 flex-grow-1">Bestellvorlage speichern</h6>
+  </modal.header>
+  <modal.body class="py-0">
+   <BsForm as |form|>
+    <form.element      
+      @label="Warenkorb Name"
+      @property="text"
+      class="mb-0"
+      as |el|
+    >
+      <el.control placeholder="Geben Sie den Namen des Warenkorbs ein..."/>
+    </form.element>
+    </BsForm>
+  </modal.body>
+  <modal.footer class="d-flex justify-content-center py-5">
+    <BsButton @onClick={{fn modal.close}} @type="outline">Abbrechen</BsButton>
+    <BsButton @onClick={{fn modal.close}} @type="primary">Speichern</BsButton>    
+  </modal.footer>
+</BsModal>
+
 <div class="container-fluid bg-white shadow">
-  <div class="container py-4 d-flex align-items-center justify-content-between">
-    {{link-to "Zurück" "examples.summary"}}
-    {{link-to "Zur Bestellübersicht" "examples.orders" class="btn btn-primary text-decoration-none"}}
+  <div class="container py-4 d-flex align-items-center justify-content-between">    
+    <LinkTo @route="examples.summary" class="btn btn-ghost">
+      Zurück
+    </LinkTo>
+    <LinkTo @route="examples.orders" class="btn btn-primary">
+      Zur Bestellübersicht
+    </LinkTo>
   </div>
 </div>

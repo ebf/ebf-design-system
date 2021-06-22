@@ -133,8 +133,8 @@
   </BsNavbar>
 </div>
 
-<div class="container-fluid">
-  <div class="container py-9">    
+<div class="container-fluid px-0">
+  <div class="container py-5 py-lg-9">    
     <div class="row">
       <div class="col-10">
         <nav aria-label="breadcrumb">
@@ -152,15 +152,15 @@
 <div class="container">
   <div class="row justify-content-end">
     <div class="col-12 col-lg-7">
-      <h3 class="text-center text-lg-left font-weight-bold ">Apple iPhone 11 Pro</h3>
+      <h3 class="text-center text-lg-left font-weight-bold">Apple iPhone 11 Pro</h3>
       <p class="text-center text-lg-left mb-5 mb-lg-0">
         <i class="ebf ebf-check-mark-circle-full text-success mr-2"></i>
         Geringe Warenbestände - Artikel eingeschränkt verfügbar</p>
     </div>
   </div>
   <div class="media d-flex flex-column flex-lg-row mb-9">
-    <img class="col-12 col-lg-5 align-self-start" src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="Generic placeholder image">
-    <div class="media-body col-12 col-lg-7">
+    <img class="col-12 col-lg-5 align-self-start" src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="Generic placeholder">
+    <div class="media-body col-12 col-lg-7 px-0">
       <ul class="list-square mt-5">
         <li>5,8” Super Retina XDR OLED Display (14,7 cm Diagonale)*</li>
         <li>Wasser- und Staubschutz (4 Meter bis zu 30 Minuten, IP68)*</li>
@@ -197,7 +197,7 @@
       </div>
       <div class="row">
         <div class="col-12 d-block d-md-inline-flex justify-content-start align-items-end ">    
-          <form class="mr-5">
+          <form class="mr-0 mr-md-5">
             <label class="text-dark">Anzahl: <span class="font-weight-bold">{{this.value}} Endgeräte</span></label>
            <Inputs::Counter
               @label={{this.value}}
@@ -250,7 +250,7 @@
   </div>
 </div>
 
-<div class="container-fluid bg-gray-100 py-9">
+<div class="container-fluid bg-gray-100 py-9 px-0">
   <div class="container">
     <div class="row">
       <div class="col-12 mb-9 text-center">
@@ -315,12 +315,12 @@
   </div>
 </div>
 
-<div class="container-fluid bg-white shadow">
-  <div class="container py-4 d-flex align-items-center justify-content-between">
-    <LinkTo @route="examples.webshop" class="btn btn-ghost">
+<div class="container-fluid bg-white shadow px-0">
+  <div class="container py-4 d-block d-md-flex align-items-center justify-content-between">
+    <LinkTo @route="examples.webshop" class="btn btn-ghost w-100 w-md-auto mb-4 mb-md-0">
       Weiter einkaufen
     </LinkTo>
-    <LinkTo @route="examples.webshop-shopping-cart" class="btn btn-primary">
+    <LinkTo @route="examples.webshop-shopping-cart" class="btn btn-primary w-100 w-md-auto">
       Zum Warenkorb
     </LinkTo>
     

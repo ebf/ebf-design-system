@@ -134,10 +134,10 @@
 </div>
 
 <div class="d-flex flex-column flex-grow-1">
-  <div class="container-fluid bg-gray-100">
-    <div class="container py-9">    
+  <div class="container-fluid bg-gray-100 px-0">
+    <div class="container py-5 py-lg-9">    
       <div class="row">
-        <div class="col-10">
+        <div class="col-12">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><LinkTo @route="examples.dashboard" data-text="Dashboard">Dashboard</LinkTo></li>
@@ -156,7 +156,7 @@
       <form.element
         @label="Name der Adresse"
         @property="text"
-        class="col-6"
+        class="col-12 col-lg-6"
         as |el|
       >
         <el.control name="address" placeholder="Prefilled Text" />
@@ -168,7 +168,7 @@
       <form.element
         @label="(Firmen) Name"
         @property="text"
-        class="col-6"
+        class="col-12 col-lg-6"
         as |el|
       >
         <el.control name="name" placeholder="Prefilled Text" />
@@ -177,7 +177,7 @@
       <form.element
         @label="Zusatz 1"
         @property="text"
-        class="col-6"
+        class="col-12 col-lg-6"
         as |el|
       >
         <el.control name="name" placeholder="Prefilled Text" />
@@ -186,7 +186,7 @@
       <form.element
         @label="Straße"
         @property="text"
-        class="col-6"
+        class="col-12 col-lg-6"
         as |el|
       >
         <el.control name="name" placeholder="Prefilled Text" />
@@ -195,7 +195,7 @@
       <form.element
         @label="Hausnummer"
         @property="text"
-        class="col-6"
+        class="col-12 col-lg-6"
         as |el|
       >
         <el.control name="name" placeholder="Prefilled Text" />
@@ -204,7 +204,7 @@
       <form.element
         @label="PLZ"
         @property="text"
-        class="col-2"
+        class="col-6 col-lg-2"
         as |el|
       >
         <el.control name="name" placeholder="Prefilled Text" />
@@ -213,7 +213,7 @@
       <form.element
         @label="Ort"
         @property="text"
-        class="col-4"
+        class="col-6 col-lg-4"
         as |el|
       >
         <el.control name="name" placeholder="Prefilled Text" />
@@ -222,7 +222,7 @@
       <form.element
         @label="Land"
         @property="text"
-        class="col-6"
+        class="col-12 col-lg-6"
         as |el|
       >
         <el.control name="name" placeholder="Prefilled Text" />
@@ -254,8 +254,12 @@
 </div>
 
 <div class="container-fluid bg-white shadow">
-  <div class="container py-4 d-flex align-items-center justify-content-between">
-    {{link-to "Abbrechen" "examples.address-management" class="btn btn-ghost text-decoration-none"}}
-    {{link-to "Speichern" "examples.address-management" class="btn btn-primary text-decoration-none"}}
+  <div class="container py-4 d-flex align-items-center justify-content-between">    
+    <LinkTo @route="examples.address-management" class="btn btn-ghost">
+      Abbrechen
+    </LinkTo>
+    <LinkTo @route="examples.address-management" class="btn btn-primary">
+      Speichern
+    </LinkTo>    
   </div>
 </div>
