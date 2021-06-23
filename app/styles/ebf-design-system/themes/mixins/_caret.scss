@@ -59,12 +59,19 @@
         display: inline-block;
         font-size: inherit;
         line-height: 0;
-        content: '';
       }
     }
 
     &:empty::after {
       margin-left: 0;
+    }
+  }
+}
+
+.no-caret {
+  .dropdown-toggle {
+    &::after {
+      content: none !important;
     }
   }
 }

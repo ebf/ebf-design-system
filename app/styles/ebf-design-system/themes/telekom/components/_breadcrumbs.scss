@@ -15,12 +15,12 @@
   font-weight: $font-weight-normal;
   margin-bottom: 0 !important;
 
-  @include hover-focus-active {
-    font-weight: $font-weight-bold;
+  a {
+    text-decoration: none;
+    color: $breadcrumb-active-color;
 
-    a {
-      text-decoration: none;
-      color: $breadcrumb-active-color;
+    @include hover-focus-active {
+      font-weight: $font-weight-bold;
     }
   }
 
@@ -46,10 +46,6 @@
 
     @include active {
       font-weight: $font-weight-bold;
-
-      &::before {
-        //content: $ebf-chevron-left !important;
-      }
     }
 
     &::before {

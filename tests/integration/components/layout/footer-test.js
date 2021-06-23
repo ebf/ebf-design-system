@@ -29,7 +29,6 @@ module('Integration | Component | layout/footer', function(hooks) {
       class="shadow" 
     />
     `);
-
     assert.dom('.container-fluid').exists();
     assert.dom('.footer').containsText('Deutsche Telekom AG');
     assert.dom('.footer').containsText('1.0.0');

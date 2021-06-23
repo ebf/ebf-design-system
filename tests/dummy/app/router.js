@@ -9,7 +9,23 @@ const Router = AddonDocsRouter.extend({
 Router.map(function() {
   this.route('examples', function() {
     this.route('login');
-  })
+    this.route('dashboard');
+    this.route('webshop');
+    this.route('webshop-search');
+    this.route('webshop-product-details');   
+    this.route('webshop-shopping-cart');   
+    this.route('cost-center');
+    this.route('cost-center-new');
+    this.route('address-management');
+    this.route('address-management-new');
+    this.route('orders');
+    this.route('summary');
+    this.route('confirmation');
+    this.route('orders-summary');
+    this.route('order-details');
+    this.route('saved-shopping-cart');
+    this.route('saved-shopping-cart-empty-state');
+  }) 
   docsRoute(this, function() {
     this.route('usage');
     this.route('colors');
@@ -34,7 +50,6 @@ Router.map(function() {
     this.route('notifications');
     this.route('language-switcher');
     this.route('loaders');
-    this.route('layout-component');
     this.route('pagination');
     this.route('progress');
     this.route('stats');

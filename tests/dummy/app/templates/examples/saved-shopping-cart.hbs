@@ -1,0 +1,335 @@
+<div class="double-navbar-container sticky-top">
+  <BsNavbar 
+    @type="light"
+    @backgroundColor="white"
+    @collapsed={{false}}
+    @fluid={{true}}
+    class="sticky-top shadow-sm border-top-primary flex-sm-nowrap" as |navbar|>
+    <div class="navbar-header mr-auto">
+      <LinkTo @route="examples.login" class="navbar-brand">
+        <img src="/telekom-logo-magenta.svg"/ alt="Deutsche Telekom AG">
+        <span class="label">Erleben, was verbindet.</span>
+      </LinkTo>      
+    </div>     
+    <navbar.content class="navbar-expand-sm ml-auto flex-grow-0">
+      <navbar.nav class="flex-nowrap justify-content-end" as |nav|>
+        <nav.item>
+          <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
+        </nav.item>
+        <nav.dropdown class="no-caret" as |dd|>
+          <dd.toggle><Icon::Ebf @icon="ebf-link-01" /></dd.toggle>
+          <dd.menu class="dropdown-menu-right dropdown-quick-link mt-6 py-3" as |ddm|>
+            <ddm.item>
+              <ddm.link-to @route="examples.webshop" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-shopping-bag" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Webshop</p>
+                    <p class="fs-2 mb-0">Produkte kaufen und Bestellungen verwalten</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-file" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Nachrichten</p>
+                    <p class="fs-2 mb-0">Zeigen Sie alle Ihre Nachrichten in unserem Benachrichtigungscenter an</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-user" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Kunden verwalten</p>
+                    <p class="fs-2 mb-0">Erhalten Sie Einblick in Ihre Gerätedaten</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-bookmark" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Bookmarks</p>
+                    <p class="fs-2 mb-0">Erhalten Sie Einblick in Ihre Gerätedaten</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-note" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Reports</p>
+                    <p class="fs-2 mb-0">Zeigen Sie alle Ihre Nachrichten in unserem Benachrichtigungscenter an</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+          </dd.menu>
+        </nav.dropdown>
+      </navbar.nav>
+    </navbar.content>
+  </BsNavbar>
+  <BsNavbar 
+    @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+     class="shadow-sm" as |navbar|>
+    <navbar.toggle class="mr-auto" />
+    <navbar.content class="order-2 order-lg-1">
+      <navbar.nav as |nav|>
+        <nav.item>
+          <nav.link-to @route="examples.webshop-search">Produkte</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.cost-center">Kostentelle</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.address-management">Adressmanagement</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.orders">Bestellungen</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.saved-shopping-cart">Bestellvorlagen</nav.link-to>
+        </nav.item>
+      </navbar.nav>
+    </navbar.content>
+    <navbar.nav class="order-1 order-lg-2" as |nav|>           
+      <nav.item>
+        <nav.link-to class="fs-1 font-weight-bold d-flex align-items-center notification-active" @route="examples.webshop-shopping-cart">
+          <Icon::Ebf class="fs-5 mr-2 font-weight-normal" @icon="ebf-shopping-bag" />
+          <div class="notification-indicator bg-success fs-1 text-white text-center">6</div>
+          Warenkorb
+        </nav.link-to>
+      </nav.item>
+    </navbar.nav>
+  </BsNavbar>
+</div>
+
+<div class="container-fluid bg-gray-100 px-0">
+  <div class="container py-5 py-lg-9">    
+    <div class="row">
+      <div class="col-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><LinkTo @route="examples.dashboard" data-text="Dashboard">Dashboard</LinkTo></li>
+            <li class="breadcrumb-item"><LinkTo @route="examples.saved-shopping-cart" data-text="Bestellvorlagen">Bestellvorlagen</LinkTo></li>
+          </ol>
+        </nav>
+        <h2>Ihre gespeicherten Bestellvorlagen</h2>
+        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<div class="container pt-4 pt-lg-9">
+  <div class="table-responsive">
+    <div class="input-group">
+      <div class="input-group-prepend border-0">
+        <span class="input-group-text border-0" id="basic-addon1"><i class="ebf ebf-search-l"></i></span>
+      </div>
+      <input type="text" class="form-control border-0" placeholder="Suchfilter" aria-label="Suchfilter" aria-describedby="basic-addon1">
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Name<i class="ebf ebf-sort-by-size ml-2"></i></th>
+          <th scope="col">Rahmenvertrag<i class="ebf ebf-sort-by-size ml-2"></i></th>
+          <th scope="col">Erstellt<i class="ebf ebf-sort-by-size ml-2"></i></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <BsButton @type="link" class="px-0 py-0" @onClick={{fn (mut this.simple) true}}>
+              Warenkorb Name 1
+            </BsButton>
+          </td>  
+          <td>MN-211</td>
+          <td>25.11.2020</td>
+        </tr>
+        <tr>
+          <td>
+            <BsButton @type="link" class="px-0 py-0" @onClick={{fn (mut this.simple) true}}>
+              Warenkorb Name 2
+            </BsButton>
+          </td>
+          <td>MN-211</td>
+          <td>18.01.2021</td>
+        </tr>
+        <tr>
+          <td>
+            <BsButton @type="link" class="px-0 py-0" @onClick={{fn (mut this.simple) true}}>
+              Warenkorb Name 3
+            </BsButton>
+          </td>
+          <td>MN-211</td>
+          <td>01.09.2020</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<BsModal
+  @size="xl"
+  @open={{if this.simple true false}}
+  @onSubmit={{fn (mut this.simple) false}}
+  @onHidden={{fn (mut this.simple) false}}
+  as |modal| >
+  <modal.header>
+    <h3 class="modal-title font-weight-bold">Warenkorb Name 1</h3>
+  </modal.header>
+  <modal.body class="p-0">
+    <div class="container-fluid px-0">
+      <div class="row">    
+        <div class="col-12">    
+          <table class="table table-striped table-cart mb-0">
+            <thead>
+              <tr class="d-none d-lg-flex">
+                <th class="col-md-6 col-xl-7 fs-2">Produkte</th>
+                <th class="col-md-4 col-xl-3 fs-2">Anzahl</th>
+                <th class="col-md-2 col-xl-2 fs-2 text-right">Einmalig (netto)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="d-flex row flex-md-row flex-sm-column mx-0">
+                <td class="d-lg-flex d-none col-lg-1 align-items-center justify-content-center">
+                  <img src="https://egs-cdn.telekom-dienste.de/product-images/356048de-d4e2-49d8-bbea-157a74841de8/default/apple-iphone-xr-schwarz.png" alt="Apple iPhone XR 64 GB (Schwarz)"/>
+                </td>
+                <td class="d-flex col-12 col-lg-5 col-xl-6 align-items-start align-items-lg-center justify-content-between">
+                  <div>
+                    <h6>Apple iPhone XR 64 GB (Schwarz)</h6>
+                    <p class="fs-2">Kartentyp: 4 x TripleSIM</p>
+                  </div>
+                  <BsButton @type="ghost">
+                    <i class="ebf ebf-trash fs-2"></i>
+                  </BsButton>
+                </td>
+                <td class="d-flex col-12 col-lg-4 col-xl-3 align-items-center justify-content-between justify-content-lg-start">
+                  <Inputs::Counter
+                    @label="Anzahl"
+                    @placeholder="5"
+                    @min="1"
+                    @max="999"
+                    @value={{this.value}}
+                    @onChange={{fn (mut this.value)}}
+                    class="w-auto"
+                  />
+                  <div class="pl-3">
+                    <Icon::Ebf @icon="ebf-cancel" class="px-2 px-md-2 fs-1"/>
+                    <span>579,00 €</span>
+                  </div>
+                </td>
+                <td class="d-flex col-12 col-lg-2 col-xl-2 align-items-center justify-content-between justify-content-lg-end">
+                  <label class="d-block d-lg-none mb-0">Einmalig (netto)</label>
+                  <span class="text-primary text-nowrap">2.895,00 €</span>
+                </td>
+              </tr>
+              <tr class="d-flex row flex-md-row flex-sm-column mx-0">
+                <td class="d-lg-flex d-none col-lg-1 align-items-center justify-content-center">
+                  <img src="https://egs-cdn.telekom-dienste.de/product-images/b3bf1267-070f-4212-9d2a-ec0cdb510916/thumb/apple-clear-case-iphone-xr-transparent.png" alt="Apple Clear Case iPhone XR Transparent"/>
+                </td>
+                <td class="d-flex col-12 col-lg-5 col-xl-6 align-items-start align-items-md-center justify-content-between">
+                  <div>
+                    <h6>Apple Clear Case iPhone XR Transparent</h6>
+                    <p class="fs-2">Farbe: Transparent</p>
+                  </div>
+                  <BsButton @type="ghost">
+                    <i class="ebf ebf-trash fs-2"></i>
+                  </BsButton>
+                </td>
+                <td class="d-flex col-12 col-lg-4 col-xl-3 align-items-center justify-content-between justify-content-lg-start">
+                  <Inputs::Counter
+                    @label="Anzahl"
+                    @placeholder="5"
+                    @min="1"
+                    @max="999"
+                    @value={{this.value}}
+                    @onChange={{fn (mut this.value)}}
+                    class="w-auto"
+                  />
+                  <div class="pl-3">
+                    <Icon::Ebf @icon="ebf-cancel" class="px-2 px-md-2 fs-1"/>
+                    <span>36,00 €</span>
+                  </div>
+                </td>
+                <td class="d-flex col-12 col-lg-2 col-xl-2 align-items-center justify-content-between justify-content-lg-end">
+                  <label class="d-block d-lg-none mb-0">Einmalig (netto)</label>
+                  <span class="text-primary text-nowrap">180,00 €</span>
+                </td>
+              </tr>
+              <tr class="d-flex row flex-md-row flex-sm-column mx-0">
+                <td class="d-lg-flex d-none col-lg-1 align-items-center justify-content-center">
+                  <img src="https://egs-cdn.telekom-dienste.de/product-images/8a9db8f8-984d-4f9a-bdbf-a31f9c487637/default/apple-ipad-air-4-gen-wifi-und-cellular-space-grau.png" alt="Apple iPad Air (4. Gen.) WiFi und Cellular Space Grau"/>
+                </td>
+                <td class="d-flex col-12 col-lg-5 col-xl-6 align-items-start align-items-md-center justify-content-between">
+                  <div>
+                    <h6>Apple iPad Air (4. Gen.) WiFi und Cellular</h6>
+                    <p class="fs-2">Farbe: Space Grau</p>
+                  </div>
+                  <BsButton @type="ghost">
+                    <i class="ebf ebf-trash fs-2"></i>
+                  </BsButton>
+                </td>
+                <td class="d-flex col-12 col-lg-4 col-xl-3 align-items-center justify-content-between justify-content-lg-start">
+                  <Inputs::Counter
+                    @label="Anzahl"
+                    @placeholder="2"
+                    @min="1"
+                    @max="999"
+                    @value={{this.value}}
+                    @onChange={{fn (mut this.value)}}
+                    class="w-auto"
+                  />
+                  <div class="pl-3">
+                    <Icon::Ebf @icon="ebf-cancel" class="px-2 px-md-2 fs-1"/>
+                    <span>959,00 €</span>
+                  </div>
+                </td>
+                <td class="d-flex col-12 col-lg-2 col-xl-2 align-items-center justify-content-between justify-content-lg-end">
+                  <label class="d-block d-lg-none mb-0">Einmalig (netto)</label>
+                  <span class="text-primary text-nowrap">1.918,64 €</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>  
+  </modal.body>
+  <modal.footer class="d-flex justify-content-center">
+    <BsButton @onClick={{fn modal.close}} @type="ghost">Abbrechen</BsButton>
+    <LinkTo @route="examples.webshop-shopping-cart" class="btn btn-primary">
+      Zum Warenkorb hinzufügen
+    </LinkTo>
+  </modal.footer>
+</BsModal>

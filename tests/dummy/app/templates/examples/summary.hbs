@@ -1,0 +1,288 @@
+<div class="sticky-top shadow-sm bg-dark border-top-primary py-4">
+  <div class="container">
+    <div class="d-flex justify-content-between align-content-center mb-6">
+      <p class="text-white mb-0 fs-4">Bestellangaben</p>
+      <LinkTo @route="examples.webshop-shopping-cart" class="text-white text-decoration-none d-none d-md-flex">
+        Abbrechen <Icon::Ebf @icon="ebf-cancel ml-2" />
+      </LinkTo>
+    </div>
+    <div class="custom-progress-bar">
+      <div class="progress-bar-item-container">
+        <a href="" class="progress-bar-item completed">
+          <span class="progress-dot"><Icon::Ebf @icon="ebf-check-mark" /></span>
+          <span class="progress-label">Bestellangaben</span>
+        </a>     
+        <a href="" class="progress-bar-item active current">
+          <span class="progress-dot">2</span>
+          <span class="progress-label">Zusammenfassung</span>
+        </a>
+        <a href="" class="progress-bar-item">
+          <span class="progress-dot">3</span>
+          <span class="progress-label">Bestätigung</span>
+        </a>        
+      </div>
+      <div class="progress">
+        <div
+          role="progressbar"
+          class="progress-bar"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100">
+        </div>
+      </div>
+    </div>
+    <LinkTo @route="examples.webshop-shopping-cart" class="btn btn-outline-white d-block d-md-none mt-9">
+      <Icon::Ebf @icon="ebf-cancel mr-2" />Abbrechen
+    </LinkTo>
+  </div>
+</div>
+
+<div class="container-fluid bg-gray-100 px-0 flex-grow-1">
+  <div class="container py-5 py-lg-9">    
+    <div class="row">
+      <div class="col-10">        
+        <h2>Zusammenfassung</h2>
+        <p class="mb-0">Überprüfen sie Ihre Bestellung</p>
+      </div>      
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="px-4 pt-2 pb-4 bg-white border">
+      <div class="row">
+        <div class="col-12">      
+          <Stats @title="Rechnungsadresse" @inline={{true}} as |stats|>
+            <stats.row @label="Firmenname" @value="TÜV Rheinland" />
+            <stats.row @label="Strasse, Hausnummer" @value="Am Propsthof 49" />
+            <stats.row @label="PLZ, Ort" @value="53121, Bonn" />        
+            <stats.row @label="Land" @value="Deutschland" />        
+          </Stats>
+        </div>
+      </div>
+      <div class="row pt-7">
+        <div class="col-12">      
+          <Stats @title="Rechnungsmethode" @inline={{true}} as |stats|>
+            <stats.row @label="Email" @value="max.mustermann@tuv.de" />                 
+          </Stats>
+        </div>
+      </div>
+      <div class="row pt-7">
+        <div class="col-12">      
+          <Stats @title="Kostenstelle" @inline={{true}} as |stats|>
+            <stats.row @label="Kundenkontonummer" @value="0060964925" />                 
+            <stats.row @label="Kostenstelle" @value="Lorem ipsum – Eingetragene Kostenstelle" />                 
+            <stats.row @label="Kostenstellennutzer" @value="Lorem ipsum – Eingetragener Kostenstellennutzer" />                 
+          </Stats>
+        </div>
+      </div>
+      <div class="row pt-7">
+        <div class="col-12">      
+          <Stats @title="Lieferadresse" @inline={{true}} as |stats|>
+            <stats.row @label="(Firmen) Name" @value="T-Systems International GmbH" />
+            <stats.row @label="Zusatz 1" @value="BSP-QS" />
+            <stats.row @label="Strasse, Hausnummer" @value="Am Propsthof 49" />
+            <stats.row @label="PLZ, Ort" @value="53121, Bonn" />        
+            <stats.row @label="Land" @value="Deutschland" />
+            <stats.row @label="Private Adresse" @value="Nein" />
+          </Stats>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container z-shopping-cart mt-9">
+    <h3>Ihre Bestellung</h3>
+    <div class="shadow bg-white">
+      <div class="row">
+        <div class="col d-flex justify-content-end pt-4 pb-5">
+          <BsButton @type="link">Löschen</BsButton>
+        </div>
+      </div>
+      <div class="row">    
+        <div class="col-12">    
+          <table class="table table-striped table-cart mb-0">
+            <thead>
+              <tr class="d-none d-lg-flex">
+                <th class="col-md-6 col-xl-7 fs-2">Produkte</th>
+                <th class="col-md-4 col-xl-3 fs-2">Anzahl</th>
+                <th class="col-md-2 col-xl-2 fs-2 text-right">Einmalig (netto)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="d-flex row flex-md-row flex-sm-column mx-0">
+                <td class="d-lg-flex d-none col-lg-1 align-items-center justify-content-center">
+                  <img src="https://egs-cdn.telekom-dienste.de/product-images/356048de-d4e2-49d8-bbea-157a74841de8/default/apple-iphone-xr-schwarz.png" alt="Apple iPhone XR 64 GB (Schwarz)"/>
+                </td>
+                <td class="d-flex col-12 col-lg-5 col-xl-6 align-items-start align-items-lg-center justify-content-between">
+                  <div>
+                    <h6>Apple iPhone XR 64 GB (Schwarz)</h6>
+                    <p class="fs-2">Kartentyp: 4 x TripleSIM</p>
+                  </div>
+                  <BsButton @type="ghost">
+                    <i class="ebf ebf-trash fs-2"></i>
+                  </BsButton>
+                </td>
+                <td class="d-flex col-12 col-lg-4 col-xl-3 align-items-center justify-content-between justify-content-lg-start">
+                  <Inputs::Counter
+                    @label="Anzahl"
+                    @placeholder="5"
+                    @min="1"
+                    @max="999"
+                    @value={{this.value}}
+                    @onChange={{fn (mut this.value)}}
+                    class="w-auto"
+                  />
+                  <div class="pl-3">
+                    <Icon::Ebf @icon="ebf-cancel" class="px-2 px-md-2 fs-1"/>
+                    <span>579,00 €</span>
+                  </div>
+                </td>
+                <td class="d-flex col-12 col-lg-2 col-xl-2 align-items-center justify-content-between justify-content-lg-end">
+                  <label class="d-block d-lg-none mb-0">Einmalig (netto)</label>
+                  <span class="text-primary text-nowrap">2.895,00 €</span>
+                </td>
+              </tr>
+              <tr class="d-flex row flex-md-row flex-sm-column mx-0">
+                <td class="d-lg-flex d-none col-lg-1 align-items-center justify-content-center">
+                  <img src="https://egs-cdn.telekom-dienste.de/product-images/b3bf1267-070f-4212-9d2a-ec0cdb510916/thumb/apple-clear-case-iphone-xr-transparent.png" alt="Apple Clear Case iPhone XR Transparent"/>
+                </td>
+                <td class="d-flex col-12 col-lg-5 col-xl-6 align-items-start align-items-md-center justify-content-between">
+                  <div>
+                    <h6>Apple Clear Case iPhone XR Transparent</h6>
+                    <p class="fs-2">Farbe: Transparent</p>
+                  </div>
+                  <BsButton @type="ghost">
+                    <i class="ebf ebf-trash fs-2"></i>
+                  </BsButton>
+                </td>
+                <td class="d-flex col-12 col-lg-4 col-xl-3 align-items-center justify-content-between justify-content-lg-start">
+                  <Inputs::Counter
+                    @label="Anzahl"
+                    @placeholder="5"
+                    @min="1"
+                    @max="999"
+                    @value={{this.value}}
+                    @onChange={{fn (mut this.value)}}
+                    class="w-auto"
+                  />
+                  <div class="pl-3">
+                    <Icon::Ebf @icon="ebf-cancel" class="px-2 px-md-2 fs-1"/>
+                    <span>36,00 €</span>
+                  </div>
+                </td>
+                <td class="d-flex col-12 col-lg-2 col-xl-2 align-items-center justify-content-between justify-content-lg-end">
+                  <label class="d-block d-lg-none mb-0">Einmalig (netto)</label>
+                  <span class="text-primary text-nowrap">180,00 €</span>
+                </td>
+              </tr>
+              <tr class="d-flex row flex-md-row flex-sm-column mx-0">
+                <td class="d-lg-flex d-none col-lg-1 align-items-center justify-content-center">
+                  <img src="https://egs-cdn.telekom-dienste.de/product-images/8a9db8f8-984d-4f9a-bdbf-a31f9c487637/default/apple-ipad-air-4-gen-wifi-und-cellular-space-grau.png" alt="Apple iPad Air (4. Gen.) WiFi und Cellular Space Grau"/>
+                </td>
+                <td class="d-flex col-12 col-lg-5 col-xl-6 align-items-start align-items-md-center justify-content-between">
+                  <div>
+                    <h6>Apple iPad Air (4. Gen.) WiFi und Cellular</h6>
+                    <p class="fs-2">Farbe: Space Grau</p>
+                  </div>
+                  <BsButton @type="ghost">
+                    <i class="ebf ebf-trash fs-2"></i>
+                  </BsButton>
+                </td>
+                <td class="d-flex col-12 col-lg-4 col-xl-3 align-items-center justify-content-between justify-content-lg-start">
+                  <Inputs::Counter
+                    @label="Anzahl"
+                    @placeholder="2"
+                    @min="1"
+                    @max="999"
+                    @value={{this.value}}
+                    @onChange={{fn (mut this.value)}}
+                    class="w-auto"
+                  />
+                  <div class="pl-3">
+                    <Icon::Ebf @icon="ebf-cancel" class="px-2 px-md-2 fs-1"/>
+                    <span>959,00 €</span>
+                  </div>
+                </td>
+                <td class="d-flex col-12 col-lg-2 col-xl-2 align-items-center justify-content-between justify-content-lg-end">
+                  <label class="d-block d-lg-none mb-0">Einmalig (netto)</label>
+                  <span class="text-primary text-nowrap">1.918,64 €</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>   
+  </div>
+
+  <div class="container my-9">
+    <div class="row">
+      <Stats @title="Zusammenfassung" @inline={{true}} class="w-100 col mb-0" as |stats|>
+        <stats.row class="font-weight-medium border-top-0 d-none d-md-flex">
+          <div class="row text-right">
+            <div class="col-6">Anzahl</div>
+            <div class="col-6">Einmalig</div>
+          </div>
+        </stats.row>
+        <stats.row @label="Gesamtpreis (netto)" class="fs-4 font-weight-bold">
+          <div class="row align-items-center mt-2">
+            <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Anzahl</div>
+            <div class="col-6 text-right"></div>
+            <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Einmalig</div>
+            <div class="col-6 col-md-12 text-primary text-right">7.825,65 €</div>
+          </div>
+        </stats.row>
+        <stats.row @label="Gesamtpreis (brutto)" class="fs-4 font-weight-medium">
+            <div class="row align-items-center">
+              <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Anzahl</div>
+              <div class="col-6 text-right">1</div>
+              <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Einmalig</div>
+              <div class="col-6 text-right">7.900,65 €</div>
+            </div>
+          </stats.row>
+          <stats.row @label="Enthaltene Mehrwertsteuer" class="fs-4 font-weight-medium">
+            <div class="row align-items-center">
+              <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Anzahl</div>
+              <div class="col-6 text-right">1</div>
+              <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Einmalig</div>
+              <div class="col-6 text-right">75 €</div>
+            </div>
+          </stats.row>
+      </Stats>      
+    </div>
+  </div> 
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12 mb-2 mt-2">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+          <label class="custom-control-label font-weight-bold fs-3" for="customCheck">Akzeptiere Allgemeine Geschäftsbedingungen (AGB)</label>
+          <p>Hiermit bestätige ich, dass ich die Allgemeinen Geschäftsbedingungen unter: <a href="https://www.telekom.de/agb">www.telekom.de/agb</a> zur Kenntnis genommen habe</p>
+        </div>
+      </div>
+      <div class="col-12 mb-2 mt-2">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheck1" name="example1">
+          <label class="custom-control-label font-weight-bold fs-3" for="customCheck1">Akzeptiere Datenschutzbestimmungen</label>
+          <p>Hiermit bestätige ich, dass ich die Allgemeinen Geschäftsbedingungen unter: <a href="https://www.telekom.de/agb">www.telekom.de/agb</a> zur Kenntnis genommen habe</p>
+        </div>
+      </div>
+      <div class="col-12 pl-7">
+        <p>Die Verkehrserkennung bei <a href="">StreamOn</a>.</p>
+        <p>Die verlängerte Speicherung von Telematikdaten bei <a href="">CarConnect</a>.</p>
+        <p>Die Nutzung von <a href="">Protect Mobile</a>.</p>
+      </div>
+    </div>  
+  </div>
+</div>
+
+<div class="container-fluid bg-white shadow">
+  <div class="container py-4 d-flex align-items-center flex-column flex-md-row justify-content-md-between">
+    <LinkTo @route="examples.order-details" class="btn btn-ghost w-100 w-md-auto mb-4 mb-md-0">
+      Zurück
+    </LinkTo>
+    <LinkTo @route="examples.confirmation" class="btn btn-primary w-100 w-md-auto">
+      Verbindlich bestellen
+    </LinkTo>
+  </div>
+</div>

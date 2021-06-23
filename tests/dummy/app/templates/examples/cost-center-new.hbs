@@ -1,0 +1,197 @@
+<div class="double-navbar-container sticky-top">
+  <BsNavbar 
+    @type="light"
+    @backgroundColor="white"
+    @collapsed={{false}}
+    @fluid={{true}}
+    class="sticky-top shadow-sm border-top-primary flex-sm-nowrap" as |navbar|>
+    <div class="navbar-header mr-auto">
+      <LinkTo @route="examples.login" class="navbar-brand">
+        <img src="/telekom-logo-magenta.svg"/ alt="Deutsche Telekom AG">
+        <span class="label">Erleben, was verbindet.</span>
+      </LinkTo>      
+    </div>     
+    <navbar.content class="navbar-expand-sm ml-auto flex-grow-0">
+      <navbar.nav class="flex-nowrap justify-content-end" as |nav|>
+        <nav.item>
+          <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
+        </nav.item>
+        <nav.dropdown class="no-caret" as |dd|>
+          <dd.toggle><Icon::Ebf @icon="ebf-link-01" /></dd.toggle>
+          <dd.menu class="dropdown-menu-right dropdown-quick-link mt-6 py-3" as |ddm|>
+            <ddm.item>
+              <ddm.link-to @route="examples.webshop" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-shopping-bag" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Webshop</p>
+                    <p class="fs-2 mb-0">Produkte kaufen und Bestellungen verwalten</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-file" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Nachrichten</p>
+                    <p class="fs-2 mb-0">Zeigen Sie alle Ihre Nachrichten in unserem Benachrichtigungscenter an</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-user" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Kunden verwalten</p>
+                    <p class="fs-2 mb-0">Erhalten Sie Einblick in Ihre Gerätedaten</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-bookmark" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Bookmarks</p>
+                    <p class="fs-2 mb-0">Erhalten Sie Einblick in Ihre Gerätedaten</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-note" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Reports</p>
+                    <p class="fs-2 mb-0">Zeigen Sie alle Ihre Nachrichten in unserem Benachrichtigungscenter an</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+          </dd.menu>
+        </nav.dropdown>
+      </navbar.nav>
+    </navbar.content>
+  </BsNavbar>
+  <BsNavbar 
+    @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+     class="shadow-sm" as |navbar|>
+    <navbar.toggle class="mr-auto" />
+    <navbar.content class="order-2 order-lg-1">
+      <navbar.nav as |nav|>
+        <nav.item>
+          <nav.link-to @route="examples.webshop-search">Produkte</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.cost-center" class="active">Kostentelle</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.address-management">Adressmanagement</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.orders">Bestellungen</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.saved-shopping-cart">Bestellvorlagen</nav.link-to>
+        </nav.item>
+      </navbar.nav>
+    </navbar.content>
+    <navbar.nav class="order-1 order-lg-2" as |nav|>           
+      <nav.item>
+        <nav.link-to class="fs-1 font-weight-bold d-flex align-items-center notification-active" @route="examples.webshop-shopping-cart">
+          <Icon::Ebf class="fs-5 mr-2 font-weight-normal" @icon="ebf-shopping-bag" />
+          <div class="notification-indicator bg-success fs-1 text-white text-center">6</div>
+          Warenkorb
+        </nav.link-to>
+      </nav.item>
+    </navbar.nav>
+  </BsNavbar>
+</div>
+
+<div class="d-flex flex-column flex-grow-1">
+  <div class="container-fluid bg-gray-100 px-0">
+    <div class="container py-5 py-lg-9">    
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><LinkTo @route="examples.dashboard" data-text="Dashboard">Dashboard</LinkTo></li>
+              <li class="breadcrumb-item"><LinkTo @route="examples.cost-center" data-text="Kostenstelle">Kostenstelle</LinkTo></li>
+              <li class="breadcrumb-item"><LinkTo @route="examples.cost-center-new" data-text="Neu Kostenstelle">Neu Kostenstelle</LinkTo></li>
+            </ol>
+          </nav>
+          <h2>Neue Kostenstelle eingeben</h2>
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>      
+      </div>
+    </div>
+  </div>
+
+  <div class="container">  
+    <div class="row">
+      <div class="col-12 col-md-6 pt-5">
+        <BsForm as |form|>
+          <form.element
+            @label="Kostenstelle name"
+            @property="text"
+            as |el|
+          >
+            <el.control name="name" placeholder="Prefilled Text" />
+          </form.element>
+
+          <form.element
+            @label="Code"
+            @property="text"
+            as |el|
+          >
+            <el.control name="name" placeholder="Prefilled Text" />
+          </form.element>
+
+          <form.element
+            @label="Beschreibung"
+            @property="text"
+            as |el|
+          >
+            <el.control name="name" placeholder="Prefilled Text" />
+          </form.element>
+      </BsForm>   
+      </div> 
+    </div>  
+  </div>
+</div>
+
+<div class="container-fluid bg-white shadow">
+  <div class="container py-4 d-flex align-items-center justify-content-between">
+    <LinkTo @route="examples.cost-center" class="btn btn-ghost">
+      Abbrechen
+    </LinkTo>
+    <LinkTo @route="examples.cost-center" class="btn btn-primary">
+      Speichern
+    </LinkTo>
+  </div>
+</div>

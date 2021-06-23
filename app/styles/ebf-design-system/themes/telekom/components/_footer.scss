@@ -8,6 +8,10 @@ html {
   padding: $footer-padding-y $footer-padding-x;
   width: 100%;
 
+  @include media-breakpoint-down(md) {
+    padding: $footer-padding-y 0;
+  }
+
   .label {
     display: block;
     font-weight: $font-weight-bolder;

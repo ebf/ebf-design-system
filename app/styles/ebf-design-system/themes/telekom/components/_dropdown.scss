@@ -270,6 +270,13 @@
   width: 100%;
 }
 
+.dropdown-toggle-fw {
+  &::after {
+    float: right;
+    line-height: 1;
+  }
+}
+
 @keyframes show-navbar-dropdown {
   0% {
     opacity: 0;
@@ -291,5 +298,15 @@
   to {
     opacity: 0;
     top: 1rem;
+  }
+}
+
+// Quick link dropdown width
+
+.dropdown-quick-link {
+  width: 380px;
+
+  p {
+    white-space: initial;
   }
 }

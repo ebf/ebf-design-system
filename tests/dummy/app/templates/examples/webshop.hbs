@@ -1,0 +1,385 @@
+<div class="double-navbar-container sticky-top">
+  <BsNavbar 
+    @type="light"
+    @backgroundColor="white"
+    @collapsed={{false}}
+    @fluid={{true}}
+    class="sticky-top shadow-sm border-top-primary flex-sm-nowrap" as |navbar|>
+    <div class="navbar-header mr-auto">
+      <LinkTo @route="examples.login" class="navbar-brand">
+        <img src="/telekom-logo-magenta.svg"/ alt="Deutsche Telekom AG">
+        <span class="label">Erleben, was verbindet.</span>
+      </LinkTo>      
+    </div>     
+    <navbar.content class="navbar-expand-sm ml-auto flex-grow-0">
+      <navbar.nav class="flex-nowrap justify-content-end" as |nav|>
+        <nav.item>
+          <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-bell" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-settings" /></nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.login"><Icon::Ebf @icon="ebf-user" /></nav.link-to>
+        </nav.item>
+        <nav.dropdown class="no-caret" as |dd|>
+          <dd.toggle><Icon::Ebf @icon="ebf-link-01" /></dd.toggle>
+          <dd.menu class="dropdown-menu-right dropdown-quick-link mt-6 py-3" as |ddm|>
+            <ddm.item>
+              <ddm.link-to @route="examples.webshop" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-shopping-bag" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Webshop</p>
+                    <p class="fs-2 mb-0">Produkte kaufen und Bestellungen verwalten</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-file" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Nachrichten</p>
+                    <p class="fs-2 mb-0">Zeigen Sie alle Ihre Nachrichten in unserem Benachrichtigungscenter an</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-user" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Kunden verwalten</p>
+                    <p class="fs-2 mb-0">Erhalten Sie Einblick in Ihre Gerätedaten</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-bookmark" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Bookmarks</p>
+                    <p class="fs-2 mb-0">Erhalten Sie Einblick in Ihre Gerätedaten</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+            <ddm.item>
+              <ddm.link-to @route="examples.login" class="py-3">
+                <div class="d-flex flex-row">
+                  <div class="m-auto align-content-center px-2">
+                    <Icon::Ebf @icon="ebf-note" class="fs-5"/>
+                  </div>
+                  <div class="pl-3 pr-2 flex-grow-1">
+                    <p class="fs-4 mb-2 font-weight-medium">Reports</p>
+                    <p class="fs-2 mb-0">Zeigen Sie alle Ihre Nachrichten in unserem Benachrichtigungscenter an</p>
+                  </div>
+                </div>
+              </ddm.link-to>
+            </ddm.item>
+          </dd.menu>
+        </nav.dropdown>
+      </navbar.nav>
+    </navbar.content>
+  </BsNavbar>
+  <BsNavbar 
+    @type="light"
+    @backgroundColor="white"
+    @collapsed={{true}}
+    @fluid={{true}}
+     class="shadow-sm" as |navbar|>
+    <navbar.toggle class="mr-auto" />
+    <navbar.content class="order-2 order-lg-1">
+      <navbar.nav as |nav|>
+        <nav.item>
+          <nav.link-to @route="examples.webshop-search" class="active">Produkte</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.cost-center">Kostentelle</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.address-management">Adressmanagement</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.orders">Bestellungen</nav.link-to>
+        </nav.item>
+        <nav.item>
+          <nav.link-to @route="examples.saved-shopping-cart">Bestellvorlagen</nav.link-to>
+        </nav.item>
+      </navbar.nav>
+    </navbar.content>
+    <navbar.nav class="order-1 order-lg-2" as |nav|>           
+      <nav.item>
+        <nav.link-to class="fs-1 font-weight-bold d-flex align-items-center notification-active" @route="examples.webshop-shopping-cart">
+          <Icon::Ebf class="fs-5 mr-2 font-weight-normal" @icon="ebf-shopping-bag" />
+          <div class="notification-indicator bg-success fs-1 text-white text-center">6</div>
+          Warenkorb
+        </nav.link-to>
+      </nav.item>
+    </navbar.nav>
+  </BsNavbar>
+</div>
+
+<div class="container-fluid bg-gray-100 px-0">
+  <div class="container py-sm-5 py-lg-9">    
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-10">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><LinkTo @route="examples.dashboard" data-text="Dashboard">Dashboard</LinkTo></li>
+            <li class="breadcrumb-item active"><LinkTo @route="examples.webshop" data-text="Webshop">Webshop</LinkTo></li>
+          </ol>
+        </nav>
+        <h2>Webshop</h2>
+        <p class="mb-0">Bitte wählen Sie aus den folgenden Geräten</p>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-2 mt-sm-4 mt-md-4 mt-lg-0 d-flex align-items-end justify-content-end">
+        <div class="d-flex flex-column w-100">
+          <label>Rahmenvertrag</label>
+          <BsDropdown as |dd|>
+            <dd.button class="btn btn-outline dropdown-toggle-fw text-left">
+              Dropdown              
+            </dd.button>
+            <dd.menu as |menu|>
+              <menu.item>
+                <menu.link-to @route="examples.dashboard">Contract 1</menu.link-to>
+              </menu.item>
+              <menu.item>
+                <menu.link-to @route="examples.dashboard">Contract 2</menu.link-to>
+              </menu.item>
+            </dd.menu>
+          </BsDropdown>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row pt-5">
+    <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-end">    
+      <div class="w-100">
+        <Inputs::Search
+          @placeholder="Enter your search query"
+          @value={{this.search}}
+          @onChange={{fn (mut this.search)}}
+          class="form-group align-self-end mb-0"
+        />  
+      </div> 
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 mt-sm-4 mt-md-0 mt-lg-0">
+      <div class="w-100 d-flex flex-column">
+        <label>Sortieren</label>
+        <BsDropdown as |dd|>
+          <dd.button class="btn btn-outline dropdown-toggle-fw text-left">
+            Beliebteste            
+          </dd.button>
+          <dd.menu as |menu|>
+            <menu.item>
+              <menu.link-to @route="examples.dashboard">Contract 1</menu.link-to>
+            </menu.item>
+            <menu.item>
+              <menu.link-to @route="examples.dashboard">Contract 2</menu.link-to>
+            </menu.item>
+          </dd.menu>
+        </BsDropdown>
+      </div>
+    </div>
+    <div class="col-12 col-md-12 col-lg-2 mt-sm-5 mt-md-5 mt-lg-0 d-flex align-items-end">
+      <div class="w-100 d-flex flex-column">
+        <BsDropdown class="text-lg-right text-sm-center" as |dd|>
+          <dd.toggle>
+            Filter einblenden            
+          </dd.toggle>          
+        </BsDropdown>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 mb-9">
+    <div class="col-12 col-md-6 col-lg-6">
+      <div class="d-flex flex-column w-100">
+        <label>Hersteller</label>
+        <BsDropdown as |dd|>
+          <dd.button class="btn btn-outline dropdown-toggle-fw text-left">
+            Alle            
+          </dd.button>
+          <dd.menu as |menu|>
+            <menu.item>
+              <menu.link-to @route="examples.dashboard">Something 1</menu.link-to>
+            </menu.item>
+            <menu.item>
+              <menu.link-to @route="examples.dashboard">Something 2</menu.link-to>
+            </menu.item>
+          </dd.menu>
+        </BsDropdown>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-6 mt-sm-4 mt-md-0 mt-lg-0">
+      <div class="w-100 d-flex flex-column">
+        <label>Eigenschaften</label>
+        <BsDropdown as |dd|>
+          <dd.button class="btn btn-outline dropdown-toggle-fw text-left">
+            Kein Filter            
+          </dd.button>
+          <dd.menu as |menu|>
+            <menu.item>
+              <menu.link-to @route="examples.dashboard">Something 1</menu.link-to>
+            </menu.item>
+            <menu.item>
+              <menu.link-to @route="examples.dashboard">Something 2</menu.link-to>
+            </menu.item>
+          </dd.menu>
+        </BsDropdown>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 main-cards mb-9">
+    <div class="col mb-4">
+      <LinkTo @route="examples.webshop-product-details" class="card-link">      
+        <div class="card card-product card-hover">
+          <div class="card-body">
+            <div class="row">
+              <div class="card-product-image col-lg-5 col-md-5 col-sm-12 mb-lg-0 mb-md-0 mb-sm-4">
+                <img class="img-fluid" src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="...">
+              </div>
+              <div class="card-product-body col-lg-7 col-md-7 col-sm-12">
+                <h4 class="card-title">Apple iPhone 11 schwarz Lorem ipsum dolor sin amet</h4>
+                <div class="card-availability">
+                  <i class="ebf ebf-check-mark-circle-full text-success"></i>
+                  <p>Vorrätig</p>
+                </div>
+                <p class="card-text">Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation</p>
+                <div class="card-price">
+                  <strong class="price">ab 116,93 €</strong>
+                  <i class="ebf ebf-info popover-trigger">
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </LinkTo>
+      <BsPopover @title="Mengenabhängige Preisstaffel:" @triggerElement=".popover-trigger" @triggerEvents="hover">
+        <ul class="list-square-popover">
+          <li>1 - 100 Geräte XY€</li>
+          <li>101 - 300 Geräte XY€</li>
+          <li>ab 301 Geräte XY€ </li>
+        </ul>
+      </BsPopover>
+    </div>
+    <div class="col mb-4">
+      <LinkTo @route="examples.webshop-product-details" class="card-link">      
+        <div class="card card-product card-hover">
+          <div class="card-body">
+            <div class="row">
+              <div class="card-product-image col-lg-5 col-md-5 col-sm-12 mb-lg-0 mb-md-0 mb-sm-4">
+                <img class="img-fluid" src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="...">
+              </div>
+              <div class="card-product-body col-lg-7 col-md-7 col-sm-12">
+                <h4 class="card-title">Apple iPhone 11 schwarz Lorem ipsum dolor sin amet</h4>
+                <div class="card-availability">
+                  <i class="ebf ebf-check-mark-circle-full text-success"></i>
+                  <p>Vorrätig</p>
+                </div>
+                <p class="card-text">Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation</p>
+                <div class="card-price">
+                  <strong class="price">ab 116,93 €</strong>
+                  <i class="ebf ebf-info popover-trigger-2">
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </LinkTo>
+      <BsPopover @title="Mengenabhängige Preisstaffel:" @triggerElement=".popover-trigger-2" @triggerEvents="hover">
+        <ul class="list-square-popover">
+          <li>1 - 100 Geräte XY€</li>
+          <li>101 - 300 Geräte XY€</li>
+          <li>ab 301 Geräte XY€ </li>
+        </ul>
+      </BsPopover>
+    </div>
+    <div class="col mb-4">
+      <LinkTo @route="examples.webshop-product-details" class="card-link">      
+        <div class="card card-product card-hover">
+          <div class="card-body">
+            <div class="row">
+              <div class="card-product-image col-lg-5 col-md-5 col-sm-12 mb-lg-0 mb-md-0 mb-sm-4">
+                <img class="img-fluid" src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="...">
+              </div>
+              <div class="card-product-body col-lg-7 col-md-7 col-sm-12">
+                <h4 class="card-title">Apple iPhone 11 schwarz Lorem ipsum dolor sin amet</h4>
+                <div class="card-availability">
+                  <i class="ebf ebf-check-mark-circle-full text-success"></i>
+                  <p>Vorrätig</p>
+                </div>
+                <p class="card-text">Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation</p>
+                <div class="card-price">
+                  <strong class="price">ab 116,93 €</strong>
+                  <i class="ebf ebf-info popover-trigger-3">
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </LinkTo>
+      <BsPopover @title="Mengenabhängige Preisstaffel:" @triggerElement=".popover-trigger-3" @triggerEvents="hover">
+        <ul class="list-square-popover">
+          <li>1 - 100 Geräte XY€</li>
+          <li>101 - 300 Geräte XY€</li>
+          <li>ab 301 Geräte XY€ </li>
+        </ul>
+      </BsPopover>
+    </div>
+    <div class="col mb-4">
+      <LinkTo @route="examples.webshop-product-details" class="card-link">      
+        <div class="card card-product card-hover">
+          <div class="card-body">
+            <div class="row">
+              <div class="card-product-image col-lg-5 col-md-5 col-sm-12 mb-lg-0 mb-md-0 mb-sm-4">
+                <img class="img-fluid" src="https://www.telekom.de/resources/images/480464/apple-iphone-11-gruen-vorne.png" alt="...">
+              </div>
+              <div class="card-product-body col-lg-7 col-md-7 col-sm-12">
+                <h4 class="card-title">Apple iPhone 11 schwarz Lorem ipsum dolor sin amet</h4>
+                <div class="card-availability">
+                  <i class="ebf ebf-check-mark-circle-full text-success"></i>
+                  <p>Vorrätig</p>
+                </div>
+                <p class="card-text">Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation</p>
+                <div class="card-price">
+                  <strong class="price">ab 116,93 €</strong>
+                  <i class="ebf ebf-info popover-trigger-4">
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </LinkTo>
+      <BsPopover @title="Mengenabhängige Preisstaffel:" @triggerElement=".popover-trigger-4" @triggerEvents="hover">
+        <ul class="list-square-popover">
+          <li>1 - 100 Geräte XY€</li>
+          <li>101 - 300 Geräte XY€</li>
+          <li>ab 301 Geräte XY€ </li>
+        </ul>
+      </BsPopover>
+    </div>
+  </div>  
+</div>
