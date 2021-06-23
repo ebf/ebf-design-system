@@ -1,10 +1,10 @@
-<div class="sticky-top shadow-sm bg-dark border-top-primary pb-4">
+<div class="sticky-top shadow-sm bg-dark border-top-primary py-4">
   <div class="container">
     <div class="d-flex justify-content-between align-content-center mb-6">
       <p class="text-white mb-0 fs-4">Bestellangaben</p>
-      <LinkTo @route="examples.webshop-shopping-cart" class="text-white text-decoration-none">
-      Abbrechen <Icon::Ebf @icon="ebf-cancel ml-2" />
-    </LinkTo>
+      <LinkTo @route="examples.webshop-shopping-cart" class="text-white text-decoration-none d-none d-md-flex">
+        Abbrechen <Icon::Ebf @icon="ebf-cancel ml-2" />
+      </LinkTo>
     </div>
     <div class="custom-progress-bar">
       <div class="progress-bar-item-container">
@@ -31,6 +31,9 @@
         </div>
       </div>
     </div>
+    <LinkTo @route="examples.webshop-shopping-cart" class="btn btn-outline-white d-block d-md-none mt-9">
+      <Icon::Ebf @icon="ebf-cancel mr-2" />Abbrechen
+    </LinkTo>
   </div>
 </div>
 
@@ -214,41 +217,34 @@
   <div class="container my-9">
     <div class="row">
       <Stats @title="Zusammenfassung" @inline={{true}} class="w-100 col mb-0" as |stats|>
-        <stats.row class="font-weight-medium border-top-0">
+        <stats.row class="font-weight-medium border-top-0 d-none d-md-flex">
           <div class="row text-right">
-            <div class="col-6">
-              Anzahl
-            </div>
-            <div class="col-6">
-              Einmalig
-            </div>
+            <div class="col-6">Anzahl</div>
+            <div class="col-6">Einmalig</div>
           </div>
         </stats.row>
         <stats.row @label="Gesamtpreis (netto)" class="fs-4 font-weight-bold">
-          <div class="row text-right">
-            <div class="col-12 text-primary">
-              7.825,65 €
-            </div>
+          <div class="row align-items-center mt-2">
+            <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Anzahl</div>
+            <div class="col-6 text-right"></div>
+            <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Einmalig</div>
+            <div class="col-6 col-md-12 text-primary text-right">7.825,65 €</div>
           </div>
         </stats.row>
         <stats.row @label="Gesamtpreis (brutto)" class="fs-4 font-weight-medium">
-            <div class="row text-right">
-              <div class="col-6">
-                1
-              </div>
-              <div class="col-6">
-                7.900,65 €
-              </div>
+            <div class="row align-items-center">
+              <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Anzahl</div>
+              <div class="col-6 text-right">1</div>
+              <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Einmalig</div>
+              <div class="col-6 text-right">7.900,65 €</div>
             </div>
           </stats.row>
           <stats.row @label="Enthaltene Mehrwertsteuer" class="fs-4 font-weight-medium">
-            <div class="row text-right">
-              <div class="col-6">
-                1
-              </div>
-              <div class="col-6">
-                75 €
-              </div>
+            <div class="row align-items-center">
+              <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Anzahl</div>
+              <div class="col-6 text-right">1</div>
+              <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Einmalig</div>
+              <div class="col-6 text-right">75 €</div>
             </div>
           </stats.row>
       </Stats>      
@@ -281,11 +277,11 @@
 </div>
 
 <div class="container-fluid bg-white shadow">
-  <div class="container py-4 d-flex align-items-center justify-content-between">
-    <LinkTo @route="examples.order-details" class="btn btn-ghost">
+  <div class="container py-4 d-flex align-items-center flex-column flex-md-row justify-content-md-between">
+    <LinkTo @route="examples.order-details" class="btn btn-ghost w-100 w-md-auto mb-4 mb-md-0">
       Zurück
     </LinkTo>
-    <LinkTo @route="examples.confirmation" class="btn btn-primary">
+    <LinkTo @route="examples.confirmation" class="btn btn-primary w-100 w-md-auto">
       Verbindlich bestellen
     </LinkTo>
   </div>

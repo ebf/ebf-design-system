@@ -150,7 +150,7 @@
   </div>
 </div>
 
-<div class="container pt-9">
+<div class="container pt-4 pt-lg-9">
   <div class="table-responsive">
     <div class="input-group">
       <div class="input-group-prepend border-0">
@@ -177,12 +177,20 @@
           <td>25.11.2020</td>
         </tr>
         <tr>
-          <td><a href="">Warenkorb Name 2</a></td>
+          <td>
+            <BsButton @type="link" class="px-0 py-0" @onClick={{fn (mut this.simple) true}}>
+              Warenkorb Name 2
+            </BsButton>
+          </td>
           <td>MN-211</td>
           <td>18.01.2021</td>
         </tr>
         <tr>
-          <td><a href="">Warenkorb Name 3</a></td>
+          <td>
+            <BsButton @type="link" class="px-0 py-0" @onClick={{fn (mut this.simple) true}}>
+              Warenkorb Name 3
+            </BsButton>
+          </td>
           <td>MN-211</td>
           <td>01.09.2020</td>
         </tr>

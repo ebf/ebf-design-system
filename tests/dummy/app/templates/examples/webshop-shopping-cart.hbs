@@ -139,8 +139,8 @@
       <div class="col-10">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><LinkTo @route="examples.dashboard" data-text="Dashboard">Dashboard</LinkTo></li>
-            <li class="breadcrumb-item"><LinkTo @route="examples.webshop-shopping-cart" data-text="Bestellvorlagen">Warenkorb</LinkTo></li>
+            <li class="breadcrumb-item"><LinkTo @route="examples.webshop" data-text="Webshop">Webshop</LinkTo></li>
+            <li class="breadcrumb-item"><LinkTo @route="examples.webshop-shopping-cart" data-text="Warenkorb">Warenkorb</LinkTo></li>
           </ol>
         </nav>
         <h2>Ihr Warenkorb</h2>
@@ -278,44 +278,37 @@
   <div class="container py-9">
     <div class="row">
       <Stats @title="Zusammenfassung" @inline={{true}} class="w-100 col mb-0" as |stats|>
-        <stats.row class="font-weight-medium border-top-0">
+        <stats.row class="font-weight-medium border-top-0 d-none d-md-flex">
           <div class="row text-right">
-            <div class="col-6">
-              Anzahl
-            </div>
-            <div class="col-6">
-              Einmalig
-            </div>
+            <div class="col-6">Anzahl</div>
+            <div class="col-6">Einmalig</div>
           </div>
         </stats.row>
         <stats.row @label="Gesamtpreis (netto)" class="fs-4 font-weight-bold">
-          <div class="row text-right">
-            <div class="col-12 text-primary">
-              7.825,65 €
-            </div>
+          <div class="row align-items-center mt-2">
+            <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Anzahl</div>
+            <div class="col-6 text-right"></div>
+            <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Einmalig</div>
+            <div class="col-6 col-md-12 text-primary text-right">7.825,65 €</div>
           </div>
         </stats.row>
         <stats.row @label="Gesamtpreis (brutto)" class="fs-4 font-weight-medium">
-            <div class="row text-right">
-              <div class="col-6">
-                1
-              </div>
-              <div class="col-6">
-                7.900,65 €
-              </div>
+            <div class="row align-items-center">
+              <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Anzahl</div>
+              <div class="col-6 text-right">1</div>
+              <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Einmalig</div>
+              <div class="col-6 text-right">7.900,65 €</div>
             </div>
           </stats.row>
           <stats.row @label="Enthaltene Mehrwertsteuer" class="fs-4 font-weight-medium">
-            <div class="row text-right">
-              <div class="col-6">
-                1
-              </div>
-              <div class="col-6">
-                75 €
-              </div>
+            <div class="row align-items-center">
+              <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Anzahl</div>
+              <div class="col-6 text-right">1</div>
+              <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Einmalig</div>
+              <div class="col-6 text-right">75 €</div>
             </div>
           </stats.row>
-      </Stats>      
+      </Stats>     
     </div>
   </div>
 </div>
@@ -324,14 +317,14 @@
   <div class="container py-4">
     <div class="row d-flex align-items-center justify-content-between">
       <div>
-        <LinkTo @route="examples.webshop" class="btn btn-ghost mr-2">
+        <LinkTo @route="examples.webshop" class="btn btn-ghost w-100 w-md-auto mr-0 mr-md-2 mb-4 mb-md-0">
           Weiter einkaufen
         </LinkTo>
-        <LinkTo @route="examples.webshop" class="btn btn-ghost">
+        <LinkTo @route="examples.webshop" class="btn btn-ghost w-100 w-md-auto mb-4 mb-md-0">
           Bestellvorlage speichern
         </LinkTo>
       </div> 
-      <LinkTo @route="examples.order-details" class="btn btn-primary">
+      <LinkTo @route="examples.order-details" class="btn btn-primary w-100 w-md-auto">
         weiter zur Bestellung
       </LinkTo>
     </div>

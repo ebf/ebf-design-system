@@ -10,6 +10,10 @@
   margin-bottom: 0 !important;
   list-style: none;
   align-items: center;
+
+  @include media-breakpoint-down(md) {
+    align-items: flex-start;
+  }
 }
 
 .nav-link {

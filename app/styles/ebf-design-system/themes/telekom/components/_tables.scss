@@ -8,6 +8,12 @@
       padding: 1rem $table-cell-padding;
     }
   }
+
+  th,
+  td {
+    white-space: nowrap;
+    vertical-align: middle;
+  }
 }
 
 .table-cart {

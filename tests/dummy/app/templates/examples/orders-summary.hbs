@@ -318,41 +318,34 @@
 <div class="container py-9">
   <div class="row">
     <Stats @title="Zusammenfassung" @inline={{true}} class="w-100 col mb-0" as |stats|>
-      <stats.row class="font-weight-medium border-top-0">
+      <stats.row class="font-weight-medium border-top-0 d-none d-md-flex">
         <div class="row text-right">
-          <div class="col-6">
-            Anzahl
-          </div>
-          <div class="col-6">
-            Einmalig
-          </div>
+          <div class="col-6">Anzahl</div>
+          <div class="col-6">Einmalig</div>
         </div>
       </stats.row>
       <stats.row @label="Gesamtpreis (netto)" class="fs-4 font-weight-bold">
-        <div class="row text-right">
-          <div class="col-12 text-primary">
-            7.825,65 €
-          </div>
+        <div class="row align-items-center mt-2">
+          <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Anzahl</div>
+          <div class="col-6 text-right"></div>
+          <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Einmalig</div>
+          <div class="col-6 col-md-12 text-primary text-right">7.825,65 €</div>
         </div>
       </stats.row>
       <stats.row @label="Gesamtpreis (brutto)" class="fs-4 font-weight-medium">
-          <div class="row text-right">
-            <div class="col-6">
-              1
-            </div>
-            <div class="col-6">
-              7.900,65 €
-            </div>
+          <div class="row align-items-center">
+            <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Anzahl</div>
+            <div class="col-6 text-right">1</div>
+            <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Einmalig</div>
+            <div class="col-6 text-right">7.900,65 €</div>
           </div>
         </stats.row>
         <stats.row @label="Enthaltene Mehrwertsteuer" class="fs-4 font-weight-medium">
-          <div class="row text-right">
-            <div class="col-6">
-              1
-            </div>
-            <div class="col-6">
-              75 €
-            </div>
+          <div class="row align-items-center">
+            <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Anzahl</div>
+            <div class="col-6 text-right">1</div>
+            <div class="col-6 text-left font-weight-normal fs-1 d-block d-md-none">Einmalig</div>
+            <div class="col-6 text-right">75 €</div>
           </div>
         </stats.row>
     </Stats>      

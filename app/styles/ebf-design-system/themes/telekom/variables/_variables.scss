@@ -81,6 +81,9 @@ $spacers: map-merge(
     9: (
       $spacer * 4,
     ),
+    'gutter': (
+      $spacer * 0.75,
+    ),
     'sm': (
       $spacer * 2,
     ),

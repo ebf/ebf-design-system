@@ -191,12 +191,16 @@
 // Custom Progress Bar
 
 .custom-progress-bar {
-  height: 2.25rem;
-
   .progress {
     height: 1px;
     margin-top: -0.75rem;
+    margin-bottom: 1.25rem;
     background-color: $gray-700;
+
+    @include media-breakpoint-down(md) {
+      margin-top: -0.5rem;
+      margin-bottom: 2.75rem;
+    }
   }
 
   .progress-bar-item-container {
@@ -206,6 +210,10 @@
     justify-content: space-between;
     align-items: center;
     margin-top: -0.75rem;
+
+    @include media-breakpoint-down(md) {
+      align-items: flex-start;
+    }
 
     .progress-bar-item {
       display: flex;
@@ -221,6 +229,41 @@
       background-color: $gray-1200;
       padding: 0 1.5rem;
 
+      @include media-breakpoint-down(md) {
+        position: relative;
+        padding: 0 $grid-gutter-width / 2;
+
+        .progress-label {
+          margin-top: $grid-gutter-width / 2;
+          display: none;
+          position: absolute;
+          top: 1.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+        }
+
+        &:first-of-type {
+          .progress-label {
+            left: 0;
+            right: auto;
+            text-align: left;
+            margin-left: 0;
+            transform: translateX(0%);
+          }
+        }
+
+        &:last-of-type {
+          .progress-label {
+            right: 0;
+            left: auto;
+            text-align: right;
+            margin-right: 0;
+            transform: translateX(0%);
+          }
+        }
+      }
+
       &:last-of-type {
         padding-right: 0;
       }
@@ -233,10 +276,15 @@
         outline: 0;
       }
 
-      .progress-label {         
+      .progress-label {
         font-style: normal;
         color: $white;
         margin-left: 0.75rem;
+
+        @include media-breakpoint-down(md) {
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
 
       .progress-dot {
@@ -254,6 +302,13 @@
         color: $white;
         font-size: 1rem;
         font-weight: $font-weight-medium;
+
+        @include media-breakpoint-down(md) {
+          width: 1.5rem;
+          height: 1.5rem;
+          line-height: 1.5rem;
+          border-radius: 1.5rem;
+        }
       }
 
       &.active {
@@ -263,6 +318,10 @@
         .progress-label {
           font-style: $font-style-normal;
           font-weight: $font-weight-medium;
+
+          @include media-breakpoint-down(md) {
+            display: block;
+          }
         }
 
         .progress-dot {
