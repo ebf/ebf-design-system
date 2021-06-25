@@ -100,6 +100,31 @@ Basically the same as Primary Card, excluding the image.
 
 Refer to the same principles that apply to Main Cards
 
+## Tertiary Card
+
+Basically the same as Primary Card, featuring larger image, price tag and button. 
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="tertiary-card.hbs"}}
+  <div class="col mb-4">
+    <div class="card card-tertiary card-hover">
+      <div class="card-body">
+        <div class="card-image">
+          <img src="https://dummyimage.com/120x120/7c7c7c/ffffff.png" alt="Card Image">
+        </div>
+        <div class="card-title">Card title</div>
+        <div class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</div>
+        <div class="price">4,95 €</div>
+        <BsButton @type="outline">
+          Outline Button
+        </BsButton>
+      </div>
+    </div>
+  </div>
+  {{/demo.example}}
+
+  {{demo.snippet "tertiary-card.hbs"}}
+{{/docs-demo}}
 
 ## Hover
 

@@ -289,6 +289,8 @@
 
   > .card {
     overflow: hidden;
+    border-left: 0;
+    border-right: 0;
 
     &:not(:last-of-type) {
       @include border-bottom-radius(0);
@@ -310,7 +312,7 @@
   .card-header {
     transition: $smooth-color-animation;
     cursor: pointer;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
 
     @include hover-focus-active {
       background-color: $white;
@@ -376,9 +378,28 @@
 // Card
 
 .card-primary,
-.card-secondary {
+.card-secondary,
+.card-tertiary {
   text-align: $card-align-text;
   justify-content: $card-align-flex;
+}
+
+.card-tertiary {
+  .card-body {
+    .card-image {
+      img {
+        height: 7.5rem;
+        width: auto;
+      }
+    }
+
+    .price {
+      color: $primary;
+      padding: $spacer * 1.5 0;
+      font-weight: $font-weight-bolder;
+      font-size: $fs-5;
+    }
+  }
 }
 
 .card-hover {

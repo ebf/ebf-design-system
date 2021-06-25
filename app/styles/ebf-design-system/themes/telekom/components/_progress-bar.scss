@@ -321,6 +321,7 @@
 
           @include media-breakpoint-down(md) {
             display: block;
+            width: 50vw;
           }
         }
 
