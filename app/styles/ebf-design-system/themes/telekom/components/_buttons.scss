@@ -129,8 +129,7 @@ $btn-custom-transition: color 0.1s ease, background-color 0.2s ease,
 
 // Outline Variant
 
-.btn-outline,
-.btn-outline-outline {
+.btn-outline {
   @include button-variant(
     //background
     $transparent-b,
@@ -633,6 +632,17 @@ $btn-custom-transition: color 0.1s ease, background-color 0.2s ease,
 
     .ebf-line-diag {
       display: inline-block;
+    }
+  }
+}
+
+.no-scale {
+  transform: scale(1);
+
+  &:not(:disabled):not(.disabled) {
+    &:active,
+    &.active {
+      transform: scale(1);
     }
   }
 }

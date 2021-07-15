@@ -1,0 +1,296 @@
+{{!-- template-lint-disable  --}}
+<div class="sticky-top shadow-sm bg-dark border-top-primary py-4">
+  <div class="container">
+    <div class="d-flex justify-content-center justify-content-md-between align-content-center mb-6">
+      <p class="text-white mb-0 fs-4">Neues Angebot erstellen</p>
+      <LinkTo @route="examples.dashboard" class="text-white text-decoration-none d-none d-md-flex">
+        Abbrechen <Icon::Ebf @icon="ebf-cancel ml-2" />
+      </LinkTo>
+    </div>
+    <div class="custom-progress-bar">
+      <div class="progress-bar-item-container">
+        <a href="" class="progress-bar-item completed">
+          <span class="progress-dot"><Icon::Ebf @icon="ebf-check-mark" /></span>
+          <span class="progress-label">Angebotsname</span>
+        </a>     
+        <a href="" class="progress-bar-item completed">
+          <span class="progress-dot"><Icon::Ebf @icon="ebf-check-mark" /></span>
+          <span class="progress-label">Kunde auswählen</span>
+        </a>
+        <a href="" class="progress-bar-item active current">
+          <span class="progress-dot">3</span>
+          <span class="progress-label">Produkte auswählen</span>
+        </a>        
+        <a href="" class="progress-bar-item">
+          <span class="progress-dot">4</span>
+          <span class="progress-label">Überblick</span>
+        </a>        
+      </div>
+      <div class="progress">
+        <div
+          role="progressbar"
+          class="progress-bar bg-primary"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 0%;">
+        </div>
+      </div>
+    </div>
+    <LinkTo @route="examples.dashboard" class="btn btn-outline-white d-block d-md-none mt-9">
+      <Icon::Ebf @icon="ebf-cancel mr-2" />Abbrechen
+    </LinkTo>
+  </div>
+</div>
+
+<div class="container-fluid bg-gray-100 px-0">
+  <div class="container py-5 py-lg-9">    
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-10">
+        <h2>Paket wählen</h2>
+        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+      </div>    
+    </div>
+  </div>
+  <div class="container">
+    <BsNav @type="xl" class="nav-custom-tabs" as |nav|>
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-devices">Geräte</nav.link-to>
+      </nav.item>
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-accessories">Zubehör</nav.link-to>
+      </nav.item>            
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-services">Services</nav.link-to>
+      </nav.item>            
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-solutions">Solutions</nav.link-to>
+      </nav.item>            
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-pakete">Pakete</nav.link-to>
+      </nav.item>            
+    </BsNav>
+  </div>
+</div>
+  
+<div class="container d-flex flex-column flex-grow-1 gray-deco-bg">
+  <div class="row">
+    <div class="col-12 pt-9 text-center">
+      <h2>DCS Pakete</h2>
+      <p>Wählen Sie eine, zwei oder alle drei Optionen aus</p>
+    </div>
+  </div>
+  <div class="row align-items-start row-cols-1 row-cols-lg-4 main-cards py-9 mb-9">
+    <div class="col mb-4 ">
+      <div class="card card-prices">
+        <div class="card-header">
+          <label>Paket</label>
+          <div class="package-size">XS</div>
+          <div class="price">0,00 €</div>
+          <label>pro Gerät</label>
+        </div>
+        <LinkTo @route="examples.dashboard" class="btn btn-primary rounded-0">
+          zum Angebot hinzufügen
+        </LinkTo>
+        <div class="card-body">
+          <ul class="list-checkmark">
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card card-prices">
+        <div class="card-header">
+          <label>Paket</label>
+          <div class="package-size">S</div>
+          <div class="price">1,99 €</div>
+          <label>pro Gerät</label>
+        </div>
+        <LinkTo @route="examples.dashboard" class="btn btn-primary rounded-0">
+          zum Angebot hinzufügen
+        </LinkTo>
+        <div class="card-body">
+          <ul class="list-checkmark">
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card card-prices">
+        <div class="card-header">
+          <label>Paket</label>
+          <div class="package-size">M</div>
+          <div class="price">3,49 €</div>
+          <label>pro Gerät</label>
+        </div>
+        <LinkTo @route="examples.dashboard" class="btn btn-primary rounded-0">
+          zum Angebot hinzufügen
+        </LinkTo>
+        <div class="card-body">
+          <ul class="list-checkmark">
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card card-prices">
+        <div class="card-header">
+          <label>Paket</label>
+          <div class="package-size">L</div>
+          <div class="price">4,49 €</div>
+          <label>pro Gerät</label>
+        </div>
+        <LinkTo @route="examples.dashboard" class="btn btn-primary rounded-0">
+          zum Angebot hinzufügen
+        </LinkTo>
+        <div class="card-body">
+          <ul class="list-checkmark">
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+            <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+            <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+
+<div class="container-fluid bg-white shadow">
+  <div class="container py-4 d-flex align-items-center flex-column flex-md-row justify-content-md-between"> 
+    <LinkTo @route="examples.offer-config-wizard-step-02" class="btn btn-ghost w-100 w-md-auto mb-4 mb-md-0">
+      Züruck
+    </LinkTo>
+
+    <LinkTo @route="examples.offer-config-wizard-step-04-overview" class="btn btn-primary w-100 w-md-auto">Fertig</LinkTo>    
+  </div>
+</div>
+
+
+<BsButton @type="ghost" class="btn-icon btn-round shadow summary-popover-trigger">
+  <Icon::Ebf @icon="ebf-list" /> 
+  <BsPopover @placement="top" @title="Zusammenfassung" class="summary-popover">
+    <div class="row customer-details row-bb">
+      <div class="col-4">Number:</div>
+      <div class="col-8"><strong>274862</strong></div>
+      <div class="col-4">Name:</div>
+      <div class="col-8"><strong>Projekt Domspitze</strong></div>
+      <div class="col-4">Customer:</div>
+      <div class="col-8"><strong>TÜV Rheinland AG</strong></div>
+    </div>
+    <div class="row items">
+      <div class="col">
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>            
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row total">
+      <div class="col">
+        Total 116,93 €
+      </div>
+    </div>    
+  </BsPopover>
+</BsButton>

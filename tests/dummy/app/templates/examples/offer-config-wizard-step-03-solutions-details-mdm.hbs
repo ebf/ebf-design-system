@@ -1,0 +1,406 @@
+{{!-- template-lint-disable  --}}
+<div class="sticky-top shadow-sm bg-dark border-top-primary py-4">
+  <div class="container">
+    <div class="d-flex justify-content-center justify-content-md-between align-content-center mb-6">
+      <p class="text-white mb-0 fs-4">Neues Angebot erstellen</p>
+      <LinkTo @route="examples.dashboard" class="text-white text-decoration-none d-none d-md-flex">
+        Abbrechen <Icon::Ebf @icon="ebf-cancel ml-2" />
+      </LinkTo>
+    </div>
+    <div class="custom-progress-bar">
+      <div class="progress-bar-item-container">
+        <a href="" class="progress-bar-item completed">
+          <span class="progress-dot"><Icon::Ebf @icon="ebf-check-mark" /></span>
+          <span class="progress-label">Angebotsname</span>
+        </a>     
+        <a href="" class="progress-bar-item completed">
+          <span class="progress-dot"><Icon::Ebf @icon="ebf-check-mark" /></span>
+          <span class="progress-label">Kunde auswählen</span>
+        </a>
+        <a href="" class="progress-bar-item active current">
+          <span class="progress-dot">3</span>
+          <span class="progress-label">Produkte auswählen</span>
+        </a>        
+        <a href="" class="progress-bar-item">
+          <span class="progress-dot">4</span>
+          <span class="progress-label">Überblick</span>
+        </a>        
+      </div>
+      <div class="progress">
+        <div
+          role="progressbar"
+          class="progress-bar bg-primary"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 0%;">
+        </div>
+      </div>
+    </div>
+    <LinkTo @route="examples.dashboard" class="btn btn-outline-white d-block d-md-none mt-9">
+      <Icon::Ebf @icon="ebf-cancel mr-2" />Abbrechen
+    </LinkTo>
+  </div>
+</div>
+
+<div class="container-fluid bg-gray-100 px-0">
+  <div class="container py-5 py-lg-9">    
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-10">
+        <h2>Produkte auswählen - Lösungen</h2>
+        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+      </div>    
+    </div>
+  </div>
+  <div class="container">
+    <BsNav @type="xl" class="nav-custom-tabs" as |nav|>
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-devices">Geräte</nav.link-to>
+      </nav.item>
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-accessories">Zubehör</nav.link-to>
+      </nav.item>            
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-services">Services</nav.link-to>
+      </nav.item>            
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-solutions-details-mdm">Solutions</nav.link-to>
+      </nav.item>            
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-pakete">Pakete</nav.link-to>
+      </nav.item>            
+    </BsNav>
+  </div>
+</div>
+  
+<div class="container">
+  <div class="row py-5 py-md-9"> 
+    <LinkTo @route="examples.offer-config-wizard-step-03-solutions" class="btn btn-link w-100 w-md-auto mb-0">
+      <Icon::Ebf @icon="ebf-chevron-left mr-2" />Züruck
+    </LinkTo>
+  </div>
+  <div class="row">
+    <div class="col text-center pb-5 pb-md-9">
+      <h3>MDM Geräteregistrierung</h3>
+      <p>Wählen Sie eine, zwei oder alle drei Optionen aus</p>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-12 offset-0 col-lg-8 offset-lg-2">
+      <div class="card card-solutions card-hover">
+        <div class="row card-body">
+
+          <div class="col-2 col-md-1 order-2 order-md-1 pt-2 pt-md-0">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck1" name="example1">
+              <label class="custom-control-label" for="customCheck1"></label>
+            </div>
+          </div>
+
+          <div class="card-image col-12 col-md-2 order-1 order-md-2 d-none d-md-block">
+            <img src="/pictograms/solutions/samsung-knox.png" alt="Samsung Knox of mobile radio terminals">
+          </div>
+
+          <div class="col-10 col-md-6 order-3">
+            <div class="card-title">Samsung Knox of mobile radio terminals</div>
+            <BsButton @type="link" class="px-0 py-0" @onClick={{fn (mut this.modal) true}}>
+              Einzelheiten
+            </BsButton>
+          </div>
+
+          <div class="price-holder col-10 offset-2 col-md-3 offset-md-0 col-xl-2 d-flex flex-column order-4">
+            <div class="price">249,00 €</div>
+            <label>Additional Text</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 offset-0 col-lg-8 offset-lg-2">
+      <div class="card card-solutions card-hover">
+        <div class="row card-body">          
+          <div class="col-2 col-md-1 order-2 order-md-1 pt-2 pt-md-0">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck2" name="example2">
+              <label class="custom-control-label" for="customCheck2"></label>
+            </div>
+          </div>          
+          <div class="card-image col-12 col-md-2 order-1 order-md-2 d-none d-md-block">
+            <img src="/pictograms/solutions/apple-device-registration.png" alt="Apple Device Registration">
+          </div>          
+          <div class="col-10 col-md-6 order-3">
+            <div class="card-title">Apple Device Registration</div>
+            <BsButton @type="link" class="px-0 py-0" @onClick={{fn (mut this.modal) true}}>
+              Einzelheiten
+            </BsButton>
+          </div>          
+          <div class="price-holder col-10 offset-2 col-md-3 offset-md-0 col-xl-2 d-flex flex-column order-4">
+            <div class="price">249,00 €</div>
+            <label>Additional Text</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 offset-0 col-lg-8 offset-lg-2">
+      <div class="card card-solutions card-hover">
+        <div class="row card-body">          
+          <div class="col-2 col-md-1 order-2 order-md-1 pt-2 pt-md-0">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck3" name="example3">
+              <label class="custom-control-label" for="customCheck3"></label>
+            </div>
+          </div>          
+          <div class="card-image col-12 col-md-2 order-1 order-md-2 d-none d-md-block">
+            <img src="/pictograms/solutions/google-zero-touch.png" alt="Google Zero Touch of mobile radio terminals">
+          </div>          
+          <div class="col-10 col-md-6 order-3">
+            <div class="card-title">Google Zero Touch of mobile radio terminals</div>
+            <BsButton @type="link" class="px-0 py-0" @onClick={{fn (mut this.modal) true}}>
+              Einzelheiten
+            </BsButton>
+          </div>          
+          <div class="price-holder col-10 offset-2 col-md-3 offset-md-0 col-xl-2 d-flex flex-column order-4">
+            <div class="price">249,00 €</div>
+            <label>Additional Text</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 mb-9">
+    <div class="col-12 offset-0 col-lg-8 offset-lg-2 d-flex justify-content-end">    
+      <BsButton @type="primary" @onClick={{fn (mut this.success) true}} class="w-100 w-md-auto">zum Angebot hinzufügen</BsButton>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col text-center py-5 py-md-9">
+      <h3>Wählen Sie Supportpakete</h3>
+      <p>Wählen Sie das gewünschte Supportpaket für Ihr Angebot</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-12 offset-0 col-lg-8 offset-lg-2">
+      <div class="card card-solutions card-hover">
+        <div class="row card-body">          
+          <div class="col-2 col-md-1">
+            <div class="custom-control custom-checkbox pt-2 pt-md-0">
+              <input type="checkbox" class="custom-control-input" id="customCheck1" name="example1">
+              <label class="custom-control-label" for="customCheck1"></label>
+            </div>
+          </div>
+          <div class="col-10 col-md-4 col-lg-4 col-xl-5">
+            <div class="card-title">4h of telephone consultations</div>
+            <BsButton @type="link" class="px-0 py-0" @onClick={{fn (mut this.modal) true}}>
+              Einzelheiten
+            </BsButton>
+          </div>
+          <div class="price-holder col-10 offset-2 col-md-3 offset-md-0 col-xl-2 d-flex flex-column">
+            <div class="price">249,00 €</div>
+            <label>Additional Text</label>
+          </div>
+          <div class="col-10 offset-2 col-md-4 offset-md-0 d-flex justify-content-start justify-content-md-end">
+            <form>             
+              <Inputs::Counter
+                @label={{this.value}}
+                @placeholder="1"
+                @min="1"
+                @max="999"
+                @value={{this.value}}
+                @onChange={{fn (mut this.value)}}
+              />
+            </form> 
+          </div>      
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 offset-0 col-lg-8 offset-lg-2">
+      <div class="card card-solutions card-hover">
+        <div class="row card-body">          
+          <div class="col-2 col-md-1">
+            <div class="custom-control custom-checkbox pt-2 pt-md-0">
+              <input type="checkbox" class="custom-control-input" id="customCheck2" name="example2">
+              <label class="custom-control-label" for="customCheck2"></label>
+            </div>
+          </div>
+          <div class="col-10 col-md-4 col-lg-4 col-xl-5">
+            <div class="card-title">2h of telephone consultations</div>
+            <LinkTo @route="examples.offer-config-wizard-step-03-accessories-details"></LinkTo>
+            <BsButton @type="link" class="px-0 py-0" @onClick={{fn (mut this.modal) true}}>
+              Einzelheiten
+            </BsButton>
+          </div>
+          <div class="price-holder col-10 offset-2 col-md-3 offset-md-0 col-xl-2 d-flex flex-column">
+            <div class="price">249,00 €</div>
+            <label>Additional Text</label>
+          </div>
+          <div class="col-10 offset-2 col-md-4 offset-md-0 d-flex justify-content-start justify-content-md-end">
+            <form>             
+              <Inputs::Counter
+                @label={{this.value}}
+                @placeholder="1"
+                @min="1"
+                @max="999"
+                @value={{this.value}}
+                @onChange={{fn (mut this.value)}}
+              />
+            </form> 
+          </div>      
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 mb-9">
+    <div class="col-12 offset-0 col-lg-8 offset-lg-2 d-flex justify-content-end">    
+      <BsButton @type="primary" @onClick={{fn (mut this.success) true}} class="w-100 w-md-auto">zum Angebot hinzufügen</BsButton>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-white shadow">
+  <div class="container py-4 d-flex align-items-center flex-column flex-md-row justify-content-md-between"> 
+    <LinkTo @route="examples.offer-config-wizard-step-02" class="btn btn-ghost w-100 w-md-auto mb-4 mb-md-0">
+      Züruck
+    </LinkTo>
+    <LinkTo @route="examples.offer-config-wizard-step-04-overview" class="btn btn-primary w-100 w-md-auto">Fertig</LinkTo>    
+  </div>
+</div>
+
+
+<BsAlert @type="success" @visible={{if this.success true false}} @fade={{true}} class="fixed-bottom">
+  <div class="alert-icon-container">
+    <div class="icon">
+      <i class="ebf ebf-check-mark-circle-full"></i>
+    </div>
+  </div>
+  <div class="alert-body">
+    <h6 class="alert-title">Item successfully added</h6>
+    <p class="alert-text">Gear4 Cover Crystal Palace iPhone 11 Pro has been added to the offer.</p>
+  </div>             
+</BsAlert>
+
+<BsModal
+  @size="xl"
+  @open={{if this.modal true false}}
+  @onSubmit={{fn (mut this.modal) false}}
+  @onHidden={{fn (mut this.modal) false}}
+  as |modal| >
+  <modal.header>
+    <h3 class="modal-title font-weight-bold">Lorem ipsum dolor sit amet</h3>
+  </modal.header>
+  <modal.body>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a vestibulum mauris, mattis viverra nunc. Mauris pulvinar purus id porta pharetra. Nunc consectetur, arcu eget faucibus tempor, tortor lacus elementum est, in sollicitudin velit ipsum in lorem. Nam posuere eu leo at ornare. Fusce convallis tempus lacus, vel consequat orci fermentum sed. Proin sit amet urna varius, porttitor nisl sit amet, gravida est. Praesent dapibus semper nisi in blandit. Sed rutrum laoreet ligula sit amet tristique. Integer malesuada enim semper sapien elementum mollis. Sed iaculis eros at odio hendrerit elementum. Nullam aliquet varius sagittis.
+  </modal.body>
+  <modal.footer class="d-flex justify-content-center">
+    <BsButton @onClick={{fn modal.close}} @type="ghost" class="mr-0 mr-md-2 w-100 w-md-auto">Abbrechen</BsButton>
+    <BsButton @type="primary" @onClick={{fn (mut this.simple) true}} class="w-100 w-md-auto">zum Angebot hinzufügen</BsButton>
+  </modal.footer>
+</BsModal>
+
+
+<BsButton @type="ghost" class="btn-icon btn-round shadow summary-popover-trigger">
+  <Icon::Ebf @icon="ebf-list" /> 
+  <BsPopover @placement="top" @title="Zusammenfassung" class="summary-popover">
+    <div class="row customer-details row-bb">
+      <div class="col-4">Number:</div>
+      <div class="col-8"><strong>274862</strong></div>
+      <div class="col-4">Name:</div>
+      <div class="col-8"><strong>Projekt Domspitze</strong></div>
+      <div class="col-4">Customer:</div>
+      <div class="col-8"><strong>TÜV Rheinland AG</strong></div>
+    </div>
+    <div class="row items">
+      <div class="col">
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>            
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row total">
+      <div class="col">
+        Total 116,93 €
+      </div>
+    </div>    
+  </BsPopover>
+</BsButton>

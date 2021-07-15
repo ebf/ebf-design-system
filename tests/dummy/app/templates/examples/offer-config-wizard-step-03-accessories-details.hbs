@@ -1,0 +1,332 @@
+{{!-- template-lint-disable  --}}
+<div class="sticky-top shadow-sm bg-dark border-top-primary py-4">
+  <div class="container">
+    <div class="d-flex justify-content-center justify-content-md-between align-content-center mb-6">
+      <p class="text-white mb-0 fs-4">Neues Angebot erstellen</p>
+      <LinkTo @route="examples.dashboard" class="text-white text-decoration-none d-none d-md-flex">
+        Abbrechen <Icon::Ebf @icon="ebf-cancel ml-2" />
+      </LinkTo>
+    </div>
+    <div class="custom-progress-bar">
+      <div class="progress-bar-item-container">
+        <a href="" class="progress-bar-item completed">
+          <span class="progress-dot"><Icon::Ebf @icon="ebf-check-mark" /></span>
+          <span class="progress-label">Angebotsname</span>
+        </a>     
+        <a href="" class="progress-bar-item completed">
+          <span class="progress-dot"><Icon::Ebf @icon="ebf-check-mark" /></span>
+          <span class="progress-label">Kunde auswählen</span>
+        </a>
+        <a href="" class="progress-bar-item active current">
+          <span class="progress-dot">3</span>
+          <span class="progress-label">Produkte auswählen</span>
+        </a>        
+        <a href="" class="progress-bar-item">
+          <span class="progress-dot">4</span>
+          <span class="progress-label">Überblick</span>
+        </a>        
+      </div>
+      <div class="progress">
+        <div
+          role="progressbar"
+          class="progress-bar bg-primary"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 0%;">
+        </div>
+      </div>
+    </div>
+    <LinkTo @route="examples.dashboard" class="btn btn-outline-white d-block d-md-none mt-9">
+      <Icon::Ebf @icon="ebf-cancel mr-2" />Abbrechen
+    </LinkTo>
+  </div>
+</div>
+
+<div class="container-fluid bg-gray-100 px-0">
+  <div class="container py-5 py-lg-9">    
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-10">
+        <h2>Geräte auswählen</h2>
+        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+      </div>    
+    </div>
+  </div>
+  <div class="container">
+    <BsNav @type="xl" class="nav-custom-tabs" as |nav|>
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-devices">Geräte</nav.link-to>
+      </nav.item>
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-accessories-details">Zubehör</nav.link-to>
+      </nav.item>            
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-services">Services</nav.link-to>
+      </nav.item>            
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-solutions">Solutions</nav.link-to>
+      </nav.item>            
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-pakete">Pakete</nav.link-to>
+      </nav.item>            
+    </BsNav>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row py-5 py-md-9"> 
+    <LinkTo @route="examples.offer-config-wizard-step-03-devices" class="btn btn-link w-100 w-md-auto mb-0">
+    <Icon::Ebf @icon="ebf-chevron-left mr-2" />Züruck
+  </LinkTo>
+  </div>
+  <div class="row justify-content-end">
+    <div class="col-12 col-lg-7">
+      <h3 class="text-center text-lg-left font-weight-bold">Gear4 Cover Crystal Palace iPhone 11 Pro</h3>
+      <p class="text-center text-lg-left mb-5 mb-lg-0">
+        <i class="ebf ebf-check-mark-circle-full text-success mr-2"></i>
+        Geringe Warenbestände - Artikel eingeschränkt verfügbar</p>
+    </div>
+  </div>
+  <div class="media d-flex flex-column flex-lg-row mb-9">
+    <div class="col-12 col-lg-5 mb-4 mb-md-0 align-self-start d-flex justify-content-center">
+      <img src="https://egs-cdn.telekom-dienste.de/product-images/b0b6da67-14d7-45bb-a210-1b245b40cbf7/thumb/gear4-cover-crystal-palace-iphone-11-pro-clear.png" alt="Gear4 Cover Crystal Palace iPhone 11 Pro">
+    </div>
+    <div class="media-body col-12 col-lg-7 px-0 pl-lg-gutter">
+      <ul class="list-square mt-5">
+        <li>Sehr dünn und präzise</li>
+        <li>Matte Soft-Touch Oberfläche</li>
+        <li>Antibakterielle Beschichtung</li>
+        <li>Integriertes smartes Magnetsystem mit Ausrichtungsfunktion</li>
+        <li>Starke Konstruktion für hohen Schutz</li>
+        <li>Einfach anzubringen</li>          
+      </ul>
+      <a href="#details">zu den Zubehördetails</a>
+      <div class="row pt-7">
+        <div class="col-12 col-lg-5">
+          <label class="w-100 text-dark">Farbe: <span class="font-weight-bold">Weiß</span></label>
+          <button type="button" class="btn btn-color-selector-white mr-1 mr-xl-2" data-toggle="button" aria-pressed="true" autocomplete="off">
+            <i class="ebf ebf-check-mark"></i>
+            <i class="ebf ebf-line-diag"></i>
+          </button>
+          <button type="button" class="btn btn-color-selector-light mr-1 mr-xl-2" data-toggle="button" aria-pressed="false" autocomplete="off">
+            <i class="ebf ebf-check-mark"></i>
+            <i class="ebf ebf-line-diag"></i>
+          </button>
+          <button type="button" class="btn btn-color-selector-dark mr-1 mr-xl-2" data-toggle="button" aria-pressed="false" autocomplete="off">
+            <i class="ebf ebf-check-mark"></i>
+            <i class="ebf ebf-line-diag"></i>
+          </button>
+          <hr class="my-5 my-md-4">
+        </div>                    
+      </div>
+      <div class="row">
+        <div class="col-12 d-block d-md-inline-flex justify-content-start align-items-end ">    
+          <form class="mr-0 mr-md-5">
+            <label class="text-dark">Anzahl: <span class="font-weight-bold">{{this.value}} Endgeräte</span></label>
+          <Inputs::Counter
+              @label={{this.value}}
+              @placeholder="Enter your desired amount"
+              @min="1"
+              @max="999"
+              @value={{this.value}}
+              @onChange={{fn (mut this.value)}}
+            />
+          </form>      
+          <hr class="d-block d-md-none my-5">              
+          <span class="d-flex flex-column fs-5 mr-3 mb-0 font-weight-bolder text-primary line-height-display">
+            <strong class="price">ab</strong>
+            <strong class="price">116,93 €</strong>
+          </span>
+          <p class="fs-2 mb-0">einmalig (netto)
+            <i class="ebf ebf-info popover-trigger"></i>
+          </p>
+          <BsPopover @title="Mengenabhängige Preisstaffel:" @triggerElement=".popover-trigger" @triggerEvents="hover">
+            <ul class="list-square-popover">
+              <li>1 - 100 Geräte XY€</li>
+              <li>101 - 300 Geräte XY€</li>
+              <li>ab 301 Geräte XY€ </li>
+            </ul>
+          </BsPopover>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <hr class="my-5 my-md-4">
+          <BsButton @type="primary" @onClick={{fn (mut this.simple) true}} class="mt-2 w-100 w-md-auto">zum Angebot hinzufügen</BsButton>
+        </div>
+      </div>
+    </div>
+  </div>            
+  <hr class="my-5 my-md-4">     
+</div>
+
+<div class="container pt-5 pb-9">
+  <div class="row">
+    <div class="col-12 mb-9 text-center">
+      <h3 id="details">Gear4 Cover Crystal Palace iPhone 11 Pro</h3>
+      <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <BsAccordion as |acc|>
+      <acc.item @value="1" as |aitem|>
+        <aitem.title>
+          <span>Lieferumfang</span>
+          <Icon::Ebf @icon="ebf-chevron-down" />
+        </aitem.title>
+        <aitem.body>
+          <Stats as |stats|>
+            <stats.row @label="Product No." @value="99930996" />
+            <stats.row @label="Size and weight" @value="138,4 x 67,3 x 7,3 mm | ca. 148" />
+            <stats.row @label="Batter" @value="Li-Ion" />
+            <stats.row @label="Camera" @value="12 Megapixel" />
+            <stats.row @label="Display" @value="Retina Display 16,7 milion colors" />
+            <stats.row @label="Processor" @value="Processor Type A13 Bionic Chip" />
+          </Stats>
+        </aitem.body>
+      </acc.item>
+      <acc.item @value="2" as |aitem|>
+        <aitem.title>
+          <span>Technische Informationen</span>
+          <Icon::Ebf @icon="ebf-chevron-down" />
+        </aitem.title>
+        <aitem.body>
+          <Stats as |stats|>
+            <stats.row @label="Product No." @value="99930996" />
+            <stats.row @label="Size and weight" @value="138,4 x 67,3 x 7,3 mm | ca. 148" />
+            <stats.row @label="Batter" @value="Li-Ion" />
+            <stats.row @label="Camera" @value="12 Megapixel" />
+            <stats.row @label="Display" @value="Retina Display 16,7 milion colors" />
+            <stats.row @label="Processor" @value="Processor Type A13 Bionic Chip" />
+          </Stats>
+        </aitem.body>
+      </acc.item>
+      <acc.item @value="3" as |aitem|>
+        <aitem.title>
+          <span>Konnektivität</span>
+          <Icon::Ebf @icon="ebf-chevron-down" />
+        </aitem.title>
+        <aitem.body>
+          <Stats as |stats|>
+            <stats.row @label="Product No." @value="99930996" />
+            <stats.row @label="Size and weight" @value="138,4 x 67,3 x 7,3 mm | ca. 148" />
+            <stats.row @label="Batter" @value="Li-Ion" />
+            <stats.row @label="Camera" @value="12 Megapixel" />
+            <stats.row @label="Display" @value="Retina Display 16,7 milion colors" />
+            <stats.row @label="Processor" @value="Processor Type A13 Bionic Chip" />
+          </Stats>
+        </aitem.body>
+      </acc.item>
+    </BsAccordion>
+    </div>
+  </div>
+</div>
+
+<BsAlert @type="success" @visible={{if this.simple true false}} @fade={{true}} class="fixed-bottom">
+  <div class="alert-icon-container">
+    <div class="icon">
+      <i class="ebf ebf-check-mark-circle-full"></i>
+    </div>
+  </div>
+  <div class="alert-body">
+    <h6 class="alert-title">Item successfully added</h6>
+    <p class="alert-text">Gear4 Cover Crystal Palace iPhone 11 Pro has been added to the offer.</p>
+  </div>             
+</BsAlert>
+
+<BsButton @type="ghost" class="btn-icon btn-round shadow summary-popover-trigger">
+  <Icon::Ebf @icon="ebf-list" /> 
+  <BsPopover @placement="top" @title="Zusammenfassung" class="summary-popover">
+    <div class="row customer-details row-bb">
+      <div class="col-4">Number:</div>
+      <div class="col-8"><strong>274862</strong></div>
+      <div class="col-4">Name:</div>
+      <div class="col-8"><strong>Projekt Domspitze</strong></div>
+      <div class="col-4">Customer:</div>
+      <div class="col-8"><strong>TÜV Rheinland AG</strong></div>
+    </div>
+    <div class="row items">
+      <div class="col">
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>            
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row total">
+      <div class="col">
+        Total 116,93 €
+      </div>
+    </div>    
+  </BsPopover>
+</BsButton>

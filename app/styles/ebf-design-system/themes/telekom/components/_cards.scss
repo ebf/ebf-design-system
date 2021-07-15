@@ -402,6 +402,60 @@
   }
 }
 
+// Prices Card
+
+.card-prices {
+  text-align: left;
+  border: 0;
+  box-shadow: $box-shadow;
+
+  .card-header {
+    padding: $grid-gutter-width $grid-gutter-width $spacer * 2;
+    border: 0;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+
+    label {
+      margin-bottom: 0;
+
+      &:first-of-type {
+        font-weight: $font-weight-bold;
+        color: $gray-1200;
+      }
+
+      &:last-of-type {
+        font-weight: normal;
+      }
+    }
+
+    .package-size {
+      font-size: $fs-10;
+      font-weight: $font-weight-bolder;
+    }
+
+    .price {
+      font-size: $fs-8;
+      color: $primary;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .btn {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+
+    &:hover {
+      transform: scale(1) !important;
+    }
+  }
+
+  .card-body {
+    padding: $spacer * 2 $grid-gutter-width $grid-gutter-width;
+  }
+}
+
 .card-hover {
   cursor: pointer;
   transition: $smooth-color-animation-slow;
@@ -631,6 +685,78 @@
     .popover-trigger {
       font-size: $fs-2;
       color: $gray-1200;
+    }
+  }
+}
+
+// Deco Background
+
+.gray-deco-bg {
+  position: relative;
+
+  &::after {
+    content: ' ';
+    background-color: $gray-100;
+    display: block;
+    min-height: 73%;
+    width: 100vw;
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: -1;
+
+    @include media-breakpoint-down(lg) {
+      top: 25%;
+      min-height: 75%;
+    }
+
+    @include media-breakpoint-down(md) {
+      top: 16%;
+      min-height: 94%;
+    }
+  }
+}
+
+// Card Solutions
+
+.card-solutions {
+  margin-bottom: $grid-gutter-width;
+
+  .card-body {
+    display: flex;
+    align-items: center;
+    padding: $grid-gutter-width / 2 $spacer * 2;
+
+    @include media-breakpoint-down(sm) {
+      align-items: flex-start;
+    }
+
+    .card-image {
+      padding-bottom: 0;
+
+      img {
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+
+    .price-holder {
+      text-align: right;
+
+      @include media-breakpoint-down(sm) {
+        text-align: left;
+      }
+
+      .price {
+        font-size: $fs-5;
+        font-weight: $font-weight-bolder;
+        color: $primary;
+      }
+
+      label {
+        margin-bottom: 0;
+      }
     }
   }
 }

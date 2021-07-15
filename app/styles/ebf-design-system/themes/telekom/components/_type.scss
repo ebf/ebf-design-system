@@ -152,12 +152,15 @@ mark,
   }
 }
 
+// Squares List
+
 .list-square {
   list-style-type: square;
   padding-inline-start: 18px;
 
   li {
     padding-bottom: $spacer;
+    margin-bottom: 0;
 
     &::marker {
       color: $primary;
@@ -165,6 +168,8 @@ mark,
     }
   }
 }
+
+// Squares List in Popover element
 
 .list-square-popover {
   list-style-type: square;
@@ -176,6 +181,33 @@ mark,
     &::marker {
       color: $white;
       margin-right: $spacer !important;
+    }
+  }
+}
+
+// Checkmark List
+
+.list-checkmark {
+  list-style-type: none;
+  padding-inline-start: 18px;
+
+  li {
+    padding-bottom: $spacer;
+    margin-bottom: 0;
+    padding-left: $spacer / 2;
+    font-size: $fs-2;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    &::marker {
+      color: $success;
+      content: $ebf-check-mark;
+      font-family: 'telekom-iconset';
+      font-weight: $font-weight-bold;
+      margin-right: $spacer !important;
+      font-size: $fs-1;
     }
   }
 }

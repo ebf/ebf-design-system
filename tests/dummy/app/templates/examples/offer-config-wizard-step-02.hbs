@@ -1,0 +1,90 @@
+{{!-- template-lint-disable  --}}
+<div class="sticky-top shadow-sm bg-dark border-top-primary py-4">
+  <div class="container">
+    <div class="d-flex justify-content-center justify-content-md-between align-content-center mb-6">
+      <p class="text-white mb-0 fs-4">Neues Angebot erstellen</p>
+      <LinkTo @route="examples.dashboard" class="text-white text-decoration-none d-none d-md-flex">
+        Abbrechen <Icon::Ebf @icon="ebf-cancel ml-2" />
+      </LinkTo>
+    </div>
+    <div class="custom-progress-bar">
+      <div class="progress-bar-item-container">
+        <a href="" class="progress-bar-item completed">
+          <span class="progress-dot"><Icon::Ebf @icon="ebf-check-mark" /></span>
+          <span class="progress-label">Angebotsname</span>
+        </a>     
+        <a href="" class="progress-bar-item active current">
+          <span class="progress-dot">2</span>
+          <span class="progress-label">Kunde auswählen</span>
+        </a>
+        <a href="" class="progress-bar-item">
+          <span class="progress-dot">3</span>
+          <span class="progress-label">Produkte auswählen</span>
+        </a>        
+        <a href="" class="progress-bar-item">
+          <span class="progress-dot">4</span>
+          <span class="progress-label">Überblick</span>
+        </a>        
+      </div>
+      <div class="progress">
+        <div
+          role="progressbar"
+          class="progress-bar bg-primary"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 0%;">
+        </div>
+      </div>
+    </div>
+    <LinkTo @route="examples.dashboard" class="btn btn-outline-white d-block d-md-none mt-9">
+      <Icon::Ebf @icon="ebf-cancel mr-2" />Abbrechen
+    </LinkTo>
+  </div>
+</div>
+
+<div class="container-fluid bg-gray-100 px-0">
+  <div class="container py-5 py-lg-9">    
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-10">
+        <h2>Wählen Sie einen Kunden aus</h2>
+        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+      </div>    
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12 col-lg-12">
+      <BsForm class="row" as |form|>
+        <div class="d-flex col-12 col-lg-4 align-items-end mb-4 mb-lg-0">    
+          <div class="w-100">
+            <Inputs::Search
+              @placeholder="Suche (z.B. Hersteller, Modell)"
+              @value={{this.search}}
+              @onChange={{fn (mut this.search)}}
+              class="form-group align-self-end mb-0"
+            />  
+          </div> 
+        </div>
+        <form.element @controlType="text" @label="GP Nummer" @property="text" class="col-12 col-lg-4 mb-4 mb-lg-0" as |el|>
+          <el.control placeholder="Suche nach GP Nummer" required />
+        </form.element>
+        <form.element @controlType="text" @label="Standorte" @property="text" class="col-12 col-lg-4 mb-4 mb-lg-0" as |el|>
+          <el.control placeholder="Suche nach Standort" required />
+        </form.element>
+        <div class="d-flex col-12 justify-content-end">
+          <LinkTo @route="examples.offer-config-wizard-step-02-select" class="btn btn-primary w-100 w-lg-auto mt-4">Kunden suchen</LinkTo>
+        </div>
+      </BsForm>
+    </div>
+    <div class="d-none offset-lg-4 col-lg-4 d-lg-block align-self-center">
+      <img class="align-self-center img-fluid" src="/state-images/offer-config-step-02.svg" alt="Offer Config">
+    </div>
+    <div class="col-12 my-4 text-center">
+      <h5>Lorem ipsum dolor sit amet consectetur adipiscing</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt</p>
+    </div>
+  </div>
+</div>

@@ -218,3 +218,43 @@
     }
   }
 }
+
+// Custom Tabs Options
+
+.nav-custom-tabs-options {
+  border: 0;
+  padding-bottom: 4rem;
+  justify-content: center;
+
+  .nav-item {
+    .btn {
+      border-radius: 0;
+      border-color: $gray-1200;
+    }
+
+    &:first-of-type {
+      .btn {
+        border-bottom-left-radius: $btn-border-radius;
+        border-top-left-radius: $btn-border-radius;
+        position: relative;
+        right: -1px;
+      }
+    }
+
+    &:last-of-type {
+      .btn {
+        border-top-right-radius: $btn-border-radius;
+        border-bottom-right-radius: $btn-border-radius;
+        position: relative;
+        left: -1px;
+      }
+    }
+
+    &.active {
+      .btn-outline {
+        background-color: $gray-1200;
+        color: $white !important;
+      }
+    }
+  }
+}

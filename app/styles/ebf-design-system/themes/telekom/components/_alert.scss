@@ -11,9 +11,12 @@
 .alert {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: auto;
   background-color: $white;
   border-color: $border-color;
+  left: auto;
+  bottom: $grid-gutter-width;
+  right: $grid-gutter-width;
 
   .alert-icon-container {
     order: 1;

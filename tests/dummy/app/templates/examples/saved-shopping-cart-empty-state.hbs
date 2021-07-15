@@ -140,7 +140,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><LinkTo @route="examples.dashboard" data-text="Dashboard">Dashboard</LinkTo></li>
-            <li class="breadcrumb-item"><LinkTo @route="examples.saved-shopping-cart" data-text="Bestellvorlagen">Bestellvorlagen</LinkTo></li>
+            <li class="breadcrumb-item"><LinkTo @route="examples.saved-shopping-cart-empty-state" data-text="Bestellvorlagen">Bestellvorlagen</LinkTo></li>
           </ol>
         </nav>
         <h2>Ihre gespeicherten Bestellvorlagen</h2>
@@ -154,9 +154,11 @@
   <div class="d-flex flex-column flex-grow-1">
     <div class="row my-9">
       <div class="col-12 text-center">
-        <LinkTo @route="examples.webshop" data-text="Dashboard">
-          <img class="m-auto img-fluid py-8" src="/dummy-images/no-webshop-results.svg" alt="Telekom Login">
-        </LinkTo>      
+        <div class="col-8 offset-2 col-lg-4 offset-lg-4 align-self-center">
+          <LinkTo @route="examples.webshop" data-text="Dashboard">
+            <img class="m-auto img-fluid py-8" src="/state-images/webshop-empty-state.svg" alt="Webshop Empty State">
+          </LinkTo>
+        </div>     
         <h5>Sie haben keine gespeicherten Bestellvorlagen</h5>
         <p>Lorem ipsum dolor sit amet</p>
         <LinkTo @route="examples.webshop" class="btn btn-primary">

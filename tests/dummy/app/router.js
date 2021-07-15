@@ -25,6 +25,20 @@ Router.map(function() {
     this.route('order-details');
     this.route('saved-shopping-cart');
     this.route('saved-shopping-cart-empty-state');
+    this.route('offer-config-wizard-step-01');
+    this.route('offer-config-wizard-step-02');
+    this.route('offer-config-wizard-step-02-select');
+    this.route('offer-config-wizard-step-03-accessories-details');
+    this.route('offer-config-wizard-step-03-accessories');
+    this.route('offer-config-wizard-step-03-devices');
+    this.route('offer-config-wizard-step-03-device-details');
+    this.route('offer-config-wizard-step-03-services-details');
+    this.route('offer-config-wizard-step-03-services');
+    this.route('offer-config-wizard-step-03-solutions');
+    this.route('offer-config-wizard-step-03-solutions-details-mdm');
+    this.route('offer-config-wizard-step-03-solutions-details-uem');
+    this.route('offer-config-wizard-step-03-pakete');
+    this.route('offer-config-wizard-step-04-overview');
   }) 
   docsRoute(this, function() {
     this.route('usage');

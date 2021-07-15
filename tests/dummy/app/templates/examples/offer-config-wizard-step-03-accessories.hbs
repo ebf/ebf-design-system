@@ -1,0 +1,395 @@
+{{!-- template-lint-disable  --}}
+<div class="sticky-top shadow-sm bg-dark border-top-primary py-4">
+  <div class="container">
+    <div class="d-flex justify-content-center justify-content-md-between align-content-center mb-6">
+      <p class="text-white mb-0 fs-4">Neues Angebot erstellen</p>
+      <LinkTo @route="examples.dashboard" class="text-white text-decoration-none d-none d-md-flex">
+        Abbrechen <Icon::Ebf @icon="ebf-cancel ml-2" />
+      </LinkTo>
+    </div>
+    <div class="custom-progress-bar">
+      <div class="progress-bar-item-container">
+        <a href="" class="progress-bar-item completed">
+          <span class="progress-dot"><Icon::Ebf @icon="ebf-check-mark" /></span>
+          <span class="progress-label">Angebotsname</span>
+        </a>     
+        <a href="" class="progress-bar-item completed">
+          <span class="progress-dot"><Icon::Ebf @icon="ebf-check-mark" /></span>
+          <span class="progress-label">Kunde auswählen</span>
+        </a>
+        <a href="" class="progress-bar-item active current">
+          <span class="progress-dot">3</span>
+          <span class="progress-label">Produkte auswählen</span>
+        </a>        
+        <a href="" class="progress-bar-item">
+          <span class="progress-dot">4</span>
+          <span class="progress-label">Überblick</span>
+        </a>        
+      </div>
+      <div class="progress">
+        <div
+          role="progressbar"
+          class="progress-bar bg-primary"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 0%;">
+        </div>
+      </div>
+    </div>
+    <LinkTo @route="examples.dashboard" class="btn btn-outline-white d-block d-md-none mt-9">
+      <Icon::Ebf @icon="ebf-cancel mr-2" />Abbrechen
+    </LinkTo>
+  </div>
+</div>
+
+<div class="container-fluid bg-gray-100 px-0">
+  <div class="container py-5 py-lg-9">    
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-10">
+        <h2>Zubehör auswählen</h2>
+        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+      </div>    
+    </div>
+  </div>
+  <div class="container">
+    <BsNav @type="xl" class="nav-custom-tabs" as |nav|>
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-devices">Geräte</nav.link-to>
+      </nav.item>
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-accessories">Zubehör</nav.link-to>
+      </nav.item>            
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-services">Services</nav.link-to>
+      </nav.item>            
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-solutions">Solutions</nav.link-to>
+      </nav.item>            
+      <nav.item>
+        <nav.link-to @route="examples.offer-config-wizard-step-03-pakete">Pakete</nav.link-to>
+      </nav.item>            
+    </BsNav>
+  </div>
+</div>
+
+  
+<div class="container d-flex flex-column flex-grow-1">
+  <div class="row pt-5">
+    <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-end">    
+      <div class="w-100">
+        <Inputs::Search
+          @placeholder="Suche (z.B. Hersteller, Modell)"
+          @value={{this.search}}
+          @onChange={{fn (mut this.search)}}
+          class="form-group align-self-end mb-0"
+        />  
+      </div> 
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-4 mt-sm-4 mt-md-0 mt-lg-0">
+      <div class="w-100 d-flex flex-column">
+        <label>Sortieren</label>
+        <BsDropdown as |dd|>
+          <dd.button class="btn btn-outline dropdown-toggle-fw text-left">
+            Beliebteste            
+          </dd.button>
+          <dd.menu as |menu|>
+            <menu.item>
+              <menu.link-to @route="examples.dashboard">Contract 1</menu.link-to>
+            </menu.item>
+            <menu.item>
+              <menu.link-to @route="examples.dashboard">Contract 2</menu.link-to>
+            </menu.item>
+          </dd.menu>
+        </BsDropdown>
+      </div>
+    </div>
+    <div class="col-12 col-md-12 col-lg-2 mt-sm-5 mt-md-5 mt-lg-0 d-flex align-items-end">
+      <div class="w-100 d-flex flex-column">
+        <BsDropdown class="text-lg-right text-sm-center" as |dd|>
+          <dd.toggle>
+            Filter einblenden            
+          </dd.toggle>          
+        </BsDropdown>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-5 mb-9">
+    <div class="col-12 col-md-6 col-lg-6">
+      <div class="d-flex flex-column w-100">
+        <label>Hersteller</label>
+        <BsDropdown as |dd|>
+          <dd.button class="btn btn-outline dropdown-toggle-fw text-left">
+            Alle            
+          </dd.button>
+          <dd.menu as |menu|>
+            <menu.item>
+              <menu.link-to @route="examples.dashboard">Something 1</menu.link-to>
+            </menu.item>
+            <menu.item>
+              <menu.link-to @route="examples.dashboard">Something 2</menu.link-to>
+            </menu.item>
+          </dd.menu>
+        </BsDropdown>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-6 mt-sm-4 mt-md-0 mt-lg-0">
+      <div class="w-100 d-flex flex-column">
+        <label>Eigenschaften</label>
+        <BsDropdown as |dd|>
+          <dd.button class="btn btn-outline dropdown-toggle-fw text-left">
+            Kein Filter            
+          </dd.button>
+          <dd.menu as |menu|>
+            <menu.item>
+              <menu.link-to @route="examples.dashboard">Something 1</menu.link-to>
+            </menu.item>
+            <menu.item>
+              <menu.link-to @route="examples.dashboard">Something 2</menu.link-to>
+            </menu.item>
+          </dd.menu>
+        </BsDropdown>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 main-cards pb-9 mb-9">
+    <div class="col mb-4">
+      <LinkTo @route="examples.offer-config-wizard-step-03-accessories-details" class="card-link">      
+        <div class="card card-product card-hover">
+          <div class="card-body">
+            <div class="row">
+              <div class="card-product-image col-lg-5 col-md-5 col-sm-12 mb-lg-0 mb-md-0 mb-sm-4">
+                <img class="img-fluid" src="https://egs-cdn.telekom-dienste.de/product-images/b0b6da67-14d7-45bb-a210-1b245b40cbf7/thumb/gear4-cover-crystal-palace-iphone-11-pro-clear.png" alt="...">
+              </div>
+              <div class="card-product-body col-lg-7 col-md-7 col-sm-12">
+                <h4 class="card-title">Gear4 Cover Crystal Palace iPhone 11 Pro</h4>
+                <div class="card-availability">
+                  <i class="ebf ebf-check-mark-circle-full text-success"></i>
+                  <p>Vorrätig</p>
+                </div>
+                <p class="card-text">Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation</p>
+                <div class="card-price">
+                  <strong class="price">ab 14,25 €</strong>
+                  <i class="ebf ebf-info popover-trigger">
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </LinkTo>
+      <BsPopover @title="Mengenabhängige Preisstaffel:" @triggerElement=".popover-trigger" @triggerEvents="hover">
+        <ul class="list-square-popover">
+          <li>1 - 100 Geräte XY€</li>
+          <li>101 - 300 Geräte XY€</li>
+          <li>ab 301 Geräte XY€ </li>
+        </ul>
+      </BsPopover>
+    </div>
+    <div class="col mb-4">
+      <LinkTo @route="examples.offer-config-wizard-step-03-accessories-details" class="card-link">      
+        <div class="card card-product card-hover">
+          <div class="card-body">
+            <div class="row">
+              <div class="card-product-image col-lg-5 col-md-5 col-sm-12 mb-lg-0 mb-md-0 mb-sm-4">
+                <img class="img-fluid" src="https://egs-cdn.telekom-dienste.de/product-images/b0b6da67-14d7-45bb-a210-1b245b40cbf7/thumb/gear4-cover-crystal-palace-iphone-11-pro-clear.png" alt="...">
+              </div>
+              <div class="card-product-body col-lg-7 col-md-7 col-sm-12">
+                <h4 class="card-title">Gear4 Cover Crystal Palace iPhone 11 Pro</h4>
+                <div class="card-availability">
+                  <i class="ebf ebf-check-mark-circle-full text-success"></i>
+                  <p>Vorrätig</p>
+                </div>
+                <p class="card-text">Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation</p>
+                <div class="card-price">
+                  <strong class="price">ab 116,93 €</strong>
+                  <i class="ebf ebf-info popover-trigger-2">
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </LinkTo>
+      <BsPopover @title="Mengenabhängige Preisstaffel:" @triggerElement=".popover-trigger-2" @triggerEvents="hover">
+        <ul class="list-square-popover">
+          <li>1 - 100 Geräte XY€</li>
+          <li>101 - 300 Geräte XY€</li>
+          <li>ab 301 Geräte XY€ </li>
+        </ul>
+      </BsPopover>
+    </div>
+    <div class="col mb-4">
+      <LinkTo @route="examples.offer-config-wizard-step-03-accessories-details" class="card-link">      
+        <div class="card card-product card-hover">
+          <div class="card-body">
+            <div class="row">
+              <div class="card-product-image col-lg-5 col-md-5 col-sm-12 mb-lg-0 mb-md-0 mb-sm-4">
+                <img class="img-fluid" src="https://egs-cdn.telekom-dienste.de/product-images/b0b6da67-14d7-45bb-a210-1b245b40cbf7/thumb/gear4-cover-crystal-palace-iphone-11-pro-clear.png" alt="...">
+              </div>
+              <div class="card-product-body col-lg-7 col-md-7 col-sm-12">
+                <h4 class="card-title">Gear4 Cover Crystal Palace iPhone 11 Pro</h4>
+                <div class="card-availability">
+                  <i class="ebf ebf-check-mark-circle-full text-success"></i>
+                  <p>Vorrätig</p>
+                </div>
+                <p class="card-text">Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation</p>
+                <div class="card-price">
+                  <strong class="price">ab 116,93 €</strong>
+                  <i class="ebf ebf-info popover-trigger-3">
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </LinkTo>
+      <BsPopover @title="Mengenabhängige Preisstaffel:" @triggerElement=".popover-trigger-3" @triggerEvents="hover">
+        <ul class="list-square-popover">
+          <li>1 - 100 Geräte XY€</li>
+          <li>101 - 300 Geräte XY€</li>
+          <li>ab 301 Geräte XY€ </li>
+        </ul>
+      </BsPopover>
+    </div>
+    <div class="col mb-4">
+      <LinkTo @route="examples.offer-config-wizard-step-03-accessories-details" class="card-link">      
+        <div class="card card-product card-hover">
+          <div class="card-body">
+            <div class="row">
+              <div class="card-product-image col-lg-5 col-md-5 col-sm-12 mb-lg-0 mb-md-0 mb-sm-4">
+                <img class="img-fluid" src="https://egs-cdn.telekom-dienste.de/product-images/b0b6da67-14d7-45bb-a210-1b245b40cbf7/thumb/gear4-cover-crystal-palace-iphone-11-pro-clear.png" alt="...">
+              </div>
+              <div class="card-product-body col-lg-7 col-md-7 col-sm-12">
+                <h4 class="card-title">Gear4 Cover Crystal Palace iPhone 11 Pro</h4>
+                <div class="card-availability">
+                  <i class="ebf ebf-check-mark-circle-full text-success"></i>
+                  <p>Vorrätig</p>
+                </div>
+                <p class="card-text">Apple iPhone SE 64 GB Schwarz Lieferumfang - iPhone mit iOS 13 - EarPods mit Lightning Anschluss - Lightning auf USB Kabel - USB Power Adapter - Dokumentation</p>
+                <div class="card-price">
+                  <strong class="price">ab 116,93 €</strong>
+                  <i class="ebf ebf-info popover-trigger-4">
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </LinkTo>
+      <BsPopover @title="Mengenabhängige Preisstaffel:" @triggerElement=".popover-trigger-4" @triggerEvents="hover">
+        <ul class="list-square-popover">
+          <li>1 - 100 Geräte XY€</li>
+          <li>101 - 300 Geräte XY€</li>
+          <li>ab 301 Geräte XY€ </li>
+        </ul>
+      </BsPopover>
+    </div>
+  </div>  
+</div>
+
+<div class="container-fluid bg-white shadow">
+  <div class="container py-4 d-flex align-items-center flex-column flex-md-row justify-content-md-between"> 
+    <LinkTo @route="examples.offer-config-wizard-step-02" class="btn btn-ghost w-100 w-md-auto mb-4 mb-md-0">
+      Züruck
+    </LinkTo>
+    <LinkTo @route="examples.offer-config-wizard-step-04-overview" class="btn btn-primary w-100 w-md-auto">Weiter</LinkTo>    
+  </div>
+</div>
+
+
+<BsButton @type="ghost" class="btn-icon btn-round shadow summary-popover-trigger">
+  <Icon::Ebf @icon="ebf-list" /> 
+  <BsPopover @placement="top" @title="Zusammenfassung" class="summary-popover">
+    <div class="row customer-details row-bb">
+      <div class="col-4">Number:</div>
+      <div class="col-8"><strong>274862</strong></div>
+      <div class="col-4">Name:</div>
+      <div class="col-8"><strong>Projekt Domspitze</strong></div>
+      <div class="col-4">Customer:</div>
+      <div class="col-8"><strong>TÜV Rheinland AG</strong></div>
+    </div>
+    <div class="row items">
+      <div class="col">
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>            
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+        <div class="row item-row row-bb">
+          <div class="col-10">
+            <Icon::Ebf @icon="ebf-check-mark mr-2" />
+            <p>Apple iPhone 12 Max Pro, White, 128 GB</p>
+          </div>
+          <div class="col-2">
+            <Icon::Ebf @icon="ebf-cancel" />
+          </div>
+          <div class="col-12">
+            <label>Quantity: 22</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row total">
+      <div class="col">
+        Total 116,93 €
+      </div>
+    </div>    
+  </BsPopover>
+</BsButton>

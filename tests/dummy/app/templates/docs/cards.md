@@ -126,6 +126,70 @@ Basically the same as Primary Card, featuring larger image, price tag and button
   {{demo.snippet "tertiary-card.hbs"}}
 {{/docs-demo}}
 
+## Solutions Card
+
+Basically the same as Primary Card, featuring larger image, price tag and button. 
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="solutions-card.hbs"}}
+  <div class="col-12 offset-0 col-lg-8 offset-lg-2">
+    <div class="card card-solutions card-hover">
+      <div class="row card-body">          
+        <div class="col-3 col-md-2 col-lg-1">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+            <label class="custom-control-label" for="customCheck"></label>
+          </div>
+        </div>          
+        <div class="card-image d-none d-lg-block col-lg-3 col-xl-2">
+          <img src="/pictograms/solutions/samsung-knox.png" alt="Samsung Knox">
+        </div>          
+        <div class="col-9 col-md-7 col-lg-5 col-xl-6">
+          <div class="card-title">Samsung Knox of mobile radio terminals</div>
+          <LinkTo @route="examples.offer-config-wizard-step-03-accessories-details">See Einzelheiten</LinkTo>
+        </div>          
+        <div class="price col-9 offset-3 offset-md-0 col-md-3 col-lg-3">
+          495,00 €
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/demo.example}}
+
+  {{demo.snippet "solutions-card.hbs"}}
+{{/docs-demo}}
+
+
+##  Prices Card
+
+Special kind of card used in Packets section, paddings and spacing is different than other cards
+
+{{#docs-demo as |demo|}}
+  {{#demo.example name="prices-card.hbs"}}
+  <div class="col mb-4">
+    <div class="card card-prices">
+      <div class="card-header">
+        <label>Paket</label>
+        <div class="package-size">XS</div>
+        <div class="price">0,00 €</div>
+        <label>pro Gerät</label>
+      </div>
+      <LinkTo @route="examples.dashboard" class="btn btn-primary rounded-0">
+        zum Angebot hinzufügen
+      </LinkTo>
+      <div class="card-body">
+        <ul class="list-checkmark">
+          <li>MLM Plattform nur eShop mit Minimal-Reporting</li>
+          <li>Zugriff auf Bestelldaten (incl. IMEI) über MLM Plattform, Download als PDF</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {{/demo.example}}
+
+  {{demo.snippet "prices-card.hbs"}}
+{{/docs-demo}}
+
 ## Hover
 
 Use the `Card` component to add additional behaviour to your cards.
